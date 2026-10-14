@@ -22,6 +22,7 @@ https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t
 | Planes | `Precios*`, `Checkout` |
 | Alta empresa · configuraciones | `Cfg*`, `WizTop` |
 | Alta · Fabricante con distribuidores | `Fab*` |
+| Alta · Fabricante con comerciales | `ComTipo`, `ComEquipo`, `ComZonas`, `ComContacto`, `ComPublicar`, `ComBandeja` |
 | Productos (módulo) | `Prod*` |
 | Servicios (módulo aparte) | `FabServicios` |
 | Tableros y comparador | `Tab*`, `Comp*` |

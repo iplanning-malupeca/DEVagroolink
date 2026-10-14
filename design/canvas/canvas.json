@@ -47,6 +47,10 @@
       "name": "Alta · Fabricante con distribuidores"
     },
     {
+      "id": "comerciales",
+      "name": "Alta · Fabricante con comerciales"
+    },
+    {
       "id": "productos",
       "name": "Productos (módulo)"
     },
@@ -756,6 +760,54 @@
       "h": 900,
       "title": "C3 · Solicitar información a los 3",
       "page": "tableros"
+    },
+    "ComTipo.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "K1 · Tipo de empresa: equipo comercial propio",
+      "page": "comerciales"
+    },
+    "ComEquipo.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "K2 · Equipo comercial (cuentas en Agroolink)",
+      "page": "comerciales"
+    },
+    "ComZonas.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "K3 · Zonas de cada comercial",
+      "page": "comerciales"
+    },
+    "ComContacto.dc.html": {
+      "x": 0,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
+      "page": "comerciales"
+    },
+    "ComPublicar.dc.html": {
+      "x": 1360,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "K5 · Revisar y publicar",
+      "page": "comerciales"
+    },
+    "ComBandeja.dc.html": {
+      "x": 2720,
+      "y": 1240,
+      "w": 1280,
+      "h": 900,
+      "title": "K6 · Bandeja de la comercial (Laura García)",
+      "page": "comerciales"
     }
   },
   "order": [
@@ -845,6 +897,12 @@
     "CompVista.dc.html",
     "CompOtroTipo.dc.html",
     "CompSolicitar.dc.html",
+    "ComTipo.dc.html",
+    "ComEquipo.dc.html",
+    "ComZonas.dc.html",
+    "ComContacto.dc.html",
+    "ComPublicar.dc.html",
+    "ComBandeja.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -1039,6 +1097,22 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "tableros"
+    },
+    "comT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Alta · Fabricante con equipo comercial propio (Zucami)",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "comerciales"
+    },
+    "comT2": {
+      "x": 0,
+      "y": 1040,
+      "text": "Contacto, publicación y la bandeja de cada comercial",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "comerciales"
     }
   },
   "designSystems": []

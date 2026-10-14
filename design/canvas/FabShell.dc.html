@@ -82,12 +82,12 @@ body{margin:0}
   </footer></sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":2,"min":1,"max":10},"empresa":{"editor":"text","default":"DSM-Firmenich"},"persona":{"editor":"text","default":"Carla García"},"iniciales":{"editor":"text","default":"CG"},"pie":{"editor":"bool","default":true},"atras":{"editor":"text","default":""},"siguiente":{"editor":"text","default":""},"$preview":{"width":1280,"height":940}}'>
+<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":2,"min":1,"max":10},"empresa":{"editor":"text","default":"DSM-Firmenich"},"persona":{"editor":"text","default":"Carla García"},"iniciales":{"editor":"text","default":"CG"},"pie":{"editor":"bool","default":true},"paso4":{"editor":"text","default":"Distribuidores"},"atras":{"editor":"text","default":""},"siguiente":{"editor":"text","default":""},"$preview":{"width":1280,"height":940}}'>
 class Component extends DCLogic {
   renderVals() {
     const a = this.props.activo ?? 2;
     const modulo = a > 8;
-    const L = [['Tipo de empresa', 0], ['Cabecera', 0], ['Sobre la empresa', 0], ['Distribuidores', 0], ['Expertos', 1], ['Contenidos', 1], ['Contacto', 0], ['Revisar y publicar', 0]];
+    const L = [['Tipo de empresa', 0], ['Cabecera', 0], ['Sobre la empresa', 0], [this.props.paso4 || 'Distribuidores', 0], ['Expertos', 1], ['Contenidos', 1], ['Contacto', 0], ['Revisar y publicar', 0]];
     const items = L.map(([label, opt], i) => {
       const k = i + 1, done = !modulo && k < a, cur = k === a, pub = k === 8 && !done && !cur;
       return {

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Comerciales · Contacto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.on{border:1.5px solid #0E5A3A;background:#F5FAF6}
+.opt input{accent-color:#0E5A3A;margin:2px 0 0}
+.av{border-radius:50%;color:#FFFFFF;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" empresa="Zucami" persona="Javier Ortega" iniciales="JO" paso4="Equipo comercial" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 24px 28px 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <div><span class="eb">PASO 7 DE 8</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Contacto</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Cómo llega cada solicitud al comercial correcto y en cuánto tiempo se responde.</p></div>
+      <section class="card" style="gap: 8px;">
+        <p class="h">«Contactar comercial» · formulario en 3 pasos</p>
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 8px 10px; font-size: 12.5px; align-items: start;">
+          <span class="av" style="width: 24px; height: 24px; background: #0E5A3A; font-size: 11px;">1</span><span><strong style="font-weight: 600;">Ubicación</strong> <span class="hint">· país y provincia, para elegir comercial</span><br><label class="cc" style="margin-top: 4px;"><input type="checkbox" defaultChecked="{{ yes }}">Saltar si ya está en su perfil</label></span>
+          <span class="av" style="width: 24px; height: 24px; background: #0E5A3A; font-size: 11px;">2</span><span><strong style="font-weight: 600;">Interés</strong> <span class="hint">· el comercial llega a la conversación con contexto</span>
+            <span style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 5px;"><span class="chip">Línea de producto</span><span class="chip">Tipo de proyecto</span><span class="chip">Nº de aves</span><span class="chipg">Plazo</span><a href="#" style="font-size: 12px; align-self: center;">+ Pregunta</a></span></span>
+          <span class="av" style="width: 24px; height: 24px; background: #0E5A3A; font-size: 11px;">3</span><span><strong style="font-weight: 600;">Datos y mensaje</strong> <span class="hint">· se rellenan con el perfil si ha iniciado sesión</span></span>
+        </div>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <p class="h">Tiempo de respuesta</p>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 12.5px;"><span>Nos comprometemos a responder en</span><select class="inp" style="width: 120px; height: 32px;"><option>24 horas</option><option>48 horas</option></select><span class="hint">· se muestra al comprador</span></div>
+        <label class="cc"><input type="checkbox" defaultChecked="{{ yes }}"><span>Si el comercial no responde en 48 h, avisar a <strong style="font-weight: 600;">Dirección comercial</strong></span></label>
+        <label class="cc"><input type="checkbox" defaultChecked="{{ yes }}"><span>Si el comercial está de vacaciones, enviar a su suplente</span></label>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <p class="h">«Solicitar información» · otros motivos</p>
+        <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 6px 10px; font-size: 12.5px; align-items: center;"><span>Información de producto</span><select class="inp" style="height: 32px;"><option>Comercial de su zona</option></select><span>Servicio técnico y repuestos</span><select class="inp" style="height: 32px;"><option>Servicio técnico · sat@zucami.com</option></select><span>Prensa y colaboraciones</span><select class="inp" style="height: 32px;"><option>Marketing (1)</option></select></div>
+      </section>
+    </form>
+    <aside aria-label="Vista previa" style="width: 380px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Paso 2 de «Contactar comercial».</span></span>
+        <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
+      </div>
+      <div style="border-radius: 14px; background: linear-gradient(135deg,#F2F7F3,#E4EEE7); padding: 12px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 66px; height: 46px; border-radius: 10px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(16,40,28,.1); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: #1E8A3C; flex: none;">zucami</span>
+        <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><strong style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 5px;">Zucami Poultry Equipment <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E8B57"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></strong><span style="font-size: 11px; color: #4A5650;">Equipamiento avícola para ponedoras · Valladolid</span></span>
+      </div>
+      <div style="display: flex; gap: 14px; border-bottom: 1px solid #E8ECE9; font-size: 10.5px; color: #56615B; white-space: nowrap;"><span style="padding-bottom: 7px; color: #0E5A3A; font-weight: 600; border-bottom: 2px solid #0E5A3A; margin-bottom: -1px;">Catálogo de productos</span><span style="padding-bottom: 7px;">Sobre la empresa</span><span style="padding-bottom: 7px;">Contenidos</span></div>      <div style="border: 1px solid #E3E8E4; border-radius: 14px; box-shadow: 0 10px 24px rgba(16,40,28,.12); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid #EEF1EE;"><span style="width: 26px; height: 26px; border-radius: 50%; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><strong style="font-size: 12.5px; font-weight: 600;">Encontrar mi comercial</strong><span style="margin-left: auto; color: #8A948F; font-size: 13px;">×</span></div>
+        <div style="padding: 12px; display: flex; flex-direction: column; gap: 9px;"><div style="display: flex; align-items: center; gap: 6px; font-size: 10px;"><span style="display: flex; align-items: center; gap: 4px; color: #56615B;"><span style="width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9.5px; font-weight: 600; background: #0E5A3A; color: #FFFFFF;">✓</span>Ubicación</span><span style="flex: 1; height: 1px; background: #DCE3DE;"></span><span style="display: flex; align-items: center; gap: 4px; color: #0E5A3A; font-weight: 600;"><span style="width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9.5px; font-weight: 600; background: #0E5A3A; color: #FFFFFF;">2</span>Interés</span><span style="flex: 1; height: 1px; background: #DCE3DE;"></span><span style="display: flex; align-items: center; gap: 4px; color: #56615B;"><span style="width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9.5px; font-weight: 600; background: #EEF1EE; color: #56615B;">3</span>Datos</span></div>
+          <span style="font-size: 11px; font-weight: 600;">¿Qué te interesa?</span><span style="display: flex; flex-wrap: wrap; gap: 5px; font-size: 10.5px;"><span style="padding: 4px 9px; border-radius: 999px; border: 1.5px solid #0E5A3A; background: #EEF6EE; color: #0E5A3A; font-weight: 600;">Aviarios</span><span style="padding: 4px 9px; border-radius: 999px; border: 1px solid #DCE3DE;">Nidales</span><span style="padding: 4px 9px; border-radius: 999px; border: 1px solid #DCE3DE;">Recogida de huevos</span><span style="padding: 4px 9px; border-radius: 999px; border: 1px solid #DCE3DE;">Climatización</span></span>
+          <span style="font-size: 11px; font-weight: 600;">Tipo de proyecto</span><span style="height: 32px; border: 1px solid #DCE3DE; border-radius: 8px; padding: 0 10px; font-size: 11.5px; display: flex; align-items: center;">Nave nueva ▾</span>
+          <span style="font-size: 11px; font-weight: 600;">Nº de aves</span><span style="height: 32px; border: 1px solid #DCE3DE; border-radius: 8px; padding: 0 10px; font-size: 11.5px; display: flex; align-items: center;">60.000</span>
+          <span style="display: flex; gap: 6px;"><span style="flex: 1; height: 32px; border-radius: 8px; border: 1px solid #DCE3DE; font-size: 11.5px; display: flex; align-items: center; justify-content: center;">← Atrás</span><span style="flex: 1; height: 32px; border-radius: 8px; background: #0E5A3A; color: #FFFFFF; font-size: 11.5px; display: flex; align-items: center; justify-content: center;">Siguiente →</span></span></div>
+      </div>
+      <span style="display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #56615B;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Responde en menos de 24 h</span>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 7 }; }
+}
+</script>
+</body>
+</html>
