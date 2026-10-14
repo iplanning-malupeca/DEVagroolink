@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Sucursales · Página de la sucursal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.on{border:1.5px solid #0E5A3A;background:#F5FAF6}
+.opt input{accent-color:#0E5A3A;margin:2px 0 0}
+.av{border-radius:50%;color:#FFFFFF;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden; background: #F6F8F6;">
+  <header style="height: 64px; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-bottom: 1px solid #E8ECE9;">
+    <img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 28px; width: auto; display: block;">
+    <span style="font-size: 13px; font-weight: 500; color: #0E5A3A; background: #EEF6EE; border-radius: 10px; padding: 7px 14px; margin-left: 10px;">Empresas</span>
+    <span style="font-size: 14px; color: #4A5650;">Zucami · <strong style="color: #17231D; font-weight: 600;">Sucursal LATAM</strong></span>
+    <span style="margin-left: auto; display: flex; align-items: center; gap: 14px;"><span style="font-size: 12.5px; color: #56615B;">Borrador · guardado hace 3 min</span><span class="av" style="width: 36px; height: 36px; background: #2E8B57; font-size: 13px;">RS</span><span style="font-size: 13.5px;">Rafael Souza</span></span>
+  </header>
+  <nav style="position: absolute; top: 64px; left: 0; bottom: 0; width: 240px; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #E8ECE9; padding: 22px 14px; display: flex; flex-direction: column; gap: 2px;">
+    <span class="eb" style="padding: 0 12px 10px;">ZUCAMI LATAM · SUCURSAL</span>
+    <a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; color: #17231D; font-weight: 400;">Panel</a><a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; background: #EEF6EE; color: #0E5A3A; font-weight: 600;">Página de la sucursal</a><a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; color: #17231D; font-weight: 400;">Productos de la región</a><a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; color: #17231D; font-weight: 400;">Solicitudes<span style="margin-left: auto; min-width: 22px; height: 22px; border-radius: 999px; background: #B5D334; color: #17231D; font-size: 11.5px; font-weight: 600; display: flex; align-items: center; justify-content: center;">6</span></a><a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; color: #17231D; font-weight: 400;">Equipo</a><a href="#" style="display: flex; align-items: center; height: 42px; padding: 0 12px; border-radius: 12px; font-size: 13.5px; text-decoration: none; color: #17231D; font-weight: 400;">Mensajes</a>
+    <div style="margin-top: auto; background: #F2F6F3; border-radius: 14px; padding: 14px; font-size: 12px; color: #4A5650; line-height: 1.45;"><strong style="color: #17231D; font-weight: 600;">Lo decide la Sede</strong><br>Marca, ficha global, ficha base de productos y tus países.</div>
+  </nav>
+  <div style="position: absolute; top: 64px; left: 240px; right: 0; bottom: 72px; padding: 22px 28px 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <div><span class="eb">TU SUCURSAL</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700;">Página de Zucami LATAM</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Es lo que ve un comprador de tu región. La marca y el logo vienen de la Sede.</p></div>
+      <section class="card" style="gap: 10px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"><label class="lbl">Nombre<input class="inp" type="text" value="Zucami LATAM · Brasil"></label><label class="lbl">Ciudad<input class="inp" type="text" value="São Paulo, Brasil"></label></div>
+        <label class="lbl"><span>Frase <span class="hint">· máx. 70</span></span><input class="inp" type="text" value="Soluciones avícolas para un futuro más sostenible"></label>
+        <label class="lbl">Descripción<textarea rows="2" style="border: 1px solid #D5DED8; border-radius: 10px; padding: 8px 11px; font: 400 12.5px 'Poppins', sans-serif; resize: none; line-height: 1.45;">Desde nuestra sede en São Paulo atendemos a clientes de toda América Latina con un equipo local de soporte técnico, comercial y posventa.</textarea></label>
+        <div class="lbl"><span>Zonas de venta <span class="hint">· las asigna la Sede</span></span><div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="chipg">Brasil</span><span class="chipg">Colombia</span><span class="chipg">Perú</span><span class="chipg">Chile</span><span class="chipg">Argentina</span><span class="chipg">Ecuador</span><span class="chipg">Uruguay</span><span style="display: flex; color: #8A948F;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span></div></div>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">Productos destacados en tu región</p><span class="hint">6 de 6 · del catálogo de Zucami</span></div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px;"><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami Aviary Pro</span></span><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami Nest Pro</span></span><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami EggFlow</span></span><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami FeedLine</span></span><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami DrinkTech</span></span><span style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 6px; display: flex; align-items: center; gap: 6px; font-size: 11px;"><span style="width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); flex: none;"></span><span style="font-weight: 500; line-height: 1.2;">Zucami Aviary Compact</span></span></div>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <p class="h">Contacto de la sucursal</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"><label class="lbl">Las solicitudes llegan a<select class="inp"><option>Equipo LATAM (3 personas)</option></select></label><label class="lbl">Idiomas<span style="display: flex; gap: 6px;"><span class="chip">PT</span><span class="chip">ES</span><span class="chipg">EN</span></span></label></div>
+      </section>
+    </form>
+    <aside aria-label="Vista previa" style="width: 360px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 36px; height: 36px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span style="display: flex; flex-direction: column;"><strong style="font-size: 14.5px; font-weight: 600;">Vista previa</strong><span style="font-size: 11.5px; color: #56615B;">agroolink.com/empresas/zucami/latam</span></span></div>
+      <span style="font-size: 10.5px; color: #56615B;">Zucami › Sucursales › LATAM</span>
+      <div style="display: flex; gap: 10px; align-items: flex-start;"><span style="flex: 1;"><strong style="font-size: 17px;">Zucami LATAM · Brasil</strong><br><span style="font-size: 11.5px; color: #0E5A3A; font-weight: 500;">Soluciones avícolas para un futuro más sostenible</span></span><span style="width: 54px; height: 40px; border-radius: 9px; border: 1px solid #E3E8E4; font-size: 10px; font-weight: 800; color: #1E8A3C; display: flex; align-items: center; justify-content: center; flex: none;">zucami</span></div>
+      <span style="height: 36px; border-radius: 9px; background: #0E5A3A; color: #FFFFFF; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center;">Contactar con esta sucursal</span>
+      <div style="display: flex; gap: 12px; border-bottom: 1px solid #E8ECE9; font-size: 10.5px; color: #56615B;"><span style="padding-bottom: 6px; color: #0E5A3A; font-weight: 600; border-bottom: 2px solid #0E5A3A; margin-bottom: -1px;">Productos</span><span>Sobre la empresa</span><span>Contenidos</span><span>Contacto</span></div>
+      <span style="font-size: 12px; font-weight: 600;">Productos destacados en esta región</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px;"><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami Aviary Pro</span></span><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami Nest Pro</span></span><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami EggFlow</span></span><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami FeedLine</span></span><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami DrinkTech</span></span><span style="border: 1px solid #E6EBE7; border-radius: 9px; overflow: hidden; font-size: 9.5px;"><span style="display: block; height: 40px; background: linear-gradient(135deg,#C9D3CF,#8EA39A);"></span><span style="display: block; padding: 4px 5px; font-weight: 600; line-height: 1.2;">Zucami Aviary Compact</span></span></div>
+      <span style="border-radius: 10px; background: #EEF6EE; padding: 9px 10px; font-size: 11px;"><strong>¿Necesitas asesoramiento?</strong> Nuestro equipo en Brasil te ayuda →</span>
+    </aside>
+  </div>
+  <footer style="position: absolute; left: 240px; right: 0; bottom: 0; height: 72px; box-sizing: border-box; padding: 0 32px; background: #FFFFFF; border-top: 1px solid #E8ECE9; display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 12.5px; color: #56615B;">Al publicar, la Sede recibe un aviso.</span>
+    <span style="margin-left: auto; display: flex; gap: 12px;"><button type="button" class="btn" style="height: 44px;">Guardar borrador</button><button type="button" class="btnp" style="height: 44px; padding: 0 22px;">Publicar página</button></span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

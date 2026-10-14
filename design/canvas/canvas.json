@@ -51,6 +51,10 @@
       "name": "Alta · Fabricante con comerciales"
     },
     {
+      "id": "sucursales",
+      "name": "Alta · Fabricante con sucursales"
+    },
+    {
       "id": "productos",
       "name": "Productos (módulo)"
     },
@@ -808,6 +812,54 @@
       "h": 900,
       "title": "K6 · Bandeja de la comercial (Laura García)",
       "page": "comerciales"
+    },
+    "SucTipo.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "S1 · Tipo de empresa: sucursales o filiales",
+      "page": "sucursales"
+    },
+    "SucRed.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "S2 · Red de sucursales y administradores",
+      "page": "sucursales"
+    },
+    "SucPaises.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "S3 · Países de cada sucursal",
+      "page": "sucursales"
+    },
+    "SucPermisos.dc.html": {
+      "x": 0,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "S4 · Qué decide la Sede y qué cada sucursal",
+      "page": "sucursales"
+    },
+    "SucPagina.dc.html": {
+      "x": 1360,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "S5 · Página de la sucursal (lado de Zucami LATAM)",
+      "page": "sucursales"
+    },
+    "SucPublicar.dc.html": {
+      "x": 2720,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "S6 · Revisar y publicar (Sede)",
+      "page": "sucursales"
     }
   },
   "order": [
@@ -903,6 +955,12 @@
     "ComContacto.dc.html",
     "ComPublicar.dc.html",
     "ComBandeja.dc.html",
+    "SucTipo.dc.html",
+    "SucRed.dc.html",
+    "SucPaises.dc.html",
+    "SucPermisos.dc.html",
+    "SucPagina.dc.html",
+    "SucPublicar.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -1113,6 +1171,22 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "comerciales"
+    },
+    "sucT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Alta · Fabricante con sucursales (Zucami, Sede global)",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "sucursales"
+    },
+    "sucT2": {
+      "x": 0,
+      "y": 1040,
+      "text": "Permisos, página de cada sucursal y publicación",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "sucursales"
     }
   },
   "designSystems": []
