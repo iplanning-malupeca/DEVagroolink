@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Productos · Ficha · Especificaciones</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ta{border:1px solid #D5DED8;border-radius:10px;padding:8px 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;resize:none;line-height:1.45;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.er{background:#FDECEA;color:#A3271B}
+.btn{height:38px;padding:0 14px;border-radius:10px;border:1px solid #E3E8E4;background:#FFFFFF;color:#17231D;font:500 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.tabs{display:flex;gap:24px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}
+.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.cc{display:flex;align-items:center;gap:7px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.sw{accent-color:#0E5A3A;width:17px;height:17px;margin:0;flex:none}
+.cty{display:inline-flex;align-items:center;justify-content:center;width:26px;height:18px;border-radius:4px;background:#EEF1EE;font-size:10px;font-weight:700;color:#2F3D36;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" pie="{{ pie }}" atras="{{ atras }}" siguiente="{{ siguiente }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 22px 28px 20px 32px; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <span aria-hidden="true" style="width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(160deg,#FFF6DD,#F3DFA8); border: 1px solid #EAD9A6; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #7A4B00; flex: none;">Hy-D®</span>
+      <div style="flex: 1; min-width: 0;"><a href="#" style="font-size: 12px; color: #56615B; font-weight: 400;">← Catálogo de productos</a>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 2px;"><h1 style="margin: 0; font-size: 25px; font-weight: 700; letter-spacing: -.01em;">Hy-D®</h1><span class="st ok">Publicado</span><span style="font-size: 12px; color: #56615B;">Ref. HYD-25 · Vitaminas · Ficha base</span></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 5px; width: 150px;"><span style="font-size: 12px; color: #4A5650;"><strong style="color: #17231D;">96 %</strong> completa</span><span style="height: 6px; border-radius: 3px; background: #E8ECE9; overflow: hidden; display: block;"><span style="display: block; width: 96%; height: 100%; background: #0E5A3A;"></span></span></div>
+      <a href="#" class="btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> Ver ficha pública</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; background: #F2F7F3; border: 1px solid #DCE9DF; border-radius: 12px; padding: 8px 12px; font-size: 12px; color: #2F3D36;"><span style="color: #0E5A3A; display: flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14-5L4 8M4 4v4h4M4 13a8 8 0 0 0 14 5l2-2M20 20v-4h-4"/></svg></span><span><strong style="font-weight: 600;">Ficha base:</strong> la usan tus distribuidores en 14 países. Al guardar, los cambios llegan a sus versiones locales.</span></div>
+    <div class="tabs"><span>General</span><span>Variantes</span><span>Beneficios y aplicación</span><span class="on">Especificaciones</span><span>Documentación</span><span>Resultados</span><span>Mercados y dónde comprar</span></div>
+    <div style="display: flex; gap: 22px; flex: 1; min-height: 0;">
+      <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+        <section class="card" style="flex-direction: row; align-items: center; gap: 12px; padding: 12px 18px; background: #F2F7F3; border-color: #DCE9DF;"><span style="color: #0E5A3A; display: flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></span><span style="flex: 1; font-size: 12.5px;"><strong style="font-weight: 600;">Plantilla «Vitaminas»</strong> <span class="hint">· la define Agroolink para que los compradores comparen productos de la misma categoría</span></span><a href="#" style="font-size: 12px;">Cambiar</a></section>
+        <section class="card" style="gap: 2px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 6px;"><p class="h">Campos de la plantilla</p><span class="hint">7 campos · 2 vienen de otras pestañas</span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Principio activo</span><input class="inp" type="text" value="25-hidroxicolecalciferol (25-OH-D3)"><span style="justify-self: end;"></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Concentración</span><input class="inp" type="text" value="[%]"><span style="justify-self: end;"></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Forma física</span><span style="font-size: 12.5px; color: #4A5650;">Polvo</span><span style="justify-self: end;"><span class="st dr">De «General»</span></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Vida útil</span><input class="inp" type="text" value="24 meses"><span style="justify-self: end;"></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Almacenamiento</span><input class="inp" type="text" value="Lugar fresco y seco, por debajo de 25 °C"><span style="justify-self: end;"></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Peso neto</span><span style="font-size: 12.5px; color: #4A5650;">25 kg · 500 kg · 5 kg</span><span style="justify-self: end;"><span class="st wn">Por variante</span></span></div>
+          <div style="display: grid; grid-template-columns: 140px 1fr 110px; gap: 12px; align-items: center; padding: 5px 0; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="font-weight: 500;">Nº de registro</span><span style="font-size: 12.5px; color: #4A5650;">Uno por país</span><span style="justify-self: end;"><a href="#" style="font-size: 11.5px;">En Mercados →</a></span></div>
+        </section>
+        <section class="card" style="gap: 8px;">
+          <p class="h">Dosis recomendada <span class="hint">· una por especie de «Aplicación»</span></p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;"><label class="lbl" style="font-weight: 400; font-size: 12px;">Broilers<input class="inp" type="text" value="[g/t de pienso]" style="height: 32px;"></label><label class="lbl" style="font-weight: 400; font-size: 12px;">Ponedoras<input class="inp" type="text" value="[g/t de pienso]" style="height: 32px;"></label><label class="lbl" style="font-weight: 400; font-size: 12px;">Cerdas<input class="inp" type="text" value="[g/t de pienso]" style="height: 32px;"></label></div>
+        </section>
+        <section class="card" style="flex-direction: row; align-items: center; gap: 10px; padding: 12px 18px;"><a href="#" style="font-size: 12.5px;">+ Añadir campo propio</a><span class="hint">· solo aparece en tus productos, no sirve para comparar</span></section>
+      </form>
+      <aside aria-label="Vista previa" style="width: 340px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+        <div style="display: flex; align-items: flex-start; gap: 10px;">
+          <span style="width: 36px; height: 36px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 14.5px; font-weight: 600;">Vista previa del producto</strong><span style="font-size: 11.5px; color: #56615B;">Así se ve la pestaña Especificaciones.</span></span>
+          <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ↗</a>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <span aria-hidden="true" style="width: 104px; height: 118px; border-radius: 12px; background: linear-gradient(160deg,#FFF6DD,#F3DFA8); border: 1px solid #EAD9A6; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; flex: none;"><strong style="font-size: 16px; color: #7A4B00;">Hy-D®</strong><span style="font-size: 9px; color: #7A4B00;">25 kg · dsm-firmenich</span></span>
+          <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0;">
+            <span style="align-self: flex-start; font-size: 10px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 2px 8px;">✓ Producto verificado</span>
+            <strong style="font-size: 19px; font-weight: 700; line-height: 1.1;">Hy-D®</strong>
+            <span style="font-size: 11.5px; color: #2F3D36; line-height: 1.35;">Metabolito de vitamina D3 para salud ósea y rendimiento</span>
+            <span style="display: flex; flex-wrap: wrap; gap: 4px;"><span style="font-size: 10px; background: #F2F5F3; border-radius: 6px; padding: 2px 6px;">Vitaminas</span><span style="font-size: 10px; background: #F2F5F3; border-radius: 6px; padding: 2px 6px;">Polvo</span><span style="font-size: 10px; background: #F2F5F3; border-radius: 6px; padding: 2px 6px;">Saco 25 kg</span></span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; border-bottom: 1px solid #E8ECE9; font-size: 10.5px; color: #56615B; white-space: nowrap; overflow: hidden;"><span style="padding-bottom: 7px;">Información</span><span style="padding-bottom: 7px; color: #0E5A3A; font-weight: 600; border-bottom: 2px solid #0E5A3A; margin-bottom: -1px;">Especificaciones</span><span style="padding-bottom: 7px;">Beneficios</span><span style="padding-bottom: 7px;">Documentación</span></div>
+        <div style="border: 1px solid #E6EBE7; border-radius: 12px; overflow: hidden; font-size: 11px;"><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px;"><span style="color: #56615B;">Principio activo</span><strong style="text-align: right;">25-OH-D3</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Concentración</span><strong style="text-align: right;">[%]</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Forma física</span><strong style="text-align: right;">Polvo</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Vida útil</span><strong style="text-align: right;">24 meses</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Almacenamiento</span><strong style="text-align: right;">< 25 °C, seco</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Peso neto</span><strong style="text-align: right;">25 kg</strong></div><div style="display: flex; justify-content: space-between; gap: 10px; padding: 7px 10px; border-top: 1px solid #EEF1EE;"><span style="color: #56615B;">Dosis · Broilers</span><strong style="text-align: right;">[g/t]</strong></div></div>
+        <span style="align-self: flex-start; font-size: 11px; color: #0E5A3A; font-weight: 500;">Comparar con otras vitaminas →</span>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 9, pie: true, atras: 'Volver al catálogo', siguiente: 'Guardar cambios' }; }
+}
+</script>
+</body>
+</html>

@@ -630,39 +630,63 @@
       "y": 0,
       "w": 1280,
       "h": 940,
-      "title": "P3 · Acuerdos de distribución por línea y zona",
+      "title": "P3 · Acuerdos de distribución por línea y zona (con exclusividad)",
       "page": "productos"
     },
     "ProdFichaGeneral.dc.html": {
       "x": 0,
-      "y": 1240,
+      "y": 1400,
       "w": 1280,
       "h": 940,
       "title": "P4 · Ficha base · General",
       "page": "productos"
     },
     "ProdFichaBeneficios.dc.html": {
-      "x": 1360,
-      "y": 1240,
+      "x": 2720,
+      "y": 1400,
       "w": 1280,
       "h": 940,
-      "title": "P5 · Ficha base · Beneficios y aplicación",
+      "title": "P6 · Ficha base · Beneficios y aplicación",
       "page": "productos"
     },
     "ProdFichaDocumentos.dc.html": {
-      "x": 2720,
-      "y": 1240,
+      "x": 5440,
+      "y": 1400,
       "w": 1280,
       "h": 940,
-      "title": "P6 · Ficha base · Documentación, vídeo y certificaciones",
+      "title": "P8 · Ficha base · Documentación, vídeo y certificaciones",
       "page": "productos"
     },
     "ProdFichaMercados.dc.html": {
-      "x": 4080,
-      "y": 1240,
+      "x": 6800,
+      "y": 1400,
       "w": 1280,
       "h": 940,
-      "title": "P7 · Ficha base · Mercados y dónde comprar",
+      "title": "P9 · Ficha base · Mercados y dónde comprar",
+      "page": "productos"
+    },
+    "ProdFichaVariantes.dc.html": {
+      "x": 1360,
+      "y": 1400,
+      "w": 1280,
+      "h": 940,
+      "title": "P5 · Ficha base · Variantes (embalaje o configuración)",
+      "page": "productos"
+    },
+    "ProdFichaEspecificaciones.dc.html": {
+      "x": 4080,
+      "y": 1400,
+      "w": 1280,
+      "h": 940,
+      "title": "P7 · Ficha base · Especificaciones con plantilla por categoría",
+      "page": "productos"
+    },
+    "ProdVersionLocal.dc.html": {
+      "x": 0,
+      "y": 2800,
+      "w": 1280,
+      "h": 940,
+      "title": "P10 · Versión local de AgroNova (lado del distribuidor)",
       "page": "productos"
     }
   },
@@ -739,9 +763,12 @@
     "ProdImportar.dc.html",
     "ProdAcuerdos.dc.html",
     "ProdFichaGeneral.dc.html",
+    "ProdFichaVariantes.dc.html",
     "ProdFichaBeneficios.dc.html",
+    "ProdFichaEspecificaciones.dc.html",
     "ProdFichaDocumentos.dc.html",
     "ProdFichaMercados.dc.html",
+    "ProdVersionLocal.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -907,10 +934,18 @@
     },
     "prodT2": {
       "x": 0,
-      "y": 1040,
+      "y": 1120,
       "text": "Ficha base de un producto · las pestañas siguen las de la ficha pública",
       "kind": "title1",
-      "maxW": 5360,
+      "maxW": 8080,
+      "page": "productos"
+    },
+    "prodT3": {
+      "x": 0,
+      "y": 2520,
+      "text": "El distribuidor adapta su versión local; el resto llega sincronizado de la marca",
+      "kind": "title1",
+      "maxW": 4000,
       "page": "productos"
     }
   },
