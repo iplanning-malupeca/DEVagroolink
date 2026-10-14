@@ -18,6 +18,12 @@ Regla general: lo que queda vacío no se publica.
 - Con productos publicados, la clasificación se calcula a partir de ellos (especies de Aplicación y familia/tipo de cada producto). El buscador da más peso a lo calculado; lo declarado sin productos que lo respalden pesa menos.
 - Si lo declarado y lo calculado no coinciden, se avisa a la empresa para que lo revise.
 
+## Especies y mercados
+
+**Especies** (`especies.json`): 7 especies, categorías y, en pollos de engorde, un tercer nivel. Elegir un nivel incluye todo lo de debajo. Empresa: obligatorio a nivel de especie, afinar opcional. Producto (Aplicación): hasta el último nivel. Buscador: una búsqueda por «Broilers» encuentra lo marcado como Broilers, Pollos de engorde o Avicultura; lo más concreto puntúa más.
+
+**Mercados**: un único selector con búsqueda. Niveles: 1 región del mundo (Europa, UE, Latinoamérica…, lista propia), 2 país (ISO 3166-1), 3 región del país (ISO 3166-2), 4 provincia (solo donde haga falta, para zonas de comerciales y distribuidores). Elegir un nivel incluye todo lo de debajo; se guardan inclusiones y excepciones (`incluye: [UE]`, `excepto: [VE]`). Mismo componente en empresa, producto (Mercados), zonas de comerciales y acuerdos de distribución. El comprador indica su provincia una vez.
+
 ## Entidades
 
 ```mermaid

@@ -13,6 +13,7 @@ https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t
 
 | Página | Prefijo de archivos |
 |---|---|
+| Componentes · especies y mercados | `SelEspecies`, `SelMercados` |
 | Header | `Main`, `Personal`, `Experto`, `ConEmpresa`, `Empresa`, `AvatarMenu` |
 | Alta (login Agrinews) | `Login*`, `Alta4MiEspacio`, `AltaEmpresa`, `AltaExperto`, `AltaConsulta` |
 | Alta empresa | `EmpE*` |

@@ -15,6 +15,10 @@
       "name": "Header"
     },
     {
+      "id": "componentes",
+      "name": "Componentes · especies y mercados"
+    },
+    {
       "id": "alta",
       "name": "Alta"
     },
@@ -920,6 +924,22 @@
       "h": 940,
       "title": "X4 · Subir un producto nuevo (con control de duplicados)",
       "page": "distmulti"
+    },
+    "SelEspecies.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "Selector de especies",
+      "page": "componentes"
+    },
+    "SelMercados.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "Selector de mercados",
+      "page": "componentes"
     }
   },
   "order": [
@@ -1028,6 +1048,8 @@
     "DisPublicar.dc.html",
     "DisElegir.dc.html",
     "DisSubir.dc.html",
+    "SelEspecies.dc.html",
+    "SelMercados.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -1270,6 +1292,14 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "distmulti"
+    },
+    "selT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Componentes comunes · especies y mercados",
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "componentes"
     }
   },
   "designSystems": []

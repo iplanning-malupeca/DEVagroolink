@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "especies": [
+    {
+      "id": "avicultura",
+      "label": "Avicultura",
+      "categorias": [
+        {
+          "id": "avicultura_pollos_de_engorde",
+          "label": "Pollos de engorde",
+          "subcategorias": [
+            {
+              "id": "avicultura_broilers",
+              "label": "Broilers"
+            },
+            {
+              "id": "avicultura_pollos_de_crecimiento_lento",
+              "label": "Pollos de crecimiento lento"
+            }
+          ]
+        },
+        {
+          "id": "avicultura_gallinas_ponedoras",
+          "label": "Gallinas ponedoras"
+        },
+        {
+          "id": "avicultura_reproductoras",
+          "label": "Reproductoras"
+        },
+        {
+          "id": "avicultura_pavos",
+          "label": "Pavos"
+        },
+        {
+          "id": "avicultura_patos",
+          "label": "Patos"
+        },
+        {
+          "id": "avicultura_ocas",
+          "label": "Ocas"
+        },
+        {
+          "id": "avicultura_perdices",
+          "label": "Perdices"
+        },
+        {
+          "id": "avicultura_aves_ornamentales",
+          "label": "Aves ornamentales"
+        }
+      ]
+    },
+    {
+      "id": "porcino",
+      "label": "Porcino",
+      "categorias": [
+        {
+          "id": "porcino_hembras_reproductoras",
+          "label": "Hembras reproductoras"
+        },
+        {
+          "id": "porcino_machos_reproductores",
+          "label": "Machos reproductores"
+        },
+        {
+          "id": "porcino_lechones",
+          "label": "Lechones"
+        },
+        {
+          "id": "porcino_cebo_engorde",
+          "label": "Cebo / Engorde"
+        },
+        {
+          "id": "porcino_razas_autoctonas",
+          "label": "Razas autóctonas"
+        }
+      ]
+    },
+    {
+      "id": "bovino",
+      "label": "Bovino",
+      "categorias": [
+        {
+          "id": "bovino_vacuno_de_leche",
+          "label": "Vacuno de leche"
+        },
+        {
+          "id": "bovino_vacuno_de_carne",
+          "label": "Vacuno de carne"
+        },
+        {
+          "id": "bovino_razas_autoctonas",
+          "label": "Razas autóctonas"
+        }
+      ]
+    },
+    {
+      "id": "ovino",
+      "label": "Ovino",
+      "categorias": [
+        {
+          "id": "ovino_ovino_de_leche",
+          "label": "Ovino de leche"
+        },
+        {
+          "id": "ovino_ovino_de_carne",
+          "label": "Ovino de carne"
+        },
+        {
+          "id": "ovino_razas_autoctonas",
+          "label": "Razas autóctonas"
+        }
+      ]
+    },
+    {
+      "id": "caprino",
+      "label": "Caprino",
+      "categorias": [
+        {
+          "id": "caprino_caprino_de_leche",
+          "label": "Caprino de leche"
+        },
+        {
+          "id": "caprino_caprino_de_carne",
+          "label": "Caprino de carne"
+        },
+        {
+          "id": "caprino_razas_autoctonas",
+          "label": "Razas autóctonas"
+        }
+      ]
+    },
+    {
+      "id": "acuicultura",
+      "label": "Acuicultura",
+      "categorias": [
+        {
+          "id": "acuicultura_tilapias",
+          "label": "Tilapias"
+        },
+        {
+          "id": "acuicultura_camarones",
+          "label": "Camarones"
+        },
+        {
+          "id": "acuicultura_salmon",
+          "label": "Salmón"
+        }
+      ]
+    },
+    {
+      "id": "cunicultura",
+      "label": "Cunicultura",
+      "categorias": [
+        {
+          "id": "cunicultura_conejos_para_carne",
+          "label": "Conejos para carne"
+        },
+        {
+          "id": "cunicultura_conejos_para_piel",
+          "label": "Conejos para piel"
+        }
+      ]
+    }
+  ]
+}

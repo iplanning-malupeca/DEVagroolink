@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Selector de especies</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px;min-width:0}
+.step{font-size:11px;font-weight:700;letter-spacing:.08em;color:#0E5A3A}
+.h{font-size:15px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.on{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#0E5A3A;color:#FFFFFF;font-size:12px;font-weight:500;white-space:nowrap}
+.off{display:inline-flex;align-items:center;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.tok{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;border:1px solid #CFE0D5;font-size:12px;font-weight:500;white-space:nowrap}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0;width:15px;height:15px}
+ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:12px;color:#2F3D36;line-height:1.45}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; box-sizing: border-box; background: #F6F8F6; padding: 26px 36px; display: flex; flex-direction: column; gap: 16px; overflow: hidden;">
+  <div><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">COMPONENTE COMÚN</span><h1 style="margin: 4px 0 0; font-size: 28px; font-weight: 700;">Selector de especies</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650; max-width: 900px;">Siete especies y sus categorías. Elegir la especie ya incluye todas sus categorías; afinar es opcional. El mismo árbol sirve en el alta de empresa, en los productos, en el perfil del ganadero y en los filtros del buscador.</p></div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; align-items: start;">
+    <section class="card">
+      <span class="step">1 · CERRADO</span>
+      <p class="h">En el alta de la empresa</p>
+      <span class="hint" style="margin-top: -4px;">Un clic por especie. Lo normal es no afinar.</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="on">✓ Avicultura <span style="opacity:.75;font-weight:400">· 2</span></span><span class="on">✓ Porcino <span style="opacity:.75;font-weight:400">· todas</span></span><span class="off">Bovino</span><span class="off">Ovino</span><span class="off">Caprino</span><span class="off">Acuicultura</span><span class="off">Cunicultura</span></div>
+      <span style="font-size: 12px; color: #4A5650; line-height: 1.45; background: #F6F8F6; border-radius: 10px; padding: 8px 10px;">«· todas» = sin afinar. «· 2» = ha elegido 2 categorías. Un segundo clic sobre una especie elegida abre el detalle.</span>
+    </section>
+    <section class="card" style="border: 1.5px solid #0E5A3A; box-shadow: 0 12px 28px rgba(16,40,28,.12);">
+      <span class="step">2 · AFINAR (OPCIONAL)</span>
+      <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">Avicultura</p><span class="hint">×</span></div>
+      <label class="cc"><input type="radio" name="av"><span>Todas las categorías</span></label>
+      <label class="cc"><input type="radio" name="av" defaultChecked="{{ yes }}"><span>Solo algunas</span></label>
+      <div style="display: flex; flex-direction: column; margin-left: 22px;"><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Pollos de engorde <span class="hint">· 2 tipos</span></label><label class="cc" style="padding: 3px 0 3px 24px; color: #4A5650;"><input type="checkbox">Broilers</label><label class="cc" style="padding: 3px 0 3px 24px; color: #4A5650;"><input type="checkbox">Pollos de crecimiento lento</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" defaultChecked="{{ yes }}">Gallinas ponedoras</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" defaultChecked="{{ yes }}">Reproductoras</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Pavos</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Patos</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Ocas</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Perdices</label><label class="cc" style="padding: 5px 0; border-top: 1px solid #F0F3F1;"><input type="checkbox" >Aves ornamentales</label></div>
+      <div style="display: flex; justify-content: flex-end; gap: 8px;"><button type="button" style="height: 34px; padding: 0 14px; border-radius: 9px; border: 1px solid #DCE3DE; background: #FFFFFF; font: 500 12.5px 'Poppins', sans-serif;">Cancelar</button><button type="button" style="height: 34px; padding: 0 14px; border-radius: 9px; border: 0; background: #0E5A3A; color: #FFFFFF; font: 600 12.5px 'Poppins', sans-serif;">Aplicar</button></div>
+    </section>
+    <section class="card">
+      <span class="step">3 · REGLAS</span>
+      <ul>
+        <li><strong>Empresa:</strong> obligatorio a nivel de especie; afinar, opcional.</li>
+        <li><strong>Producto (Aplicación):</strong> se puede llegar al último nivel, p. ej. Broilers.</li>
+        <li><strong>Buscador:</strong> quien busca «Broilers» encuentra lo marcado como Broilers, Pollos de engorde o Avicultura; lo más concreto sale primero.</li>
+        <li><strong>Ganadero y experto:</strong> el mismo árbol para su producción o su especialidad.</li>
+        <li>«Razas autóctonas» se mantiene como categoría en porcino, bovino, ovino y caprino.</li>
+      </ul>
+    </section>
+  </div>
+  <section class="card" style="gap: 12px;">
+    <p class="h" style="font-size: 14px;">Árbol completo</p>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px 18px;"><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Avicultura</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Pollos de engorde (Broilers, Pollos de crecimiento lento) · Gallinas ponedoras · Reproductoras · Pavos · Patos · Ocas · Perdices · Aves ornamentales</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Porcino</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Hembras reproductoras · Machos reproductores · Lechones · Cebo / Engorde · Razas autóctonas</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Bovino</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Vacuno de leche · Vacuno de carne · Razas autóctonas</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Ovino</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Ovino de leche · Ovino de carne · Razas autóctonas</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Caprino</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Caprino de leche · Caprino de carne · Razas autóctonas</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Acuicultura</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Tilapias · Camarones · Salmón</span></div><div style="display: flex; flex-direction: column; gap: 3px; min-width: 0;"><strong style="font-size: 12px; font-weight: 600;">Cunicultura</strong><span style="font-size: 11px; color: #4A5650; line-height: 1.45;">Conejos para carne · Conejos para piel</span></div></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Selector de mercados</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px;min-width:0}
+.step{font-size:11px;font-weight:700;letter-spacing:.08em;color:#0E5A3A}
+.h{font-size:15px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.on{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#0E5A3A;color:#FFFFFF;font-size:12px;font-weight:500;white-space:nowrap}
+.off{display:inline-flex;align-items:center;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.tok{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;border:1px solid #CFE0D5;font-size:12px;font-weight:500;white-space:nowrap}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0;width:15px;height:15px}
+ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:12px;color:#2F3D36;line-height:1.45}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; box-sizing: border-box; background: #F6F8F6; padding: 26px 36px; display: flex; flex-direction: column; gap: 16px; overflow: hidden;">
+  <div><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">COMPONENTE COMÚN</span><h1 style="margin: 4px 0 0; font-size: 28px; font-weight: 700;">Selector de mercados</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650; max-width: 900px;">Un único buscador para regiones del mundo, países y regiones dentro de un país. Se elige al nivel que haga falta: lo de debajo se hereda y se admiten excepciones. Lo usan la empresa, los productos, las zonas de comerciales y los acuerdos de distribución.</p></div>
+  <div style="display: grid; grid-template-columns: 1fr 1.15fr 0.95fr; gap: 16px; align-items: start;">
+    <section class="card">
+      <span class="step">1 · BUSCAR Y AÑADIR</span>
+      <p class="h">Escribe un sitio</p>
+      <span style="height: 40px; border: 1.5px solid #0E5A3A; border-radius: 10px; display: flex; align-items: center; gap: 8px; padding: 0 12px; font-size: 13px; box-shadow: 0 0 0 3px rgba(14,90,58,.12);">cata<span style="width: 1px; height: 16px; background: #17231D;"></span></span>
+      <div style="border: 1px solid #DCE3DE; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 24px rgba(16,40,28,.1);">
+        <div style="padding: 6px 12px; background: #F6F8F6; font-size: 10.5px; font-weight: 600; color: #56615B; letter-spacing: .05em;">REGIONES DENTRO DE UN PAÍS</div>
+        <div style="padding: 8px 12px; font-size: 12.5px; background: #F2F7F3;"><strong style="font-weight: 600;">Cata</strong>luña <span class="hint">· España</span></div>
+        <div style="padding: 8px 12px; font-size: 12.5px; border-top: 1px solid #F0F3F1;"><strong style="font-weight: 600;">Cata</strong>marca <span class="hint">· Argentina</span></div>
+        <div style="padding: 6px 12px; background: #F6F8F6; font-size: 10.5px; font-weight: 600; color: #56615B; letter-spacing: .05em;">PAÍSES</div>
+        <div style="padding: 8px 12px; font-size: 12.5px;"><strong style="font-weight: 600;">Cata</strong>r <span class="hint">· Oriente Medio</span></div>
+      </div>
+      <span style="font-size: 12px; font-weight: 600; margin-top: 4px;">Atajos</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="off">Toda España</span><span class="off">Unión Europea</span><span class="off">Latinoamérica</span><span class="off">Todo el mundo</span></div>
+    </section>
+    <section class="card" style="border: 1.5px solid #0E5A3A;">
+      <span class="step">2 · LO ELEGIDO</span>
+      <p class="h">Dónde vendes</p>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="tok">España <span style="color: #4A5650; font-weight: 400;">· toda</span> ×</span><span class="tok">Portugal <span style="color: #4A5650; font-weight: 400;">· todo</span> ×</span><span class="tok">Latinoamérica <span style="color: #4A5650; font-weight: 400;">· excepto Venezuela</span> ×</span><span class="tok" style="background: #FFFFFF; border: 1.5px solid #0E5A3A;">Francia <span style="color: #4A5650; font-weight: 400;">· 3 regiones</span> ▾</span></div>
+        <div style="border: 1px solid #DCE3DE; border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px;">
+          <label class="cc" style="padding-bottom: 6px; border-bottom: 1px solid #F0F3F1;"><input type="checkbox"><strong style="font-weight: 600;">Toda Francia</strong></label>
+          <label class="cc"><input type="checkbox" defaultChecked="{{ yes }}">Bretaña</label><label class="cc"><input type="checkbox" defaultChecked="{{ yes }}">Países del Loira</label><label class="cc"><input type="checkbox" defaultChecked="{{ yes }}">Normandía</label><label class="cc"><input type="checkbox">Nueva Aquitania</label><label class="cc"><input type="checkbox">Occitania</label>
+          <a href="#" style="font-size: 12px; padding-top: 2px;">+ 8 regiones más</a>
+        </div>
+      </div>
+      <span style="font-size: 12px; color: #2F3D36; background: #F2F7F3; border-radius: 10px; padding: 8px 10px; line-height: 1.45;">Vendes en <strong>23 países</strong>. En Francia, solo en 3 regiones.</span>
+      <span class="hint">«Excepto» aparece al abrir una región del mundo o un país completo.</span>
+    </section>
+    <section class="card">
+      <span class="step">3 · NIVELES Y REGLAS</span>
+      <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;">
+        <span style="display: flex; gap: 8px; align-items: center;"><span class="on" style="height: 24px; font-size: 11px;">1</span>Región del mundo <span class="hint">· Europa, UE, Latinoamérica…</span></span>
+        <span style="display: flex; gap: 8px; align-items: center;"><span class="on" style="height: 24px; font-size: 11px;">2</span>País <span class="hint">· ISO 3166-1</span></span>
+        <span style="display: flex; gap: 8px; align-items: center;"><span class="on" style="height: 24px; font-size: 11px;">3</span>Región del país <span class="hint">· ISO 3166-2: comunidades, estados…</span></span>
+        <span style="display: flex; gap: 8px; align-items: center;"><span class="off" style="height: 24px; font-size: 11px;">4</span>Provincia <span class="hint">· solo donde haga falta</span></span>
+      </div>
+      <ul>
+        <li>Elegir un nivel incluye todo lo de debajo.</li>
+        <li>El nivel 4 solo se usa para zonas de comerciales y distribuidores.</li>
+        <li>El comprador indica su provincia una vez y así sabemos a quién llega cada solicitud.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>
