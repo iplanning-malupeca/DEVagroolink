@@ -447,7 +447,7 @@
       "page": "servicios",
       "title": "Borrador previo · servicios (se rediseña en el módulo Servicios)",
       "w": 1280,
-      "x": 1,
+      "x": 3,
       "y": 0
     },
     "FabShell.dc.html": {
@@ -779,6 +779,22 @@
       "x": 1360,
       "y": 0
     },
+    "ServEditor.dc.html": {
+      "h": 940,
+      "page": "servicios",
+      "title": "V2 · Editar un servicio: especies y dónde se presta",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ServLista.dc.html": {
+      "h": 940,
+      "page": "servicios",
+      "title": "V1 · Servicios de AgroNova: especies, zonas y modalidad",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
     "SucPagina.dc.html": {
       "h": 940,
       "page": "sucursales",
@@ -867,21 +883,13 @@
       "x": 5440,
       "y": 0
     },
-    "ServLista.dc.html": {
-      "x": 1360,
-      "y": 0,
-      "w": 1280,
-      "h": 940,
-      "title": "V1 · Servicios de AgroNova: especies, zonas y modalidad",
-      "page": "servicios"
-    },
-    "ServEditor.dc.html": {
+    "SelRamasCargos.dc.html": {
       "x": 2720,
       "y": 0,
       "w": 1280,
-      "h": 940,
-      "title": "V2 · Editar un servicio: especies y dónde se presta",
-      "page": "servicios"
+      "h": 900,
+      "title": "Rama de negocio y cargo (listas del CRM)",
+      "page": "componentes"
     }
   },
   "createdOnFiles": {
@@ -1094,9 +1102,9 @@
     },
     "selT1": {
       "kind": "title1",
-      "maxW": 2640,
+      "maxW": 4000,
       "page": "componentes",
-      "text": "Componentes comunes · especies y mercados",
+      "text": "Componentes comunes · especies, mercados, rama de negocio y cargo",
       "w": 240,
       "x": 0,
       "y": -300
@@ -1284,6 +1292,7 @@
     "SelMercados.dc.html",
     "ServLista.dc.html",
     "ServEditor.dc.html",
+    "SelRamasCargos.dc.html",
     "FabShell.dc.html"
   ],
   "pages": [
@@ -1293,7 +1302,7 @@
     },
     {
       "id": "componentes",
-      "name": "Componentes · especies y mercados"
+      "name": "Componentes · especies, mercados, ramas y cargos"
     },
     {
       "id": "alta",

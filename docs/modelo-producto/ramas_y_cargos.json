@@ -1,0 +1,240 @@
+{
+  "version": "1.0",
+  "fuente": "CRM Agroolink",
+  "ramas_negocio": [
+    {
+      "id": "granja",
+      "label": "Granja",
+      "subramas": [
+        {
+          "id": "granja_industrial",
+          "label": "Industrial"
+        },
+        {
+          "id": "granja_familiar",
+          "label": "Familiar"
+        }
+      ]
+    },
+    {
+      "id": "incubadora",
+      "label": "Incubadora"
+    },
+    {
+      "id": "integradora_cooperativa",
+      "label": "Integradora Cooperativa"
+    },
+    {
+      "id": "matadero",
+      "label": "Matadero"
+    },
+    {
+      "id": "instalacion_equipo",
+      "label": "Instalación Equipo",
+      "subramas": [
+        {
+          "id": "instalacion_equipo_naves",
+          "label": "Naves"
+        },
+        {
+          "id": "instalacion_equipo_equipamientos",
+          "label": "Equipamientos"
+        },
+        {
+          "id": "instalacion_equipo_maquinaria",
+          "label": "Maquinaria"
+        },
+        {
+          "id": "instalacion_equipo_consumibles",
+          "label": "Consumibles"
+        }
+      ]
+    },
+    {
+      "id": "montador",
+      "label": "Montador"
+    },
+    {
+      "id": "distribuidor",
+      "label": "Distribuidor"
+    },
+    {
+      "id": "laboratorios",
+      "label": "Laboratorios",
+      "subramas": [
+        {
+          "id": "laboratorios_farmacologicos",
+          "label": "Farmacológicos"
+        },
+        {
+          "id": "laboratorios_biologicos",
+          "label": "Biológicos"
+        },
+        {
+          "id": "laboratorios_analisis",
+          "label": "Análisis"
+        },
+        {
+          "id": "laboratorios_bioseguridad",
+          "label": "Bioseguridad"
+        },
+        {
+          "id": "laboratorios_investigacion",
+          "label": "Investigación"
+        }
+      ]
+    },
+    {
+      "id": "comercial_veterinaria",
+      "label": "Comercial Veterinaria"
+    },
+    {
+      "id": "genetica",
+      "label": "Genética"
+    },
+    {
+      "id": "bioseguridad",
+      "label": "Bioseguridad"
+    },
+    {
+      "id": "fabrica_de_pienso",
+      "label": "Fábrica de pienso"
+    },
+    {
+      "id": "aditivos_correctores",
+      "label": "Aditivos Correctores"
+    },
+    {
+      "id": "consultoria",
+      "label": "Consultoría"
+    },
+    {
+      "id": "asociaciones",
+      "label": "Asociaciones",
+      "subramas": [
+        {
+          "id": "asociaciones_asociaciones",
+          "label": "Asociaciones"
+        },
+        {
+          "id": "asociaciones_interprofesionales",
+          "label": "Interprofesionales"
+        },
+        {
+          "id": "asociaciones_sindicatos",
+          "label": "Sindicatos"
+        }
+      ]
+    },
+    {
+      "id": "administracion_publica",
+      "label": "Administración Pública"
+    },
+    {
+      "id": "comunicacion",
+      "label": "Comunicación",
+      "subramas": [
+        {
+          "id": "comunicacion_medios_generales",
+          "label": "Medios Generales"
+        },
+        {
+          "id": "comunicacion_medios_ganaderos",
+          "label": "Medios Ganaderos"
+        },
+        {
+          "id": "comunicacion_agencias",
+          "label": "Agencias"
+        },
+        {
+          "id": "comunicacion_ferias",
+          "label": "Ferias"
+        }
+      ]
+    },
+    {
+      "id": "formacion",
+      "label": "Formación",
+      "subramas": [
+        {
+          "id": "formacion_universidad",
+          "label": "Universidad"
+        },
+        {
+          "id": "formacion_centro_de_formacion",
+          "label": "Centro de Formación"
+        },
+        {
+          "id": "formacion_i_d",
+          "label": "I+D"
+        }
+      ]
+    },
+    {
+      "id": "otro",
+      "label": "Otro"
+    }
+  ],
+  "cargos": [
+    {
+      "id": "administracion",
+      "label": "Administración"
+    },
+    {
+      "id": "comercial",
+      "label": "Comercial"
+    },
+    {
+      "id": "comisionista",
+      "label": "Comisionista"
+    },
+    {
+      "id": "consultor",
+      "label": "Consultor"
+    },
+    {
+      "id": "directivo",
+      "label": "Directivo"
+    },
+    {
+      "id": "director_tecnico",
+      "label": "Director Técnico"
+    },
+    {
+      "id": "disenador",
+      "label": "Diseñador"
+    },
+    {
+      "id": "granjero",
+      "label": "Granjero"
+    },
+    {
+      "id": "investigador",
+      "label": "Investigador"
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing"
+    },
+    {
+      "id": "nutrologo",
+      "label": "Nutrólogo"
+    },
+    {
+      "id": "periodista",
+      "label": "Periodista"
+    },
+    {
+      "id": "secretario_tecnico",
+      "label": "Secretario Técnico"
+    },
+    {
+      "id": "veterinario",
+      "label": "Veterinario"
+    },
+    {
+      "id": "otro",
+      "label": "Otro"
+    }
+  ]
+}
