@@ -882,6 +882,62 @@
       "h": 900,
       "title": "Rama de negocio y cargo (listas del CRM)",
       "page": "componentes"
+    },
+    "ProyCrear.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "J1 · Crear proyecto · qué necesitas",
+      "page": "proyectos"
+    },
+    "ProyDestinatarios.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "J2 · Crear proyecto · a quién se lo enviamos",
+      "page": "proyectos"
+    },
+    "ProyMis.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "J3 · Mis proyectos",
+      "page": "proyectos"
+    },
+    "ProyDetalle.dc.html": {
+      "x": 4080,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "J4 · Detalle del proyecto y propuestas",
+      "page": "proyectos"
+    },
+    "ProyOportunidades.dc.html": {
+      "x": 0,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "J5 · Oportunidades para la empresa (AgroNova)",
+      "page": "proyectos"
+    },
+    "ProyPropuesta.dc.html": {
+      "x": 1360,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "J6 · Enviar una propuesta",
+      "page": "proyectos"
+    },
+    "ProyExperto.dc.html": {
+      "x": 2720,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "J7 · Proyectos para la experta (Laura Gil)",
+      "page": "proyectos"
     }
   },
   "createdOnFiles": {
@@ -1172,6 +1228,22 @@
       "w": 240,
       "x": 0,
       "y": -300
+    },
+    "proyT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Proyectos · el ganadero publica lo que necesita (Samuel)",
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "proyectos"
+    },
+    "proyT2": {
+      "x": 0,
+      "y": 1020,
+      "text": "Empresas y expertos reciben oportunidades que encajan",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "proyectos"
     }
   },
   "order": [
@@ -1284,12 +1356,23 @@
     "ServLista.dc.html",
     "ServEditor.dc.html",
     "SelRamasCargos.dc.html",
+    "ProyCrear.dc.html",
+    "ProyDestinatarios.dc.html",
+    "ProyMis.dc.html",
+    "ProyDetalle.dc.html",
+    "ProyOportunidades.dc.html",
+    "ProyPropuesta.dc.html",
+    "ProyExperto.dc.html",
     "FabShell.dc.html"
   ],
   "pages": [
     {
       "id": "header",
       "name": "Header"
+    },
+    {
+      "id": "proyectos",
+      "name": "Proyectos (módulo central)"
     },
     {
       "id": "componentes",
