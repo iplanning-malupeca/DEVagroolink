@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tableros · Vista de un tablero</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.h{font-size:15px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.btn{height:38px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:40px;padding:0 18px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.btno{height:40px;padding:0 16px;border-radius:10px;border:1.5px solid #0E5A3A;background:#FFFFFF;color:#0E5A3A;font:600 13.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.s-rev{background:#F2F5F3;color:#4A5650}.s-int{background:#FFF4E0;color:#7A4B00}.s-con{background:#EEF6EE;color:#0E5A3A}.s-des{background:#FDECEA;color:#A3271B}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.tabs{display:flex;gap:22px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}
+.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.av{width:26px;height:26px;border-radius:50%;color:#FFFFFF;font-size:10px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;border:2px solid #FFFFFF;box-sizing:content-box}
+.cc{display:flex;align-items:center;gap:9px;font-size:13px}
+.cc input{accent-color:#0E5A3A;margin:0;width:16px;height:16px}
+.inp{height:38px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ex{font-size:10.5px;font-weight:600;color:#7A4B00;background:#FFF4E0;border-radius:999px;padding:2px 9px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Mis tableros" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-size: 12px; color: #56615B;"><a href="#" style="font-weight: 400; color: #56615B;">Mis tableros</a> › Nave 2 · broilers</div>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <span aria-hidden="true" style="width: 74px; height: 74px; border-radius: 16px; background: linear-gradient(135deg,#F6D9B8,#E9B98A); display: flex; align-items: center; justify-content: center; font-size: 34px; flex: none;">🐔</span>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px;">
+          <div style="display: flex; align-items: center; gap: 10px;"><h1 style="margin: 0; font-size: 26px; font-weight: 700;">Nave 2 · broilers</h1><span class="chipg" style="height: 24px; font-size: 11px;">Proyecto</span><span style="display: flex; align-items: center; gap: 4px; font-size: 11.5px; color: #56615B;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Compartido con 2</span></div>
+          <span style="font-size: 13px; color: #4A5650;">Equipamiento y nutrición para la nave nueva de 40.000 aves. Objetivo: arrancar en marzo de 2027.</span>
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 11.5px; color: #56615B;"><span style="display: flex;"><span class="av" style="background: #0E5A3A;">SE</span><span class="av" style="background: #6B8F7B; margin-left: -8px;">ME</span><span class="av" style="background: #4B3BA6; margin-left: -8px;">LG</span></span> 14 elementos · 2 comparativas · actualizado ayer</span>
+        </div>
+        <span style="display: flex; gap: 8px;"><button type="button" class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg> Compartir</button><button type="button" class="btn" aria-label="Más opciones" style="width: 38px; padding: 0; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></button></span>
+      </div>
+      <div class="card" style="padding: 12px 16px; display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 12.5px; font-weight: 600; white-space: nowrap;">Seguimiento</span>
+        <span style="flex: 1; display: flex; height: 10px; border-radius: 5px; overflow: hidden;"><span style="width: 35.7%; background: #C9D2CD;"></span><span style="width: 28.6%; background: #F2B530;"></span><span style="width: 21.4%; background: #2E8B57;"></span><span style="width: 14.3%; background: #E08A80;"></span></span>
+        <span style="display: flex; gap: 12px; font-size: 11.5px; color: #4A5650; white-space: nowrap;"><span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C9D2CD;"></span>5 por revisar</span><span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F2B530;"></span>4 interesante</span><span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E8B57;"></span>3 contactado</span><span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E08A80;"></span>2 descartado</span></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="tabs" style="flex: 1;"><span class="on">Todo 14</span><span>Productos 7</span><span>Empresas 3</span><span>Expertos 1</span><span>Contenidos 1</span><span>Comparativas 2</span><span>Notas 1</span></div>
+        <span class="btn" style="height: 34px; font-weight: 400;">Estado ▾</span>
+        <span style="display: inline-flex; background: #F2F5F3; border-radius: 9px; padding: 3px;"><span style="width: 30px; height: 28px; border-radius: 7px; background: #FFFFFF; color: #0E5A3A; display: flex; align-items: center; justify-content: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span><span style="width: 30px; height: 28px; color: #56615B; display: flex; align-items: center; justify-content: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4v16H4zM10 4h4v10h-4zM16 4h4v13h-4z"/></svg></span></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;"><p class="h" style="font-size: 14px;">Productos</p><span class="hint">7</span><a href="#" style="margin-left: auto; font-size: 12px; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Añadir</a></div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;">
+          <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="width: 46px; height: 52px; border-radius: 10px; background: linear-gradient(160deg,#E6F0FA,#B9D3EE); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #1F4E8C; flex: none; padding: 4px; box-sizing: border-box; line-height: 1.15;">Ronozyme®</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">Ronozyme® HiPhos</strong><span style="font-size: 11px; color: #56615B;">DSM-Firmenich · Enzimas</span></span><span style="color: #8A948F; display: flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+            <div style="display: flex; align-items: center; gap: 6px;"><span class="st s-int">Interesante</span><span style="font-size: 10.5px; color: #8A948F;">▾</span></div>
+            <span style="font-size: 11px; color: #4A5650; background: #FAF7EC; border-radius: 8px; padding: 5px 8px; line-height: 1.35;">✎ Preguntar dosis con trigo</span>
+          </article>
+          <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="width: 46px; height: 52px; border-radius: 10px; background: linear-gradient(160deg,#FFF6DD,#F3DFA8); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #7A4B00; flex: none; padding: 4px; box-sizing: border-box; line-height: 1.15;">Hy-D®</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">Hy-D®</strong><span style="font-size: 11px; color: #56615B;">DSM-Firmenich · Vitaminas</span></span><span style="color: #8A948F; display: flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+            <div style="display: flex; align-items: center; gap: 6px;"><span class="st s-con">Contactado</span><span style="font-size: 10.5px; color: #8A948F;">▾</span></div>
+            <span style="font-size: 11px; color: #4A5650; background: #FAF7EC; border-radius: 8px; padding: 5px 8px; line-height: 1.35;">✎ NutriGan respondió el 10 oct</span>
+          </article>
+          <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="width: 46px; height: 52px; border-radius: 10px; background: linear-gradient(135deg,#C9D3CF,#8EA39A); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #FFFFFF; flex: none; padding: 4px; box-sizing: border-box; line-height: 1.15;">Zucami</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">Zucami Aviary Pro</strong><span style="font-size: 11px; color: #56615B;">Zucami · Alojamiento</span></span><span style="color: #8A948F; display: flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+            <div style="display: flex; align-items: center; gap: 6px;"><span class="st s-rev">Por revisar</span><span style="font-size: 10.5px; color: #8A948F;">▾</span></div>
+            <span style="font-size: 11px; color: #A3ACA7;">Sin nota</span>
+          </article>
+          <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><span aria-hidden="true" style="width: 46px; height: 52px; border-radius: 10px; background: linear-gradient(135deg,#DDE7E0,#A9C3B0); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 8px; font-weight: 700; color: #0E5A3A; flex: none; padding: 4px; box-sizing: border-box; line-height: 1.15;">AeroFan</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">AeroFan 130</strong><span style="font-size: 11px; color: #56615B;">Fancom · Ventilación</span></span><span style="color: #8A948F; display: flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+            <div style="display: flex; align-items: center; gap: 6px;"><span class="st s-des">Descartado</span><span style="font-size: 10.5px; color: #8A948F;">▾</span></div>
+            <span style="font-size: 11px; color: #4A5650; background: #FAF7EC; border-radius: 8px; padding: 5px 8px; line-height: 1.35;">✎ Consumo alto para la nave</span>
+          </article>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;"><div style="display: flex; align-items: center; gap: 8px;"><p class="h" style="font-size: 14px;">Comparativas</p><span class="hint">2</span><a href="#" style="margin-left: auto; font-size: 12px; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Nueva comparativa</a></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 4px;"><span style="display: flex; align-items: center; gap: 6px; color: #0E5A3A;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM12 4v16"/></svg><strong style="font-size: 13px; color: #17231D; font-weight: 600;">Enzimas · fitasas</strong></span><span style="font-size: 11px; color: #56615B;">3 productos · 12 oct</span><span style="font-size: 11px; color: #0E5A3A;">Solicitud enviada a 3 proveedores</span></article>
+            <article class="card" style="padding: 12px; display: flex; flex-direction: column; gap: 4px;"><span style="display: flex; align-items: center; gap: 6px; color: #0E5A3A;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM12 4v16"/></svg><strong style="font-size: 13px; color: #17231D; font-weight: 600;">Sistemas de ventilación</strong></span><span style="font-size: 11px; color: #56615B;">4 productos · 28 sep</span><span style="font-size: 11px; color: #56615B;">Sin solicitudes</span></article>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;"><div style="display: flex; align-items: center; gap: 8px;"><p class="h" style="font-size: 14px;">Empresas</p><span class="hint">3</span><a href="#" style="margin-left: auto; font-size: 12px; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Añadir</a></div>
+          <article class="card" style="padding: 12px; display: flex; align-items: center; gap: 10px;"><span style="width: 40px; height: 40px; border-radius: 10px; background: #EEF6EE; color: #0E5A3A; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;">ND</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">NutriGan Distribuciones</strong><span style="font-size: 11px; color: #56615B;">Distribuidor · Zona Centro</span></span><span class="st s-con">Contactado</span></article>
+<article class="card" style="padding: 12px; display: flex; align-items: center; gap: 10px;"><span style="width: 40px; height: 40px; border-radius: 10px; background: #EEF6EE; color: #0E5A3A; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none;">Z</span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 13px; font-weight: 600;">Zucami</strong><span style="font-size: 11px; color: #56615B;">Fabricante · Equipamiento avícola</span></span><span class="st s-int">Interesante</span></article>
+          <div style="background: #FAF7EC; border: 1px solid #EFE6C6; border-radius: 12px; padding: 10px 12px; font-size: 12px; line-height: 1.45;"><strong style="font-weight: 600;">Nota de Marta</strong> · Preguntar plazo de montaje y garantía antes de marzo. <span style="color: #8A7A4B;">ayer</span></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; right: 0;"><dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

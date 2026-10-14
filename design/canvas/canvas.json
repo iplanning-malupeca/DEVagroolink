@@ -53,6 +53,10 @@
     {
       "id": "servicios",
       "name": "Servicios (módulo aparte)"
+    },
+    {
+      "id": "tableros",
+      "name": "Tableros y comparador"
     }
   ],
   "boards": {
@@ -696,6 +700,62 @@
       "h": 940,
       "title": "P7b · Especificaciones · sugeridos + propios (Zucami, tipo Jaulas y alojamientos)",
       "page": "productos"
+    },
+    "TabMis.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "T1 · Mis tableros (con «Guardados» por defecto)",
+      "page": "tableros"
+    },
+    "TabVista.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "T2 · Vista de un tablero con seguimiento por estado",
+      "page": "tableros"
+    },
+    "TabGuardar.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "T3 · Guardar en tablero desde una ficha",
+      "page": "tableros"
+    },
+    "TabCompartir.dc.html": {
+      "x": 4080,
+      "y": 0,
+      "w": 1280,
+      "h": 900,
+      "title": "T4 · Compartir tablero (permisos y plan)",
+      "page": "tableros"
+    },
+    "CompVista.dc.html": {
+      "x": 0,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "C1 · Comparativa del mismo tipo (enzimas)",
+      "page": "tableros"
+    },
+    "CompOtroTipo.dc.html": {
+      "x": 1360,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "C2 · Añadir un producto de otro tipo",
+      "page": "tableros"
+    },
+    "CompSolicitar.dc.html": {
+      "x": 2720,
+      "y": 1300,
+      "w": 1280,
+      "h": 900,
+      "title": "C3 · Solicitar información a los 3",
+      "page": "tableros"
     }
   },
   "order": [
@@ -778,6 +838,13 @@
     "ProdFichaMercados.dc.html",
     "ProdVersionLocal.dc.html",
     "ProdEspecEquipamiento.dc.html",
+    "TabMis.dc.html",
+    "TabVista.dc.html",
+    "TabGuardar.dc.html",
+    "TabCompartir.dc.html",
+    "CompVista.dc.html",
+    "CompOtroTipo.dc.html",
+    "CompSolicitar.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -956,6 +1023,22 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "productos"
+    },
+    "tabT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Tableros · Samuel Esteban (Granja Los Olmos)",
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "tableros"
+    },
+    "tabT2": {
+      "x": 0,
+      "y": 1020,
+      "text": "Comparador · solo productos del mismo tipo",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "tableros"
     }
   },
   "designSystems": []
