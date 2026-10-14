@@ -442,14 +442,6 @@
       "x": 4080,
       "y": 1240
     },
-    "FabServicios.dc.html": {
-      "h": 940,
-      "page": "servicios",
-      "title": "Borrador previo · servicios (se rediseña en el módulo Servicios)",
-      "w": 1280,
-      "x": 3,
-      "y": 0
-    },
     "FabShell.dc.html": {
       "h": 940,
       "page": "fabdist",
@@ -1113,7 +1105,7 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "servicios",
-      "text": "Módulo Servicios · con especies y zonas (AgroNova)",
+      "text": "Módulo Servicios (AgroNova)",
       "w": 240,
       "x": 0,
       "y": -300
@@ -1246,7 +1238,6 @@
     "FabCabecera.dc.html",
     "FabSobre.dc.html",
     "FabDistribuidores.dc.html",
-    "FabServicios.dc.html",
     "FabExpertos.dc.html",
     "FabContenidos.dc.html",
     "FabContacto.dc.html",
