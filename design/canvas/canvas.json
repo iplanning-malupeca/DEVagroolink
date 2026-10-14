@@ -678,7 +678,7 @@
       "y": 1400,
       "w": 1280,
       "h": 940,
-      "title": "P7 · Ficha base · Especificaciones con plantilla por categoría",
+      "title": "P7 · Especificaciones · plantilla «Vitaminas» (nutrición)",
       "page": "productos"
     },
     "ProdVersionLocal.dc.html": {
@@ -687,6 +687,14 @@
       "w": 1280,
       "h": 940,
       "title": "P10 · Versión local de AgroNova (lado del distribuidor)",
+      "page": "productos"
+    },
+    "ProdEspecEquipamiento.dc.html": {
+      "x": 1360,
+      "y": 2800,
+      "w": 1280,
+      "h": 940,
+      "title": "P7b · Especificaciones · plantilla «Equipamiento» (aviario Zucami)",
       "page": "productos"
     }
   },
@@ -769,6 +777,7 @@
     "ProdFichaDocumentos.dc.html",
     "ProdFichaMercados.dc.html",
     "ProdVersionLocal.dc.html",
+    "ProdEspecEquipamiento.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -943,7 +952,7 @@
     "prodT3": {
       "x": 0,
       "y": 2520,
-      "text": "El distribuidor adapta su versión local; el resto llega sincronizado de la marca",
+      "text": "Versión local del distribuidor · y la misma pestaña con otra plantilla",
       "kind": "title1",
       "maxW": 4000,
       "page": "productos"
