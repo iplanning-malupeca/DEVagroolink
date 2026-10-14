@@ -14,7 +14,7 @@ Regla general: lo que queda vacío no se publica.
 ## Clasificación de la empresa
 
 - Al crear la empresa se eligen, de forma obligatoria, **especies** (`especies.json`), **rama de negocio** (lista del CRM, `ramas_y_cargos.json`; una o varias, la primera es la principal; si tiene subrama se elige la subrama) y **mercados**.
-- Cada persona tiene un **cargo** (lista del CRM). Los servicios indican «Dirigido a» con ramas y cargos.
+- Cada persona tiene un **cargo** (lista del CRM). Viene heredado de la cuenta global de Agrinews; Agroolink solo lo pide si falta, y un cambio se guarda en la cuenta global. Los servicios indican «Dirigido a» con ramas y cargos.
 - Sirve para que la empresa aparezca en el buscador aunque no tenga productos.
 - Con productos publicados, la clasificación se calcula a partir de ellos (especies de Aplicación y familia/tipo de cada producto). El buscador da más peso a lo calculado; lo declarado sin productos que lo respalden pesa menos.
 - Si lo declarado y lo calculado no coinciden, se avisa a la empresa para que lo revise.
