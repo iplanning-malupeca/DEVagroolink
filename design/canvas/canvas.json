@@ -466,6 +466,550 @@
    "x": 0,
    "y": 0
   },
+  "Fig01.dc.html": {
+   "h": 66,
+   "page": "figma",
+   "title": "F01 · Header · usuario logueado",
+   "w": 922,
+   "x": 0,
+   "y": 0
+  },
+  "Fig02.dc.html": {
+   "h": 66,
+   "page": "figma",
+   "title": "F02 · Header · con selector de región",
+   "w": 1218,
+   "x": 1042,
+   "y": 0
+  },
+  "Fig03.dc.html": {
+   "h": 3389,
+   "page": "figma",
+   "title": "F03 · Home logueado «Hola Samuel»",
+   "w": 1292,
+   "x": 2380,
+   "y": 0
+  },
+  "Fig04.dc.html": {
+   "h": 999,
+   "page": "figma",
+   "title": "F04 · Mega-menú de categorías",
+   "w": 1292,
+   "x": 3792,
+   "y": 0
+  },
+  "Fig05.dc.html": {
+   "h": 3634,
+   "page": "figma",
+   "title": "F05 · Home logueado · variante",
+   "w": 1292,
+   "x": 5204,
+   "y": 0
+  },
+  "Fig06.dc.html": {
+   "h": 2381,
+   "page": "figma",
+   "title": "F06 · Categoría · Aves › Broilers › Nutrición",
+   "w": 1352,
+   "x": 0,
+   "y": 4134
+  },
+  "Fig07.dc.html": {
+   "h": 2381,
+   "page": "figma",
+   "title": "F07 · Categoría · variante",
+   "w": 1284,
+   "x": 1472,
+   "y": 4134
+  },
+  "Fig08.dc.html": {
+   "h": 2035,
+   "page": "figma",
+   "title": "F08 · Resultados «micotoxinas porcino»",
+   "w": 1284,
+   "x": 2876,
+   "y": 4134
+  },
+  "Fig09.dc.html": {
+   "h": 2072,
+   "page": "figma",
+   "title": "F09 · Resultados · variante",
+   "w": 1284,
+   "x": 4280,
+   "y": 4134
+  },
+  "Fig10.dc.html": {
+   "h": 1830,
+   "page": "figma",
+   "title": "F10 · Página de especie · Aves",
+   "w": 1284,
+   "x": 5684,
+   "y": 4134
+  },
+  "Fig11.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F11 · Producto OptiFeed · modal",
+   "w": 1286,
+   "x": 1400,
+   "y": 7015
+  },
+  "Fig12.dc.html": {
+   "h": 810,
+   "page": "figma",
+   "title": "F12 · Contactar con la empresa",
+   "w": 1184,
+   "x": 2806,
+   "y": 7015
+  },
+  "Fig13.dc.html": {
+   "h": 1610,
+   "page": "figma",
+   "title": "F13 · Directorio de expertos",
+   "w": 1280,
+   "x": 0,
+   "y": 10502
+  },
+  "Fig14.dc.html": {
+   "h": 2799,
+   "page": "figma",
+   "title": "F14 · Perfil · Dr. Carlos Martínez",
+   "w": 1280,
+   "x": 1400,
+   "y": 10502
+  },
+  "Fig15.dc.html": {
+   "h": 1502,
+   "page": "figma",
+   "title": "F15 · Perfil experto · variante",
+   "w": 1280,
+   "x": 2800,
+   "y": 10502
+  },
+  "Fig16.dc.html": {
+   "h": 1609,
+   "page": "figma",
+   "title": "F16 · Perfil experto · variante",
+   "w": 1280,
+   "x": 4200,
+   "y": 10502
+  },
+  "Fig17.dc.html": {
+   "h": 1281,
+   "page": "figma",
+   "title": "F17 · Modal · menú de categorías",
+   "w": 1288,
+   "x": 8238,
+   "y": 13801
+  },
+  "Fig18.dc.html": {
+   "h": 1281,
+   "page": "figma",
+   "title": "F18 · Modal · menú de categorías (variante)",
+   "w": 1288,
+   "x": 9646,
+   "y": 13801
+  },
+  "Fig19.dc.html": {
+   "h": 1421,
+   "page": "figma",
+   "title": "F19 · Ficha de producto OptiFeed",
+   "w": 1280,
+   "x": 0,
+   "y": 7015
+  },
+  "Fig20.dc.html": {
+   "h": 1027,
+   "page": "figma",
+   "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1286,
+   "x": 0,
+   "y": 8975
+  },
+  "Fig21.dc.html": {
+   "h": 913,
+   "page": "figma",
+   "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1223,
+   "x": 1406,
+   "y": 8975
+  },
+  "Fig22.dc.html": {
+   "h": 798,
+   "page": "figma",
+   "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1141,
+   "x": 2749,
+   "y": 8975
+  },
+  "Fig23.dc.html": {
+   "h": 928,
+   "page": "figma",
+   "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1200,
+   "x": 4010,
+   "y": 8975
+  },
+  "Fig24.dc.html": {
+   "h": 1026,
+   "page": "figma",
+   "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1286,
+   "x": 5330,
+   "y": 8975
+  },
+  "Fig25.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F25 · Login",
+   "w": 1228,
+   "x": 0,
+   "y": 13801
+  },
+  "Fig26.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F26 · Login · código",
+   "w": 1280,
+   "x": 1348,
+   "y": 13801
+  },
+  "Fig27.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F27 · Login · paso",
+   "w": 1280,
+   "x": 2748,
+   "y": 13801
+  },
+  "Fig28.dc.html": {
+   "h": 1392,
+   "page": "figma",
+   "title": "F28 · Producto Zucami Aviary Pro",
+   "w": 1280,
+   "x": 15358,
+   "y": 7015
+  },
+  "Fig29.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F29 · Guardar en tablero",
+   "w": 1280,
+   "x": 16758,
+   "y": 7015
+  },
+  "Fig30.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1280,
+   "x": 6736,
+   "y": 8975
+  },
+  "Fig31.dc.html": {
+   "h": 1025,
+   "page": "figma",
+   "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1282,
+   "x": 8136,
+   "y": 8975
+  },
+  "Fig32.dc.html": {
+   "h": 1025,
+   "page": "figma",
+   "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
+   "w": 1282,
+   "x": 9538,
+   "y": 8975
+  },
+  "Fig33.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F33 · Login · paso",
+   "w": 1280,
+   "x": 4148,
+   "y": 13801
+  },
+  "Fig34.dc.html": {
+   "h": 1004,
+   "page": "figma",
+   "title": "F34 · Cuenta creada",
+   "w": 1289,
+   "x": 5548,
+   "y": 13801
+  },
+  "Fig35.dc.html": {
+   "h": 833,
+   "page": "figma",
+   "title": "F35 · Login · paso",
+   "w": 1161,
+   "x": 6957,
+   "y": 13801
+  },
+  "Fig36.dc.html": {
+   "h": 1460,
+   "page": "figma",
+   "title": "F36 · Producto en catálogo de AgroNova",
+   "w": 1280,
+   "x": 18158,
+   "y": 7015
+  },
+  "Fig37.dc.html": {
+   "h": 1306,
+   "page": "figma",
+   "title": "F37 · Listado de empresas / expertos / eventos",
+   "w": 1280,
+   "x": 0,
+   "y": 15582
+  },
+  "Fig38.dc.html": {
+   "h": 1352,
+   "page": "figma",
+   "title": "F38 · Listado · variante",
+   "w": 1280,
+   "x": 1400,
+   "y": 15582
+  },
+  "Fig39.dc.html": {
+   "h": 1174,
+   "page": "figma",
+   "title": "F39 · Evento · AviForum",
+   "w": 1280,
+   "x": 2800,
+   "y": 15582
+  },
+  "Fig40.dc.html": {
+   "h": 3464,
+   "page": "figma",
+   "title": "F40 · Ficha empresa AgroNova",
+   "w": 1280,
+   "x": 0,
+   "y": 17434
+  },
+  "Fig41.dc.html": {
+   "h": 804,
+   "page": "figma",
+   "title": "F41 · AgroNova · sección",
+   "w": 1280,
+   "x": 1400,
+   "y": 17434
+  },
+  "Fig42.dc.html": {
+   "h": 1082,
+   "page": "figma",
+   "title": "F42 · AgroNova · sección",
+   "w": 1280,
+   "x": 2800,
+   "y": 17434
+  },
+  "Fig43.dc.html": {
+   "h": 1218,
+   "page": "figma",
+   "title": "F43 · AgroNova · sección",
+   "w": 1280,
+   "x": 4200,
+   "y": 17434
+  },
+  "Fig44.dc.html": {
+   "h": 1134,
+   "page": "figma",
+   "title": "F44 · AgroNova · sección",
+   "w": 1280,
+   "x": 5600,
+   "y": 17434
+  },
+  "Fig45.dc.html": {
+   "h": 1460,
+   "page": "figma",
+   "title": "F45 · Producto en catálogo de AgroNova · variante",
+   "w": 1280,
+   "x": 19558,
+   "y": 7015
+  },
+  "Fig46.dc.html": {
+   "h": 4365,
+   "page": "figma",
+   "title": "F46 · Ficha empresa DSM",
+   "w": 1280,
+   "x": 0,
+   "y": 21398
+  },
+  "Fig47.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F47 · Modal · guardar en tablero",
+   "w": 1286,
+   "x": 4110,
+   "y": 7015
+  },
+  "Fig48.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F48 · Modal · guardado en tablero",
+   "w": 1286,
+   "x": 5516,
+   "y": 7015
+  },
+  "Fig49.dc.html": {
+   "h": 1014,
+   "page": "figma",
+   "title": "F49 · DSM · sección",
+   "w": 1280,
+   "x": 1400,
+   "y": 21398
+  },
+  "Fig50.dc.html": {
+   "h": 1243,
+   "page": "figma",
+   "title": "F50 · DSM · sección",
+   "w": 1280,
+   "x": 2800,
+   "y": 21398
+  },
+  "Fig51.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F51 · Modal · descargar vademécum",
+   "w": 1286,
+   "x": 6922,
+   "y": 7015
+  },
+  "Fig52.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F52 · Modal · visitar la web",
+   "w": 1286,
+   "x": 8328,
+   "y": 7015
+  },
+  "Fig53.dc.html": {
+   "h": 1676,
+   "page": "figma",
+   "title": "F53 · DSM · sección",
+   "w": 1280,
+   "x": 4200,
+   "y": 21398
+  },
+  "Fig54.dc.html": {
+   "h": 2075,
+   "page": "figma",
+   "title": "F54 · DSM · sección",
+   "w": 1280,
+   "x": 5600,
+   "y": 21398
+  },
+  "Fig55.dc.html": {
+   "h": 1924,
+   "page": "figma",
+   "title": "F55 · DSM · sección",
+   "w": 1280,
+   "x": 7000,
+   "y": 21398
+  },
+  "Fig56.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F56 · Modal · únete como distribuidor",
+   "w": 1286,
+   "x": 9734,
+   "y": 7015
+  },
+  "Fig57.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F57 · Modal · solicitar información",
+   "w": 1286,
+   "x": 11140,
+   "y": 7015
+  },
+  "Fig58.dc.html": {
+   "h": 1744,
+   "page": "figma",
+   "title": "F58 · Ficha empresa Zucami",
+   "w": 1280,
+   "x": 0,
+   "y": 26263
+  },
+  "Fig59.dc.html": {
+   "h": 1555,
+   "page": "figma",
+   "title": "F59 · Zucami · sección",
+   "w": 1280,
+   "x": 1400,
+   "y": 26263
+  },
+  "Fig60.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F60 · Producto OptiFeed · modal",
+   "w": 1286,
+   "x": 12546,
+   "y": 7015
+  },
+  "Fig61.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F61 · Encontrar mi comercial",
+   "w": 1280,
+   "x": 9800,
+   "y": 26263
+  },
+  "Fig62.dc.html": {
+   "h": 1030,
+   "page": "figma",
+   "title": "F62 · Producto OptiFeed · modal",
+   "w": 1286,
+   "x": 13952,
+   "y": 7015
+  },
+  "Fig63.dc.html": {
+   "h": 1024,
+   "page": "figma",
+   "title": "F63 · Contactar con Laura García",
+   "w": 1280,
+   "x": 11200,
+   "y": 26263
+  },
+  "Fig64.dc.html": {
+   "h": 1461,
+   "page": "figma",
+   "title": "F64 · Zucami · catálogo",
+   "w": 1280,
+   "x": 2800,
+   "y": 26263
+  },
+  "Fig65.dc.html": {
+   "h": 1744,
+   "page": "figma",
+   "title": "F65 · Zucami · catálogo",
+   "w": 1280,
+   "x": 4200,
+   "y": 26263
+  },
+  "Fig66.dc.html": {
+   "h": 1461,
+   "page": "figma",
+   "title": "F66 · Zucami · catálogo",
+   "w": 1280,
+   "x": 5600,
+   "y": 26263
+  },
+  "Fig67.dc.html": {
+   "h": 1848,
+   "page": "figma",
+   "title": "F67 · Zucami · catálogo",
+   "w": 1280,
+   "x": 7000,
+   "y": 26263
+  },
+  "Fig68.dc.html": {
+   "h": 1997,
+   "page": "figma",
+   "title": "F68 · Zucami LATAM",
+   "w": 1280,
+   "x": 8400,
+   "y": 26263
+  },
   "IntHeader.dc.html": {
    "h": 68,
    "page": "intranet",
@@ -939,549 +1483,85 @@
    "x": 5440,
    "y": 0
   },
-  "Fig01.dc.html": {
-   "h": 66,
-   "page": "figma",
-   "title": "F01 · Header · usuario logueado",
-   "w": 922,
+  "MobHome.dc.html": {
+   "h": 2010,
+   "page": "movil",
+   "title": "M1 · Home con sesión",
+   "w": 390,
    "x": 0,
    "y": 0
   },
-  "Fig02.dc.html": {
-   "h": 66,
-   "page": "figma",
-   "title": "F02 · Header · con selector de región",
-   "w": 1218,
-   "x": 1042,
+  "MobHomeVisitante.dc.html": {
+   "h": 1500,
+   "page": "movil",
+   "title": "M2 · Home sin sesión",
+   "w": 390,
+   "x": 530,
    "y": 0
   },
-  "Fig03.dc.html": {
-   "h": 3389,
-   "page": "figma",
-   "title": "F03 · Home logueado «Hola Samuel»",
-   "w": 1292,
-   "x": 2380,
-   "y": 0
-  },
-  "Fig04.dc.html": {
-   "h": 999,
-   "page": "figma",
-   "title": "F04 · Mega-menú de categorías",
-   "w": 1292,
-   "x": 3792,
-   "y": 0
-  },
-  "Fig05.dc.html": {
-   "h": 3634,
-   "page": "figma",
-   "title": "F05 · Home logueado · variante",
-   "w": 1292,
-   "x": 5204,
-   "y": 0
-  },
-  "Fig06.dc.html": {
-   "h": 2381,
-   "page": "figma",
-   "title": "F06 · Categoría · Aves › Broilers › Nutrición",
-   "w": 1352,
-   "x": 0,
-   "y": 4134
-  },
-  "Fig07.dc.html": {
-   "h": 2381,
-   "page": "figma",
-   "title": "F07 · Categoría · variante",
-   "w": 1284,
-   "x": 1472,
-   "y": 4134
-  },
-  "Fig08.dc.html": {
-   "h": 2035,
-   "page": "figma",
-   "title": "F08 · Resultados «micotoxinas porcino»",
-   "w": 1284,
-   "x": 2876,
-   "y": 4134
-  },
-  "Fig09.dc.html": {
-   "h": 2072,
-   "page": "figma",
-   "title": "F09 · Resultados · variante",
-   "w": 1284,
-   "x": 4280,
-   "y": 4134
-  },
-  "Fig10.dc.html": {
-   "h": 1830,
-   "page": "figma",
-   "title": "F10 · Página de especie · Aves",
-   "w": 1284,
-   "x": 5684,
-   "y": 4134
-  },
-  "Fig19.dc.html": {
-   "h": 1421,
-   "page": "figma",
-   "title": "F19 · Ficha de producto OptiFeed",
-   "w": 1280,
-   "x": 0,
-   "y": 7015
-  },
-  "Fig11.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F11 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 1400,
-   "y": 7015
-  },
-  "Fig12.dc.html": {
-   "h": 810,
-   "page": "figma",
-   "title": "F12 · Contactar con la empresa",
-   "w": 1184,
-   "x": 2806,
-   "y": 7015
-  },
-  "Fig47.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F47 · Modal · guardar en tablero",
-   "w": 1286,
-   "x": 4110,
-   "y": 7015
-  },
-  "Fig48.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F48 · Modal · guardado en tablero",
-   "w": 1286,
-   "x": 5516,
-   "y": 7015
-  },
-  "Fig51.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F51 · Modal · descargar vademécum",
-   "w": 1286,
-   "x": 6922,
-   "y": 7015
-  },
-  "Fig52.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F52 · Modal · visitar la web",
-   "w": 1286,
-   "x": 8328,
-   "y": 7015
-  },
-  "Fig56.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F56 · Modal · únete como distribuidor",
-   "w": 1286,
-   "x": 9734,
-   "y": 7015
-  },
-  "Fig57.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F57 · Modal · solicitar información",
-   "w": 1286,
-   "x": 11140,
-   "y": 7015
-  },
-  "Fig60.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F60 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 12546,
-   "y": 7015
-  },
-  "Fig62.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F62 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 13952,
-   "y": 7015
-  },
-  "Fig28.dc.html": {
-   "h": 1392,
-   "page": "figma",
-   "title": "F28 · Producto Zucami Aviary Pro",
-   "w": 1280,
-   "x": 15358,
-   "y": 7015
-  },
-  "Fig29.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F29 · Guardar en tablero",
-   "w": 1280,
-   "x": 16758,
-   "y": 7015
-  },
-  "Fig36.dc.html": {
+  "MobMenu.dc.html": {
    "h": 1460,
-   "page": "figma",
-   "title": "F36 · Producto en catálogo de AgroNova",
-   "w": 1280,
-   "x": 18158,
-   "y": 7015
+   "page": "movil",
+   "title": "M3 · Menú (pestaña 5)",
+   "w": 390,
+   "x": 1060,
+   "y": 0
   },
-  "Fig45.dc.html": {
-   "h": 1460,
-   "page": "figma",
-   "title": "F45 · Producto en catálogo de AgroNova · variante",
-   "w": 1280,
-   "x": 19558,
-   "y": 7015
+  "MobBuscar.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M4 · Búsqueda",
+   "w": 390,
+   "x": 1590,
+   "y": 0
   },
-  "Fig20.dc.html": {
-   "h": 1027,
-   "page": "figma",
-   "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1286,
+  "MobExplorarEspecies.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M5 · Explorar · por especie",
+   "w": 390,
    "x": 0,
-   "y": 8975
+   "y": 2510
   },
-  "Fig21.dc.html": {
-   "h": 913,
-   "page": "figma",
-   "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1223,
-   "x": 1406,
-   "y": 8975
+  "MobEspecie.dc.html": {
+   "h": 900,
+   "page": "movil",
+   "title": "M6 · Especie → producción (opcional)",
+   "w": 390,
+   "x": 530,
+   "y": 2510
   },
-  "Fig22.dc.html": {
-   "h": 798,
-   "page": "figma",
-   "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1141,
-   "x": 2749,
-   "y": 8975
+  "MobResultados.dc.html": {
+   "h": 920,
+   "page": "movil",
+   "title": "M7 · Resultados · categoría en chips",
+   "w": 390,
+   "x": 1060,
+   "y": 2510
   },
-  "Fig23.dc.html": {
-   "h": 928,
-   "page": "figma",
-   "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1200,
-   "x": 4010,
-   "y": 8975
+  "MobExplorarCategorias.dc.html": {
+   "h": 940,
+   "page": "movil",
+   "title": "M8 · Explorar · por categoría",
+   "w": 390,
+   "x": 1590,
+   "y": 2510
   },
-  "Fig24.dc.html": {
-   "h": 1026,
-   "page": "figma",
-   "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1286,
-   "x": 5330,
-   "y": 8975
+  "MobCategoria.dc.html": {
+   "h": 1030,
+   "page": "movil",
+   "title": "M9 · Categoría → tipo de producto",
+   "w": 390,
+   "x": 2120,
+   "y": 2510
   },
-  "Fig30.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1280,
-   "x": 6736,
-   "y": 8975
-  },
-  "Fig31.dc.html": {
-   "h": 1025,
-   "page": "figma",
-   "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1282,
-   "x": 8136,
-   "y": 8975
-  },
-  "Fig32.dc.html": {
-   "h": 1025,
-   "page": "figma",
-   "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1282,
-   "x": 9538,
-   "y": 8975
-  },
-  "Fig13.dc.html": {
-   "h": 1610,
-   "page": "figma",
-   "title": "F13 · Directorio de expertos",
-   "w": 1280,
+  "MobTabBar.dc.html": {
+   "h": 84,
+   "page": "movil",
+   "title": "MobTabBar · componente",
+   "w": 390,
    "x": 0,
-   "y": 10502
-  },
-  "Fig14.dc.html": {
-   "h": 2799,
-   "page": "figma",
-   "title": "F14 · Perfil · Dr. Carlos Martínez",
-   "w": 1280,
-   "x": 1400,
-   "y": 10502
-  },
-  "Fig15.dc.html": {
-   "h": 1502,
-   "page": "figma",
-   "title": "F15 · Perfil experto · variante",
-   "w": 1280,
-   "x": 2800,
-   "y": 10502
-  },
-  "Fig16.dc.html": {
-   "h": 1609,
-   "page": "figma",
-   "title": "F16 · Perfil experto · variante",
-   "w": 1280,
-   "x": 4200,
-   "y": 10502
-  },
-  "Fig25.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F25 · Login",
-   "w": 1228,
-   "x": 0,
-   "y": 13801
-  },
-  "Fig26.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F26 · Login · código",
-   "w": 1280,
-   "x": 1348,
-   "y": 13801
-  },
-  "Fig27.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F27 · Login · paso",
-   "w": 1280,
-   "x": 2748,
-   "y": 13801
-  },
-  "Fig33.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F33 · Login · paso",
-   "w": 1280,
-   "x": 4148,
-   "y": 13801
-  },
-  "Fig34.dc.html": {
-   "h": 1004,
-   "page": "figma",
-   "title": "F34 · Cuenta creada",
-   "w": 1289,
-   "x": 5548,
-   "y": 13801
-  },
-  "Fig35.dc.html": {
-   "h": 833,
-   "page": "figma",
-   "title": "F35 · Login · paso",
-   "w": 1161,
-   "x": 6957,
-   "y": 13801
-  },
-  "Fig17.dc.html": {
-   "h": 1281,
-   "page": "figma",
-   "title": "F17 · Modal · menú de categorías",
-   "w": 1288,
-   "x": 8238,
-   "y": 13801
-  },
-  "Fig18.dc.html": {
-   "h": 1281,
-   "page": "figma",
-   "title": "F18 · Modal · menú de categorías (variante)",
-   "w": 1288,
-   "x": 9646,
-   "y": 13801
-  },
-  "Fig37.dc.html": {
-   "h": 1306,
-   "page": "figma",
-   "title": "F37 · Listado de empresas / expertos / eventos",
-   "w": 1280,
-   "x": 0,
-   "y": 15582
-  },
-  "Fig38.dc.html": {
-   "h": 1352,
-   "page": "figma",
-   "title": "F38 · Listado · variante",
-   "w": 1280,
-   "x": 1400,
-   "y": 15582
-  },
-  "Fig39.dc.html": {
-   "h": 1174,
-   "page": "figma",
-   "title": "F39 · Evento · AviForum",
-   "w": 1280,
-   "x": 2800,
-   "y": 15582
-  },
-  "Fig40.dc.html": {
-   "h": 3464,
-   "page": "figma",
-   "title": "F40 · Ficha empresa AgroNova",
-   "w": 1280,
-   "x": 0,
-   "y": 17434
-  },
-  "Fig41.dc.html": {
-   "h": 804,
-   "page": "figma",
-   "title": "F41 · AgroNova · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 17434
-  },
-  "Fig42.dc.html": {
-   "h": 1082,
-   "page": "figma",
-   "title": "F42 · AgroNova · sección",
-   "w": 1280,
-   "x": 2800,
-   "y": 17434
-  },
-  "Fig43.dc.html": {
-   "h": 1218,
-   "page": "figma",
-   "title": "F43 · AgroNova · sección",
-   "w": 1280,
-   "x": 4200,
-   "y": 17434
-  },
-  "Fig44.dc.html": {
-   "h": 1134,
-   "page": "figma",
-   "title": "F44 · AgroNova · sección",
-   "w": 1280,
-   "x": 5600,
-   "y": 17434
-  },
-  "Fig46.dc.html": {
-   "h": 4365,
-   "page": "figma",
-   "title": "F46 · Ficha empresa DSM",
-   "w": 1280,
-   "x": 0,
-   "y": 21398
-  },
-  "Fig49.dc.html": {
-   "h": 1014,
-   "page": "figma",
-   "title": "F49 · DSM · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 21398
-  },
-  "Fig50.dc.html": {
-   "h": 1243,
-   "page": "figma",
-   "title": "F50 · DSM · sección",
-   "w": 1280,
-   "x": 2800,
-   "y": 21398
-  },
-  "Fig53.dc.html": {
-   "h": 1676,
-   "page": "figma",
-   "title": "F53 · DSM · sección",
-   "w": 1280,
-   "x": 4200,
-   "y": 21398
-  },
-  "Fig54.dc.html": {
-   "h": 2075,
-   "page": "figma",
-   "title": "F54 · DSM · sección",
-   "w": 1280,
-   "x": 5600,
-   "y": 21398
-  },
-  "Fig55.dc.html": {
-   "h": 1924,
-   "page": "figma",
-   "title": "F55 · DSM · sección",
-   "w": 1280,
-   "x": 7000,
-   "y": 21398
-  },
-  "Fig58.dc.html": {
-   "h": 1744,
-   "page": "figma",
-   "title": "F58 · Ficha empresa Zucami",
-   "w": 1280,
-   "x": 0,
-   "y": 26263
-  },
-  "Fig59.dc.html": {
-   "h": 1555,
-   "page": "figma",
-   "title": "F59 · Zucami · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 26263
-  },
-  "Fig64.dc.html": {
-   "h": 1461,
-   "page": "figma",
-   "title": "F64 · Zucami · catálogo",
-   "w": 1280,
-   "x": 2800,
-   "y": 26263
-  },
-  "Fig65.dc.html": {
-   "h": 1744,
-   "page": "figma",
-   "title": "F65 · Zucami · catálogo",
-   "w": 1280,
-   "x": 4200,
-   "y": 26263
-  },
-  "Fig66.dc.html": {
-   "h": 1461,
-   "page": "figma",
-   "title": "F66 · Zucami · catálogo",
-   "w": 1280,
-   "x": 5600,
-   "y": 26263
-  },
-  "Fig67.dc.html": {
-   "h": 1848,
-   "page": "figma",
-   "title": "F67 · Zucami · catálogo",
-   "w": 1280,
-   "x": 7000,
-   "y": 26263
-  },
-  "Fig68.dc.html": {
-   "h": 1997,
-   "page": "figma",
-   "title": "F68 · Zucami LATAM",
-   "w": 1280,
-   "x": 8400,
-   "y": 26263
-  },
-  "Fig61.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F61 · Encontrar mi comercial",
-   "w": 1280,
-   "x": 9800,
-   "y": 26263
-  },
-  "Fig63.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F63 · Contactar con Laura García",
-   "w": 1280,
-   "x": 11200,
-   "y": 26263
+   "y": 4040
   }
  },
  "createdOnFiles": {
@@ -1619,6 +1699,96 @@
    "w": 240,
    "x": 0,
    "y": 940
+  },
+  "figT0": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Header y home",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "figT1": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Listados, búsqueda y especie",
+   "w": 240,
+   "x": 0,
+   "y": 3834
+  },
+  "figT2": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Producto y modales",
+   "w": 240,
+   "x": 0,
+   "y": 6715
+  },
+  "figT3": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Pantallas con el nombre antiguo (Farm4You)",
+   "w": 240,
+   "x": 0,
+   "y": 8675
+  },
+  "figT4": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Expertos",
+   "w": 240,
+   "x": 0,
+   "y": 10202
+  },
+  "figT5": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Login y menús",
+   "w": 240,
+   "x": 0,
+   "y": 13501
+  },
+  "figT6": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Listados y eventos",
+   "w": 240,
+   "x": 0,
+   "y": 15282
+  },
+  "figT7": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Empresa · AgroNova",
+   "w": 240,
+   "x": 0,
+   "y": 17134
+  },
+  "figT8": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Empresa · DSM",
+   "w": 240,
+   "x": 0,
+   "y": 21098
+  },
+  "figT9": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "figma",
+   "text": "Empresa · Zucami",
+   "w": 240,
+   "x": 0,
+   "y": 25963
   },
   "intTitulo": {
    "kind": "title1",
@@ -1791,95 +1961,32 @@
    "x": 0,
    "y": -300
   },
-  "figT0": {
+  "movT0": {
    "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Header y home",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
    "w": 240,
    "x": 0,
    "y": -300
   },
-  "figT1": {
+  "movT1": {
    "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Listados, búsqueda y especie",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
    "w": 240,
    "x": 0,
-   "y": 3834
+   "y": 2210
   },
-  "figT2": {
+  "movT2": {
    "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Producto y modales",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Componente · barra inferior (prop activo 1–5)",
    "w": 240,
    "x": 0,
-   "y": 6715
-  },
-  "figT3": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Pantallas con el nombre antiguo (Farm4You)",
-   "w": 240,
-   "x": 0,
-   "y": 8675
-  },
-  "figT4": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Expertos",
-   "w": 240,
-   "x": 0,
-   "y": 10202
-  },
-  "figT5": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Login y menús",
-   "w": 240,
-   "x": 0,
-   "y": 13501
-  },
-  "figT6": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Listados y eventos",
-   "w": 240,
-   "x": 0,
-   "y": 15282
-  },
-  "figT7": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · AgroNova",
-   "w": 240,
-   "x": 0,
-   "y": 17134
-  },
-  "figT8": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · DSM",
-   "w": 240,
-   "x": 0,
-   "y": 21098
-  },
-  "figT9": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · Zucami",
-   "w": 240,
-   "x": 0,
-   "y": 25963
+   "y": 3740
   }
  },
  "order": [
@@ -2067,7 +2174,17 @@
   "Fig67.dc.html",
   "Fig68.dc.html",
   "Fig61.dc.html",
-  "Fig63.dc.html"
+  "Fig63.dc.html",
+  "MobHome.dc.html",
+  "MobHomeVisitante.dc.html",
+  "MobMenu.dc.html",
+  "MobBuscar.dc.html",
+  "MobExplorarEspecies.dc.html",
+  "MobEspecie.dc.html",
+  "MobResultados.dc.html",
+  "MobExplorarCategorias.dc.html",
+  "MobCategoria.dc.html",
+  "MobTabBar.dc.html"
  ],
  "pages": [
   {
@@ -2137,6 +2254,10 @@
   {
    "id": "tableros",
    "name": "Tableros y comparador"
+  },
+  {
+   "id": "movil",
+   "name": "Móvil · Home y menú"
   },
   {
    "id": "figma",

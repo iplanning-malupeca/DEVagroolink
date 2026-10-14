@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Móvil · Explorar por especie</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D;background:#FFFFFF}
+*{box-sizing:border-box}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.ph{width:390px;position:relative;background:#F6F8F6;overflow:hidden;display:flex;flex-direction:column}
+.sb{height:44px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 26px 0 30px;font-size:15px;font-weight:600}
+.sbi{display:flex;gap:6px;align-items:center}
+.top{height:52px;flex:none;display:flex;align-items:center;gap:10px;padding:0 16px}
+.ib{width:40px;height:40px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:#17231D;position:relative;flex:none}
+.dot{position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#D64545;border:2px solid #F6F8F6}
+.bdg{position:absolute;top:4px;right:2px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#D64545;color:#FFF;font-size:10px;font-weight:600;display:flex;align-items:center;justify-content:center;border:2px solid #F6F8F6}
+.av{width:36px;height:36px;border-radius:50%;background:#0E5A3A;color:#FFFFFF;font-size:13px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.logo{display:flex;align-items:center;gap:8px;font-size:19px;font-weight:700;letter-spacing:-.3px;color:#0E5A3A}
+.logo b{width:30px;height:30px;border-radius:9px;background:#0E5A3A;display:inline-flex;align-items:center;justify-content:center}
+.logo i{font-style:normal;color:#17231D}
+.pad{padding:0 16px}
+.srch{height:48px;border-radius:14px;background:#FFFFFF;border:1px solid #DCE4DE;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px;color:#8A948F;font-size:13.5px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.srch span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.go{width:36px;height:36px;border-radius:10px;background:#0E5A3A;color:#FFF;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.sec{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px}
+.sec h2{font-size:16px;font-weight:600;margin:0}
+.sec a{font-size:12.5px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE4DE;font-size:12.5px;font-weight:500;white-space:nowrap;color:#17231D;flex:none}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.chip.soft{background:#EEF6EE;border-color:#EEF6EE;color:#0E5A3A}
+.row{display:flex;gap:8px}
+.hs{display:flex;gap:10px;overflow:hidden}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.li{display:flex;align-items:center;gap:12px;padding:0 14px;min-height:54px;border-bottom:1px solid #EEF1EE;font-size:14px;color:#17231D}
+.li:last-child{border-bottom:0}
+.li .t{flex:1;min-width:0}
+.li small{display:block;font-size:11.5px;color:#56615B;font-weight:400;margin-top:1px}
+.li .n{font-size:12px;color:#56615B}
+.ico{width:36px;height:36px;border-radius:11px;background:#EEF6EE;color:#0E5A3A;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.emo{width:44px;height:44px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;font-size:23px;flex:none}
+.cap{font-size:11px;font-weight:600;letter-spacing:.6px;color:#56615B;text-transform:uppercase;margin:0 0 8px 2px}
+.btn{height:50px;border-radius:14px;background:#0E5A3A;color:#FFFFFF;font-size:14.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn2{height:44px;border-radius:12px;background:#FFFFFF;border:1px solid #CFD8D2;color:#17231D;font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px}
+.seg{display:flex;background:#E9EEEA;border-radius:12px;padding:3px}
+.seg span{flex:1;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:500;color:#56615B}
+.seg span.on{background:#FFFFFF;color:#17231D;font-weight:600;box-shadow:0 1px 3px rgba(16,40,28,.12)}
+.tabw{position:absolute;left:0;right:0;bottom:0}
+.sticky{position:absolute;left:0;right:0;bottom:84px;padding:12px 16px;background:linear-gradient(rgba(246,248,246,0),#F6F8F6 30%)}
+.h1{font-size:24px;font-weight:600;letter-spacing:-.3px;margin:0}
+.sub{font-size:13px;color:#56615B;margin:4px 0 0;line-height:1.45}
+.prod{width:156px;flex:none;overflow:hidden}
+.pimg{height:104px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #EEF1EE}
+.tag{display:inline-flex;height:22px;padding:0 8px;border-radius:6px;background:#F1F4F1;font-size:10.5px;color:#4A5650;align-items:center;white-space:nowrap}
+</style>
+</helmet>
+<div class="ph" style="height: 844px;">
+<div class="sb"><span>9:41</span><span class="sbi"><svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="#17231D"/><rect x="5" y="5" width="3" height="7" rx="1" fill="#17231D"/><rect x="10" y="2.5" width="3" height="9.5" rx="1" fill="#17231D"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#17231D"/></svg><svg width="16" height="12" viewBox="0 0 24 18" fill="none" stroke="#17231D" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 6a15 15 0 0 1 20 0M5.5 9.5a10 10 0 0 1 13 0M9 13a5 5 0 0 1 6 0"/></svg><svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><rect x=".5" y=".5" width="22" height="11" rx="3.5" fill="none" stroke="#17231D" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="#17231D"/><rect x="23.5" y="4" width="2" height="4" rx="1" fill="#17231D" opacity=".4"/></svg></span></div>
+<div class="top"><span style="flex:1;font-size:22px;font-weight:600;letter-spacing:-.3px;">Explorar</span><span class="ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/></svg></span></div><div class="pad" style="display:flex;flex-direction:column;gap:14px;padding-top:4px;"><div class="seg"><span class="on">Por especie</span><span class="">Por categoría</span></div><div class="card" style="overflow:hidden;"><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#FFF4DE;">🐔</span><span class="t" style="font-size:15px;font-weight:600;">Avicultura<small>4.120 productos · 640 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#FDE9EC;">🐖</span><span class="t" style="font-size:15px;font-weight:600;">Porcino<small>3.870 productos · 590 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#EEF2E6;">🐄</span><span class="t" style="font-size:15px;font-weight:600;">Bovino<small>3.150 productos · 520 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#F1EFEA;">🐑</span><span class="t" style="font-size:15px;font-weight:600;">Ovino<small>1.290 productos · 260 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#F3EEE6;">🐐</span><span class="t" style="font-size:15px;font-weight:600;">Caprino<small>980 productos · 210 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#E5F1F7;">🐟</span><span class="t" style="font-size:15px;font-weight:600;">Acuicultura<small>760 productos · 150 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:68px;"><span class="emo" style="background:#F2EDF6;">🐇</span><span class="t" style="font-size:15px;font-weight:600;">Cunicultura<small>410 productos · 95 empresas</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div><p style="margin:0;font-size:12px;color:#56615B;text-align:center;">¿Falta tu especie? <a href="#">Sugiérela</a></p></div>
+<div class="tabw"><dc-import name="MobTabBar" activo="{{ tab }}" hint-size="390px,84px"></dc-import></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 390, "height": 844}}'>
+class Component extends DCLogic {
+  renderVals() { return { tab: 2 }; }
+}
+</script>
+</body>
+</html>
