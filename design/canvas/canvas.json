@@ -48,7 +48,7 @@
     },
     {
       "id": "productos",
-      "name": "Productos (módulo aparte)"
+      "name": "Productos (módulo)"
     },
     {
       "id": "servicios",
@@ -553,22 +553,6 @@
       "title": "D3 · Sobre la empresa",
       "page": "fabdist"
     },
-    "FabCatalogo.dc.html": {
-      "x": 0,
-      "y": 0,
-      "w": 1280,
-      "h": 940,
-      "title": "Borrador previo · catálogo y carga (se rediseña en el módulo Productos)",
-      "page": "productos"
-    },
-    "FabProducto.dc.html": {
-      "x": 1360,
-      "y": 0,
-      "w": 1280,
-      "h": 940,
-      "title": "Borrador previo · ficha base (se rediseña en el módulo Productos)",
-      "page": "productos"
-    },
     "FabDistribuidores.dc.html": {
       "x": 4080,
       "y": 0,
@@ -624,6 +608,62 @@
       "h": 940,
       "title": "Componente · Constructor de ficha (barra y secciones)",
       "page": "fabdist"
+    },
+    "ProdCatalogo.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "P1 · Catálogo: filtros, completitud y acciones en bloque",
+      "page": "productos"
+    },
+    "ProdImportar.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "P2 · Importar catálogo por Excel (actualiza por referencia)",
+      "page": "productos"
+    },
+    "ProdAcuerdos.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "P3 · Acuerdos de distribución por línea y zona",
+      "page": "productos"
+    },
+    "ProdFichaGeneral.dc.html": {
+      "x": 0,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "P4 · Ficha base · General",
+      "page": "productos"
+    },
+    "ProdFichaBeneficios.dc.html": {
+      "x": 1360,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "P5 · Ficha base · Beneficios y aplicación",
+      "page": "productos"
+    },
+    "ProdFichaDocumentos.dc.html": {
+      "x": 2720,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "P6 · Ficha base · Documentación, vídeo y certificaciones",
+      "page": "productos"
+    },
+    "ProdFichaMercados.dc.html": {
+      "x": 4080,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "P7 · Ficha base · Mercados y dónde comprar",
+      "page": "productos"
     }
   },
   "order": [
@@ -689,14 +729,19 @@
     "FabTipo.dc.html",
     "FabCabecera.dc.html",
     "FabSobre.dc.html",
-    "FabCatalogo.dc.html",
-    "FabProducto.dc.html",
     "FabDistribuidores.dc.html",
     "FabServicios.dc.html",
     "FabExpertos.dc.html",
     "FabContenidos.dc.html",
     "FabContacto.dc.html",
     "FabPublicar.dc.html",
+    "ProdCatalogo.dc.html",
+    "ProdImportar.dc.html",
+    "ProdAcuerdos.dc.html",
+    "ProdFichaGeneral.dc.html",
+    "ProdFichaBeneficios.dc.html",
+    "ProdFichaDocumentos.dc.html",
+    "ProdFichaMercados.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -847,9 +892,9 @@
     "prodT1": {
       "x": 0,
       "y": -300,
-      "text": "Módulo Productos · pendiente de diseñar",
+      "text": "Módulo Productos · catálogo amplio (DSM-Firmenich, fabricante con distribuidores)",
       "kind": "title1",
-      "maxW": 2640,
+      "maxW": 4000,
       "page": "productos"
     },
     "servT1": {
@@ -859,6 +904,14 @@
       "kind": "title1",
       "maxW": 1280,
       "page": "servicios"
+    },
+    "prodT2": {
+      "x": 0,
+      "y": 1040,
+      "text": "Ficha base de un producto · las pestañas siguen las de la ficha pública",
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "productos"
     }
   },
   "designSystems": []

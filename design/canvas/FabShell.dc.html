@@ -72,17 +72,17 @@ body{margin:0}
       <a href="#" style="align-self: flex-start; margin-top: 2px; height: 34px; padding: 0 14px; border-radius: 10px; background: #FFFFFF; border: 1px solid #E3E8E4; color: #0E5A3A; font-size: 12.5px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 6px;">Centro de ayuda →</a>
     </div>
   </nav>
-  <footer style="position: absolute; left: 260px; right: 0; bottom: 0; height: 72px; box-sizing: border-box; padding: 0 32px; background: #FFFFFF; border-top: 1px solid #E8ECE9; display: flex; align-items: center; gap: 16px;">
+  <sc-if value="{{ pie }}" hint-placeholder-val="{{ true }}"><footer style="position: absolute; left: 260px; right: 0; bottom: 0; height: 72px; box-sizing: border-box; padding: 0 32px; background: #FFFFFF; border-top: 1px solid #E8ECE9; display: flex; align-items: center; gap: 16px;">
     <sc-if value="{{ hayAtras }}" hint-placeholder-val="{{ true }}"><a href="#" style="font-size: 14px; color: #2F3D36; text-decoration: none; display: flex; align-items: center; gap: 8px;">← {{ atras }}</a></sc-if>
     <span style="margin-left: auto; display: flex; align-items: center; gap: 18px;">
       <sc-if value="{{ saltar }}" hint-placeholder-val="{{ false }}"><a href="#" style="font-size: 13.5px; color: #56615B; text-decoration: none;">Saltar este paso</a></sc-if>
       <a href="#" style="font-size: 14px; color: #0E5A3A; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/><path d="M12 16v-5M9.5 13.5 12 11l2.5 2.5"/></svg>Guardar borrador</a>
       <button type="button" style="height: 46px; padding: 0 24px; border-radius: 12px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 600 14.5px 'Poppins', sans-serif; display: flex; align-items: center; gap: 8px;">{{ siguiente }}</button>
     </span>
-  </footer>
+  </footer></sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":2,"min":1,"max":10},"empresa":{"editor":"text","default":"DSM-Firmenich"},"persona":{"editor":"text","default":"Carla García"},"iniciales":{"editor":"text","default":"CG"},"$preview":{"width":1280,"height":940}}'>
+<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":2,"min":1,"max":10},"empresa":{"editor":"text","default":"DSM-Firmenich"},"persona":{"editor":"text","default":"Carla García"},"iniciales":{"editor":"text","default":"CG"},"pie":{"editor":"bool","default":true},"atras":{"editor":"text","default":""},"siguiente":{"editor":"text","default":""},"$preview":{"width":1280,"height":940}}'>
 class Component extends DCLogic {
   renderVals() {
     const a = this.props.activo ?? 2;
@@ -106,7 +106,7 @@ class Component extends DCLogic {
       empresa: this.props.empresa ?? 'DSM-Firmenich', persona: this.props.persona ?? 'Carla García', iniciales: this.props.iniciales ?? 'CG',
       prodCur: p.cur, prodFondo: p.fondo, prodTinta: p.tinta, prodPeso: p.peso,
       servCur: s.cur, servFondo: s.fondo, servTinta: s.tinta, servPeso: s.peso,
-      hayAtras: a !== 1, atras: modulo ? 'Volver a la ficha' : 'Anterior', saltar: a === 5 || a === 6, siguiente: siguiente
+      pie: this.props.pie ?? true, hayAtras: a !== 1, atras: this.props.atras || (modulo ? 'Volver a la ficha' : 'Anterior'), saltar: a === 5 || a === 6, siguiente: this.props.siguiente || siguiente
     };
   }
 }

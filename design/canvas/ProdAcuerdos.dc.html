@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Productos · Acuerdos de distribución</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ta{border:1px solid #D5DED8;border-radius:10px;padding:8px 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;resize:none;line-height:1.45;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.er{background:#FDECEA;color:#A3271B}
+.btn{height:38px;padding:0 14px;border-radius:10px;border:1px solid #E3E8E4;background:#FFFFFF;color:#17231D;font:500 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.tabs{display:flex;gap:24px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}
+.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.cc{display:flex;align-items:center;gap:7px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.sw{accent-color:#0E5A3A;width:17px;height:17px;margin:0;flex:none}
+.cty{display:inline-flex;align-items:center;justify-content:center;width:26px;height:18px;border-radius:4px;background:#EEF1EE;font-size:10px;font-weight:700;color:#2F3D36;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" pie="{{ pie }}" atras="{{ atras }}" siguiente="{{ siguiente }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 22px 28px 20px 32px; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: flex-end; gap: 16px;">
+      <div style="flex: 1; min-width: 0;"><span class="eb">MÓDULO PRODUCTOS</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Catálogo de productos</h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Una ficha base por producto, común a todos los países. Tus distribuidores la usan para su versión local.</p></div>
+      <button type="button" class="btnp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Nuevo acuerdo</button>
+    </div>
+    <div class="tabs"><span>Catálogo <span style="font-size: 11px; background: #F2F5F3; border-radius: 999px; padding: 1px 7px; margin-left: 4px;">248</span></span><span>Importaciones</span><span class="on">Acuerdos de distribución <span style="font-size: 11px; background: #EEF6EE; border-radius: 999px; padding: 1px 7px; margin-left: 4px;">4</span></span><span>Ajustes del catálogo</span></div>
+    <div style="display: flex; gap: 20px; flex: 1; min-height: 0;">
+      <div style="width: 390px; flex: none; display: flex; flex-direction: column; gap: 10px;">
+        <span style="font-size: 12.5px; color: #4A5650; line-height: 1.5;">Con catálogos grandes, asigna distribuidores <strong style="color: #17231D;">por línea y zona</strong>, no producto a producto. Cada ficha recibe sus distribuidores de aquí.</span>
+        <div style="background: #FFFFFF; border: 1px solid #E6EBE7; border-radius: 16px; overflow: hidden;">
+          <div style="padding: 8px 14px; background: #F6F8F6; font-size: 11px; font-weight: 600; color: #56615B; letter-spacing: .03em;">4 ACUERDOS · 1 SOLICITUD PENDIENTE</div>
+          <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) 54px 80px; gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid #EEF1EE; font-size: 12.5px; background: #F5FAF6; box-shadow: inset 3px 0 0 #0E5A3A;"><span style="width: 32px; height: 32px; border-radius: 8px; background: #EEF6EE; color: #0E5A3A; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">ND</span><span style="min-width: 0; display: flex; flex-direction: column; gap: 1px;"><strong style="font-weight: 600;">NutriGan Distribuciones</strong><span style="font-size: 11.5px; color: #4A5650;">España › Zona Centro · 7 provincias</span><span style="font-size: 11.5px; color: #56615B;">Vitaminas, Enzimas · Aves y Porcino</span></span><span style="text-align: right;"><strong style="font-weight: 600;">58</strong><br><span style="font-size: 10.5px; color: #56615B;">productos</span></span><span class="st ok" style="justify-self: end;">Activo</span></div>
+          <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) 54px 80px; gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="width: 32px; height: 32px; border-radius: 8px; background: #EEF6EE; color: #0E5A3A; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">AI</span><span style="min-width: 0; display: flex; flex-direction: column; gap: 1px;"><strong style="font-weight: 600;">AgroVet Ibérica</strong><span style="font-size: 11.5px; color: #4A5650;">España › Aragón, Navarra, La Rioja</span><span style="font-size: 11.5px; color: #56615B;">Todo el catálogo de aves</span></span><span style="text-align: right;"><strong style="font-weight: 600;">96</strong><br><span style="font-size: 10.5px; color: #56615B;">productos</span></span><span class="st ok" style="justify-self: end;">Activo</span></div>
+          <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) 54px 80px; gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="width: 32px; height: 32px; border-radius: 8px; background: #EEF6EE; color: #0E5A3A; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">PL</span><span style="min-width: 0; display: flex; flex-direction: column; gap: 1px;"><strong style="font-weight: 600;">PortuNutri Lda</strong><span style="font-size: 11.5px; color: #4A5650;">Portugal · todo el país</span><span style="font-size: 11.5px; color: #56615B;">Todo el catálogo</span></span><span style="text-align: right;"><strong style="font-weight: 600;">248</strong><br><span style="font-size: 10.5px; color: #56615B;">productos</span></span><span class="st ok" style="justify-self: end;">Activo</span></div>
+          <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) 54px 80px; gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid #EEF1EE; font-size: 12.5px;"><span style="width: 32px; height: 32px; border-radius: 8px; background: #EEF6EE; color: #0E5A3A; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">A</span><span style="min-width: 0; display: flex; flex-direction: column; gap: 1px;"><strong style="font-weight: 600;">AgroNova</strong><span style="font-size: 11.5px; color: #4A5650;">España, Portugal</span><span style="font-size: 11.5px; color: #56615B;">Pide 3 productos</span></span><span style="text-align: right;"><strong style="font-weight: 600;">3</strong><br><span style="font-size: 10.5px; color: #56615B;">productos</span></span><span class="st wn" style="justify-self: end;">Solicitud</span></div>
+        </div>
+      </div>
+      <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 36px; height: 36px; border-radius: 10px; background: #EEF6EE; color: #0E5A3A; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">ND</span><span style="flex: 1;"><strong style="font-size: 15px; font-weight: 600;">NutriGan Distribuciones</strong> <span class="st ok">Activo</span><br><span class="hint">Distribuidor autorizado desde mar 2025</span></span></div>
+        <section class="card" style="gap: 9px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">Zona <span class="hint">· el comprador ve a NutriGan si está aquí</span></p><span style="display: flex; gap: 4px; font-size: 11.5px;"><span class="chipg" style="height: 26px;">País</span><span class="chipg" style="height: 26px;">Región</span><span class="chip" style="height: 26px; background: #0E5A3A; color: #FFFFFF;">Provincia</span></span></div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px; align-items: start;"><select class="inp"><option>España</option></select><div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="chip">Madrid <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Toledo <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Guadalajara <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Cuenca <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Ciudad Real <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chipg">+2 más</span><a href="#" style="font-size: 12px;">+ Provincia</a></div></div>
+        </section>
+        <section class="card" style="gap: 9px;">
+          <p class="h">Productos del acuerdo</p>
+          <label class="cc" style="align-items: flex-start;"><input type="radio" name="reg" defaultChecked="{{ yes }}" style="margin-top: 3px;"><span><strong style="font-weight: 600;">Por regla</strong> <span class="hint">· los productos nuevos que cumplan la regla se añaden solos</span></span></label>
+          <div style="margin-left: 22px; display: flex; flex-direction: column; gap: 7px; background: #F6F8F6; border-radius: 12px; padding: 10px 12px;">
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 12px;"><span style="width: 62px; color: #4A5650;">Líneas</span><span class="chip">Vitaminas <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Enzimas <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><a href="#" style="font-size: 12px;">+ Línea</a></div>
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 12px;"><span style="width: 62px; color: #4A5650;">Especies</span><span class="chip">Aves <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><span class="chip">Porcino <span aria-hidden="true" style="color: #6B8F7B;">×</span></span></div>
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 12px;"><span style="width: 62px; color: #4A5650;">Excepto</span><span class="chipg">Balancius™ <span aria-hidden="true" style="color: #6B8F7B;">×</span></span><a href="#" style="font-size: 12px;">+ Producto</a></div>
+            <span style="font-size: 12px; color: #0E5A3A; font-weight: 500;">= 58 productos hoy · <a href="#">ver lista</a></span>
+          </div>
+          <label class="cc"><input type="radio" name="reg"><span>Selección manual de productos</span></label>
+        </section>
+        <section class="card" style="gap: 8px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"><label class="lbl">Contacto que aparece en la ficha<select class="inp"><option>Laura García · Técnico-comercial</option></select></label><label class="lbl"><span>Vigencia <span class="hint">· opcional</span></span><input class="inp" type="text" value="Hasta 31/12/2027"></label></div>
+          <label class="cc"><input type="checkbox" defaultChecked="{{ yes }}"><span>Puede crear su versión local de estas fichas</span></label>
+        </section>
+      </form>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 9, pie: true, atras: 'Volver al catálogo', siguiente: 'Guardar acuerdo' }; }
+}
+</script>
+</body>
+</html>
