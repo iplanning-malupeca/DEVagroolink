@@ -1,0 +1,226 @@
+<title>Plantillas de producto Agroolink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: índice de tipos a la izquierda, modelo del tipo a la derecha (editor + ficha pública) */
+:root{
+  --bg:#F4F7F4; --surface:#FFFFFF; --sunk:#EEF3EF; --line:#DFE6E1; --fg:#17231D; --muted:#56615B;
+  --accent:#0E5A3A; --accent-soft:#E3F0E6; --lime:#B5D334; --lime-ink:#2B3A06; --warn-bg:#FFF2DA; --warn:#7A4B00;
+  --display:'Poppins',system-ui,sans-serif; --body:'Poppins',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1713; --surface:#16211B; --sunk:#1C2A22; --line:#2A3A31; --fg:#E6EEE8; --muted:#9AAAA1;
+  --accent:#7FCB9C; --accent-soft:#1F3A2B; --lime:#B5D334; --lime-ink:#1A2204; --warn-bg:#3A2C12; --warn:#F2C879; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1713; --surface:#16211B; --sunk:#1C2A22; --line:#2A3A31; --fg:#E6EEE8; --muted:#9AAAA1;
+  --accent:#7FCB9C; --accent-soft:#1F3A2B; --lime:#B5D334; --lime-ink:#1A2204; --warn-bg:#3A2C12; --warn:#F2C879; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:20px;padding-block:20px 48px;display:flex;flex-direction:column;gap:18px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 24px}
+header .t{flex:1 1 320px;min-width:0}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-.01em;margin:2px 0 4px;text-wrap:balance}
+header p{margin:0;color:var(--muted);max-width:68ch}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 14px;display:flex;flex-direction:column}
+.stat b{font-size:20px;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{font-size:11.5px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+nav{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 40px)}
+.search{width:100%;height:38px;border:1px solid var(--line);border-radius:10px;padding:0 12px;font:inherit;font-size:13px;background:var(--bg);color:var(--fg)}
+.search:focus,button:focus-visible,.ty:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.tog input{accent-color:var(--accent)}
+.list{overflow:auto;display:flex;flex-direction:column;gap:2px;padding-right:2px;min-height:0}
+.cat{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:10px 8px 4px;display:flex;justify-content:space-between}
+.ty{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:0;background:none;color:var(--fg);font:inherit;font-size:13px;padding:7px 8px;border-radius:9px;cursor:pointer}
+.ty:hover{background:var(--sunk)}
+.ty[aria-current="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.ty .n{margin-left:auto;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none}
+.dot.off{background:transparent;border:1px solid var(--line)}
+main{display:flex;flex-direction:column;gap:16px;min-width:0}
+.head{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-end}
+.head .t{flex:1 1 300px;min-width:0}
+h2{font-family:var(--display);font-size:26px;font-weight:700;margin:2px 0 0;letter-spacing:-.01em;text-wrap:balance}
+.pills{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-size:11.5px;font-weight:600;border-radius:999px;padding:4px 10px;background:var(--sunk);color:var(--fg);white-space:nowrap}
+.pill.cmp{background:var(--lime);color:var(--lime-ink)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+.btn{height:38px;padding:0 14px;border-radius:10px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);font:inherit;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--accent-soft)}
+.cols{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.ph{display:flex;align-items:center;gap:10px}
+.ph .ic{width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--surface);display:flex;align-items:center;justify-content:center;flex:none}
+.ph strong{font-size:14.5px;font-weight:600}
+.ph span{font-size:12px;color:var(--muted);display:block}
+.banner{background:var(--accent-soft);border-radius:10px;padding:8px 12px;font-size:12.5px}
+.row{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.nm{display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:500;min-width:0}
+.badge{align-self:flex-start;font-size:10.5px;font-weight:600;border-radius:999px;padding:1px 7px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.field{display:flex;align-items:center;height:34px;border:1px solid var(--line);border-radius:9px;background:var(--bg);font-size:12.5px;color:var(--muted);overflow:hidden;min-width:0}
+.field .v{flex:1;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.field .u{padding:0 10px;height:100%;display:flex;align-items:center;border-left:1px solid var(--line);background:var(--sunk);font-family:var(--mono);font-size:11.5px;color:var(--fg);white-space:nowrap}
+.field .k{padding:0 10px;font-size:11px}
+.own{border:1.5px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px;color:var(--muted)}
+.own b{color:var(--fg);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+td{padding:7px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{color:var(--muted);width:48%}
+td:last-child{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.tbl{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmpbtn{height:36px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:500}
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.sec h3{margin:0;font-size:14px;font-weight:600}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;border-radius:999px;padding:4px 10px;background:var(--sunk)}
+.chip i{font-style:normal;color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:6px}
+.toast{font-size:12px;color:var(--accent);min-height:18px}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  nav{position:static;max-height:300px}
+  .cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:no-preference){.ty,.btn{transition:background .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="t">
+      <span class="eb">Agroolink · Catálogo de productos</span>
+      <h1>Un modelo de ficha por tipo de producto</h1>
+      <p>Para cada tipo: los atributos que sugerimos al fabricante en el editor y cómo quedan en la ficha pública. Ninguno es obligatorio; lo vacío no se publica y cada fabricante puede añadir atributos propios.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="legend">
+    <span><i class="dot" style="display:inline-block"></i> Tipo con comparador al lanzamiento</span>
+    <span><b style="color:var(--accent)">⇄</b> Atributo comparable</span>
+    <span><span class="badge" style="margin:0">Número</span> Tipo de dato</span>
+  </div>
+
+  <div class="layout">
+    <nav aria-label="Tipos de producto">
+      <input class="search" id="q" type="search" placeholder="Buscar tipo o atributo…" aria-label="Buscar tipo o atributo">
+      <label class="tog"><input type="checkbox" id="onlycmp"> Solo tipos con comparador</label>
+      <div class="list" id="list"></div>
+    </nav>
+    <main id="detail" aria-live="polite"></main>
+  </div>
+</div>
+
+<script>
+const DATA = {"types":[{"c":"Nutrición animal y aditivos","t":"Piensos completos","cmp":true,"ch":"—","n":"","a":[["Proteína bruta","Número","%",1],["Grasa","Número","%",1],["Fibra","Número","%",1],["Energía metabolizable","Número","kcal/kg",1]]},{"c":"Nutrición animal y aditivos","t":"Piensos complementarios","cmp":false,"ch":"—","n":"","a":[["Objetivo nutricional","Texto","",0],["Dosis de inclusión","Número","g/t",0],["Composición","Texto","",0]]},{"c":"Nutrición animal y aditivos","t":"Premezclas","cmp":false,"ch":"—","n":"","a":[["Vitaminas","Texto","",0],["Minerales","Texto","",0],["Concentración de activos","Número","%",0],["Dosis por tonelada","Número","g/t",0],["Soporte","Lista","",0]]},{"c":"Nutrición animal y aditivos","t":"Núcleos nutricionales","cmp":false,"ch":"—","n":"","a":[["Composición","Texto","",0],["Porcentaje de inclusión","Número","%",0]]},{"c":"Nutrición animal y aditivos","t":"Acidificantes","cmp":false,"ch":"—","n":"","a":[["Ácidos activos","Texto","",0],["Concentración","Número","%",0],["PH","Texto","",0],["Dosis de inclusión","Número","g/t",0]]},{"c":"Nutrición animal y aditivos","t":"Probióticos","cmp":true,"ch":"—","n":"","a":[["Cepas","Texto","",0],["UFC/g","Número","UFC/g",1],["Dosis","Número","g/t",1],["Estabilidad térmica","Texto","",0]]},{"c":"Nutrición animal y aditivos","t":"Prebióticos","cmp":false,"ch":"—","n":"","a":[["Ingrediente activo","Texto","",0],["Concentración","Número","%",0],["Tipo de fibra","Lista","",0],["Dosis","Número","g/t",0]]},{"c":"Nutrición animal y aditivos","t":"Enzimas","cmp":true,"ch":"—","n":"","a":[["Tipo de enzima","Lista","",0],["Actividad enzimática","Número","U/g",1],["Estabilidad térmica","Texto","",0],["Dosis","Número","g/t",1]]},{"c":"Nutrición animal y aditivos","t":"Fitogénicos","cmp":false,"ch":"—","n":"","a":[["Extractos vegetales","Texto","",0],["Principios activos","Texto","",0],["Concentración","Número","%",0],["Dosis","Número","g/t",0]]},{"c":"Nutrición animal y aditivos","t":"Adsorbentes de micotoxinas","cmp":false,"ch":"—","n":"","a":[["Micotoxinas objetivo","Texto","",0],["Composición","Texto","",0],["Capacidad de adsorción","Número","%",0],["Dosis","Número","g/t",0]]},{"c":"Nutrición animal y aditivos","t":"Aminoácidos","cmp":true,"ch":"—","n":"","a":[["Aminoácido","Texto","",0],["Pureza","Número","%",1],["Concentración","Número","%",0]]},{"c":"Nutrición animal y aditivos","t":"Vitaminas","cmp":true,"ch":"—","n":"","a":[["Vitamina","Texto","",0],["Potencia","Número","UI/g",1],["Estabilidad","Texto","",0]]},{"c":"Nutrición animal y aditivos","t":"Minerales y oligoelementos","cmp":false,"ch":"—","n":"","a":[["Mineral","Texto","",0],["Forma química","Lista","",0],["Biodisponibilidad declarada","Texto","",0],["Concentración","Número","%",0]]},{"c":"Nutrición animal y aditivos","t":"Grasas y aceites","cmp":false,"ch":"—","n":"","a":[["Origen","Lista","",0],["Perfil de ácidos grasos","Texto","",0],["Energía","Número","kcal/kg",0],["Oxidación","Texto","",0]]},{"c":"Nutrición animal y aditivos","t":"Conservantes y antioxidantes","cmp":false,"ch":"—","n":"","a":[["Sustancias activas","Texto","",0],["Concentración","Número","%",0],["Aplicación","Texto","",0],["Dosis","Número","g/t",0]]},{"c":"Nutrición animal y aditivos","t":"Sustitutos lácteos","cmp":false,"ch":"—","n":"","a":[["Proteína","Número","%",0],["Grasa","Número","%",0],["Lactosa","Número","%",0],["Digestibilidad","Texto","",0],["Dilución","Número","g/L",0]]},{"c":"Nutrición animal y aditivos","t":"Aditivos tecnológicos","cmp":false,"ch":"—","n":"","a":[["Función","Lista","",0],["Composición","Texto","",0],["Dosis","Número","g/t",0],["Compatibilidad con procesos","Texto","",0]]},{"c":"Salud animal y bioseguridad","t":"Vacunas","cmp":false,"ch":"—","n":"","a":[["Enfermedad","Texto","",0],["Agente objetivo","Texto","",0],["Edad","Texto","",0],["Vía","Lista","",0],["Pauta","Texto","",0],["Conservación","Número","°C",0]]},{"c":"Salud animal y bioseguridad","t":"Antibióticos veterinarios","cmp":false,"ch":"—","n":"","a":[["Principio activo","Texto","",0],["Concentración","Número","mg/mL",0],["Indicación autorizada","Texto","",0],["Vía","Lista","",0],["Periodo de retirada","Número","días",0]]},{"c":"Salud animal y bioseguridad","t":"Antiparasitarios","cmp":false,"ch":"—","n":"","a":[["Parásito objetivo","Texto","",0],["Principio activo","Texto","",0],["Duración","Número","días",0],["Vía","Lista","",0],["Periodo de retirada","Número","días",0]]},{"c":"Salud animal y bioseguridad","t":"Antiinflamatorios","cmp":false,"ch":"—","n":"","a":[["Principio activo","Texto","",0],["Concentración","Número","mg/mL",0],["Indicación","Texto","",0],["Vía","Lista","",0]]},{"c":"Salud animal y bioseguridad","t":"Desinfectantes","cmp":false,"ch":"—","n":"","a":[["Principios activos","Texto","",0],["Espectro","Lista","",0],["Dilución","Número","%",0],["Tiempo de contacto","Número","min",0],["Superficies","Texto","",0]]},{"c":"Salud animal y bioseguridad","t":"Productos de higiene","cmp":false,"ch":"—","n":"","a":[["Aplicación","Texto","",0],["Composición","Texto","",0],["Concentración","Número","%",0],["Método de uso","Lista","",0]]},{"c":"Salud animal y bioseguridad","t":"Diagnóstico rápido","cmp":false,"ch":"—","n":"","a":[["Patógeno","Texto","",0],["Muestra","Lista","",0],["Método","Lista","",0],["Tiempo de resultado","Número","min",0],["Sensibilidad y especificidad","Número","%",0]]},{"c":"Salud animal y bioseguridad","t":"Kits PCR / laboratorio","cmp":false,"ch":"—","n":"","a":[["Diana diagnóstica","Texto","",0],["Tipo de muestra","Lista","",0],["Tecnología","Lista","",0],["Capacidad","Número","muestras/serie",0],["Tiempo de análisis","Número","h",0]]},{"c":"Salud animal y bioseguridad","t":"Equipos de vacunación","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","animales/h",0],["Dosis","Número","mL",0],["Precisión","Número","%",0],["Sistema de aplicación","Lista","",0]]},{"c":"Salud animal y bioseguridad","t":"Control de plagas","cmp":false,"ch":"—","n":"","a":[["Organismo objetivo","Texto","",0],["Método de aplicación","Lista","",0],["Duración","Número","días",0],["Ámbito autorizado","Texto","",0]]},{"c":"Genética y reproducción","t":"Líneas genéticas porcinas","cmp":false,"ch":"—","n":"","a":[["Línea","Texto","",0],["Aptitud maternal/terminal","Lista","",0],["Prolificidad","Número","lechones/parto",0],["Crecimiento","Texto","",0],["Conversión","Número","kg/kg",0]]},{"c":"Genética y reproducción","t":"Genética avícola","cmp":false,"ch":"—","n":"","a":[["Línea","Texto","",0],["Orientación carne/puesta","Lista","",0],["Rendimiento","Número","huevos/gallina",0],["Persistencia","Texto","",0],["Viabilidad","Texto","",0]]},{"c":"Genética y reproducción","t":"Genética bovina","cmp":false,"ch":"—","n":"","a":[["Raza","Lista","",0],["Índices genéticos","Texto","",0],["Producción","Texto","",0],["Fertilidad","Texto","",0],["Facilidad de parto","Texto","",0]]},{"c":"Genética y reproducción","t":"Semen y dosis seminales","cmp":false,"ch":"Fusionado","n":"Une: Semen, Dosis de inseminación","a":[["Raza/línea","Lista","",0],["Calidad","Texto","",0],["Concentración","Número","millones/mL",0],["Conservación","Lista","",0],["Formato","Lista","",0],["Volumen","Número","mL",0],["Diluyente","Texto","",0],["Vida útil","Número","días",0]]},{"c":"Genética y reproducción","t":"Embriones","cmp":false,"ch":"—","n":"","a":[["Genética","Texto","",0],["Estadio","Lista","",0],["Conservación","Lista","",0],["Certificaciones sanitarias","Texto","",0]]},{"c":"Genética y reproducción","t":"Equipos de inseminación","cmp":false,"ch":"Fusionado","n":"Une: Equipos de inseminación, Equipos de inseminación porcina","a":[["Técnica","Lista","",0],["Capacidad","Número","dosis/h",0],["Material","Lista","",0],["Compatibilidad","Texto","",0],["Dosis","Número","mL",0]]},{"c":"Tecnología, sensores y software","t":"Sensores de actividad y collares","cmp":true,"ch":"Fusionado","n":"Une: Equipos de detección de celo, Sensores de actividad, Collares de monitorización","a":[["Tecnología","Lista","",0],["Precisión declarada","Número","%",0],["Parámetros monitorizados","Texto","",0],["Conectividad","Lista","",0],["Parámetros","Texto","",0],["Autonomía","Número","días",1],["Fijación","Lista","",0],["Transmisión","Lista","",0],["Compatibilidad","Texto","",0],["Actividad","Texto","",0],["Rumia","Texto","",0],["Celo","Texto","",0]]},{"c":"Genética y reproducción","t":"Equipos de incubación reproductiva","cmp":false,"ch":"Revisar","n":"¿Se solapa con Incubadoras (avícola)? Confirmar con un especialista","a":[["Capacidad","Número","unidades",0],["Control térmico","Texto","",0],["Humedad","Número","% HR",0],["Automatización","Lista","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Comederos","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","kg",0],["Material","Lista","",0],["Sistema de dosificación","Lista","",0],["Número de animales","Número","animales",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Bebederos","cmp":false,"ch":"—","n":"","a":[["Caudal","Número","L/h",0],["Presión","Número","bar",0],["Material","Lista","",0],["Tipo","Lista","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Sistemas de alimentación automática","cmp":false,"ch":"Fusionado","n":"Une: Sistemas de alimentación automática, Sistemas de alimentación avícola","a":[["Capacidad","Número","kg/h",0],["Dosificación","Texto","",0],["Automatización","Lista","",0],["Precisión","Número","%",0],["Integración","Texto","",0],["Aves por línea","Número","aves",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Sistemas de ventilación","cmp":true,"ch":"—","n":"","a":[["Caudal","Número","m³/h",1],["Potencia","Número","kW",1],["Consumo","Número","kWh",1],["Presión","Número","Pa",0],["Ruido","Número","dB",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Sistemas de calefacción","cmp":true,"ch":"—","n":"","a":[["Potencia","Número","kW",1],["Combustible","Lista","",0],["Rendimiento","Número","%",1],["Superficie","Número","m²",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Refrigeración y cooling","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","m³/h",0],["Consumo de agua","Número","L/h",0],["Reducción térmica declarada","Número","°C",0],["Superficie","Número","m²",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Iluminación ganadera","cmp":false,"ch":"—","n":"","a":[["Potencia","Número","W",0],["Lúmenes","Número","lm",0],["Espectro","Lista","",0],["Regulación","Lista","",0],["Protección IP","Lista","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Suelos y slats","cmp":false,"ch":"—","n":"","a":[["Material","Lista","",0],["Dimensiones","Texto","",0],["Carga admisible","Número","kg/m²",0],["Superficie abierta","Número","%",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Jaulas y alojamientos","cmp":true,"ch":"—","n":"","a":[["Dimensiones","Texto","",0],["Capacidad","Número","animales/módulo",1],["Material","Lista","",0],["Normativa aplicable","Texto","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Equipos de ordeño","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","vacas/h",0],["Puestos","Número","puestos",0],["Rendimiento","Número","L/h",0],["Automatización","Lista","",0],["Limpieza","Texto","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Robots de ordeño","cmp":true,"ch":"—","n":"","a":[["Vacas atendidas","Número","vacas",1],["Ordeños/hora","Número","ordeños/h",1],["Consumo","Número","kWh/día",0],["Sensores","Texto","",0],["Integración","Texto","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Sistemas de limpieza","cmp":false,"ch":"—","n":"","a":[["Caudal","Número","L/min",0],["Presión","Número","bar",0],["Potencia","Número","kW",0],["Tipo de limpieza","Lista","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Sistemas de gestión de estiércol","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","m³/día",0],["Separación","Texto","",0],["Rendimiento","Número","%",0],["Energía","Texto","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Silos y almacenamiento","cmp":false,"ch":"—","n":"","a":[["Volumen","Número","m³",0],["Material","Lista","",0],["Dimensiones","Texto","",0],["Sistema de descarga","Lista","",0]]},{"c":"Equipamiento e instalaciones ganaderas","t":"Básculas y sistemas de pesaje","cmp":true,"ch":"Fusionado","n":"Une: Básculas ganaderas, Sistemas de pesaje automático, Sistemas de pesaje porcino","a":[["Capacidad máxima","Número","kg",1],["Precisión","Número","± kg",1],["Tecnología","Lista","",0],["Conectividad","Lista","",0],["Rango","Texto","",0],["Capacidad","Número","kg",0],["Integración","Texto","",0],["Frecuencia","Lista","",0]]},{"c":"Tecnología, sensores y software","t":"Software de gestión ganadera","cmp":false,"ch":"—","n":"","a":[["Módulos","Texto","",0],["Usuarios","Número","usuarios",0],["Integraciones","Texto","",0],["Idiomas","Lista","",0],["Modalidad SaaS","Lista","",0]]},{"c":"Tecnología, sensores y software","t":"Sensores ambientales","cmp":false,"ch":"—","n":"","a":[["Variables medidas","Texto","",0],["Rango","Texto","",0],["Precisión","Número","±",0],["Frecuencia","Número","lecturas/h",0],["Conectividad","Lista","",0]]},{"c":"Tecnología, sensores y software","t":"Sistemas de identificación RFID","cmp":false,"ch":"—","n":"","a":[["Frecuencia","Lista","",0],["Alcance","Texto","",0],["Formato","Lista","",0],["Protocolos","Lista","",0]]},{"c":"Tecnología, sensores y software","t":"Cámaras de visión artificial","cmp":false,"ch":"—","n":"","a":[["Resolución","Texto","",0],["Funciones IA","Texto","",0],["Conectividad","Lista","",0],["Condiciones de uso","Texto","",0]]},{"c":"Tecnología, sensores y software","t":"Plataformas IoT","cmp":false,"ch":"—","n":"","a":[["Dispositivos compatibles","Texto","",0],["Protocolos","Lista","",0],["API","Texto","",0],["Almacenamiento","Texto","",0]]},{"c":"Tecnología, sensores y software","t":"Sistemas de trazabilidad","cmp":false,"ch":"—","n":"","a":[["Identificación","Texto","",0],["Registros","Texto","",0],["Integraciones","Texto","",0],["Estándares","Texto","",0]]},{"c":"Tecnología, sensores y software","t":"Software de formulación","cmp":false,"ch":"—","n":"","a":[["Base de ingredientes","Texto","",0],["Optimización","Texto","",0],["Exportación","Texto","",0]]},{"c":"Tecnología, sensores y software","t":"Sistemas de alimentación de precisión","cmp":false,"ch":"Revisar","n":"Revisar frontera con Sistemas de alimentación automática","a":[["Variables utilizadas","Texto","",0],["Precisión","Número","%",0],["Frecuencia de ajuste","Lista","",0],["Automatización","Lista","",0]]},{"c":"Equipamiento avícola especializado","t":"Incubadoras","cmp":true,"ch":"—","n":"","a":[["Capacidad de huevos","Número","huevos",1],["Uniformidad térmica","Texto","",0],["Humedad","Número","% HR",0],["Volteo","Texto","",0],["Consumo","Número","kWh/día",1]]},{"c":"Equipamiento avícola especializado","t":"Nacedoras","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","huevos",0],["Control ambiental","Texto","",0],["Limpieza","Texto","",0],["Automatización","Lista","",0]]},{"c":"Equipamiento avícola especializado","t":"Clasificadoras de huevos","cmp":true,"ch":"—","n":"","a":[["Huevos/hora","Número","huevos/h",1],["Categorías","Texto","",0],["Precisión","Número","%",0],["Detección de defectos","Texto","",0]]},{"c":"Equipamiento avícola especializado","t":"Sistemas de recogida de huevos","cmp":false,"ch":"—","n":"","a":[["Capacidad/hora","Número","huevos/h",0],["Automatización","Lista","",0],["Compatibilidad","Texto","",0]]},{"c":"Equipamiento avícola especializado","t":"Nidos","cmp":false,"ch":"—","n":"","a":[["Capacidad de aves","Número","aves",0],["Dimensiones","Texto","",0],["Material","Lista","",0],["Recogida","Texto","",0]]},{"c":"Equipamiento avícola especializado","t":"Equipos de procesamiento avícola","cmp":false,"ch":"—","n":"","a":[["Aves/hora","Número","aves/h",0],["Operación","Lista","",0],["Rendimiento","Número","%",0],["Consumo","Número","kWh",0],["Automatización","Lista","",0]]},{"c":"Equipamiento avícola especializado","t":"Sistemas de aturdimiento","cmp":false,"ch":"—","n":"","a":[["Tecnología","Lista","",0],["Capacidad","Número","aves/h",0],["Parámetros operativos","Texto","",0],["Cumplimiento normativo","Texto","",0]]},{"c":"Equipamiento avícola especializado","t":"Equipos de vacunación in ovo","cmp":false,"ch":"—","n":"","a":[["Huevos/hora","Número","huevos/h",0],["Precisión","Número","%",0],["Compatibilidad","Texto","",0],["Limpieza","Texto","",0]]},{"c":"Equipamiento porcino especializado","t":"Estaciones electrónicas de alimentación","cmp":false,"ch":"—","n":"","a":[["Cerdas por estación","Número","cerdas",0],["Identificación","Texto","",0],["Precisión","Número","± g",0],["Programación","Texto","",0]]},{"c":"Equipamiento porcino especializado","t":"Equipos de alimentación líquida","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","L",0],["Mezclado","Texto","",0],["Dosificación","Texto","",0],["Limpieza","Texto","",0]]},{"c":"Equipamiento porcino especializado","t":"Sistemas de maternidad","cmp":false,"ch":"—","n":"","a":[["Dimensiones","Texto","",0],["Configuración","Texto","",0],["Material","Lista","",0],["Control térmico","Texto","",0]]},{"c":"Equipamiento porcino especializado","t":"Sistemas de detección de partos","cmp":false,"ch":"—","n":"","a":[["Tecnología","Lista","",0],["Parámetros","Texto","",0],["Alertas","Texto","",0],["Precisión declarada","Número","%",0]]},{"c":"Equipamiento porcino especializado","t":"Equipos de procesado de lechones","cmp":false,"ch":"—","n":"","a":[["Función","Lista","",0],["Capacidad","Número","lechones/h",0],["Ergonomía","Texto","",0],["Seguridad","Texto","",0]]},{"c":"Equipamiento para rumiantes","t":"Robots de alimentación","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","kg",0],["Autonomía","Número","h",0],["Frecuencia","Lista","",0],["Consumo","Número","kWh/día",0],["Precisión","Número","%",0]]},{"c":"Equipamiento para rumiantes","t":"Mezcladoras unifeed","cmp":true,"ch":"—","n":"","a":[["Capacidad","Número","m³",1],["Potencia","Número","kW",1],["Tipo de mezcla","Lista","",0],["Tiempo de ciclo","Número","min",1]]},{"c":"Equipamiento para rumiantes","t":"Sistemas de detección de mastitis","cmp":false,"ch":"—","n":"","a":[["Variables","Texto","",0],["Método","Lista","",0],["Sensibilidad","Texto","",0],["Integración","Texto","",0]]},{"c":"Equipamiento para rumiantes","t":"Sistemas de refrigeración de leche","cmp":true,"ch":"—","n":"","a":[["Capacidad","Número","L",1],["Potencia","Número","kW",0],["Tiempo de enfriamiento","Número","h",1],["Consumo","Número","kWh/día",0]]},{"c":"Equipamiento para rumiantes","t":"Equipos de análisis de leche","cmp":false,"ch":"—","n":"","a":[["Parámetros","Texto","",0],["Precisión","Número","%",0],["Velocidad","Texto","",0],["Calibración","Texto","",0]]},{"c":"Equipamiento para rumiantes","t":"Sistemas de separación de animales","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","animales/h",0],["Identificación","Texto","",0],["Automatización","Lista","",0]]},{"c":"Equipamiento para rumiantes","t":"Cepillos automáticos","cmp":false,"ch":"—","n":"","a":[["Potencia","Número","W",0],["Activación","Lista","",0],["Dimensiones","Texto","",0],["Material","Lista","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Biodigestores","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","m³",0],["Sustratos","Texto","",0],["Producción de biogás","Número","m³/día",0],["Eficiencia","Texto","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Separadores sólido-líquido","cmp":false,"ch":"—","n":"","a":[["Caudal","Número","m³/h",0],["Porcentaje de separación","Número","%",0],["Potencia","Número","kW",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Tratamiento de aguas","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","m³/día",0],["Contaminantes","Texto","",0],["Tecnología","Lista","",0],["Consumo","Número","kWh/m³",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Sistemas de reducción de emisiones","cmp":false,"ch":"—","n":"","a":[["Gas objetivo","Texto","",0],["Eficiencia declarada","Número","%",0],["Tecnología","Lista","",0],["Mantenimiento","Texto","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Energía solar para granjas","cmp":false,"ch":"—","n":"","a":[["Potencia instalada","Número","kWp",0],["Producción","Número","kWh/año",0],["Almacenamiento","Texto","",0],["Integración","Texto","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Sistemas de recuperación de calor","cmp":false,"ch":"—","n":"","a":[["Potencia recuperada","Número","kW",0],["Eficiencia","Número","%",0],["Compatibilidad","Texto","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Equipos de compostaje","cmp":false,"ch":"—","n":"","a":[["Capacidad","Número","t/día",0],["Tiempo de proceso","Número","días",0],["Automatización","Lista","",0]]},{"c":"Sostenibilidad, medio ambiente y energía","t":"Soluciones de gestión de residuos","cmp":false,"ch":"—","n":"","a":[["Tipo de residuo","Lista","",0],["Capacidad","Número","t/día",0],["Tratamiento","Texto","",0],["Resultado","Texto","",0]]},{"c":"Materias primas y productos agrícolas","t":"Cereales","cmp":false,"ch":"—","n":"","a":[["Origen","Lista","",0],["Humedad","Número","%",0],["Proteína","Número","%",0],["Energía","Número","kcal/kg",0],["Peso específico","Número","kg/hL",0]]},{"c":"Materias primas y productos agrícolas","t":"Harinas proteicas","cmp":false,"ch":"—","n":"","a":[["Origen","Lista","",0],["Proteína","Número","%",0],["Fibra","Número","%",0],["Grasa","Número","%",0],["Digestibilidad","Número","%",0]]},{"c":"Materias primas y productos agrícolas","t":"Subproductos agroindustriales","cmp":false,"ch":"—","n":"","a":[["Composición","Texto","",0],["Humedad","Número","%",0],["Energía","Número","kcal/kg",0]]},{"c":"Materias primas y productos agrícolas","t":"Forrajes","cmp":false,"ch":"—","n":"","a":[["Materia seca","Número","%",0],["Proteína","Número","% s.m.s.",0],["FND","Número","% s.m.s.",0],["FDA","Número","% s.m.s.",0],["Digestibilidad","Número","%",0]]},{"c":"Materias primas y productos agrícolas","t":"Aditivos para ensilado","cmp":false,"ch":"—","n":"","a":[["Microorganismos/activos","Texto","",0],["UFC","Número","UFC/g",0],["Dosis","Número","g/t forraje",0],["Aplicación","Texto","",0]]},{"c":"Materias primas y productos agrícolas","t":"Conservantes de materias primas","cmp":false,"ch":"—","n":"","a":[["Activos","Texto","",0],["Dosis","Número","kg/t",0],["Espectro","Lista","",0],["Duración","Número","meses",0]]},{"c":"Materias primas y productos agrícolas","t":"Productos para almacenamiento","cmp":false,"ch":"—","n":"","a":[["Tipo","Lista","",0],["Capacidad","Número","t",0],["Condiciones de conservación","Lista","",0],["Compatibilidad","Texto","",0]]}],"removed":{"Piensos completos":[["Especie","Aplicación (especies)"],["Fase productiva","Aplicación (fase productiva)"],["Presentación","Variantes (embalaje)"]],"Piensos complementarios":[["Presentación","Variantes (embalaje)"]],"Núcleos nutricionales":[["Especie","Aplicación (especies)"],["Fase productiva","Aplicación (fase productiva)"]],"Acidificantes":[["Forma","General (formato)"]],"Probióticos":[["Especies","Aplicación (especies)"]],"Enzimas":[["Unidades","Unidad del atributo «actividad enzimática»"]],"Aminoácidos":[["Forma","General (formato)"]],"Vitaminas":[["Unidades/g","Unidad del atributo «potencia»"],["Presentación","Variantes (embalaje)"]],"Vacunas":[["Especie","Aplicación (especies)"]],"Productos para salud intestinal":[["Composición","Objetivo «Salud intestinal» en Aplicación"],["Mecanismo de acción","Objetivo «Salud intestinal» en Aplicación"],["Dosis","Objetivo «Salud intestinal» en Aplicación"],["Especie","Objetivo «Salud intestinal» en Aplicación"]],"Semen":[["Especie","Aplicación (especies)"]],"Embriones":[["Especie","Aplicación (especies)"]],"Comederos":[["Especie","Aplicación (especies)"]],"Bebederos":[["Especie","Aplicación (especies)"]],"Software de gestión ganadera":[["Especies","Aplicación (especies)"]],"Software de formulación":[["Especies","Aplicación (especies)"]],"Subproductos agroindustriales":[["Presentación","Variantes (embalaje)"]]},"common":[["Nombre comercial","General"],["Referencia","General"],["Subtítulo","General"],["Descripción corta","General"],["Descripción completa","General"],["Galería de imágenes","General"],["Vídeo con capítulos","Documentación"],["Categoría y tipo de producto","General"],["Formato","General"],["Variantes (embalaje o configuración)","Variantes"],["Especies y fase productiva","Beneficios y aplicación"],["Objetivos","Beneficios y aplicación"],["Beneficios clave (hasta 5)","Beneficios y aplicación"],["Ficha técnica por idioma","Documentación"],["Otros documentos con visibilidad","Documentación"],["Certificaciones","Documentación"],["Mercados y registro por país","Mercados y dónde comprar"],["Distribuidores por zona","Acuerdos de distribución"]]};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const slug = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+DATA.types.forEach(t => t.id = slug(t.t));
+const EYE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+const PEN = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>';
+
+let current = null;
+try { current = (location.hash || '').slice(1) || localStorage.getItem('agl-tipo'); } catch (e) {}
+if (!DATA.types.some(t => t.id === current)) current = 'enzimas';
+
+function stats(){
+  const n = DATA.types.length, a = DATA.types.reduce((s,t)=>s+t.a.length,0), c = DATA.types.filter(t=>t.cmp).length;
+  const cats = new Set(DATA.types.map(t=>t.c)).size;
+  $('#stats').innerHTML = [[n,'tipos'],[cats,'categorías'],[a,'atributos sugeridos'],[c,'con comparador']].map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('');
+}
+
+function renderList(){
+  const q = $('#q').value.trim().toLowerCase(), only = $('#onlycmp').checked;
+  const byCat = new Map();
+  DATA.types.forEach(t => {
+    if (only && !t.cmp) return;
+    if (q && !(t.t.toLowerCase().includes(q) || t.c.toLowerCase().includes(q) || t.a.some(a=>a[0].toLowerCase().includes(q)))) return;
+    if (!byCat.has(t.c)) byCat.set(t.c, []);
+    byCat.get(t.c).push(t);
+  });
+  let html = '';
+  for (const [c, ts] of byCat) {
+    html += `<div class="cat"><span>${esc(c)}</span><span>${ts.length}</span></div>`;
+    html += ts.map(t => `<button class="ty" data-id="${t.id}" aria-current="${t.id===current}"><span class="dot ${t.cmp?'':'off'}" aria-hidden="true"></span>${esc(t.t)}<span class="n">${t.a.length}</span></button>`).join('');
+  }
+  $('#list').innerHTML = html || '<p class="note" style="padding:8px">Ningún tipo coincide con la búsqueda.</p>';
+}
+
+function sample(a){
+  const [name, kind, unit] = a;
+  if (kind === 'Número') return unit && unit !== 'Por definir' ? `[número] ${unit}` : '[número]';
+  if (kind === 'Lista') return '[opción de la lista]';
+  return '[texto]';
+}
+
+function renderDetail(){
+  const t = DATA.types.find(x => x.id === current);
+  if (!t) return;
+  const cmpAttrs = t.a.filter(a=>a[3]);
+  const rows = t.a.map(a => `<div class="row"><div class="nm">${esc(a[0])}${a[3]?'<span class="badge">⇄ Comparable</span>':''}</div><div class="field"><span class="v">${a[1]==='Lista'?'Elegir…':'Escribe el valor'}</span>${a[2]&&a[2]!=='Por definir'?`<span class="u">${esc(a[2])}</span>`:`<span class="k">${esc(a[1])}</span>`}</div></div>`).join('');
+  const pub = t.a.map(a => `<tr><td>${esc(a[0])}${a[3]?' <b style="color:var(--accent)">⇄</b>':''}</td><td>${esc(sample(a))}</td></tr>`).join('');
+  const origins = (t.n.startsWith('Une: ') ? t.n.slice(5).split(', ') : [t.t]);
+  const rem = origins.flatMap(o => DATA.removed[o] || []);
+  const seen = new Set(); const remU = rem.filter(r => { const k=r[0]+r[1]; if(seen.has(k)) return false; seen.add(k); return true; });
+  $('#detail').innerHTML = `
+    <div class="head">
+      <div class="t"><span class="eb">${esc(t.c)}</span><h2>${esc(t.t)}</h2></div>
+      <div class="pills">
+        <span class="pill">${t.a.length} atributos sugeridos</span>
+        ${t.cmp?'<span class="pill cmp">Comparador al lanzamiento</span>':'<span class="pill">Sin comparador por ahora</span>'}
+        ${t.ch==='Fusionado'?'<span class="pill">Fusionado</span>':''}
+        ${t.ch==='Revisar'?'<span class="pill warn">Revisar</span>':''}
+      </div>
+    </div>
+    ${t.n?`<p class="note">${esc(t.n)}</p>`:''}
+    <div class="cols">
+      <section class="panel" aria-label="En el editor">
+        <div class="ph"><span class="ic">${PEN}</span><div><strong>En el editor</strong><span>Pestaña «Especificaciones» del fabricante</span></div></div>
+        <div class="banner">Tipo de producto: <b>${esc(t.t)}</b> · nada es obligatorio; lo que quede vacío no se publica.</div>
+        <div>${rows}</div>
+        <div class="own"><b>+ Atributos propios</b> · nombre, valor y unidad. Al escribir, sugerimos los que ya usan otros productos de «${esc(t.t)}».</div>
+      </section>
+      <section class="panel" aria-label="En la ficha pública">
+        <div class="ph"><span class="ic">${EYE}</span><div><strong>En la ficha pública</strong><span>Lo que ve el comprador si se rellena todo</span></div></div>
+        <div class="tbl"><table>${pub}</table></div>
+        ${cmpAttrs.length?`<div class="cmpbtn">⇄ Comparar con otros productos de este tipo</div><p class="note">Compara por ${cmpAttrs.map(a=>esc(a[0].toLowerCase())).join(', ')}.</p>`:'<p class="note">Sin comparador: se mostrará cuando haya suficientes productos y atributos numéricos.</p>'}
+      </section>
+    </div>
+    <section class="sec">
+      <h3>Columnas para la importación por Excel</h3>
+      <p class="note">Las columnas comunes (Referencia, Nombre, Tipo…) más una por atributo, con la unidad en el título. Cópialas y pégalas en la primera fila de la hoja.</p>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn" id="copy" type="button">Copiar columnas</button><span class="toast" id="toast" role="status"></span></div>
+      <textarea id="cols" readonly rows="2" aria-label="Columnas para Excel" style="width:100%;font-family:var(--mono);font-size:11.5px;border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--bg);color:var(--fg);resize:vertical"></textarea>
+    </section>
+    ${remU.length?`<section class="sec"><h3>No están en este modelo porque ya los pide la ficha común</h3><div class="chips">${remU.map(r=>`<span class="chip">${esc(r[0])} <i>→ ${esc(r[1])}</i></span>`).join('')}</div></section>`:''}
+    <section class="sec"><h3>Ficha común · igual para todos los tipos</h3><div class="chips">${DATA.common.map(c=>`<span class="chip">${esc(c[0])}</span>`).join('')}</div></section>`;
+  const cols = ['Referencia','Referencia padre (variante)','Nombre comercial','Subtítulo','Tipo de producto','Especies'].concat(t.a.map(a => a[2] && a[2] !== 'Por definir' ? `${a[0]} (${a[2]})` : a[0]));
+  $('#cols').value = cols.join('\t');
+  $('#copy').onclick = () => {
+    const ta = $('#cols');
+    const ok = () => { $('#toast').textContent = `Copiadas ${cols.length} columnas.`; };
+    const fallback = () => { ta.focus(); ta.select(); $('#toast').textContent = 'Seleccionadas: pulsa Ctrl+C o ⌘C para copiar.'; };
+    try { navigator.clipboard.writeText(ta.value).then(ok, fallback); } catch (e) { fallback(); }
+  };
+}
+
+function select(id){
+  current = id;
+  try { localStorage.setItem('agl-tipo', id); } catch (e) {}
+  try { history.replaceState(null, '', '#' + id); } catch (e) {}
+  renderList(); renderDetail();
+  if (window.innerWidth <= 860) $('#detail').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+}
+
+$('#list').addEventListener('click', e => { const b = e.target.closest('.ty'); if (b) select(b.dataset.id); });
+$('#q').addEventListener('input', renderList);
+$('#onlycmp').addEventListener('change', renderList);
+stats(); renderList(); renderDetail();
+</script>
