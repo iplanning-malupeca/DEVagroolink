@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Revisar y publicar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.rw{display:grid;grid-template-columns:26px 1.1fr 1.6fr auto;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid #EEF1EE;font-size:13px}
+.ok{width:22px;height:22px;border-radius:50%;background:#0E5A3A;color:#FFFFFF;font-size:11px;display:flex;align-items:center;justify-content:center}
+.wn{width:22px;height:22px;border-radius:50%;background:#FFF4E0;color:#7A4B00;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.of{width:22px;height:22px;border-radius:50%;border:1.5px solid #CFD8D2;box-sizing:border-box}
+.pill{font-size:12px;padding:6px 12px;border-radius:999px;background:#0E5A3A;color:#FFFFFF}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 22px 32px; display: flex; gap: 22px;">
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Revisar y publicar</h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Puedes publicar ya. Lo que esté incompleto no se muestra hasta que lo termines.</p></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 14px; overflow: hidden;">
+        <div class="rw" style="border-top: 0;"><span class="ok">✓</span><strong style="font-weight: 600;">Cabecera</strong><span style="color: #4A5650;">Logo, frase, 5 etiquetas, 3 botones</span><a href="#" style="font-size: 12px;">Editar</a></div>
+        <div class="rw"><span class="ok">✓</span><strong style="font-weight: 600;">Sobre la empresa</strong><span style="color: #4A5650;">Texto, vídeo y 1 cifra</span><a href="#" style="font-size: 12px;">Editar</a></div>
+        <div class="rw" style="background: #F6F8F6;"><span style="width: 22px; height: 22px; border-radius: 6px; background: #EEF6EE; color: #0E5A3A; font-size: 12px; display: flex; align-items: center; justify-content: center;">▣</span><strong style="font-weight: 600;">Productos</strong><span style="color: #4A5650;">Se gestionan en el módulo Productos · 11 listos para publicar</span><a href="#" style="font-size: 12px;">Ir a Productos</a></div>
+        <div class="rw"><span class="ok">✓</span><strong style="font-weight: 600;">Distribuidores</strong><span style="color: #4A5650;">3 aprobados en España · 1 solicitud pendiente</span><a href="#" style="font-size: 12px;">Editar</a></div>
+        <div class="rw" style="background: #F6F8F6;"><span style="width: 22px; height: 22px; border-radius: 6px; background: #EEF6EE; color: #0E5A3A; font-size: 12px; display: flex; align-items: center; justify-content: center;">▤</span><strong style="font-weight: 600;">Servicios</strong><span style="color: #4A5650;">Se gestionan en el módulo Servicios · 3 listos para publicar</span><a href="#" style="font-size: 12px;">Ir a Servicios</a></div>
+        <div class="rw"><span class="ok">✓</span><strong style="font-weight: 600;">Expertos</strong><span style="color: #4A5650;">3 visibles · 1 pendiente de aceptar</span><a href="#" style="font-size: 12px;">Editar</a></div>
+        <div class="rw"><span class="ok">✓</span><strong style="font-weight: 600;">Contenidos</strong><span style="color: #4A5650;">18 de Agrinews · 2 destacados</span><a href="#" style="font-size: 12px;">Editar</a></div>
+        <div class="rw"><span class="ok">✓</span><strong style="font-weight: 600;">Contacto</strong><span style="color: #4A5650;">5 motivos con destino</span><a href="#" style="font-size: 12px;">Editar</a></div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+        <a href="#" style="font-size: 13.5px; color: #4A5650;">← Contacto</a>
+        <span style="display: flex; gap: 10px;"><a href="#" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #0E5A3A; display: flex; align-items: center; font-size: 14px;">Ver vista previa</a><button type="button" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif;">Publicar ficha</button></span>
+      </div>
+    </div>
+    <aside style="width: 340px; flex: none; display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 11.5px; font-weight: 600; letter-spacing: .06em; color: #56615B;">ASÍ QUEDARÁ</span>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 12.5px; font-weight: 600;">Pestañas visibles</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="pill">Productos (11)</span><span class="pill">Sobre la empresa</span><span class="pill">Distribuidores</span><span class="pill">Servicios</span><span class="pill">Expertos</span><span class="pill">Contenidos</span></div>
+        <span style="font-size: 12.5px; font-weight: 600;">Al publicar</span>
+        <ul style="margin: 0; padding-left: 18px; font-size: 12px; color: #2F3D36; line-height: 1.6;">
+          <li>Tu ficha aparece en el buscador de empresas y tus 11 productos en el de productos.</li>
+          <li>Tus distribuidores aprobados reciben aviso para crear su versión local.</li>
+          <li>Las solicitudes empiezan a llegar a <strong>Solicitudes</strong> de la empresa.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { n: 8 }; }
+}
+</script>
+</body>
+</html>

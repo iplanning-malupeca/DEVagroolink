@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Login · Todavía no tienes cuenta</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;color:#0F2A1F}
+a{color:#0B4A35;text-decoration:none;font-weight:600}a:hover{text-decoration:underline}
+.li{display:flex;gap:8px;align-items:center;font-size:12.5px;color:#33424C}
+</style>
+</helmet>
+<div style="width: 960px; height: 760px; background: #9AA0AC; display: flex; align-items: center; justify-content: center;">
+  <div role="dialog" aria-modal="true" aria-labelledby="t2" style="width: 400px; box-sizing: border-box; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 50px rgba(15, 30, 40, 0.22); padding: 24px 28px 26px; display: flex; flex-direction: column; gap: 16px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 24px; width: auto; display: block;">
+      <button type="button" aria-label="Cerrar" style="width: 32px; height: 32px; border: 0; background: none; color: #6B7A86; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <span style="width: 56px; height: 56px; border-radius: 50%; background: #E8F2EC; color: #0B4A35; display: flex; align-items: center; justify-content: center; align-self: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0 1 12.5-4.3M19 14v6M16 17h6"/></svg></span>
+    <div style="text-align: center; display: flex; flex-direction: column; gap: 6px;">
+      <h1 id="t2" style="margin: 0; font-size: 20px; font-weight: 700;">Parece que todavía no tienes una cuenta</h1>
+      <p style="margin: 0; font-size: 13px; color: #55636E; line-height: 1.5;">Para continuar, necesitas crear una cuenta gratuita en Agroolink. Solo te llevará un minuto y podrás acceder a todo el contenido de la plataforma.</p>
+    </div>
+    <div style="background: #F2F7F4; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+      <span class="li"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B4A35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Accede a fichas técnicas y contenido exclusivo</span>
+      <span class="li"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B4A35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Guarda productos en tus tableros</span>
+      <span class="li"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B4A35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Recibe recomendaciones personalizadas</span>
+    </div>
+    <a href="#" style="height: 46px; border-radius: 10px; background: #0B4A35; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14.5px;">Crear cuenta</a>
+    <a href="#" style="height: 46px; box-sizing: border-box; border-radius: 10px; border: 1.5px solid #0B4A35; display: flex; align-items: center; justify-content: center; font-size: 14.5px;">Ya tengo una cuenta</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":960,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

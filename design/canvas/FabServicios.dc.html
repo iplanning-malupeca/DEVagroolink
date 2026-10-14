@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Servicios</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:34px;border:1px solid #D5DED8;border-radius:9px;padding:0 10px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.sv{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;font-size:12.5px}
+.ic{width:34px;height:34px;border-radius:9px;background:#EEF6EE;color:#0E5A3A;display:flex;align-items:center;justify-content:center;font-size:15px}
+.chip{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:11px;font-weight:500}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Servicios <span style="font-size: 13px; font-weight: 400; color: #56615B;">· opcional</span></h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Asesoramiento y soporte que ofreces además de tus productos. Cada uno tiene su botón «Solicitar».</p></div>
+      <div style="display: grid; grid-template-columns: 0.8fr 1.6fr; gap: 9px;">
+        <label class="lbl"><span>Etiqueta <span class="hint">· opcional</span></span><input class="inp" type="text" value="ACOMPAÑAMIENTO 360°"></label>
+        <label class="lbl">Título de la sección<input class="inp" type="text" value="Servicios de valor añadido y soporte científico"></label>
+      </div>
+      <label class="lbl">Subtítulo<input class="inp" type="text" value="Acompañamos a ganaderos, integradoras y distribuidores en todas las fases de su proyecto."></label>
+      <span style="font-size: 13px; font-weight: 600; margin-top: 4px;">Tus servicios</span>
+      <div class="sv"><span class="ic">⚕</span><span><strong style="font-weight: 600;">Asesoramiento técnico en granja</strong><br><span style="color: #56615B; font-size: 11.5px;">Para ganaderos e integradoras · llega a Equipo técnico</span></span><a href="#" style="font-size: 12px;">Editar</a></div>
+      <div class="sv"><span class="ic">▥</span><span><strong style="font-weight: 600;">Auditoría nutricional & NIR</strong><br><span style="color: #56615B; font-size: 11.5px;">Para fábricas de pienso · llega a Laboratorio</span></span><a href="#" style="font-size: 12px;">Editar</a></div>
+      <div style="background: #FFFFFF; border: 1.5px solid #0E5A3A; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: grid; grid-template-columns: 70px 1fr; gap: 9px;">
+          <label class="lbl">Icono<span class="ic" style="width: 70px; height: 34px;">▤ ▾</span></label>
+          <label class="lbl">Nombre del servicio<input class="inp" type="text" value="Diseño de programas de alimentación"></label>
+        </div>
+        <label class="lbl"><span>Descripción <span class="hint">· máx. 160</span></span><input class="inp" type="text" value="Formulación de dietas y planes de fases según genética, estación y objetivos."></label>
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 9px;">
+          <div class="lbl"><span>Dirigido a</span><div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="chip">Ganaderos ×</span><span class="chip">Integradoras ×</span><span class="chip">Distribuidores ×</span></div></div>
+          <label class="lbl">«Solicitar» llega a<select class="inp"><option>Equipo de nutrición (2)</option></select></label>
+        </div>
+      </div>
+      <a href="#" style="font-size: 12.5px;">+ Añadir servicio</a>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Distribuidores</a><span style="display: flex; gap: 14px; align-items: center;"><a href="#" style="font-size: 13px; color: #4A5650;">Saltar</a><button type="submit" class="go">Guardar y seguir →</button></span></div>
+    </form>
+    <aside aria-label="Vista previa: Pestaña «Servicios»" style="width: 388px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Pestaña «Servicios»</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich#servicios</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <span style="align-self: flex-start; font-size: 10px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 3px 9px;">ACOMPAÑAMIENTO 360°</span>
+        <strong style="font-size: 16px; line-height: 1.3;">Servicios de valor añadido y soporte científico</strong>
+        <span style="font-size: 11.5px; color: #4A5650;">Acompañamos a ganaderos, integradoras y distribuidores en todas las fases de su proyecto.</span>
+        <div style="border: 1px solid #E3E8E4; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 5px;"><span class="ic" style="width: 28px; height: 28px; font-size: 13px;">⚕</span><strong style="font-size: 12.5px;">Asesoramiento técnico en granja</strong><span style="font-size: 11px; color: #4A5650;">[Descripción]</span><span style="height: 28px; border-radius: 8px; border: 1px solid #DCE3DE; font-size: 11.5px; display: flex; align-items: center; justify-content: center;">Solicitar →</span></div>
+        <div style="border: 1px solid #E3E8E4; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 5px;"><span class="ic" style="width: 28px; height: 28px; font-size: 13px;">▤</span><strong style="font-size: 12.5px;">Diseño de programas de alimentación</strong><span style="font-size: 11px; color: #4A5650;">Formulación de dietas y planes de fases…</span><span style="height: 28px; border-radius: 8px; border: 1px solid #DCE3DE; font-size: 11.5px; display: flex; align-items: center; justify-content: center;">Solicitar →</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { n: 5 }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta empresa · Sucursales</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.tab{height:36px;padding:0 14px;border-radius:9px;font:500 13px 'Poppins',sans-serif;border:0;display:flex;align-items:center;gap:6px}
+.row{display:grid;grid-template-columns:1.5fr 1fr 1.3fr 28px;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid #EEF1EE;font-size:13px}
+.st{font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:9px;padding:0 10px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500}
+.opt{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #DCE3DE;border-radius:10px;font-size:12.5px;flex:1}
+.opt input{accent-color:#0E5A3A;margin:0}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; display: flex; flex-direction: column;">
+  <dc-import name="WizTop" paso="{{ paso }}" empresa="Zucami Poultry Equipment" hint-size="1280px,128px"></dc-import>
+  <div style="flex: 1; display: flex; gap: 24px; padding: 20px 40px 0;">
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <div>
+        <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Red comercial</h1>
+        <p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Las consultas llegarán a la sucursal que atiende el país del comprador.</p>
+      </div>
+      <div role="tablist" style="display: flex; gap: 4px; padding: 4px; background: #E9EEEA; border-radius: 12px; align-self: flex-start;">
+        <button type="button" role="tab" aria-selected="true" class="tab" style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,.1);">Sucursales <span class="st" style="background: #EEF6EE; color: #0E5A3A;">7</span></button>
+        <button type="button" role="tab" aria-selected="false" class="tab" style="background: none; color: #4A5650;">Comerciales <span class="st" style="background: #FFFFFF; color: #4A5650;">0</span></button>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 14px; overflow: hidden;">
+        <div class="row" style="border-top: 0; background: #F6F8F6; font-size: 11.5px; font-weight: 600; color: #56615B; letter-spacing: .03em;"><span>SUCURSAL</span><span>TIPO</span><span>ATIENDE</span><span></span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Sede Global</strong><br><span style="color: #56615B; font-size: 12px;">Kaiseraugst, Suiza</span></span><span><span class="st" style="background: #0E5A3A; color: #FFFFFF;">Sede</span></span><span style="color: #4A5650;">Países sin sucursal asignada</span><span>›</span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Zucami Europe</strong><br><span style="color: #56615B; font-size: 12px;">Heerlen, Países Bajos</span></span><span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Sucursal propia</span></span><span style="color: #4A5650;">Europa (32 países)</span><span>›</span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Zucami USA</strong><br><span style="color: #56615B; font-size: 12px;">Gainesville, GA, EE. UU.</span></span><span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Sucursal propia</span></span><span style="color: #4A5650;">EE. UU., Canadá</span><span>›</span></div>
+        <div class="row" style="background: #F2F7F3; box-shadow: inset 3px 0 0 #0E5A3A;"><span><strong style="font-weight: 600;">Zucami México</strong><br><span style="color: #56615B; font-size: 12px;">Querétaro, México</span></span><span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Sucursal propia</span></span><span style="color: #4A5650;">México, Centroamérica</span><span>›</span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Zucami LATAM</strong><br><span style="color: #56615B; font-size: 12px;">São Paulo, Brasil</span></span><span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Sucursal propia</span></span><span style="color: #4A5650;">Brasil y 6 países más</span><span>›</span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Zucami Asia</strong><br><span style="color: #56615B; font-size: 12px;">Qingdao, China</span></span><span><span class="st" style="background: #FFF4E0; color: #7A4B00;">Presencia comercial</span></span><span style="color: #4A5650;">China, Sudeste asiático</span><span>›</span></div>
+        <div class="row"><span><strong style="font-weight: 600;">Zucami MEA</strong><br><span style="color: #56615B; font-size: 12px;">Pretoria, Sudáfrica</span></span><span><span class="st" style="background: #FFF4E0; color: #7A4B00;">Presencia comercial</span></span><span style="color: #4A5650;">África y Oriente Medio</span><span>›</span></div>
+        <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-top: 1px solid #EEF1EE; font-size: 13px;">+ Añadir sucursal</a>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="#" style="font-size: 14px; color: #4A5650;">← Anterior</a>
+        <button type="submit" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif;">Continuar a Comerciales →</button>
+      </div>
+    </div>
+
+    <form aria-label="Editar sucursal" style="width: 470px; flex: none; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 11px; align-self: flex-start;">
+      <div style="display: flex; align-items: center; justify-content: space-between;"><h2 style="margin: 0; font-size: 17px; font-weight: 600;">Zucami México</h2><a href="#" style="font-size: 12.5px; color: #4A5650;">Cerrar</a></div>
+      <div style="display: flex; gap: 8px;">
+        <label class="opt" style="border: 1.5px solid #0E5A3A; background: #EEF6EE;"><input type="radio" name="tp" defaultChecked="{{ yes }}">Sucursal propia</label>
+        <label class="opt"><input type="radio" name="tp">Presencia comercial</label>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <label class="lbl">Ciudad<input class="inp" type="text" value="Querétaro"></label>
+        <label class="lbl">País<input class="inp" type="text" value="México"></label>
+      </div>
+      <div class="lbl"><span>Países que atiende <span class="hint">· las consultas de estos países llegan aquí</span></span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chip">México ×</span><span class="chip">Guatemala ×</span><span class="chip">Costa Rica ×</span><span class="chip">Panamá ×</span><a href="#" style="font-size: 12.5px; align-self: center;">+ Añadir</a></div>
+      </div>
+      <div class="lbl"><span>Administradores de la sucursal <span class="hint">· pueden ser distintos de los de la Sede</span></span>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="display: flex; align-items: center; gap: 8px; font-size: 12.5px;"><span style="width: 26px; height: 26px; border-radius: 50%; background: #EEF6EE; color: #0E5A3A; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center;">DR</span>Diego Ramírez · diego@zucami.mx<span style="margin-left: auto; font-size: 11px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 2px 8px;">Activo</span></span>
+          <span style="display: flex; gap: 6px;"><input class="inp" type="email" placeholder="email@zucami.mx" aria-label="Invitar administrador"><button type="button" style="height: 36px; padding: 0 12px; border-radius: 9px; border: 1px solid #0E5A3A; background: #FFFFFF; color: #0E5A3A; font: 500 12.5px 'Poppins', sans-serif; white-space: nowrap;">Invitar</button></span>
+        </div>
+      </div>
+      <div style="padding: 10px 12px; border-radius: 12px; background: #F6F8F6; display: flex; flex-direction: column; gap: 6px; font-size: 12.5px;">
+        <strong style="font-size: 13px; font-weight: 600;">La sucursal gestiona</strong>
+        <label style="display: flex; gap: 8px; align-items: center;"><input type="checkbox" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; margin: 0;">Su página: presentación y productos destacados</label>
+        <label style="display: flex; gap: 8px; align-items: center;"><input type="checkbox" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; margin: 0;">Versiones locales de los productos (precio, presentación, documentos)</label>
+        <label style="display: flex; gap: 8px; align-items: center;"><input type="checkbox" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; margin: 0;">Sus comerciales y las solicitudes de sus países</label>
+        <span style="font-size: 11.5px; color: #56615B;">La marca, el perfil global y la base técnica de los productos los gestiona la Sede.</span>
+      </div>
+      <button type="button" style="height: 40px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 13.5px 'Poppins', sans-serif;">Guardar sucursal</button>
+    </form>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, paso: 5 }; }
+}
+</script>
+</body>
+</html>

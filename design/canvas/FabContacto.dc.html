@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Contacto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:7px}
+.h{font-size:13.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:32px;border:1px solid #D5DED8;border-radius:8px;padding:0 10px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.mot{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;font-size:12.5px;padding:4px 0}
+.fr{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;padding:5px 0;border-top:1px solid #EEF1EE}
+.sel{height:26px;border:1px solid #D5DED8;border-radius:7px;font:400 11.5px 'Poppins',sans-serif;padding:0 6px}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+.pv{height:30px;border:1px solid #D5DED8;border-radius:8px;font-size:11px;color:#8A948F;display:flex;align-items:center;padding:0 8px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Contacto</h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">El formulario «Solicitar información» y a quién llega cada motivo. Todo entra en Solicitudes.</p></div>
+      <section class="card">
+        <p class="h">Motivos de contacto y destino</p>
+        <div class="mot"><span>Información de producto</span><select class="inp"><option>Distribuidor de su zona (si hay) · si no, Comercial</option></select></div>
+        <div class="mot"><span>Soporte técnico</span><select class="inp"><option>Equipo técnico (3)</option></select></div>
+        <div class="mot"><span>Ser distribuidor</span><select class="inp"><option>Abre «Quiero ser distribuidor»</option></select></div>
+        <div class="mot"><span>Prensa y colaboraciones</span><select class="inp"><option>Comunicación (1)</option></select></div>
+        <div class="mot"><span>Otro</span><select class="inp"><option>info@dsm-firmenich.com</option></select></div>
+        <a href="#" style="font-size: 12px;">+ Añadir motivo</a>
+      </section>
+      <section class="card">
+        <p class="h">Campos del formulario</p>
+        <div class="fr" style="border-top: 0;"><span>Nombre · Empresa · Email · País</span><span class="hint">Obligatorios</span></div>
+        <div class="fr"><span>Teléfono</span><select class="sel"><option>Opcional</option><option>Obligatorio</option></select></div>
+        <div class="fr"><span>Motivo de contacto</span><span class="hint">Obligatorio</span></div>
+        <div class="fr"><span>Mensaje</span><select class="sel"><option>Opcional</option></select></div>
+      </section>
+      <section class="card">
+        <label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12.5px;"><span><strong style="font-weight: 600;">Sugerir antes al distribuidor de su zona</strong><br><span class="hint">Si el comprador pregunta por un producto y hay distribuidor en su país, se lo mostramos antes de enviar.</span></span><input type="checkbox" role="switch" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; width: 17px; height: 17px; margin: 0; flex: none;"></label>
+      </section>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Contenidos</a><button type="submit" class="go">Guardar y revisar →</button></div>
+    </form>
+    <aside aria-label="Vista previa: Formulario «Solicitar información»" style="width: 368px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Formulario «Solicitar información»</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich · Solicitar información</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 12px 30px rgba(16,40,28,.08);">
+        <strong style="font-size: 15px;">Solicitar información a DSM-Firmenich</strong>
+        <span style="font-size: 11px; color: #4A5650;">Rellena el formulario y el equipo de DSM-Firmenich te contactará.</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;"><span class="pv">Nombre *</span><span class="pv">Empresa *</span><span class="pv">Email *</span><span class="pv">Teléfono</span><span class="pv">🇪🇸 España</span><span class="pv">Motivo de contacto *</span></div>
+        <span class="pv" style="height: 50px; align-items: flex-start; padding-top: 6px;">Mensaje (opcional)</span>
+        <span style="font-size: 10.5px; color: #4A5650;">☑ Acepto la política de privacidad de Agroolink.</span>
+        <div style="display: flex; gap: 6px; justify-content: flex-end;"><span style="height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid #DCE3DE; font-size: 11.5px; display: flex; align-items: center;">Cancelar</span><span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #0E5A3A; color: #FFFFFF; font-size: 11.5px; display: flex; align-items: center;">Enviar solicitud</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 7 }; }
+}
+</script>
+</body>
+</html>

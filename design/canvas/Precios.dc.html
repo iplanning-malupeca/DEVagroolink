@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Planes y precios</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.seg{height:40px;padding:0 18px;border:0;border-radius:999px;font:500 14px 'Poppins',sans-serif;cursor:pointer}
+.feat{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#2F3D36}
+.tr{display:grid;align-items:center;min-height:42px;border-bottom:1px solid #EEF1EE;font-size:13.5px}
+.tr > span{padding:8px 14px}
+.faq{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+</style>
+</helmet>
+<div style="width: 1280px; min-height: 2240px; background: #F6F8F6; font-family: 'Poppins', sans-serif;">
+  <dc-import name="IntHeader" persona="Santiago E." iniciales="SE" color="#0E5A3A" variante="personal" abierto="{{ no }}" hint-size="1280px,68px"></dc-import>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 44px 0 56px; display: flex; flex-direction: column; gap: 28px;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;">
+      <h1 style="margin: 0; font-size: 38px; font-weight: 700; letter-spacing: -0.02em;">Planes de Agroolink</h1>
+      <p style="margin: 0; font-size: 16px; color: #4A5650; max-width: 620px; line-height: 1.5;">Empieza gratis. Preguntar y responder nunca se cobra: pagas solo por gestionar mejor y por nuevas oportunidades.</p>
+      <div role="tablist" aria-label="Tipo de plan" style="display: flex; gap: 4px; padding: 4px; background: #E7EEE9; border-radius: 999px; margin-top: 12px;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <button type="button" role="tab" aria-selected="{{ t.sel }}" class="seg" onClick="{{ t.pick }}" style="background: {{ t.fondo }}; color: {{ t.tinta }}; box-shadow: {{ t.sombra }};">{{ t.label }}</button>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+        <div role="radiogroup" aria-label="Facturación" style="display: flex; gap: 4px; padding: 4px; background: #FFFFFF; border: 1px solid #DCE3DE; border-radius: 999px;">
+          <button type="button" role="radio" aria-checked="{{ mensualSel }}" class="seg" onClick="{{ setMensual }}" style="height: 34px; background: {{ mensualFondo }}; color: {{ mensualTinta }};">Mensual</button>
+          <button type="button" role="radio" aria-checked="{{ anualSel }}" class="seg" onClick="{{ setAnual }}" style="height: 34px; background: {{ anualFondo }}; color: {{ anualTinta }};">Anual</button>
+        </div>
+        <span style="font-size: 12.5px; font-weight: 600; color: #17231D; background: #B5D334; border-radius: 999px; padding: 4px 10px;">2 meses gratis</span>
+        <span style="font-size: 12.5px; color: #56615B;">Precios sin IVA</span>
+      </div>
+    </div>
+
+    <sc-if value="{{ esEmpresa }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: center; gap: 18px; padding: 18px 22px; border-radius: 16px; background: #0E5A3A; color: #FFFFFF;">
+        <span style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,.12); color: #B5D334; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 16px; font-weight: 600;">Oferta Empresa Fundadora · hasta un 38 % menos</span><span style="font-size: 13px; color: #D6E8DC;">Para las primeras 100 empresas, hasta el 30/06/2027. Pago anual y precio bloqueado durante 24 meses.</span></span>
+        <span style="font-size: 13px; font-weight: 600; color: #17231D; background: #B5D334; border-radius: 999px; padding: 6px 14px; white-space: nowrap;">Quedan [n] plazas</span>
+      </div>
+    </sc-if>
+
+    <div style="display: grid; grid-template-columns: {{ gridCols }}; gap: 20px; align-items: stretch; justify-content: center;">
+      <sc-for list="{{ planes }}" as="p" hint-placeholder-count="3">
+        <article style="position: relative; background: {{ p.fondo }}; border: {{ p.borde }}; border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; gap: 16px;">
+          <sc-if value="{{ p.destacado }}" hint-placeholder-val="{{ false }}">
+            <span style="position: absolute; top: -13px; left: 24px; font-size: 12px; font-weight: 600; color: {{ p.badgeTinta }}; background: {{ p.badgeFondo }}; border-radius: 999px; padding: 4px 12px;">{{ p.destacado }}</span>
+          </sc-if>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <h2 style="margin: 0; font-size: 22px; font-weight: 600; color: {{ p.tinta }};">{{ p.nombre }}</h2>
+            <span style="font-size: 13.5px; color: #4A5650;">{{ p.tagline }}</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; min-height: 76px;">
+            <div style="display: flex; align-items: baseline; gap: 6px;"><span style="font-size: 38px; font-weight: 700; letter-spacing: -0.02em; color: {{ p.tinta }};">{{ p.precio }}</span><span style="font-size: 14px; color: #4A5650;">{{ p.periodo }}</span></div>
+            <span style="font-size: 12.5px; color: #56615B;">{{ p.sub }}</span>
+          </div>
+          <sc-if value="{{ p.fund }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: #F4F9E6; border: 1px solid #DCEBB0;">
+              <span style="font-size: 12px; font-weight: 600; color: #4E6B0A;">PRECIO FUNDADOR</span>
+              <span style="font-size: 14px; color: #17231D;"><span style="text-decoration: line-through; color: #8A948F; margin-right: 6px;">{{ p.tachado }}</span><strong>{{ p.fundPrecio }}</strong></span>
+              <span style="font-size: 12px; color: #4A5650;">{{ p.fundSub }}</span>
+            </div>
+          </sc-if>
+          <a href="#" style="height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 14.5px; font-weight: 500; background: {{ p.ctaFondo }}; color: {{ p.ctaTinta }}; border: {{ p.ctaBorde }}; text-decoration: none;">{{ p.cta }}</a>
+          <div style="display: flex; flex-direction: column; gap: 9px; padding-top: 4px; border-top: 1px solid #EEF1EE;">
+            <sc-for list="{{ p.feats }}" as="f" hint-placeholder-count="6">
+              <span class="feat"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="{{ p.check }}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="m5 12 5 5 9-10"/></svg>{{ f }}</span>
+            </sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <sc-if value="{{ nota }}" hint-placeholder-val="{{ false }}"><p style="margin: -12px 0 0; font-size: 12px; color: #56615B; text-align: center;">{{ nota }}</p></sc-if>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding: 20px 22px; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px;">
+      <span style="grid-column: 1 / -1; font-size: 14px; font-weight: 600;">En todos los planes, también en Gratis</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Preguntar y responder consultas, sin límite</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Verificación de perfil: «verificado» no se compra</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Si bajas de plan, nada se borra</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M18 6 6 18M6 6l12 12"/></svg>Sin permanencia: cancela cuando quieras</span>
+    </div>
+
+    <section aria-label="Comparativa" style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 600;">Compara los planes · {{ tabLabel }}</h2>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; overflow: hidden;">
+        <div class="tr" style="grid-template-columns: {{ tablaCols }}; background: #F2F7F3; font-weight: 600; border-bottom: 1px solid #E3E8E4;">
+          <span>Funcionalidad</span>
+          <sc-for list="{{ cols }}" as="c" hint-placeholder-count="3"><span style="text-align: center;">{{ c }}</span></sc-for>
+        </div>
+        <sc-for list="{{ filas }}" as="r" hint-placeholder-count="10">
+          <sc-if value="{{ r.seccion }}" hint-placeholder-val="{{ false }}">
+            <div class="tr" style="grid-template-columns: 1fr; min-height: 34px; background: #FAFCFA;"><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .06em; color: #0E5A3A;">{{ r.seccion }}</span></div>
+          </sc-if>
+          <sc-if value="{{ r.fila }}" hint-placeholder-val="{{ true }}">
+            <div class="tr" style="grid-template-columns: {{ tablaCols }};">
+              <span>{{ r.label }}</span>
+              <sc-for list="{{ r.vals }}" as="v" hint-placeholder-count="3"><span style="text-align: center; color: {{ v.tinta }};">{{ v.t }}</span></sc-for>
+            </div>
+          </sc-if>
+        </sc-for>
+      </div>
+    </section>
+
+    <section aria-label="Preguntas frecuentes" style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="margin: 0; font-size: 22px; font-weight: 600;">Preguntas frecuentes</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
+        <div class="faq"><strong style="font-size: 14.5px;">¿Tengo que pagar para responder consultas?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">No. Empresas y expertos responden gratis dentro de Agroolink. Los planes de pago añaden gestión de leads, oportunidades y visibilidad.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Qué pasa si bajo de plan?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">Nada se borra. Lo que supere el límite del nuevo plan queda en solo lectura hasta que vuelvas a subir o lo reduzcas.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Cómo funciona la Oferta Empresa Fundadora?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">Para las 100 primeras empresas que contraten Pro o Premium en pago anual antes del 30/06/2027. El precio se mantiene 24 meses mientras sigas suscrito.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">Soy experto y también compro, ¿pago dos veces?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">No. Experto Pro incluye todas las ventajas de Comprador Pro. El plan de tu empresa es aparte y lo paga la empresa.</span></div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"pestana":{"editor":"enum","options":["empresa","experto","comprador"],"default":"empresa"},"anual":{"editor":"boolean","default":true},"$preview":{"width":1280,"height":2240}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const tab = st.tab || this.props.pestana || 'empresa';
+    const anual = (st.anual !== undefined) ? st.anual : (this.props.anual !== undefined ? this.props.anual : true);
+    const eur = (n) => {
+      if (!n) return '0 €';
+      const r = Math.round(n * 100) / 100;
+      const s = (r % 1 === 0) ? r.toFixed(0) : r.toFixed(2);
+      const parts = s.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      return parts.join(',') + ' €';
+    };
+    const S = (t) => ({ seccion: t, fila: false });
+    const F = (label, vals) => ({ seccion: '', fila: true, label: label, vals: vals.map(v => ({ t: v, tinta: v === '—' ? '#A3ACA7' : '#17231D' })) });
+    const D = {
+      empresa: {
+        label: 'Para empresas', cols: ['Gratis', 'Pro', 'Premium'],
+        nota: '* Solo con el consentimiento del comprador (RGPD).',
+        planes: [
+          { nombre: 'Gratis', tagline: 'Para estar presente y responder', m: 0, a: 0, cta: 'Empezar gratis',
+            feats: ['Perfil básico de empresa', 'Hasta 15 productos', 'Recibe y responde consultas sin límite', 'Solicitudes de distribución', 'Empresa verificada (CIF)', '2 miembros del equipo'] },
+          { nombre: 'Pro', tagline: 'Para captar y gestionar leads', m: 79, a: 790, f: 490, destacado: 'Recomendado', cta: 'Probar 14 días gratis',
+            feats: ['Todo lo de Gratis', 'Hasta 100 productos', 'Datos de contacto del comprador*', 'Leads organizados: estados, asignación y notas', '2 proyectos / RFQ al mes', 'Estadísticas de productos', '5 miembros del equipo'] },
+          { nombre: 'Premium', tagline: 'Para vender con oportunidades', m: 199, a: 1990, f: 1290, cta: 'Probar 14 días gratis',
+            feats: ['Todo lo de Pro', 'Productos ilimitados', 'Proyectos / RFQ ilimitados + matching', 'Exportar leads e integración CRM*', '4 productos destacados al mes', '15 miembros del equipo', 'Gestor de cuenta'] }
+        ],
+        filas: [S('PRESENCIA'), F('Perfil de empresa', ['Básico', 'Completo', 'Completo + marca']), F('Productos publicados', ['15', '100', 'Ilimitados']), F('Contenido vinculado', ['—', '5/mes', 'Ilimitado']), F('Destacar productos', ['—', 'Extra de pago', '4/mes incluidos']),
+          S('CONSULTAS Y LEADS'), F('Recibir y responder consultas', ['Ilimitadas', 'Ilimitadas', 'Ilimitadas']), F('Datos de contacto del comprador', ['—', 'Sí', 'Sí']), F('Leads organizados', ['—', 'Sí', 'Sí']), F('Exportar leads / CRM', ['—', '—', 'Sí']),
+          S('OPORTUNIDADES'), F('Proyectos / RFQ de compradores', ['Nº en tu sector', '2 al mes', 'Ilimitados + matching']), F('Interés en tus productos', ['—', 'Agregado', 'Detalle con consentimiento']),
+          S('EQUIPO Y SERVICIO'), F('Miembros del equipo', ['2', '5', '15']), F('Estadísticas', ['Básicas', 'Avanzadas', 'Avanzadas + benchmark']), F('Gestor de cuenta', ['—', '—', 'Sí'])]
+      },
+      experto: {
+        label: 'Para expertos', cols: ['Gratis', 'Pro'], nota: '',
+        planes: [
+          { nombre: 'Gratis', tagline: 'Para empezar a recibir clientes', m: 0, a: 0, cta: 'Crear perfil gratis',
+            feats: ['Perfil de experto básico', 'Apareces en el buscador', '2 servicios publicados', '3 consultas al mes', '1 candidatura a proyectos al mes', 'Verificación de colegiación'] },
+          { nombre: 'Pro', tagline: 'Para captar clientes sin límites', m: 19.9, a: 199, destacado: 'Incluye Comprador Pro', cta: 'Pasar a Pro',
+            feats: ['Todo lo de Gratis', 'Servicios y consultas ilimitados', 'Candidaturas a proyectos ilimitadas', 'Contacto directo visible (teléfono, web)', 'Recomendado en búsquedas', 'Publica contenido y casos de éxito', 'Todas las ventajas de Comprador Pro'] }
+        ],
+        filas: [S('PERFIL'), F('Perfil de experto', ['Básico', 'Completo']), F('Aparecer en el buscador', ['Sí', 'Sí + recomendado']), F('Verificación de colegiación', ['Sí', 'Sí']), F('Portfolio / casos', ['1', 'Ilimitado']), F('Servicios publicados', ['2', 'Ilimitados']), F('Publicar contenido', ['—', 'Ilimitado']),
+          S('CAPTACIÓN'), F('Consultas recibidas', ['3/mes', 'Ilimitadas']), F('Contacto directo visible', ['—', 'Sí']), F('Candidaturas a proyectos', ['1/mes', 'Ilimitadas']), F('Estadísticas', ['Básicas', 'Avanzadas']),
+          S('INCLUYE'), F('Ventajas de Comprador Pro', ['—', 'Sí'])]
+      },
+      comprador: {
+        label: 'Para compradores', cols: ['Gratis', 'Pro (próximamente)'], nota: 'Comprador Pro llegará en una segunda fase. Hoy todo lo esencial es gratis.',
+        planes: [
+          { nombre: 'Gratis', tagline: 'Todo lo que necesitas para comprar mejor', m: 0, a: 0, cta: 'Crear cuenta gratis', destacado: 'Lo que usa casi todo el mundo',
+            feats: ['Busca productos, empresas y expertos', 'Consultas a proveedores sin límite', '3 proyectos activos', '5 tableros y comparador (hasta 4)', '5 alertas de productos y proveedores', 'Historial de consultas completo'] },
+          { nombre: 'Pro', tagline: 'Para organizar compras en equipo', m: 9.9, a: 99, pronto: true, destacado: 'Próximamente', cta: 'Avísame cuando esté',
+            feats: ['Todo lo de Gratis', 'Tableros y proyectos ilimitados', 'Comparar hasta 10 y guardar comparaciones', 'Alertas de precio, stock y ficha', 'Compartir tableros con tu equipo', 'Exportar a PDF'] }
+        ],
+        filas: [S('BUSCAR'), F('Buscar y guardar', ['Sí', 'Sí']), F('Recomendaciones', ['Básicas', 'Avanzadas']),
+          S('CONTACTAR'), F('Consultas a empresas y expertos', ['Ilimitadas', 'Ilimitadas']), F('Proyectos / RFQ', ['3 activos', 'Ilimitados']), F('Seguimiento de proyectos', ['Básico', 'Completo']),
+          S('ORGANIZAR'), F('Tableros', ['5', 'Ilimitados']), F('Comparar productos', ['Hasta 4', 'Hasta 10']), F('Compartir tableros', ['1 colaborador', 'Ilimitado']), F('Exportar a PDF', ['—', 'Sí']),
+          S('ALERTAS'), F('Alertas de productos y proveedores', ['Hasta 5', 'Ilimitadas']), F('Alertas de cambios', ['—', 'Sí'])]
+      }
+    };
+    const d = D[tab] || D.empresa;
+    const planes = d.planes.map(p => {
+      const dest = !!p.destacado && !p.pronto && p.m > 0;
+      const o = { nombre: p.nombre, tagline: p.tagline, feats: p.feats, cta: p.cta, destacado: p.destacado || '',
+        tinta: p.pronto ? '#56615B' : '#17231D', fund: false, tachado: '', fundPrecio: '', fundSub: '' };
+      if (!p.m) { o.precio = '0 €'; o.periodo = 'para siempre'; o.sub = 'Sin tarjeta'; }
+      else if (anual) {
+        o.precio = eur(p.a / 12); o.periodo = '/mes';
+        o.sub = eur(p.a) + ' al año · ahorras ' + eur(p.m * 12 - p.a);
+        if (p.f) { o.fund = true; o.tachado = eur(p.a); o.fundPrecio = eur(p.f) + ' / año'; o.fundSub = eur(p.f / 12) + '/mes · ' + Math.round((1 - p.f / p.a) * 100) + ' % menos · 24 meses'; }
+      } else {
+        o.precio = eur(p.m); o.periodo = '/mes'; o.sub = 'Facturado cada mes · sin permanencia';
+        if (p.f) { o.fund = true; o.tachado = ''; o.fundPrecio = eur(p.f) + ' / año con pago anual'; o.fundSub = 'El precio fundador solo está disponible en pago anual.'; }
+      }
+      o.fondo = p.pronto ? '#FAFBFA' : '#FFFFFF';
+      o.borde = dest ? '2px solid #0E5A3A' : '1px solid #E3E8E4';
+      o.badgeFondo = p.pronto ? '#E3E8E4' : (dest ? '#0E5A3A' : '#EEF6EE');
+      o.badgeTinta = p.pronto ? '#4A5650' : (dest ? '#FFFFFF' : '#0E5A3A');
+      o.ctaFondo = dest ? '#0E5A3A' : '#FFFFFF';
+      o.ctaTinta = dest ? '#FFFFFF' : (p.pronto ? '#4A5650' : '#0E5A3A');
+      o.ctaBorde = dest ? '0' : (p.pronto ? '1.5px solid #C9D2CC' : '1.5px solid #0E5A3A');
+      o.check = p.pronto ? '#A3ACA7' : '#0E5A3A';
+      return o;
+    });
+    const n = d.planes.length;
+    const tabs = [['empresa', 'Para empresas'], ['experto', 'Para expertos'], ['comprador', 'Para compradores']].map(([id, label]) => ({
+      label: label, sel: id === tab ? 'true' : 'false',
+      fondo: id === tab ? '#FFFFFF' : 'transparent', tinta: id === tab ? '#0E5A3A' : '#4A5650',
+      sombra: id === tab ? '0 1px 3px rgba(0,0,0,.12)' : 'none',
+      pick: () => this.setState({ tab: id })
+    }));
+    return {
+      no: false, tabs: tabs, planes: planes, filas: d.filas, cols: d.cols, nota: d.nota, tabLabel: d.label.toLowerCase(),
+      esEmpresa: tab === 'empresa',
+      gridCols: n === 3 ? 'repeat(3, minmax(0, 1fr))' : 'repeat(2, minmax(0, 380px))',
+      tablaCols: n === 3 ? '2fr 1fr 1fr 1fr' : '2fr 1fr 1fr',
+      mensualSel: anual ? 'false' : 'true', anualSel: anual ? 'true' : 'false',
+      mensualFondo: anual ? 'transparent' : '#0E5A3A', mensualTinta: anual ? '#4A5650' : '#FFFFFF',
+      anualFondo: anual ? '#0E5A3A' : 'transparent', anualTinta: anual ? '#FFFFFF' : '#4A5650',
+      setMensual: () => this.setState({ anual: false }), setAnual: () => this.setState({ anual: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

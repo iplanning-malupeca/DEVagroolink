@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet · Mi espacio comprador</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px}
+.th{width:56px;height:56px;border-radius:10px;background:#EAF0EB;flex:none}
+.msg{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #EEF1EE}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Mi espacio" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-size: 13px; color: #56615B;">Mi espacio</div>
+      <h1 style="margin: -10px 0 0; font-size: 30px; font-weight: 600;">Hola de nuevo, Samuel</h1>
+      <section class="card" style="padding: 18px 20px; display: flex; align-items: center; gap: 18px;">
+        <div style="display: flex; gap: 6px;"><span class="th"></span><span class="th"></span><span class="th"></span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #56615B; font-weight: 500;">CONTINÚA DONDE LO DEJASTE</span><span style="font-size: 17px; font-weight: 600;">Tablero «Nave 2 · broilers»</span><span style="font-size: 12.5px; color: #4A5650;">3 productos · 1 comparación · 2 consultas enviadas</span></div>
+        <a href="#" style="height: 42px; padding: 0 18px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; font-size: 14px; display: flex; align-items: center;">Abrir tablero</a>
+      </section>
+      <section class="card" style="padding: 18px 20px 8px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;"><h2 style="margin: 0; font-size: 16px; font-weight: 600;">Tus consultas</h2><a href="#" style="font-size: 13px;">Ir a Mensajes</a></div>
+        <div class="msg"><span style="width: 36px; height: 36px; border-radius: 8px; background: #1F3A5F; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">AE</span><span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 600;">AgroExport SRL te ha respondido</span><span style="font-size: 12.5px; color: #4A5650;">Corrector vitamínico CV-20 · «Te enviamos precio y plazo de entrega…»</span></span><span style="font-size: 12px; color: #56615B; margin-right: 8px;">hace 2 h</span><a href="#" style="height: 34px; padding: 0 14px; border-radius: 9px; background: #0E5A3A; color: #FFFFFF; font-size: 13px; display: flex; align-items: center;">Ver respuesta</a></div>
+        <div class="msg"><span style="width: 36px; height: 36px; border-radius: 8px; background: #E3E8E4; color: #4A5650; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">[E]</span><span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 500;">[Empresa]</span><span style="font-size: 12.5px; color: #4A5650;">Premezcla Broiler Start · enviada hace 3 días, sin respuesta</span></span><a href="#" style="font-size: 13px;">Recordar</a></div>
+      </section>
+      <section class="card" style="padding: 16px 20px;">
+        <h2 style="margin: 0 0 10px; font-size: 16px; font-weight: 600;">Para ti · Avicultura</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;"><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div></div>
+      </section>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" abierto="{{ yes }}" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

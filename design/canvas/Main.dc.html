@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Header · Sin sesión</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none}a:hover{color:#0B3D2A}
+.navbtn{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;font:500 14px 'Poppins',sans-serif;color:#17231D;background:none;border:0;white-space:nowrap;cursor:pointer}
+.navbtn:hover{background:#F2F6F3;color:#17231D}
+.row{display:flex;align-items:center;gap:12px;padding:6px 10px;border-radius:10px;font-size:14px;color:#17231D}
+.row:hover{background:#F2F6F3;color:#17231D}
+.sec{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#56615B;padding:10px 10px 4px}
+.ibox{width:32px;height:32px;border-radius:8px;background:#EEF6EE;color:#0E5A3A;display:flex;align-items:center;justify-content:center;flex:none}
+.card{display:flex;gap:12px;align-items:center;padding:9px 10px;border-radius:12px;color:#17231D}
+.card:hover{background:#F2F6F3;color:#17231D}
+.ct{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+.t{font-weight:600;font-size:14px}
+.d{font-size:12.5px;color:#4A5650;line-height:1.4}
+.meta{margin-left:auto;font-size:12px;color:#56615B;white-space:nowrap}
+.hr{height:1px;background:#E3E8E4;margin:6px 0}
+.skel{background:#F1F3F1;border-radius:12px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF;">
+
+<header style="height: 64px; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #E3E8E4; background: #FFFFFF;">
+  <a href="#" aria-label="Agroolink, inicio" style="display: flex; align-items: center; flex: none; margin-right: 8px;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 30px; width: auto; display: block;"></a>
+  <button type="button" class="navbtn">Categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+  <button type="button" class="navbtn">Especies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+  <div role="search" style="flex: 1; min-width: 280px; max-width: 560px; margin: 0 8px; display: flex; align-items: center; height: 42px; box-sizing: border-box; border: 1px solid #DCE3DE; border-radius: 999px; background: #F7F9F7; padding: 0 5px 0 18px; gap: 8px;">
+    <input type="search" aria-label="Buscar" placeholder="Buscar productos, empresas…" style="flex: 1; min-width: 0; border: 0; background: none; font: 400 14px 'Poppins', sans-serif; color: #17231D; outline: none;">
+    <button type="button" aria-label="Buscar" style="width: 32px; height: 32px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  </div>
+  <div style="margin-left: auto; display: flex; align-items: center; gap: 4px;">
+    <a href="#" class="navbtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Proyectos</a>
+    <a href="#" class="navbtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>Tableros</a>
+    <button type="button" class="navbtn" aria-expanded="true" aria-label="Iniciar sesión y menú" style="border: 1px solid #CFE0D5; background: #EEF6EE; padding: 4px 10px 4px 4px; margin-left: 8px;">
+      <span style="width: 30px; height: 30px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>Iniciar sesión
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+    </button>
+  </div>
+</header>
+
+<main aria-hidden="true" style="padding: 32px 24px; display: flex; flex-direction: column; gap: 20px;">
+  <div class="skel" style="height: 240px;"></div>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+    <div class="skel" style="height: 200px;"></div><div class="skel" style="height: 200px;"></div><div class="skel" style="height: 200px;"></div><div class="skel" style="height: 200px;"></div>
+  </div>
+</main>
+
+<nav aria-label="Menú de acceso y descubrimiento" style="position: absolute; top: 60px; right: 24px; width: 380px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; box-shadow: 0 16px 40px rgba(16, 40, 28, 0.12); padding: 8px;">
+  <div style="padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 12px;">
+    <div style="display: flex; flex-direction: column; gap: 2px;">
+      <span style="font-weight: 600; font-size: 16px;">Accede a tu cuenta</span>
+      <span class="d">Inicia sesión o regístrate gratis para guardar, comparar y contactar.</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+      <a href="#" style="height: 42px; border-radius: 10px; border: 1px solid #0E5A3A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500;">Iniciar sesión</a>
+      <a href="#" style="height: 42px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500;">Crear cuenta</a>
+    </div>
+  </div>
+  <div class="hr"></div>
+
+  <div class="sec">¿Qué puedes hacer en Agroolink?</div>
+  <a href="#" class="card"><span class="ibox"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span class="ct"><span class="t" style="display: flex; align-items: center; gap: 8px;">Proyectos<span style="font-size: 10px; font-weight: 600; background: #B5D334; color: #17231D; border-radius: 999px; padding: 1px 7px;">NUEVO</span></span><span class="d">Cuéntanos qué necesitas y recibe propuestas de proveedores.</span></span></a>
+  <a href="#" class="card"><span class="ibox"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></span><span class="ct"><span class="t">Tableros</span><span class="d">Organiza productos, empresas y contenido por proyecto.</span></span></a>
+  <a href="#" class="card"><span class="ibox"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 4v16"/></svg></span><span class="ct"><span class="t">Comparador de productos</span><span class="d">Compara soluciones y elige la mejor opción.</span></span></a>
+  <a href="#" class="card"><span class="ibox"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span><span class="ct"><span class="t">Expertos</span><span class="d">Encuentra profesionales y servicios especializados.</span></span></a>
+  <div class="hr"></div>
+
+  <div class="sec">¿Ofreces soluciones al sector?</div>
+  <div style="display: flex; flex-direction: column; gap: 6px; padding: 2px 0 4px;">
+    <a href="#" class="card" style="background: #EEF6EE;"><span class="ibox" style="background: #FFFFFF;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><span class="ct"><span class="t">Represento una empresa</span><span class="d">Publica tu catálogo y recibe consultas de compradores.</span></span></a>
+    <a href="#" class="card" style="background: #F1EEFB;"><span class="ibox" style="background: #FFFFFF; color: #4B3BA6;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><span class="ct"><span class="t">Soy experto o consultor</span><span class="d">Ofrece tus servicios y participa en proyectos.</span></span></a>
+  </div>
+  <div class="hr"></div>
+
+  <a href="#" class="row"><span class="ibox" style="background: none; width: 24px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>Idioma y zona<span class="meta">Español · ES</span></a>
+  <a href="#" class="row"><span class="ibox" style="background: none; width: 24px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01"/></svg></span>Ayuda y contacto</a>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":960}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

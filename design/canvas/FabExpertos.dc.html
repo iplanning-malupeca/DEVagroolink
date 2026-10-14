@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Expertos recomendados</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:9px;padding:0 10px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ex{display:grid;grid-template-columns:18px 34px 1.4fr 1fr 1fr;gap:10px;align-items:center;padding:9px 12px;border-top:1px solid #EEF1EE;font-size:12.5px}
+.av{width:34px;height:34px;border-radius:50%;background:#EEF6EE;color:#0E5A3A;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.st{font-size:10.5px;font-weight:600;border-radius:999px;padding:2px 8px;white-space:nowrap;justify-self:start}
+.src{flex:1;display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid #DCE3DE;border-radius:12px;background:#FFFFFF;font-size:12px}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Expertos recomendados <span style="font-size: 13px; font-weight: 400; color: #56615B;">· opcional</span></h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Profesionales que pueden ayudar a tus clientes a sacar partido de tus productos.</p></div>
+      <div style="display: flex; gap: 10px;">
+        <div class="src"><span style="font-size: 18px;">👥</span><span><strong style="font-weight: 600; font-size: 13px;">Tu equipo técnico</strong><br><span style="color: #4A5650;">Invita a tus veterinarios y nutrólogos. Su perfil mostrará «Experto de DSM-Firmenich».</span><br><a href="#" style="font-size: 12px;">Invitar por email</a></span></div>
+        <div class="src"><span style="font-size: 18px;">🔎</span><span><strong style="font-weight: 600; font-size: 13px;">Expertos independientes</strong><br><span style="color: #4A5650;">Busca en Agroolink. Cada experto debe aceptar aparecer en tu ficha.</span><br><a href="#" style="font-size: 12px;">Buscar expertos</a></span></div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 14px; overflow: hidden;">
+        <div class="ex" style="border-top: 0; background: #F6F8F6; font-size: 11px; font-weight: 600; color: #56615B; letter-spacing: .03em;"><span></span><span></span><span>EXPERTO</span><span>RELACIÓN</span><span>ESTADO</span></div>
+        <div class="ex"><span style="color: #A3ACA7;">⋮⋮</span><span class="av">LM</span><span><strong style="font-weight: 600;">Dra. Laura Martín</strong><br><span style="color: #56615B; font-size: 11.5px;">Nutrición avícola · Madrid</span></span><span style="color: #4A5650;">Independiente</span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Aceptado</span></div>
+        <div class="ex"><span style="color: #A3ACA7;">⋮⋮</span><span class="av">AP</span><span><strong style="font-weight: 600;">Ana Pereira</strong><br><span style="color: #56615B; font-size: 11.5px;">Bioseguridad · Lisboa</span></span><span style="color: #4A5650;">Equipo DSM</span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Activo</span></div>
+        <div class="ex"><span style="color: #A3ACA7;">⋮⋮</span><span class="av">JR</span><span><strong style="font-weight: 600;">Javier Ruiz</strong><br><span style="color: #56615B; font-size: 11.5px;">Instalaciones · Zaragoza</span></span><span style="color: #4A5650;">Independiente</span><span class="st" style="background: #EEF6EE; color: #0E5A3A;">Aceptado</span></div>
+        <div class="ex"><span style="color: #A3ACA7;">⋮⋮</span><span class="av">CM</span><span><strong style="font-weight: 600;">Carlos Medina</strong><br><span style="color: #56615B; font-size: 11.5px;">Bienestar animal · Valladolid</span></span><span style="color: #4A5650;">Independiente</span><span class="st" style="background: #FFF4E0; color: #7A4B00;">Pendiente de aceptar</span></div>
+      </div>
+      <span style="font-size: 12px; color: #56615B;">Arrastra para cambiar el orden. En la ficha se ven los 4 primeros y «Ver todos los expertos».</span>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Distribuidores</a><span style="display: flex; gap: 14px; align-items: center;"><a href="#" style="font-size: 13px; color: #4A5650;">Saltar</a><button type="submit" class="go">Guardar y seguir →</button></span></div>
+    </form>
+    <aside aria-label="Vista previa: Pestaña «Expertos»" style="width: 368px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Pestaña «Expertos»</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich#expertos</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><strong style="font-size: 15px;">Expertos recomendados</strong><a href="#" style="font-size: 11px;">Ver todos →</a></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+          <div style="border: 1px solid #E3E8E4; border-radius: 12px; overflow: hidden;"><div style="height: 70px; background: #E3EAE5; position: relative;"><span style="position: absolute; top: 6px; right: 6px; font-size: 9.5px; background: #FFFFFF; border-radius: 999px; padding: 2px 6px;">✓ Experto verificado</span></div><div style="padding: 8px; font-size: 11px; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 12px;">Dra. Laura Martín</strong><span style="color: #0E5A3A;">Nutrición avícola</span><span style="color: #56615B;">Madrid, España</span></div></div>
+          <div style="border: 1px solid #E3E8E4; border-radius: 12px; overflow: hidden;"><div style="height: 70px; background: #E3EAE5; position: relative;"><span style="position: absolute; top: 6px; right: 6px; font-size: 9.5px; background: #FFFFFF; border-radius: 999px; padding: 2px 6px;">De DSM-Firmenich</span></div><div style="padding: 8px; font-size: 11px; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 12px;">Ana Pereira</strong><span style="color: #0E5A3A;">Bioseguridad y sanidad</span><span style="color: #56615B;">Lisboa, Portugal</span></div></div>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #56615B; line-height: 1.5;">Los expertos de tu equipo llevan la etiqueta «De DSM-Firmenich» para que el comprador sepa que son parte de la empresa.</p>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { n: 5 }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Sobre la empresa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:9px;padding:0 10px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;height:28px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500}
+.kp{display:grid;grid-template-columns:110px 1fr;gap:8px}
+.doc{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid #E3E8E4;border-radius:9px;font-size:12.5px;background:#FFFFFF}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 22px 32px; display: flex; gap: 26px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Sobre la empresa</h1><p style="margin: 4px 0 0; font-size: 13px; color: #4A5650;">Quién sois y por qué confiar en vosotros.</p></div>
+      <label class="lbl">Título de la sección<input class="inp" type="text" value="Sobre DSM-Firmenich"></label>
+      <label class="lbl"><span>Texto <span class="hint">· máx. 1.200 caracteres</span></span><textarea rows="4" style="border: 1px solid #D5DED8; border-radius: 9px; padding: 8px 10px; font: 400 13px 'Poppins', sans-serif; resize: none; line-height: 1.45;">[Historia, misión y enfoque de la empresa: equipo técnico, investigación, presencia internacional…]</textarea></label>
+      <div class="lbl"><span>Vídeo o imagen principal</span>
+        <div style="display: flex; gap: 8px;"><input class="inp" type="url" placeholder="Enlace de YouTube o Vimeo"><span style="font-size: 12.5px; color: #56615B; align-self: center;">o</span><button type="button" style="height: 36px; padding: 0 12px; border-radius: 9px; border: 1px solid #0E5A3A; background: #FFFFFF; color: #0E5A3A; font: 500 12.5px 'Poppins', sans-serif; white-space: nowrap;">Subir imagen</button></div>
+      </div>
+      <div class="lbl"><span>Cifras clave <span class="hint">· hasta 4, opcionales</span></span>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div class="kp"><input class="inp" type="text" value="+40"><input class="inp" type="text" value="países con presencia"></div>
+          <div class="kp"><input class="inp" type="text" placeholder="[Cifra]"><input class="inp" type="text" placeholder="Ej.: centros de I+D"></div>
+        </div>
+      </div>
+      <div class="lbl"><span>Certificaciones</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chip">FAMI-QS ×</span><span class="chip">GMP+ ×</span><span class="chip">ISO 9001 ×</span><a href="#" style="font-size: 12.5px; align-self: center;">+ Añadir</a></div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Cabecera</a><button type="submit" class="go">Guardar y seguir →</button></div>
+    </form>
+    <aside aria-label="Vista previa: Pestaña «Sobre la empresa»" style="width: 388px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Pestaña «Sobre la empresa»</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich#sobre</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 19px; font-weight: 600;">Sobre DSM-Firmenich</span>
+        <span style="font-size: 12px; color: #4A5650; line-height: 1.5;">[Historia, misión y enfoque de la empresa…]</span>
+        <div style="height: 170px; border-radius: 12px; background: #DDE7E0; display: flex; align-items: center; justify-content: center;"><span style="width: 54px; height: 54px; border-radius: 50%; border: 3px solid #FFFFFF; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 20px;">▶</span></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+          <span style="padding: 10px; border-radius: 10px; background: #F2F7F3; display: flex; flex-direction: column;"><strong style="font-size: 18px; color: #0E5A3A;">+40</strong><span style="font-size: 11.5px; color: #4A5650;">países con presencia</span></span>
+          <span style="padding: 10px; border-radius: 10px; background: #F6F8F6; display: flex; flex-direction: column;"><strong style="font-size: 18px; color: #A3ACA7;">[Cifra]</strong><span style="font-size: 11.5px; color: #A3ACA7;">centros de I+D</span></span>
+        </div>
+        <div style="display: flex; gap: 6px;"><span style="font-size: 11px; padding: 3px 8px; border-radius: 6px; border: 1px solid #DCE3DE;">FAMI-QS</span><span style="font-size: 11px; padding: 3px 8px; border-radius: 6px; border: 1px solid #DCE3DE;">GMP+</span><span style="font-size: 11px; padding: 3px 8px; border-radius: 6px; border: 1px solid #DCE3DE;">ISO 9001</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { n: 3 }; }
+}
+</script>
+</body>
+</html>

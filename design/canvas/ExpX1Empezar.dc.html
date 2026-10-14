@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta experto · ¿Cómo quieres empezar?</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;color:#0F2A1F}
+a{color:#0B4A35;text-decoration:none;font-weight:600}a:hover{text-decoration:underline}
+.opt{display:flex;align-items:center;gap:14px;padding:13px 14px;border:1px solid #DDE3E7;border-radius:12px;background:#FFFFFF;cursor:pointer}
+.opt input{accent-color:#0B4A35;width:18px;height:18px;margin:0 0 0 auto;flex:none}
+.ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none}
+.tt{font-weight:700;font-size:14px}
+.dd{font-size:12.5px;color:#55636E;line-height:1.4}
+</style>
+</helmet>
+<div style="width: 960px; height: 760px; background: #E6EAF0; display: flex; align-items: center; justify-content: center;">
+  <form role="dialog" aria-modal="true" aria-labelledby="t" style="width: 470px; box-sizing: border-box; background: #FFFFFF; border-radius: 16px; box-shadow: 0 20px 50px rgba(15, 30, 40, 0.16); padding: 24px 28px; display: flex; flex-direction: column; gap: 16px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 24px; width: auto; display: block;">
+      <span style="font-size: 11.5px; font-weight: 600; color: #0B4A35; background: #E8F2EC; border-radius: 999px; padding: 4px 10px;">Último paso</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <h1 id="t" style="margin: 0; font-size: 20px; font-weight: 700;">¿Cómo quieres empezar, Laura?</h1>
+      <p style="margin: 0; font-size: 13px; color: #55636E; line-height: 1.5;">Siempre tendrás tu perfil personal. Empresa y experto se añaden a él, ahora o cuando quieras.</p>
+    </div>
+    <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+      <legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Cómo quieres empezar</legend>
+      <label class="opt">
+        <span class="ic" style="background: #E8F2EC; color: #0B4A35;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span class="tt">Solo para mí</span><span class="dd">Buscar productos, comparar, crear tableros y seguir empresas.</span></span>
+        <input type="radio" name="inicio">
+      </label>
+      <label class="opt">
+        <span class="ic" style="background: #E8F2EC; color: #0B4A35;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span class="tt">Represento una empresa</span><span class="dd">Gestionar el perfil de mi empresa, publicar productos y recibir consultas. Gratis.</span></span>
+        <input type="radio" name="inicio">
+      </label>
+      <label class="opt" style="border: 1.5px solid #4B3BA6; background: #F6F4FD;">
+        <span class="ic" style="background: #FFFFFF; color: #4B3BA6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span class="tt">Soy experto o consultor</span><span class="dd">Ofrecer servicios, publicar contenido y participar en proyectos. Gratis.</span><span style="font-size: 11.5px; color: #4B3BA6; font-weight: 600; margin-top: 3px;">Sugerido por tu cargo: Veterinaria</span></span>
+        <input type="radio" name="inicio" defaultChecked="{{ yes }}" style="accent-color: #4B3BA6;">
+      </label>
+    </fieldset>
+    <button type="submit" style="height: 46px; border-radius: 10px; background: #0B4A35; color: #FFFFFF; border: 0; font: 600 14.5px 'Plus Jakarta Sans', sans-serif; cursor: pointer;">Crear mi cuenta</button>
+    <a href="#" style="font-size: 12.5px; text-align: center; color: #55636E; font-weight: 500;">Decidir más tarde</a>
+  </form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":960,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

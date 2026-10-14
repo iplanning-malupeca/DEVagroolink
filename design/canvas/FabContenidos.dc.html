@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Contenidos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.h{font-size:13.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.chip{display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:11.5px;font-weight:500}
+.ck{display:flex;align-items:center;gap:7px;font-size:12.5px}
+.ck input{accent-color:#0E5A3A;margin:0}
+.it{display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center;font-size:12px;padding:6px 0;border-top:1px solid #EEF1EE}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Contenidos <span style="font-size: 13px; font-weight: 400; color: #56615B;">· opcional</span></h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Artículos, podcasts y webinars relacionados con tu empresa y tus productos.</p></div>
+      <section class="card">
+        <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">Desde Agrinews, automáticamente</p><input type="checkbox" role="switch" aria-label="Contenidos de Agrinews" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; width: 17px; height: 17px; margin: 0;"></div>
+        <span style="font-size: 12px; color: #4A5650;">Mostramos los contenidos de Agrinews que mencionan estas palabras. Hoy encontramos <strong>18</strong>.</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="chip">DSM-Firmenich ×</span><span class="chip">Hy-D ×</span><span class="chip">Bovaer ×</span><span class="chip">Rovabio ×</span><span class="chip">Mycofix ×</span><a href="#" style="font-size: 12px; align-self: center;">+ Añadir</a></div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;"><label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Artículos (12)</label><label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Podcasts (3)</label><label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Webinars (2)</label><label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Ponencias (1)</label></div>
+        <a href="#" style="font-size: 12px;">Revisar los 18 y ocultar los que no encajen</a>
+      </section>
+      <section class="card" style="background: linear-gradient(135deg,#0E5A3A,#14472F); border: 0; color: #FFFFFF; gap: 9px;">
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 10.5px; font-weight: 600; letter-spacing: .05em; color: #17231D; background: #B5D334; border-radius: 999px; padding: 2px 9px;">CON AGRINEWS</span><p class="h" style="color: #FFFFFF;">Publica tu conocimiento con nuestro equipo editorial</p></div>
+        <span style="font-size: 12px; color: #D6E8DC; line-height: 1.5;">Creamos el contenido con vosotros y lo publicamos en Agrinews y en tu ficha con el sello «En colaboración con DSM-Firmenich». Refuerza tu imagen de experto ante ganaderos, técnicos y distribuidores.</span>
+        <span style="font-size: 12px; font-weight: 600;">¿Qué te interesa?</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><label class="ck" style="background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 10px;"><input type="checkbox" defaultChecked="{{ yes }}">Artículo técnico</label><label class="ck" style="background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 10px;"><input type="checkbox" defaultChecked="{{ yes }}">Webinar</label><label class="ck" style="background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 10px;"><input type="checkbox">Podcast</label><label class="ck" style="background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 10px;"><input type="checkbox">Caso de éxito</label><label class="ck" style="background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 10px;"><input type="checkbox">Newsletter</label></div>
+        <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 11.5px; color: #D6E8DC; flex: 1;">Te llama el equipo de contenidos de Agrinews en 48 h, sin compromiso.</span><button type="button" style="height: 36px; padding: 0 14px; border-radius: 9px; background: #B5D334; color: #17231D; border: 0; font: 600 12.5px 'Poppins', sans-serif; white-space: nowrap;">Solicitar propuesta</button></div>
+      </section>
+      <section class="card">
+        <p class="h">Destacados <span class="hint">· hasta 3, aparecen primero</span></p>
+        <div class="it" style="border-top: 0;"><span style="font-size: 10.5px; font-weight: 600; color: #0E5A3A;">WEBINAR</span><span>Manejo nutricional en ponedoras: claves para una alta persistencia</span><span style="color: #E2A21B;">★</span></div>
+        <div class="it"><span style="font-size: 10.5px; font-weight: 600; color: #0E5A3A;">ARTÍCULO</span><span>Estrategias nutricionales en pollos de engorde</span><span style="color: #E2A21B;">★</span></div>
+      </section>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Expertos</a><span style="display: flex; gap: 14px; align-items: center;"><a href="#" style="font-size: 13px; color: #4A5650;">Saltar</a><button type="submit" class="go">Guardar y seguir →</button></span></div>
+    </form>
+    <aside aria-label="Vista previa: Pestaña «Contenidos»" style="width: 368px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Pestaña «Contenidos»</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich#contenidos</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
+        <strong style="font-size: 15px;">Contenidos relacionados</strong>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px; font-size: 11px;"><span style="padding: 3px 9px; border-radius: 999px; background: #0E5A3A; color: #FFFFFF;">Todos (18)</span><span style="padding: 3px 9px; border-radius: 999px; background: #F2F6F3;">Artículos (12)</span><span style="padding: 3px 9px; border-radius: 999px; background: #F2F6F3;">Podcasts (3)</span><span style="padding: 3px 9px; border-radius: 999px; background: #F2F6F3;">Webinars (2)</span></div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+          <div style="border: 1px solid #E3E8E4; border-radius: 10px; overflow: hidden;"><div style="height: 60px; background: #E3EAE5; position: relative;"><span style="position: absolute; top: 5px; left: 5px; font-size: 9px; font-weight: 600; background: #FFFFFF; border-radius: 4px; padding: 1px 5px;">AGRINEWS</span></div><div style="padding: 7px; font-size: 10.5px;"><span style="color: #0E5A3A; font-weight: 600;">WEBINAR</span><br><strong style="font-size: 11px;">Manejo nutricional en ponedoras</strong><br><span style="color: #56615B;">45 min</span></div></div>
+          <div style="border: 1px solid #E3E8E4; border-radius: 10px; overflow: hidden;"><div style="height: 60px; background: #E3EAE5; position: relative;"><span style="position: absolute; top: 5px; left: 5px; font-size: 9px; font-weight: 600; background: #FFFFFF; border-radius: 4px; padding: 1px 5px;">AGRINEWS</span></div><div style="padding: 7px; font-size: 10.5px;"><span style="color: #0E5A3A; font-weight: 600;">ARTÍCULO</span><br><strong style="font-size: 11px;">Estrategias nutricionales en pollos</strong><br><span style="color: #56615B;">8 min</span></div></div>
+        </div>
+        <div style="border: 1px solid #DCEBB0; background: #F4F9E6; border-radius: 10px; padding: 8px 10px; font-size: 10.5px; display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 600; color: #4E6B0A;">EN COLABORACIÓN CON DSM-FIRMENICH</span><strong style="font-size: 11.5px;">[Título del artículo técnico]</strong><span style="color: #56615B;">Agrinews · Artículo</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 6 }; }
+}
+</script>
+</body>
+</html>

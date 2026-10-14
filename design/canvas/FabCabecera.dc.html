@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Cabecera de la ficha</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:9px;padding:0 10px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;height:28px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500}
+.tg{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border:1px solid #E3E8E4;border-radius:9px;font-size:12.5px;background:#FFFFFF}
+.tg input{accent-color:#0E5A3A;width:16px;height:16px;margin:0}
+.tag{font-size:11px;padding:4px 9px;border-radius:7px;background:#F2F6F3;color:#2F3D36}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 22px 32px; display: flex; gap: 26px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Cabecera de la ficha</h1><p style="margin: 4px 0 0; font-size: 13px; color: #4A5650;">Lo primero que ve el comprador. Hemos usado los datos de tu ficha pública.</p></div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <span style="width: 130px; height: 56px; border-radius: 10px; border: 1.5px dashed #B9CBBF; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A5650; background: #FFFFFF;">[Logo]</span>
+        <span style="display: flex; flex-direction: column; gap: 2px;"><a href="#" style="font-size: 13px;">Cambiar logo</a><span class="hint">SVG o PNG transparente. Puede incluir tu lema.</span></span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <label class="lbl">Nombre de la empresa<input class="inp" type="text" value="DSM-Firmenich"></label>
+        <label class="lbl"><span>Actividad principal <span class="hint">· sobre el nombre</span></span><input class="inp" type="text" value="Fabricante global de nutrición animal"></label>
+      </div>
+      <label class="lbl"><span>Frase de presentación <span class="hint">· máx. 70</span></span><input class="inp" type="text" value="Ciencia, innovación y soluciones en nutrición animal"></label>
+      <label class="lbl"><span>Descripción <span class="hint">· máx. 400</span></span><textarea rows="3" style="border: 1px solid #D5DED8; border-radius: 9px; padding: 8px 10px; font: 400 13px 'Poppins', sans-serif; resize: none; line-height: 1.45;">Desarrollamos soluciones innovadoras en nutrición, salud y bienestar animal para un sistema alimentario más sostenible.</textarea></label>
+      <div class="lbl"><span>Etiquetas <span class="hint">· hasta 5, ayudan a encontrarte</span></span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chip">Nutrición animal ×</span><span class="chip">Salud intestinal ×</span><span class="chip">Aditivos ×</span><span class="chip">Enzimas ×</span><span class="chip">Vitaminas ×</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <label class="lbl">Sede<input class="inp" type="text" value="Kaiseraugst, Suiza & Heerlen, NL"></label>
+        <label class="lbl">Web<input class="inp" type="url" value="dsm-firmenich.com"></label>
+      </div>
+      <div class="lbl"><span>Botones <span class="hint">· el principal lo fija tu tipo de empresa</span></span>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px;">
+          <span class="tg" style="background: #EEF6EE; border-color: #CFE0D5;">Encontrar distribuidor<span style="font-size: 11px; color: #0E5A3A; font-weight: 600;">Principal</span></span>
+          <label class="tg">Quiero ser distribuidor<input type="checkbox" role="switch" defaultChecked="{{ yes }}"></label>
+          <label class="tg">Solicitar información<input type="checkbox" role="switch" defaultChecked="{{ yes }}"></label>
+          <label class="tg">Visitar web<input type="checkbox" role="switch" defaultChecked="{{ yes }}"></label>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Tipo de empresa</a><button type="submit" class="go">Guardar y seguir →</button></div>
+    </form>
+    <aside aria-label="Vista previa: Cabecera de tu ficha" style="width: 388px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Cabecera de tu ficha</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10.5px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border: 1px solid #CFE0D5; border-radius: 999px; padding: 2px 8px;">✓ Empresa verificada</span><span style="font-size: 11px; color: #56615B;">Fabricante global de nutrición animal</span></div>
+        <span style="font-size: 22px; font-weight: 700;">DSM-Firmenich</span>
+        <span style="font-size: 13px; color: #0E5A3A; font-weight: 500; margin-top: -6px;">Ciencia, innovación y soluciones en nutrición animal</span>
+        <span style="font-size: 12px; color: #4A5650; line-height: 1.5;">Desarrollamos soluciones innovadoras en nutrición, salud y bienestar animal…</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="tag">Nutrición animal</span><span class="tag">Salud intestinal</span><span class="tag">Aditivos</span><span class="tag">Enzimas</span><span class="tag">Vitaminas</span></div>
+        <div style="background: #F6F8F6; border: 1px solid #E3E8E4; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 7px;">
+          <span style="height: 40px; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #56615B;">[Logo]</span>
+          <span style="height: 36px; border-radius: 9px; background: #0E5A3A; color: #FFFFFF; font-size: 12.5px; display: flex; align-items: center; justify-content: center;">Encontrar distribuidor →</span>
+          <span style="height: 32px; border-radius: 9px; border: 1px solid #DCE3DE; background: #FFFFFF; font-size: 12px; display: flex; align-items: center; justify-content: center;">Quiero ser distribuidor</span>
+          <span style="height: 32px; border-radius: 9px; border: 1px solid #DCE3DE; background: #FFFFFF; font-size: 12px; display: flex; align-items: center; justify-content: center;">Solicitar información</span>
+          <span style="font-size: 10.5px; color: #56615B; text-align: center;">📍 Sede: Kaiseraugst, Suiza & Heerlen, NL</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 2 }; }
+}
+</script>
+</body>
+</html>

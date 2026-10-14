@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Tipo de empresa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.q{font-size:14px;font-weight:600;margin:0 0 8px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid #DCE3DE;border-radius:12px;background:#FFFFFF}
+.opt input{accent-color:#0E5A3A;width:17px;height:17px;margin:2px 0 0;flex:none}
+.on{border:1.5px solid #0E5A3A;background:#EEF6EE}
+.t{font-size:13.5px;font-weight:600}
+.d{font-size:12px;color:#4A5650;line-height:1.4}
+.chip{display:inline-flex;align-items:center;height:28px;padding:0 11px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font:500 12px 'Poppins',sans-serif;color:#17231D}
+.chip[aria-pressed="true"]{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.pill{font-size:12px;padding:5px 11px;border-radius:999px;background:#F2F6F3;color:#2F3D36}
+.foot{display:flex;align-items:center;justify-content:space-between}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 22px 32px; display: flex; gap: 28px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Tipo de empresa</h1><p style="margin: 4px 0 0; font-size: 13px; color: #4A5650;">Decide qué pestañas y botones tendrá tu ficha. Puedes cambiarlo después.</p></div>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="q">Actividad</legend>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+          <label class="opt on"><input type="checkbox" defaultChecked="{{ yes }}"><span><span class="t">Fabricante</span><br><span class="d">Productos con tu marca</span></span></label>
+          <label class="opt"><input type="checkbox"><span><span class="t">Distribuidor</span><br><span class="d">Vendes otras marcas</span></span></label>
+          <label class="opt on"><input type="checkbox" defaultChecked="{{ yes }}"><span><span class="t">Servicios</span><br><span class="d">Asesoría, laboratorio…</span></span></label>
+        </div>
+      </fieldset>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="q">¿Cómo llega tu producto al cliente?</legend>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+          <label class="opt on"><input type="checkbox" defaultChecked="{{ yes }}"><span><span class="t">Red de distribuidores</span><br><span class="d">Pestaña Distribuidores · «Encontrar distribuidor»</span></span></label>
+          <label class="opt"><input type="checkbox"><span><span class="t">Equipo comercial propio</span><br><span class="d">«Contactar comercial» por zona</span></span></label>
+          <label class="opt"><input type="checkbox"><span><span class="t">Sucursales o filiales</span><br><span class="d">Pestaña Sucursales con mapa</span></span></label>
+          <label class="opt"><input type="checkbox"><span><span class="t">Solo desde la central</span><br><span class="d">Un único contacto</span></span></label>
+        </div>
+      </fieldset>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="q">¿Dónde vendes?</legend>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><button type="button" class="chip" aria-pressed="true">Europa</button><button type="button" class="chip" aria-pressed="true">Latinoamérica</button><button type="button" class="chip" aria-pressed="true">Norteamérica</button><button type="button" class="chip" aria-pressed="true">Asia</button><button type="button" class="chip" aria-pressed="true">África y Oriente Medio</button><button type="button" class="chip" aria-pressed="true">Oceanía</button></div>
+      </fieldset>
+      <div class="foot" style="margin-top: auto;"><span></span><button type="submit" class="go">Guardar y seguir →</button></div>
+    </form>
+    <aside aria-label="Vista previa: Estructura de tu ficha" style="width: 368px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Estructura de tu ficha</span></span>
+        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+      </div>
+      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 12.5px; font-weight: 600;">Pestañas</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="pill">Productos</span><span class="pill">Sobre la empresa</span><span class="pill" style="background: #0E5A3A; color: #FFFFFF;">Distribuidores</span><span class="pill" style="background: #0E5A3A; color: #FFFFFF;">Servicios</span><span class="pill">Expertos</span><span class="pill">Contenidos</span></div>
+        <span style="font-size: 12.5px; font-weight: 600;">Botones de la cabecera</span>
+        <span style="height: 38px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center;">Encontrar distribuidor →</span>
+        <span style="height: 36px; border-radius: 10px; border: 1px solid #DCE3DE; font-size: 13px; display: flex; align-items: center; justify-content: center;">Quiero ser distribuidor</span>
+        <span style="height: 36px; border-radius: 10px; border: 1px solid #DCE3DE; font-size: 13px; display: flex; align-items: center; justify-content: center;">Solicitar información</span>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #56615B; line-height: 1.5;">Las pestañas sin contenido no se muestran hasta que las completes.</p>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 1 }; }
+}
+</script>
+</body>
+</html>

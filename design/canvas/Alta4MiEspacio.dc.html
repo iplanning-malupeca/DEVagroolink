@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta · Mi espacio, primer inicio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.navbtn{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;font:500 14px 'Poppins',sans-serif;color:#17231D;background:none;border:0;white-space:nowrap;cursor:pointer;text-decoration:none}
+.chip{display:inline-flex;align-items:center;height:32px;padding:0 12px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font:500 12.5px 'Poppins',sans-serif;color:#17231D;cursor:pointer}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.step{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13.5px}
+.dot{width:22px;height:22px;border-radius:50%;border:1.5px solid #B9CBBF;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 820px; background: #F6F8F6; display: flex; flex-direction: column;">
+
+<header style="height: 64px; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #E3E8E4; background: #FFFFFF;">
+  <a href="#" aria-label="Agroolink, inicio" style="display: flex; align-items: center; flex: none; margin-right: 8px;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 30px; width: auto; display: block;"></a>
+  <button type="button" class="navbtn">Categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+  <button type="button" class="navbtn">Especies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+  <div style="flex: 1;"></div>
+  <a href="#" class="navbtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Proyectos</a>
+  <a href="#" class="navbtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>Tableros</a>
+  <button type="button" class="navbtn" aria-label="Menú de cuenta de Samuel E." style="border: 1px solid #DCE3DE; padding: 4px 10px 4px 4px; margin-left: 8px;">
+    <span style="width: 30px; height: 30px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center;">SE</span>Samuel E.
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+</header>
+
+<div role="region" aria-label="Personaliza tus recomendaciones" style="display: flex; align-items: center; gap: 10px; padding: 10px 24px; background: #EEF6EE; border-bottom: 1px solid #D5E6DA; font-size: 13px; color: #17231D;">
+  <span style="font-weight: 600;">¿Qué especies te interesan?</span>
+  <button type="button" class="chip" aria-pressed="true" style="background: #0E5A3A; border-color: #0E5A3A; color: #FFFFFF;">Avicultura</button>
+  <button type="button" class="chip" aria-pressed="false">Porcino</button>
+  <button type="button" class="chip" aria-pressed="false">Vacuno</button>
+  <button type="button" class="chip" aria-pressed="false">Ovino y caprino</button>
+  <button type="button" class="chip" aria-pressed="false">Más…</button>
+  <span style="color: #4A5650; font-size: 12.5px;">Lo usamos para tus recomendaciones.</span>
+  <button type="button" aria-label="Cerrar" style="margin-left: auto; width: 30px; height: 30px; border: 0; background: none; color: #4A5650; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+
+<div style="flex: 1; padding: 28px 24px; display: flex; gap: 24px; max-width: 1232px; box-sizing: border-box;">
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+    <div style="background: #0E5A3A; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF;">
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Hola, Samuel. ¿Qué buscas hoy?</h1>
+        <p style="margin: 0; font-size: 13.5px; color: #D6E8DC;">Productos, empresas y expertos del sector ganadero.</p>
+      </div>
+      <div role="search" style="display: flex; align-items: center; height: 50px; box-sizing: border-box; border-radius: 999px; background: #FFFFFF; padding: 0 6px 0 20px; gap: 8px;">
+        <input type="search" aria-label="Buscar" placeholder="Ej.: pienso broilers, bebederos, vacuna…" style="flex: 1; min-width: 0; border: 0; background: none; font: 400 14.5px 'Poppins', sans-serif; color: #17231D; outline: none;">
+        <button type="button" style="height: 38px; padding: 0 18px; border-radius: 999px; background: #B5D334; color: #17231D; border: 0; font: 600 14px 'Poppins', sans-serif; cursor: pointer;">Buscar</button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <span style="font-size: 12.5px; color: #D6E8DC;">Explora:</span>
+        <a href="#" class="chip" style="background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: #FFFFFF;">Nutrición · Broilers</a>
+        <a href="#" class="chip" style="background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: #FFFFFF;">Salud animal · Porcino</a>
+        <a href="#" class="chip" style="background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: #FFFFFF;">Empresas de avicultura</a>
+        <a href="#" class="chip" style="background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: #FFFFFF;">Expertos en nutrición</a>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 600;">Para ti · Nutrición y salud en avicultura</h2>
+        <a href="#" style="font-size: 13px;">Ver más</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+        <div class="card"><div style="height: 120px; background: #EAF0EB; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #56615B;">[Foto de producto]</div><div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 11.5px; color: #56615B;">Nutrición · Broilers</span><span style="font-size: 14px; font-weight: 600;">[Nombre de producto]</span><span style="font-size: 12.5px; color: #4A5650;">[Empresa]</span></div></div>
+        <div class="card"><div style="height: 120px; background: #EAF0EB; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #56615B;">[Foto de producto]</div><div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 11.5px; color: #56615B;">Salud animal · Ponedoras</span><span style="font-size: 14px; font-weight: 600;">[Nombre de producto]</span><span style="font-size: 12.5px; color: #4A5650;">[Empresa]</span></div></div>
+        <div class="card"><div style="height: 120px; background: #EAF0EB; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #56615B;">[Foto de producto]</div><div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 11.5px; color: #56615B;">Equipamiento · Broilers</span><span style="font-size: 14px; font-weight: 600;">[Nombre de producto]</span><span style="font-size: 12.5px; color: #4A5650;">[Empresa]</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <aside style="width: 320px; flex: none; display: flex; flex-direction: column; gap: 16px;">
+    <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 18px 18px 8px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+        <h2 style="margin: 0; font-size: 15px; font-weight: 600;">Primeros pasos</h2>
+        <span style="font-size: 12px; color: #56615B;">0 de 4</span>
+      </div>
+      <div style="height: 5px; border-radius: 3px; background: #E3E8E4; margin: 6px 0 10px;"></div>
+      <a href="#" class="step" style="color: #17231D; font-weight: 400;"><span class="dot"></span><span style="flex: 1;">Guarda un producto</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#" class="step" style="color: #17231D; font-weight: 400;"><span class="dot"></span><span style="flex: 1;">Crea tu primer tablero</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#" class="step" style="color: #17231D; font-weight: 400;"><span class="dot"></span><span style="flex: 1;">Compara dos productos</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#" class="step" style="color: #17231D; font-weight: 400;"><span class="dot"></span><span style="flex: 1;">Sigue a una empresa</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+    </div>
+    <a href="#" style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E8E4; color: #17231D; font-weight: 400;">
+      <span style="width: 34px; height: 34px; border-radius: 9px; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+      <span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 600; font-size: 14px;">¿Necesitas algo concreto?</span><span style="font-size: 12.5px; color: #4A5650; line-height: 1.45;">Publica un proyecto y recibe propuestas de proveedores.</span></span>
+    </a>
+  </aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

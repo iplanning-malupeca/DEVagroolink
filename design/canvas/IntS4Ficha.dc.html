@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Exploración · Ficha de producto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.navbtn{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;font:500 14px 'Poppins',sans-serif;color:#17231D;background:none;border:0;white-space:nowrap;cursor:pointer;text-decoration:none}
+.tag{font-size:12px;font-weight:500;background:#EEF6EE;color:#0E5A3A;border-radius:999px;padding:3px 10px}
+.btn{height:44px;padding:0 18px;border-radius:10px;font:500 14px 'Poppins',sans-serif;display:flex;align-items:center;gap:8px;cursor:pointer}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:10px 0;border-bottom:1px solid #EEF1EE;text-align:left}
+th{font-weight:500;color:#4A5650;width:200px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 820px; background: #FFFFFF; display: flex; flex-direction: column;">
+
+<dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" abierto="{{ no }}" hint-size="1280px,68px"></dc-import>
+
+<div style="padding: 18px 40px 0; font-size: 12.5px; color: #56615B;">Nutrición › Correctores y premezclas › Avicultura</div>
+<div style="padding: 14px 40px; display: flex; gap: 40px;">
+  <div style="width: 560px; flex: none; display: flex; flex-direction: column; gap: 10px;">
+    <div style="height: 380px; border-radius: 16px; background: #EAF0EB; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #56615B;">[Foto de producto]</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;"><div style="height: 80px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 80px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 80px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 80px; border-radius: 10px; background: #EAF0EB;"></div></div>
+  </div>
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <h1 style="margin: 0; font-size: 28px; font-weight: 600;">Corrector vitamínico CV-20</h1>
+      <a href="#" style="display: flex; align-items: center; gap: 8px; font-size: 14px;"><span style="width: 24px; height: 24px; border-radius: 6px; background: #1F3A5F; color: #FFFFFF; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center;">AE</span>AgroExport SRL<svg width="15" height="15" viewBox="0 0 24 24" role="img" aria-label="Empresa verificada"><circle cx="12" cy="12" r="10" fill="#0E5A3A"/><path d="m8 12 3 3 5-6" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div style="display: flex; gap: 6px;"><span class="tag">Avicultura</span><span class="tag">Broilers</span><span class="tag">Fase de arranque</span></div>
+    <p style="margin: 0; font-size: 14px; color: #2F3D36; line-height: 1.6;">[Descripción del producto según su ficha técnica: composición, dosis recomendada y presentación.]</p>
+    <div style="display: flex; gap: 10px;">
+      <button type="button" class="btn" style="background: #0E5A3A; color: #FFFFFF; border: 0;">Pedir precio</button>
+      <button type="button" class="btn" aria-pressed="true" style="background: #EEF6EE; color: #0E5A3A; border: 1.5px solid #0E5A3A;">Guardado</button>
+      <button type="button" class="btn" style="background: #FFFFFF; color: #17231D; border: 1px solid #D5DED8;">Comparar</button>
+    </div>
+    <table>
+      <tbody>
+        <tr><th scope="row">Especie</th><td>Broilers</td></tr>
+        <tr><th scope="row">Presentación</th><td>Saco de 25 kg</td></tr>
+        <tr><th scope="row">Disponible en</th><td>España y Portugal</td></tr>
+        <tr><th scope="row">Ficha técnica</th><td><a href="#">Descargar PDF</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() { return { no: false }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet · Mi espacio con experta</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px}
+.item{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #EEF1EE}
+.av{width:36px;height:36px;border-radius:50%;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.pj{width:36px;height:36px;border-radius:9px;background:#F1EEFB;color:#4B3BA6;display:flex;align-items:center;justify-content:center;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="experta" activo="Panel de experta" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; gap: 20px;">
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 13px; color: #56615B;">Como experta › Panel</div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: -10px;"><h1 style="margin: 0; font-size: 30px; font-weight: 600;">Panel de experta</h1><a href="#" style="font-size: 13px;">Ver mi perfil público</a></div>
+        <section class="card" style="padding: 18px 20px 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;"><h2 style="margin: 0; font-size: 16px; font-weight: 600;">Consultas recibidas</h2><span style="font-size: 12px; color: #56615B;">1 de 3 este mes</span></div>
+          <div class="item"><span class="av">GA</span><span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 500;">Ganadero · Huesca · Avicultura</span><span style="font-size: 12.5px; color: #4A5650;">«Tengo dos naves y el índice de conversión ha empeorado…»</span></span><span style="font-size: 12px; color: #56615B; margin-right: 8px;">hace 5 h</span><a href="#" style="height: 34px; padding: 0 14px; border-radius: 9px; background: #0E5A3A; color: #FFFFFF; font-size: 13px; display: flex; align-items: center;">Responder</a></div>
+        </section>
+        <section class="card" style="padding: 18px 20px 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;"><h2 style="margin: 0; font-size: 16px; font-weight: 600;">Proyectos que encajan contigo</h2><span style="font-size: 12px; color: #56615B;">1 candidatura disponible este mes</span></div>
+          <div class="item"><span class="pj"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 500;">Plan de bioseguridad para granja de ponedoras</span><span style="font-size: 12.5px; color: #4A5650;">Lleida · cierra en 6 días · 2 propuestas</span></span><a href="#" style="height: 34px; padding: 0 14px; border-radius: 9px; border: 1px solid #0E5A3A; font-size: 13px; display: flex; align-items: center;">Presentar propuesta</a></div>
+          <div class="item"><span class="pj"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 500;">Revisión de fórmulas de pienso para broilers</span><span style="font-size: 12.5px; color: #4A5650;">Zaragoza · cierra en 12 días · sin propuestas aún</span></span><a href="#" style="height: 34px; padding: 0 14px; border-radius: 9px; border: 1px solid #0E5A3A; font-size: 13px; display: flex; align-items: center;">Presentar propuesta</a></div>
+        </section>
+      </div>
+      <aside style="width: 250px; flex: none; display: flex; flex-direction: column; gap: 16px; padding-top: 70px;">
+        <div class="card" style="padding: 16px 18px;">
+          <h2 style="margin: 0 0 8px; font-size: 15px; font-weight: 600;">Esta semana</h2>
+          <div style="display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid #EEF1EE; font-size: 13px;"><span style="color: #4A5650;">Apariciones en búsquedas</span><strong>[n]</strong></div>
+          <div style="display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid #EEF1EE; font-size: 13px;"><span style="color: #4A5650;">Visitas al perfil</span><strong>[n]</strong></div>
+          <div style="display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid #EEF1EE; font-size: 13px;"><span style="color: #4A5650;">Consultas</span><strong>1</strong></div>
+        </div>
+        <div class="card" style="padding: 16px 18px; display: flex; flex-direction: column; gap: 8px;">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 600;">Completa tu perfil · 3 de 5</h2>
+          <a href="#" style="font-size: 13px;">Añade una foto</a>
+          <a href="#" style="font-size: 13px;">Añade un caso de éxito</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Laura G." iniciales="LG" color="#0E5A3A" variante="experta" abierto="{{ no }}" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { no: false }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta experto · Revisar y publicar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.lbl{font-size:13px;font-weight:500;display:flex;flex-direction:column;gap:6px;min-width:0}
+.inp{height:40px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.bar{height:5px;border-radius:3px;background:#4B3BA6}
+.sum{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13.5px}
+.ok{width:22px;height:22px;border-radius:50%;background:#0E5A3A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;flex:none}
+.ck{display:flex;gap:10px;align-items:center;font-size:13px;color:#2F3D36}
+.ck input{accent-color:#0E5A3A;width:17px;height:17px;margin:0}
+.tag{font-size:11.5px;font-weight:500;background:#F1EEFB;color:#4B3BA6;border-radius:999px;padding:3px 10px}
+</style>
+</helmet>
+<div style="width: 1120px; height: 760px; background: #F6F8F6; display: flex; flex-direction: column;">
+  <div style="height: 64px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #E3E8E4;">
+    <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 20px; color: #0E5A3A;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 28px; width: auto; display: block;"><span style="font-size: 12px; font-weight: 600; color: #4B3BA6; background: #F1EEFB; border-radius: 999px; padding: 3px 10px; margin-left: 4px;">Expertos</span></span>
+    <a href="#" style="font-size: 13.5px; color: #4A5650; font-weight: 400;">Terminar más tarde</a>
+  </div>
+
+  <div style="flex: 1; display: flex; gap: 40px; justify-content: center; padding: 26px 40px 0;">
+    <form style="width: 520px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12.5px; color: #56615B; font-weight: 500;">Paso 3 de 3 · Revisar y publicar</span>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px;"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+      </div>
+      <h1 style="margin: 0; font-size: 22px; font-weight: 600;">Todo listo para publicar</h1>
+      <div>
+        <div class="sum"><span class="ok"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span style="flex: 1;">Especialidad y zona</span><a href="#" style="font-size: 13px;">Editar</a></div>
+        <div class="sum"><span class="ok"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span style="flex: 1;">1 servicio</span><a href="#" style="font-size: 13px;">Editar</a></div>
+        <div class="sum" style="border-bottom: 1px solid #EEF1EE;"><span style="width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #B9CBBF; box-sizing: border-box; flex: none;"></span><span style="flex: 1;">Foto de perfil <span style="color: #56615B; font-size: 12.5px;">(recomendada)</span></span><a href="#" style="font-size: 13px;">Subir foto</a></div>
+      </div>
+
+      <fieldset style="border: 1px solid #E3E8E4; border-radius: 12px; background: #FFFFFF; padding: 14px 16px; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+        <legend style="font-size: 13.5px; font-weight: 600; padding: 0 6px;">Verificación profesional</legend>
+        <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px;">
+          <label class="lbl">Colegio profesional<select class="inp"><option>Colegio de Veterinarios de Zaragoza</option></select></label>
+          <label class="lbl">Nº de colegiada<input class="inp" type="text" placeholder="Ej.: 1234"></label>
+        </div>
+        <span style="font-size: 12px; color: #4A5650; line-height: 1.45;">Lo comprobamos en 24–48 h. Tu perfil se publica ya; el sello «Colegiada verificada» aparece cuando lo confirmemos.</span>
+      </fieldset>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Acepto consultas de explotaciones y empresas</label>
+        <label class="ck"><input type="checkbox" defaultChecked="{{ yes }}">Quiero ver proyectos abiertos que encajen con mi especialidad</label>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: #4A5650;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Anterior</a>
+        <button type="submit" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif; cursor: pointer;">Publicar mi perfil</button>
+      </div>
+    </form>
+
+    <div style="width: 360px; display: flex; flex-direction: column; gap: 10px; padding-top: 34px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #56615B;">Tu perfil público</span>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; overflow: hidden;">
+        <div style="height: 64px; background: #ECE8FA;"></div>
+        <div style="padding: 0 20px 20px; display: flex; flex-direction: column; gap: 12px;">
+          <span style="width: 60px; height: 60px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; font-size: 19px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: -30px; border: 3px solid #FFFFFF;">LG</span>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-weight: 600; font-size: 16px;">Laura Gil</span>
+            <span style="font-size: 12.5px; color: #4A5650;">Veterinaria especialista en nutrición avícola</span>
+            <span style="font-size: 12px; color: #56615B;">Cataluña, Aragón · Presencial y online</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="tag">Avicultura</span><span class="tag">Nutrición</span><span class="tag">Bioseguridad</span></div>
+          <div style="padding: 10px 12px; border-radius: 10px; background: #F6F8F6; font-size: 12.5px;"><span style="font-weight: 600;">Servicio</span> · Auditoría nutricional de lotes de broilers</div>
+          <span style="height: 40px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; font-size: 13.5px; font-weight: 500; display: flex; align-items: center; justify-content: center;">Contactar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1120,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

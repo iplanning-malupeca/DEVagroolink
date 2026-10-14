@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Header intranet</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.hb{width:40px;height:40px;border:0;background:none;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#17231D;cursor:pointer;position:relative}
+.hb:hover{background:#F2F6F3}
+.sp{display:flex;align-items:center;gap:12px;padding:12px 4px;border-top:1px solid #EEF1EE;color:#17231D;text-decoration:none}
+.sp:first-child{border-top:0}
+</style>
+</helmet>
+<div style="width: 1280px; height: 68px; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
+  <header style="height: 68px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; gap: 24px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
+    <a href="#" aria-label="Agroolink, inicio" style="width: 228px; flex: none; display: flex; align-items: center;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
+    <div role="search" style="flex: 1; max-width: 600px; display: flex; align-items: center; gap: 10px; height: 44px; box-sizing: border-box; border: 1px solid #DCE3DE; border-radius: 999px; background: #F7F9F7; padding: 0 5px 0 16px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" aria-label="Buscar" placeholder="Buscar productos, empresas, expertos, soluciones…" style="flex: 1; min-width: 0; border: 0; background: none; font: 400 14px 'Poppins', sans-serif; outline: none;">
+      <button type="button" aria-label="Buscar" style="width: 34px; height: 34px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </div>
+    <button type="button" style="display: flex; align-items: center; gap: 6px; border: 0; background: none; font: 500 14px 'Poppins', sans-serif; color: #17231D; cursor: pointer; white-space: nowrap;">Todas las categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
+      <button type="button" class="hb" aria-label="Notificaciones, hay nuevas"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span style="position: absolute; top: 8px; right: 9px; width: 8px; height: 8px; border-radius: 50%; background: #D93A3A; border: 2px solid #FFFFFF;"></span></button>
+      <button type="button" class="hb" aria-label="Guardados"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+      <button type="button" aria-expanded="{{ abierto }}" aria-label="Tus espacios y cuenta" style="display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 4px 6px 4px 4px; border-radius: 999px; font: 500 15px 'Poppins', sans-serif; color: #17231D; cursor: pointer; margin-left: 8px;">
+        <span style="width: 42px; height: 42px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center;">{{ iniciales }}</span>{{ persona }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ chevron }}"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <sc-if value="{{ abierto }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-label="Tus espacios" style="position: absolute; top: 76px; right: 24px; width: 420px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 18px; box-shadow: 0 18px 44px rgba(16, 40, 28, 0.14); padding: 18px; display: flex; flex-direction: column; gap: 14px; z-index: 5;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="width: 64px; height: 64px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 20px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ iniciales }}</span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 17px; font-weight: 600;">{{ nombreCompleto }}</span><span style="font-size: 13px; color: #56615B;">{{ email }}</span><span style="font-size: 13px; color: #0E5A3A; font-weight: 500;">{{ activoTexto }}</span></span>
+      </div>
+      <div style="border: 1px solid #E3E8E4; border-radius: 14px; padding: 6px 14px;">
+        <div style="font-size: 14px; font-weight: 600; padding: 8px 4px 4px;">Tus espacios</div>
+        <sc-for list="{{ espacios }}" as="e" hint-placeholder-count="3">
+          <a href="#" class="sp">
+            <span style="width: 40px; height: 40px; border-radius: {{ e.radio }}; background: {{ e.fondo }}; color: {{ e.tinta }}; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ e.ini }}</span>
+            <span style="display: flex; flex-direction: column; flex: 1; min-width: 0;">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600;">{{ e.titulo }}<sc-if value="{{ e.chip }}" hint-placeholder-val="{{ true }}"><span style="font-size: 11px; font-weight: 500; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 2px 8px;">{{ e.chip }}</span></sc-if></span>
+              <span style="font-size: 12.5px; color: #56615B;">{{ e.sub }}</span>
+            </span>
+            <span style="font-size: 20px; color: #0E5A3A; width: 22px; text-align: center; flex: none;">{{ e.accion }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":68}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = this.props.variante ?? 'personal';
+    const abierto = this.props.abierto ?? false;
+    const color = this.props.color ?? '#0E5A3A';
+    const ini = this.props.iniciales ?? 'SE';
+    const yo = { ini: ini, radio: '50%', fondo: color, tinta: '#FFFFFF' };
+    const datos = {
+      personal: {
+        nombreCompleto: 'Samuel Esteban', email: 'samuel@granjalosolmos.es', activoTexto: 'Espacio personal',
+        espacios: [
+          Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Buscar, comparar y gestionar proyectos', accion: '✓' }),
+          { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' },
+          { ini: '+', radio: '10px', fondo: '#EEF6EE', tinta: '#0E5A3A', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+        ]
+      },
+      experta: {
+        nombreCompleto: 'Laura Gil', email: 'laura.gil@correo.com', activoTexto: 'Espacio personal · Experta',
+        espacios: [
+          Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Incluye tu perfil de experta (público)', accion: '✓' }),
+          { ini: '+', radio: '10px', fondo: '#EEF6EE', tinta: '#0E5A3A', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+        ]
+      },
+      empresa: {
+        nombreCompleto: 'Carla Martín', email: 'carla@agroexport.com', activoTexto: 'AgroExport SRL',
+        espacios: [
+          { ini: 'AE', radio: '10px', fondo: '#1F3A5F', tinta: '#FFFFFF', titulo: 'AgroExport SRL', chip: 'Activo', sub: 'Empresa · Administradora', accion: '✓' },
+          Object.assign({}, yo, { titulo: 'Personal', chip: '', sub: 'Buscar, comparar y gestionar proyectos', accion: '' }),
+          { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' }
+        ]
+      }
+    };
+    const d = datos[v] || datos.personal;
+    return Object.assign({}, d, {
+      persona: this.props.persona ?? 'Samuel E.',
+      iniciales: ini,
+      color: color,
+      abierto: abierto,
+      chevron: (abierto || this.props.marcado) ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6',
+      topBorder: v === 'empresa' ? '3px solid #B5D334' : '0'
+    });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Constructor de ficha</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.it{display:flex;align-items:center;gap:10px;height:40px;padding:0 12px;border-radius:10px;font-size:13.5px;text-decoration:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
+  <div style="height: 64px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4;">
+    <img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 28px; width: auto; display: block;">
+    <span style="font-size: 12px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 3px 10px;">Empresas</span>
+    <span style="font-size: 13.5px; color: #4A5650; margin-left: 6px;">Ficha de <strong style="color: #17231D;">{{ empresa }}</strong></span>
+    <span style="margin-left: auto; display: flex; gap: 10px; align-items: center;">
+      <a href="#" style="height: 36px; padding: 0 14px; border-radius: 9px; border: 1px solid #0E5A3A; color: #0E5A3A; font-size: 13px; font-weight: 500; text-decoration: none; display: flex; align-items: center;">Vista previa de la ficha</a>
+      <a href="#" style="font-size: 13px; color: #4A5650; text-decoration: none;">Guardar y salir</a>
+    </span>
+  </div>
+  <nav aria-label="Secciones de la ficha" style="position: absolute; top: 64px; left: 0; width: 260px; height: 836px; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #E3E8E4; padding: 18px 14px; display: flex; flex-direction: column; gap: 2px;">
+    <div style="padding: 0 12px 12px; display: flex; flex-direction: column; gap: 6px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: .05em; color: #56615B;">TU FICHA</span>
+      <span style="font-size: 13px;"><strong>{{ hechas }}</strong> de 7 secciones</span>
+      <span style="height: 5px; border-radius: 3px; background: #E3E8E4; overflow: hidden; display: block;"><span style="display: block; height: 100%; width: {{ pct }}; background: #0E5A3A;"></span></span>
+    </div>
+    <sc-for list="{{ items }}" as="s" hint-placeholder-count="8">
+      <a href="#" class="it" aria-current="{{ s.current }}" style="background: {{ s.fondo }}; color: {{ s.tinta }}; font-weight: {{ s.peso }};">
+        <span style="width: 22px; height: 22px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; background: {{ s.bFondo }}; color: {{ s.bTinta }}; border: {{ s.bBorde }}; box-sizing: border-box;">{{ s.marca }}</span>
+        <span style="flex: 1;">{{ s.label }}</span>
+        <sc-if value="{{ s.opcional }}" hint-placeholder-val="{{ false }}"><span style="font-size: 10.5px; color: #56615B;">Opcional</span></sc-if>
+      </a>
+    </sc-for>
+    <div style="height: 1px; background: #EEF1EE; margin: 12px 4px;"></div>
+    <a href="#" class="it" style="color: #17231D; border: 1px dashed #CFD8D2;">
+      <span style="width: 22px; height: 22px; border-radius: 6px; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></span>
+      <span style="flex: 1;">Productos</span><span style="font-size: 10.5px; color: #56615B;">Módulo aparte →</span>
+    </a>
+    <a href="#" class="it" style="color: #17231D; border: 1px dashed #CFD8D2; margin-top: 6px;">
+      <span style="width: 22px; height: 22px; border-radius: 6px; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></span>
+      <span style="flex: 1;">Servicios</span><span style="font-size: 10.5px; color: #56615B;">Módulo aparte →</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":2,"min":1,"max":8},"empresa":{"editor":"text","default":"DSM-Firmenich"},"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.activo ?? 2;
+    const L = [['Tipo de empresa', 0], ['Cabecera', 0], ['Sobre la empresa', 0], ['Distribuidores', 0], ['Expertos', 1], ['Contenidos', 1], ['Contacto', 0], ['Revisar y publicar', 0]];
+    const items = L.map(([label, opt], i) => {
+      const k = i + 1, done = k < a, cur = k === a, pub = k === 8;
+      return {
+        label: label, opcional: !!opt && !done && !cur, current: cur ? 'page' : 'false',
+        marca: done ? '✓' : (pub ? '→' : String(k)),
+        fondo: cur ? '#EEF6EE' : 'transparent', tinta: cur ? '#0E5A3A' : (done ? '#17231D' : '#4A5650'), peso: cur ? '600' : '400',
+        bFondo: done ? '#0E5A3A' : '#FFFFFF', bTinta: done ? '#FFFFFF' : (cur ? '#0E5A3A' : '#8A948F'),
+        bBorde: done ? '0' : (cur ? '2px solid #0E5A3A' : '1.5px solid #CFD8D2')
+      };
+    });
+    const hechas = Math.min(a - 1, 7);
+    return { items: items, hechas: hechas, pct: Math.round(hechas * 100 / 7) + '%', empresa: this.props.empresa ?? 'DSM-Firmenich' };
+  }
+}
+</script>
+</body>
+</html>

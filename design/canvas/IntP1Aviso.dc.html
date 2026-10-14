@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet · Aviso para hacerse experta</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px}
+.th{width:56px;height:56px;border-radius:10px;background:#EAF0EB;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Mi espacio" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-size: 13px; color: #56615B;">Mi espacio</div>
+      <h1 style="margin: -10px 0 0; font-size: 30px; font-weight: 600;">Hola de nuevo, Laura</h1>
+      <section aria-label="Sugerencia" style="display: flex; align-items: center; gap: 18px; padding: 18px 20px; border-radius: 16px; background: #F6F4FD; border: 1px solid #E2DCF7;">
+        <span style="width: 44px; height: 44px; border-radius: 12px; background: #FFFFFF; color: #4B3BA6; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 2px;">
+          <span style="font-size: 16px; font-weight: 600;">Laura, ¿asesoras a explotaciones?</span>
+          <span style="font-size: 13px; color: #4A5650; line-height: 1.5;">Crea tu perfil de experta y las granjas de avicultura podrán encontrarte y escribirte. Es gratis y usa tu misma cuenta.</span>
+        </span>
+        <a href="#" style="height: 40px; padding: 0 16px; border-radius: 10px; background: #4B3BA6; color: #FFFFFF; font-size: 13.5px; display: flex; align-items: center; white-space: nowrap;">Crear perfil de experta</a>
+        <button type="button" style="height: 40px; padding: 0 12px; border: 0; background: none; font: 500 13px 'Poppins', sans-serif; color: #4A5650; cursor: pointer;">Ahora no</button>
+      </section>
+      <section class="card" style="padding: 18px 20px; display: flex; align-items: center; gap: 18px;">
+        <div style="display: flex; gap: 6px;"><span class="th"></span><span class="th"></span><span class="th"></span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #56615B; font-weight: 500;">CONTINÚA DONDE LO DEJASTE</span><span style="font-size: 17px; font-weight: 600;">Tablero «Clientes · nutrición broilers»</span><span style="font-size: 12.5px; color: #4A5650;">8 productos · 2 comparaciones</span></div>
+        <a href="#" style="height: 42px; padding: 0 18px; border-radius: 10px; border: 1px solid #0E5A3A; font-size: 14px; display: flex; align-items: center;">Abrir tablero</a>
+      </section>
+      <section class="card" style="padding: 16px 20px;">
+        <h2 style="margin: 0 0 10px; font-size: 16px; font-weight: 600;">Para ti · Nutrición avícola</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;"><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div><div style="height: 100px; border-radius: 10px; background: #EAF0EB;"></div></div>
+      </section>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Laura G." iniciales="LG" color="#0E5A3A" variante="personal" abierto="{{ no }}" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { no: false }; }
+}
+</script>
+</body>
+</html>

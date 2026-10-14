@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta · Soy experto o consultor</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.lbl{font-size:13px;font-weight:500;display:flex;flex-direction:column;gap:6px}
+.inp{height:42px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 14px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font:500 13px 'Poppins',sans-serif;color:#17231D;cursor:pointer}
+.chip[aria-pressed="true"]{background:#4B3BA6;border-color:#4B3BA6;color:#FFFFFF}
+.tag{font-size:11.5px;font-weight:500;background:#F1EEFB;color:#4B3BA6;border-radius:999px;padding:3px 10px}
+</style>
+</helmet>
+<div style="width: 1120px; height: 760px; background: #F6F8F6; display: flex; flex-direction: column;">
+  <div style="height: 64px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #E3E8E4;">
+    <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 20px; color: #0E5A3A;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 28px; width: auto; display: block;"><span style="font-size: 12px; font-weight: 600; color: #4B3BA6; background: #F1EEFB; border-radius: 999px; padding: 3px 10px; margin-left: 4px;">Expertos</span></span>
+    <a href="#" style="font-size: 13.5px; color: #4A5650; font-weight: 400;">Terminar más tarde</a>
+  </div>
+
+  <div style="flex: 1; display: flex; gap: 40px; justify-content: center; padding: 32px 40px 0;">
+    <form style="width: 520px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 12.5px; color: #56615B; font-weight: 500;">Paso 1 de 3 · Especialidad</span>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px;"><span style="height: 5px; border-radius: 3px; background: #4B3BA6;"></span><span style="height: 5px; border-radius: 3px; background: #DCE3DE;"></span><span style="height: 5px; border-radius: 3px; background: #DCE3DE;"></span></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Crea tu perfil de experto</h1>
+        <p style="margin: 0; font-size: 13.5px; color: #4A5650; line-height: 1.5;">Es gratis y usa tu misma cuenta. Las explotaciones podrán encontrarte y escribirte.</p>
+      </div>
+      <label class="lbl">Profesión
+        <select class="inp"><option>Veterinario/a</option><option>Nutricionista</option><option>Ingeniero/a agrónomo/a</option><option>Consultor/a</option></select>
+      </label>
+      <label class="lbl">Titular profesional
+        <input class="inp" type="text" value="Veterinaria especialista en nutrición avícola">
+      </label>
+      <div class="lbl">Especialidades <span style="font-weight: 400; color: #56615B; font-size: 12px;">Hasta 5</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <button type="button" class="chip" aria-pressed="true">Avicultura</button>
+          <button type="button" class="chip" aria-pressed="true">Nutrición</button>
+          <button type="button" class="chip" aria-pressed="true">Bioseguridad</button>
+          <button type="button" class="chip" aria-pressed="false">Porcino</button>
+          <button type="button" class="chip" aria-pressed="false">Bienestar animal</button>
+          <button type="button" class="chip" aria-pressed="false">Sanidad</button>
+          <button type="button" class="chip" aria-pressed="false">+ Otra</button>
+        </div>
+      </div>
+      <label class="lbl">Zona donde trabajas
+        <input class="inp" type="text" value="España · Cataluña, Aragón">
+      </label>
+      <div style="display: flex; justify-content: flex-end; padding-top: 4px;">
+        <button type="submit" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Continuar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </form>
+
+    <div style="width: 360px; display: flex; flex-direction: column; gap: 10px; padding-top: 74px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #56615B;">Así te verán los compradores</span>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <span style="width: 52px; height: 52px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">LG</span>
+          <span style="display: flex; flex-direction: column;"><span style="font-weight: 600; font-size: 15px;">Laura Gil</span><span style="font-size: 12.5px; color: #4A5650;">Veterinaria especialista en nutrición avícola</span></span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="tag">Avicultura</span><span class="tag">Nutrición</span><span class="tag">Bioseguridad</span></div>
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: #4A5650;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Cataluña, Aragón</div>
+        <span style="height: 40px; border-radius: 10px; border: 1px solid #0E5A3A; color: #0E5A3A; font-size: 13.5px; font-weight: 500; display: flex; align-items: center; justify-content: center;">Contactar</span>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #56615B; line-height: 1.5;">Siguientes pasos: 2 · Servicios (opcional) · 3 · Revisar y publicar. La verificación de colegiación se pide al publicar.</p>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1120,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
