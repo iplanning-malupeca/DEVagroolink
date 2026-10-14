@@ -878,31 +878,47 @@
       "y": 0,
       "w": 1280,
       "h": 940,
-      "title": "X2 · Marcas: propias, autorizadas y sin verificar",
+      "title": "X2 · Marcas (se generan desde los productos)",
       "page": "distmulti"
     },
     "DisAutorizacion.dc.html": {
-      "x": 2720,
-      "y": 0,
-      "w": 1280,
-      "h": 940,
-      "title": "X3 · Pedir autorización a una marca (Zucami)",
-      "page": "distmulti"
-    },
-    "DisContacto.dc.html": {
       "x": 0,
       "y": 1240,
       "w": 1280,
       "h": 940,
-      "title": "X4 · Contacto: delegaciones por país",
+      "title": "X5 · Validación de la marca (lo que recibe Zucami)",
       "page": "distmulti"
     },
-    "DisPublicar.dc.html": {
+    "DisContacto.dc.html": {
       "x": 1360,
       "y": 1240,
       "w": 1280,
       "h": 940,
-      "title": "X5 · Revisar y publicar",
+      "title": "X6 · Contacto: delegaciones por país",
+      "page": "distmulti"
+    },
+    "DisPublicar.dc.html": {
+      "x": 2720,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "X7 · Revisar y publicar",
+      "page": "distmulti"
+    },
+    "DisElegir.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "X3 · Añadir productos que ya existen en Agroolink",
+      "page": "distmulti"
+    },
+    "DisSubir.dc.html": {
+      "x": 4080,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "X4 · Subir un producto nuevo (con control de duplicados)",
       "page": "distmulti"
     }
   },
@@ -1010,6 +1026,8 @@
     "DisAutorizacion.dc.html",
     "DisContacto.dc.html",
     "DisPublicar.dc.html",
+    "DisElegir.dc.html",
+    "DisSubir.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -1240,17 +1258,17 @@
     "disT1": {
       "x": 0,
       "y": -300,
-      "text": "Alta · Distribuidor multimarca (AgroNova)",
+      "text": "Alta · Distribuidor multimarca (AgroNova): elige productos o los sube",
       "kind": "title1",
-      "maxW": 4000,
+      "maxW": 5360,
       "page": "distmulti"
     },
     "disT2": {
       "x": 0,
       "y": 1040,
-      "text": "Contacto y publicación",
+      "text": "Validación de la marca, contacto y publicación",
       "kind": "title1",
-      "maxW": 2640,
+      "maxW": 4000,
       "page": "distmulti"
     }
   },
