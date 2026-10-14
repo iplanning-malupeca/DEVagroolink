@@ -1,0 +1,3682 @@
+{
+  "version": "1.0",
+  "fecha": "2026-10-14",
+  "comun": [
+    {
+      "key": "nombre",
+      "label": "Nombre comercial",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "referencia",
+      "label": "Referencia",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "subtitulo",
+      "label": "Subtítulo",
+      "type": "text",
+      "note": "máx. 90"
+    },
+    {
+      "key": "descripcion_corta",
+      "label": "Descripción corta",
+      "type": "text",
+      "required": true,
+      "note": "máx. 300"
+    },
+    {
+      "key": "descripcion",
+      "label": "Descripción completa",
+      "type": "richtext"
+    },
+    {
+      "key": "galeria",
+      "label": "Galería",
+      "type": "images",
+      "required": true,
+      "note": "mín. 1, máx. 12"
+    },
+    {
+      "key": "video",
+      "label": "Vídeo con capítulos",
+      "type": "video"
+    },
+    {
+      "key": "familia",
+      "label": "Familia",
+      "type": "ref",
+      "required": true
+    },
+    {
+      "key": "tipo",
+      "label": "Tipo de producto",
+      "type": "ref",
+      "required": true
+    },
+    {
+      "key": "formato",
+      "label": "Formato",
+      "type": "list"
+    },
+    {
+      "key": "aplicacion",
+      "label": "Especies y fase productiva",
+      "type": "ref",
+      "note": "Clasificación común de Agroolink"
+    },
+    {
+      "key": "objetivos",
+      "label": "Objetivos",
+      "type": "list"
+    },
+    {
+      "key": "beneficios",
+      "label": "Beneficios clave",
+      "type": "list",
+      "note": "máx. 5, con icono"
+    },
+    {
+      "key": "documentos",
+      "label": "Documentos",
+      "type": "doc",
+      "note": "Con idioma y visibilidad"
+    },
+    {
+      "key": "certificaciones",
+      "label": "Certificaciones",
+      "type": "list"
+    },
+    {
+      "key": "mercados",
+      "label": "Mercados",
+      "type": "ref",
+      "required": true,
+      "note": "mín. 1 país"
+    },
+    {
+      "key": "distribuidores",
+      "label": "Distribuidores",
+      "type": "ref",
+      "note": "Vienen de los acuerdos de distribución"
+    },
+    {
+      "key": "relacionados",
+      "label": "Productos relacionados",
+      "type": "ref",
+      "note": "Automáticos o manuales"
+    }
+  ],
+  "arquetipos": {
+    "insumo": {
+      "label": "Insumo",
+      "resumen": "Se vende por peso o volumen y se dosifica. Variantes por embalaje.",
+      "variante": {
+        "eje": "embalaje",
+        "campos": [
+          {
+            "key": "envase",
+            "label": "Envase",
+            "type": "list",
+            "options": [
+              "Saco",
+              "Big bag",
+              "Granel",
+              "Bidón",
+              "IBC",
+              "Cubo"
+            ]
+          },
+          {
+            "key": "peso_neto",
+            "label": "Peso o volumen neto",
+            "type": "number",
+            "unit": "kg | L",
+            "required": true
+          },
+          {
+            "key": "uds_pale",
+            "label": "Unidades por palé",
+            "type": "number"
+          }
+        ]
+      },
+      "cta": "Solicitar información"
+    },
+    "sanitario": {
+      "label": "Sanitario regulado",
+      "resumen": "Medicamentos y biocidas. Registro por país y, a veces, receta veterinaria.",
+      "variante": {
+        "eje": "presentación",
+        "campos": [
+          {
+            "key": "envase",
+            "label": "Envase",
+            "type": "list",
+            "options": [
+              "Vial",
+              "Frasco",
+              "Bolsa",
+              "Jeringa",
+              "Sobre",
+              "Bidón"
+            ]
+          },
+          {
+            "key": "contenido",
+            "label": "Contenido",
+            "type": "number",
+            "unit": "mL | g | dosis",
+            "required": true
+          }
+        ]
+      },
+      "cta": "Solicitar información"
+    },
+    "genetico": {
+      "label": "Genético",
+      "resumen": "Material vivo o reproductivo. Se valora por índices y estatus sanitario.",
+      "variante": {
+        "eje": "formato",
+        "campos": [
+          {
+            "key": "formato",
+            "label": "Formato",
+            "type": "list",
+            "options": [
+              "Pajuela",
+              "Dosis",
+              "Embrión",
+              "Animal vivo",
+              "Huevo fértil"
+            ]
+          },
+          {
+            "key": "cantidad",
+            "label": "Cantidad por unidad de venta",
+            "type": "number",
+            "unit": "uds"
+          }
+        ]
+      },
+      "cta": "Solicitar información"
+    },
+    "equipo": {
+      "label": "Equipo e instalación",
+      "resumen": "Máquinas e instalaciones. Se configuran, se instalan y tienen servicio técnico.",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "cta": "Pedir presupuesto"
+    },
+    "digital": {
+      "label": "Digital",
+      "resumen": "Software, sensores y plataformas. Se contrata por plan o licencia y se integra con otros sistemas.",
+      "variante": {
+        "eje": "plan",
+        "campos": [
+          {
+            "key": "plan",
+            "label": "Nombre del plan",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "limite",
+            "label": "Límite incluido",
+            "type": "number",
+            "unit": "animales | usuarios | dispositivos"
+          },
+          {
+            "key": "modalidad",
+            "label": "Modalidad",
+            "type": "list",
+            "options": [
+              "Suscripción",
+              "Licencia",
+              "Hardware + suscripción"
+            ]
+          }
+        ]
+      },
+      "cta": "Solicitar demo"
+    }
+  },
+  "bloques": {
+    "dosificacion": {
+      "label": "Dosificación",
+      "donde": "Especificaciones",
+      "tabla": true,
+      "fields": [
+        {
+          "key": "especie",
+          "label": "Especie y fase",
+          "type": "ref",
+          "note": "De Aplicación"
+        },
+        {
+          "key": "dosis",
+          "label": "Dosis",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad",
+          "type": "list",
+          "options": [
+            "g/t pienso",
+            "kg/t pienso",
+            "mL/L agua",
+            "g/animal/día"
+          ]
+        },
+        {
+          "key": "via",
+          "label": "Vía",
+          "type": "list",
+          "options": [
+            "Pienso",
+            "Agua de bebida",
+            "Premezcla"
+          ]
+        }
+      ]
+    },
+    "conservacion": {
+      "label": "Conservación",
+      "donde": "Especificaciones",
+      "fields": [
+        {
+          "key": "vida_util",
+          "label": "Vida útil",
+          "type": "number",
+          "unit": "meses"
+        },
+        {
+          "key": "temp_max",
+          "label": "Temperatura máxima",
+          "type": "number",
+          "unit": "°C"
+        },
+        {
+          "key": "condiciones",
+          "label": "Condiciones",
+          "type": "text"
+        }
+      ]
+    },
+    "analisis": {
+      "label": "Análisis típico",
+      "donde": "Especificaciones",
+      "tabla": true,
+      "fields": [
+        {
+          "key": "parametro",
+          "label": "Parámetro",
+          "type": "list",
+          "options": [
+            "Humedad",
+            "Proteína bruta",
+            "Grasa",
+            "Fibra",
+            "Cenizas",
+            "Almidón",
+            "Energía"
+          ]
+        },
+        {
+          "key": "valor",
+          "label": "Valor",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad",
+          "type": "list",
+          "options": [
+            "%",
+            "% s.m.s.",
+            "kcal/kg"
+          ]
+        },
+        {
+          "key": "metodo",
+          "label": "Método",
+          "type": "text"
+        }
+      ]
+    },
+    "origen_logistica": {
+      "label": "Origen y logística",
+      "donde": "Especificaciones",
+      "fields": [
+        {
+          "key": "origen",
+          "label": "Origen",
+          "type": "list",
+          "note": "País o región"
+        },
+        {
+          "key": "cosecha",
+          "label": "Campaña o cosecha",
+          "type": "text"
+        },
+        {
+          "key": "pedido_minimo",
+          "label": "Pedido mínimo",
+          "type": "number",
+          "unit": "t"
+        },
+        {
+          "key": "entrega",
+          "label": "Punto de entrega",
+          "type": "text",
+          "note": "Puerto, almacén o en granja"
+        }
+      ]
+    },
+    "registro_prescripcion": {
+      "label": "Registro y prescripción",
+      "donde": "Mercados y dónde comprar",
+      "fields": [
+        {
+          "key": "requiere_receta",
+          "label": "Requiere receta veterinaria",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "key": "registro_pais",
+          "label": "Registro por país",
+          "type": "table",
+          "required": true,
+          "note": "País · nº de registro · titular. Sin registro no se publica en ese país"
+        },
+        {
+          "key": "retirada",
+          "label": "Periodo de retirada",
+          "type": "table",
+          "note": "Especie · carne (días) · leche (días) · huevos (días)"
+        }
+      ]
+    },
+    "administracion": {
+      "label": "Administración",
+      "donde": "Especificaciones",
+      "fields": [
+        {
+          "key": "via",
+          "label": "Vía",
+          "type": "list",
+          "options": [
+            "Oral",
+            "Agua de bebida",
+            "Inyectable IM",
+            "Inyectable SC",
+            "Spray",
+            "Ocular",
+            "Tópica"
+          ]
+        },
+        {
+          "key": "pauta",
+          "label": "Pauta",
+          "type": "text"
+        },
+        {
+          "key": "conservacion",
+          "label": "Conservación",
+          "type": "text",
+          "unit": "°C"
+        }
+      ]
+    },
+    "rendimiento": {
+      "label": "Índices y rendimiento",
+      "donde": "Resultados",
+      "tabla": true,
+      "fields": [
+        {
+          "key": "parametro",
+          "label": "Parámetro",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "valor",
+          "label": "Valor",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad",
+          "type": "text"
+        },
+        {
+          "key": "fuente",
+          "label": "Fuente",
+          "type": "text",
+          "required": true,
+          "note": "Obligatoria para publicar el índice"
+        },
+        {
+          "key": "fecha",
+          "label": "Fecha",
+          "type": "date"
+        }
+      ]
+    },
+    "sanidad_genetica": {
+      "label": "Estatus sanitario",
+      "donde": "Documentación",
+      "fields": [
+        {
+          "key": "estatus",
+          "label": "Estatus sanitario",
+          "type": "text"
+        },
+        {
+          "key": "certificados",
+          "label": "Certificados sanitarios",
+          "type": "doc"
+        }
+      ]
+    },
+    "dimensiones": {
+      "label": "Dimensiones y capacidad",
+      "donde": "Especificaciones",
+      "por_variante": true,
+      "fields": [
+        {
+          "key": "dimensiones",
+          "label": "Largo × ancho × alto",
+          "type": "text",
+          "unit": "mm"
+        },
+        {
+          "key": "peso",
+          "label": "Peso",
+          "type": "number",
+          "unit": "kg"
+        },
+        {
+          "key": "capacidad",
+          "label": "Capacidad",
+          "type": "number",
+          "note": "La unidad depende del tipo"
+        }
+      ]
+    },
+    "energia": {
+      "label": "Energía y consumos",
+      "donde": "Especificaciones",
+      "por_variante": true,
+      "fields": [
+        {
+          "key": "potencia",
+          "label": "Potencia",
+          "type": "number",
+          "unit": "kW"
+        },
+        {
+          "key": "alimentacion",
+          "label": "Alimentación eléctrica",
+          "type": "list",
+          "options": [
+            "230 V",
+            "400 V trifásica",
+            "Batería",
+            "Solar"
+          ]
+        },
+        {
+          "key": "consumo",
+          "label": "Consumo",
+          "type": "number",
+          "unit": "kWh/día"
+        }
+      ]
+    },
+    "instalacion": {
+      "label": "Instalación y servicio",
+      "donde": "Especificaciones",
+      "fields": [
+        {
+          "key": "plazo",
+          "label": "Plazo de entrega",
+          "type": "number",
+          "unit": "semanas"
+        },
+        {
+          "key": "montaje",
+          "label": "Montaje incluido",
+          "type": "bool"
+        },
+        {
+          "key": "garantia",
+          "label": "Garantía",
+          "type": "number",
+          "unit": "años"
+        },
+        {
+          "key": "servicio_tecnico",
+          "label": "Servicio técnico",
+          "type": "ref",
+          "note": "Por país, en Mercados"
+        },
+        {
+          "key": "repuestos",
+          "label": "Repuestos disponibles",
+          "type": "bool"
+        }
+      ]
+    },
+    "normativa": {
+      "label": "Normativa",
+      "donde": "Documentación",
+      "fields": [
+        {
+          "key": "marcado_ce",
+          "label": "Marcado CE",
+          "type": "bool"
+        },
+        {
+          "key": "normas",
+          "label": "Normas que cumple",
+          "type": "list",
+          "note": "Multiselección + texto libre"
+        }
+      ]
+    },
+    "impacto": {
+      "label": "Impacto ambiental",
+      "donde": "Resultados",
+      "fields": [
+        {
+          "key": "reduccion",
+          "label": "Reducción declarada",
+          "type": "number",
+          "unit": "%"
+        },
+        {
+          "key": "objetivo",
+          "label": "Sobre qué",
+          "type": "list",
+          "options": [
+            "Amoniaco",
+            "Metano",
+            "CO₂",
+            "Olores",
+            "Consumo energético",
+            "Consumo de agua"
+          ]
+        },
+        {
+          "key": "fuente",
+          "label": "Fuente del dato",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "subvencionable",
+          "label": "Subvencionable",
+          "type": "bool",
+          "note": "Programas o ayudas aplicables"
+        }
+      ]
+    },
+    "compatibilidad": {
+      "label": "Compatibilidad e integraciones",
+      "donde": "Especificaciones",
+      "fields": [
+        {
+          "key": "integraciones",
+          "label": "Se integra con",
+          "type": "list",
+          "note": "Multiselección de productos y marcas de Agroolink + texto libre"
+        },
+        {
+          "key": "api",
+          "label": "API abierta",
+          "type": "bool"
+        },
+        {
+          "key": "protocolos",
+          "label": "Protocolos",
+          "type": "list",
+          "options": [
+            "MQTT",
+            "Modbus",
+            "REST",
+            "ISOBUS",
+            "LoRaWAN",
+            "Bluetooth"
+          ]
+        },
+        {
+          "key": "idiomas",
+          "label": "Idiomas",
+          "type": "list"
+        },
+        {
+          "key": "requisitos",
+          "label": "Requisitos",
+          "type": "text"
+        }
+      ]
+    },
+    "hardware": {
+      "label": "Hardware",
+      "donde": "Especificaciones",
+      "opcional": true,
+      "fields": [
+        {
+          "key": "autonomia",
+          "label": "Autonomía",
+          "type": "number",
+          "unit": "días"
+        },
+        {
+          "key": "conectividad",
+          "label": "Conectividad",
+          "type": "list",
+          "options": [
+            "Wi-Fi",
+            "4G",
+            "LoRaWAN",
+            "Bluetooth",
+            "Cable"
+          ]
+        },
+        {
+          "key": "ip",
+          "label": "Protección",
+          "type": "list",
+          "options": [
+            "IP54",
+            "IP65",
+            "IP67",
+            "IP68"
+          ]
+        }
+      ]
+    }
+  },
+  "documentos": {
+    "ficha_tecnica": {
+      "label": "Ficha técnica",
+      "visibilidad_por_defecto": "Público"
+    },
+    "sds": {
+      "label": "Ficha de seguridad (SDS)",
+      "visibilidad_por_defecto": "Usuarios registrados"
+    },
+    "certificado_analisis": {
+      "label": "Certificado de análisis",
+      "visibilidad_por_defecto": "Solo distribuidores"
+    },
+    "prospecto": {
+      "label": "Prospecto / resumen de características",
+      "visibilidad_por_defecto": "Según país"
+    },
+    "registro": {
+      "label": "Certificado de registro por país",
+      "visibilidad_por_defecto": "Solo distribuidores"
+    },
+    "certificado_sanitario": {
+      "label": "Certificado sanitario",
+      "visibilidad_por_defecto": "Usuarios registrados"
+    },
+    "catalogo_indices": {
+      "label": "Catálogo de índices",
+      "visibilidad_por_defecto": "Público"
+    },
+    "manual": {
+      "label": "Manual de instalación y uso",
+      "visibilidad_por_defecto": "Usuarios registrados"
+    },
+    "declaracion_ce": {
+      "label": "Declaración CE de conformidad",
+      "visibilidad_por_defecto": "Usuarios registrados"
+    },
+    "planos": {
+      "label": "Planos y CAD",
+      "visibilidad_por_defecto": "Solo distribuidores"
+    },
+    "estudio_impacto": {
+      "label": "Estudio de impacto o ahorro",
+      "visibilidad_por_defecto": "Público"
+    },
+    "documentacion_api": {
+      "label": "Documentación de la API",
+      "visibilidad_por_defecto": "Usuarios registrados"
+    },
+    "rgpd": {
+      "label": "Tratamiento de datos (RGPD)",
+      "visibilidad_por_defecto": "Público"
+    }
+  },
+  "atributos": {
+    "modelo": "sugeridos por tipo (ninguno obligatorio) + propios (nombre, valor, unidad) + comparables (número con unidad)",
+    "campos": [
+      {
+        "key": "nombre",
+        "label": "Nombre",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "valor",
+        "label": "Valor",
+        "type": "text|number",
+        "required": true
+      },
+      {
+        "key": "unidad",
+        "label": "Unidad",
+        "type": "text"
+      },
+      {
+        "key": "variante",
+        "label": "Variante",
+        "type": "ref",
+        "note": "Vacío = común a todas"
+      }
+    ]
+  },
+  "familias": [
+    {
+      "id": "nutricion",
+      "label": "Nutrición animal y aditivos",
+      "arquetipo": "insumo",
+      "cta": "Solicitar información",
+      "variante": {
+        "eje": "embalaje",
+        "campos": [
+          {
+            "key": "envase",
+            "label": "Envase",
+            "type": "list",
+            "options": [
+              "Saco",
+              "Big bag",
+              "Granel",
+              "Bidón",
+              "IBC",
+              "Cubo"
+            ]
+          },
+          {
+            "key": "peso_neto",
+            "label": "Peso o volumen neto",
+            "type": "number",
+            "unit": "kg | L",
+            "required": true
+          },
+          {
+            "key": "uds_pale",
+            "label": "Unidades por palé",
+            "type": "number"
+          }
+        ]
+      },
+      "bloques": [
+        "dosificacion",
+        "conservacion"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "sds",
+        "certificado_analisis"
+      ],
+      "reglas": [
+        "La dosis se informa por especie y fase de Aplicación; no se duplica la especie.",
+        "La autorización o registro del aditivo va en Mercados, por país."
+      ],
+      "tipos": [
+        {
+          "id": "piensos_completos",
+          "label": "Piensos completos",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Proteína bruta",
+              "type": "number",
+              "unit": "%",
+              "comparable": true
+            },
+            {
+              "label": "Grasa",
+              "type": "number",
+              "unit": "%",
+              "comparable": true
+            },
+            {
+              "label": "Fibra",
+              "type": "number",
+              "unit": "%",
+              "comparable": true
+            },
+            {
+              "label": "Energía metabolizable",
+              "type": "number",
+              "unit": "kcal/kg",
+              "comparable": true
+            }
+          ]
+        },
+        {
+          "id": "piensos_complementarios",
+          "label": "Piensos complementarios",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Objetivo nutricional",
+              "type": "text"
+            },
+            {
+              "label": "Dosis de inclusión",
+              "type": "number",
+              "unit": "g/t"
+            },
+            {
+              "label": "Composición",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "premezclas",
+          "label": "Premezclas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Vitaminas",
+              "type": "text"
+            },
+            {
+              "label": "Minerales",
+              "type": "text"
+            },
+            {
+              "label": "Concentración de activos",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Dosis por tonelada",
+              "type": "number",
+              "unit": "g/t"
+            },
+            {
+              "label": "Soporte",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "nucleos_nutricionales",
+          "label": "Núcleos nutricionales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Composición",
+              "type": "text"
+            },
+            {
+              "label": "Porcentaje de inclusión",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "acidificantes",
+          "label": "Acidificantes",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Ácidos activos",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "PH",
+              "type": "text"
+            },
+            {
+              "label": "Dosis de inclusión",
+              "type": "number",
+              "unit": "g/t"
+            }
+          ]
+        },
+        {
+          "id": "probioticos",
+          "label": "Probióticos",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Cepas",
+              "type": "text"
+            },
+            {
+              "label": "UFC/g",
+              "type": "number",
+              "unit": "UFC/g",
+              "comparable": true
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t",
+              "comparable": true
+            },
+            {
+              "label": "Estabilidad térmica",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "prebioticos",
+          "label": "Prebióticos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Ingrediente activo",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Tipo de fibra",
+              "type": "list"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t"
+            }
+          ]
+        },
+        {
+          "id": "enzimas",
+          "label": "Enzimas",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Tipo de enzima",
+              "type": "list"
+            },
+            {
+              "label": "Actividad enzimática",
+              "type": "number",
+              "unit": "U/g",
+              "comparable": true
+            },
+            {
+              "label": "Estabilidad térmica",
+              "type": "text"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t",
+              "comparable": true
+            }
+          ]
+        },
+        {
+          "id": "fitogenicos",
+          "label": "Fitogénicos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Extractos vegetales",
+              "type": "text"
+            },
+            {
+              "label": "Principios activos",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t"
+            }
+          ]
+        },
+        {
+          "id": "adsorbentes_de_micotoxinas",
+          "label": "Adsorbentes de micotoxinas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Micotoxinas objetivo",
+              "type": "text"
+            },
+            {
+              "label": "Composición",
+              "type": "text"
+            },
+            {
+              "label": "Capacidad de adsorción",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t"
+            }
+          ]
+        },
+        {
+          "id": "aminoacidos",
+          "label": "Aminoácidos",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Aminoácido",
+              "type": "text"
+            },
+            {
+              "label": "Pureza",
+              "type": "number",
+              "unit": "%",
+              "comparable": true
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "vitaminas",
+          "label": "Vitaminas",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Vitamina",
+              "type": "text"
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "UI/g",
+              "comparable": true
+            },
+            {
+              "label": "Estabilidad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "minerales_y_oligoelementos",
+          "label": "Minerales y oligoelementos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Mineral",
+              "type": "text"
+            },
+            {
+              "label": "Forma química",
+              "type": "list"
+            },
+            {
+              "label": "Biodisponibilidad declarada",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "grasas_y_aceites",
+          "label": "Grasas y aceites",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Origen",
+              "type": "list"
+            },
+            {
+              "label": "Perfil de ácidos grasos",
+              "type": "text"
+            },
+            {
+              "label": "Energía",
+              "type": "number",
+              "unit": "kcal/kg"
+            },
+            {
+              "label": "Oxidación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "conservantes_y_antioxidantes",
+          "label": "Conservantes y antioxidantes",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Sustancias activas",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Aplicación",
+              "type": "text"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t"
+            }
+          ]
+        },
+        {
+          "id": "sustitutos_lacteos",
+          "label": "Sustitutos lácteos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Proteína",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Grasa",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Lactosa",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Digestibilidad",
+              "type": "text"
+            },
+            {
+              "label": "Dilución",
+              "type": "number",
+              "unit": "g/L"
+            }
+          ]
+        },
+        {
+          "id": "aditivos_tecnologicos",
+          "label": "Aditivos tecnológicos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Función",
+              "type": "list"
+            },
+            {
+              "label": "Composición",
+              "type": "text"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t"
+            },
+            {
+              "label": "Compatibilidad con procesos",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "materias_primas",
+      "label": "Materias primas y productos agrícolas",
+      "arquetipo": "insumo",
+      "cta": "Pedir cotización",
+      "variante": {
+        "eje": "embalaje",
+        "campos": [
+          {
+            "key": "envase",
+            "label": "Envase",
+            "type": "list",
+            "options": [
+              "Saco",
+              "Big bag",
+              "Granel",
+              "Bidón",
+              "IBC",
+              "Cubo"
+            ]
+          },
+          {
+            "key": "peso_neto",
+            "label": "Peso o volumen neto",
+            "type": "number",
+            "unit": "kg | L",
+            "required": true
+          },
+          {
+            "key": "uds_pale",
+            "label": "Unidades por palé",
+            "type": "number"
+          }
+        ]
+      },
+      "bloques": [
+        "analisis",
+        "origen_logistica",
+        "conservacion"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "certificado_analisis",
+        "sds"
+      ],
+      "reglas": [
+        "CTA propio: «Pedir cotización». El precio cambia por campaña y no se publica.",
+        "El análisis es típico o medio; se puede indicar por lote en la versión local."
+      ],
+      "tipos": [
+        {
+          "id": "cereales",
+          "label": "Cereales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Origen",
+              "type": "list"
+            },
+            {
+              "label": "Humedad",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Proteína",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Energía",
+              "type": "number",
+              "unit": "kcal/kg"
+            },
+            {
+              "label": "Peso específico",
+              "type": "number",
+              "unit": "kg/hL"
+            }
+          ]
+        },
+        {
+          "id": "harinas_proteicas",
+          "label": "Harinas proteicas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Origen",
+              "type": "list"
+            },
+            {
+              "label": "Proteína",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Fibra",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Grasa",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Digestibilidad",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "subproductos_agroindustriales",
+          "label": "Subproductos agroindustriales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Composición",
+              "type": "text"
+            },
+            {
+              "label": "Humedad",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Energía",
+              "type": "number",
+              "unit": "kcal/kg"
+            }
+          ]
+        },
+        {
+          "id": "forrajes",
+          "label": "Forrajes",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Materia seca",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Proteína",
+              "type": "number",
+              "unit": "% s.m.s."
+            },
+            {
+              "label": "FND",
+              "type": "number",
+              "unit": "% s.m.s."
+            },
+            {
+              "label": "FDA",
+              "type": "number",
+              "unit": "% s.m.s."
+            },
+            {
+              "label": "Digestibilidad",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "aditivos_para_ensilado",
+          "label": "Aditivos para ensilado",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Microorganismos/activos",
+              "type": "text"
+            },
+            {
+              "label": "UFC",
+              "type": "number",
+              "unit": "UFC/g"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "g/t forraje"
+            },
+            {
+              "label": "Aplicación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "conservantes_de_materias_primas",
+          "label": "Conservantes de materias primas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Activos",
+              "type": "text"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "kg/t"
+            },
+            {
+              "label": "Espectro",
+              "type": "list"
+            },
+            {
+              "label": "Duración",
+              "type": "number",
+              "unit": "meses"
+            }
+          ]
+        },
+        {
+          "id": "productos_para_almacenamiento",
+          "label": "Productos para almacenamiento",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Tipo",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "t"
+            },
+            {
+              "label": "Condiciones de conservación",
+              "type": "list"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salud",
+      "label": "Salud animal y bioseguridad",
+      "arquetipo": "sanitario",
+      "cta": "Solicitar información",
+      "variante": {
+        "eje": "presentación",
+        "campos": [
+          {
+            "key": "envase",
+            "label": "Envase",
+            "type": "list",
+            "options": [
+              "Vial",
+              "Frasco",
+              "Bolsa",
+              "Jeringa",
+              "Sobre",
+              "Bidón"
+            ]
+          },
+          {
+            "key": "contenido",
+            "label": "Contenido",
+            "type": "number",
+            "unit": "mL | g | dosis",
+            "required": true
+          }
+        ]
+      },
+      "bloques": [
+        "registro_prescripcion",
+        "administracion"
+      ],
+      "documentos": [
+        "prospecto",
+        "ficha_tecnica",
+        "sds",
+        "registro"
+      ],
+      "reglas": [
+        "Si requiere receta: aviso «Medicamento sujeto a prescripción veterinaria» y el contacto va solo a distribuidores autorizados o al fabricante.",
+        "Sin nº de registro en un país, el producto no se publica en ese país.",
+        "La publicidad de medicamentos tiene límites por país: validar textos con el área legal."
+      ],
+      "tipos": [
+        {
+          "id": "vacunas",
+          "label": "Vacunas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Enfermedad",
+              "type": "text"
+            },
+            {
+              "label": "Agente objetivo",
+              "type": "text"
+            },
+            {
+              "label": "Edad",
+              "type": "text"
+            },
+            {
+              "label": "Vía",
+              "type": "list"
+            },
+            {
+              "label": "Pauta",
+              "type": "text"
+            },
+            {
+              "label": "Conservación",
+              "type": "number",
+              "unit": "°C"
+            }
+          ]
+        },
+        {
+          "id": "antibioticos_veterinarios",
+          "label": "Antibióticos veterinarios",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Principio activo",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "mg/mL"
+            },
+            {
+              "label": "Indicación autorizada",
+              "type": "text"
+            },
+            {
+              "label": "Vía",
+              "type": "list"
+            },
+            {
+              "label": "Periodo de retirada",
+              "type": "number",
+              "unit": "días"
+            }
+          ]
+        },
+        {
+          "id": "antiparasitarios",
+          "label": "Antiparasitarios",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Parásito objetivo",
+              "type": "text"
+            },
+            {
+              "label": "Principio activo",
+              "type": "text"
+            },
+            {
+              "label": "Duración",
+              "type": "number",
+              "unit": "días"
+            },
+            {
+              "label": "Vía",
+              "type": "list"
+            },
+            {
+              "label": "Periodo de retirada",
+              "type": "number",
+              "unit": "días"
+            }
+          ]
+        },
+        {
+          "id": "antiinflamatorios",
+          "label": "Antiinflamatorios",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Principio activo",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "mg/mL"
+            },
+            {
+              "label": "Indicación",
+              "type": "text"
+            },
+            {
+              "label": "Vía",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "desinfectantes",
+          "label": "Desinfectantes",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Principios activos",
+              "type": "text"
+            },
+            {
+              "label": "Espectro",
+              "type": "list"
+            },
+            {
+              "label": "Dilución",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Tiempo de contacto",
+              "type": "number",
+              "unit": "min"
+            },
+            {
+              "label": "Superficies",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "productos_de_higiene",
+          "label": "Productos de higiene",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Aplicación",
+              "type": "text"
+            },
+            {
+              "label": "Composición",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Método de uso",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "diagnostico_rapido",
+          "label": "Diagnóstico rápido",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Patógeno",
+              "type": "text"
+            },
+            {
+              "label": "Muestra",
+              "type": "list"
+            },
+            {
+              "label": "Método",
+              "type": "list"
+            },
+            {
+              "label": "Tiempo de resultado",
+              "type": "number",
+              "unit": "min"
+            },
+            {
+              "label": "Sensibilidad y especificidad",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "kits_pcr_laboratorio",
+          "label": "Kits PCR / laboratorio",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Diana diagnóstica",
+              "type": "text"
+            },
+            {
+              "label": "Tipo de muestra",
+              "type": "list"
+            },
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "muestras/serie"
+            },
+            {
+              "label": "Tiempo de análisis",
+              "type": "number",
+              "unit": "h"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_vacunacion",
+          "label": "Equipos de vacunación",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "animales/h"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "mL"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Sistema de aplicación",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "control_de_plagas",
+          "label": "Control de plagas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Organismo objetivo",
+              "type": "text"
+            },
+            {
+              "label": "Método de aplicación",
+              "type": "list"
+            },
+            {
+              "label": "Duración",
+              "type": "number",
+              "unit": "días"
+            },
+            {
+              "label": "Ámbito autorizado",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "genetica",
+      "label": "Genética y reproducción",
+      "arquetipo": "genetico",
+      "cta": "Solicitar información",
+      "variante": {
+        "eje": "formato",
+        "campos": [
+          {
+            "key": "formato",
+            "label": "Formato",
+            "type": "list",
+            "options": [
+              "Pajuela",
+              "Dosis",
+              "Embrión",
+              "Animal vivo",
+              "Huevo fértil"
+            ]
+          },
+          {
+            "key": "cantidad",
+            "label": "Cantidad por unidad de venta",
+            "type": "number",
+            "unit": "uds"
+          }
+        ]
+      },
+      "bloques": [
+        "rendimiento",
+        "sanidad_genetica"
+      ],
+      "documentos": [
+        "catalogo_indices",
+        "certificado_sanitario",
+        "ficha_tecnica"
+      ],
+      "reglas": [
+        "Cada índice publicado lleva fuente y fecha.",
+        "Los equipos de este grupo (inseminación, incubación) usan los bloques de «Equipo e instalación»."
+      ],
+      "tipos": [
+        {
+          "id": "lineas_geneticas_porcinas",
+          "label": "Líneas genéticas porcinas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Línea",
+              "type": "text"
+            },
+            {
+              "label": "Aptitud maternal/terminal",
+              "type": "list"
+            },
+            {
+              "label": "Prolificidad",
+              "type": "number",
+              "unit": "lechones/parto"
+            },
+            {
+              "label": "Crecimiento",
+              "type": "text"
+            },
+            {
+              "label": "Conversión",
+              "type": "number",
+              "unit": "kg/kg"
+            }
+          ]
+        },
+        {
+          "id": "genetica_avicola",
+          "label": "Genética avícola",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Línea",
+              "type": "text"
+            },
+            {
+              "label": "Orientación carne/puesta",
+              "type": "list"
+            },
+            {
+              "label": "Rendimiento",
+              "type": "number",
+              "unit": "huevos/gallina"
+            },
+            {
+              "label": "Persistencia",
+              "type": "text"
+            },
+            {
+              "label": "Viabilidad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "genetica_bovina",
+          "label": "Genética bovina",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Raza",
+              "type": "list"
+            },
+            {
+              "label": "Índices genéticos",
+              "type": "text"
+            },
+            {
+              "label": "Producción",
+              "type": "text"
+            },
+            {
+              "label": "Fertilidad",
+              "type": "text"
+            },
+            {
+              "label": "Facilidad de parto",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "semen_y_dosis_seminales",
+          "label": "Semen y dosis seminales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Raza/línea",
+              "type": "list"
+            },
+            {
+              "label": "Calidad",
+              "type": "text"
+            },
+            {
+              "label": "Concentración",
+              "type": "number",
+              "unit": "millones/mL"
+            },
+            {
+              "label": "Conservación",
+              "type": "list"
+            },
+            {
+              "label": "Formato",
+              "type": "list"
+            },
+            {
+              "label": "Volumen",
+              "type": "number",
+              "unit": "mL"
+            },
+            {
+              "label": "Diluyente",
+              "type": "text"
+            },
+            {
+              "label": "Vida útil",
+              "type": "number",
+              "unit": "días"
+            }
+          ]
+        },
+        {
+          "id": "embriones",
+          "label": "Embriones",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Genética",
+              "type": "text"
+            },
+            {
+              "label": "Estadio",
+              "type": "list"
+            },
+            {
+              "label": "Conservación",
+              "type": "list"
+            },
+            {
+              "label": "Certificaciones sanitarias",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_inseminacion",
+          "label": "Equipos de inseminación",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Técnica",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "dosis/h"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            },
+            {
+              "label": "Dosis",
+              "type": "number",
+              "unit": "mL"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_incubacion_reproductiva",
+          "label": "Equipos de incubación reproductiva",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "unidades"
+            },
+            {
+              "label": "Control térmico",
+              "type": "text"
+            },
+            {
+              "label": "Humedad",
+              "type": "number",
+              "unit": "% HR"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equipamiento",
+      "label": "Equipamiento e instalaciones ganaderas",
+      "arquetipo": "equipo",
+      "cta": "Pedir presupuesto",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "bloques": [
+        "dimensiones",
+        "energia",
+        "instalacion",
+        "normativa"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "manual",
+        "declaracion_ce",
+        "planos"
+      ],
+      "reglas": [
+        "Las variantes son configuraciones: la capacidad y las dimensiones van por variante.",
+        "La solicitud de presupuesto llega con la configuración elegida."
+      ],
+      "tipos": [
+        {
+          "id": "comederos",
+          "label": "Comederos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "kg"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Sistema de dosificación",
+              "type": "list"
+            },
+            {
+              "label": "Número de animales",
+              "type": "number",
+              "unit": "animales"
+            }
+          ]
+        },
+        {
+          "id": "bebederos",
+          "label": "Bebederos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Caudal",
+              "type": "number",
+              "unit": "L/h"
+            },
+            {
+              "label": "Presión",
+              "type": "number",
+              "unit": "bar"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Tipo",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_alimentacion_automatica",
+          "label": "Sistemas de alimentación automática",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "kg/h"
+            },
+            {
+              "label": "Dosificación",
+              "type": "text"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Integración",
+              "type": "text"
+            },
+            {
+              "label": "Aves por línea",
+              "type": "number",
+              "unit": "aves"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_ventilacion",
+          "label": "Sistemas de ventilación",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Caudal",
+              "type": "number",
+              "unit": "m³/h",
+              "comparable": true
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW",
+              "comparable": true
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh",
+              "comparable": true
+            },
+            {
+              "label": "Presión",
+              "type": "number",
+              "unit": "Pa"
+            },
+            {
+              "label": "Ruido",
+              "type": "number",
+              "unit": "dB"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_calefaccion",
+          "label": "Sistemas de calefacción",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW",
+              "comparable": true
+            },
+            {
+              "label": "Combustible",
+              "type": "list"
+            },
+            {
+              "label": "Rendimiento",
+              "type": "number",
+              "unit": "%",
+              "comparable": true
+            },
+            {
+              "label": "Superficie",
+              "type": "number",
+              "unit": "m²"
+            }
+          ]
+        },
+        {
+          "id": "refrigeracion_y_cooling",
+          "label": "Refrigeración y cooling",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "m³/h"
+            },
+            {
+              "label": "Consumo de agua",
+              "type": "number",
+              "unit": "L/h"
+            },
+            {
+              "label": "Reducción térmica declarada",
+              "type": "number",
+              "unit": "°C"
+            },
+            {
+              "label": "Superficie",
+              "type": "number",
+              "unit": "m²"
+            }
+          ]
+        },
+        {
+          "id": "iluminacion_ganadera",
+          "label": "Iluminación ganadera",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "W"
+            },
+            {
+              "label": "Lúmenes",
+              "type": "number",
+              "unit": "lm"
+            },
+            {
+              "label": "Espectro",
+              "type": "list"
+            },
+            {
+              "label": "Regulación",
+              "type": "list"
+            },
+            {
+              "label": "Protección IP",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "suelos_y_slats",
+          "label": "Suelos y slats",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Carga admisible",
+              "type": "number",
+              "unit": "kg/m²"
+            },
+            {
+              "label": "Superficie abierta",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "jaulas_y_alojamientos",
+          "label": "Jaulas y alojamientos",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "animales/módulo",
+              "comparable": true
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Normativa aplicable",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_ordeno",
+          "label": "Equipos de ordeño",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "vacas/h"
+            },
+            {
+              "label": "Puestos",
+              "type": "number",
+              "unit": "puestos"
+            },
+            {
+              "label": "Rendimiento",
+              "type": "number",
+              "unit": "L/h"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            },
+            {
+              "label": "Limpieza",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "robots_de_ordeno",
+          "label": "Robots de ordeño",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Vacas atendidas",
+              "type": "number",
+              "unit": "vacas",
+              "comparable": true
+            },
+            {
+              "label": "Ordeños/hora",
+              "type": "number",
+              "unit": "ordeños/h",
+              "comparable": true
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh/día"
+            },
+            {
+              "label": "Sensores",
+              "type": "text"
+            },
+            {
+              "label": "Integración",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_limpieza",
+          "label": "Sistemas de limpieza",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Caudal",
+              "type": "number",
+              "unit": "L/min"
+            },
+            {
+              "label": "Presión",
+              "type": "number",
+              "unit": "bar"
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW"
+            },
+            {
+              "label": "Tipo de limpieza",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_gestion_de_estiercol",
+          "label": "Sistemas de gestión de estiércol",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "m³/día"
+            },
+            {
+              "label": "Separación",
+              "type": "text"
+            },
+            {
+              "label": "Rendimiento",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Energía",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "silos_y_almacenamiento",
+          "label": "Silos y almacenamiento",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Volumen",
+              "type": "number",
+              "unit": "m³"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Sistema de descarga",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "basculas_y_sistemas_de_pesaje",
+          "label": "Básculas y sistemas de pesaje",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Capacidad máxima",
+              "type": "number",
+              "unit": "kg",
+              "comparable": true
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "± kg",
+              "comparable": true
+            },
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Conectividad",
+              "type": "list"
+            },
+            {
+              "label": "Rango",
+              "type": "text"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "kg"
+            },
+            {
+              "label": "Integración",
+              "type": "text"
+            },
+            {
+              "label": "Frecuencia",
+              "type": "list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avicola",
+      "label": "Equipamiento avícola especializado",
+      "arquetipo": "equipo",
+      "cta": "Pedir presupuesto",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "bloques": [
+        "dimensiones",
+        "energia",
+        "instalacion",
+        "normativa"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "manual",
+        "declaracion_ce",
+        "planos"
+      ],
+      "reglas": [
+        "Mismo modelo que Equipamiento e instalaciones ganaderas; cambian los tipos y sus atributos sugeridos."
+      ],
+      "tipos": [
+        {
+          "id": "incubadoras",
+          "label": "Incubadoras",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Capacidad de huevos",
+              "type": "number",
+              "unit": "huevos",
+              "comparable": true
+            },
+            {
+              "label": "Uniformidad térmica",
+              "type": "text"
+            },
+            {
+              "label": "Humedad",
+              "type": "number",
+              "unit": "% HR"
+            },
+            {
+              "label": "Volteo",
+              "type": "text"
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh/día",
+              "comparable": true
+            }
+          ]
+        },
+        {
+          "id": "nacedoras",
+          "label": "Nacedoras",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "huevos"
+            },
+            {
+              "label": "Control ambiental",
+              "type": "text"
+            },
+            {
+              "label": "Limpieza",
+              "type": "text"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "clasificadoras_de_huevos",
+          "label": "Clasificadoras de huevos",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Huevos/hora",
+              "type": "number",
+              "unit": "huevos/h",
+              "comparable": true
+            },
+            {
+              "label": "Categorías",
+              "type": "text"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Detección de defectos",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_recogida_de_huevos",
+          "label": "Sistemas de recogida de huevos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad/hora",
+              "type": "number",
+              "unit": "huevos/h"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "nidos",
+          "label": "Nidos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad de aves",
+              "type": "number",
+              "unit": "aves"
+            },
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Recogida",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_procesamiento_avicola",
+          "label": "Equipos de procesamiento avícola",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Aves/hora",
+              "type": "number",
+              "unit": "aves/h"
+            },
+            {
+              "label": "Operación",
+              "type": "list"
+            },
+            {
+              "label": "Rendimiento",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_aturdimiento",
+          "label": "Sistemas de aturdimiento",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "aves/h"
+            },
+            {
+              "label": "Parámetros operativos",
+              "type": "text"
+            },
+            {
+              "label": "Cumplimiento normativo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_vacunacion_in_ovo",
+          "label": "Equipos de vacunación in ovo",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Huevos/hora",
+              "type": "number",
+              "unit": "huevos/h"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            },
+            {
+              "label": "Limpieza",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porcino",
+      "label": "Equipamiento porcino especializado",
+      "arquetipo": "equipo",
+      "cta": "Pedir presupuesto",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "bloques": [
+        "dimensiones",
+        "energia",
+        "instalacion",
+        "normativa"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "manual",
+        "declaracion_ce",
+        "planos"
+      ],
+      "reglas": [
+        "Mismo modelo que Equipamiento e instalaciones ganaderas."
+      ],
+      "tipos": [
+        {
+          "id": "estaciones_electronicas_de_alimentacion",
+          "label": "Estaciones electrónicas de alimentación",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Cerdas por estación",
+              "type": "number",
+              "unit": "cerdas"
+            },
+            {
+              "label": "Identificación",
+              "type": "text"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "± g"
+            },
+            {
+              "label": "Programación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_alimentacion_liquida",
+          "label": "Equipos de alimentación líquida",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "L"
+            },
+            {
+              "label": "Mezclado",
+              "type": "text"
+            },
+            {
+              "label": "Dosificación",
+              "type": "text"
+            },
+            {
+              "label": "Limpieza",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_maternidad",
+          "label": "Sistemas de maternidad",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Configuración",
+              "type": "text"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            },
+            {
+              "label": "Control térmico",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_deteccion_de_partos",
+          "label": "Sistemas de detección de partos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Parámetros",
+              "type": "text"
+            },
+            {
+              "label": "Alertas",
+              "type": "text"
+            },
+            {
+              "label": "Precisión declarada",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_procesado_de_lechones",
+          "label": "Equipos de procesado de lechones",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Función",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "lechones/h"
+            },
+            {
+              "label": "Ergonomía",
+              "type": "text"
+            },
+            {
+              "label": "Seguridad",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rumiantes",
+      "label": "Equipamiento para rumiantes",
+      "arquetipo": "equipo",
+      "cta": "Pedir presupuesto",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "bloques": [
+        "dimensiones",
+        "energia",
+        "instalacion",
+        "normativa"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "manual",
+        "declaracion_ce",
+        "planos"
+      ],
+      "reglas": [
+        "Mismo modelo que Equipamiento e instalaciones ganaderas."
+      ],
+      "tipos": [
+        {
+          "id": "robots_de_alimentacion",
+          "label": "Robots de alimentación",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "kg"
+            },
+            {
+              "label": "Autonomía",
+              "type": "number",
+              "unit": "h"
+            },
+            {
+              "label": "Frecuencia",
+              "type": "list"
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh/día"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "id": "mezcladoras_unifeed",
+          "label": "Mezcladoras unifeed",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "m³",
+              "comparable": true
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW",
+              "comparable": true
+            },
+            {
+              "label": "Tipo de mezcla",
+              "type": "list"
+            },
+            {
+              "label": "Tiempo de ciclo",
+              "type": "number",
+              "unit": "min",
+              "comparable": true
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_deteccion_de_mastitis",
+          "label": "Sistemas de detección de mastitis",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Variables",
+              "type": "text"
+            },
+            {
+              "label": "Método",
+              "type": "list"
+            },
+            {
+              "label": "Sensibilidad",
+              "type": "text"
+            },
+            {
+              "label": "Integración",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_refrigeracion_de_leche",
+          "label": "Sistemas de refrigeración de leche",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "L",
+              "comparable": true
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW"
+            },
+            {
+              "label": "Tiempo de enfriamiento",
+              "type": "number",
+              "unit": "h",
+              "comparable": true
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh/día"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_analisis_de_leche",
+          "label": "Equipos de análisis de leche",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Parámetros",
+              "type": "text"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Velocidad",
+              "type": "text"
+            },
+            {
+              "label": "Calibración",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_separacion_de_animales",
+          "label": "Sistemas de separación de animales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "animales/h"
+            },
+            {
+              "label": "Identificación",
+              "type": "text"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "cepillos_automaticos",
+          "label": "Cepillos automáticos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "W"
+            },
+            {
+              "label": "Activación",
+              "type": "list"
+            },
+            {
+              "label": "Dimensiones",
+              "type": "text"
+            },
+            {
+              "label": "Material",
+              "type": "list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sostenibilidad",
+      "label": "Sostenibilidad, medio ambiente y energía",
+      "arquetipo": "equipo",
+      "cta": "Pedir presupuesto",
+      "variante": {
+        "eje": "configuración",
+        "campos": [
+          {
+            "key": "atributos_eje",
+            "label": "Atributos que combinan",
+            "type": "list",
+            "note": "Ej.: niveles × longitud; cada combinación es una variante con referencia propia"
+          }
+        ]
+      },
+      "bloques": [
+        "dimensiones",
+        "energia",
+        "instalacion",
+        "impacto"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "manual",
+        "estudio_impacto",
+        "declaracion_ce"
+      ],
+      "reglas": [
+        "Todo dato de reducción o ahorro lleva fuente.",
+        "Si es subvencionable, se muestra una etiqueta en la ficha y en el buscador."
+      ],
+      "tipos": [
+        {
+          "id": "biodigestores",
+          "label": "Biodigestores",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "m³"
+            },
+            {
+              "label": "Sustratos",
+              "type": "text"
+            },
+            {
+              "label": "Producción de biogás",
+              "type": "number",
+              "unit": "m³/día"
+            },
+            {
+              "label": "Eficiencia",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "separadores_solido_liquido",
+          "label": "Separadores sólido-líquido",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Caudal",
+              "type": "number",
+              "unit": "m³/h"
+            },
+            {
+              "label": "Porcentaje de separación",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Potencia",
+              "type": "number",
+              "unit": "kW"
+            }
+          ]
+        },
+        {
+          "id": "tratamiento_de_aguas",
+          "label": "Tratamiento de aguas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "m³/día"
+            },
+            {
+              "label": "Contaminantes",
+              "type": "text"
+            },
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Consumo",
+              "type": "number",
+              "unit": "kWh/m³"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_reduccion_de_emisiones",
+          "label": "Sistemas de reducción de emisiones",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Gas objetivo",
+              "type": "text"
+            },
+            {
+              "label": "Eficiencia declarada",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Mantenimiento",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "energia_solar_para_granjas",
+          "label": "Energía solar para granjas",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Potencia instalada",
+              "type": "number",
+              "unit": "kWp"
+            },
+            {
+              "label": "Producción",
+              "type": "number",
+              "unit": "kWh/año"
+            },
+            {
+              "label": "Almacenamiento",
+              "type": "text"
+            },
+            {
+              "label": "Integración",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_recuperacion_de_calor",
+          "label": "Sistemas de recuperación de calor",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Potencia recuperada",
+              "type": "number",
+              "unit": "kW"
+            },
+            {
+              "label": "Eficiencia",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "equipos_de_compostaje",
+          "label": "Equipos de compostaje",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "t/día"
+            },
+            {
+              "label": "Tiempo de proceso",
+              "type": "number",
+              "unit": "días"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "soluciones_de_gestion_de_residuos",
+          "label": "Soluciones de gestión de residuos",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Tipo de residuo",
+              "type": "list"
+            },
+            {
+              "label": "Capacidad",
+              "type": "number",
+              "unit": "t/día"
+            },
+            {
+              "label": "Tratamiento",
+              "type": "text"
+            },
+            {
+              "label": "Resultado",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tecnologia",
+      "label": "Tecnología, sensores y software",
+      "arquetipo": "digital",
+      "cta": "Solicitar demo",
+      "variante": {
+        "eje": "plan",
+        "campos": [
+          {
+            "key": "plan",
+            "label": "Nombre del plan",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "limite",
+            "label": "Límite incluido",
+            "type": "number",
+            "unit": "animales | usuarios | dispositivos"
+          },
+          {
+            "key": "modalidad",
+            "label": "Modalidad",
+            "type": "list",
+            "options": [
+              "Suscripción",
+              "Licencia",
+              "Hardware + suscripción"
+            ]
+          }
+        ]
+      },
+      "bloques": [
+        "compatibilidad",
+        "hardware"
+      ],
+      "documentos": [
+        "ficha_tecnica",
+        "documentacion_api",
+        "rgpd",
+        "manual"
+      ],
+      "reglas": [
+        "El bloque Hardware solo aparece si el producto tiene un dispositivo físico.",
+        "Las variantes son planes; el precio del plan es opcional y por defecto no se muestra."
+      ],
+      "tipos": [
+        {
+          "id": "sensores_de_actividad_y_collares",
+          "label": "Sensores de actividad y collares",
+          "comparador": true,
+          "atributos": [
+            {
+              "label": "Tecnología",
+              "type": "list"
+            },
+            {
+              "label": "Precisión declarada",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Parámetros monitorizados",
+              "type": "text"
+            },
+            {
+              "label": "Conectividad",
+              "type": "list"
+            },
+            {
+              "label": "Parámetros",
+              "type": "text"
+            },
+            {
+              "label": "Autonomía",
+              "type": "number",
+              "unit": "días",
+              "comparable": true
+            },
+            {
+              "label": "Fijación",
+              "type": "list"
+            },
+            {
+              "label": "Transmisión",
+              "type": "list"
+            },
+            {
+              "label": "Compatibilidad",
+              "type": "text"
+            },
+            {
+              "label": "Actividad",
+              "type": "text"
+            },
+            {
+              "label": "Rumia",
+              "type": "text"
+            },
+            {
+              "label": "Celo",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "software_de_gestion_ganadera",
+          "label": "Software de gestión ganadera",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Módulos",
+              "type": "text"
+            },
+            {
+              "label": "Usuarios",
+              "type": "number",
+              "unit": "usuarios"
+            },
+            {
+              "label": "Integraciones",
+              "type": "text"
+            },
+            {
+              "label": "Idiomas",
+              "type": "list"
+            },
+            {
+              "label": "Modalidad SaaS",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "sensores_ambientales",
+          "label": "Sensores ambientales",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Variables medidas",
+              "type": "text"
+            },
+            {
+              "label": "Rango",
+              "type": "text"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "±"
+            },
+            {
+              "label": "Frecuencia",
+              "type": "number",
+              "unit": "lecturas/h"
+            },
+            {
+              "label": "Conectividad",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_identificacion_rfid",
+          "label": "Sistemas de identificación RFID",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Frecuencia",
+              "type": "list"
+            },
+            {
+              "label": "Alcance",
+              "type": "text"
+            },
+            {
+              "label": "Formato",
+              "type": "list"
+            },
+            {
+              "label": "Protocolos",
+              "type": "list"
+            }
+          ]
+        },
+        {
+          "id": "camaras_de_vision_artificial",
+          "label": "Cámaras de visión artificial",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Resolución",
+              "type": "text"
+            },
+            {
+              "label": "Funciones IA",
+              "type": "text"
+            },
+            {
+              "label": "Conectividad",
+              "type": "list"
+            },
+            {
+              "label": "Condiciones de uso",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "plataformas_iot",
+          "label": "Plataformas IoT",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Dispositivos compatibles",
+              "type": "text"
+            },
+            {
+              "label": "Protocolos",
+              "type": "list"
+            },
+            {
+              "label": "API",
+              "type": "text"
+            },
+            {
+              "label": "Almacenamiento",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_trazabilidad",
+          "label": "Sistemas de trazabilidad",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Identificación",
+              "type": "text"
+            },
+            {
+              "label": "Registros",
+              "type": "text"
+            },
+            {
+              "label": "Integraciones",
+              "type": "text"
+            },
+            {
+              "label": "Estándares",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "software_de_formulacion",
+          "label": "Software de formulación",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Base de ingredientes",
+              "type": "text"
+            },
+            {
+              "label": "Optimización",
+              "type": "text"
+            },
+            {
+              "label": "Exportación",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "id": "sistemas_de_alimentacion_de_precision",
+          "label": "Sistemas de alimentación de precisión",
+          "comparador": false,
+          "atributos": [
+            {
+              "label": "Variables utilizadas",
+              "type": "text"
+            },
+            {
+              "label": "Precisión",
+              "type": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Frecuencia de ajuste",
+              "type": "list"
+            },
+            {
+              "label": "Automatización",
+              "type": "list"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
