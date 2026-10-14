@@ -23,11 +23,11 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
 .go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
 </style>
 </helmet>
-<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
-  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
-  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 22px 32px; display: flex; gap: 26px;">
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 24px 28px 20px 32px; display: flex; gap: 26px;">
     <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px;">
-      <div><h1 style="margin: 0; font-size: 23px; font-weight: 600;">Cabecera de la ficha</h1><p style="margin: 4px 0 0; font-size: 13px; color: #4A5650;">Lo primero que ve el comprador. Hemos usado los datos de tu ficha pública.</p></div>
+      <div style="display: flex; align-items: flex-start; gap: 16px;"><div style="flex: 1; min-width: 0;"><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">PASO 2 DE 8</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Cabecera de la ficha</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Lo primero que ve el comprador. Hemos usado los datos de tu ficha pública.</p></div><a href="#" style="flex: none; height: 38px; padding: 0 14px; border-radius: 10px; border: 1px solid #E3E8E4; background: #FFFFFF; color: #17231D; font-size: 13px; display: flex; align-items: center; gap: 7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2zM22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></svg>Ver guía</a></div>
       <div style="display: flex; gap: 12px; align-items: center;">
         <span style="width: 130px; height: 56px; border-radius: 10px; border: 1.5px dashed #B9CBBF; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A5650; background: #FFFFFF;">[Logo]</span>
         <span style="display: flex; flex-direction: column; gap: 2px;"><a href="#" style="font-size: 13px;">Cambiar logo</a><span class="hint">SVG o PNG transparente. Puede incluir tu lema.</span></span>
@@ -53,16 +53,14 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
           <label class="tg">Visitar web<input type="checkbox" role="switch" defaultChecked="{{ yes }}"></label>
         </div>
       </div>
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Tipo de empresa</a><button type="submit" class="go">Guardar y seguir →</button></div>
     </form>
-    <aside aria-label="Vista previa: Cabecera de tu ficha" style="width: 388px; flex: none; align-self: flex-start; background: #DCE3DF; border-radius: 18px; padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px #C9D3CD;">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 2px 4px 0;">
-        <span style="width: 26px; height: 26px; border-radius: 8px; background: #17231D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
-        <span style="display: flex; flex-direction: column; line-height: 1.25;"><strong style="font-size: 12.5px; font-weight: 600;">Vista previa · así lo verá el comprador</strong><span style="font-size: 11px; color: #4A5650;">Cabecera de tu ficha</span></span>
-        <span style="margin-left: auto; font-size: 10px; font-weight: 600; color: #4A5650; background: #FFFFFF; border-radius: 999px; padding: 3px 8px; white-space: nowrap;">Solo lectura</span>
+    <aside aria-label="Vista previa: Cabecera de tu ficha" style="width: 380px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Así verán tu cabecera los compradores.</span></span>
+        <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
       </div>
-      <div aria-hidden="true" style="display: flex; align-items: center; gap: 6px; background: #FFFFFF; border-radius: 9px; padding: 6px 10px; font-size: 10.5px; color: #56615B; overflow: hidden; white-space: nowrap;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #E5A0A0; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #E8CE8B; flex: none;"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #A6D3A8; flex: none;"></span><span style="margin-left: 4px;">🔒 agroolink.com/empresas/dsm-firmenich</span></div>
-      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10.5px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border: 1px solid #CFE0D5; border-radius: 999px; padding: 2px 8px;">✓ Empresa verificada</span><span style="font-size: 11px; color: #56615B;">Fabricante global de nutrición animal</span></div>
         <span style="font-size: 22px; font-weight: 700;">DSM-Firmenich</span>
         <span style="font-size: 13px; color: #0E5A3A; font-weight: 500; margin-top: -6px;">Ciencia, innovación y soluciones en nutrición animal</span>
@@ -80,7 +78,7 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
 class Component extends DCLogic {
   renderVals() { return { yes: true, n: 2 }; }
 }

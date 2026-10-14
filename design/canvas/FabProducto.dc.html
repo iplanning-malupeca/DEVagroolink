@@ -21,12 +21,12 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
 .go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
 </style>
 </helmet>
-<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
-  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,900px"></dc-import></div>
-  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 0; padding: 20px 32px; display: flex; gap: 24px;">
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 24px 28px 20px 32px; display: flex; gap: 24px;">
     <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 9px;">
       <div style="display: flex; align-items: flex-end; justify-content: space-between;">
-        <div><span style="font-size: 12px; color: #56615B;">Productos · 12 cargados del Excel · 1 por revisar</span><h1 style="margin: 2px 0 0; font-size: 23px; font-weight: 600;">Ficha base · Hy-D®</h1></div>
+        <div><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">MÓDULO PRODUCTOS · 12 CARGADOS DEL EXCEL · 1 POR REVISAR</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Ficha base · Hy-D®</h1></div>
         <span style="font-size: 11.5px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 3px 10px;">Base global</span>
       </div>
       <div style="padding: 8px 12px; border-radius: 10px; background: #F6F8F6; font-size: 12px; color: #2F3D36; line-height: 1.45;">Es la base común. Tus distribuidores (y sucursales, si las tienes) crean <strong>su versión local</strong> a partir de ella; si la cambias, se actualiza en todas.</div>
@@ -45,10 +45,13 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
         <div class="lbl"><span>Fotos y vídeo</span><span style="display: flex; gap: 5px;"><span style="width: 40px; height: 40px; border-radius: 8px; background: #EAF0EB;"></span><span style="width: 40px; height: 40px; border-radius: 8px; background: #EAF0EB;"></span><span style="width: 40px; height: 40px; border-radius: 8px; border: 1.5px dashed #B9CBBF; display: flex; align-items: center; justify-content: center; color: #0E5A3A;">+</span></span></div>
       </div>
       <div class="lbl"><span>Países donde se comercializa <span class="hint">· activa la búsqueda de distribuidor en cada uno</span></span><div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="chip">España ×</span><span class="chip">Portugal ×</span><span class="chip">Francia ×</span><span class="chip">México ×</span><span class="chip">+ 36</span></div></div>
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;"><a href="#" style="font-size: 13.5px; color: #4A5650;">← Catálogo</a><span style="display: flex; gap: 10px;"><button type="button" style="height: 42px; padding: 0 16px; border-radius: 10px; background: #FFFFFF; color: #0E5A3A; border: 1px solid #0E5A3A; font: 500 13.5px 'Poppins', sans-serif;">Siguiente producto</button><button type="submit" class="go">Guardar y seguir →</button></span></div>
     </form>
-    <aside style="width: 330px; flex: none; display: flex; flex-direction: column; gap: 10px;">
-      <span style="font-size: 11.5px; font-weight: 600; letter-spacing: .06em; color: #56615B;">VISTA PREVIA · TARJETA</span>
+    <aside aria-label="Vista previa: Tarjeta de producto" style="width: 340px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Así verán la tarjeta del producto.</span></span>
+        <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
+      </div>
       <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; overflow: hidden;">
         <div style="height: 120px; background: linear-gradient(180deg,#E6EEFF,#FFFFFF); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
           <span style="position: absolute; top: 10px; left: 10px; font-size: 10.5px; font-weight: 600; color: #FFFFFF; background: #0E5A3A; border-radius: 6px; padding: 2px 8px;">✓ Fabricante</span>
@@ -67,9 +70,9 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
 class Component extends DCLogic {
-  renderVals() { return { n: 5 }; }
+  renderVals() { return { n: 9 }; }
 }
 </script>
 </body>
