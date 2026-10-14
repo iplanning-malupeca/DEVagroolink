@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Servicios · Editar un servicio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.on{border:1.5px solid #0E5A3A;background:#F5FAF6}
+.opt input{accent-color:#0E5A3A;margin:2px 0 0}
+.av{border-radius:50%;color:#FFFFFF;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" empresa="AgroNova" persona="Laura García" iniciales="LG" paso4="Marcas" pie="{{ pie }}" atras="{{ atras }}" siguiente="{{ sig }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 22px 28px 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 9px;">
+      <div style="display: flex; align-items: flex-end; gap: 14px;"><div style="flex: 1; min-width: 0;"><span class="eb">MÓDULO SERVICIOS · EDITAR</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Auditoría nutricional</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Con especies y zonas, cada comprador ve los servicios que de verdad puede contratar.</p></div></div>
+      <section class="card" style="gap: 9px;">
+        <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 10px;"><label class="lbl">Nombre<input class="inp" type="text" value="Auditoría nutricional"></label><label class="lbl">Tipo de servicio<select class="inp"><option>Consultoría nutricional</option></select></label></div>
+        <label class="lbl"><span>Descripción <span class="hint">· máx. 300</span></span><input class="inp" type="text" value="Analizamos tus dietas, materias primas y resultados y te proponemos mejoras concretas."></label>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <div style="display: flex; align-items: baseline; gap: 8px;"><p class="h" style="font-size: 13.5px;">Especies</p><span class="hint">· marca la especie; afina si el servicio es solo para algunas categorías</span></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #0E5A3A; color: #FFFFFF; font-weight: 500;">✓ Avicultura <span style="opacity:.75;font-weight:400">· 3</span></span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #0E5A3A; color: #FFFFFF; font-weight: 500;">✓ Porcino <span style="opacity:.75;font-weight:400">· todas</span></span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Bovino</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Ovino</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Caprino</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Acuicultura</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Cunicultura</span></div>
+        <div style="display: flex; gap: 8px; align-items: flex-start; background: #F6F8F6; border-radius: 10px; padding: 8px 10px;"><span style="font-size: 11.5px; color: #4A5650; width: 74px; flex: none; padding-top: 6px;">Avicultura</span><span style="display: flex; flex-wrap: wrap; gap: 5px;"><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #0E5A3A; color: #FFFFFF; font-weight: 500;">✓ Pollos de engorde</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #0E5A3A; color: #FFFFFF; font-weight: 500;">✓ Gallinas ponedoras</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #0E5A3A; color: #FFFFFF; font-weight: 500;">✓ Reproductoras</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Pavos</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Patos</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Ocas</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Perdices</span><span style="display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12px; white-space: nowrap; background: #F2F5F3; color: #17231D;">Aves ornamentales</span></span></div>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <p class="h" style="font-size: 13.5px;">Dónde lo prestas</p>
+        <div style="display: flex; gap: 8px; align-items: flex-start;"><label class="cc" style="width: 104px; flex: none; padding-top: 6px;"><input type="checkbox" defaultChecked="{{ yes }}">Presencial</label><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span style="display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border-radius: 999px; background: #EEF6EE; color: #0E5A3A; border: 1px solid #CFE0D5; font-size: 12px; font-weight: 500; white-space: nowrap;">España<span style="color: #4A5650; font-weight: 400;">· Cataluña, Aragón, Navarra</span> ×</span><span style="display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border-radius: 999px; background: #EEF6EE; color: #0E5A3A; border: 1px solid #CFE0D5; font-size: 12px; font-weight: 500; white-space: nowrap;">Portugal<span style="color: #4A5650; font-weight: 400;">· Norte</span> ×</span><a href="#" style="font-size: 12px;">+ Zona</a></span></div>
+        <div style="display: flex; gap: 8px; align-items: flex-start;"><label class="cc" style="width: 104px; flex: none; padding-top: 6px;"><input type="checkbox" defaultChecked="{{ yes }}">A distancia</label><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span style="display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border-radius: 999px; background: #EEF6EE; color: #0E5A3A; border: 1px solid #CFE0D5; font-size: 12px; font-weight: 500; white-space: nowrap;">Todo el mundo<span style="color: #4A5650; font-weight: 400;">· excepto Asia</span> ×</span><span class="hint">· en español y portugués</span></span></div>
+      </section>
+      <section class="card" style="gap: 8px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;"><label class="lbl">Plazo de respuesta<select class="inp"><option>48 horas</option></select></label><label class="lbl">Precio<select class="inp"><option>A consultar</option><option>Desde…</option></select></label><label class="lbl">«Solicitar» llega a<select class="inp"><option>Equipo de nutrición (2)</option></select></label></div>
+      </section>
+    </form>
+    <aside aria-label="Vista previa" style="width: 340px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="width: 36px; height: 36px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 14.5px; font-weight: 600;">Vista previa</strong><span style="font-size: 11.5px; color: #56615B;">Un comprador de Lleida con broilers</span></span></div>
+      <div style="border: 1px solid #E6EBE7; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 8px;">
+        <span style="width: 34px; height: 34px; border-radius: 9px; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+        <strong style="font-size: 15px;">Auditoría nutricional</strong>
+        <span style="font-size: 11.5px; color: #4A5650; line-height: 1.45;">Analizamos tus dietas, materias primas y resultados y te proponemos mejoras concretas.</span>
+        <span style="display: flex; flex-wrap: wrap; gap: 4px;"><span style="font-size: 10.5px; background: #F2F5F3; border-radius: 999px; padding: 2px 8px;">Pollos de engorde</span><span style="font-size: 10.5px; background: #F2F5F3; border-radius: 999px; padding: 2px 8px;">Ponedoras</span><span style="font-size: 10.5px; background: #F2F5F3; border-radius: 999px; padding: 2px 8px;">Porcino</span></span>
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #0E5A3A; font-weight: 500;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> Disponible en tu zona · presencial y a distancia</span>
+        <span style="font-size: 11px; color: #56615B;">Respuesta en 48 h · precio a consultar</span>
+        <span style="height: 34px; border-radius: 9px; background: #0E5A3A; color: #FFFFFF; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center;">Solicitar →</span>
+      </div>
+      <div style="border: 1px dashed #DCE3DE; border-radius: 12px; padding: 10px; font-size: 11px; color: #4A5650; line-height: 1.45;"><strong style="color: #17231D;">Comprador en Sevilla:</strong> no ve la visita presencial; ve «Disponible a distancia».</div>
+      <div style="border: 1px dashed #DCE3DE; border-radius: 12px; padding: 10px; font-size: 11px; color: #4A5650; line-height: 1.45;"><strong style="color: #17231D;">Comprador de vacuno:</strong> el servicio no aparece en su búsqueda.</div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 10, pie: true, atras: 'Volver a servicios', sig: 'Guardar servicio' }; }
+}
+</script>
+</body>
+</html>
