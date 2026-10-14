@@ -11,6 +11,13 @@ Guía para desarrollo. Versión 1.0 · 14/10/2026. Los datos completos están en
 
 Regla general: lo que queda vacío no se publica.
 
+## Clasificación de la empresa
+
+- Al crear la empresa se eligen, de forma obligatoria, **especies** (Aves, Porcino, Rumiantes, Acuicultura, Equino, Animales de compañía) y **líneas de negocio** (Nutrición animal, Salud animal, Genética, Equipamiento e instalaciones, Tecnología y software, Sostenibilidad y energía, Materias primas, Servicios), más los mercados.
+- Sirve para que la empresa aparezca en el buscador aunque no tenga productos.
+- Con productos publicados, la clasificación se calcula a partir de ellos (especies de Aplicación y familia/tipo de cada producto). El buscador da más peso a lo calculado; lo declarado sin productos que lo respalden pesa menos.
+- Si lo declarado y lo calculado no coinciden, se avisa a la empresa para que lo revise.
+
 ## Entidades
 
 ```mermaid
