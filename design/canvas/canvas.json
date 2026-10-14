@@ -55,6 +55,10 @@
       "name": "Alta · Fabricante con sucursales"
     },
     {
+      "id": "distmulti",
+      "name": "Alta · Distribuidor multimarca"
+    },
+    {
       "id": "productos",
       "name": "Productos (módulo)"
     },
@@ -860,6 +864,46 @@
       "h": 940,
       "title": "S6 · Revisar y publicar (Sede)",
       "page": "sucursales"
+    },
+    "DisTipo.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "X1 · Tipo de empresa: distribuidor con marcas propias",
+      "page": "distmulti"
+    },
+    "DisMarcas.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "X2 · Marcas: propias, autorizadas y sin verificar",
+      "page": "distmulti"
+    },
+    "DisAutorizacion.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 940,
+      "title": "X3 · Pedir autorización a una marca (Zucami)",
+      "page": "distmulti"
+    },
+    "DisContacto.dc.html": {
+      "x": 0,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "X4 · Contacto: delegaciones por país",
+      "page": "distmulti"
+    },
+    "DisPublicar.dc.html": {
+      "x": 1360,
+      "y": 1240,
+      "w": 1280,
+      "h": 940,
+      "title": "X5 · Revisar y publicar",
+      "page": "distmulti"
     }
   },
   "order": [
@@ -961,6 +1005,11 @@
     "SucPermisos.dc.html",
     "SucPagina.dc.html",
     "SucPublicar.dc.html",
+    "DisTipo.dc.html",
+    "DisMarcas.dc.html",
+    "DisAutorizacion.dc.html",
+    "DisContacto.dc.html",
+    "DisPublicar.dc.html",
     "FabShell.dc.html"
   ],
   "notes": {
@@ -1187,6 +1236,22 @@
       "kind": "title1",
       "maxW": 4000,
       "page": "sucursales"
+    },
+    "disT1": {
+      "x": 0,
+      "y": -300,
+      "text": "Alta · Distribuidor multimarca (AgroNova)",
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "distmulti"
+    },
+    "disT2": {
+      "x": 0,
+      "y": 1040,
+      "text": "Contacto y publicación",
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "distmulti"
     }
   },
   "designSystems": []

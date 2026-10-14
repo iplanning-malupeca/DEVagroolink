@@ -24,6 +24,7 @@ https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t
 | Alta · Fabricante con distribuidores | `Fab*` |
 | Alta · Fabricante con comerciales | `ComTipo`, `ComEquipo`, `ComZonas`, `ComContacto`, `ComPublicar`, `ComBandeja` |
 | Alta · Fabricante con sucursales | `Suc*` |
+| Alta · Distribuidor multimarca | `Dis*` |
 | Productos (módulo) | `Prod*` |
 | Servicios (módulo aparte) | `FabServicios` |
 | Tableros y comparador | `Tab*`, `Comp*` |
