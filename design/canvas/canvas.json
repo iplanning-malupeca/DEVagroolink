@@ -191,7 +191,7 @@
    "page": "tableros",
    "title": "C2 · Añadir un producto de otro tipo",
    "w": 1280,
-   "x": 2720,
+   "x": 5440,
    "y": 1300
   },
   "CompSolicitar.dc.html": {
@@ -199,7 +199,7 @@
    "page": "tableros",
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
-   "x": 4080,
+   "x": 6800,
    "y": 1300
   },
   "CompVista.dc.html": {
@@ -207,7 +207,7 @@
    "page": "tableros",
    "title": "C1 · Comparativa del mismo tipo (enzimas)",
    "w": 1280,
-   "x": 1360,
+   "x": 4080,
    "y": 1300
   },
   "ConEmpresa.dc.html": {
@@ -1786,6 +1786,22 @@
    "w": 1280,
    "x": 0,
    "y": 1300
+  },
+  "CompNueva1.dc.html": {
+   "h": 900,
+   "page": "tableros",
+   "title": "C0a · Nueva comparación · escribir unas letras",
+   "w": 1280,
+   "x": 1360,
+   "y": 1300
+  },
+  "CompNueva2.dc.html": {
+   "h": 900,
+   "page": "tableros",
+   "title": "C0b · Nueva comparación · añadir del mismo tipo",
+   "w": 1280,
+   "x": 2720,
+   "y": 1300
   }
  },
  "createdOnFiles": {
@@ -2381,6 +2397,8 @@
   "TabGuardar.dc.html",
   "TabCompartir.dc.html",
   "CompSumario.dc.html",
+  "CompNueva1.dc.html",
+  "CompNueva2.dc.html",
   "CompVista.dc.html",
   "CompOtroTipo.dc.html",
   "CompSolicitar.dc.html",
