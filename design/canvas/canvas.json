@@ -8,7 +8,7 @@
    "title": "Solo para mí → Mi espacio (primer inicio)",
    "w": 1280,
    "x": 0,
-   "y": 1500
+   "y": 2700
   },
   "AltaConsulta.dc.html": {
    "h": 820,
@@ -16,7 +16,7 @@
    "title": "Más tarde · Primera consulta (datos just-in-time)",
    "w": 1280,
    "x": 3600,
-   "y": 1500
+   "y": 2700
   },
   "AltaEmpresa.dc.html": {
    "h": 760,
@@ -24,7 +24,7 @@
    "title": "Represento una empresa → Tu empresa",
    "w": 960,
    "x": 1360,
-   "y": 1500
+   "y": 2700
   },
   "AltaExperto.dc.html": {
    "h": 760,
@@ -32,7 +32,7 @@
    "title": "Soy experto → Perfil de experto",
    "w": 1120,
    "x": 2400,
-   "y": 1500
+   "y": 2700
   },
   "AvatarMenu.dc.html": {
    "h": 980,
@@ -1562,6 +1562,14 @@
    "w": 390,
    "x": 0,
    "y": 4040
+  },
+  "Login1bCodigo.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "L1b · Ya tienes cuenta → código por email (OTP)",
+   "w": 960,
+   "x": 0,
+   "y": 1160
   }
  },
  "createdOnFiles": {
@@ -1590,7 +1598,7 @@
    "text": "Adónde lleva cada opción",
    "w": 240,
    "x": 0,
-   "y": 1200
+   "y": 2400
   },
   "cfgTitulo": {
    "kind": "title1",
@@ -1987,6 +1995,15 @@
    "w": 240,
    "x": 0,
    "y": 3740
+  },
+  "altaL1b": {
+   "kind": "title1",
+   "maxW": 4880,
+   "page": "alta",
+   "text": "Después de L1 · si el email ya está registrado → código OTP (L1b); si no → L2",
+   "w": 240,
+   "x": 0,
+   "y": 860
   }
  },
  "order": [
@@ -1996,6 +2013,7 @@
   "ConEmpresa.dc.html",
   "Empresa.dc.html",
   "Login1Email.dc.html",
+  "Login1bCodigo.dc.html",
   "Login2SinCuenta.dc.html",
   "Login3Crear.dc.html",
   "Login4Empezar.dc.html",
