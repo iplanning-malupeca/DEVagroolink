@@ -1526,7 +1526,7 @@
   "CuentaCompras.dc.html": {
    "h": 980,
    "page": "intranet",
-   "title": "C2 · Mi cuenta · Compras y facturación (centralizado, reflejado aquí)",
+   "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
    "w": 1280,
    "x": 1360,
    "y": 3720
@@ -1622,7 +1622,7 @@
   "CuentaPlanes.dc.html": {
    "h": 1110,
    "page": "intranet",
-   "title": "C2a · Compras · Planes y suscripciones",
+   "title": "C2a · Facturación · Planes y suscripciones",
    "w": 1280,
    "x": 0,
    "y": 5200
@@ -1630,7 +1630,7 @@
   "CuentaPedidos.dc.html": {
    "h": 980,
    "page": "intranet",
-   "title": "C2b · Compras · Pedidos (detalle a la derecha)",
+   "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
    "w": 1280,
    "x": 1360,
    "y": 5200
@@ -1638,7 +1638,7 @@
   "CuentaFacturas.dc.html": {
    "h": 980,
    "page": "intranet",
-   "title": "C2c · Compras · Facturas",
+   "title": "C2c · Facturación · Facturas",
    "w": 1280,
    "x": 2720,
    "y": 5200
@@ -1646,7 +1646,7 @@
   "CuentaPagos.dc.html": {
    "h": 980,
    "page": "intranet",
-   "title": "C2d · Compras · Métodos de pago",
+   "title": "C2d · Facturación · Métodos de pago",
    "w": 1280,
    "x": 4080,
    "y": 5200
@@ -1654,7 +1654,7 @@
   "CuentaDirecciones.dc.html": {
    "h": 980,
    "page": "intranet",
-   "title": "C2e · Compras · Direcciones",
+   "title": "C2e · Facturación · Direcciones",
    "w": 1280,
    "x": 5440,
    "y": 5200
@@ -2133,7 +2133,7 @@
    "kind": "title1",
    "maxW": 6720,
    "page": "intranet",
-   "text": "Compras y facturación · una pantalla por pestaña",
+   "text": "Facturación · una pantalla por pestaña",
    "w": 240,
    "x": 0,
    "y": 4900

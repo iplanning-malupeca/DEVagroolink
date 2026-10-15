@@ -344,7 +344,7 @@ body = ('<div class="top"><span style="flex:1;font-size:22px;font-weight:600;let
         + mrow('compass', 'Productos') + mrow('building', 'Empresas') + mrow('user', 'Expertos', '', '#4B3BA6', '#F1EEFB')
         + mrow('tool', 'Servicios') + mrow('book', 'Contenido técnico') + mrow('cal', 'Eventos') + '</div></div>'
         '<div><p class="cap">Cuenta</p><div class="card" style="overflow:hidden;">'
-        + mrow('user', 'Mi perfil', val('Cuenta global')) + mrow('sliders', 'Mis intereses', val('9')) + mrow('star', 'Compras y facturación', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
+        + mrow('user', 'Mi perfil', val('Cuenta global')) + mrow('sliders', 'Mis intereses', val('9')) + mrow('star', 'Facturación', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
         + mrow('bell', 'Notificaciones') + mrow('help', 'Ayuda') +
         '<a href="#" class="li" style="min-height:50px;color:#B42318;"><span class="ico" style="width:32px;height:32px;border-radius:10px;background:#FDECEA;color:#B42318;">' + ic('logout', 17) + '</span><span class="t" style="font-weight:500;">Cerrar sesión</span></a>'
         '</div></div>'

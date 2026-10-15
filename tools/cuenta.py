@@ -1,4 +1,4 @@
-"""Mi cuenta: Mi perfil (datos de la cuenta global) y Compras y facturación (centralizado, reflejado aquí)."""
+"""Mi cuenta: Mi perfil (datos de la cuenta global) y Facturación (centralizado, reflejado aquí)."""
 import json, os
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = W + '/project/'
@@ -117,10 +117,10 @@ t += """      <div style="display: grid; grid-template-columns: 1.35fr 1fr; gap:
 t += TAIL % H
 open(P + 'CuentaPerfil.dc.html', 'w').write(t)
 
-# ---------- Compras y facturación ----------
+# ---------- Facturación ----------
 H2 = 980
-t = HEAD % ('Mi cuenta · Compras y facturación', H2, H2, 'Compras y facturación')
-t += """      <div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1;"><div style="font-size: 13px; color: #56615B;">Mi cuenta</div><h1 style="margin: 0; font-size: 28px; font-weight: 600;">Compras y facturación</h1></div></div>
+t = HEAD % ('Mi cuenta · Facturación', H2, H2, 'Facturación')
+t += """      <div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1;"><div style="font-size: 13px; color: #56615B;">Mi cuenta</div><h1 style="margin: 0; font-size: 28px; font-weight: 600;">Facturación</h1></div></div>
 """
 t += '      ' + banner('<strong style="font-weight: 600;">Se gestiona en tu cuenta global</strong> y se ve reflejado aquí: planes, suscripciones, pedidos, facturas, pagos y direcciones de Agroolink y Agrinews en un solo sitio.') + '\n'
 t += """      <div class="tabs"><span class="on">Resumen</span><span>Planes y suscripciones</span><span>Pedidos</span><span>Facturas</span><span>Métodos de pago</span><span>Direcciones</span></div>
@@ -169,7 +169,7 @@ a = """    const cuenta = { titulo: 'MI CUENTA', chip: '', items: [
     ]};"""
 if a in s:
     s = s.replace(a, """    const cuenta = { titulo: 'MI CUENTA', chip: 'Global', chipFondo: '#EEF0F3', chipTinta: '#4A5560', items: [
-      it('Mi perfil', I.user), it('Compras y facturación', I.card), it('Idioma y zona', I.globe), it('Ayuda y contacto', I.help)
+      it('Mi perfil', I.user), it('Facturación', I.card), it('Idioma y zona', I.globe), it('Ayuda y contacto', I.help)
     ]};""")
     s = s.replace("      help: 'M12 3a9", "      card: 'M3 6h18v12H3zM3 10h18M7 15h4',\n      help: 'M12 3a9", 1)
     open(p, 'w').write(s)
@@ -177,7 +177,7 @@ if a in s:
 # ---------- índice ----------
 c = json.load(open(P + 'canvas.json')); B = c['boards']; N = c['notes']
 B['CuentaPerfil.dc.html'] = {'h': H, 'page': 'intranet', 'title': 'C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)', 'w': 1280, 'x': 0, 'y': 3720}
-B['CuentaCompras.dc.html'] = {'h': H2, 'page': 'intranet', 'title': 'C2 · Mi cuenta · Compras y facturación (centralizado, reflejado aquí)', 'w': 1280, 'x': 1360, 'y': 3720}
+B['CuentaCompras.dc.html'] = {'h': H2, 'page': 'intranet', 'title': 'C2 · Mi cuenta · Facturación (centralizado, reflejado aquí)', 'w': 1280, 'x': 1360, 'y': 3720}
 N['intTitulo4'] = {'kind': 'title1', 'maxW': 2640, 'page': 'intranet', 'text': 'Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink', 'w': 240, 'x': 0, 'y': 3420}
 o = c['order']
 for k in ['CuentaPerfil.dc.html', 'CuentaCompras.dc.html']:

@@ -1,4 +1,4 @@
-"""Compras y facturación: una pantalla por pestaña, con la misma cabecera que CuentaCompras (C2)."""
+"""Facturación: una pantalla por pestaña, con la misma cabecera que CuentaCompras (C2)."""
 import json, os, re
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = W + '/project/'
@@ -28,7 +28,7 @@ VISA = '<span style="width: 46px; height: 32px; border-radius: 6px; background: 
 SEPA = '<span style="width: 46px; height: 32px; border-radius: 6px; background: #F1F3F6; color: #1F3A5F; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none; border: 1px solid #DCE3DE;">SEPA</span>'
 
 def board(fn, title, on, body, h=980):
-    t = head.replace('<title>Mi cuenta · Compras y facturación</title>', '<title>Mi cuenta · %s</title>' % title)
+    t = head.replace('<title>Mi cuenta · Facturación</title>', '<title>Mi cuenta · %s</title>' % title)
     t = t.replace('height: 980px;', 'height: %dpx;' % h)
     t += tabs(on) + body + '\n' + tail.replace('"height":980', '"height":%d' % h)
     open(P + fn, 'w').write(t)
@@ -193,6 +193,6 @@ L = [('CuentaPlanes.dc.html', 'C2a · Compras · Planes y suscripciones'), ('Cue
 for n, (fn, ti) in enumerate(L):
     B[fn] = {'h': 980, 'page': 'intranet', 'title': ti, 'w': 1280, 'x': n * 1360, 'y': 5200}
     if fn not in c['order']: c['order'].append(fn)
-N['intTitulo5'] = {'kind': 'title1', 'maxW': 6720, 'page': 'intranet', 'text': 'Compras y facturación · una pantalla por pestaña', 'w': 240, 'x': 0, 'y': 4900}
+N['intTitulo5'] = {'kind': 'title1', 'maxW': 6720, 'page': 'intranet', 'text': 'Facturación · una pantalla por pestaña', 'w': 240, 'x': 0, 'y': 4900}
 json.dump(c, open(P + 'canvas.json', 'w'), ensure_ascii=False, indent=1)
 print('ok')
