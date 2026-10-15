@@ -1547,22 +1547,6 @@
    "x": 0,
    "y": 2800
   },
-  "ProyCrear.dc.html": {
-   "h": 1920,
-   "page": "proyectos",
-   "title": "Anterior · J1 formulario en una página (sustituido por el asistente)",
-   "w": 1280,
-   "x": 0,
-   "y": 4920
-  },
-  "ProyDestinatarios.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "Anterior · J2 a quién se lo enviamos (pasa a «Contactar» en la ficha)",
-   "w": 1280,
-   "x": 1360,
-   "y": 4920
-  },
   "ProyDetalle.dc.html": {
    "h": 900,
    "page": "proyectos",
@@ -2454,15 +2438,6 @@
    "w": 240,
    "x": 0,
    "y": 1620
-  },
-  "proyT4": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "proyectos",
-   "text": "Versión anterior (no se usa)",
-   "w": 240,
-   "x": 0,
-   "y": 4620
   }
  },
  "order": [
@@ -2590,8 +2565,6 @@
   "ProyAsistResumen.dc.html",
   "ProyFicha.dc.html",
   "ProyFichaEmpresas.dc.html",
-  "ProyCrear.dc.html",
-  "ProyDestinatarios.dc.html",
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
   "ProyOportunidades.dc.html",
