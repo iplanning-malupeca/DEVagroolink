@@ -1658,6 +1658,126 @@
    "w": 1280,
    "x": 5440,
    "y": 5200
+  },
+  "UsrEspacio.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U1 · Mi espacio (día a día)",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "UsrProyectos.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U2 · Mis proyectos",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "UsrTableros.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U3 · Mis tableros (= T1, enlazado)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "UsrComparaciones.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U4 · Mis comparaciones",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "UsrHistorial.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U5 · Historial",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "UsrMensajes.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U6 · Mensajes",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "UsrPerfil.dc.html": {
+   "h": 1100,
+   "page": "intusuario",
+   "title": "U7 · Mi perfil (= C1, enlazado)",
+   "w": 1280,
+   "x": 0,
+   "y": 1400
+  },
+  "UsrFacturacion.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8 · Facturación (= C2, enlazado)",
+   "w": 1280,
+   "x": 1360,
+   "y": 1400
+  },
+  "UsrIdioma.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U9 · Idioma y zona",
+   "w": 1280,
+   "x": 2720,
+   "y": 1400
+  },
+  "UsrAyuda.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U10 · Ayuda y contacto",
+   "w": 1280,
+   "x": 4080,
+   "y": 1400
+  },
+  "ExpPanel.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E1 · Panel de experta",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ExpOportunidades.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E2 · Oportunidades (proyectos que encajan)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "ExpConsultas.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E3 · Consultas recibidas",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "ExpServicios.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E4 · Mis servicios",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "ExpPerfil.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E5 · Perfil de experta (editor + vista pública)",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -2137,6 +2257,33 @@
    "w": 240,
    "x": 0,
    "y": 4900
+  },
+  "iu0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intusuario",
+   "text": "MI ESPACIO · Samuel (usuario)",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "iu1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intusuario",
+   "text": "MI CUENTA · común a todos los roles",
+   "w": 240,
+   "x": 0,
+   "y": 1100
+  },
+  "ie0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intexperto",
+   "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
+   "w": 240,
+   "x": 0,
+   "y": -300
   }
  },
  "order": [
@@ -2346,7 +2493,22 @@
   "CuentaPedidos.dc.html",
   "CuentaFacturas.dc.html",
   "CuentaPagos.dc.html",
-  "CuentaDirecciones.dc.html"
+  "CuentaDirecciones.dc.html",
+  "UsrEspacio.dc.html",
+  "UsrProyectos.dc.html",
+  "UsrTableros.dc.html",
+  "UsrComparaciones.dc.html",
+  "UsrHistorial.dc.html",
+  "UsrMensajes.dc.html",
+  "UsrPerfil.dc.html",
+  "UsrFacturacion.dc.html",
+  "UsrIdioma.dc.html",
+  "UsrAyuda.dc.html",
+  "ExpPanel.dc.html",
+  "ExpOportunidades.dc.html",
+  "ExpConsultas.dc.html",
+  "ExpServicios.dc.html",
+  "ExpPerfil.dc.html"
  ],
  "pages": [
   {
@@ -2376,6 +2538,14 @@
   {
    "id": "experto",
    "name": "Alta experto"
+  },
+  {
+   "id": "intusuario",
+   "name": "Intranet · Usuario (consolidada)"
+  },
+  {
+   "id": "intexperto",
+   "name": "Intranet · Experto (consolidada)"
   },
   {
    "id": "intranet",

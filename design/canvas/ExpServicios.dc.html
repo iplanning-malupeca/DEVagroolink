@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet experta · Mis servicios</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;box-sizing:border-box;box-shadow:0 1px 3px rgba(16,40,28,.05)}
+.h2{margin:0;font-size:16px;font-weight:600}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hd a{font-size:12.5px}
+.k{font-size:11.5px;color:#56615B}
+.v{font-size:13.5px;font-weight:500}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13px}
+.row:first-of-type{border-top:0}
+.st{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#EEF6EE;color:#0E5A3A}.pe{background:#FFF4E0;color:#7A4B00}.gr{background:#F1F3F6;color:#4A5560}.li{background:#F1EEFB;color:#4B3BA6}.nw{background:#E5484D;color:#FFFFFF}
+.tabs{display:flex;gap:26px;border-bottom:1px solid #E3E8E4;font-size:14px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2.5px solid #0E5A3A;margin-bottom:-1px}
+.tabs.lila .on{color:#4B3BA6;border-color:#4B3BA6}
+.chip{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font-size:12.5px;white-space:nowrap;color:#17231D}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.chip.lon{background:#4B3BA6;border-color:#4B3BA6;color:#FFFFFF}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1.5px solid #0E5A3A;color:#0E5A3A;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.btnl{height:38px;padding:0 16px;border-radius:10px;background:#4B3BA6;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.btns{height:38px;padding:0 14px;border-radius:10px;background:#EEF6EE;color:#17231D;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.ico{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;background:#EEF6EE;color:#0E5A3A}
+.ico.l{background:#F1EEFB;color:#4B3BA6}
+.av{width:38px;height:38px;border-radius:10px;color:#FFFFFF;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.th{border-radius:12px;background:#EAF0EB;height:88px}
+.bar{height:6px;border-radius:3px;background:#E3E8E4;overflow:hidden}.bar span{display:block;height:100%;background:#0E5A3A}
+.kpi{display:flex;flex-direction:column;gap:2px}.kpi b{font-size:24px;font-weight:600}
+.src{font-size:10.5px;font-weight:600;color:#56615B;border:1px solid #DCE3DE;border-radius:6px;padding:1px 6px;white-space:nowrap}
+.inp{height:42px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box}
+.tag{display:inline-flex;height:24px;padding:0 9px;border-radius:999px;background:#F1F4F1;font-size:11.5px;color:#4A5650;align-items:center;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 1280px; height: 1000px; background: #F6F8F6; position: relative; overflow: hidden;">
+  <div style="display: flex; padding-top: 68px; height: 1000px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="experta" activo="Mis servicios" alto="932" hint-size="256px,932px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 20px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1;"><div style="font-size: 13px; color: #56615B;">Como experta › Mis servicios</div><h1 style="margin: 0; font-size: 28px; font-weight: 600;">Mis servicios</h1><p style="margin: 2px 0 0; font-size: 13.5px; color: #4A5650;">Lo que ofreces, para qué especies y dónde lo prestas.</p></div><a href="#" class="btnl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 5v14M5 12h14"/></svg>Nuevo servicio</a></div>
+<section class="card" style="flex-direction: row; gap: 16px; align-items: flex-start;"><span class="ico l" style="width: 48px; height: 48px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></span><div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px;"><span style="display: flex; align-items: center; gap: 10px;"><strong style="font-size: 15.5px; font-weight: 600;">Auditoría nutricional de lotes de broilers</strong><span class="st ok">Publicado</span></span><div style="display: grid; grid-template-columns: 90px 1fr; gap: 4px 10px; font-size: 12.5px;"><span class="k">Especies</span><span>Avicultura › Broilers, Pollos de crecimiento lento</span><span class="k">Zonas</span><span>Aragón · Cataluña · Navarra</span><span class="k">Modalidad</span><span>Presencial o a distancia</span><span class="k">Precio</span><span>Desde 350 € por lote</span></div><span class="k">42 visitas · 2 consultas este mes · dirigido a Granjeros, Veterinarios, Nutrólogos</span></div><div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;"><a href="#" class="btn" style="color: #4B3BA6; border-color: #4B3BA6;">Editar</a><a href="#" style="font-size: 12.5px; color: #4B3BA6;">Ver en perfil</a></div></section><section class="card" style="flex-direction: row; gap: 16px; align-items: flex-start;"><span class="ico l" style="width: 48px; height: 48px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></span><div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px;"><span style="display: flex; align-items: center; gap: 10px;"><strong style="font-size: 15.5px; font-weight: 600;">Revisión de propuestas para ganaderos</strong><span class="st ok">Activo</span></span><div style="display: grid; grid-template-columns: 90px 1fr; gap: 4px 10px; font-size: 12.5px;"><span class="k">Especies</span><span>Avicultura · Porcino</span><span class="k">Zonas</span><span>España</span><span class="k">Modalidad</span><span>A distancia</span><span class="k">Precio</span><span>300 – 500 € según propuestas</span></div><span class="k">Te avisamos cuando un ganadero pide ayuda para comparar las propuestas de su proyecto</span></div><div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;"><a href="#" class="btn" style="color: #4B3BA6; border-color: #4B3BA6;">Editar</a><a href="#" style="font-size: 12.5px; color: #4B3BA6;">Ver en perfil</a></div></section><section class="card" style="border: 1.5px dashed #CFD8D2; background: #FBFCFB; flex-direction: row; align-items: center; gap: 14px;"><span class="ico l"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 5v14M5 12h14"/></svg></span><span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 14.5px; font-weight: 600;">Añadir servicio</strong><span class="k">Especies, zonas, modalidad y a quién va dirigido. Plan Gratis: 2 servicios (2 de 2).</span></span><a href="#" class="btnl">Nuevo servicio</a></section>
+      <section class="card" style="flex-direction: row; align-items: center; gap: 14px; background: #FAF8FE; border-color: #E9E4F8;"><span class="ico l"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg></span><span style="flex: 1; font-size: 13px;">Los servicios con especies y zonas completas aparecen en las búsquedas y en las <strong style="font-weight: 600;">Oportunidades</strong> que encajan.</span><a href="#" style="font-size: 13px; color: #4B3BA6;">Ver Experto Pro<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></section>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Laura G." iniciales="LG" color="#0E5A3A" variante="experta" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

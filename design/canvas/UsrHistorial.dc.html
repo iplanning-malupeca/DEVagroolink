@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet usuario · Historial</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;box-sizing:border-box;box-shadow:0 1px 3px rgba(16,40,28,.05)}
+.h2{margin:0;font-size:16px;font-weight:600}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hd a{font-size:12.5px}
+.k{font-size:11.5px;color:#56615B}
+.v{font-size:13.5px;font-weight:500}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13px}
+.row:first-of-type{border-top:0}
+.st{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#EEF6EE;color:#0E5A3A}.pe{background:#FFF4E0;color:#7A4B00}.gr{background:#F1F3F6;color:#4A5560}.li{background:#F1EEFB;color:#4B3BA6}.nw{background:#E5484D;color:#FFFFFF}
+.tabs{display:flex;gap:26px;border-bottom:1px solid #E3E8E4;font-size:14px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2.5px solid #0E5A3A;margin-bottom:-1px}
+.tabs.lila .on{color:#4B3BA6;border-color:#4B3BA6}
+.chip{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font-size:12.5px;white-space:nowrap;color:#17231D}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.chip.lon{background:#4B3BA6;border-color:#4B3BA6;color:#FFFFFF}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1.5px solid #0E5A3A;color:#0E5A3A;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.btnl{height:38px;padding:0 16px;border-radius:10px;background:#4B3BA6;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.btns{height:38px;padding:0 14px;border-radius:10px;background:#EEF6EE;color:#17231D;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.ico{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;background:#EEF6EE;color:#0E5A3A}
+.ico.l{background:#F1EEFB;color:#4B3BA6}
+.av{width:38px;height:38px;border-radius:10px;color:#FFFFFF;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.th{border-radius:12px;background:#EAF0EB;height:88px}
+.bar{height:6px;border-radius:3px;background:#E3E8E4;overflow:hidden}.bar span{display:block;height:100%;background:#0E5A3A}
+.kpi{display:flex;flex-direction:column;gap:2px}.kpi b{font-size:24px;font-weight:600}
+.src{font-size:10.5px;font-weight:600;color:#56615B;border:1px solid #DCE3DE;border-radius:6px;padding:1px 6px;white-space:nowrap}
+.inp{height:42px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box}
+.tag{display:inline-flex;height:24px;padding:0 9px;border-radius:999px;background:#F1F4F1;font-size:11.5px;color:#4A5650;align-items:center;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Historial" alto="832" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 20px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1;"><div style="font-size: 13px; color: #56615B;">Mi espacio › Historial</div><h1 style="margin: 0; font-size: 28px; font-weight: 600;">Historial</h1><p style="margin: 2px 0 0; font-size: 13.5px; color: #4A5650;">Todo lo que has consultado, sin hacer nada. Desde aquí lo pasas a un tablero.</p></div></div>
+      <div style="display: flex; align-items: center; gap: 8px;"><span class="chip on">Todo</span><span class="chip">Productos</span><span class="chip">Empresas</span><span class="chip">Expertos</span><span class="chip">Contenidos</span>
+        <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #56615B;">Guardar historial <span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFF;"></span></span><a href="#" style="color: #A3271B;">Borrar todo</a></div></div>
+      <section class="card"><span class="k" style="font-weight: 600; letter-spacing: .05em;">HOY</span><div class="row"><span class="ico" style="width: 36px; height: 36px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Ronozyme® ProAct</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">Producto</span><br><span class="k">DSM-Firmenich · Nutrición · Enzimas</span></span><span class="k" style="width: 60px;">10:42</span><a href="#" class="btns" style="height: 32px; font-size: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Guardar en tablero</a></div><div class="row"><span class="ico" style="width: 36px; height: 36px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M5 3h14v18H5zM9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Zucami Poultry Equipment</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">Empresa</span><br><span class="k">Fabricante · Equipamiento avícola</span></span><span class="k" style="width: 60px;">10:30</span><span class="st ok">En «Nave 2»</span></div><div class="row"><span class="ico" style="width: 36px; height: 36px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Cómo reducir el estrés térmico en broilers</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">Contenido</span><br><span class="k">Agrinews · Guía técnica</span></span><span class="k" style="width: 60px;">09:15</span><a href="#" class="btns" style="height: 32px; font-size: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Guardar en tablero</a></div></section>
+      <section class="card"><span class="k" style="font-weight: 600; letter-spacing: .05em;">AYER</span><div class="row"><span class="ico" style="width: 36px; height: 36px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0"/></svg></span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Dra. Ana Ruiz</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">Experto</span><br><span class="k">Veterinaria · Bienestar animal · Lleida</span></span><span class="k" style="width: 60px;">18:02</span><a href="#" class="btns" style="height: 32px; font-size: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Guardar en tablero</a></div><div class="row"><span class="ico" style="width: 36px; height: 36px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Sensor de ambiente NH₃ / CO₂</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">Producto</span><br><span class="k">AgroNova · Tecnología · Sensores</span></span><span class="k" style="width: 60px;">17:40</span><a href="#" class="btns" style="height: 32px; font-size: 12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Guardar en tablero</a></div></section>
+      <p style="margin: 0; font-size: 12px; color: #56615B;">Se guarda automáticamente lo que consultas durante 90 días. Solo lo ves tú.</p>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
