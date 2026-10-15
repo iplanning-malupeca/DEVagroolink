@@ -1,0 +1,585 @@
+<title>Agroolink · Nuevo proyecto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: barra superior fija + una pregunta por pantalla en columna central (máx. 680 px) */
+:root{
+  --bg:#FFFFFF; --bg2:#F6F8F6; --fg:#17231D; --muted:#56615B; --line:#E3E8E4; --line2:#D5DED8;
+  --accent:#0E5A3A; --accent-ink:#FFFFFF; --soft:#EEF6EE; --soft2:#DDF0D8; --lime:#B5D334; --lila:#4B3BA6; --lila-soft:#F1EEFB;
+  --warn-bg:#FFF4E0; --warn:#7A4B00; --danger:#A3271B;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1713; --bg2:#141E19; --fg:#E7EEE9; --muted:#9AA8A0; --line:#26332C; --line2:#33443A;
+  --accent:#5FBF8C; --accent-ink:#0B1F15; --soft:#183326; --soft2:#1E4030; --lime:#C6E05A; --lila:#B3A7F2; --lila-soft:#272246;
+  --warn-bg:#3A2E12; --warn:#F2C46B; --danger:#F08A7E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1713; --bg2:#141E19; --fg:#E7EEE9; --muted:#9AA8A0; --line:#26332C; --line2:#33443A;
+  --accent:#5FBF8C; --accent-ink:#0B1F15; --soft:#183326; --soft2:#1E4030; --lime:#C6E05A; --lila:#B3A7F2; --lila-soft:#272246;
+  --warn-bg:#3A2E12; --warn:#F2C46B; --danger:#F08A7E; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5}
+*{box-sizing:border-box}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
+.app{min-height:100%;display:flex;flex-direction:column}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.logo{font-weight:700;font-size:19px;letter-spacing:-.3px;color:var(--accent);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{font-style:normal;color:var(--fg)}
+.logo b{width:28px;height:28px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center}
+.crumb{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.saved{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.saved .d{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.link{background:none;border:0;color:var(--accent);font-weight:500;cursor:pointer;padding:6px 8px;border-radius:8px;white-space:nowrap}
+.link:hover{background:var(--soft)}
+.prog{height:4px;background:var(--line)}
+.prog span{display:block;height:100%;background:var(--accent);transition:width .35s ease}
+.stage{flex:1;display:flex;justify-content:center;padding:clamp(28px,6vh,72px) 16px 32px}
+.q{width:100%;max-width:680px;display:flex;flex-direction:column;gap:20px}
+.q.enter{animation:in .32s ease both}
+@keyframes in{from{opacity:.55;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.q.enter{animation:none}.prog span{transition:none}}
+.qnum{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.04em;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.qnum .sec{color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0}
+h1.t{margin:0;font-size:clamp(23px,3.4vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.25;text-wrap:balance}
+.req{color:var(--accent)}
+.help{margin:-8px 0 0;color:var(--muted);font-size:14.5px;max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--line2);border-radius:14px;background:var(--bg);cursor:pointer;text-align:left;width:100%;transition:border-color .15s,background .15s}
+.card:hover{border-color:var(--accent)}
+.card[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+.card .ic{width:38px;height:38px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.card[aria-pressed="true"] .ic{background:var(--accent);color:var(--accent-ink)}
+.card .tt{font-weight:600;font-size:15px;display:block}
+.card .dd{font-size:13px;color:var(--muted);display:block;line-height:1.4}
+.key{font-size:11px;font-weight:600;border:1px solid var(--line2);border-radius:5px;padding:0 6px;color:var(--muted);margin-left:auto;flex:none;line-height:20px}
+.card[aria-pressed="true"] .key{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--line2);border-radius:12px;background:var(--bg);cursor:pointer;text-align:left;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--soft);font-weight:500}
+.opt .key{margin-left:0}
+.opt small{display:block;color:var(--muted);font-weight:400;font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:6px 14px;border:1.5px solid var(--line2);border-radius:999px;background:var(--bg);cursor:pointer;font-size:14px}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sub{min-height:32px;font-size:13px;padding:4px 12px}
+.chip.sub[aria-pressed="true"]{background:var(--soft2);border-color:var(--soft2);color:var(--accent)}
+input.in,textarea.in,select.in{width:100%;border:0;border-bottom:2px solid var(--line2);background:transparent;padding:10px 2px;font-size:20px;outline:none}
+input.in:focus,textarea.in:focus,select.in:focus{border-color:var(--accent)}
+textarea.in{font-size:16px;line-height:1.55;border:1.5px solid var(--line2);border-radius:12px;padding:12px 14px;min-height:150px;resize:vertical}
+textarea.in:focus{border-color:var(--accent)}
+.box{border:1.5px solid var(--line2);border-radius:12px;padding:10px 12px;font-size:15px;background:var(--bg);width:100%}
+.box:focus{border-color:var(--accent);outline:none}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row > *{flex:1 1 180px;min-width:0}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--muted)}
+.unit{display:flex;align-items:flex-end;gap:10px}
+.unit span{font-size:15px;color:var(--muted);padding-bottom:12px;white-space:nowrap}
+.foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.btn{height:46px;padding:0 22px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn2{height:46px;padding:0 18px;border-radius:12px;border:1.5px solid var(--line2);background:var(--bg);font-weight:500;cursor:pointer}
+.hint{font-size:12.5px;color:var(--muted)}
+.err{font-size:13px;color:var(--danger)}
+.sp{flex:1}
+.tree{display:flex;flex-direction:column;gap:12px}
+.branch{border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.branch.on{border-color:var(--accent)}
+.branch .hd{display:flex;align-items:center;gap:10px}
+.search{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line2);border-radius:12px;padding:0 12px;height:46px}
+.search input{border:0;outline:none;background:transparent;flex:1;font-size:15px;min-width:0}
+.list{display:flex;flex-direction:column;gap:6px;max-height:330px;overflow:auto;padding-right:4px}
+.pick{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--bg);text-align:left;width:100%}
+.pick[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+.pick .av{width:36px;height:36px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#FFFFFF}
+.pick small{display:block;color:var(--muted);font-size:12.5px}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--accent);white-space:nowrap}
+.tag.l{background:var(--lila-soft);color:var(--lila)}
+.drop{border:2px dashed var(--line2);border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:var(--muted);cursor:pointer}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.files{display:flex;flex-direction:column;gap:6px}
+.file{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:var(--bg2);font-size:13.5px}
+.file button{margin-left:auto}
+.note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--bg2);font-size:13.5px;color:var(--muted)}
+/* bienvenida */
+.wel{max-width:680px;display:flex;flex-direction:column;gap:22px}
+.wel h1{font-size:clamp(28px,4.4vw,40px);margin:0;letter-spacing:-.025em;line-height:1.15;font-weight:600;text-wrap:balance}
+.wel p.lead{margin:0;font-size:17px;color:var(--muted);max-width:56ch}
+.facts{display:flex;flex-direction:column;gap:10px}
+.facts div{display:flex;gap:12px;align-items:center;font-size:15px}
+.facts .ic{width:34px;height:34px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.draft{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--accent);border-radius:14px;background:var(--soft)}
+/* resumen */
+.sum{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.srow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line);align-items:start}
+.srow:last-child{border-bottom:0}
+.srow .k{font-size:13px;color:var(--muted)}
+.srow .v{font-size:14.5px;min-width:0;overflow-wrap:anywhere}
+.srow .v.empty{color:var(--muted);font-style:italic}
+@media (max-width:560px){.srow{grid-template-columns:1fr auto}.srow .k{grid-column:1/-1}}
+/* ficha */
+.ficha{width:100%;max-width:1000px;display:flex;flex-direction:column;gap:18px}
+.fhead{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.fhead h1{margin:0;font-size:28px;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.state{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.state select{border:1.5px solid var(--line2);border-radius:999px;padding:6px 12px;background:var(--soft);color:var(--accent);font-weight:600}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{border:0;background:none;padding:10px 14px;font-weight:500;color:var(--muted);border-bottom:2.5px solid transparent;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--accent);border-color:var(--accent);font-weight:600}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px}
+@media (max-width:820px){.panel{grid-template-columns:1fr}}
+.pc{border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.pc h2{margin:0;font-size:16px;font-weight:600}
+.kv{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 14px;font-size:14px}
+.kv .k{color:var(--muted)}
+.act{display:flex;flex-direction:column;gap:10px;font-size:14px}
+.act div{display:flex;gap:10px}
+.act time{color:var(--muted);font-size:12.5px;width:84px;flex:none;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:9}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="topin">
+      <span class="logo"><b><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5D334" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5.1-6"/></svg></b><span>agroo<i>link</i></span></span>
+      <span class="crumb" id="crumb">Mi espacio › Mis proyectos › Nuevo proyecto</span>
+      <span class="saved" id="saved" hidden><span class="d"></span><span id="savedTxt">Guardado</span></span>
+      <button class="link" id="exitBtn" type="button" hidden>Guardar y salir</button>
+    </div>
+    <div class="prog" id="prog" hidden><span id="progBar" style="width:0"></span></div>
+  </header>
+  <main class="stage" id="stage"></main>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const ESPECIES = [{"id": "avicultura", "label": "Avicultura", "categorias": [{"id": "avicultura_pollos_de_engorde", "label": "Pollos de engorde", "subcategorias": [{"id": "avicultura_broilers", "label": "Broilers"}, {"id": "avicultura_pollos_de_crecimiento_lento", "label": "Pollos de crecimiento lento"}]}, {"id": "avicultura_gallinas_ponedoras", "label": "Gallinas ponedoras"}, {"id": "avicultura_reproductoras", "label": "Reproductoras"}, {"id": "avicultura_pavos", "label": "Pavos"}, {"id": "avicultura_patos", "label": "Patos"}, {"id": "avicultura_ocas", "label": "Ocas"}, {"id": "avicultura_perdices", "label": "Perdices"}, {"id": "avicultura_aves_ornamentales", "label": "Aves ornamentales"}]}, {"id": "porcino", "label": "Porcino", "categorias": [{"id": "porcino_hembras_reproductoras", "label": "Hembras reproductoras"}, {"id": "porcino_machos_reproductores", "label": "Machos reproductores"}, {"id": "porcino_lechones", "label": "Lechones"}, {"id": "porcino_cebo_engorde", "label": "Cebo / Engorde"}, {"id": "porcino_razas_autoctonas", "label": "Razas autóctonas"}]}, {"id": "bovino", "label": "Bovino", "categorias": [{"id": "bovino_vacuno_de_leche", "label": "Vacuno de leche"}, {"id": "bovino_vacuno_de_carne", "label": "Vacuno de carne"}, {"id": "bovino_razas_autoctonas", "label": "Razas autóctonas"}]}, {"id": "ovino", "label": "Ovino", "categorias": [{"id": "ovino_ovino_de_leche", "label": "Ovino de leche"}, {"id": "ovino_ovino_de_carne", "label": "Ovino de carne"}, {"id": "ovino_razas_autoctonas", "label": "Razas autóctonas"}]}, {"id": "caprino", "label": "Caprino", "categorias": [{"id": "caprino_caprino_de_leche", "label": "Caprino de leche"}, {"id": "caprino_caprino_de_carne", "label": "Caprino de carne"}, {"id": "caprino_razas_autoctonas", "label": "Razas autóctonas"}]}, {"id": "acuicultura", "label": "Acuicultura", "categorias": [{"id": "acuicultura_tilapias", "label": "Tilapias"}, {"id": "acuicultura_camarones", "label": "Camarones"}, {"id": "acuicultura_salmon", "label": "Salmón"}]}, {"id": "cunicultura", "label": "Cunicultura", "categorias": [{"id": "cunicultura_conejos_para_carne", "label": "Conejos para carne"}, {"id": "cunicultura_conejos_para_piel", "label": "Conejos para piel"}]}];
+const FAMILIAS = [{"id": "nutricion", "label": "Nutrición animal y aditivos", "tipos": ["Piensos completos", "Piensos complementarios", "Premezclas", "Núcleos nutricionales", "Acidificantes", "Probióticos", "Prebióticos", "Enzimas", "Fitogénicos", "Adsorbentes de micotoxinas", "Aminoácidos", "Vitaminas", "Minerales y oligoelementos", "Grasas y aceites", "Conservantes y antioxidantes", "Sustitutos lácteos", "Aditivos tecnológicos"]}, {"id": "materias_primas", "label": "Materias primas y productos agrícolas", "tipos": ["Cereales", "Harinas proteicas", "Subproductos agroindustriales", "Forrajes", "Aditivos para ensilado", "Conservantes de materias primas", "Productos para almacenamiento"]}, {"id": "salud", "label": "Salud animal y bioseguridad", "tipos": ["Vacunas", "Antibióticos veterinarios", "Antiparasitarios", "Antiinflamatorios", "Desinfectantes", "Productos de higiene", "Diagnóstico rápido", "Kits PCR / laboratorio", "Equipos de vacunación", "Control de plagas"]}, {"id": "genetica", "label": "Genética y reproducción", "tipos": ["Líneas genéticas porcinas", "Genética avícola", "Genética bovina", "Semen y dosis seminales", "Embriones", "Equipos de inseminación", "Equipos de incubación reproductiva"]}, {"id": "equipamiento", "label": "Equipamiento e instalaciones ganaderas", "tipos": ["Comederos", "Bebederos", "Sistemas de alimentación automática", "Sistemas de ventilación", "Sistemas de calefacción", "Refrigeración y cooling", "Iluminación ganadera", "Suelos y slats", "Jaulas y alojamientos", "Equipos de ordeño", "Robots de ordeño", "Sistemas de limpieza", "Sistemas de gestión de estiércol", "Silos y almacenamiento", "Básculas y sistemas de pesaje"]}, {"id": "avicola", "label": "Equipamiento avícola especializado", "tipos": ["Incubadoras", "Nacedoras", "Clasificadoras de huevos", "Sistemas de recogida de huevos", "Nidos", "Equipos de procesamiento avícola", "Sistemas de aturdimiento", "Equipos de vacunación in ovo"]}, {"id": "porcino", "label": "Equipamiento porcino especializado", "tipos": ["Estaciones electrónicas de alimentación", "Equipos de alimentación líquida", "Sistemas de maternidad", "Sistemas de detección de partos", "Equipos de procesado de lechones"]}, {"id": "rumiantes", "label": "Equipamiento para rumiantes", "tipos": ["Robots de alimentación", "Mezcladoras unifeed", "Sistemas de detección de mastitis", "Sistemas de refrigeración de leche", "Equipos de análisis de leche", "Sistemas de separación de animales", "Cepillos automáticos"]}, {"id": "sostenibilidad", "label": "Sostenibilidad, medio ambiente y energía", "tipos": ["Biodigestores", "Separadores sólido-líquido", "Tratamiento de aguas", "Sistemas de reducción de emisiones", "Energía solar para granjas", "Sistemas de recuperación de calor", "Equipos de compostaje", "Soluciones de gestión de residuos"]}, {"id": "tecnologia", "label": "Tecnología, sensores y software", "tipos": ["Sensores de actividad y collares", "Software de gestión ganadera", "Sensores ambientales", "Sistemas de identificación RFID", "Cámaras de visión artificial", "Plataformas IoT", "Sistemas de trazabilidad", "Software de formulación", "Sistemas de alimentación de precisión"]}];
+const OBJETIVOS = ['Bienestar animal','Rendimiento productivo','Conversión alimenticia','Salud intestinal','Salud animal y prevención','Reproducción y fertilidad','Calidad del producto final','Reducción de costes','Sostenibilidad ambiental','Bioseguridad','Eficiencia operativa','Nutrición y aprovechamiento de nutrientes','Calidad y seguridad del alimento','Gestión del agua','Climatización y ambiente','Trazabilidad y control','Rentabilidad de la explotación','Innovación y digitalización'];
+const PAISES = ['España','Portugal','Francia','Italia','Marruecos','México','Colombia','Argentina','Chile','Perú','Brasil','Otro país'];
+const TABLEROS = [
+  {id:'t1', name:'Ronozyme® HiPhos', by:'DSM-Firmenich', tipo:'Enzimas', board:'Nave 2 · broilers', col:'#1E4FA0'},
+  {id:'t2', name:'Axtra® PHY', by:'IFF', tipo:'Enzimas', board:'Nave 2 · broilers', col:'#C8102E'},
+  {id:'t3', name:'Aviary Pro', by:'Zucami', tipo:'Jaulas y alojamientos', board:'Nave 2 · broilers', col:'#8A5A00'},
+  {id:'t4', name:'Sensor NH₃ / CO₂', by:'AgroNova', tipo:'Sensores ambientales', board:'Bioseguridad 2027', col:'#0E5A3A'}];
+const DIRECTORIO = [
+  {id:'c1', name:'DSM-Firmenich', sub:'Fabricante · Nutrición y aditivos', k:'Empresa', col:'#1E4FA0', ini:'dsm'},
+  {id:'c2', name:'Zucami', sub:'Fabricante · Equipamiento avícola', k:'Empresa', col:'#C8102E', ini:'Z'},
+  {id:'c3', name:'AgroNova', sub:'Fabricante · Sensores y software', k:'Empresa', col:'#0E5A3A', ini:'AN'},
+  {id:'c4', name:'Agropecuària del Segre', sub:'Distribuidor · Lleida', k:'Empresa', col:'#2E8B57', ini:'AS'},
+  {id:'c5', name:'AgroExport SRL', sub:'Distribuidor multimarca', k:'Empresa', col:'#1F3A5F', ini:'AE'},
+  {id:'e1', name:'Dra. Ana Ruiz', sub:'Veterinaria · Bienestar animal', k:'Experto', col:'#4B3BA6', ini:'AR'},
+  {id:'e2', name:'Dr. Carlos Martínez', sub:'Veterinario · Sanidad avícola', k:'Experto', col:'#4B3BA6', ini:'CM'},
+  {id:'e3', name:'Laura Gil', sub:'Nutrición avícola · Consultora', k:'Experto', col:'#4B3BA6', ini:'LG'}];
+
+const IC = {
+  build:'M3 21V9l9-6 9 6v12M9 21v-6h6v6', grow:'M4 20h16M6 16v4M11 12v8M16 8v12M21 4v16', wrench:'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z',
+  cart:'M3 4h2l2.5 11h11L21 7H6.5M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01', trend:'M3 17l6-6 4 4 8-8M15 7h6v6', shield:'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+  leaf:'M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5.1-6', dna:'M5 3c0 6 14 6 14 12M19 3c0 6-14 6-14 12M5 21c0-2 1-3 2-4M19 21c0-2-1-3-2-4M8 7h8M8 13h8',
+  user:'M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0', hand:'M7 11V6a2 2 0 0 1 4 0v5M11 10V4a2 2 0 0 1 4 0v6M15 10V6a2 2 0 0 1 4 0v8a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L3 14a2 2 0 0 1 3.4-2L7 13',
+  clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2', save:'M5 3h11l3 3v15H5zM8 3v6h8M8 21v-7h8v7', lock:'M5 11h14v10H5zM8 11V8a4 4 0 0 1 8 0v3',
+  arrow:'M5 12h14M13 6l6 6-6 6', back:'M19 12H5M11 18l-6-6 6-6', search:'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5', clip:'M21 11.5 12.5 20a5 5 0 0 1-7-7L14 4.5a3.5 3.5 0 0 1 5 5L10.5 18a2 2 0 0 1-3-3L15 7.5', x:'M6 6l12 12M18 6 6 18', check:'m5 12 5 5 9-10'};
+const svg = (n, s=18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${IC[n]}"/></svg>`;
+
+const TIPOS = [
+  ['A','build','Nueva explotación o instalación','Construir desde cero una granja o nave'],
+  ['B','grow','Ampliación de explotación','Más capacidad sobre lo que ya tienes'],
+  ['C','wrench','Modernización y renovación','Sustituir equipos o sistemas antiguos'],
+  ['D','cart','Compra de productos y equipamiento','Comprar o renovar productos concretos'],
+  ['E','trend','Mejora productiva','Mejorar un indicador de tu producción'],
+  ['F','shield','Salud animal y bioseguridad','Prevenir, diagnosticar o proteger'],
+  ['G','leaf','Nutrición y alimentación','Piensos, aditivos, formulación'],
+  ['H','dna','Genética y reproducción','Líneas genéticas, semen, reproducción'],
+  ['I','user','Consultoría y servicios técnicos','Un especialista para un trabajo concreto'],
+  ['J','hand','Distribución y colaboración comercial','Distribuir, representar o colaborar']];
+
+/* ---------- preguntas ---------- */
+const q = (id, sec, title, type, o={}) => Object.assign({id, sec, title, type}, o);
+const SI = (...a) => a;
+const BASE = [
+  q('tipo','Tipo de proyecto','¿Qué tipo de proyecto tienes en mente?','tipo',{req:true, help:'Elige el que mejor lo describe. Según tu respuesta te haremos unas preguntas u otras.'}),
+  q('nombre','Información general','¿Cómo quieres llamar a tu proyecto?','text',{req:true, ph:'Ej.: Nave 2 de broilers en Alcarràs', help:'Solo lo ves tú y las empresas con las que decidas compartirlo.'}),
+  q('lugar','Información general','¿Dónde se desarrollará?','location',{req:true, help:'El país es obligatorio. La provincia y la localidad ayudan a encontrar proveedores con servicio en tu zona.'}),
+  q('especies','Información general','¿Para qué especie está destinado?','species',{req:true, help:'Elegir una especie incluye todas sus producciones. Afina solo si quieres.'}),
+  q('objetivos','Información general','¿Qué quieres conseguir?','multi',{opts:OBJETIVOS, help:'Elige todos los que apliquen.'}),
+  q('descripcion','Información general','Describe brevemente tu proyecto','textarea',{ph:'Qué tienes ahora, qué necesitas y qué es importante para ti…', help:'Cuanto más concreto, mejores propuestas.'})];
+const S = {
+ A: [q('a_tipo','Nueva explotación','¿Qué tipo de explotación será?','single',{opts:SI('Intensiva','Semiintensiva','Extensiva','Ecológica','Campera / al aire libre')}),
+     q('a_cap','Nueva explotación','¿Qué capacidad prevés?','number',{unit:'animales', ph:'40000'}),
+     q('a_naves','Nueva explotación','¿Cuántas naves o instalaciones?','number',{unit:'naves', ph:'1'}),
+     q('a_sup','Nueva explotación','¿Qué superficie tienes disponible?','number',{unit:'m²', ph:'2200'}),
+     q('a_sist','Nueva explotación','¿Qué sistema productivo usarás?','single',{opts:SI('Todo dentro – todo fuera','Producción continua','Ciclo cerrado','Por fases en distintas granjas')}),
+     q('a_aloj','Nueva explotación','¿Qué tipo de alojamiento?','single',{opts:SI('Suelo con cama','Aviario / multinivel','Jaulas acondicionadas','Slat total o parcial','Cubículos','Otro')}),
+     q('a_auto','Nueva explotación','¿Qué nivel de automatización buscas?','single',{opts:SI('Básico · lo imprescindible','Medio · alimentación y clima automáticos','Alto · control integral y datos en el móvil')}),
+     q('a_terreno','Nueva explotación','¿Tienes el terreno?','single',{opts:SI('Sí, en propiedad','Arrendado','En proceso de compra','Todavía no')}),
+     q('a_permisos','Nueva explotación','¿En qué estado están los permisos y licencias?','single',{opts:SI('Concedidos','En tramitación','Sin iniciar','No lo sé')}),
+     q('a_luz','Nueva explotación','¿Hay suministro eléctrico?','single',{opts:SI('Sí, conexión a red suficiente','Sí, pero hay que ampliar potencia','No, buscamos autoconsumo','No lo sé')}),
+     q('a_agua','Nueva explotación','¿Hay agua disponible?','single',{opts:SI('Red municipal','Pozo propio','Ambos','No lo sé')}),
+     q('a_clima','Nueva explotación','¿Qué necesitas en climatización?','multi',{opts:SI('Ventilación','Calefacción','Refrigeración / cooling','Aislamiento','Control automático')}),
+     q('a_resid','Nueva explotación','¿Cómo prevés gestionar los residuos?','multi',{opts:SI('Almacenamiento de purines','Compostaje','Biogás','Separación sólido-líquido','Gestor externo','Aún por decidir')}),
+     q('a_llave','Nueva explotación','¿Buscas un proyecto llave en mano o soluciones por separado?','single',{opts:SI('Proyecto llave en mano','Proveedores por especialidad','Todavía no lo sé')})],
+ B: [q('b_act','Ampliación','¿Qué capacidad tienes ahora?','number',{unit:'animales'}),
+     q('b_obj','Ampliación','¿A qué capacidad quieres llegar?','number',{unit:'animales'}),
+     q('b_inst','Ampliación','¿Qué instalaciones tienes?','textarea',{ph:'Naves, superficie, equipos principales…'}),
+     q('b_sup','Ampliación','¿Qué superficie tienes disponible para ampliar?','number',{unit:'m²'}),
+     q('b_cons','Ampliación','¿Qué equipos quieres conservar?','text',{ph:'Ej.: silos y control de clima'}),
+     q('b_sust','Ampliación','¿Qué equipos hay que sustituir?','text',{ph:'Ej.: comederos y bebederos'}),
+     q('b_compat','Ampliación','¿Lo nuevo debe ser compatible con lo que ya tienes?','single',{opts:SI('Sí, imprescindible','Preferible','No es necesario')}),
+     q('b_lim','Ampliación','¿Hay limitaciones de espacio?','textarea',{ph:'Accesos, alturas, distancias, normativa…'}),
+     q('b_activ','Ampliación','¿Tienes que mantener la actividad durante las obras?','single',{opts:SI('Sí','No','En parte')})],
+ C: [q('c_inst','Modernización','¿Qué instalación quieres modernizar?','text',{ph:'Ej.: nave de ponedoras en jaulas'}),
+     q('c_ant','Modernización','¿Qué antigüedad tienen los equipos?','single',{opts:SI('Menos de 5 años','5 – 10 años','10 – 20 años','Más de 20 años')}),
+     q('c_prob','Modernización','¿Qué problemas has detectado?','textarea',{ph:'Averías, consumo, bienestar, mano de obra…'}),
+     q('c_sist','Modernización','¿Qué sistemas quieres sustituir?','multi',{opts:SI('Alimentación','Agua','Ventilación','Calefacción','Iluminación','Alojamiento','Gestión de residuos','Control y software')}),
+     q('c_cap','Modernización','¿Qué capacidad debe mantenerse?','number',{unit:'animales'}),
+     q('c_mej','Modernización','¿Qué mejoras esperas?','textarea'),
+     q('c_auto','Modernización','¿Qué nivel de automatización quieres?','single',{opts:SI('Básico','Medio','Alto')}),
+     q('c_inst2','Modernización','¿Necesitas instalación y puesta en marcha?','single',{opts:SI('Sí','No','Solo puesta en marcha')})],
+ D: [q('d_cant','Compra de productos','¿Qué cantidad necesitas?','text',{ph:'Ej.: 4 líneas de comederos de 90 m'}),
+     q('d_rend','Compra de productos','¿Qué capacidad o rendimiento necesitas?','text',{ph:'Ej.: 40.000 aves, 6 t/día'}),
+     q('d_spec','Compra de productos','¿Alguna especificación técnica?','textarea'),
+     q('d_marca','Compra de productos','¿Tienes alguna marca preferida?','text',{ph:'Opcional'}),
+     q('d_alt','Compra de productos','¿Aceptas marcas alternativas?','single',{opts:SI('Sí','Solo equivalentes','No')}),
+     q('d_fecha','Compra de productos','¿Para cuándo necesitas la entrega?','date'),
+     q('d_inst','Compra de productos','¿Necesitas instalación?','single',{opts:SI('Sí','No','No lo sé')}),
+     q('d_mant','Compra de productos','¿Necesitas mantenimiento?','single',{opts:SI('Sí, contrato anual','Puntual','No')})],
+ E: [q('e_obj','Mejora productiva','¿Cuál es tu objetivo principal?','single',{opts:SI('Conversión alimenticia','Ganancia media diaria','Mortalidad','Puesta / producción por animal','Fertilidad','Calidad del producto','Otro')}),
+     q('e_act','Mejora productiva','¿Cuál es el valor actual del indicador?','text',{ph:'Ej.: IC 1,74'}),
+     q('e_meta','Mejora productiva','¿A qué valor quieres llegar?','text',{ph:'Ej.: IC 1,62'}),
+     q('e_anim','Mejora productiva','¿Cuántos animales afecta?','number',{unit:'animales'}),
+     q('e_sist','Mejora productiva','¿Qué sistema productivo tienes?','single',{opts:SI('Intensivo','Semiintensivo','Extensivo','Ecológico')}),
+     q('e_prob','Mejora productiva','¿Qué problemas has identificado?','textarea'),
+     q('e_sol','Mejora productiva','¿Qué soluciones usas ahora?','textarea'),
+     q('e_res','Mejora productiva','¿Qué resultados has obtenido?','textarea'),
+     q('e_plazo','Mejora productiva','¿En qué plazo esperas la mejora?','single',{opts:SI('1 – 3 meses','3 – 6 meses','6 – 12 meses','Más de un año')}),
+     q('e_ases','Mejora productiva','¿Necesitas asesoramiento?','single',{opts:SI('Sí','No','Quizá')})],
+ F: [q('f_area','Salud y bioseguridad','¿Qué área sanitaria te interesa?','multi',{opts:SI('Bioseguridad','Vacunación','Parasitología','Salud intestinal','Respiratorio','Calidad del agua','Control de plagas','Desinfección')}),
+     q('f_riesgo','Salud y bioseguridad','¿Qué problema o riesgo has identificado?','textarea',{help:'No incluyas datos clínicos personales ni de terceros.'}),
+     q('f_inst','Salud y bioseguridad','¿Qué tipo de instalación?','text'),
+     q('f_anim','Salud y bioseguridad','¿Cuántos animales?','number',{unit:'animales'}),
+     q('f_med','Salud y bioseguridad','¿Qué medidas sanitarias aplicas ahora?','textarea'),
+     q('f_prod','Salud y bioseguridad','¿Qué productos usas?','text',{ph:'Opcional'}),
+     q('f_nec','Salud y bioseguridad','¿Qué necesitas?','multi',{opts:SI('Diagnóstico','Laboratorio','Equipamiento','Asesoramiento veterinario')})],
+ G: [q('g_tipo','Nutrición','¿Qué tipo de alimentación usas?','single',{opts:SI('Pienso completo comprado','Fabricación propia','Mixta','Pastoreo con suplemento')}),
+     q('g_fase','Nutrición','¿Para qué fase productiva?','multi',{opts:SI('Arranque','Crecimiento','Acabado','Gestación','Lactación','Reproductores','Todas')}),
+     q('g_cons','Nutrición','¿Cuánto pienso consumes aproximadamente?','number',{unit:'t / mes'}),
+     q('g_sist','Nutrición','¿Qué sistema de alimentación tienes?','single',{opts:SI('Automático en seco','Líquido','Manual','Unifeed')}),
+     q('g_obj','Nutrición','¿Cuál es el objetivo nutricional?','text',{ph:'Ej.: mejorar digestibilidad con dietas de trigo'}),
+     q('g_prob','Nutrición','¿Qué problemas has identificado?','textarea'),
+     q('g_ing','Nutrición','¿Qué ingredientes utilizas?','text'),
+     q('g_adit','Nutrición','¿Qué aditivos usas ahora?','text'),
+     q('g_ref','Nutrición','¿Necesitas reformular?','single',{opts:SI('Sí','No','Quizá')}),
+     q('g_ens','Nutrición','¿Te interesaría hacer ensayos en granja?','single',{opts:SI('Sí','No','Depende')}),
+     q('g_vol','Nutrición','¿Qué volumen estimado de compra?','text',{ph:'Ej.: 2 t de aditivo al año'})],
+ H: [q('h_lin','Genética','¿Qué línea genética tienes ahora?','text'),
+     q('h_mat','Genética','¿Qué material genético buscas?','multi',{opts:SI('Animales reproductores','Semen / dosis seminales','Embriones','Huevos fértiles','Pollitos / lechones de un día')}),
+     q('h_vol','Genética','¿Qué volumen necesitas?','text'),
+     q('h_obj','Genética','¿Cuál es el objetivo reproductivo?','text'),
+     q('h_rend','Genética','¿Qué rendimiento tienes ahora?','text'),
+     q('h_car','Genética','¿Qué características buscas?','textarea'),
+     q('h_ases','Genética','¿Necesitas asesoramiento genético?','single',{opts:SI('Sí','No')}),
+     q('h_fecha','Genética','¿Cuándo prevés incorporarlo?','date')],
+ I: [q('i_tipo','Servicios técnicos','¿Qué tipo de servicio necesitas?','single',{opts:SI('Asesoría técnica','Auditoría','Formación','Análisis de laboratorio','Ingeniería y proyecto','Trámites y permisos','Otro')}),
+     q('i_esp','Servicios técnicos','¿Qué especialidad?','text',{ph:'Ej.: nutrición avícola'}),
+     q('i_desc','Servicios técnicos','Describe la necesidad','textarea'),
+     q('i_inst','Servicios técnicos','¿Cuántas instalaciones?','number',{unit:'instalaciones'}),
+     q('i_mod','Servicios técnicos','¿Qué modalidad prefieres?','single',{opts:SI('Presencial','Online','Mixta')}),
+     q('i_dur','Servicios técnicos','¿Duración estimada?','text',{ph:'Ej.: 2 visitas en un mes'}),
+     q('i_idioma','Servicios técnicos','¿En qué idioma?','multi',{opts:SI('Español','Inglés','Portugués','Francés','Catalán')}),
+     q('i_entr','Servicios técnicos','¿Qué entregables esperas?','textarea',{ph:'Informe, plan de acción, formación…'}),
+     q('i_rec','Servicios técnicos','¿Puntual o recurrente?','single',{opts:SI('Puntual','Recurrente')})],
+ J: [q('j_tipo','Colaboración comercial','¿Qué tipo de colaboración buscas?','single',{opts:SI('Distribuir una marca','Representación comercial','Acuerdo de fabricación','Joint venture','Otro')}),
+     q('j_paises','Colaboración comercial','¿En qué países?','multi',{opts:PAISES.slice(0,-1)}),
+     q('j_cob','Colaboración comercial','¿Qué cobertura comercial tienes ahora?','textarea'),
+     q('j_excl','Colaboración comercial','¿Buscas exclusividad?','single',{opts:SI('Sí, por país','Sí, por zona','No')}),
+     q('j_cap','Colaboración comercial','¿Qué capacidad de distribución tienes?','text'),
+     q('j_red','Colaboración comercial','¿Qué red comercial tienes?','text',{ph:'Ej.: 6 comerciales y 2 técnicos'}),
+     q('j_log','Colaboración comercial','¿Qué infraestructura logística tienes?','text'),
+     q('j_exp','Colaboración comercial','¿Qué experiencia tienes en el sector?','text'),
+     q('j_vol','Colaboración comercial','¿Qué volumen de negocio estimas?','text',{ph:'Ej.: 300.000 € el primer año'})]};
+const TAIL = [
+  q('productos','Productos y soluciones','¿Qué productos o soluciones necesitas?','products',{help:'Usamos el catálogo de Agroolink. Puedes elegir familias, tipos concretos o productos de tus tableros.'}),
+  q('fase','Presupuesto y calendario','¿En qué fase se encuentra tu proyecto?','single',{opts:SI('Explorando posibilidades','Planificación','Comparando proveedores','Preparado para comprar','En ejecución')}),
+  q('inicio','Presupuesto y calendario','¿Cuándo quieres empezar?','when'),
+  q('presu','Presupuesto y calendario','¿Cuál es tu presupuesto aproximado?','budget',{help:'Solo para orientar las propuestas. Puedes dejarlo sin definir.'}),
+  q('finan','Presupuesto y calendario','¿Necesitas financiación?','single',{opts:SI('Sí','No','Por definir')}),
+  q('ayuda','Proveedores y expertos','¿Cómo podemos ayudarte?','contacts',{help:'No enviamos nada automáticamente: después confirmarás a quién quieres contactar.'}),
+  q('docs','Documentación','¿Quieres añadir documentación?','files',{help:'Planos, fotografías, fichas técnicas, presupuestos u otros documentos.'}),
+  q('priv','Privacidad','¿Quién podrá ver tu proyecto?','privacy',{help:'Crear el proyecto no lo publica ni envía información a nadie.'})];
+
+/* ---------- estado ---------- */
+const KEY = 'agroolink-proyecto-borrador';
+let st = {step:-1, v:{}, created:null, tab:'Resumen'};
+const store = { get(){try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){return null}}, set(o){try{localStorage.setItem(KEY, JSON.stringify(o));return true}catch(e){return false}}, del(){try{localStorage.removeItem(KEY)}catch(e){}} };
+const steps = () => BASE.concat(st.v.tipo ? S[st.v.tipo] : [], TAIL);
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let savedAt = null;
+function save(){ savedAt = new Date(); const ok = store.set({v:st.v, step:st.step, at:savedAt.toISOString()}); paintSaved(ok); }
+function paintSaved(ok){ $('#saved').hidden = false; $('#savedTxt').textContent = ok === false ? 'No se ha podido guardar en este navegador' : 'Guardado automáticamente'; }
+function toast(t){ const el = $('#toast'); el.textContent = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(()=> el.hidden = true, 2200); }
+
+const EXAMPLE = {tipo:'A', nombre:'Nave 2 de broilers en Alcarràs', lugar:{pais:'España', region:'Lleida', loc:'Alcarràs'},
+  especies:['avicultura','avicultura_pollos_de_engorde','avicultura_broilers'], objetivos:['Conversión alimenticia','Reducción de costes','Bienestar animal'],
+  descripcion:'Construimos una segunda nave de 40.000 broilers. Buscamos alimentación completa (silos, transporte y comederos), ventilación de túnel y control de clima, con montaje y servicio técnico en la zona.',
+  a_tipo:'Intensiva', a_cap:'40000', a_naves:'1', a_sup:'2200', a_aloj:'Suelo con cama', a_auto:'Alto · control integral y datos en el móvil', a_terreno:'Sí, en propiedad', a_permisos:'En tramitación', a_clima:['Ventilación','Calefacción','Refrigeración / cooling','Control automático'], a_llave:'Proveedores por especialidad',
+  productos:{tipos:['equipamiento:Sistemas de alimentación automática','equipamiento:Sistemas de ventilación','equipamiento:Silos y almacenamiento'], tableros:['t4'], libre:'Control de clima compatible con la nave 1'},
+  fase:'Comparando proveedores', inicio:{op:'En 3-6 meses'}, presu:{nd:false, min:'60000', max:'90000', mon:'EUR'}, finan:'Por definir',
+  ayuda:{opts:['Encontrar fabricantes','Encontrar distribuidores','Comparar productos','Solicitar presupuestos'], sel:['c2','c4','e3']},
+  docs:{files:[{name:'Plano_nave2.pdf', size:2150000},{name:'Parcela.jpg', size:840000}], notas:'El plano es provisional.'}, priv:'Privado: solo yo'};
+
+/* ---------- render ---------- */
+function render(){
+  const stage = $('#stage');
+  $('#prog').hidden = st.step < 0 || st.created;
+  $('#exitBtn').hidden = st.step < 0 || !!st.created;
+  if (st.created) return renderFicha();
+  if (st.step < 0) return renderWelcome();
+  const L = steps();
+  if (st.step >= L.length) return renderSummary();
+  $('#progBar').style.width = Math.round((st.step) / (L.length + 1) * 100) + '%';
+  const Q = L[st.step];
+  $('#crumb').textContent = 'Mi espacio › Mis proyectos › ' + (st.v.nombre || 'Nuevo proyecto');
+  stage.innerHTML = `<section class="q enter" aria-labelledby="qt">
+    <div class="qnum">${st.step + 1} de ${L.length} <span class="sec">· ${esc(Q.sec)}</span></div>
+    <h1 class="t" id="qt">${esc(Q.title)}${Q.req ? ' <span class="req" aria-label="obligatoria">*</span>' : ''}</h1>
+    ${Q.help ? `<p class="help">${esc(Q.help)}</p>` : ''}
+    <div id="field"></div>
+    <div class="err" id="err" role="alert" hidden></div>
+    <div class="foot">
+      ${st.step > 0 ? `<button class="btn2" id="back" type="button">${svg('back',16)} Atrás</button>` : ''}
+      <span class="sp"></span>
+      ${!Q.req ? `<button class="link" id="skip" type="button">Saltar</button>` : ''}
+      <button class="btn" id="next" type="button">${st.step === L.length - 1 ? 'Ver resumen' : 'Continuar'} ${svg('arrow',16)}</button>
+    </div>
+    <span class="hint">Pulsa Intro ↵ para continuar</span>
+  </section>`;
+  FIELDS[Q.type](Q, $('#field'));
+  $('#next').onclick = () => go(1, Q);
+  if ($('#back')) $('#back').onclick = () => go(-1);
+  if ($('#skip')) $('#skip').onclick = () => { delete st.v[Q.id]; go(1, Q, true); };
+  const first = $('#field').querySelector('input:not([type=file]),textarea,select,button');
+  if (first && Q.type !== 'tipo') first.focus({preventScroll:true});
+}
+function valid(Q){
+  const v = st.v[Q.id];
+  if (!Q.req) return '';
+  if (Q.type === 'location') return v && v.pais ? '' : 'Elige el país.';
+  if (Array.isArray(v)) return v.length ? '' : 'Elige al menos una opción.';
+  return v && String(v).trim() ? '' : (Q.type === 'tipo' ? 'Elige un tipo de proyecto.' : 'Este dato es obligatorio.');
+}
+function go(d, Q, skip){
+  if (d > 0 && Q && !skip){ const e = valid(Q); if (e){ const el = $('#err'); el.textContent = e; el.hidden = false; return; } }
+  st.step = Math.max(0, st.step + d); save(); render(); window.scrollTo({top:0});
+}
+document.addEventListener('keydown', e => {
+  if (st.step < 0 || st.created) return;
+  const L = steps(); if (st.step >= L.length) return;
+  if (e.key === 'Enter' && !e.shiftKey && e.target.tagName !== 'TEXTAREA'){ e.preventDefault(); $('#next') && $('#next').click(); }
+  if (/^[a-j]$/i.test(e.key) && !/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)){
+    const b = document.querySelector(`[data-key="${e.key.toUpperCase()}"]`); if (b) b.click();
+  }
+});
+
+const set = (id, val) => { st.v[id] = val; save(); };
+const toggle = (arr, x) => arr.includes(x) ? arr.filter(y => y !== x) : arr.concat(x);
+const FIELDS = {
+  tipo(Q, f){
+    f.innerHTML = `<div class="grid">${TIPOS.map(([k,ic,t,d]) => `<button type="button" class="card" data-key="${k}" data-v="${k}" aria-pressed="${st.v.tipo===k}"><span class="ic">${svg(ic)}</span><span style="min-width:0"><span class="tt">${t}</span><span class="dd">${d}</span></span><span class="key">${k}</span></button>`).join('')}</div>`;
+    f.querySelectorAll('.card').forEach(b => b.onclick = () => { const changed = st.v.tipo && st.v.tipo !== b.dataset.v; set('tipo', b.dataset.v); f.querySelectorAll('.card').forEach(x => x.setAttribute('aria-pressed', x === b)); if (changed) toast('Hemos adaptado las preguntas al nuevo tipo'); setTimeout(()=> go(1, Q), 220); });
+  },
+  text(Q, f){ f.innerHTML = `<input class="in" id="i_${Q.id}" type="text" placeholder="${esc(Q.ph||'Escribe tu respuesta')}" value="${esc(st.v[Q.id]||'')}">`; f.querySelector('input').oninput = e => set(Q.id, e.target.value); },
+  textarea(Q, f){ f.innerHTML = `<textarea class="in" id="i_${Q.id}" placeholder="${esc(Q.ph||'Escribe tu respuesta')}">${esc(st.v[Q.id]||'')}</textarea><span class="hint">Mayús + Intro para un salto de línea</span>`; f.querySelector('textarea').oninput = e => set(Q.id, e.target.value); },
+  number(Q, f){ f.innerHTML = `<div class="unit"><input class="in" id="i_${Q.id}" type="text" inputmode="decimal" placeholder="${esc(Q.ph||'0')}" value="${esc(st.v[Q.id]||'')}"><span>${esc(Q.unit||'')}</span></div>`; f.querySelector('input').oninput = e => set(Q.id, e.target.value.replace(/[^\d.,]/g,'')); },
+  date(Q, f){ f.innerHTML = `<input class="box" id="i_${Q.id}" type="date" value="${esc(st.v[Q.id]||'')}" style="max-width:260px">`; f.querySelector('input').onchange = e => set(Q.id, e.target.value); },
+  single(Q, f){
+    const keys = 'ABCDEFGHIJ';
+    f.innerHTML = `<div class="opts">${Q.opts.map((o,i) => `<button type="button" class="opt" data-key="${keys[i]}" aria-pressed="${st.v[Q.id]===o}"><span class="key">${keys[i]}</span>${esc(o)}</button>`).join('')}</div>`;
+    f.querySelectorAll('.opt').forEach((b,i) => b.onclick = () => { set(Q.id, Q.opts[i]); f.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); setTimeout(()=> go(1, Q), 200); });
+  },
+  multi(Q, f){
+    const cur = () => st.v[Q.id] || [];
+    f.innerHTML = `<div class="chips">${Q.opts.map(o => `<button type="button" class="chip" aria-pressed="${cur().includes(o)}">${esc(o)}</button>`).join('')}</div><span class="hint" id="cnt"></span>`;
+    const cnt = () => f.querySelector('#cnt').textContent = cur().length ? cur().length + ' seleccionados' : 'Puedes elegir varios';
+    f.querySelectorAll('.chip').forEach((b,i) => b.onclick = () => { set(Q.id, toggle(cur(), Q.opts[i])); b.setAttribute('aria-pressed', cur().includes(Q.opts[i])); cnt(); }); cnt();
+  },
+  location(Q, f){
+    const v = st.v.lugar || {};
+    f.innerHTML = `<div class="row">
+      <label class="f">País *<select class="box" id="l_pais"><option value="">Elige un país</option>${PAISES.map(p => `<option ${v.pais===p?'selected':''}>${p}</option>`).join('')}</select></label>
+      <label class="f">Región o provincia<input class="box" id="l_reg" type="text" placeholder="Ej.: Lleida" value="${esc(v.region||'')}"></label>
+      <label class="f">Localidad<input class="box" id="l_loc" type="text" placeholder="Ej.: Alcarràs" value="${esc(v.loc||'')}"></label></div>
+      <div class="note">${svg('lock',16)}<span>Las empresas solo verán la provincia hasta que tú decidas compartir más.</span></div>`;
+    const upd = () => set('lugar', {pais:$('#l_pais').value, region:$('#l_reg').value, loc:$('#l_loc').value});
+    ['#l_pais','#l_reg','#l_loc'].forEach(s => $(s).oninput = upd);
+  },
+  species(Q, f){
+    const cur = () => st.v.especies || [];
+    const draw = () => {
+      f.innerHTML = `<div class="tree">${ESPECIES.map(e => {
+        const on = cur().includes(e.id);
+        return `<div class="branch ${on?'on':''}"><div class="hd"><button type="button" class="chip" data-id="${e.id}" aria-pressed="${on}">${esc(e.label)}</button>${on ? '<span class="hint">Incluye todas sus producciones; afina si quieres</span>' : ''}</div>
+          ${on ? `<div class="chips">${(e.categorias||[]).map(c => `<button type="button" class="chip sub" data-id="${c.id}" aria-pressed="${cur().includes(c.id)}">${esc(c.label)}</button>${cur().includes(c.id) ? (c.subcategorias||[]).map(s => `<button type="button" class="chip sub" data-id="${s.id}" aria-pressed="${cur().includes(s.id)}">› ${esc(s.label)}</button>`).join('') : ''}`).join('')}</div>` : ''}</div>`; }).join('')}</div>`;
+      f.querySelectorAll('[data-id]').forEach(b => b.onclick = () => {
+        const id = b.dataset.id; let v = toggle(cur(), id);
+        if (!v.includes(id)) { const d = descendants(id); v = v.filter(x => !d.includes(x)); }
+        set('especies', v); draw(); });
+    }; draw();
+  },
+  products(Q, f){
+    const v = () => st.v.productos || (st.v.productos = {tipos:[], tableros:[], libre:''});
+    let term = '';
+    const draw = () => {
+      const t = term.toLowerCase();
+      const fams = FAMILIAS.map(F => ({F, tipos: F.tipos.filter(x => !t || x.toLowerCase().includes(t) || F.label.toLowerCase().includes(t))})).filter(x => x.tipos.length);
+      f.innerHTML = `<div class="search">${svg('search',17)}<input id="psearch" type="text" placeholder="Buscar en el catálogo, p. ej. «ventilación»" value="${esc(term)}"></div>
+        <div class="list" style="margin-top:12px">${fams.map(({F, tipos}) => `<div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">${esc(F.label)}</strong><span class="hint">${tipos.length} tipos</span></div><div class="chips">${tipos.map(x => { const k = F.id + ':' + x; return `<button type="button" class="chip sub" data-k="${esc(k)}" aria-pressed="${v().tipos.includes(k)}">${esc(x)}</button>`; }).join('')}</div></div>`).join('') || '<p class="hint">Sin resultados en el catálogo. Puedes describirlo abajo.</p>'}</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px"><strong style="font-size:14px">Recuperar productos de mis tableros</strong>${TABLEROS.map(p => `<button type="button" class="pick" data-t="${p.id}" aria-pressed="${v().tableros.includes(p.id)}"><span class="av" style="background:${p.col}">${esc(p.by.slice(0,2))}</span><span style="flex:1;min-width:0"><strong style="font-size:14px">${esc(p.name)}</strong><small>${esc(p.by)} · ${esc(p.tipo)}</small></span><span class="tag">${esc(p.board)}</span></button>`).join('')}</div>
+        <label class="f" style="margin-top:14px">Necesidades específicas<input class="box" id="plibre" type="text" placeholder="Algo que no está en el catálogo" value="${esc(v().libre)}"></label>
+        <span class="hint" id="pcnt">${v().tipos.length + v().tableros.length} elegidos</span>`;
+      const s = $('#psearch'); s.oninput = e => { term = e.target.value; draw(); const n = $('#psearch'); n.focus(); n.setSelectionRange(term.length, term.length); };
+      f.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { v().tipos = toggle(v().tipos, b.dataset.k); save(); b.setAttribute('aria-pressed', v().tipos.includes(b.dataset.k)); $('#pcnt').textContent = (v().tipos.length + v().tableros.length) + ' elegidos'; });
+      f.querySelectorAll('[data-t]').forEach(b => b.onclick = () => { v().tableros = toggle(v().tableros, b.dataset.t); save(); b.setAttribute('aria-pressed', v().tableros.includes(b.dataset.t)); $('#pcnt').textContent = (v().tipos.length + v().tableros.length) + ' elegidos'; });
+      $('#plibre').oninput = e => { v().libre = e.target.value; save(); };
+    }; draw();
+  },
+  when(Q, f){
+    const O = ['Inmediatamente','En 1-3 meses','En 3-6 meses','En 6-12 meses','Más adelante','Fecha específica'];
+    const v = st.v.inicio || {};
+    f.innerHTML = `<div class="opts">${O.map((o,i) => `<button type="button" class="opt" data-key="${'ABCDEF'[i]}" aria-pressed="${v.op===o}"><span class="key">${'ABCDEF'[i]}</span>${o}</button>`).join('')}</div>
+      <div id="fecha" ${v.op==='Fecha específica'?'':'hidden'} style="margin-top:12px"><input class="box" type="date" id="i_fecha" value="${esc(v.fecha||'')}" style="max-width:260px"></div>`;
+    f.querySelectorAll('.opt').forEach((b,i) => b.onclick = () => { st.v.inicio = {op:O[i], fecha:(st.v.inicio||{}).fecha}; save(); f.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); $('#fecha').hidden = O[i] !== 'Fecha específica'; if (O[i] !== 'Fecha específica') setTimeout(()=> go(1, Q), 200); });
+    $('#i_fecha').onchange = e => { st.v.inicio.fecha = e.target.value; save(); };
+  },
+  budget(Q, f){
+    const v = st.v.presu || (st.v.presu = {nd:false, min:'', max:'', mon:'EUR'});
+    f.innerHTML = `<button type="button" class="opt" id="bnd" aria-pressed="${v.nd}" style="max-width:320px">Todavía no definido</button>
+      <div class="row" id="bfields" style="margin-top:12px;${v.nd?'opacity:.4':''}">
+        <label class="f">Importe mínimo<input class="box" id="bmin" type="text" inputmode="numeric" placeholder="60.000" value="${esc(v.min)}" ${v.nd?'disabled':''}></label>
+        <label class="f">Importe máximo<input class="box" id="bmax" type="text" inputmode="numeric" placeholder="90.000" value="${esc(v.max)}" ${v.nd?'disabled':''}></label>
+        <label class="f">Moneda<select class="box" id="bmon" ${v.nd?'disabled':''}>${['EUR','USD','MXN','BRL','COP','ARS','CLP','PEN','MAD'].map(m => `<option ${v.mon===m?'selected':''}>${m}</option>`).join('')}</select></label></div>
+      <span class="err" id="berr" hidden>El mínimo no puede ser mayor que el máximo.</span>`;
+    const num = s => Number(String(s).replace(/\./g,'').replace(',','.')) || 0;
+    const chk = () => { $('#berr').hidden = !(v.min && v.max && num(v.min) > num(v.max)); };
+    $('#bnd').onclick = () => { v.nd = !v.nd; save(); FIELDS.budget(Q, f); };
+    $('#bmin').oninput = e => { v.min = e.target.value; save(); chk(); };
+    $('#bmax').oninput = e => { v.max = e.target.value; save(); chk(); };
+    $('#bmon').onchange = e => { v.mon = e.target.value; save(); }; chk();
+  },
+  contacts(Q, f){
+    const O = ['Encontrar fabricantes','Encontrar distribuidores','Comparar productos','Solicitar presupuestos','Contactar expertos','Solicitar asesoramiento técnico','Encontrar servicios especializados','Organizar información'];
+    const v = st.v.ayuda || (st.v.ayuda = {opts:[], sel:[]});
+    let term = '';
+    f.innerHTML = `<div class="chips">${O.map(o => `<button type="button" class="chip" aria-pressed="${v.opts.includes(o)}">${o}</button>`).join('')}</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:18px"><strong style="font-size:14px">¿Ya tienes en mente empresas o expertos de Agroolink? <span class="hint" style="font-weight:400">Opcional</span></strong>
+      <div class="search">${svg('search',17)}<input id="csearch" type="text" placeholder="Buscar empresa o experto"></div><div class="list" id="clist"></div></div>
+      <div class="note">${svg('lock',16)}<span>No se envía ninguna solicitud. Al final del proyecto confirmarás a quién contactar.</span></div>`;
+    f.querySelectorAll('.chips .chip').forEach((b,i) => b.onclick = () => { v.opts = toggle(v.opts, O[i]); save(); b.setAttribute('aria-pressed', v.opts.includes(O[i])); });
+    const list = () => { const t = term.toLowerCase(); $('#clist').innerHTML = DIRECTORIO.filter(d => !t || (d.name + d.sub).toLowerCase().includes(t)).map(d => `<button type="button" class="pick" data-c="${d.id}" aria-pressed="${v.sel.includes(d.id)}"><span class="av" style="background:${d.col};${d.k==='Experto'?'border-radius:50%':''}">${d.ini}</span><span style="flex:1;min-width:0"><strong style="font-size:14px">${esc(d.name)}</strong><small>${esc(d.sub)}</small></span><span class="tag ${d.k==='Experto'?'l':''}">${d.k}</span></button>`).join('');
+      $('#clist').querySelectorAll('[data-c]').forEach(b => b.onclick = () => { v.sel = toggle(v.sel, b.dataset.c); save(); b.setAttribute('aria-pressed', v.sel.includes(b.dataset.c)); }); };
+    $('#csearch').oninput = e => { term = e.target.value; list(); }; list();
+  },
+  files(Q, f){
+    const v = st.v.docs || (st.v.docs = {files:[], notas:''});
+    const kb = n => n > 1e6 ? (n/1e6).toFixed(1).replace('.',',') + ' MB' : Math.round(n/1e3) + ' KB';
+    const draw = () => {
+      f.innerHTML = `<label class="drop" id="drop" for="fin">${svg('clip',22)}<strong style="color:var(--fg)">Arrastra archivos aquí o elígelos</strong><span class="hint">PDF, JPG, PNG, DWG, XLSX · hasta 20 MB cada uno</span><input id="fin" type="file" multiple hidden></label>
+        <div class="files">${v.files.map((x,i) => `<div class="file">${svg('clip',15)}<span style="min-width:0;overflow-wrap:anywhere">${esc(x.name)}</span><span class="hint">${kb(x.size)}</span><button type="button" class="link" data-i="${i}" aria-label="Quitar ${esc(x.name)}">${svg('x',14)}</button></div>`).join('')}</div>
+        <label class="f">Notas<textarea class="box" id="dnotas" rows="3" placeholder="Algo que debamos saber de estos documentos">${esc(v.notas)}</textarea></label>`;
+      const add = list => { [...list].forEach(x => { if (x.size > 20e6) return toast(x.name + ' supera los 20 MB'); v.files.push({name:x.name, size:x.size}); }); save(); draw(); };
+      $('#fin').onchange = e => add(e.target.files);
+      const d = $('#drop'); d.ondragover = e => { e.preventDefault(); d.classList.add('over'); }; d.ondragleave = () => d.classList.remove('over'); d.ondrop = e => { e.preventDefault(); add(e.dataTransfer.files); };
+      f.querySelectorAll('[data-i]').forEach(b => b.onclick = () => { v.files.splice(+b.dataset.i, 1); save(); draw(); });
+      $('#dnotas').oninput = e => { v.notas = e.target.value; save(); };
+    }; draw();
+  },
+  privacy(Q, f){
+    const O = [['Privado: solo yo','Nadie más lo ve. Es la opción por defecto.'],['Compartido con colaboradores','Personas que invites (tu veterinario, tu equipo…).'],['Compartido con empresas seleccionadas','Solo las que elijas, cuando tú lo decidas.']];
+    if (!st.v.priv) st.v.priv = O[0][0];
+    f.innerHTML = `<div class="opts">${O.map(([t,d],i) => `<button type="button" class="opt" data-key="${'ABC'[i]}" aria-pressed="${st.v.priv===t}"><span class="key">${'ABC'[i]}</span><span>${t}<small>${d}</small></span></button>`).join('')}</div>`;
+    f.querySelectorAll('.opt').forEach((b,i) => b.onclick = () => { set('priv', O[i][0]); f.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); });
+  }};
+
+/* ---------- textos para resumen y ficha ---------- */
+const descendants = id => { const out = []; const walk = (n, inside) => { const me = inside || n.id === id; if (me && n.id !== id) out.push(n.id); (n.categorias || n.subcategorias || []).forEach(c => walk(c, me)); }; ESPECIES.forEach(e => walk(e, false)); return out; };
+const labelEsp = id => { for (const e of ESPECIES){ if (e.id===id) return e.label; for (const c of e.categorias||[]){ if (c.id===id) return c.label; for (const s of c.subcategorias||[]) if (s.id===id) return s.label; } } return id; };
+const T = {
+  tipo: () => { const t = TIPOS.find(x => x[0] === st.v.tipo); return t ? t[2] : ''; },
+  lugar: () => { const l = st.v.lugar || {}; return [l.loc, l.region, l.pais].filter(Boolean).join(' · '); },
+  especies: () => (st.v.especies || []).map(labelEsp).join(' · '),
+  objetivos: () => (st.v.objetivos || []).join(' · '),
+  productos: () => { const p = st.v.productos || {}; return [...(p.tipos||[]).map(k => k.split(':')[1]), ...(p.tableros||[]).map(id => TABLEROS.find(t=>t.id===id).name + ' (tablero)'), p.libre].filter(Boolean).join(' · '); },
+  presu: () => { const p = st.v.presu; if (!p) return ''; if (p.nd) return 'Todavía no definido'; return (p.min||p.max) ? `${p.min||'—'} – ${p.max||'—'} ${p.mon}` : ''; },
+  calendario: () => { const i = st.v.inicio || {}; return [st.v.fase, i.op === 'Fecha específica' ? i.fecha : i.op, st.v.finan ? 'Financiación: ' + st.v.finan : ''].filter(Boolean).join(' · '); },
+  empresas: () => { const a = st.v.ayuda || {}; const s = (a.sel||[]).map(id => DIRECTORIO.find(d=>d.id===id).name); return [...(a.opts||[]), s.length ? 'Seleccionados: ' + s.join(', ') : ''].filter(Boolean).join(' · '); },
+  docs: () => { const d = st.v.docs || {}; return [(d.files||[]).map(x=>x.name).join(', '), d.notas].filter(Boolean).join(' · '); }};
+const idx = id => steps().findIndex(Q => Q.id === id);
+const specificIdx = () => st.v.tipo ? idx(S[st.v.tipo][0].id) : idx('tipo');
+
+function renderSummary(){
+  $('#progBar').style.width = Math.round(steps().length / (steps().length + 1) * 100) + '%';
+  const rows = [['Nombre del proyecto', st.v.nombre, 'nombre'],['Tipo de proyecto', T.tipo(), 'tipo'],['Especie', T.especies(), 'especies'],['Ubicación', T.lugar(), 'lugar'],['Objetivos', T.objetivos(), 'objetivos'],
+    ['Detalles del proyecto', st.v.tipo ? S[st.v.tipo].filter(Q => st.v[Q.id]).length + ' de ' + S[st.v.tipo].length + ' preguntas respondidas' : '', null],
+    ['Soluciones necesarias', T.productos(), 'productos'],['Presupuesto', T.presu(), 'presu'],['Calendario', T.calendario(), 'fase'],['Empresas y expertos', T.empresas(), 'ayuda'],['Documentación', T.docs(), 'docs'],['Privacidad', st.v.priv, 'priv']];
+  $('#stage').innerHTML = `<section class="q enter" aria-labelledby="qt">
+    <div class="qnum">Resumen</div><h1 class="t" id="qt">Revisa tu proyecto</h1>
+    <p class="help">Puedes cambiar cualquier apartado. Crear el proyecto no lo publica ni envía nada.</p>
+    <div class="sum">${rows.map(([k,val,id]) => `<div class="srow"><span class="k">${k}</span><span class="v ${val?'':'empty'}">${esc(val || 'Sin completar')}</span><button type="button" class="link" data-edit="${id ?? '__spec'}">Editar</button></div>`).join('')}</div>
+    <div class="foot"><button class="btn2" id="back" type="button">${svg('back',16)} Atrás</button><span class="sp"></span><button class="btn2" id="draft" type="button">Guardar como borrador</button><button class="btn" id="create" type="button">Crear proyecto ${svg('arrow',16)}</button></div></section>`;
+  $('#back').onclick = () => go(-1);
+  document.querySelectorAll('[data-edit]').forEach(b => b.onclick = () => { st.step = b.dataset.edit === '__spec' ? specificIdx() : idx(b.dataset.edit); save(); render(); });
+  $('#draft').onclick = () => { save(); toast('Borrador guardado. Lo encontrarás en Mis proyectos › Borradores'); };
+  $('#create').onclick = () => {
+    if (!st.v.nombre || !st.v.tipo || !(st.v.lugar||{}).pais || !(st.v.especies||[]).length){ toast('Faltan datos obligatorios: nombre, tipo, país y especie'); return; }
+    st.created = {at:new Date().toISOString(), estado:'Buscando soluciones', act:[['Ahora','Proyecto creado · privado']]}; st.tab = 'Resumen'; store.del(); render(); window.scrollTo({top:0}); };
+}
+
+function renderFicha(){
+  const ESTADOS = ['Borrador','Buscando soluciones','Contactando proveedores','Evaluando propuestas','En ejecución','Finalizado'];
+  $('#crumb').textContent = 'Mi espacio › Mis proyectos › ' + st.v.nombre; $('#saved').hidden = true;
+  const TABS = ['Resumen','Soluciones','Empresas y expertos','Documentos','Actividad'];
+  const a = st.v.ayuda || {opts:[], sel:[]};
+  const p = st.v.productos || {tipos:[], tableros:[], libre:''};
+  const panels = {
+    'Resumen': `<div class="panel"><div class="pc"><h2>Datos del proyecto</h2><div class="kv">
+        <span class="k">Tipo</span><span>${esc(T.tipo())}</span><span class="k">Especie</span><span>${esc(T.especies())}</span><span class="k">Ubicación</span><span>${esc(T.lugar())}</span>
+        <span class="k">Objetivos</span><span>${esc(T.objetivos()) || '—'}</span><span class="k">Presupuesto</span><span>${esc(T.presu()) || '—'}</span><span class="k">Calendario</span><span>${esc(T.calendario()) || '—'}</span></div>
+        ${st.v.descripcion ? `<p style="margin:4px 0 0;font-size:14px;color:var(--muted)">${esc(st.v.descripcion)}</p>` : ''}</div>
+      <div class="pc"><h2>Siguiente paso</h2><span style="font-size:14px">Revisa las soluciones y elige a quién pedir información.</span><button class="btn" type="button" data-tab="Empresas y expertos">Ver empresas y expertos</button><span class="hint">${esc(st.v.priv)}</span></div></div>`,
+    'Soluciones': `<div class="pc"><h2>Soluciones necesarias</h2>${p.tipos.length || p.tableros.length || p.libre ? `<div class="chips">${p.tipos.map(k => `<span class="chip" aria-pressed="true" style="cursor:default">${esc(k.split(':')[1])}</span>`).join('')}${p.tableros.map(id => `<span class="chip" style="cursor:default">${esc(TABLEROS.find(t=>t.id===id).name)} · tablero</span>`).join('')}</div>${p.libre?`<p style="margin:0;font-size:14px">${esc(p.libre)}</p>`:''}` : '<span class="hint">Aún no has añadido soluciones.</span>'}</div>`,
+    'Empresas y expertos': `<div class="pc"><h2>Empresas y expertos</h2><span class="hint">No hemos contactado a nadie. Pulsa «Contactar» para enviar la solicitud a cada uno.</span>${a.sel.length ? a.sel.map(id => { const d = DIRECTORIO.find(x=>x.id===id); return `<div class="pick" style="cursor:default"><span class="av" style="background:${d.col};${d.k==='Experto'?'border-radius:50%':''}">${d.ini}</span><span style="flex:1;min-width:0"><strong style="font-size:14px">${esc(d.name)}</strong><small>${esc(d.sub)}</small></span><button class="btn2" type="button" data-contact="${d.id}" style="height:36px">Contactar</button></div>`; }).join('') : '<span class="hint">Todavía no has elegido empresas ni expertos.</span>'}</div>`,
+    'Documentos': `<div class="pc"><h2>Documentos</h2>${(st.v.docs?.files||[]).length ? st.v.docs.files.map(x => `<div class="file">${svg('clip',15)}${esc(x.name)}</div>`).join('') : '<span class="hint">Sin documentos.</span>'}${st.v.docs?.notas ? `<p class="hint" style="margin:0">${esc(st.v.docs.notas)}</p>` : ''}</div>`,
+    'Actividad': `<div class="pc"><h2>Actividad</h2><div class="act">${st.created.act.map(([t,x]) => `<div><time>${esc(t)}</time><span>${esc(x)}</span></div>`).join('')}</div></div>`};
+  $('#stage').innerHTML = `<section class="ficha enter q" style="max-width:1000px">
+    <div class="fhead"><div style="flex:1;min-width:0"><div class="qnum">Proyecto creado</div><h1>${esc(st.v.nombre)}</h1></div>
+      <label class="state">Estado <select id="estado">${ESTADOS.map(e => `<option ${st.created.estado===e?'selected':''}>${e}</option>`).join('')}</select></label></div>
+    <div class="tabs" role="tablist">${TABS.map(t => `<button type="button" role="tab" aria-selected="${st.tab===t}" data-tab="${t}">${t}</button>`).join('')}</div>
+    <div role="tabpanel">${panels[st.tab]}</div>
+    <div class="foot"><button class="link" id="again" type="button">Crear otro proyecto</button></div></section>`;
+  document.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { st.tab = b.dataset.tab; renderFicha(); });
+  $('#estado').onchange = e => { st.created.estado = e.target.value; st.created.act.unshift(['Ahora', 'Estado: ' + e.target.value]); toast('Estado actualizado'); };
+  document.querySelectorAll('[data-contact]').forEach(b => b.onclick = () => { const d = DIRECTORIO.find(x=>x.id===b.dataset.contact); b.textContent = 'Solicitud preparada'; b.disabled = true; st.created.act.unshift(['Ahora', 'Solicitud preparada para ' + d.name]); toast('Solicitud preparada para ' + d.name + ' (prototipo: no se envía)'); });
+  $('#again').onclick = () => { st = {step:-1, v:{}, created:null, tab:'Resumen'}; render(); };
+}
+
+function renderWelcome(){
+  const d = store.get();
+  $('#crumb').textContent = 'Mi espacio › Mis proyectos › Nuevo proyecto'; $('#saved').hidden = true;
+  $('#stage').innerHTML = `<section class="wel q enter" aria-labelledby="wt">
+    <div class="qnum">Nuevo proyecto</div>
+    <h1 id="wt">Vamos a dar forma a tu proyecto</h1>
+    <p class="lead">Cuéntanos qué necesitas y te ayudaremos a encontrar las soluciones, empresas y expertos adecuados.</p>
+    <div class="facts"><div><span class="ic">${svg('clock',17)}</span>Tiempo estimado: 5–10 minutos</div><div><span class="ic">${svg('save',17)}</span>Puedes guardar y continuar más tarde</div><div><span class="ic">${svg('lock',17)}</span>Tu proyecto será privado inicialmente</div></div>
+    ${d && d.v && d.v.nombre ? `<div class="draft"><span style="flex:1;min-width:0"><strong>Tienes un borrador: ${esc(d.v.nombre)}</strong><br><span class="hint">Guardado ${new Date(d.at).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</span></span><button class="btn" id="resume" type="button">Continuar ${svg('arrow',16)}</button></div>` : ''}
+    <div class="foot" style="margin-top:0"><button class="btn" id="start" type="button">Crear mi proyecto ${svg('arrow',16)}</button><button class="link" id="example" type="button">Ver con un proyecto de ejemplo</button></div></section>`;
+  $('#start').onclick = () => { st = {step:0, v:{}, created:null, tab:'Resumen'}; save(); render(); };
+  $('#example').onclick = () => { st = {step:steps().length, v:JSON.parse(JSON.stringify(EXAMPLE)), created:null, tab:'Resumen'}; st.step = steps().length; save(); render(); toast('Proyecto de ejemplo cargado: estás en el resumen'); };
+  if ($('#resume')) $('#resume').onclick = () => { st = {step:d.step ?? 0, v:d.v, created:null, tab:'Resumen'}; render(); };
+}
+$('#exitBtn').onclick = () => { save(); st.step = -1; render(); toast('Guardado. Puedes continuar cuando quieras.'); };
+render();
+</script>
