@@ -1842,6 +1842,22 @@
    "w": 1280,
    "x": 5440,
    "y": 3000
+  },
+  "CuentaIdioma.dc.html": {
+   "h": 900,
+   "page": "intranet",
+   "title": "C3 · Mi cuenta · Idioma y zona",
+   "w": 1280,
+   "x": 2720,
+   "y": 3720
+  },
+  "CuentaAyuda.dc.html": {
+   "h": 900,
+   "page": "intranet",
+   "title": "C4 · Mi cuenta · Ayuda y contacto",
+   "w": 1280,
+   "x": 4080,
+   "y": 3720
   }
  },
  "createdOnFiles": {
@@ -2554,6 +2570,8 @@
   "Fig63.dc.html",
   "CuentaPerfil.dc.html",
   "CuentaCompras.dc.html",
+  "CuentaAyuda.dc.html",
+  "CuentaIdioma.dc.html",
   "MobHome.dc.html",
   "MobHomeVisitante.dc.html",
   "MobMenu.dc.html",
