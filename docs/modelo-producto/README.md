@@ -25,6 +25,15 @@ Regla general: lo que queda vacío no se publica.
 
 **Mercados**: un único selector con búsqueda. Niveles: 1 región del mundo (Europa, UE, Latinoamérica…, lista propia), 2 país (ISO 3166-1), 3 región del país (ISO 3166-2), 4 provincia (solo donde haga falta, para zonas de comerciales y distribuidores). Elegir un nivel incluye todo lo de debajo; se guardan inclusiones y excepciones (`incluye: [UE]`, `excepto: [VE]`). Mismo componente en empresa, producto (Mercados), zonas de comerciales y acuerdos de distribución. El comprador indica su provincia una vez.
 
+## Intereses de la persona
+
+**Intereses** (`intereses.json`): tres listas que se eligen juntas, una sola vez, al entrar por primera vez en Agroolink (alta, paso 4, se puede saltar), y se editan en Perfil › Mis intereses.
+1. **Especies**: las 7 del árbol común, solo a nivel de especie.
+2. **Categorías principales**: las 10 familias de producto.
+3. **Objetivos y tendencias**: lista viva que mantiene Agroolink (añadir, reordenar, retirar). Retirar no borra: deja de ofrecerse y se conserva donde ya se usa. Mismo identificador en todos los idiomas.
+
+Se usa en las recomendaciones «Para ti», en el bloque «Tendencias del sector» y el filtro por objetivo del buscador, en el encaje de Proyectos y en el etiquetado de contenidos. El campo **Objetivos** del producto se elige de esta lista (mínimo 1 para salir en recomendaciones por objetivo) y admite objetivos propios.
+
 ## Entidades
 
 ```mermaid
@@ -63,7 +72,7 @@ erDiagram
 | Tipo de producto | ref | Sí |  |
 | Formato | list |  |  |
 | Especies y fase productiva | ref |  | Clasificación común de Agroolink |
-| Objetivos | list |  |  |
+| Objetivos | list |  | De la lista de tendencias (`intereses.json`) + propios |
 | Beneficios clave | list |  | máx. 5, con icono |
 | Documentos | doc |  | Con idioma y visibilidad |
 | Certificaciones | list |  |  |

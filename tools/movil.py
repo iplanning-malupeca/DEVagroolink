@@ -253,8 +253,8 @@ body = ('<div class="top"><span style="flex:1;">' + LOGO + '</span>'
         '<a href="#" class="chip" style="height:30px;padding:0 10px;font-size:12px;">' + ic('pin', 14, G) + 'España' + ic('down', 13, '#56615B', 2) + '</a></div>'
         '<p class="sub" style="margin-top:2px;">Esto es lo nuevo para tus especies.</p></div>'
         '<div class="srch">' + ic('search', 19, '#56615B') + '<span>Productos, empresas, expertos…</span><span class="ib" style="width:36px;height:36px;color:#56615B;">' + ic('mic', 19) + '</span></div>'
-        '<div><div class="sec"><h2 style="font-size:13px;color:#56615B;font-weight:500;">Tus especies</h2><a href="#">Editar</a></div>'
-        '<div class="row" style="overflow:hidden;"><span class="chip on">🐔 Avicultura</span><span class="chip">🐖 Porcino</span><span class="chip" style="color:#0E5A3A;border-style:dashed;">' + ic('plus', 14, G, 2.2) + 'Añadir</span></div></div>'
+        '<div><div class="sec"><h2 style="font-size:13px;color:#56615B;font-weight:500;">Tus intereses</h2><a href="#">Editar</a></div>'
+        '<div class="row" style="overflow:hidden;margin-right:-16px;"><span class="chip on">🐔 Avicultura</span><span class="chip on">🐖 Porcino</span><span class="chip soft">Bienestar animal</span><span class="chip soft">Huevo campero</span><span class="chip soft">Conversión alimenticia</span></div></div>'
         + explore_cards() +
         # proyecto
         '<div><div class="sec"><h2>Tus proyectos</h2><a href="#">Ver todos</a></div>'
@@ -344,13 +344,13 @@ body = ('<div class="top"><span style="flex:1;font-size:22px;font-weight:600;let
         + mrow('compass', 'Productos') + mrow('building', 'Empresas') + mrow('user', 'Expertos', '', '#4B3BA6', '#F1EEFB')
         + mrow('tool', 'Servicios') + mrow('book', 'Contenido técnico') + mrow('cal', 'Eventos') + '</div></div>'
         '<div><p class="cap">Cuenta</p><div class="card" style="overflow:hidden;">'
-        + mrow('star', 'Plan', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
+        + mrow('sliders', 'Mis intereses', val('9')) + mrow('star', 'Plan', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
         + mrow('bell', 'Notificaciones') + mrow('help', 'Ayuda') +
         '<a href="#" class="li" style="min-height:50px;color:#B42318;"><span class="ico" style="width:32px;height:32px;border-radius:10px;background:#FDECEA;color:#B42318;">' + ic('logout', 17) + '</span><span class="t" style="font-weight:500;">Cerrar sesión</span></a>'
         '</div></div>'
         '<p style="margin:0;font-size:11.5px;color:#56615B;text-align:center;line-height:1.5;">Tu cuenta es la misma que en Agrinews.<br><a href="#">Ir a Agrinews ' + ic('ext', 11, G, 2) + '</a></p>'
         '<div style="height:96px;"></div></div>')
-B.append(board('MobMenu.dc.html', 'Móvil · Menú', 1460, body, 5))
+B.append(board('MobMenu.dc.html', 'Móvil · Menú', 1520, body, 5))
 
 # M4 Búsqueda
 body = ('<div class="top" style="gap:6px;"><span class="ib" style="margin-left:-8px;">' + ic('back', 22) + '</span>'
@@ -367,10 +367,26 @@ body = ('<div class="top" style="gap:6px;"><span class="ib" style="margin-left:-
         '<div><div class="sec"><h2>Recientes</h2><a href="#">Borrar</a></div><div class="card" style="overflow:hidden;">'
         + ''.join('<a href="#" class="li" style="min-height:46px;color:#17231D;font-weight:400;">' + ic('clock', 17, '#8A948F') + '<span class="t">%s</span>' % t + ic('x', 14, '#8A948F', 2) + '</a>'
                   for t in ['aditivo porcino', 'vacuna PRRS', 'calidad de agua', 'ventilación túnel']) + '</div></div>'
-        '<div><div class="sec"><h2 style="display:flex;align-items:center;gap:6px;">' + ic('trend', 17, G, 2) + 'Lo más buscado en tus especies</h2></div>'
-        '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + ''.join('<span class="chip">%s</span>' % t for t in ['Estrés térmico', 'Bienestar animal', 'Inmunidad', 'Eficiencia alimentaria', 'Aviarios', 'Sostenibilidad']) + '</div></div>'
+        '<div><div class="sec"><h2 style="display:flex;align-items:center;gap:6px;">' + ic('trend', 17, G, 2) + 'Tendencias del sector</h2><a href="#">Tus intereses</a></div>'
+        '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + ''.join('<span class="chip">%s</span>' % t for t in ['Bienestar animal', 'Reducción antibióticos', 'Huevo campero', 'One Health', 'Salud intestinal', 'Inteligencia Artificial']) + '</div></div>'
         '</div>')
 B.append(board('MobBuscar.dc.html', 'Móvil · Búsqueda', 844, body, 2))
+
+# M10 Tus intereses
+TEND = json.load(open(W + '/tools/intereses.json'))['tendencias']
+def chips(lst, on):
+    return '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + ''.join('<span class="chip%s">%s%s</span>' % (' on' if x in on else '', ic('check', 13, '#FFF', 2.6) if x in on else '', x) for x in lst) + '</div>'
+def blk(t, s, inner):
+    return '<div><p style="margin:0 0 2px;font-size:15px;font-weight:600;">' + t + '</p><p style="margin:0 0 10px;font-size:12px;color:#56615B;">' + s + '</p>' + inner + '</div>'
+body = (topback('Tus intereses', '<a href="#" style="font-size:13px;white-space:nowrap;">Saltar</a>') +
+        '<div class="pad" style="display:flex;flex-direction:column;gap:22px;padding-top:4px;">'
+        '<p class="sub" style="margin:0;">Elige lo que quieras. Lo usamos para recomendarte productos, contenidos y proyectos. Puedes cambiarlo en Menú › Mis intereses.</p>'
+        + blk('Especies', 'Incluye todas sus producciones', chips([e[0] for e in ESP], ['Avicultura', 'Porcino']))
+        + blk('Categorías principales', 'Qué tipo de soluciones buscas', chips([f[2] for f in FAM], ['Nutrición', 'Avícola']))
+        + blk('Objetivos y tendencias', 'Se actualiza con lo que se mueve en el sector', chips(TEND, ['Bienestar animal', 'Conversión alimenticia', 'Huevo campero', 'Reducción de costes', 'Sostenibilidad'])) +
+        '<div style="height:150px;"></div></div>'
+        '<div class="sticky"><a href="#" class="btn">Guardar intereses (9)</a></div>')
+B.append(board('MobIntereses.dc.html', 'Móvil · Tus intereses', 1180, body, 5))
 
 # M5 Explorar · especies
 def esp_row(n, e, c, p, emp):
@@ -465,10 +481,10 @@ if not any(p['id'] == 'movil' for p in c['pages']):
 names = [b[0] for b in B] + ['MobTabBar.dc.html']
 c['order'] = [o for o in c['order'] if o not in names] + names
 T = {'MobHome.dc.html': 'M1 · Home con sesión', 'MobHomeVisitante.dc.html': 'M2 · Home sin sesión', 'MobMenu.dc.html': 'M3 · Menú (pestaña 5)',
-     'MobBuscar.dc.html': 'M4 · Búsqueda', 'MobExplorarEspecies.dc.html': 'M5 · Explorar · por especie', 'MobEspecie.dc.html': 'M6 · Especie → producción (opcional)',
+     'MobBuscar.dc.html': 'M4 · Búsqueda', 'MobIntereses.dc.html': 'M10 · Tus intereses (alta y Menú › Mis intereses)', 'MobExplorarEspecies.dc.html': 'M5 · Explorar · por especie', 'MobEspecie.dc.html': 'M6 · Especie → producción (opcional)',
      'MobResultados.dc.html': 'M7 · Resultados · categoría en chips', 'MobExplorarCategorias.dc.html': 'M8 · Explorar · por categoría',
      'MobCategoria.dc.html': 'M9 · Categoría → tipo de producto'}
-rows = [['MobHome.dc.html', 'MobHomeVisitante.dc.html', 'MobMenu.dc.html', 'MobBuscar.dc.html'],
+rows = [['MobHome.dc.html', 'MobHomeVisitante.dc.html', 'MobMenu.dc.html', 'MobBuscar.dc.html', 'MobIntereses.dc.html'],
         ['MobExplorarEspecies.dc.html', 'MobEspecie.dc.html', 'MobResultados.dc.html', 'MobExplorarCategorias.dc.html', 'MobCategoria.dc.html']]
 H = {b[0]: b[2] for b in B}
 heads = ['Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú',

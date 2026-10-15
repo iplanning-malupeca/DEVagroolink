@@ -5,7 +5,7 @@
   "Alta4MiEspacio.dc.html": {
    "h": 900,
    "page": "alta",
-   "title": "6 · Solo para mí → Mi espacio (primer inicio · «Estabas consultando»)",
+   "title": "7 · Solo para mí → Mi espacio (primer inicio · «Estabas consultando»)",
    "w": 1280,
    "x": 0,
    "y": 2620
@@ -13,7 +13,7 @@
   "AltaConsulta.dc.html": {
    "h": 820,
    "page": "alta",
-   "title": "6 · Más tarde → Primera consulta (datos just-in-time)",
+   "title": "7 · Más tarde → Primera consulta (datos just-in-time)",
    "w": 1280,
    "x": 3600,
    "y": 2620
@@ -21,7 +21,7 @@
   "AltaEmpresa.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "6 · Represento una empresa → Tu empresa",
+   "title": "7 · Represento una empresa → Tu empresa",
    "w": 960,
    "x": 1360,
    "y": 2620
@@ -29,7 +29,7 @@
   "AltaExperto.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "6 · Soy experto → Perfil de experto",
+   "title": "7 · Soy experto → Perfil de experto",
    "w": 1120,
    "x": 2400,
    "y": 2620
@@ -1101,7 +1101,7 @@
   "Login3Crear.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → L4",
+   "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → 4",
    "w": 960,
    "x": 2080,
    "y": 1160
@@ -1109,17 +1109,17 @@
   "Login4Empezar.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "4 · L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink",
+   "title": "5 · L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink",
    "w": 960,
-   "x": 2080,
+   "x": 3120,
    "y": 0
   },
   "Login5Creada.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "5 · L5 · Cuenta lista (según elección)",
+   "title": "6 · L5 · Cuenta lista (según elección)",
    "w": 960,
-   "x": 3120,
+   "x": 4160,
    "y": 0
   },
   "Main.dc.html": {
@@ -1483,6 +1483,30 @@
    "x": 5440,
    "y": 0
   },
+  "Login1bCodigo.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "2a · L1b · Ya registrado → código por email (OTP)",
+   "w": 960,
+   "x": 1040,
+   "y": 0
+  },
+  "LoginIntereses.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
+   "w": 960,
+   "x": 2080,
+   "y": 0
+  },
+  "SelIntereses.dc.html": {
+   "h": 900,
+   "page": "componentes",
+   "title": "Selector de intereses · especies, categorías y objetivos",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
   "MobHome.dc.html": {
    "h": 2010,
    "page": "movil",
@@ -1500,7 +1524,7 @@
    "y": 0
   },
   "MobMenu.dc.html": {
-   "h": 1460,
+   "h": 1520,
    "page": "movil",
    "title": "M3 · Menú (pestaña 5)",
    "w": 390,
@@ -1513,6 +1537,14 @@
    "title": "M4 · Búsqueda",
    "w": 390,
    "x": 1590,
+   "y": 0
+  },
+  "MobIntereses.dc.html": {
+   "h": 1180,
+   "page": "movil",
+   "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
+   "w": 390,
+   "x": 2120,
    "y": 0
   },
   "MobExplorarEspecies.dc.html": {
@@ -1562,14 +1594,6 @@
    "w": 390,
    "x": 0,
    "y": 4040
-  },
-  "Login1bCodigo.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "2a · L1b · Ya registrado → código por email (OTP)",
-   "w": 960,
-   "x": 1040,
-   "y": 0
   }
  },
  "createdOnFiles": {
@@ -1586,7 +1610,7 @@
    "kind": "title1",
    "maxW": 5120,
    "page": "alta",
-   "text": "Alta · 1 email → ya registrado: 2a código → 4 «¿Cómo quieres empezar?» (solo la 1.ª vez) → 5",
+   "text": "Alta · 1 email → ya registrado: 2a código → 4 intereses → 5 «¿Cómo quieres empezar?» → 6 (4 y 5 solo la 1.ª vez)",
    "w": 240,
    "x": 0,
    "y": -300
@@ -1595,7 +1619,7 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "6 · Adónde lleva cada opción de L4",
+   "text": "7 · Adónde lleva cada opción de L4",
    "w": 240,
    "x": 0,
    "y": 2320
@@ -1890,9 +1914,9 @@
   },
   "selT1": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 5400,
    "page": "componentes",
-   "text": "Componentes comunes · especies, mercados, rama de negocio y cargo",
+   "text": "Componentes comunes · especies, mercados, rama de negocio, cargo e intereses",
    "w": 240,
    "x": 0,
    "y": -300
@@ -1969,6 +1993,15 @@
    "x": 0,
    "y": -300
   },
+  "altaL1b": {
+   "kind": "title1",
+   "maxW": 4880,
+   "page": "alta",
+   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
+   "w": 240,
+   "x": 1040,
+   "y": 860
+  },
   "movT0": {
    "kind": "title1",
    "maxW": 2600,
@@ -1995,15 +2028,6 @@
    "w": 240,
    "x": 0,
    "y": 3740
-  },
-  "altaL1b": {
-   "kind": "title1",
-   "maxW": 4880,
-   "page": "alta",
-   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
-   "w": 240,
-   "x": 1040,
-   "y": 860
   }
  },
  "order": [
@@ -2014,6 +2038,7 @@
   "Empresa.dc.html",
   "Login1Email.dc.html",
   "Login1bCodigo.dc.html",
+  "LoginIntereses.dc.html",
   "Login2SinCuenta.dc.html",
   "Login3Crear.dc.html",
   "Login4Empezar.dc.html",
@@ -2117,6 +2142,7 @@
   "ServLista.dc.html",
   "ServEditor.dc.html",
   "SelRamasCargos.dc.html",
+  "SelIntereses.dc.html",
   "ProyCrear.dc.html",
   "ProyDestinatarios.dc.html",
   "ProyMis.dc.html",
@@ -2197,6 +2223,7 @@
   "MobHomeVisitante.dc.html",
   "MobMenu.dc.html",
   "MobBuscar.dc.html",
+  "MobIntereses.dc.html",
   "MobExplorarEspecies.dc.html",
   "MobEspecie.dc.html",
   "MobResultados.dc.html",

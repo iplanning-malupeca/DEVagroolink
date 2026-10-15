@@ -1,0 +1,7 @@
+{
+ "version": 1,
+ "nota": "Lista editable por Agroolink. Se añaden, reordenan o retiran según las tendencias del sector. Retirar no borra: deja de ofrecerse y se conserva en perfiles y productos que ya la usan.",
+ "tendencias": ["Bienestar animal", "Rendimiento", "Conversión alimenticia", "Salud intestinal", "Reducción antibióticos",
+  "Calidad de canal", "Reducción de costes", "Sostenibilidad", "Huevo campero", "Producción ecológica", "Eficiencia operativa",
+  "Seguridad alimentaria", "One Health", "Inteligencia Artificial"]
+}
