@@ -376,17 +376,27 @@ B.append(board('MobBuscar.dc.html', 'Móvil · Búsqueda', 844, body, 2))
 TEND = json.load(open(W + '/tools/intereses.json'))['tendencias']
 def chips(lst, on):
     return '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + ''.join('<span class="chip%s">%s%s</span>' % (' on' if x in on else '', ic('check', 13, '#FFF', 2.6) if x in on else '', x) for x in lst) + '</div>'
+import sys as _s; _s.path.insert(0, W + '/tools')
+from intsel import SUBESP, SUBCAT, OFF as SOFF
+def msubs(main, lst, mx=6):
+    h = '<div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-top:8px;padding:8px 10px;border-radius:12px;background:#F3F8F2;"><span style="font-size:11px;font-weight:700;color:#0E5A3A;margin-right:3px;">' + main + ' ›</span>'
+    for x in lst[:mx]:
+        off = x in SOFF
+        h += '<span style="display:inline-flex;align-items:center;gap:4px;height:26px;padding:0 9px;border-radius:999px;font-size:11.5px;font-weight:500;white-space:nowrap;border:1px solid %s;background:%s;color:%s;">%s%s</span>' % (('#D5DED8', '#FFFFFF', '#56615B') if off else ('#C9E3C3', '#DDF0D8', '#0E5A3A')) + ('' if off else ic('check', 10, G, 3.2)) + x + '</span>' if False else ('<span style="display:inline-flex;align-items:center;gap:4px;height:26px;padding:0 9px;border-radius:999px;font-size:11.5px;font-weight:500;white-space:nowrap;border:1px solid %s;background:%s;color:%s;">' % (('#D5DED8', '#FFFFFF', '#56615B') if off else ('#C9E3C3', '#DDF0D8', '#0E5A3A')) + ('' if off else ic('check', 10, G, 3.2)) + x + '</span>')
+    if len(lst) > mx:
+        h += '<span style="font-size:11.5px;font-weight:600;color:#0E5A3A;padding:0 4px;">+%d incluidos</span>' % (len(lst) - mx)
+    return h + '</div>'
 def blk(t, s, inner):
     return '<div><p style="margin:0 0 2px;font-size:15px;font-weight:600;">' + t + '</p><p style="margin:0 0 10px;font-size:12px;color:#56615B;">' + s + '</p>' + inner + '</div>'
 body = (topback('Tus intereses', '<a href="#" style="font-size:13px;white-space:nowrap;">Saltar</a>') +
         '<div class="pad" style="display:flex;flex-direction:column;gap:22px;padding-top:4px;">'
         '<p class="sub" style="margin:0;">Elige lo que quieras. Lo usamos para recomendarte productos, contenidos y proyectos. Puedes cambiarlo en Menú › Mis intereses.</p>'
-        + blk('Especies', 'Incluye todas sus producciones', chips([e[0] for e in ESP], ['Avicultura', 'Porcino']))
-        + blk('Categorías principales', 'Qué tipo de soluciones buscas', chips([f[2] for f in FAM], ['Nutrición', 'Avícola']))
+        + blk('Especies', 'Se incluyen sus producciones; quita las que no quieras', chips([e[0] for e in ESP], ['Avicultura', 'Porcino']) + msubs('Avicultura', SUBESP['Avicultura']) + msubs('Porcino', SUBESP['Porcino']))
+        + blk('Categorías principales', 'Se incluyen todos sus tipos; quita los que no quieras', chips([f[2] for f in FAM], ['Nutrición', 'Avícola']) + msubs('Nutrición', SUBCAT['Nutrición y aditivos']) + msubs('Avícola', SUBCAT['Equipamiento avícola']))
         + blk('Objetivos y tendencias', 'Se actualiza con lo que se mueve en el sector', chips(TEND, ['Bienestar animal', 'Conversión alimenticia', 'Huevo campero', 'Reducción de costes', 'Sostenibilidad'])) +
         '<div style="height:150px;"></div></div>'
         '<div class="sticky"><a href="#" class="btn">Guardar intereses (9)</a></div>')
-B.append(board('MobIntereses.dc.html', 'Móvil · Tus intereses', 1180, body, 5))
+B.append(board('MobIntereses.dc.html', 'Móvil · Tus intereses', 1700, body, 5))
 
 # M5 Explorar · especies
 def esp_row(n, e, c, p, emp):

@@ -1096,7 +1096,7 @@
    "title": "2b · L2 · No registrado → todavía no tienes cuenta",
    "w": 960,
    "x": 1040,
-   "y": 1160
+   "y": 1300
   },
   "Login3Crear.dc.html": {
    "h": 760,
@@ -1104,7 +1104,7 @@
    "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → 4",
    "w": 960,
    "x": 2080,
-   "y": 1160
+   "y": 1300
   },
   "Login4Empezar.dc.html": {
    "h": 760,
@@ -1492,7 +1492,7 @@
    "y": 0
   },
   "LoginIntereses.dc.html": {
-   "h": 760,
+   "h": 900,
    "page": "alta",
    "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
    "w": 960,
@@ -1500,12 +1500,20 @@
    "y": 0
   },
   "SelIntereses.dc.html": {
-   "h": 900,
+   "h": 1100,
    "page": "componentes",
    "title": "Selector de intereses · especies, categorías y objetivos",
    "w": 1280,
    "x": 4080,
    "y": 0
+  },
+  "AltaMiEspacioIntereses.dc.html": {
+   "h": 900,
+   "page": "alta",
+   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
+   "w": 1280,
+   "x": 1360,
+   "y": 2620
   },
   "MobHome.dc.html": {
    "h": 2010,
@@ -1540,7 +1548,7 @@
    "y": 0
   },
   "MobIntereses.dc.html": {
-   "h": 1180,
+   "h": 1700,
    "page": "movil",
    "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
    "w": 390,
@@ -1594,14 +1602,6 @@
    "w": 390,
    "x": 0,
    "y": 4040
-  },
-  "AltaMiEspacioIntereses.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
-   "w": 1280,
-   "x": 1360,
-   "y": 2620
   }
  },
  "createdOnFiles": {
@@ -2008,34 +2008,7 @@
    "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
    "w": 240,
    "x": 1040,
-   "y": 860
-  },
-  "movT0": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "movT1": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
-   "w": 240,
-   "x": 0,
-   "y": 2210
-  },
-  "movT2": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Componente · barra inferior (prop activo 1–5)",
-   "w": 240,
-   "x": 0,
-   "y": 3740
+   "y": 1000
   },
   "empDesdeAlta": {
    "kind": "title1",
@@ -2063,6 +2036,33 @@
    "w": 240,
    "x": 0,
    "y": 2220
+  },
+  "movT0": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "movT1": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
+   "w": 240,
+   "x": 0,
+   "y": 2210
+  },
+  "movT2": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Componente · barra inferior (prop activo 1–5)",
+   "w": 240,
+   "x": 0,
+   "y": 3740
   }
  },
  "order": [
