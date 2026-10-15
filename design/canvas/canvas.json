@@ -5,34 +5,34 @@
   "Alta4MiEspacio.dc.html": {
    "h": 820,
    "page": "alta",
-   "title": "Solo para mí → Mi espacio (primer inicio)",
+   "title": "6 · Solo para mí → Mi espacio (primer inicio)",
    "w": 1280,
    "x": 0,
-   "y": 2700
+   "y": 2620
   },
   "AltaConsulta.dc.html": {
    "h": 820,
    "page": "alta",
-   "title": "Más tarde · Primera consulta (datos just-in-time)",
+   "title": "6 · Más tarde → Primera consulta (datos just-in-time)",
    "w": 1280,
    "x": 3600,
-   "y": 2700
+   "y": 2620
   },
   "AltaEmpresa.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "Represento una empresa → Tu empresa",
+   "title": "6 · Represento una empresa → Tu empresa",
    "w": 960,
    "x": 1360,
-   "y": 2700
+   "y": 2620
   },
   "AltaExperto.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "Soy experto → Perfil de experto",
+   "title": "6 · Soy experto → Perfil de experto",
    "w": 1120,
    "x": 2400,
-   "y": 2700
+   "y": 2620
   },
   "AvatarMenu.dc.html": {
    "h": 980,
@@ -1085,7 +1085,7 @@
   "Login1Email.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L1 · Accede con tu email (Agrinews)",
+   "title": "1 · L1 · Accede con tu email (cuenta Agrinews)",
    "w": 960,
    "x": 0,
    "y": 0
@@ -1093,33 +1093,33 @@
   "Login2SinCuenta.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L2 · Todavía no tienes cuenta (Agrinews)",
+   "title": "2b · L2 · No registrado → todavía no tienes cuenta",
    "w": 960,
    "x": 1040,
-   "y": 0
+   "y": 1160
   },
   "Login3Crear.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L3 · Crear cuenta (Agrinews)",
+   "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → L4",
    "w": 960,
    "x": 2080,
-   "y": 0
+   "y": 1160
   },
   "Login4Empezar.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink (cuenta previa o nueva)",
+   "title": "4 · L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink",
    "w": 960,
-   "x": 3120,
+   "x": 2080,
    "y": 0
   },
   "Login5Creada.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L5 · Cuenta creada (según elección)",
+   "title": "5 · L5 · Cuenta lista (según elección)",
    "w": 960,
-   "x": 4160,
+   "x": 3120,
    "y": 0
   },
   "Main.dc.html": {
@@ -1566,10 +1566,10 @@
   "Login1bCodigo.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L1b · Ya tienes cuenta → código por email (OTP)",
+   "title": "2a · L1b · Ya registrado → código por email (OTP)",
    "w": 960,
-   "x": 0,
-   "y": 1160
+   "x": 1040,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -1586,7 +1586,7 @@
    "kind": "title1",
    "maxW": 5120,
    "page": "alta",
-   "text": "Alta · login de Agrinews + paso «¿Cómo quieres empezar?» de Agroolink",
+   "text": "Alta · 1 email → ya registrado: 2a código → 4 «¿Cómo quieres empezar?» (solo la 1.ª vez) → 5",
    "w": 240,
    "x": 0,
    "y": -300
@@ -1595,10 +1595,10 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "Adónde lleva cada opción",
+   "text": "6 · Adónde lleva cada opción de L4",
    "w": 240,
    "x": 0,
-   "y": 2400
+   "y": 2320
   },
   "cfgTitulo": {
    "kind": "title1",
@@ -2000,9 +2000,9 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "Después de L1 · registrado → código OTP (L1b); no registrado → L2 → L3. L4 solo la primera vez que entra en Agroolink; después, directo a donde estaba",
+   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
    "w": 240,
-   "x": 0,
+   "x": 1040,
    "y": 860
   }
  },
