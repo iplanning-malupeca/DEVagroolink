@@ -49,12 +49,18 @@ body = """      <div style="display: grid; grid-template-columns: 1.1fr 1fr 1fr;
           <span class="li">Proyectos activos ilimitados</span><span class="li">Comparar hasta 6 productos</span><span class="li">Tableros compartidos con tu equipo</span>
           <a href="#" class="btn" style="margin-top: auto;">Avísame cuando esté</a>
         </section>
-        <section class="card">
-          <div class="hd"><h2 class="h2">¿Ofreces servicios?</h2></div>
-          <span style="font-size: 18px; font-weight: 600;">Experto Pro <span class="k" style="font-size: 12.5px;">19,90 €/mes</span></span>
-          <span style="font-size: 12.5px; color: #4A5650; line-height: 1.45;">Perfil de experto, servicios y consultas sin límite. Incluye Comprador Pro.</span>
-          <a href="#" style="margin-top: auto; font-size: 13px;">Ver planes de experto y de empresa</a>
-        </section>
+        <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+          <section class="card" style="flex: 1; padding: 13px 16px; gap: 5px;">
+            <div class="hd"><h2 class="h2" style="font-size: 14.5px;">¿Vendes o distribuyes?</h2><span class="own">Empresa</span></div>
+            <span style="font-size: 12.5px; color: #4A5650; line-height: 1.45;">Gratis · Pro 79 €/mes · Premium 199 €/mes. Ficha, productos y solicitudes de compradores.</span>
+            <a href="#" style="margin-top: auto; font-size: 12.5px;">Ver planes de empresa</a>
+          </section>
+          <section class="card" style="flex: 1; padding: 13px 16px; gap: 5px;">
+            <div class="hd"><h2 class="h2" style="font-size: 14.5px;">¿Ofreces servicios?</h2><span class="own" style="background: #F1EEFB; color: #4B3BA6;">Experto</span></div>
+            <span style="font-size: 12.5px; color: #4A5650; line-height: 1.45;">Gratis · Pro 19,90 €/mes, incluye Comprador Pro. Servicios y consultas sin límite.</span>
+            <a href="#" style="margin-top: auto; font-size: 12.5px;">Ver planes de experto</a>
+          </section>
+        </div>
       </div>
       <section class="card">
         <div class="hd"><h2 class="h2">Suscripciones</h2><span class="k">Sin permanencia: si cancelas, sigues teniendo acceso hasta el final del periodo pagado.</span></div>
