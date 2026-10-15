@@ -109,26 +109,10 @@ class Component extends DCLogic {
     return fn, H
 
 def wrapper(fn, src, h, title):
-    open(P + fn, 'w').write("""<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<title>%s</title>
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet><style>body{margin:0}</style></helmet>
-<div style="width: 1280px; height: %dpx; overflow: hidden;"><dc-import name="%s" hint-size="1280px,%dpx"></dc-import></div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":%d}}'>
-class Component extends DCLogic {
-  renderVals() { return {}; }
-}
-</script>
-</body>
-</html>
-""" % (title, h, src, h, h))
+    # Copia real (un tablero que importa otro tablero con componentes se queda en blanco en el canvas)
+    import re as _re
+    s = open(P + src + '.dc.html').read()
+    open(P + fn, 'w').write(_re.sub(r'<title>.*?</title>', '<title>%s</title>' % title, s, count=1))
     return fn, h
 
 B = {}  # fn -> (h, title, page, row, col)

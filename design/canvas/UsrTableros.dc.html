@@ -7,12 +7,107 @@
 </head>
 <body>
 <x-dc>
-<helmet><style>body{margin:0}</style></helmet>
-<div style="width: 1280px; height: 900px; overflow: hidden;"><dc-import name="TabMis" hint-size="1280px,900px"></dc-import></div>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.h{font-size:15px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.btn{height:38px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:40px;padding:0 18px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.btno{height:40px;padding:0 16px;border-radius:10px;border:1.5px solid #0E5A3A;background:#FFFFFF;color:#0E5A3A;font:600 13.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.s-rev{background:#F2F5F3;color:#4A5650}.s-int{background:#FFF4E0;color:#7A4B00}.s-con{background:#EEF6EE;color:#0E5A3A}.s-des{background:#FDECEA;color:#A3271B}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.tabs{display:flex;gap:22px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}
+.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.av{width:26px;height:26px;border-radius:50%;color:#FFFFFF;font-size:10px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;border:2px solid #FFFFFF;box-sizing:content-box}
+.cc{display:flex;align-items:center;gap:9px;font-size:13px}
+.cc input{accent-color:#0E5A3A;margin:0;width:16px;height:16px}
+.inp{height:38px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ex{font-size:10.5px;font-weight:600;color:#7A4B00;background:#FFF4E0;border-radius:999px;padding:2px 9px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; padding-top: 68px; height: 900px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Mis tableros" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: flex-end; gap: 16px;">
+        <div style="flex: 1;"><span class="eb">MI ESPACIO</span><h1 style="margin: 2px 0 0; font-size: 28px; font-weight: 700;">Mis tableros</h1><p style="margin: 2px 0 0; font-size: 13px; color: #4A5650;">Guarda productos, empresas, expertos y comparativas por proyecto, y sigue en qué punto está cada uno.</p></div>
+        <button type="button" class="btnp"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Nuevo tablero</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;"><div class="tabs" style="flex: 1;"><span class="on">Míos</span><span>Compartidos conmigo</span></div><span style="font-size: 12.5px; color: #56615B;">Ordenar por <strong style="color: #17231D; font-weight: 500;">Última actualización ▾</strong></span></div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+        <article class="card" style="overflow: hidden; display: flex; flex-direction: column; border: 1.5px solid #CFE0D5;">
+          <div style="height: 92px; background: linear-gradient(135deg,#E3F0E6,#C6DECB); position: relative; display: flex; align-items: center; justify-content: center; color: #0E5A3A;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 1-8.5 6M3 4v5h5M12 7v5l3 2"/></svg><span style="position: absolute; left: 10px; top: 10px; font-size: 10.5px; font-weight: 600; background: #0E5A3A; color: #FFFFFF; border-radius: 999px; padding: 2px 8px;">Automático</span></div>
+          <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 14.5px; font-weight: 600;">Historial</strong></div>
+            <span style="font-size: 12px; color: #4A5650; line-height: 1.4;">Todo lo que has consultado, sin hacer nada. Desde aquí lo pasas a un tablero.</span>
+            <span style="font-size: 11.5px; color: #56615B;">48 elementos · últimos 90 días</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px;"><a href="#" style="font-size: 12px;">Ver historial</a><span style="font-size: 11px; color: #56615B;">Actualizado Hoy</span></div>
+          </div>
+        </article>
+        <article class="card" style="overflow: hidden; display: flex; flex-direction: column;">
+          <div style="height: 92px; background: linear-gradient(135deg,#F6D9B8,#E9B98A); position: relative; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #0E5A3A;">🐔<span style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.9); color: #17231D; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+          <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 14.5px; font-weight: 600;">Nave 2 · broilers</strong><span class="chipg" style="height: 22px; font-size: 10.5px;">Proyecto</span></div>
+            <span style="font-size: 12px; color: #4A5650; line-height: 1.4;">Equipamiento y nutrición para la nave nueva de 40.000 aves</span>
+            <span style="font-size: 11.5px; color: #56615B;">14 elementos · 2 comparativas</span>
+            <span style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #EEF1EE; margin-top: 2px;"><span style="width: 35.7%; background: #C9D2CD;"></span><span style="width: 28.6%; background: #F2B530;"></span><span style="width: 21.4%; background: #2E8B57;"></span><span style="width: 14.3%; background: #E08A80;"></span></span>
+            <span style="font-size: 10.5px; color: #56615B;">5 por revisar · 4 interesantes · 3 contactados · 2 descartados</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px;"><span style="display: flex;"><span class="av" style="background: #0E5A3A;">SE</span><span class="av" style="background: #6B8F7B; margin-left: -8px;">ME</span><span class="av" style="background: #4B3BA6; margin-left: -8px;">LG</span></span><span style="font-size: 11px; color: #56615B;">Actualizado Ayer</span></div>
+          </div>
+        </article>
+        <article class="card" style="overflow: hidden; display: flex; flex-direction: column;">
+          <div style="height: 92px; background: linear-gradient(135deg,#CFE3EE,#8FB8CC); position: relative; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #0E5A3A;">🧪<span style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.9); color: #17231D; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+          <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 14.5px; font-weight: 600;">Bioseguridad 2027</strong><span class="chipg" style="height: 22px; font-size: 10.5px;">Investigación</span></div>
+            <span style="font-size: 12px; color: #4A5650; line-height: 1.4;">Desinfección, control de plagas y vacunación</span>
+            <span style="font-size: 11.5px; color: #56615B;">8 elementos · 1 comparativa</span>
+            <span style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #EEF1EE; margin-top: 2px;"><span style="width: 75.0%; background: #C9D2CD;"></span><span style="width: 25.0%; background: #F2B530;"></span></span>
+            <span style="font-size: 10.5px; color: #56615B;">6 por revisar · 2 interesantes</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px;"><span style="display: flex;"><span class="av" style="background: #0E5A3A;">SE</span></span><span style="font-size: 11px; color: #56615B;">Actualizado 12 oct</span></div>
+          </div>
+        </article>
+        <article class="card" style="overflow: hidden; display: flex; flex-direction: column;">
+          <div style="height: 92px; background: linear-gradient(135deg,#F3E6C4,#D9C38C); position: relative; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #0E5A3A;">🌾<span style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.9); color: #17231D; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+          <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 14.5px; font-weight: 600;">Proveedores de pienso</strong><span class="chipg" style="height: 22px; font-size: 10.5px;">Compras</span></div>
+            <span style="font-size: 12px; color: #4A5650; line-height: 1.4;">Comparar fábricas y premezclas para 2027</span>
+            <span style="font-size: 11.5px; color: #56615B;">6 elementos · 1 comparativa</span>
+            <span style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #EEF1EE; margin-top: 2px;"><span style="width: 16.7%; background: #C9D2CD;"></span><span style="width: 33.3%; background: #F2B530;"></span><span style="width: 50.0%; background: #2E8B57;"></span></span>
+            <span style="font-size: 10.5px; color: #56615B;">1 por revisar · 2 interesantes · 3 contactados</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px;"><span style="display: flex;"><span class="av" style="background: #0E5A3A;">SE</span><span class="av" style="background: #6B8F7B; margin-left: -8px;">ME</span></span><span style="font-size: 11px; color: #56615B;">Actualizado 3 oct</span></div>
+          </div>
+        </article>
+        <article class="card" style="overflow: hidden; display: flex; flex-direction: column;">
+          <div style="height: 92px; background: linear-gradient(135deg,#DDE7E0,#A9C3B0); position: relative; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #0E5A3A;">🌬<span style="position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.9); color: #17231D; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg></span></div>
+          <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 14.5px; font-weight: 600;">Ventilación nave 1</strong><span class="chipg" style="height: 22px; font-size: 10.5px;">Proyecto</span></div>
+            <span style="font-size: 12px; color: #4A5650; line-height: 1.4;">Renovación de ventiladores y cooling</span>
+            <span style="font-size: 11.5px; color: #56615B;">5 elementos · terminado</span>
+            <span style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #EEF1EE; margin-top: 2px;"><span style="width: 80.0%; background: #2E8B57;"></span><span style="width: 20.0%; background: #E08A80;"></span></span>
+            <span style="font-size: 10.5px; color: #56615B;">4 contactados · 1 descartados</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 4px;"><span style="display: flex;"><span class="av" style="background: #0E5A3A;">SE</span></span><span style="font-size: 11px; color: #56615B;">Actualizado jun 2026</span></div>
+          </div>
+        </article>
+        <article style="border: 1.5px dashed #CFD8D2; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 18px; color: #4A5650;"><span style="width: 44px; height: 44px; border-radius: 50%; background: #EEF6EE; color: #0E5A3A; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><strong style="font-size: 14px; color: #0E5A3A; font-weight: 600;">Crear tablero</strong><span style="font-size: 12px;">Para un proyecto, una compra o algo que quieras estudiar</span></article>
+      </div>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; right: 0;"><dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import></div>
+
+</div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
 class Component extends DCLogic {
-  renderVals() { return {}; }
+  renderVals() { return { yes: true }; }
 }
 </script>
 </body>

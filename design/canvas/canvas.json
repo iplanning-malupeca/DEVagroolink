@@ -1678,7 +1678,7 @@
   "UsrTableros.dc.html": {
    "h": 900,
    "page": "intusuario",
-   "title": "U3 · Mis tableros (= T1, enlazado)",
+   "title": "U3 · Mis tableros (copia de T1)",
    "w": 1280,
    "x": 2720,
    "y": 0
@@ -1710,7 +1710,7 @@
   "UsrPerfil.dc.html": {
    "h": 1100,
    "page": "intusuario",
-   "title": "U7 · Mi perfil (= C1, enlazado)",
+   "title": "U7 · Mi perfil (copia de C1)",
    "w": 1280,
    "x": 0,
    "y": 1400
@@ -1718,7 +1718,7 @@
   "UsrFacturacion.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8 · Facturación (= C2, enlazado)",
+   "title": "U8 · Facturación (copia de C2)",
    "w": 1280,
    "x": 1360,
    "y": 1400
@@ -1782,7 +1782,7 @@
   "CompSumario.dc.html": {
    "h": 900,
    "page": "tableros",
-   "title": "C0 · Mis comparaciones · sumario (= U4, enlazado)",
+   "title": "C0 · Mis comparaciones · sumario (copia de U4)",
    "w": 1280,
    "x": 0,
    "y": 1300
