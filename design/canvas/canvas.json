@@ -191,7 +191,7 @@
    "page": "tableros",
    "title": "C2 · Añadir un producto de otro tipo",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 1300
   },
   "CompSolicitar.dc.html": {
@@ -199,7 +199,7 @@
    "page": "tableros",
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 1300
   },
   "CompVista.dc.html": {
@@ -207,7 +207,7 @@
    "page": "tableros",
    "title": "C1 · Comparativa del mismo tipo (enzimas)",
    "w": 1280,
-   "x": 0,
+   "x": 1360,
    "y": 1300
   },
   "ConEmpresa.dc.html": {
@@ -1494,7 +1494,7 @@
   "TabMis.dc.html": {
    "h": 900,
    "page": "tableros",
-   "title": "T1 · Mis tableros (con «Guardados» por defecto)",
+   "title": "T1 · Mis tableros (con Historial automático)",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -1684,7 +1684,7 @@
    "y": 0
   },
   "UsrComparaciones.dc.html": {
-   "h": 900,
+   "h": 980,
    "page": "intusuario",
    "title": "U4 · Mis comparaciones",
    "w": 1280,
@@ -1778,6 +1778,14 @@
    "w": 1280,
    "x": 5440,
    "y": 0
+  },
+  "CompSumario.dc.html": {
+   "h": 980,
+   "page": "tableros",
+   "title": "C0 · Mis comparaciones · sumario (= U4, enlazado)",
+   "w": 1280,
+   "x": 0,
+   "y": 1300
   }
  },
  "createdOnFiles": {
@@ -2199,7 +2207,7 @@
    "kind": "title1",
    "maxW": 4000,
    "page": "tableros",
-   "text": "Comparador · solo productos del mismo tipo",
+   "text": "Comparador · sumario de comparaciones y comparativa (solo productos del mismo tipo)",
    "w": 240,
    "x": 0,
    "y": 1020
@@ -2372,6 +2380,7 @@
   "TabVista.dc.html",
   "TabGuardar.dc.html",
   "TabCompartir.dc.html",
+  "CompSumario.dc.html",
   "CompVista.dc.html",
   "CompOtroTipo.dc.html",
   "CompSolicitar.dc.html",
