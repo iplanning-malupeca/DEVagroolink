@@ -1728,7 +1728,7 @@
    "page": "intusuario",
    "title": "U4 · Mis comparaciones",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "UsrEspacio.dc.html": {
@@ -1752,7 +1752,7 @@
    "page": "intusuario",
    "title": "U5 · Historial",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "UsrIdioma.dc.html": {
@@ -1768,7 +1768,7 @@
    "page": "intusuario",
    "title": "U6 · Mensajes",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "UsrPerfil.dc.html": {
@@ -1784,7 +1784,7 @@
    "page": "intusuario",
    "title": "U2 · Mis proyectos",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "UsrTableros.dc.html": {
@@ -1792,7 +1792,7 @@
    "page": "intusuario",
    "title": "U3 · Mis tableros (copia de T1)",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "WizTop.dc.html": {
@@ -1858,6 +1858,14 @@
    "w": 1280,
    "x": 4080,
    "y": 3720
+  },
+  "UsrEspacioMenu.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U1b · Mi espacio · menú de cuenta abierto («Tus espacios», como S1)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -2589,6 +2597,7 @@
   "CuentaPagos.dc.html",
   "CuentaDirecciones.dc.html",
   "UsrEspacio.dc.html",
+  "UsrEspacioMenu.dc.html",
   "UsrProyectos.dc.html",
   "UsrTableros.dc.html",
   "UsrComparaciones.dc.html",
