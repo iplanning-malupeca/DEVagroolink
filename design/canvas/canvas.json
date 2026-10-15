@@ -1516,7 +1516,7 @@
    "y": 0
   },
   "CuentaPerfil.dc.html": {
-   "h": 1080,
+   "h": 1100,
    "page": "intranet",
    "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
    "w": 1280,
@@ -1620,7 +1620,7 @@
    "y": 4040
   },
   "CuentaPlanes.dc.html": {
-   "h": 980,
+   "h": 1110,
    "page": "intranet",
    "title": "C2a · Compras · Planes y suscripciones",
    "w": 1280,
