@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>J1d · Asistente · productos y «Tu selección»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+/* Layout: barra superior fija + una pregunta por pantalla en columna central (máx. 680 px) */
+:root{
+  --bg:#FFFFFF; --bg2:#F6F8F6; --fg:#17231D; --muted:#56615B; --line:#E3E8E4; --line2:#D5DED8;
+  --accent:#0E5A3A; --accent-ink:#FFFFFF; --soft:#EEF6EE; --soft2:#DDF0D8; --lime:#B5D334; --lila:#4B3BA6; --lila-soft:#F1EEFB;
+  --warn-bg:#FFF4E0; --warn:#7A4B00; --danger:#A3271B;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+
+
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5}
+*{box-sizing:border-box}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
+.app{min-height:100%;display:flex;flex-direction:column}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.logo{font-weight:700;font-size:19px;letter-spacing:-.3px;color:var(--accent);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{font-style:normal;color:var(--fg)}
+.logo b{width:28px;height:28px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center}
+.crumb{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.saved{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.saved .d{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.link{background:none;border:0;color:var(--accent);font-weight:500;cursor:pointer;padding:6px 8px;border-radius:8px;white-space:nowrap}
+.link:hover{background:var(--soft)}
+.prog{height:4px;background:var(--line)}
+.prog span{display:block;height:100%;background:var(--accent);transition:width .35s ease}
+.stage{flex:1;display:flex;justify-content:center;padding:clamp(28px,6vh,72px) 16px 32px}
+.q{width:100%;max-width:680px;display:flex;flex-direction:column;gap:20px}
+.q.enter{animation:in .32s ease both}
+@keyframes in{from{opacity:.55;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.q.enter{animation:none}.prog span{transition:none}}
+.qnum{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.04em;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.qnum .sec{color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0}
+h1.t{margin:0;font-size:clamp(23px,3.4vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.25;text-wrap:balance}
+.req{color:var(--accent)}
+.help{margin:-8px 0 0;color:var(--muted);font-size:14.5px;max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--line2);border-radius:14px;background:var(--bg);cursor:pointer;text-align:left;width:100%;transition:border-color .15s,background .15s}
+.card:hover{border-color:var(--accent)}
+.card[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+.card .ic{width:38px;height:38px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.card[aria-pressed="true"] .ic{background:var(--accent);color:var(--accent-ink)}
+.card .tt{font-weight:600;font-size:15px;display:block}
+.card .dd{font-size:13px;color:var(--muted);display:block;line-height:1.4}
+.key{font-size:11px;font-weight:600;border:1px solid var(--line2);border-radius:5px;padding:0 6px;color:var(--muted);margin-left:auto;flex:none;line-height:20px}
+.card[aria-pressed="true"] .key{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--line2);border-radius:12px;background:var(--bg);cursor:pointer;text-align:left;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--soft);font-weight:500}
+.opt .key{margin-left:0}
+.opt small{display:block;color:var(--muted);font-weight:400;font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:6px 14px;border:1.5px solid var(--line2);border-radius:999px;background:var(--bg);cursor:pointer;font-size:14px}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sub{min-height:32px;font-size:13px;padding:4px 12px}
+.chip.sub[aria-pressed="true"]{background:var(--soft2);border-color:var(--soft2);color:var(--accent)}.chip.pt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+input.in,textarea.in,select.in{width:100%;border:0;border-bottom:2px solid var(--line2);background:transparent;padding:10px 2px;font-size:20px;outline:none}
+input.in:focus,textarea.in:focus,select.in:focus{border-color:var(--accent)}
+textarea.in{font-size:16px;line-height:1.55;border:1.5px solid var(--line2);border-radius:12px;padding:12px 14px;min-height:150px;resize:vertical}
+textarea.in:focus{border-color:var(--accent)}
+.box{border:1.5px solid var(--line2);border-radius:12px;padding:10px 12px;font-size:15px;background:var(--bg);width:100%}
+.box:focus{border-color:var(--accent);outline:none}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row > *{flex:1 1 180px;min-width:0}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--muted)}
+.unit{display:flex;align-items:flex-end;gap:10px}
+.unit span{font-size:15px;color:var(--muted);padding-bottom:12px;white-space:nowrap}
+.foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.btn{height:46px;padding:0 22px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn2{height:46px;padding:0 18px;border-radius:12px;border:1.5px solid var(--line2);background:var(--bg);font-weight:500;cursor:pointer}
+.hint{font-size:12.5px;color:var(--muted)}
+.err{font-size:13px;color:var(--danger)}
+.sp{flex:1}
+.tree{display:flex;flex-direction:column;gap:12px}
+.branch{border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.branch.on{border-color:var(--accent)}
+.branch .hd{display:flex;align-items:center;gap:10px}
+.search{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line2);border-radius:12px;padding:0 12px;height:46px}
+.search input{border:0;outline:none;background:transparent;flex:1;font-size:15px;min-width:0}
+.list{display:flex;flex-direction:column;gap:6px;max-height:330px;overflow:auto;padding-right:4px}
+.pick{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--bg);text-align:left;width:100%}
+.pick[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+.pick .av{width:36px;height:36px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#FFFFFF}
+.pick small{display:block;color:var(--muted);font-size:12.5px}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--accent);white-space:nowrap}
+.tag.l{background:var(--lila-soft);color:var(--lila)}
+.drop{border:2px dashed var(--line2);border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:var(--muted);cursor:pointer}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.files{display:flex;flex-direction:column;gap:6px}
+.file{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:var(--bg2);font-size:13.5px}
+.file button{margin-left:auto}
+.combo{position:relative}.combo-btn{display:flex;align-items:center;gap:10px;cursor:pointer;text-align:left;min-height:46px}.combo-btn .fl{font-size:20px;line-height:1}.combo-btn .ph{color:var(--muted)}.cpop{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:8;background:var(--bg);border:1.5px solid var(--line2);border-radius:14px;box-shadow:0 18px 40px rgba(16,40,28,.16);padding:10px;display:flex;flex-direction:column;gap:8px}.clist{max-height:280px;overflow:auto;display:flex;flex-direction:column;gap:2px}.clist .grp{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);padding:8px 8px 4px;text-transform:uppercase}.copt{display:flex;align-items:center;gap:10px;padding:8px 10px;border:0;border-radius:10px;background:none;cursor:pointer;text-align:left;width:100%;font-size:14.5px}.copt:hover,.copt.act{background:var(--soft)}.copt .fl{font-size:19px}.copt .cd{margin-left:auto;color:var(--muted);font-size:12px}.copt[aria-selected="true"]{font-weight:600;color:var(--accent)}.tray{border:1.5px solid var(--accent);background:var(--soft);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}.tray .hd{display:flex;align-items:center;gap:8px;font-size:14px}.tray .n{min-width:24px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:600;display:inline-flex;align-items:center;justify-content:center}.sel{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:4px 6px 4px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line2);font-size:13px}.sel small{color:var(--muted)}.sel button{border:0;background:none;cursor:pointer;color:var(--muted);display:inline-flex;padding:4px;border-radius:50%}.sel button:hover{background:var(--soft2);color:var(--fg)}
+.note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--bg2);font-size:13.5px;color:var(--muted)}
+/* bienvenida */
+.wel{max-width:680px;display:flex;flex-direction:column;gap:22px}
+.wel h1{font-size:clamp(28px,4.4vw,40px);margin:0;letter-spacing:-.025em;line-height:1.15;font-weight:600;text-wrap:balance}
+.wel p.lead{margin:0;font-size:17px;color:var(--muted);max-width:56ch}
+.facts{display:flex;flex-direction:column;gap:10px}
+.facts div{display:flex;gap:12px;align-items:center;font-size:15px}
+.facts .ic{width:34px;height:34px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.draft{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--accent);border-radius:14px;background:var(--soft)}
+/* resumen */
+.sum{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.srow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line);align-items:start}
+.srow:last-child{border-bottom:0}
+.srow .k{font-size:13px;color:var(--muted)}
+.srow .v{font-size:14.5px;min-width:0;overflow-wrap:anywhere}
+.srow .v.empty{color:var(--muted);font-style:italic}
+@media (max-width:560px){.srow{grid-template-columns:1fr auto}.srow .k{grid-column:1/-1}}
+/* ficha */
+.ficha{width:100%;max-width:1000px;display:flex;flex-direction:column;gap:18px}
+.fhead{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.fhead h1{margin:0;font-size:28px;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.state{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.state select{border:1.5px solid var(--line2);border-radius:999px;padding:6px 12px;background:var(--soft);color:var(--accent);font-weight:600}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{border:0;background:none;padding:10px 14px;font-weight:500;color:var(--muted);border-bottom:2.5px solid transparent;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--accent);border-color:var(--accent);font-weight:600}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px}
+@media (max-width:820px){.panel{grid-template-columns:1fr}}
+.pc{border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.pc h2{margin:0;font-size:16px;font-weight:600}
+.kv{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 14px;font-size:14px}
+.kv .k{color:var(--muted)}
+.act{display:flex;flex-direction:column;gap:10px;font-size:14px}
+.act div{display:flex;gap:10px}
+.act time{color:var(--muted);font-size:12.5px;width:84px;flex:none;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:9}
+
+[hidden]{display:none!important}
+body{margin:0}
+.q.enter{animation:none}</style>
+</helmet>
+<div style="width: 1280px; height: 1420px; overflow: hidden; background: #FFFFFF; font-family: 'Poppins', sans-serif;"><div class="app">
+  <header class="top">
+    <div class="topin">
+      <span class="logo"><b><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5D334" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5.1-6"></path></svg></b><span>agroo<i>link</i></span></span>
+      <span class="crumb" id="crumb">Mi espacio › Mis proyectos › Nave 2 de broilers en Alcarràs</span>
+      <span class="saved" id="saved"><span class="d"></span><span id="savedTxt">Guardado</span></span>
+      <button class="link" id="exitBtn" type="button">Guardar y salir</button>
+    </div>
+    <div class="prog" id="prog"><span id="progBar" style="width: 69%;"></span></div>
+  </header>
+  <main class="stage" id="stage"><section class="q" aria-labelledby="qt">
+    <div class="qnum">21 de 28 <span class="sec">· Productos y soluciones</span></div>
+    <h1 class="t" id="qt">¿Qué productos o soluciones necesitas?</h1>
+    <p class="help">Usamos el catálogo de Agroolink. Puedes elegir familias, tipos concretos o productos de tus tableros.</p>
+    <div id="field"><div class="tray" aria-live="polite"><div class="hd"><strong>Tu selección</strong><span class="n">5</span><button type="button" class="link" id="pclear" style="margin-left:auto;font-size:13px">Quitar todo</button></div>
+        <div class="chips"><span class="sel">Sistemas de alimentación automática <small>· Equipamiento</small><button type="button" data-rm="equipamiento:Sistemas de alimentación automática" aria-label="Quitar Sistemas de alimentación automática"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></span><span class="sel">Sistemas de ventilación <small>· Equipamiento</small><button type="button" data-rm="equipamiento:Sistemas de ventilación" aria-label="Quitar Sistemas de ventilación"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></span><span class="sel">Silos y almacenamiento <small>· Equipamiento</small><button type="button" data-rm="equipamiento:Silos y almacenamiento" aria-label="Quitar Silos y almacenamiento"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></span><span class="sel">Sensor NH₃ / CO₂ <small>· tablero</small><button type="button" data-rmt="t4" aria-label="Quitar Sensor NH₃ / CO₂"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></span><span class="sel">Control de clima compatible con la nave 1 <small>· a medida</small></span></div></div>
+        <div class="search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"></path></svg><input id="psearch" type="text" placeholder="Buscar en el catálogo, p. ej. «ventilación»" value=""></div>
+        <div class="list" style="margin-top:12px"><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Nutrición animal y aditivos</strong><span class="hint">17 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="nutricion:Piensos completos" aria-pressed="false">Piensos completos</button><button type="button" class="chip sub pt" data-k="nutricion:Piensos complementarios" aria-pressed="false">Piensos complementarios</button><button type="button" class="chip sub pt" data-k="nutricion:Premezclas" aria-pressed="false">Premezclas</button><button type="button" class="chip sub pt" data-k="nutricion:Núcleos nutricionales" aria-pressed="false">Núcleos nutricionales</button><button type="button" class="chip sub pt" data-k="nutricion:Acidificantes" aria-pressed="false">Acidificantes</button><button type="button" class="chip sub pt" data-k="nutricion:Probióticos" aria-pressed="false">Probióticos</button><button type="button" class="chip sub pt" data-k="nutricion:Prebióticos" aria-pressed="false">Prebióticos</button><button type="button" class="chip sub pt" data-k="nutricion:Enzimas" aria-pressed="false">Enzimas</button><button type="button" class="chip sub pt" data-k="nutricion:Fitogénicos" aria-pressed="false">Fitogénicos</button><button type="button" class="chip sub pt" data-k="nutricion:Adsorbentes de micotoxinas" aria-pressed="false">Adsorbentes de micotoxinas</button><button type="button" class="chip sub pt" data-k="nutricion:Aminoácidos" aria-pressed="false">Aminoácidos</button><button type="button" class="chip sub pt" data-k="nutricion:Vitaminas" aria-pressed="false">Vitaminas</button><button type="button" class="chip sub pt" data-k="nutricion:Minerales y oligoelementos" aria-pressed="false">Minerales y oligoelementos</button><button type="button" class="chip sub pt" data-k="nutricion:Grasas y aceites" aria-pressed="false">Grasas y aceites</button><button type="button" class="chip sub pt" data-k="nutricion:Conservantes y antioxidantes" aria-pressed="false">Conservantes y antioxidantes</button><button type="button" class="chip sub pt" data-k="nutricion:Sustitutos lácteos" aria-pressed="false">Sustitutos lácteos</button><button type="button" class="chip sub pt" data-k="nutricion:Aditivos tecnológicos" aria-pressed="false">Aditivos tecnológicos</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Materias primas y productos agrícolas</strong><span class="hint">7 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="materias_primas:Cereales" aria-pressed="false">Cereales</button><button type="button" class="chip sub pt" data-k="materias_primas:Harinas proteicas" aria-pressed="false">Harinas proteicas</button><button type="button" class="chip sub pt" data-k="materias_primas:Subproductos agroindustriales" aria-pressed="false">Subproductos agroindustriales</button><button type="button" class="chip sub pt" data-k="materias_primas:Forrajes" aria-pressed="false">Forrajes</button><button type="button" class="chip sub pt" data-k="materias_primas:Aditivos para ensilado" aria-pressed="false">Aditivos para ensilado</button><button type="button" class="chip sub pt" data-k="materias_primas:Conservantes de materias primas" aria-pressed="false">Conservantes de materias primas</button><button type="button" class="chip sub pt" data-k="materias_primas:Productos para almacenamiento" aria-pressed="false">Productos para almacenamiento</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Salud animal y bioseguridad</strong><span class="hint">10 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="salud:Vacunas" aria-pressed="false">Vacunas</button><button type="button" class="chip sub pt" data-k="salud:Antibióticos veterinarios" aria-pressed="false">Antibióticos veterinarios</button><button type="button" class="chip sub pt" data-k="salud:Antiparasitarios" aria-pressed="false">Antiparasitarios</button><button type="button" class="chip sub pt" data-k="salud:Antiinflamatorios" aria-pressed="false">Antiinflamatorios</button><button type="button" class="chip sub pt" data-k="salud:Desinfectantes" aria-pressed="false">Desinfectantes</button><button type="button" class="chip sub pt" data-k="salud:Productos de higiene" aria-pressed="false">Productos de higiene</button><button type="button" class="chip sub pt" data-k="salud:Diagnóstico rápido" aria-pressed="false">Diagnóstico rápido</button><button type="button" class="chip sub pt" data-k="salud:Kits PCR / laboratorio" aria-pressed="false">Kits PCR / laboratorio</button><button type="button" class="chip sub pt" data-k="salud:Equipos de vacunación" aria-pressed="false">Equipos de vacunación</button><button type="button" class="chip sub pt" data-k="salud:Control de plagas" aria-pressed="false">Control de plagas</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Genética y reproducción</strong><span class="hint">7 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="genetica:Líneas genéticas porcinas" aria-pressed="false">Líneas genéticas porcinas</button><button type="button" class="chip sub pt" data-k="genetica:Genética avícola" aria-pressed="false">Genética avícola</button><button type="button" class="chip sub pt" data-k="genetica:Genética bovina" aria-pressed="false">Genética bovina</button><button type="button" class="chip sub pt" data-k="genetica:Semen y dosis seminales" aria-pressed="false">Semen y dosis seminales</button><button type="button" class="chip sub pt" data-k="genetica:Embriones" aria-pressed="false">Embriones</button><button type="button" class="chip sub pt" data-k="genetica:Equipos de inseminación" aria-pressed="false">Equipos de inseminación</button><button type="button" class="chip sub pt" data-k="genetica:Equipos de incubación reproductiva" aria-pressed="false">Equipos de incubación reproductiva</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Equipamiento e instalaciones ganaderas</strong><span class="hint">15 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="equipamiento:Comederos" aria-pressed="false">Comederos</button><button type="button" class="chip sub pt" data-k="equipamiento:Bebederos" aria-pressed="false">Bebederos</button><button type="button" class="chip sub pt" data-k="equipamiento:Sistemas de alimentación automática" aria-pressed="true">Sistemas de alimentación automática</button><button type="button" class="chip sub pt" data-k="equipamiento:Sistemas de ventilación" aria-pressed="true">Sistemas de ventilación</button><button type="button" class="chip sub pt" data-k="equipamiento:Sistemas de calefacción" aria-pressed="false">Sistemas de calefacción</button><button type="button" class="chip sub pt" data-k="equipamiento:Refrigeración y cooling" aria-pressed="false">Refrigeración y cooling</button><button type="button" class="chip sub pt" data-k="equipamiento:Iluminación ganadera" aria-pressed="false">Iluminación ganadera</button><button type="button" class="chip sub pt" data-k="equipamiento:Suelos y slats" aria-pressed="false">Suelos y slats</button><button type="button" class="chip sub pt" data-k="equipamiento:Jaulas y alojamientos" aria-pressed="false">Jaulas y alojamientos</button><button type="button" class="chip sub pt" data-k="equipamiento:Equipos de ordeño" aria-pressed="false">Equipos de ordeño</button><button type="button" class="chip sub pt" data-k="equipamiento:Robots de ordeño" aria-pressed="false">Robots de ordeño</button><button type="button" class="chip sub pt" data-k="equipamiento:Sistemas de limpieza" aria-pressed="false">Sistemas de limpieza</button><button type="button" class="chip sub pt" data-k="equipamiento:Sistemas de gestión de estiércol" aria-pressed="false">Sistemas de gestión de estiércol</button><button type="button" class="chip sub pt" data-k="equipamiento:Silos y almacenamiento" aria-pressed="true">Silos y almacenamiento</button><button type="button" class="chip sub pt" data-k="equipamiento:Básculas y sistemas de pesaje" aria-pressed="false">Básculas y sistemas de pesaje</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Equipamiento avícola especializado</strong><span class="hint">8 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="avicola:Incubadoras" aria-pressed="false">Incubadoras</button><button type="button" class="chip sub pt" data-k="avicola:Nacedoras" aria-pressed="false">Nacedoras</button><button type="button" class="chip sub pt" data-k="avicola:Clasificadoras de huevos" aria-pressed="false">Clasificadoras de huevos</button><button type="button" class="chip sub pt" data-k="avicola:Sistemas de recogida de huevos" aria-pressed="false">Sistemas de recogida de huevos</button><button type="button" class="chip sub pt" data-k="avicola:Nidos" aria-pressed="false">Nidos</button><button type="button" class="chip sub pt" data-k="avicola:Equipos de procesamiento avícola" aria-pressed="false">Equipos de procesamiento avícola</button><button type="button" class="chip sub pt" data-k="avicola:Sistemas de aturdimiento" aria-pressed="false">Sistemas de aturdimiento</button><button type="button" class="chip sub pt" data-k="avicola:Equipos de vacunación in ovo" aria-pressed="false">Equipos de vacunación in ovo</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Equipamiento porcino especializado</strong><span class="hint">5 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="porcino:Estaciones electrónicas de alimentación" aria-pressed="false">Estaciones electrónicas de alimentación</button><button type="button" class="chip sub pt" data-k="porcino:Equipos de alimentación líquida" aria-pressed="false">Equipos de alimentación líquida</button><button type="button" class="chip sub pt" data-k="porcino:Sistemas de maternidad" aria-pressed="false">Sistemas de maternidad</button><button type="button" class="chip sub pt" data-k="porcino:Sistemas de detección de partos" aria-pressed="false">Sistemas de detección de partos</button><button type="button" class="chip sub pt" data-k="porcino:Equipos de procesado de lechones" aria-pressed="false">Equipos de procesado de lechones</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Equipamiento para rumiantes</strong><span class="hint">7 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="rumiantes:Robots de alimentación" aria-pressed="false">Robots de alimentación</button><button type="button" class="chip sub pt" data-k="rumiantes:Mezcladoras unifeed" aria-pressed="false">Mezcladoras unifeed</button><button type="button" class="chip sub pt" data-k="rumiantes:Sistemas de detección de mastitis" aria-pressed="false">Sistemas de detección de mastitis</button><button type="button" class="chip sub pt" data-k="rumiantes:Sistemas de refrigeración de leche" aria-pressed="false">Sistemas de refrigeración de leche</button><button type="button" class="chip sub pt" data-k="rumiantes:Equipos de análisis de leche" aria-pressed="false">Equipos de análisis de leche</button><button type="button" class="chip sub pt" data-k="rumiantes:Sistemas de separación de animales" aria-pressed="false">Sistemas de separación de animales</button><button type="button" class="chip sub pt" data-k="rumiantes:Cepillos automáticos" aria-pressed="false">Cepillos automáticos</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Sostenibilidad, medio ambiente y energía</strong><span class="hint">8 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="sostenibilidad:Biodigestores" aria-pressed="false">Biodigestores</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Separadores sólido-líquido" aria-pressed="false">Separadores sólido-líquido</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Tratamiento de aguas" aria-pressed="false">Tratamiento de aguas</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Sistemas de reducción de emisiones" aria-pressed="false">Sistemas de reducción de emisiones</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Energía solar para granjas" aria-pressed="false">Energía solar para granjas</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Sistemas de recuperación de calor" aria-pressed="false">Sistemas de recuperación de calor</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Equipos de compostaje" aria-pressed="false">Equipos de compostaje</button><button type="button" class="chip sub pt" data-k="sostenibilidad:Soluciones de gestión de residuos" aria-pressed="false">Soluciones de gestión de residuos</button></div></div><div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">Tecnología, sensores y software</strong><span class="hint">9 tipos</span></div><div class="chips"><button type="button" class="chip sub pt" data-k="tecnologia:Sensores de actividad y collares" aria-pressed="false">Sensores de actividad y collares</button><button type="button" class="chip sub pt" data-k="tecnologia:Software de gestión ganadera" aria-pressed="false">Software de gestión ganadera</button><button type="button" class="chip sub pt" data-k="tecnologia:Sensores ambientales" aria-pressed="false">Sensores ambientales</button><button type="button" class="chip sub pt" data-k="tecnologia:Sistemas de identificación RFID" aria-pressed="false">Sistemas de identificación RFID</button><button type="button" class="chip sub pt" data-k="tecnologia:Cámaras de visión artificial" aria-pressed="false">Cámaras de visión artificial</button><button type="button" class="chip sub pt" data-k="tecnologia:Plataformas IoT" aria-pressed="false">Plataformas IoT</button><button type="button" class="chip sub pt" data-k="tecnologia:Sistemas de trazabilidad" aria-pressed="false">Sistemas de trazabilidad</button><button type="button" class="chip sub pt" data-k="tecnologia:Software de formulación" aria-pressed="false">Software de formulación</button><button type="button" class="chip sub pt" data-k="tecnologia:Sistemas de alimentación de precisión" aria-pressed="false">Sistemas de alimentación de precisión</button></div></div></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px"><strong style="font-size:14px">Recuperar productos de mis tableros</strong><button type="button" class="pick" data-t="t1" aria-pressed="false"><span class="av" style="background:#1E4FA0">DS</span><span style="flex:1;min-width:0"><strong style="font-size:14px">Ronozyme® HiPhos</strong><small>DSM-Firmenich · Enzimas</small></span><span class="tag">Nave 2 · broilers</span></button><button type="button" class="pick" data-t="t2" aria-pressed="false"><span class="av" style="background:#C8102E">IF</span><span style="flex:1;min-width:0"><strong style="font-size:14px">Axtra® PHY</strong><small>IFF · Enzimas</small></span><span class="tag">Nave 2 · broilers</span></button><button type="button" class="pick" data-t="t3" aria-pressed="false"><span class="av" style="background:#8A5A00">Zu</span><span style="flex:1;min-width:0"><strong style="font-size:14px">Aviary Pro</strong><small>Zucami · Jaulas y alojamientos</small></span><span class="tag">Nave 2 · broilers</span></button><button type="button" class="pick" data-t="t4" aria-pressed="true"><span class="av" style="background:#0E5A3A">Ag</span><span style="flex:1;min-width:0"><strong style="font-size:14px">Sensor NH₃ / CO₂</strong><small>AgroNova · Sensores ambientales</small></span><span class="tag">Bioseguridad 2027</span></button></div>
+        <label class="f" style="margin-top:14px">Necesidades específicas<input class="box" id="plibre" type="text" placeholder="Algo que no está en el catálogo" value="Control de clima compatible con la nave 1"></label>
+</div>
+    <div class="err" id="err" role="alert" hidden=""></div>
+    <div class="foot">
+      <button class="btn2" id="back" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg> Atrás</button>
+      <span class="sp"></span>
+      <button class="link" id="skip" type="button">Saltar</button>
+      <button class="btn" id="next" type="button">Continuar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    </div>
+    <span class="hint">Pulsa Intro ↵ para continuar</span>
+  </section></main>
+</div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1420}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

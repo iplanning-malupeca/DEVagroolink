@@ -1550,26 +1550,26 @@
   "ProyCrear.dc.html": {
    "h": 1920,
    "page": "proyectos",
-   "title": "J1 · Crear proyecto · formulario completo (qué, animales y dónde, detalles)",
+   "title": "Anterior · J1 formulario en una página (sustituido por el asistente)",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 4920
   },
   "ProyDestinatarios.dc.html": {
    "h": 900,
    "page": "proyectos",
-   "title": "J2 · Crear proyecto · a quién se lo enviamos",
+   "title": "Anterior · J2 a quién se lo enviamos (pasa a «Contactar» en la ficha)",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 4920
   },
   "ProyDetalle.dc.html": {
    "h": 900,
    "page": "proyectos",
-   "title": "J4 · Detalle del proyecto y propuestas",
+   "title": "J4c · Detalle del proyecto con propuestas recibidas",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 1920
   },
   "ProyExperto.dc.html": {
    "h": 1000,
@@ -1577,7 +1577,7 @@
    "title": "J7 · Proyectos para la experta (Laura Gil)",
    "w": 1280,
    "x": 2720,
-   "y": 2420
+   "y": 3420
   },
   "ProyMis.dc.html": {
    "h": 900,
@@ -1585,7 +1585,7 @@
    "title": "J3 · Mis proyectos",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 1920
   },
   "ProyOportunidades.dc.html": {
    "h": 1000,
@@ -1593,7 +1593,7 @@
    "title": "J5 · Oportunidades para la empresa (AgroNova)",
    "w": 1280,
    "x": 0,
-   "y": 2420
+   "y": 3420
   },
   "ProyPropuesta.dc.html": {
    "h": 1000,
@@ -1601,7 +1601,7 @@
    "title": "J6 · Enviar una propuesta",
    "w": 1280,
    "x": 1360,
-   "y": 2420
+   "y": 3420
   },
   "SelEspecies.dc.html": {
    "h": 900,
@@ -1866,6 +1866,70 @@
    "w": 1280,
    "x": 5440,
    "y": 0
+  },
+  "ProyAsistBienvenida.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1 · Asistente · bienvenida",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ProyAsistTipo.dc.html": {
+   "h": 1000,
+   "page": "proyectos",
+   "title": "J1a · Asistente · tipo de proyecto (10 tipos)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "ProyAsistLugar.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1b · Asistente · dónde (país con buscador)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "ProyAsistEscenario.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1c · Asistente · pregunta del escenario (nueva explotación)",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "ProyAsistProductos.dc.html": {
+   "h": 1420,
+   "page": "proyectos",
+   "title": "J1d · Asistente · productos y «Tu selección»",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "ProyAsistResumen.dc.html": {
+   "h": 1300,
+   "page": "proyectos",
+   "title": "J1e · Asistente · resumen con Editar",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "ProyFicha.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J4 · Ficha del proyecto · Resumen (estado editable)",
+   "w": 1280,
+   "x": 0,
+   "y": 1920
+  },
+  "ProyFichaEmpresas.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J4b · Ficha del proyecto · Empresas y expertos (contactar uno a uno)",
+   "w": 1280,
+   "x": 1360,
+   "y": 1920
   }
  },
  "createdOnFiles": {
@@ -2278,7 +2342,7 @@
    "kind": "title1",
    "maxW": 5360,
    "page": "proyectos",
-   "text": "Proyectos · el ganadero publica lo que necesita (Samuel)",
+   "text": "Proyectos · el ganadero crea su proyecto con el asistente (una pregunta por pantalla) · prototipo navegable: design/prototipos/crear-proyecto.html",
    "w": 240,
    "x": 0,
    "y": -300
@@ -2287,10 +2351,10 @@
    "kind": "title1",
    "maxW": 4000,
    "page": "proyectos",
-   "text": "Empresas y expertos reciben oportunidades que encajan",
+   "text": "Empresas y expertos reciben oportunidades cuando el proyecto se comparte",
    "w": 240,
    "x": 0,
-   "y": 2120
+   "y": 3120
   },
   "selT1": {
    "kind": "title1",
@@ -2381,6 +2445,24 @@
    "w": 240,
    "x": 0,
    "y": -300
+  },
+  "proyT3": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "proyectos",
+   "text": "Después de crear · ficha del proyecto, Mis proyectos y propuestas",
+   "w": 240,
+   "x": 0,
+   "y": 1620
+  },
+  "proyT4": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "proyectos",
+   "text": "Versión anterior (no se usa)",
+   "w": 240,
+   "x": 0,
+   "y": 4620
   }
  },
  "order": [
@@ -2500,6 +2582,14 @@
   "ServEditor.dc.html",
   "SelRamasCargos.dc.html",
   "SelIntereses.dc.html",
+  "ProyAsistBienvenida.dc.html",
+  "ProyAsistTipo.dc.html",
+  "ProyAsistLugar.dc.html",
+  "ProyAsistEscenario.dc.html",
+  "ProyAsistProductos.dc.html",
+  "ProyAsistResumen.dc.html",
+  "ProyFicha.dc.html",
+  "ProyFichaEmpresas.dc.html",
   "ProyCrear.dc.html",
   "ProyDestinatarios.dc.html",
   "ProyMis.dc.html",

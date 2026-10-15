@@ -1,0 +1,22 @@
+const fs = require('fs'); const {JSDOM} = require('jsdom');
+const html = fs.readFileSync('/Users/mariepelletier/CLAUDE/AGROOLINK/prototipos/test.html','utf8');
+const dom = new JSDOM(html, {runScripts:'dangerously', url:'http://localhost/', pretendToBeVisual:true});
+const w = dom.window; w.scrollTo = ()=>{}; w.HTMLElement.prototype.scrollIntoView = ()=>{};
+const E = s => w.eval(s);
+const out = {};
+const cap = (k, code) => { E(code); const app = w.document.querySelector('.app').outerHTML.replace(/ enter"/g,'"'); out[k] = app; };
+setTimeout(() => {
+  cap('W', "localStorage.clear(); st={step:-1,v:{},created:null,tab:'Resumen'}; render();");
+  cap('T', "st={step:0,v:{tipo:'A'},created:null,tab:'Resumen'}; render(); document.querySelector('#saved').hidden=false;");
+  cap('L', "st={step:0,v:JSON.parse(JSON.stringify(EXAMPLE)),created:null,tab:'Resumen'}; st.step=idx('lugar'); render(); document.querySelector('#l_pais').click(); document.querySelector('#csrch').value='es'; document.querySelector('#csrch').dispatchEvent(new Event('input'));");
+  cap('E', "st={step:0,v:JSON.parse(JSON.stringify(EXAMPLE)),created:null,tab:'Resumen'}; st.step=idx('a_llave'); render();");
+  cap('P', "st={step:0,v:JSON.parse(JSON.stringify(EXAMPLE)),created:null,tab:'Resumen'}; st.step=idx('productos'); render();");
+  cap('R', "st={step:0,v:JSON.parse(JSON.stringify(EXAMPLE)),created:null,tab:'Resumen'}; st.step=steps().length; render();");
+  cap('F', "st={step:0,v:JSON.parse(JSON.stringify(EXAMPLE)),created:{at:'',estado:'Buscando soluciones',act:[['15 oct 10:42','Proyecto creado · privado']]},tab:'Resumen'}; render();");
+  cap('F2', "st.tab='Empresas y expertos'; render();");
+  const css = html.match(/<style>([\s\S]*?)<\/style>/g)[1].replace(/<\/?style>/g,'');
+  out.css = css;
+  out.model = JSON.parse(E("JSON.stringify({tipos:TIPOS.map(t=>({id:t[0],label:t[2],desc:t[3]})), comunes:BASE.map(q=>({id:q.id,pregunta:q.title,tipo:q.type,obligatoria:!!q.req,opciones:q.opts})), escenarios:Object.fromEntries(Object.entries(S).map(([k,l])=>[k,l.map(q=>({id:q.id,pregunta:q.title,tipo:q.type,unidad:q.unit,opciones:q.opts}))])), finales:TAIL.map(q=>({id:q.id,pregunta:q.title,tipo:q.type,opciones:q.opts})), objetivos:OBJETIVOS})"));
+  fs.writeFileSync('snaps.json', JSON.stringify(out));
+  console.log(Object.keys(out).map(k => k + ':' + (typeof out[k]==='string'?out[k].length:'obj')).join(' '));
+}, 300);

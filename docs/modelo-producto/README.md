@@ -290,3 +290,15 @@ erDiagram
 - **Privacidad**: el comprador aparece anónimo («Granja de broilers en Lleida»); su nombre y contacto solo los ve la empresa o experto a cuya propuesta responde.
 - **Propuesta**: mensaje, productos y servicios del catálogo, precio orientativo (o «a consultar»), plazo, garantía, adjuntos. Estados: nueva, vista, en conversación, descartada, adjudicada.
 - **Planes (propuesta)**: Comprador Gratis 2 proyectos activos; Empresa Gratis 3 propuestas/mes; Experto Gratis 3 candidaturas/mes; Pro ilimitado.
+
+
+## Proyecto · alta con asistente (entidad)
+
+Modelo completo en `proyecto.json`; prototipo navegable en `design/prototipos/crear-proyecto.html`.
+
+- **Asistente**: una pregunta por pantalla, guardado automático, se puede saltar lo opcional y retomar un borrador. Obligatorios: tipo, nombre, país y especie.
+- **10 tipos de proyecto** (A–J). Cada tipo activa solo sus preguntas de escenario (nueva explotación, ampliación, modernización, compra, mejora productiva, salud, nutrición, genética, servicios, colaboración comercial).
+- **Comunes**: nombre, lugar (país con buscador · región · localidad), especies (`especies.json`), objetivos, descripción. **Finales**: productos (`familias.json` + tableros), fase, inicio, presupuesto (mín · máx · moneda o sin definir), financiación, cómo ayudar + empresas/expertos, documentos, privacidad.
+- **Estados**: Borrador · Buscando soluciones · Contactando proveedores · Evaluando propuestas · En ejecución · Finalizado. Privado por defecto.
+- **No se envía nada al crear**: desde la ficha (pestaña Empresas y expertos) el usuario contacta uno a uno. El encaje para empresas y expertos solo se calcula si el proyecto se comparte.
+- **Ficha**: Mi espacio › Mis proyectos › nombre, con pestañas Resumen, Soluciones, Empresas y expertos, Documentos y Actividad.

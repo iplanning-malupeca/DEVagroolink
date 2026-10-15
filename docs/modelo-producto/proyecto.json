@@ -1,0 +1,996 @@
+{
+ "version": 1,
+ "fecha": "2026-10-15",
+ "entidad": "Proyecto",
+ "prototipo": "design/prototipos/crear-proyecto.html",
+ "campos_sistema": [
+  {
+   "id": "id"
+  },
+  {
+   "id": "propietario",
+   "nota": "Usuario de la cuenta global (Agrinews)"
+  },
+  {
+   "id": "espacio",
+   "nota": "Personal o empresa desde la que se crea"
+  },
+  {
+   "id": "estado",
+   "opciones": [
+    "Borrador",
+    "Buscando soluciones",
+    "Contactando proveedores",
+    "Evaluando propuestas",
+    "En ejecución",
+    "Finalizado"
+   ]
+  },
+  {
+   "id": "privacidad",
+   "opciones": [
+    "Privado: solo yo",
+    "Compartido con colaboradores",
+    "Compartido con empresas seleccionadas"
+   ],
+   "por_defecto": "Privado: solo yo"
+  },
+  {
+   "id": "creado"
+  },
+  {
+   "id": "actualizado"
+  },
+  {
+   "id": "borrador",
+   "nota": "Guardado automático tras cada respuesta; se retoma en la última pregunta"
+  }
+ ],
+ "tipos": [
+  {
+   "id": "A",
+   "label": "Nueva explotación o instalación",
+   "desc": "Construir desde cero una granja o nave"
+  },
+  {
+   "id": "B",
+   "label": "Ampliación de explotación",
+   "desc": "Más capacidad sobre lo que ya tienes"
+  },
+  {
+   "id": "C",
+   "label": "Modernización y renovación",
+   "desc": "Sustituir equipos o sistemas antiguos"
+  },
+  {
+   "id": "D",
+   "label": "Compra de productos y equipamiento",
+   "desc": "Comprar o renovar productos concretos"
+  },
+  {
+   "id": "E",
+   "label": "Mejora productiva",
+   "desc": "Mejorar un indicador de tu producción"
+  },
+  {
+   "id": "F",
+   "label": "Salud animal y bioseguridad",
+   "desc": "Prevenir, diagnosticar o proteger"
+  },
+  {
+   "id": "G",
+   "label": "Nutrición y alimentación",
+   "desc": "Piensos, aditivos, formulación"
+  },
+  {
+   "id": "H",
+   "label": "Genética y reproducción",
+   "desc": "Líneas genéticas, semen, reproducción"
+  },
+  {
+   "id": "I",
+   "label": "Consultoría y servicios técnicos",
+   "desc": "Un especialista para un trabajo concreto"
+  },
+  {
+   "id": "J",
+   "label": "Distribución y colaboración comercial",
+   "desc": "Distribuir, representar o colaborar"
+  }
+ ],
+ "preguntas_comunes": [
+  {
+   "id": "tipo",
+   "pregunta": "¿Qué tipo de proyecto tienes en mente?",
+   "tipo": "tipo",
+   "obligatoria": true
+  },
+  {
+   "id": "nombre",
+   "pregunta": "¿Cómo quieres llamar a tu proyecto?",
+   "tipo": "text",
+   "obligatoria": true
+  },
+  {
+   "id": "lugar",
+   "pregunta": "¿Dónde se desarrollará?",
+   "tipo": "location",
+   "obligatoria": true
+  },
+  {
+   "id": "especies",
+   "pregunta": "¿Para qué especie está destinado?",
+   "tipo": "species",
+   "obligatoria": true
+  },
+  {
+   "id": "objetivos",
+   "pregunta": "¿Qué quieres conseguir?",
+   "tipo": "multi",
+   "obligatoria": false,
+   "opciones": [
+    "Bienestar animal",
+    "Rendimiento productivo",
+    "Conversión alimenticia",
+    "Salud intestinal",
+    "Salud animal y prevención",
+    "Reproducción y fertilidad",
+    "Calidad del producto final",
+    "Reducción de costes",
+    "Sostenibilidad ambiental",
+    "Bioseguridad",
+    "Eficiencia operativa",
+    "Nutrición y aprovechamiento de nutrientes",
+    "Calidad y seguridad del alimento",
+    "Gestión del agua",
+    "Climatización y ambiente",
+    "Trazabilidad y control",
+    "Rentabilidad de la explotación",
+    "Innovación y digitalización"
+   ]
+  },
+  {
+   "id": "descripcion",
+   "pregunta": "Describe brevemente tu proyecto",
+   "tipo": "textarea",
+   "obligatoria": false
+  }
+ ],
+ "preguntas_por_escenario": {
+  "A": [
+   {
+    "id": "a_tipo",
+    "pregunta": "¿Qué tipo de explotación será?",
+    "tipo": "single",
+    "opciones": [
+     "Intensiva",
+     "Semiintensiva",
+     "Extensiva",
+     "Ecológica",
+     "Campera / al aire libre"
+    ]
+   },
+   {
+    "id": "a_cap",
+    "pregunta": "¿Qué capacidad prevés?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "a_naves",
+    "pregunta": "¿Cuántas naves o instalaciones?",
+    "tipo": "number",
+    "unidad": "naves"
+   },
+   {
+    "id": "a_sup",
+    "pregunta": "¿Qué superficie tienes disponible?",
+    "tipo": "number",
+    "unidad": "m²"
+   },
+   {
+    "id": "a_sist",
+    "pregunta": "¿Qué sistema productivo usarás?",
+    "tipo": "single",
+    "opciones": [
+     "Todo dentro – todo fuera",
+     "Producción continua",
+     "Ciclo cerrado",
+     "Por fases en distintas granjas"
+    ]
+   },
+   {
+    "id": "a_aloj",
+    "pregunta": "¿Qué tipo de alojamiento?",
+    "tipo": "single",
+    "opciones": [
+     "Suelo con cama",
+     "Aviario / multinivel",
+     "Jaulas acondicionadas",
+     "Slat total o parcial",
+     "Cubículos",
+     "Otro"
+    ]
+   },
+   {
+    "id": "a_auto",
+    "pregunta": "¿Qué nivel de automatización buscas?",
+    "tipo": "single",
+    "opciones": [
+     "Básico · lo imprescindible",
+     "Medio · alimentación y clima automáticos",
+     "Alto · control integral y datos en el móvil"
+    ]
+   },
+   {
+    "id": "a_terreno",
+    "pregunta": "¿Tienes el terreno?",
+    "tipo": "single",
+    "opciones": [
+     "Sí, en propiedad",
+     "Arrendado",
+     "En proceso de compra",
+     "Todavía no"
+    ]
+   },
+   {
+    "id": "a_permisos",
+    "pregunta": "¿En qué estado están los permisos y licencias?",
+    "tipo": "single",
+    "opciones": [
+     "Concedidos",
+     "En tramitación",
+     "Sin iniciar",
+     "No lo sé"
+    ]
+   },
+   {
+    "id": "a_luz",
+    "pregunta": "¿Hay suministro eléctrico?",
+    "tipo": "single",
+    "opciones": [
+     "Sí, conexión a red suficiente",
+     "Sí, pero hay que ampliar potencia",
+     "No, buscamos autoconsumo",
+     "No lo sé"
+    ]
+   },
+   {
+    "id": "a_agua",
+    "pregunta": "¿Hay agua disponible?",
+    "tipo": "single",
+    "opciones": [
+     "Red municipal",
+     "Pozo propio",
+     "Ambos",
+     "No lo sé"
+    ]
+   },
+   {
+    "id": "a_clima",
+    "pregunta": "¿Qué necesitas en climatización?",
+    "tipo": "multi",
+    "opciones": [
+     "Ventilación",
+     "Calefacción",
+     "Refrigeración / cooling",
+     "Aislamiento",
+     "Control automático"
+    ]
+   },
+   {
+    "id": "a_resid",
+    "pregunta": "¿Cómo prevés gestionar los residuos?",
+    "tipo": "multi",
+    "opciones": [
+     "Almacenamiento de purines",
+     "Compostaje",
+     "Biogás",
+     "Separación sólido-líquido",
+     "Gestor externo",
+     "Aún por decidir"
+    ]
+   },
+   {
+    "id": "a_llave",
+    "pregunta": "¿Buscas un proyecto llave en mano o soluciones por separado?",
+    "tipo": "single",
+    "opciones": [
+     "Proyecto llave en mano",
+     "Proveedores por especialidad",
+     "Todavía no lo sé"
+    ]
+   }
+  ],
+  "B": [
+   {
+    "id": "b_act",
+    "pregunta": "¿Qué capacidad tienes ahora?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "b_obj",
+    "pregunta": "¿A qué capacidad quieres llegar?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "b_inst",
+    "pregunta": "¿Qué instalaciones tienes?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "b_sup",
+    "pregunta": "¿Qué superficie tienes disponible para ampliar?",
+    "tipo": "number",
+    "unidad": "m²"
+   },
+   {
+    "id": "b_cons",
+    "pregunta": "¿Qué equipos quieres conservar?",
+    "tipo": "text"
+   },
+   {
+    "id": "b_sust",
+    "pregunta": "¿Qué equipos hay que sustituir?",
+    "tipo": "text"
+   },
+   {
+    "id": "b_compat",
+    "pregunta": "¿Lo nuevo debe ser compatible con lo que ya tienes?",
+    "tipo": "single",
+    "opciones": [
+     "Sí, imprescindible",
+     "Preferible",
+     "No es necesario"
+    ]
+   },
+   {
+    "id": "b_lim",
+    "pregunta": "¿Hay limitaciones de espacio?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "b_activ",
+    "pregunta": "¿Tienes que mantener la actividad durante las obras?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "En parte"
+    ]
+   }
+  ],
+  "C": [
+   {
+    "id": "c_inst",
+    "pregunta": "¿Qué instalación quieres modernizar?",
+    "tipo": "text"
+   },
+   {
+    "id": "c_ant",
+    "pregunta": "¿Qué antigüedad tienen los equipos?",
+    "tipo": "single",
+    "opciones": [
+     "Menos de 5 años",
+     "5 – 10 años",
+     "10 – 20 años",
+     "Más de 20 años"
+    ]
+   },
+   {
+    "id": "c_prob",
+    "pregunta": "¿Qué problemas has detectado?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "c_sist",
+    "pregunta": "¿Qué sistemas quieres sustituir?",
+    "tipo": "multi",
+    "opciones": [
+     "Alimentación",
+     "Agua",
+     "Ventilación",
+     "Calefacción",
+     "Iluminación",
+     "Alojamiento",
+     "Gestión de residuos",
+     "Control y software"
+    ]
+   },
+   {
+    "id": "c_cap",
+    "pregunta": "¿Qué capacidad debe mantenerse?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "c_mej",
+    "pregunta": "¿Qué mejoras esperas?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "c_auto",
+    "pregunta": "¿Qué nivel de automatización quieres?",
+    "tipo": "single",
+    "opciones": [
+     "Básico",
+     "Medio",
+     "Alto"
+    ]
+   },
+   {
+    "id": "c_inst2",
+    "pregunta": "¿Necesitas instalación y puesta en marcha?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "Solo puesta en marcha"
+    ]
+   }
+  ],
+  "D": [
+   {
+    "id": "d_cant",
+    "pregunta": "¿Qué cantidad necesitas?",
+    "tipo": "text"
+   },
+   {
+    "id": "d_rend",
+    "pregunta": "¿Qué capacidad o rendimiento necesitas?",
+    "tipo": "text"
+   },
+   {
+    "id": "d_spec",
+    "pregunta": "¿Alguna especificación técnica?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "d_marca",
+    "pregunta": "¿Tienes alguna marca preferida?",
+    "tipo": "text"
+   },
+   {
+    "id": "d_alt",
+    "pregunta": "¿Aceptas marcas alternativas?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "Solo equivalentes",
+     "No"
+    ]
+   },
+   {
+    "id": "d_fecha",
+    "pregunta": "¿Para cuándo necesitas la entrega?",
+    "tipo": "date"
+   },
+   {
+    "id": "d_inst",
+    "pregunta": "¿Necesitas instalación?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "No lo sé"
+    ]
+   },
+   {
+    "id": "d_mant",
+    "pregunta": "¿Necesitas mantenimiento?",
+    "tipo": "single",
+    "opciones": [
+     "Sí, contrato anual",
+     "Puntual",
+     "No"
+    ]
+   }
+  ],
+  "E": [
+   {
+    "id": "e_obj",
+    "pregunta": "¿Cuál es tu objetivo principal?",
+    "tipo": "single",
+    "opciones": [
+     "Conversión alimenticia",
+     "Ganancia media diaria",
+     "Mortalidad",
+     "Puesta / producción por animal",
+     "Fertilidad",
+     "Calidad del producto",
+     "Otro"
+    ]
+   },
+   {
+    "id": "e_act",
+    "pregunta": "¿Cuál es el valor actual del indicador?",
+    "tipo": "text"
+   },
+   {
+    "id": "e_meta",
+    "pregunta": "¿A qué valor quieres llegar?",
+    "tipo": "text"
+   },
+   {
+    "id": "e_anim",
+    "pregunta": "¿Cuántos animales afecta?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "e_sist",
+    "pregunta": "¿Qué sistema productivo tienes?",
+    "tipo": "single",
+    "opciones": [
+     "Intensivo",
+     "Semiintensivo",
+     "Extensivo",
+     "Ecológico"
+    ]
+   },
+   {
+    "id": "e_prob",
+    "pregunta": "¿Qué problemas has identificado?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "e_sol",
+    "pregunta": "¿Qué soluciones usas ahora?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "e_res",
+    "pregunta": "¿Qué resultados has obtenido?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "e_plazo",
+    "pregunta": "¿En qué plazo esperas la mejora?",
+    "tipo": "single",
+    "opciones": [
+     "1 – 3 meses",
+     "3 – 6 meses",
+     "6 – 12 meses",
+     "Más de un año"
+    ]
+   },
+   {
+    "id": "e_ases",
+    "pregunta": "¿Necesitas asesoramiento?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "Quizá"
+    ]
+   }
+  ],
+  "F": [
+   {
+    "id": "f_area",
+    "pregunta": "¿Qué área sanitaria te interesa?",
+    "tipo": "multi",
+    "opciones": [
+     "Bioseguridad",
+     "Vacunación",
+     "Parasitología",
+     "Salud intestinal",
+     "Respiratorio",
+     "Calidad del agua",
+     "Control de plagas",
+     "Desinfección"
+    ]
+   },
+   {
+    "id": "f_riesgo",
+    "pregunta": "¿Qué problema o riesgo has identificado?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "f_inst",
+    "pregunta": "¿Qué tipo de instalación?",
+    "tipo": "text"
+   },
+   {
+    "id": "f_anim",
+    "pregunta": "¿Cuántos animales?",
+    "tipo": "number",
+    "unidad": "animales"
+   },
+   {
+    "id": "f_med",
+    "pregunta": "¿Qué medidas sanitarias aplicas ahora?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "f_prod",
+    "pregunta": "¿Qué productos usas?",
+    "tipo": "text"
+   },
+   {
+    "id": "f_nec",
+    "pregunta": "¿Qué necesitas?",
+    "tipo": "multi",
+    "opciones": [
+     "Diagnóstico",
+     "Laboratorio",
+     "Equipamiento",
+     "Asesoramiento veterinario"
+    ]
+   }
+  ],
+  "G": [
+   {
+    "id": "g_tipo",
+    "pregunta": "¿Qué tipo de alimentación usas?",
+    "tipo": "single",
+    "opciones": [
+     "Pienso completo comprado",
+     "Fabricación propia",
+     "Mixta",
+     "Pastoreo con suplemento"
+    ]
+   },
+   {
+    "id": "g_fase",
+    "pregunta": "¿Para qué fase productiva?",
+    "tipo": "multi",
+    "opciones": [
+     "Arranque",
+     "Crecimiento",
+     "Acabado",
+     "Gestación",
+     "Lactación",
+     "Reproductores",
+     "Todas"
+    ]
+   },
+   {
+    "id": "g_cons",
+    "pregunta": "¿Cuánto pienso consumes aproximadamente?",
+    "tipo": "number",
+    "unidad": "t / mes"
+   },
+   {
+    "id": "g_sist",
+    "pregunta": "¿Qué sistema de alimentación tienes?",
+    "tipo": "single",
+    "opciones": [
+     "Automático en seco",
+     "Líquido",
+     "Manual",
+     "Unifeed"
+    ]
+   },
+   {
+    "id": "g_obj",
+    "pregunta": "¿Cuál es el objetivo nutricional?",
+    "tipo": "text"
+   },
+   {
+    "id": "g_prob",
+    "pregunta": "¿Qué problemas has identificado?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "g_ing",
+    "pregunta": "¿Qué ingredientes utilizas?",
+    "tipo": "text"
+   },
+   {
+    "id": "g_adit",
+    "pregunta": "¿Qué aditivos usas ahora?",
+    "tipo": "text"
+   },
+   {
+    "id": "g_ref",
+    "pregunta": "¿Necesitas reformular?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "Quizá"
+    ]
+   },
+   {
+    "id": "g_ens",
+    "pregunta": "¿Te interesaría hacer ensayos en granja?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No",
+     "Depende"
+    ]
+   },
+   {
+    "id": "g_vol",
+    "pregunta": "¿Qué volumen estimado de compra?",
+    "tipo": "text"
+   }
+  ],
+  "H": [
+   {
+    "id": "h_lin",
+    "pregunta": "¿Qué línea genética tienes ahora?",
+    "tipo": "text"
+   },
+   {
+    "id": "h_mat",
+    "pregunta": "¿Qué material genético buscas?",
+    "tipo": "multi",
+    "opciones": [
+     "Animales reproductores",
+     "Semen / dosis seminales",
+     "Embriones",
+     "Huevos fértiles",
+     "Pollitos / lechones de un día"
+    ]
+   },
+   {
+    "id": "h_vol",
+    "pregunta": "¿Qué volumen necesitas?",
+    "tipo": "text"
+   },
+   {
+    "id": "h_obj",
+    "pregunta": "¿Cuál es el objetivo reproductivo?",
+    "tipo": "text"
+   },
+   {
+    "id": "h_rend",
+    "pregunta": "¿Qué rendimiento tienes ahora?",
+    "tipo": "text"
+   },
+   {
+    "id": "h_car",
+    "pregunta": "¿Qué características buscas?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "h_ases",
+    "pregunta": "¿Necesitas asesoramiento genético?",
+    "tipo": "single",
+    "opciones": [
+     "Sí",
+     "No"
+    ]
+   },
+   {
+    "id": "h_fecha",
+    "pregunta": "¿Cuándo prevés incorporarlo?",
+    "tipo": "date"
+   }
+  ],
+  "I": [
+   {
+    "id": "i_tipo",
+    "pregunta": "¿Qué tipo de servicio necesitas?",
+    "tipo": "single",
+    "opciones": [
+     "Asesoría técnica",
+     "Auditoría",
+     "Formación",
+     "Análisis de laboratorio",
+     "Ingeniería y proyecto",
+     "Trámites y permisos",
+     "Otro"
+    ]
+   },
+   {
+    "id": "i_esp",
+    "pregunta": "¿Qué especialidad?",
+    "tipo": "text"
+   },
+   {
+    "id": "i_desc",
+    "pregunta": "Describe la necesidad",
+    "tipo": "textarea"
+   },
+   {
+    "id": "i_inst",
+    "pregunta": "¿Cuántas instalaciones?",
+    "tipo": "number",
+    "unidad": "instalaciones"
+   },
+   {
+    "id": "i_mod",
+    "pregunta": "¿Qué modalidad prefieres?",
+    "tipo": "single",
+    "opciones": [
+     "Presencial",
+     "Online",
+     "Mixta"
+    ]
+   },
+   {
+    "id": "i_dur",
+    "pregunta": "¿Duración estimada?",
+    "tipo": "text"
+   },
+   {
+    "id": "i_idioma",
+    "pregunta": "¿En qué idioma?",
+    "tipo": "multi",
+    "opciones": [
+     "Español",
+     "Inglés",
+     "Portugués",
+     "Francés",
+     "Catalán"
+    ]
+   },
+   {
+    "id": "i_entr",
+    "pregunta": "¿Qué entregables esperas?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "i_rec",
+    "pregunta": "¿Puntual o recurrente?",
+    "tipo": "single",
+    "opciones": [
+     "Puntual",
+     "Recurrente"
+    ]
+   }
+  ],
+  "J": [
+   {
+    "id": "j_tipo",
+    "pregunta": "¿Qué tipo de colaboración buscas?",
+    "tipo": "single",
+    "opciones": [
+     "Distribuir una marca",
+     "Representación comercial",
+     "Acuerdo de fabricación",
+     "Joint venture",
+     "Otro"
+    ]
+   },
+   {
+    "id": "j_paises",
+    "pregunta": "¿En qué países?",
+    "tipo": "multi",
+    "opciones": [
+     "España",
+     "Portugal",
+     "Francia",
+     "México",
+     "Colombia",
+     "Argentina",
+     "Chile",
+     "Perú",
+     "Marruecos",
+     "Otros"
+    ]
+   },
+   {
+    "id": "j_cob",
+    "pregunta": "¿Qué cobertura comercial tienes ahora?",
+    "tipo": "textarea"
+   },
+   {
+    "id": "j_excl",
+    "pregunta": "¿Buscas exclusividad?",
+    "tipo": "single",
+    "opciones": [
+     "Sí, por país",
+     "Sí, por zona",
+     "No"
+    ]
+   },
+   {
+    "id": "j_cap",
+    "pregunta": "¿Qué capacidad de distribución tienes?",
+    "tipo": "text"
+   },
+   {
+    "id": "j_red",
+    "pregunta": "¿Qué red comercial tienes?",
+    "tipo": "text"
+   },
+   {
+    "id": "j_log",
+    "pregunta": "¿Qué infraestructura logística tienes?",
+    "tipo": "text"
+   },
+   {
+    "id": "j_exp",
+    "pregunta": "¿Qué experiencia tienes en el sector?",
+    "tipo": "text"
+   },
+   {
+    "id": "j_vol",
+    "pregunta": "¿Qué volumen de negocio estimas?",
+    "tipo": "text"
+   }
+  ]
+ },
+ "preguntas_finales": [
+  {
+   "id": "productos",
+   "pregunta": "¿Qué productos o soluciones necesitas?",
+   "tipo": "products"
+  },
+  {
+   "id": "fase",
+   "pregunta": "¿En qué fase se encuentra tu proyecto?",
+   "tipo": "single",
+   "opciones": [
+    "Explorando posibilidades",
+    "Planificación",
+    "Comparando proveedores",
+    "Preparado para comprar",
+    "En ejecución"
+   ]
+  },
+  {
+   "id": "inicio",
+   "pregunta": "¿Cuándo quieres empezar?",
+   "tipo": "when"
+  },
+  {
+   "id": "presu",
+   "pregunta": "¿Cuál es tu presupuesto aproximado?",
+   "tipo": "budget"
+  },
+  {
+   "id": "finan",
+   "pregunta": "¿Necesitas financiación?",
+   "tipo": "single",
+   "opciones": [
+    "Sí",
+    "No",
+    "Por definir"
+   ]
+  },
+  {
+   "id": "ayuda",
+   "pregunta": "¿Cómo podemos ayudarte?",
+   "tipo": "contacts"
+  },
+  {
+   "id": "docs",
+   "pregunta": "¿Quieres añadir documentación?",
+   "tipo": "files"
+  },
+  {
+   "id": "priv",
+   "pregunta": "¿Quién podrá ver tu proyecto?",
+   "tipo": "privacy"
+  }
+ ],
+ "referencias": {
+  "especies": "especies.json (ids de especie, categoría y subcategoría)",
+  "productos": "familias.json (familia:tipo) + productos guardados en tableros",
+  "objetivos": "intereses.json · lista de objetivos (pendiente: 14 o 18)",
+  "empresas_expertos": "directorio de Agroolink (ids)",
+  "tableros": "tableros del usuario"
+ },
+ "reglas": [
+  "No se envía ninguna solicitud al crear: el usuario elige a quién contactar desde la ficha (pestaña Empresas y expertos).",
+  "Solo se muestran las preguntas del escenario elegido; al cambiar de tipo se descartan las respuestas del escenario anterior.",
+  "Obligatorios: tipo, nombre, país y al menos una especie.",
+  "Ubicación: las empresas solo ven la provincia hasta que el usuario comparte más.",
+  "Encaje con empresas y expertos (oportunidades): especie, productos, zona y objetivos; solo si el proyecto se comparte."
+ ],
+ "ficha": {
+  "ruta": "Mi espacio › Mis proyectos › {nombre}",
+  "pestañas": [
+   "Resumen",
+   "Soluciones",
+   "Empresas y expertos",
+   "Documentos",
+   "Actividad"
+  ]
+ },
+ "puntos_de_entrada": [
+  "Mis proyectos · Nuevo proyecto",
+  "Mi espacio · Nuevo proyecto",
+  "Tablero · Crear proyecto con este tablero (precarga sus productos)",
+  "Ficha de producto o empresa · Pedir propuestas (precarga el elemento)",
+  "Móvil · pestaña Proyectos"
+ ]
+}
