@@ -1096,7 +1096,7 @@
    "title": "2b · L2 · No registrado → todavía no tienes cuenta",
    "w": 960,
    "x": 1040,
-   "y": 1300
+   "y": 1160
   },
   "Login3Crear.dc.html": {
    "h": 760,
@@ -1104,7 +1104,7 @@
    "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → 4",
    "w": 960,
    "x": 2080,
-   "y": 1300
+   "y": 1160
   },
   "Login4Empezar.dc.html": {
    "h": 760,
@@ -1492,7 +1492,7 @@
    "y": 0
   },
   "LoginIntereses.dc.html": {
-   "h": 900,
+   "h": 760,
    "page": "alta",
    "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
    "w": 960,
@@ -1500,7 +1500,7 @@
    "y": 0
   },
   "SelIntereses.dc.html": {
-   "h": 1100,
+   "h": 960,
    "page": "componentes",
    "title": "Selector de intereses · especies, categorías y objetivos",
    "w": 1280,
@@ -1548,7 +1548,7 @@
    "y": 0
   },
   "MobIntereses.dc.html": {
-   "h": 1700,
+   "h": 1240,
    "page": "movil",
    "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
    "w": 390,
@@ -2008,7 +2008,7 @@
    "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
    "w": 240,
    "x": 1040,
-   "y": 1000
+   "y": 860
   },
   "empDesdeAlta": {
    "kind": "title1",
