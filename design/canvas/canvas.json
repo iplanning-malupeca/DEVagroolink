@@ -186,6 +186,22 @@
    "x": 2720,
    "y": 0
   },
+  "CompNueva1.dc.html": {
+   "h": 900,
+   "page": "tableros",
+   "title": "C0a · Nueva comparación · escribir unas letras",
+   "w": 1280,
+   "x": 1360,
+   "y": 1300
+  },
+  "CompNueva2.dc.html": {
+   "h": 900,
+   "page": "tableros",
+   "title": "C0b · Nueva comparación · añadir del mismo tipo",
+   "w": 1280,
+   "x": 2720,
+   "y": 1300
+  },
   "CompOtroTipo.dc.html": {
    "h": 900,
    "page": "tableros",
@@ -200,6 +216,14 @@
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
    "x": 6800,
+   "y": 1300
+  },
+  "CompSumario.dc.html": {
+   "h": 900,
+   "page": "tableros",
+   "title": "C0 · Mis comparaciones · sumario (copia de U4)",
+   "w": 1280,
+   "x": 0,
    "y": 1300
   },
   "CompVista.dc.html": {
@@ -217,6 +241,62 @@
    "w": 1280,
    "x": 0,
    "y": 1180
+  },
+  "CuentaCompras.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
+   "w": 1280,
+   "x": 1360,
+   "y": 3720
+  },
+  "CuentaDirecciones.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2e · Facturación · Direcciones",
+   "w": 1280,
+   "x": 5440,
+   "y": 5200
+  },
+  "CuentaFacturas.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2c · Facturación · Facturas",
+   "w": 1280,
+   "x": 2720,
+   "y": 5200
+  },
+  "CuentaPagos.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2d · Facturación · Métodos de pago",
+   "w": 1280,
+   "x": 4080,
+   "y": 5200
+  },
+  "CuentaPedidos.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
+   "w": 1280,
+   "x": 1360,
+   "y": 5200
+  },
+  "CuentaPerfil.dc.html": {
+   "h": 1100,
+   "page": "intranet",
+   "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
+   "w": 1280,
+   "x": 0,
+   "y": 3720
+  },
+  "CuentaPlanes.dc.html": {
+   "h": 1110,
+   "page": "intranet",
+   "title": "C2a · Facturación · Planes y suscripciones",
+   "w": 1280,
+   "x": 0,
+   "y": 5200
   },
   "DisAutorizacion.dc.html": {
    "h": 940,
@@ -337,6 +417,46 @@
    "w": 1280,
    "x": 1360,
    "y": 1180
+  },
+  "ExpConsultas.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E3 · Consultas recibidas",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "ExpOportunidades.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E2 · Oportunidades (proyectos que encajan)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "ExpPanel.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E1 · Panel de experta",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ExpPerfil.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E5 · Perfil de experta (editor + vista pública)",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "ExpServicios.dc.html": {
+   "h": 1000,
+   "page": "intexperto",
+   "title": "E4 · Mis servicios",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
   },
   "ExpX1Empezar.dc.html": {
    "h": 760,
@@ -1202,6 +1322,94 @@
    "x": 1360,
    "y": 1300
   },
+  "MobBuscar.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M4 · Búsqueda",
+   "w": 390,
+   "x": 1590,
+   "y": 0
+  },
+  "MobCategoria.dc.html": {
+   "h": 1030,
+   "page": "movil",
+   "title": "M9 · Categoría → tipo de producto",
+   "w": 390,
+   "x": 2120,
+   "y": 2510
+  },
+  "MobEspecie.dc.html": {
+   "h": 900,
+   "page": "movil",
+   "title": "M6 · Especie → producción (opcional)",
+   "w": 390,
+   "x": 530,
+   "y": 2510
+  },
+  "MobExplorarCategorias.dc.html": {
+   "h": 940,
+   "page": "movil",
+   "title": "M8 · Explorar · por categoría",
+   "w": 390,
+   "x": 1590,
+   "y": 2510
+  },
+  "MobExplorarEspecies.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M5 · Explorar · por especie",
+   "w": 390,
+   "x": 0,
+   "y": 2510
+  },
+  "MobHome.dc.html": {
+   "h": 2010,
+   "page": "movil",
+   "title": "M1 · Home con sesión",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "MobHomeVisitante.dc.html": {
+   "h": 1500,
+   "page": "movil",
+   "title": "M2 · Home sin sesión",
+   "w": 390,
+   "x": 530,
+   "y": 0
+  },
+  "MobIntereses.dc.html": {
+   "h": 1700,
+   "page": "movil",
+   "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
+   "w": 390,
+   "x": 2120,
+   "y": 0
+  },
+  "MobMenu.dc.html": {
+   "h": 1570,
+   "page": "movil",
+   "title": "M3 · Menú (pestaña 5)",
+   "w": 390,
+   "x": 1060,
+   "y": 0
+  },
+  "MobResultados.dc.html": {
+   "h": 920,
+   "page": "movil",
+   "title": "M7 · Resultados · categoría en chips",
+   "w": 390,
+   "x": 1060,
+   "y": 2510
+  },
+  "MobTabBar.dc.html": {
+   "h": 84,
+   "page": "movil",
+   "title": "MobTabBar · componente",
+   "w": 390,
+   "x": 0,
+   "y": 4040
+  },
   "Personal.dc.html": {
    "h": 1060,
    "page": "header",
@@ -1507,181 +1715,13 @@
    "x": 1360,
    "y": 0
   },
-  "WizTop.dc.html": {
-   "h": 128,
-   "page": "configempresa",
-   "title": "Componente · Cabecera del asistente de empresa",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "CuentaPerfil.dc.html": {
-   "h": 1100,
-   "page": "intranet",
-   "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
-   "w": 1280,
-   "x": 0,
-   "y": 3720
-  },
-  "CuentaCompras.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
-   "w": 1280,
-   "x": 1360,
-   "y": 3720
-  },
-  "MobHome.dc.html": {
-   "h": 2010,
-   "page": "movil",
-   "title": "M1 · Home con sesión",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MobHomeVisitante.dc.html": {
-   "h": 1500,
-   "page": "movil",
-   "title": "M2 · Home sin sesión",
-   "w": 390,
-   "x": 530,
-   "y": 0
-  },
-  "MobMenu.dc.html": {
-   "h": 1570,
-   "page": "movil",
-   "title": "M3 · Menú (pestaña 5)",
-   "w": 390,
-   "x": 1060,
-   "y": 0
-  },
-  "MobBuscar.dc.html": {
-   "h": 844,
-   "page": "movil",
-   "title": "M4 · Búsqueda",
-   "w": 390,
-   "x": 1590,
-   "y": 0
-  },
-  "MobIntereses.dc.html": {
-   "h": 1700,
-   "page": "movil",
-   "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
-   "w": 390,
-   "x": 2120,
-   "y": 0
-  },
-  "MobExplorarEspecies.dc.html": {
-   "h": 844,
-   "page": "movil",
-   "title": "M5 · Explorar · por especie",
-   "w": 390,
-   "x": 0,
-   "y": 2510
-  },
-  "MobEspecie.dc.html": {
+  "UsrAyuda.dc.html": {
    "h": 900,
-   "page": "movil",
-   "title": "M6 · Especie → producción (opcional)",
-   "w": 390,
-   "x": 530,
-   "y": 2510
-  },
-  "MobResultados.dc.html": {
-   "h": 920,
-   "page": "movil",
-   "title": "M7 · Resultados · categoría en chips",
-   "w": 390,
-   "x": 1060,
-   "y": 2510
-  },
-  "MobExplorarCategorias.dc.html": {
-   "h": 940,
-   "page": "movil",
-   "title": "M8 · Explorar · por categoría",
-   "w": 390,
-   "x": 1590,
-   "y": 2510
-  },
-  "MobCategoria.dc.html": {
-   "h": 1030,
-   "page": "movil",
-   "title": "M9 · Categoría → tipo de producto",
-   "w": 390,
-   "x": 2120,
-   "y": 2510
-  },
-  "MobTabBar.dc.html": {
-   "h": 84,
-   "page": "movil",
-   "title": "MobTabBar · componente",
-   "w": 390,
-   "x": 0,
-   "y": 4040
-  },
-  "CuentaPlanes.dc.html": {
-   "h": 1110,
-   "page": "intranet",
-   "title": "C2a · Facturación · Planes y suscripciones",
-   "w": 1280,
-   "x": 0,
-   "y": 5200
-  },
-  "CuentaPedidos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
-   "w": 1280,
-   "x": 1360,
-   "y": 5200
-  },
-  "CuentaFacturas.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2c · Facturación · Facturas",
-   "w": 1280,
-   "x": 2720,
-   "y": 5200
-  },
-  "CuentaPagos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2d · Facturación · Métodos de pago",
+   "page": "intusuario",
+   "title": "U10 · Ayuda y contacto",
    "w": 1280,
    "x": 4080,
-   "y": 5200
-  },
-  "CuentaDirecciones.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2e · Facturación · Direcciones",
-   "w": 1280,
-   "x": 5440,
-   "y": 5200
-  },
-  "UsrEspacio.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U1 · Mi espacio (día a día)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "UsrProyectos.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U2 · Mis proyectos",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "UsrTableros.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U3 · Mis tableros (copia de T1)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
+   "y": 1400
   },
   "UsrComparaciones.dc.html": {
    "h": 900,
@@ -1691,6 +1731,22 @@
    "x": 4080,
    "y": 0
   },
+  "UsrEspacio.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U1 · Mi espacio (día a día)",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "UsrFacturacion.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8 · Facturación (copia de C2)",
+   "w": 1280,
+   "x": 1360,
+   "y": 1400
+  },
   "UsrHistorial.dc.html": {
    "h": 900,
    "page": "intusuario",
@@ -1698,6 +1754,14 @@
    "w": 1280,
    "x": 5440,
    "y": 0
+  },
+  "UsrIdioma.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U9 · Idioma y zona",
+   "w": 1280,
+   "x": 2720,
+   "y": 1400
   },
   "UsrMensajes.dc.html": {
    "h": 900,
@@ -1715,93 +1779,69 @@
    "x": 0,
    "y": 1400
   },
-  "UsrFacturacion.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8 · Facturación (copia de C2)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1400
-  },
-  "UsrIdioma.dc.html": {
+  "UsrProyectos.dc.html": {
    "h": 900,
    "page": "intusuario",
-   "title": "U9 · Idioma y zona",
-   "w": 1280,
-   "x": 2720,
-   "y": 1400
-  },
-  "UsrAyuda.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U10 · Ayuda y contacto",
-   "w": 1280,
-   "x": 4080,
-   "y": 1400
-  },
-  "ExpPanel.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E1 · Panel de experta",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ExpOportunidades.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E2 · Oportunidades (proyectos que encajan)",
+   "title": "U2 · Mis proyectos",
    "w": 1280,
    "x": 1360,
    "y": 0
   },
-  "ExpConsultas.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E3 · Consultas recibidas",
+  "UsrTableros.dc.html": {
+   "h": 900,
+   "page": "intusuario",
+   "title": "U3 · Mis tableros (copia de T1)",
    "w": 1280,
    "x": 2720,
    "y": 0
   },
-  "ExpServicios.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E4 · Mis servicios",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "ExpPerfil.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E5 · Perfil de experta (editor + vista pública)",
+  "WizTop.dc.html": {
+   "h": 128,
+   "page": "configempresa",
+   "title": "Componente · Cabecera del asistente de empresa",
    "w": 1280,
    "x": 5440,
    "y": 0
   },
-  "CompSumario.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0 · Mis comparaciones · sumario (copia de U4)",
+  "UsrFactPlanes.dc.html": {
+   "h": 1110,
+   "page": "intusuario",
+   "title": "U8a · Facturación · Planes y suscripciones (copia de C2a)",
    "w": 1280,
    "x": 0,
-   "y": 1300
+   "y": 3000
   },
-  "CompNueva1.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0a · Nueva comparación · escribir unas letras",
+  "UsrFactPedidos.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8b · Facturación · Pedidos (copia de C2b)",
    "w": 1280,
    "x": 1360,
-   "y": 1300
+   "y": 3000
   },
-  "CompNueva2.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0b · Nueva comparación · añadir del mismo tipo",
+  "UsrFactFacturas.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8c · Facturación · Facturas (copia de C2c)",
    "w": 1280,
    "x": 2720,
-   "y": 1300
+   "y": 3000
+  },
+  "UsrFactPagos.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8d · Facturación · Métodos de pago (copia de C2d)",
+   "w": 1280,
+   "x": 4080,
+   "y": 3000
+  },
+  "UsrFactDirecciones.dc.html": {
+   "h": 980,
+   "page": "intusuario",
+   "title": "U8e · Facturación · Direcciones (copia de C2e)",
+   "w": 1280,
+   "x": 5440,
+   "y": 3000
   }
  },
  "createdOnFiles": {
@@ -2057,6 +2097,15 @@
    "x": 0,
    "y": 25963
   },
+  "ie0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intexperto",
+   "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
   "intTitulo": {
    "kind": "title1",
    "maxW": 2640,
@@ -2083,6 +2132,69 @@
    "w": 240,
    "x": 0,
    "y": 2180
+  },
+  "intTitulo4": {
+   "kind": "title1",
+   "maxW": 2640,
+   "page": "intranet",
+   "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
+   "w": 240,
+   "x": 0,
+   "y": 3420
+  },
+  "intTitulo5": {
+   "kind": "title1",
+   "maxW": 6720,
+   "page": "intranet",
+   "text": "Facturación · una pantalla por pestaña",
+   "w": 240,
+   "x": 0,
+   "y": 4900
+  },
+  "iu0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intusuario",
+   "text": "MI ESPACIO · Samuel (usuario)",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "iu1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "intusuario",
+   "text": "MI CUENTA · común a todos los roles",
+   "w": 240,
+   "x": 0,
+   "y": 1100
+  },
+  "movT0": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "movT1": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
+   "w": 240,
+   "x": 0,
+   "y": 2210
+  },
+  "movT2": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Componente · barra inferior (prop activo 1–5)",
+   "w": 240,
+   "x": 0,
+   "y": 3740
   },
   "plTitulo": {
    "kind": "title1",
@@ -2237,77 +2349,14 @@
    "x": 0,
    "y": -300
   },
-  "intTitulo4": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
-   "w": 240,
-   "x": 0,
-   "y": 3420
-  },
-  "movT0": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "movT1": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
-   "w": 240,
-   "x": 0,
-   "y": 2210
-  },
-  "movT2": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Componente · barra inferior (prop activo 1–5)",
-   "w": 240,
-   "x": 0,
-   "y": 3740
-  },
-  "intTitulo5": {
-   "kind": "title1",
-   "maxW": 6720,
-   "page": "intranet",
-   "text": "Facturación · una pantalla por pestaña",
-   "w": 240,
-   "x": 0,
-   "y": 4900
-  },
-  "iu0": {
+  "iu2": {
    "kind": "title1",
    "maxW": 8000,
    "page": "intusuario",
-   "text": "MI ESPACIO · Samuel (usuario)",
+   "text": "FACTURACIÓN · detalle de cada pestaña",
    "w": 240,
    "x": 0,
-   "y": -300
-  },
-  "iu1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intusuario",
-   "text": "MI CUENTA · común a todos los roles",
-   "w": 240,
-   "x": 0,
-   "y": 1100
-  },
-  "ie0": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intexperto",
-   "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
-   "w": 240,
-   "x": 0,
-   "y": -300
+   "y": 2700
   }
  },
  "order": [
@@ -2529,6 +2578,11 @@
   "UsrMensajes.dc.html",
   "UsrPerfil.dc.html",
   "UsrFacturacion.dc.html",
+  "UsrFactPlanes.dc.html",
+  "UsrFactPedidos.dc.html",
+  "UsrFactFacturas.dc.html",
+  "UsrFactPagos.dc.html",
+  "UsrFactDirecciones.dc.html",
   "UsrIdioma.dc.html",
   "UsrAyuda.dc.html",
   "ExpPanel.dc.html",
@@ -2544,7 +2598,7 @@
   },
   {
    "id": "proyectos",
-   "name": "Proyectos (módulo central)"
+   "name": "OK_Proyectos (módulo central)"
   },
   {
    "id": "componentes",
@@ -2552,7 +2606,7 @@
   },
   {
    "id": "alta",
-   "name": "OK Alta Usuario"
+   "name": "001_Alta Usuario"
   },
   {
    "id": "altaempresa",
@@ -2568,7 +2622,7 @@
   },
   {
    "id": "intusuario",
-   "name": "Intranet · Usuario (consolidada)"
+   "name": "002_Intranet · Usuario (consolidada)"
   },
   {
    "id": "intexperto",
@@ -2612,7 +2666,7 @@
   },
   {
    "id": "tableros",
-   "name": "Tableros y comparador"
+   "name": "OK_Tableros y comparador"
   },
   {
    "id": "movil",
