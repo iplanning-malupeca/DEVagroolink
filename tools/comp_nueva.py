@@ -8,22 +8,7 @@ CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFF
 
 # 1) bloque «Nueva comparación» con buscador
 OLD = re.compile(r'<section class="card" style="border: 1.5px dashed #CFD8D2; background: #FBFCFB; align-items: center; justify-content: center; text-align: center; gap: 8px;">.*?</section>', re.S)
-NEW = ('<section class="card" style="border: 1.5px dashed #CFD8D2; background: #FBFCFB; justify-content: center; gap: 10px;">'
-       '<strong style="font-size: 15px; font-weight: 600;">Nueva comparación</strong>'
-       '<span class="k" style="line-height: 1.5;">Escribe unas letras del producto y elige. Después te proponemos otros del mismo tipo.</span>'
-       '<div class="inp" style="justify-content: flex-start; gap: 8px; color: #8A948F;">' + SRCH + 'Nombre del producto, p. ej. «ronoz»</div>'
-       '<span class="k">También desde cualquier ficha, con «Comparar».</span></section>')
-for f in ['UsrComparaciones.dc.html', 'CompSumario.dc.html']:
-    s = open(P + f).read()
-    if 'Nombre del producto, p. ej.' not in s:
-        s, n = OLD.subn(NEW, s, count=1); assert n == 1, f
-        open(P + f, 'w').write(s)
-t = open(W + '/tools/intranet.py').read()
-if 'Nombre del producto, p. ej.' not in t:
-    i = t.index('+ """<section class="card" style="border: 1.5px dashed #CFD8D2; background: #FBFCFB; align-items: center;')
-    j = t.index('</section>', i) + len('</section>')
-    t = t[:i] + '+ """' + NEW.replace(SRCH, '""" + ic(\'search\', 16) + """') + t[j:]
-    open(W + '/tools/intranet.py', 'w').write(t)
+NEW = ('<a href="#" class="card" style="border: 1.5px dashed #B9CBBF; background: #FBFCFB; align-items: center; justify-content: center; text-align: center; gap: 10px; color: #0E5A3A;"><span style="width: 52px; height: 52px; border-radius: 50%; background: #EEF6EE; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><strong style="font-size: 16px; font-weight: 600;">Añadir nueva comparación</strong></a>')
 
 base = open(P + 'CompSumario.dc.html').read()
 EXTRA = ('.pop{position:absolute;inset:0;background:rgba(15,30,22,.45);display:flex;align-items:flex-start;justify-content:center;padding-top:96px;z-index:5}'
