@@ -1109,7 +1109,7 @@
   "Login4Empezar.dc.html": {
    "h": 760,
    "page": "alta",
-   "title": "L4 · ¿Cómo quieres empezar? (NUEVO Agroolink)",
+   "title": "L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink (cuenta previa o nueva)",
    "w": 960,
    "x": 3120,
    "y": 0
@@ -2000,7 +2000,7 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "Después de L1 · si el email ya está registrado → código OTP (L1b); si no → L2",
+   "text": "Después de L1 · registrado → código OTP (L1b); no registrado → L2 → L3. L4 solo la primera vez que entra en Agroolink; después, directo a donde estaba",
    "w": 240,
    "x": 0,
    "y": 860
