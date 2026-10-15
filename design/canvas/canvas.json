@@ -1,2708 +1,2708 @@
 {
- "v": 3,
- "attachments": {},
- "boards": {
-  "Alta4MiEspacio.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "7 · Solo para mí → Mi espacio (primer inicio · «Estabas consultando»)",
-   "w": 1280,
-   "x": 0,
-   "y": 2620
-  },
-  "AltaConsulta.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "Desde Alta (L4) · Más tarde → Primera consulta (datos just-in-time)",
-   "w": 1280,
-   "x": 0,
-   "y": 2520
-  },
-  "AltaEmpresa.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "Desde Alta (L4) · Represento una empresa → Tu empresa",
-   "w": 960,
-   "x": 0,
-   "y": 2400
-  },
-  "AltaExperto.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "Desde Alta (L4) · Soy experto → Perfil de experto",
-   "w": 1120,
-   "x": 0,
-   "y": 2400
-  },
-  "AltaMiEspacioIntereses.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
-   "w": 1280,
-   "x": 1360,
-   "y": 2620
-  },
-  "AvatarMenu.dc.html": {
-   "h": 980,
-   "page": "header",
-   "title": "Componente · Menú del avatar (fuera de la intranet)",
-   "w": 400,
-   "x": 4080,
-   "y": 0
-  },
-  "CfgComerciales.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F4 · Paso 5 · Red comercial · Comerciales y asignación",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "CfgContacto.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F7 · Paso 6 · Botones de contacto y a quién llega cada solicitud",
-   "w": 1280,
-   "x": 4080,
-   "y": 1240
-  },
-  "CfgDistribuidores.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F5 · Paso 5 · Quién vende tus productos (DSM aprueba por producto)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "CfgDondeComprar.dc.html": {
-   "h": 1000,
-   "page": "configempresa",
-   "title": "F9 · Lo que ve el comprador: una ficha, versión de su país y «Dónde comprarlo»",
-   "w": 1280,
-   "x": 6800,
-   "y": 1240
-  },
-  "CfgFichaLocal.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F8 · Paso 7 · Versión local de una ficha (base del fabricante + país)",
-   "w": 1280,
-   "x": 5440,
-   "y": 1240
-  },
-  "CfgMarcas.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F6 · Paso 5 · Marcas y productos que vendes (AgroNova)",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "CfgPerfil.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F2 · Paso 4 · Perfil público (cabecera de la ficha)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "CfgSucursales.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F3 · Paso 5 · Sucursales (con administradores propios)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "CfgTipo.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F1 · Paso 3 · Tipo de empresa — fabricante (Zucami)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "CfgTipoDist.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F1b · Paso 3 · Tipo de empresa — distribuidor multimarca (AgroNova)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "Checkout.dc.html": {
-   "h": 900,
-   "page": "planes",
-   "title": "PL4 · Contratar Empresa Pro (desde la intranet, precio fundador)",
-   "w": 1280,
-   "x": 0,
-   "y": 2600
-  },
-  "ComBandeja.dc.html": {
-   "h": 900,
-   "page": "comerciales",
-   "title": "K6 · Bandeja de la comercial (Laura García)",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "ComContacto.dc.html": {
-   "h": 940,
-   "page": "comerciales",
-   "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "ComEquipo.dc.html": {
-   "h": 940,
-   "page": "comerciales",
-   "title": "K2 · Equipo comercial (cuentas en Agroolink)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ComPublicar.dc.html": {
-   "h": 940,
-   "page": "comerciales",
-   "title": "K5 · Revisar y publicar",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "ComTipo.dc.html": {
-   "h": 940,
-   "page": "comerciales",
-   "title": "K1 · Tipo de empresa: equipo comercial propio",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ComZonas.dc.html": {
-   "h": 940,
-   "page": "comerciales",
-   "title": "K3 · Zonas de cada comercial",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "CompNueva1.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0a · Nueva comparación · escribir unas letras",
-   "w": 1280,
-   "x": 1360,
-   "y": 1300
-  },
-  "CompNueva2.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0b · Nueva comparación · añadir del mismo tipo",
-   "w": 1280,
-   "x": 2720,
-   "y": 1300
-  },
-  "CompOtroTipo.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C2 · Añadir un producto de otro tipo",
-   "w": 1280,
-   "x": 5440,
-   "y": 1300
-  },
-  "CompSolicitar.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C3 · Solicitar información a los 3",
-   "w": 1280,
-   "x": 6800,
-   "y": 1300
-  },
-  "CompSumario.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C0 · Mis comparaciones · sumario (copia de U4)",
-   "w": 1280,
-   "x": 0,
-   "y": 1300
-  },
-  "CompVista.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "C1 · Comparativa del mismo tipo (enzimas)",
-   "w": 1280,
-   "x": 4080,
-   "y": 1300
-  },
-  "ConEmpresa.dc.html": {
-   "h": 1060,
-   "page": "header",
-   "title": "4 · Personal con empresa",
-   "w": 1280,
-   "x": 0,
-   "y": 1180
-  },
-  "CuentaCompras.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
-   "w": 1280,
-   "x": 1360,
-   "y": 3720
-  },
-  "CuentaDirecciones.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2e · Facturación · Direcciones",
-   "w": 1280,
-   "x": 5440,
-   "y": 5200
-  },
-  "CuentaFacturas.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2c · Facturación · Facturas",
-   "w": 1280,
-   "x": 2720,
-   "y": 5200
-  },
-  "CuentaPagos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2d · Facturación · Métodos de pago",
-   "w": 1280,
-   "x": 4080,
-   "y": 5200
-  },
-  "CuentaPedidos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
-   "w": 1280,
-   "x": 1360,
-   "y": 5200
-  },
-  "CuentaPerfil.dc.html": {
-   "h": 1100,
-   "page": "intranet",
-   "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
-   "w": 1280,
-   "x": 0,
-   "y": 3720
-  },
-  "CuentaPlanes.dc.html": {
-   "h": 1110,
-   "page": "intranet",
-   "title": "C2a · Facturación · Planes y suscripciones",
-   "w": 1280,
-   "x": 0,
-   "y": 5200
-  },
-  "DisAutorizacion.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X5 · Validación de la marca (lo que recibe Zucami)",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "DisContacto.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X6 · Contacto: delegaciones por país",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "DisElegir.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X3 · Añadir productos que ya existen en Agroolink",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "DisMarcas.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X2 · Marcas (se generan desde los productos)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "DisPublicar.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X7 · Revisar y publicar",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "DisSubir.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X4 · Subir un producto nuevo (con control de duplicados)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "DisTipo.dc.html": {
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1 · Tipo de empresa: distribuidor con marcas propias",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "EmpE1Empezar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E1 · (tras L1–L3) ¿Cómo quieres empezar? → Empresa",
-   "w": 960,
-   "x": 0,
-   "y": 0
-  },
-  "EmpE2Creada.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E2 · Cuenta creada → seguir con la empresa",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "EmpE3Buscar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E3 · Busca tu empresa",
-   "w": 960,
-   "x": 2080,
-   "y": 0
-  },
-  "EmpE4Verificar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E4 · Verifica que la representas",
-   "w": 960,
-   "x": 3120,
-   "y": 0
-  },
-  "EmpE5Datos.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E5 · Datos de la empresa",
-   "w": 1120,
-   "x": 0,
-   "y": 1180
-  },
-  "EmpE6Producto.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E6 · Primer producto",
-   "w": 960,
-   "x": 1200,
-   "y": 1180
-  },
-  "EmpE7Panel.dc.html": {
-   "h": 820,
-   "page": "altaempresa",
-   "title": "E7 · Panel de empresa (primer día)",
-   "w": 1280,
-   "x": 2240,
-   "y": 1180
-  },
-  "Empresa.dc.html": {
-   "h": 1060,
-   "page": "header",
-   "title": "5 · Modo empresa",
-   "w": 1280,
-   "x": 1360,
-   "y": 1180
-  },
-  "ExpConsultas.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E3 · Consultas recibidas",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ExpOportunidades.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E2 · Oportunidades (proyectos que encajan)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ExpPanel.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E1 · Panel de experta",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ExpPerfil.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E5 · Perfil de experta (editor + vista pública)",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "ExpServicios.dc.html": {
-   "h": 1000,
-   "page": "intexperto",
-   "title": "E4 · Mis servicios",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "ExpX1Empezar.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X1 · (tras L1–L3) ¿Cómo quieres empezar? → Experto",
-   "w": 960,
-   "x": 0,
-   "y": 0
-  },
-  "ExpX2Creada.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X2 · Cuenta creada → crear perfil de experto",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "ExpX3Especialidad.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X3 · Paso 1 · Especialidad",
-   "w": 1120,
-   "x": 2080,
-   "y": 0
-  },
-  "ExpX4Servicios.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X4 · Paso 2 · Servicios (opcional)",
-   "w": 1120,
-   "x": 3280,
-   "y": 0
-  },
-  "ExpX5Publicar.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X5 · Paso 3 · Revisar y publicar",
-   "w": 1120,
-   "x": 0,
-   "y": 1180
-  },
-  "ExpX6Publicado.dc.html": {
-   "h": 760,
-   "page": "experto",
-   "title": "X6 · Perfil publicado",
-   "w": 960,
-   "x": 1200,
-   "y": 1180
-  },
-  "ExpX7Semana.dc.html": {
-   "h": 820,
-   "page": "experto",
-   "title": "X7 · Mi espacio como experto, primera semana",
-   "w": 1280,
-   "x": 2240,
-   "y": 1180
-  },
-  "Experto.dc.html": {
-   "h": 1060,
-   "page": "header",
-   "title": "3 · Personal + perfil de experto",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "FabCabecera.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D2 · Cabecera de la ficha",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "FabContacto.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D7 · Contacto: «Solicitar información» y destinos",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "FabContenidos.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D6 · Contenidos (Agrinews y propuesta editorial)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "FabDistribuidores.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D4 · Distribuidores y «Quiero ser distribuidor»",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "FabExpertos.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D5 · Expertos recomendados",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "FabPublicar.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D8 · Revisar y publicar",
-   "w": 1280,
-   "x": 4080,
-   "y": 1240
-  },
-  "FabShell.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "Componente · Constructor de ficha (barra y secciones)",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "FabSobre.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D3 · Sobre la empresa",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "FabTipo.dc.html": {
-   "h": 940,
-   "page": "fabdist",
-   "title": "D1 · Tipo de empresa",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "Fig01.dc.html": {
-   "h": 66,
-   "page": "figma",
-   "title": "F01 · Header · usuario logueado",
-   "w": 922,
-   "x": 0,
-   "y": 0
-  },
-  "Fig02.dc.html": {
-   "h": 66,
-   "page": "figma",
-   "title": "F02 · Header · con selector de región",
-   "w": 1218,
-   "x": 1042,
-   "y": 0
-  },
-  "Fig03.dc.html": {
-   "h": 3389,
-   "page": "figma",
-   "title": "F03 · Home logueado «Hola Samuel»",
-   "w": 1292,
-   "x": 2380,
-   "y": 0
-  },
-  "Fig04.dc.html": {
-   "h": 999,
-   "page": "figma",
-   "title": "F04 · Mega-menú de categorías",
-   "w": 1292,
-   "x": 3792,
-   "y": 0
-  },
-  "Fig05.dc.html": {
-   "h": 3634,
-   "page": "figma",
-   "title": "F05 · Home logueado · variante",
-   "w": 1292,
-   "x": 5204,
-   "y": 0
-  },
-  "Fig06.dc.html": {
-   "h": 2381,
-   "page": "figma",
-   "title": "F06 · Categoría · Aves › Broilers › Nutrición",
-   "w": 1352,
-   "x": 0,
-   "y": 4134
-  },
-  "Fig07.dc.html": {
-   "h": 2381,
-   "page": "figma",
-   "title": "F07 · Categoría · variante",
-   "w": 1284,
-   "x": 1472,
-   "y": 4134
-  },
-  "Fig08.dc.html": {
-   "h": 2035,
-   "page": "figma",
-   "title": "F08 · Resultados «micotoxinas porcino»",
-   "w": 1284,
-   "x": 2876,
-   "y": 4134
-  },
-  "Fig09.dc.html": {
-   "h": 2072,
-   "page": "figma",
-   "title": "F09 · Resultados · variante",
-   "w": 1284,
-   "x": 4280,
-   "y": 4134
-  },
-  "Fig10.dc.html": {
-   "h": 1830,
-   "page": "figma",
-   "title": "F10 · Página de especie · Aves",
-   "w": 1284,
-   "x": 5684,
-   "y": 4134
-  },
-  "Fig11.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F11 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 1400,
-   "y": 7015
-  },
-  "Fig12.dc.html": {
-   "h": 810,
-   "page": "figma",
-   "title": "F12 · Contactar con la empresa",
-   "w": 1184,
-   "x": 2806,
-   "y": 7015
-  },
-  "Fig13.dc.html": {
-   "h": 1610,
-   "page": "figma",
-   "title": "F13 · Directorio de expertos",
-   "w": 1280,
-   "x": 0,
-   "y": 10502
-  },
-  "Fig14.dc.html": {
-   "h": 2799,
-   "page": "figma",
-   "title": "F14 · Perfil · Dr. Carlos Martínez",
-   "w": 1280,
-   "x": 1400,
-   "y": 10502
-  },
-  "Fig15.dc.html": {
-   "h": 1502,
-   "page": "figma",
-   "title": "F15 · Perfil experto · variante",
-   "w": 1280,
-   "x": 2800,
-   "y": 10502
-  },
-  "Fig16.dc.html": {
-   "h": 1609,
-   "page": "figma",
-   "title": "F16 · Perfil experto · variante",
-   "w": 1280,
-   "x": 4200,
-   "y": 10502
-  },
-  "Fig17.dc.html": {
-   "h": 1281,
-   "page": "figma",
-   "title": "F17 · Modal · menú de categorías",
-   "w": 1288,
-   "x": 8238,
-   "y": 13801
-  },
-  "Fig18.dc.html": {
-   "h": 1281,
-   "page": "figma",
-   "title": "F18 · Modal · menú de categorías (variante)",
-   "w": 1288,
-   "x": 9646,
-   "y": 13801
-  },
-  "Fig19.dc.html": {
-   "h": 1421,
-   "page": "figma",
-   "title": "F19 · Ficha de producto OptiFeed",
-   "w": 1280,
-   "x": 0,
-   "y": 7015
-  },
-  "Fig20.dc.html": {
-   "h": 1027,
-   "page": "figma",
-   "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1286,
-   "x": 0,
-   "y": 8975
-  },
-  "Fig21.dc.html": {
-   "h": 913,
-   "page": "figma",
-   "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1223,
-   "x": 1406,
-   "y": 8975
-  },
-  "Fig22.dc.html": {
-   "h": 798,
-   "page": "figma",
-   "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1141,
-   "x": 2749,
-   "y": 8975
-  },
-  "Fig23.dc.html": {
-   "h": 928,
-   "page": "figma",
-   "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1200,
-   "x": 4010,
-   "y": 8975
-  },
-  "Fig24.dc.html": {
-   "h": 1026,
-   "page": "figma",
-   "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1286,
-   "x": 5330,
-   "y": 8975
-  },
-  "Fig25.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F25 · Login",
-   "w": 1228,
-   "x": 0,
-   "y": 13801
-  },
-  "Fig26.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F26 · Login · código",
-   "w": 1280,
-   "x": 1348,
-   "y": 13801
-  },
-  "Fig27.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F27 · Login · paso",
-   "w": 1280,
-   "x": 2748,
-   "y": 13801
-  },
-  "Fig28.dc.html": {
-   "h": 1392,
-   "page": "figma",
-   "title": "F28 · Producto Zucami Aviary Pro",
-   "w": 1280,
-   "x": 15358,
-   "y": 7015
-  },
-  "Fig29.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F29 · Guardar en tablero",
-   "w": 1280,
-   "x": 16758,
-   "y": 7015
-  },
-  "Fig30.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1280,
-   "x": 6736,
-   "y": 8975
-  },
-  "Fig31.dc.html": {
-   "h": 1025,
-   "page": "figma",
-   "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1282,
-   "x": 8136,
-   "y": 8975
-  },
-  "Fig32.dc.html": {
-   "h": 1025,
-   "page": "figma",
-   "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
-   "w": 1282,
-   "x": 9538,
-   "y": 8975
-  },
-  "Fig33.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F33 · Login · paso",
-   "w": 1280,
-   "x": 4148,
-   "y": 13801
-  },
-  "Fig34.dc.html": {
-   "h": 1004,
-   "page": "figma",
-   "title": "F34 · Cuenta creada",
-   "w": 1289,
-   "x": 5548,
-   "y": 13801
-  },
-  "Fig35.dc.html": {
-   "h": 833,
-   "page": "figma",
-   "title": "F35 · Login · paso",
-   "w": 1161,
-   "x": 6957,
-   "y": 13801
-  },
-  "Fig36.dc.html": {
-   "h": 1460,
-   "page": "figma",
-   "title": "F36 · Producto en catálogo de AgroNova",
-   "w": 1280,
-   "x": 18158,
-   "y": 7015
-  },
-  "Fig37.dc.html": {
-   "h": 1306,
-   "page": "figma",
-   "title": "F37 · Listado de empresas / expertos / eventos",
-   "w": 1280,
-   "x": 0,
-   "y": 15582
-  },
-  "Fig38.dc.html": {
-   "h": 1352,
-   "page": "figma",
-   "title": "F38 · Listado · variante",
-   "w": 1280,
-   "x": 1400,
-   "y": 15582
-  },
-  "Fig39.dc.html": {
-   "h": 1174,
-   "page": "figma",
-   "title": "F39 · Evento · AviForum",
-   "w": 1280,
-   "x": 2800,
-   "y": 15582
-  },
-  "Fig40.dc.html": {
-   "h": 3464,
-   "page": "figma",
-   "title": "F40 · Ficha empresa AgroNova",
-   "w": 1280,
-   "x": 0,
-   "y": 17434
-  },
-  "Fig41.dc.html": {
-   "h": 804,
-   "page": "figma",
-   "title": "F41 · AgroNova · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 17434
-  },
-  "Fig42.dc.html": {
-   "h": 1082,
-   "page": "figma",
-   "title": "F42 · AgroNova · sección",
-   "w": 1280,
-   "x": 2800,
-   "y": 17434
-  },
-  "Fig43.dc.html": {
-   "h": 1218,
-   "page": "figma",
-   "title": "F43 · AgroNova · sección",
-   "w": 1280,
-   "x": 4200,
-   "y": 17434
-  },
-  "Fig44.dc.html": {
-   "h": 1134,
-   "page": "figma",
-   "title": "F44 · AgroNova · sección",
-   "w": 1280,
-   "x": 5600,
-   "y": 17434
-  },
-  "Fig45.dc.html": {
-   "h": 1460,
-   "page": "figma",
-   "title": "F45 · Producto en catálogo de AgroNova · variante",
-   "w": 1280,
-   "x": 19558,
-   "y": 7015
-  },
-  "Fig46.dc.html": {
-   "h": 4365,
-   "page": "figma",
-   "title": "F46 · Ficha empresa DSM",
-   "w": 1280,
-   "x": 0,
-   "y": 21398
-  },
-  "Fig47.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F47 · Modal · guardar en tablero",
-   "w": 1286,
-   "x": 4110,
-   "y": 7015
-  },
-  "Fig48.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F48 · Modal · guardado en tablero",
-   "w": 1286,
-   "x": 5516,
-   "y": 7015
-  },
-  "Fig49.dc.html": {
-   "h": 1014,
-   "page": "figma",
-   "title": "F49 · DSM · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 21398
-  },
-  "Fig50.dc.html": {
-   "h": 1243,
-   "page": "figma",
-   "title": "F50 · DSM · sección",
-   "w": 1280,
-   "x": 2800,
-   "y": 21398
-  },
-  "Fig51.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F51 · Modal · descargar vademécum",
-   "w": 1286,
-   "x": 6922,
-   "y": 7015
-  },
-  "Fig52.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F52 · Modal · visitar la web",
-   "w": 1286,
-   "x": 8328,
-   "y": 7015
-  },
-  "Fig53.dc.html": {
-   "h": 1676,
-   "page": "figma",
-   "title": "F53 · DSM · sección",
-   "w": 1280,
-   "x": 4200,
-   "y": 21398
-  },
-  "Fig54.dc.html": {
-   "h": 2075,
-   "page": "figma",
-   "title": "F54 · DSM · sección",
-   "w": 1280,
-   "x": 5600,
-   "y": 21398
-  },
-  "Fig55.dc.html": {
-   "h": 1924,
-   "page": "figma",
-   "title": "F55 · DSM · sección",
-   "w": 1280,
-   "x": 7000,
-   "y": 21398
-  },
-  "Fig56.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F56 · Modal · únete como distribuidor",
-   "w": 1286,
-   "x": 9734,
-   "y": 7015
-  },
-  "Fig57.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F57 · Modal · solicitar información",
-   "w": 1286,
-   "x": 11140,
-   "y": 7015
-  },
-  "Fig58.dc.html": {
-   "h": 1744,
-   "page": "figma",
-   "title": "F58 · Ficha empresa Zucami",
-   "w": 1280,
-   "x": 0,
-   "y": 26263
-  },
-  "Fig59.dc.html": {
-   "h": 1555,
-   "page": "figma",
-   "title": "F59 · Zucami · sección",
-   "w": 1280,
-   "x": 1400,
-   "y": 26263
-  },
-  "Fig60.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F60 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 12546,
-   "y": 7015
-  },
-  "Fig61.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F61 · Encontrar mi comercial",
-   "w": 1280,
-   "x": 9800,
-   "y": 26263
-  },
-  "Fig62.dc.html": {
-   "h": 1030,
-   "page": "figma",
-   "title": "F62 · Producto OptiFeed · modal",
-   "w": 1286,
-   "x": 13952,
-   "y": 7015
-  },
-  "Fig63.dc.html": {
-   "h": 1024,
-   "page": "figma",
-   "title": "F63 · Contactar con Laura García",
-   "w": 1280,
-   "x": 11200,
-   "y": 26263
-  },
-  "Fig64.dc.html": {
-   "h": 1461,
-   "page": "figma",
-   "title": "F64 · Zucami · catálogo",
-   "w": 1280,
-   "x": 2800,
-   "y": 26263
-  },
-  "Fig65.dc.html": {
-   "h": 1744,
-   "page": "figma",
-   "title": "F65 · Zucami · catálogo",
-   "w": 1280,
-   "x": 4200,
-   "y": 26263
-  },
-  "Fig66.dc.html": {
-   "h": 1461,
-   "page": "figma",
-   "title": "F66 · Zucami · catálogo",
-   "w": 1280,
-   "x": 5600,
-   "y": 26263
-  },
-  "Fig67.dc.html": {
-   "h": 1848,
-   "page": "figma",
-   "title": "F67 · Zucami · catálogo",
-   "w": 1280,
-   "x": 7000,
-   "y": 26263
-  },
-  "Fig68.dc.html": {
-   "h": 1997,
-   "page": "figma",
-   "title": "F68 · Zucami LATAM",
-   "w": 1280,
-   "x": 8400,
-   "y": 26263
-  },
-  "IntHeader.dc.html": {
-   "h": 68,
-   "page": "intranet",
-   "title": "Componente · Header intranet",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "IntP1Aviso.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "P1 · Laura (aún compradora) · aviso contextual en Mi espacio",
-   "w": 1280,
-   "x": 0,
-   "y": 2480
-  },
-  "IntP2Intro.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "P2 · «Ofrecer mis servicios»: qué cambia y qué gana",
-   "w": 1280,
-   "x": 1360,
-   "y": 2480
-  },
-  "IntP3Asistente.dc.html": {
-   "h": 760,
-   "page": "intranet",
-   "title": "P3 · Asistente de 3 pasos (mismo que en Alta experto) → resultado: S2",
-   "w": 1120,
-   "x": 2720,
-   "y": 2480
-  },
-  "IntS1Comprador.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "S1 · Samuel · Mi espacio (menú lateral + «Tus espacios» abierto)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "IntS2Experta.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "S2 · Laura · Mi espacio con sección «Como experta»",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "IntS3Empresa.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "S3 · Carla · Panel de empresa (menú lateral de empresa)",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "IntS4Ficha.dc.html": {
-   "h": 820,
-   "page": "intranet",
-   "title": "S4 · Exploración · ficha de producto SIN barra lateral",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "IntSidebar.dc.html": {
-   "h": 832,
-   "page": "intranet",
-   "title": "Componente · Menú lateral",
-   "w": 256,
-   "x": 2720,
-   "y": 200
-  },
-  "Login1Email.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "1 · L1 · Accede con tu email (cuenta Agrinews)",
-   "w": 960,
-   "x": 0,
-   "y": 0
-  },
-  "Login1bCodigo.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "2a · L1b · Ya registrado → código por email (OTP)",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "Login2SinCuenta.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "2b · L2 · No registrado → todavía no tienes cuenta",
-   "w": 960,
-   "x": 1040,
-   "y": 1300
-  },
-  "Login3Crear.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → 4",
-   "w": 960,
-   "x": 2080,
-   "y": 1300
-  },
-  "Login4Empezar.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "5 · L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink",
-   "w": 960,
-   "x": 3120,
-   "y": 0
-  },
-  "Login5Creada.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "6 · L5 · Cuenta lista (según elección)",
-   "w": 960,
-   "x": 4160,
-   "y": 0
-  },
-  "LoginIntereses.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
-   "w": 960,
-   "x": 2080,
-   "y": 0
-  },
-  "Main.dc.html": {
-   "h": 960,
-   "page": "header",
-   "title": "1 · Sin sesión",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "MiM1Empezar.dc.html": {
-   "h": 760,
-   "page": "solo",
-   "title": "M1 · (tras L1–L3) ¿Cómo quieres empezar? → Solo para mí",
-   "w": 960,
-   "x": 0,
-   "y": 0
-  },
-  "MiM2Creada.dc.html": {
-   "h": 760,
-   "page": "solo",
-   "title": "M2 · Cuenta creada → vuelve a donde estaba",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "MiM3Guardado.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M3 · De vuelta en la ficha: producto guardado",
-   "w": 1280,
-   "x": 2080,
-   "y": 0
-  },
-  "MiM4Comparar.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M4 · Comparar y pedir precio",
-   "w": 1280,
-   "x": 3440,
-   "y": 0
-  },
-  "MiM5Consulta.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M5 · Primera consulta (datos solo esta vez)",
-   "w": 1280,
-   "x": 0,
-   "y": 1300
-  },
-  "MiM6Dia3.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M6 · Mi espacio, 3 días después",
-   "w": 1280,
-   "x": 1360,
-   "y": 1300
-  },
-  "MobBuscar.dc.html": {
-   "h": 844,
-   "page": "movil",
-   "title": "M4 · Búsqueda",
-   "w": 390,
-   "x": 1590,
-   "y": 0
-  },
-  "MobCategoria.dc.html": {
-   "h": 1030,
-   "page": "movil",
-   "title": "M9 · Categoría → tipo de producto",
-   "w": 390,
-   "x": 2120,
-   "y": 2510
-  },
-  "MobEspecie.dc.html": {
-   "h": 900,
-   "page": "movil",
-   "title": "M6 · Especie → producción (opcional)",
-   "w": 390,
-   "x": 530,
-   "y": 2510
-  },
-  "MobExplorarCategorias.dc.html": {
-   "h": 940,
-   "page": "movil",
-   "title": "M8 · Explorar · por categoría",
-   "w": 390,
-   "x": 1590,
-   "y": 2510
-  },
-  "MobExplorarEspecies.dc.html": {
-   "h": 844,
-   "page": "movil",
-   "title": "M5 · Explorar · por especie",
-   "w": 390,
-   "x": 0,
-   "y": 2510
-  },
-  "MobHome.dc.html": {
-   "h": 2010,
-   "page": "movil",
-   "title": "M1 · Home con sesión",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MobHomeVisitante.dc.html": {
-   "h": 1500,
-   "page": "movil",
-   "title": "M2 · Home sin sesión",
-   "w": 390,
-   "x": 530,
-   "y": 0
-  },
-  "MobIntereses.dc.html": {
-   "h": 1700,
-   "page": "movil",
-   "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
-   "w": 390,
-   "x": 2120,
-   "y": 0
-  },
-  "MobMenu.dc.html": {
-   "h": 1570,
-   "page": "movil",
-   "title": "M3 · Menú (pestaña 5)",
-   "w": 390,
-   "x": 1060,
-   "y": 0
-  },
-  "MobResultados.dc.html": {
-   "h": 920,
-   "page": "movil",
-   "title": "M7 · Resultados · categoría en chips",
-   "w": 390,
-   "x": 1060,
-   "y": 2510
-  },
-  "MobTabBar.dc.html": {
-   "h": 84,
-   "page": "movil",
-   "title": "MobTabBar · componente",
-   "w": 390,
-   "x": 0,
-   "y": 4040
-  },
-  "Personal.dc.html": {
-   "h": 1060,
-   "page": "header",
-   "title": "2 · Cuenta personal (menú alineado con la intranet)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "Precios.dc.html": {
-   "h": 2240,
-   "is_interactive": true,
-   "page": "planes",
-   "title": "PL1 · Página de planes · Para empresas (interactiva: pestañas y mensual/anual)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "PreciosComprador.dc.html": {
-   "h": 2240,
-   "page": "planes",
-   "title": "PL3 · Página de planes · Para compradores",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "PreciosExperto.dc.html": {
-   "h": 2240,
-   "page": "planes",
-   "title": "PL2 · Página de planes · Para expertos",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ProdAcuerdos.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P3 · Acuerdos de distribución por línea y zona (con exclusividad)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ProdCatalogo.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P1 · Catálogo: filtros, completitud y acciones en bloque",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ProdEspecEquipamiento.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P7b · Especificaciones · sugeridos + propios (Zucami, tipo Jaulas y alojamientos)",
-   "w": 1280,
-   "x": 1360,
-   "y": 2800
-  },
-  "ProdFichaBeneficios.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P6 · Ficha base · Beneficios y aplicación",
-   "w": 1280,
-   "x": 2720,
-   "y": 1400
-  },
-  "ProdFichaDocumentos.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P8 · Ficha base · Documentación, vídeo y certificaciones",
-   "w": 1280,
-   "x": 5440,
-   "y": 1400
-  },
-  "ProdFichaEspecificaciones.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P7 · Especificaciones · sugeridos + propios (Hy-D®, tipo Vitaminas)",
-   "w": 1280,
-   "x": 4080,
-   "y": 1400
-  },
-  "ProdFichaGeneral.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P4 · Ficha base · General",
-   "w": 1280,
-   "x": 0,
-   "y": 1400
-  },
-  "ProdFichaMercados.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P9 · Ficha base · Mercados y dónde comprar",
-   "w": 1280,
-   "x": 6800,
-   "y": 1400
-  },
-  "ProdFichaVariantes.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P5 · Ficha base · Variantes (embalaje o configuración)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1400
-  },
-  "ProdImportar.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P2 · Importar catálogo por Excel (actualiza por referencia)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ProdVersionLocal.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P10 · Versión local de AgroNova (lado del distribuidor)",
-   "w": 1280,
-   "x": 0,
-   "y": 2800
-  },
-  "ProyCrear.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J1 · Crear proyecto · qué necesitas",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ProyDestinatarios.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J2 · Crear proyecto · a quién se lo enviamos",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ProyDetalle.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J4 · Detalle del proyecto y propuestas",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "ProyExperto.dc.html": {
-   "h": 1000,
-   "page": "proyectos",
-   "title": "J7 · Proyectos para la experta (Laura Gil)",
-   "w": 1280,
-   "x": 2720,
-   "y": 1300
-  },
-  "ProyMis.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J3 · Mis proyectos",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ProyOportunidades.dc.html": {
-   "h": 1000,
-   "page": "proyectos",
-   "title": "J5 · Oportunidades para la empresa (AgroNova)",
-   "w": 1280,
-   "x": 0,
-   "y": 1300
-  },
-  "ProyPropuesta.dc.html": {
-   "h": 1000,
-   "page": "proyectos",
-   "title": "J6 · Enviar una propuesta",
-   "w": 1280,
-   "x": 1360,
-   "y": 1300
-  },
-  "SelEspecies.dc.html": {
-   "h": 900,
-   "page": "componentes",
-   "title": "Selector de especies",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "SelIntereses.dc.html": {
-   "h": 1100,
-   "page": "componentes",
-   "title": "Selector de intereses · especies, categorías y objetivos",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "SelMercados.dc.html": {
-   "h": 900,
-   "page": "componentes",
-   "title": "Selector de mercados",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "SelRamasCargos.dc.html": {
-   "h": 900,
-   "page": "componentes",
-   "title": "Rama de negocio y cargo (listas del CRM)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ServEditor.dc.html": {
-   "h": 940,
-   "page": "servicios",
-   "title": "V2 · Editar un servicio: especies y dónde se presta",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ServLista.dc.html": {
-   "h": 940,
-   "page": "servicios",
-   "title": "V1 · Servicios de AgroNova: especies, zonas y modalidad",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "SucPagina.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S5 · Página de la sucursal (lado de Zucami LATAM)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "SucPaises.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S3 · Países de cada sucursal",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "SucPermisos.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S4 · Qué decide la Sede y qué cada sucursal",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "SucPublicar.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S6 · Revisar y publicar (Sede)",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "SucRed.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S2 · Red de sucursales y administradores",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "SucTipo.dc.html": {
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1 · Tipo de empresa: sucursales o filiales",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "TabCompartir.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "T4 · Compartir tablero (permisos y plan)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "TabGuardar.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "T3 · Guardar en tablero desde una ficha",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "TabMis.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "T1 · Mis tableros (con Historial automático)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "TabVista.dc.html": {
-   "h": 900,
-   "page": "tableros",
-   "title": "T2 · Vista de un tablero con seguimiento por estado",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "UsrAyuda.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U10 · Ayuda y contacto",
-   "w": 1280,
-   "x": 4080,
-   "y": 1400
-  },
-  "UsrComparaciones.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U4 · Mis comparaciones",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "UsrEspacio.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U1 · Mi espacio (día a día)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "UsrFacturacion.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8 · Facturación (copia de C2)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1400
-  },
-  "UsrHistorial.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U5 · Historial",
-   "w": 1280,
-   "x": 6800,
-   "y": 0
-  },
-  "UsrIdioma.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U9 · Idioma y zona",
-   "w": 1280,
-   "x": 2720,
-   "y": 1400
-  },
-  "UsrMensajes.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U6 · Mensajes",
-   "w": 1280,
-   "x": 8160,
-   "y": 0
-  },
-  "UsrPerfil.dc.html": {
-   "h": 1100,
-   "page": "intusuario",
-   "title": "U7 · Mi perfil (copia de C1)",
-   "w": 1280,
-   "x": 0,
-   "y": 1400
-  },
-  "UsrProyectos.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U2 · Mis proyectos",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "UsrTableros.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U3 · Mis tableros (copia de T1)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "WizTop.dc.html": {
-   "h": 128,
-   "page": "configempresa",
-   "title": "Componente · Cabecera del asistente de empresa",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "UsrFactPlanes.dc.html": {
-   "h": 1110,
-   "page": "intusuario",
-   "title": "U8a · Facturación · Planes y suscripciones (copia de C2a)",
-   "w": 1280,
-   "x": 0,
-   "y": 3000
-  },
-  "UsrFactPedidos.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8b · Facturación · Pedidos (copia de C2b)",
-   "w": 1280,
-   "x": 1360,
-   "y": 3000
-  },
-  "UsrFactFacturas.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8c · Facturación · Facturas (copia de C2c)",
-   "w": 1280,
-   "x": 2720,
-   "y": 3000
-  },
-  "UsrFactPagos.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8d · Facturación · Métodos de pago (copia de C2d)",
-   "w": 1280,
-   "x": 4080,
-   "y": 3000
-  },
-  "UsrFactDirecciones.dc.html": {
-   "h": 980,
-   "page": "intusuario",
-   "title": "U8e · Facturación · Direcciones (copia de C2e)",
-   "w": 1280,
-   "x": 5440,
-   "y": 3000
-  },
-  "CuentaIdioma.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "C3 · Mi cuenta · Idioma y zona",
-   "w": 1280,
-   "x": 2720,
-   "y": 3720
-  },
-  "CuentaAyuda.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "C4 · Mi cuenta · Ayuda y contacto",
-   "w": 1280,
-   "x": 4080,
-   "y": 3720
-  },
-  "UsrEspacioMenu.dc.html": {
-   "h": 900,
-   "page": "intusuario",
-   "title": "U1b · Mi espacio · menú de cuenta abierto («Tus espacios», como S1)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  }
- },
- "createdOnFiles": {
-  "at": "2026-10-13T10:00:00Z",
-  "v": 1
- },
- "designSystems": [],
- "launch": {
-  "page": "fabdist",
-  "view": "canvas"
- },
- "notes": {
-  "altaL1b": {
-   "kind": "title1",
-   "maxW": 4880,
-   "page": "alta",
-   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
-   "w": 240,
-   "x": 1040,
-   "y": 1000
-  },
-  "altaTitulo": {
-   "kind": "title1",
-   "maxW": 5120,
-   "page": "alta",
-   "text": "Alta · 1 email → ya registrado: 2a código → 4 intereses → 5 «¿Cómo quieres empezar?» → 6 (4 y 5 solo la 1.ª vez)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "altaTitulo2": {
-   "kind": "title1",
-   "maxW": 4880,
-   "page": "alta",
-   "text": "7 · Solo para mí → Mi espacio. Empresa, experto y «más tarde» siguen en sus páginas",
-   "w": 240,
-   "x": 0,
-   "y": 2320
-  },
-  "cfgTitulo": {
-   "kind": "title1",
-   "maxW": 6720,
-   "page": "configempresa",
-   "text": "Alta empresa · el formulario se adapta a cómo vende la empresa",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "cfgTitulo2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "configempresa",
-   "text": "Red comercial y contacto",
-   "w": 240,
-   "x": 0,
-   "y": 940
-  },
-  "comT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "comerciales",
-   "text": "Alta · Fabricante con equipo comercial propio (Zucami)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "comT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "comerciales",
-   "text": "Contacto, publicación y la bandeja de cada comercial",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "disT1": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "distmulti",
-   "text": "Alta · Distribuidor multimarca (AgroNova): elige productos o los sube",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "disT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "distmulti",
-   "text": "Validación de la marca, contacto y publicación",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "empDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaempresa",
-   "text": "Desde el alta general: opción «Represento una empresa»",
-   "w": 240,
-   "x": 0,
-   "y": 2100
-  },
-  "empTitulo": {
-   "kind": "title1",
-   "maxW": 4080,
-   "page": "altaempresa",
-   "text": "Alta empresa · Carla Martín, directora comercial de AgroExport SRL",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "empTitulo2": {
-   "kind": "title1",
-   "maxW": 3520,
-   "page": "altaempresa",
-   "text": "Configurar la empresa y primer día",
-   "w": 240,
-   "x": 0,
-   "y": 880
-  },
-  "expDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "experto",
-   "text": "Desde el alta general: opción «Soy experto»",
-   "w": 240,
-   "x": 0,
-   "y": 2100
-  },
-  "expTitulo": {
-   "kind": "title1",
-   "maxW": 4400,
-   "page": "experto",
-   "text": "Alta experto · Laura Gil, veterinaria y consultora en nutrición avícola",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "expTitulo2": {
-   "kind": "title1",
-   "maxW": 3520,
-   "page": "experto",
-   "text": "Publicar el perfil y primera semana",
-   "w": 240,
-   "x": 0,
-   "y": 880
-  },
-  "fabT1": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "fabdist",
-   "text": "Alta · Fabricante con red de distribuidores (DSM-Firmenich)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "fabT2": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "fabdist",
-   "text": "Expertos, contenidos, contacto y publicación",
-   "w": 240,
-   "x": 0,
-   "y": 940
-  },
-  "figT0": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Header y home",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "figT1": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Listados, búsqueda y especie",
-   "w": 240,
-   "x": 0,
-   "y": 3834
-  },
-  "figT2": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Producto y modales",
-   "w": 240,
-   "x": 0,
-   "y": 6715
-  },
-  "figT3": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Pantallas con el nombre antiguo (Farm4You)",
-   "w": 240,
-   "x": 0,
-   "y": 8675
-  },
-  "figT4": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Expertos",
-   "w": 240,
-   "x": 0,
-   "y": 10202
-  },
-  "figT5": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Login y menús",
-   "w": 240,
-   "x": 0,
-   "y": 13501
-  },
-  "figT6": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Listados y eventos",
-   "w": 240,
-   "x": 0,
-   "y": 15282
-  },
-  "figT7": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · AgroNova",
-   "w": 240,
-   "x": 0,
-   "y": 17134
-  },
-  "figT8": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · DSM",
-   "w": 240,
-   "x": 0,
-   "y": 21098
-  },
-  "figT9": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "figma",
-   "text": "Empresa · Zucami",
-   "w": 240,
-   "x": 0,
-   "y": 25963
-  },
-  "ie0": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intexperto",
-   "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "intTitulo": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Intranet · barra lateral en zonas de trabajo",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "intTitulo2": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Empresa y contraste con exploración",
-   "w": 240,
-   "x": 0,
-   "y": 940
-  },
-  "intTitulo3": {
-   "kind": "title1",
-   "maxW": 3840,
-   "page": "intranet",
-   "text": "Paso de comprador a experto desde la intranet",
-   "w": 240,
-   "x": 0,
-   "y": 2180
-  },
-  "intTitulo4": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
-   "w": 240,
-   "x": 0,
-   "y": 3420
-  },
-  "intTitulo5": {
-   "kind": "title1",
-   "maxW": 6720,
-   "page": "intranet",
-   "text": "Facturación · una pantalla por pestaña",
-   "w": 240,
-   "x": 0,
-   "y": 4900
-  },
-  "iu0": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intusuario",
-   "text": "MI ESPACIO · Samuel (usuario)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "iu1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intusuario",
-   "text": "MI CUENTA · común a todos los roles",
-   "w": 240,
-   "x": 0,
-   "y": 1100
-  },
-  "movT0": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "movT1": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
-   "w": 240,
-   "x": 0,
-   "y": 2210
-  },
-  "movT2": {
-   "kind": "title1",
-   "maxW": 2600,
-   "page": "movil",
-   "text": "Componente · barra inferior (prop activo 1–5)",
-   "w": 240,
-   "x": 0,
-   "y": 3740
-  },
-  "plTitulo": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "planes",
-   "text": "Planes y precios · v3 (empresa, experto, comprador)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "plTitulo2": {
-   "kind": "title1",
-   "maxW": 1280,
-   "page": "planes",
-   "text": "Contratar un plan",
-   "w": 240,
-   "x": 0,
-   "y": 2300
-  },
-  "prodT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "productos",
-   "text": "Módulo Productos · catálogo amplio (DSM-Firmenich, fabricante con distribuidores)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "prodT2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "productos",
-   "text": "Ficha base de un producto · las pestañas siguen las de la ficha pública",
-   "w": 240,
-   "x": 0,
-   "y": 1120
-  },
-  "prodT3": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "productos",
-   "text": "Versión local del distribuidor · y la misma pestaña con otra plantilla",
-   "w": 240,
-   "x": 0,
-   "y": 2520
-  },
-  "proyT1": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "proyectos",
-   "text": "Proyectos · el ganadero publica lo que necesita (Samuel)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "proyT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "proyectos",
-   "text": "Empresas y expertos reciben oportunidades que encajan",
-   "w": 240,
-   "x": 0,
-   "y": 1020
-  },
-  "selT1": {
-   "kind": "title1",
-   "maxW": 5400,
-   "page": "componentes",
-   "text": "Componentes comunes · especies, mercados, rama de negocio, cargo e intereses",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "servT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "servicios",
-   "text": "Módulo Servicios (AgroNova)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "soloDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "solo",
-   "text": "Desde el alta general: opción «Más tarde»",
-   "w": 240,
-   "x": 0,
-   "y": 2220
-  },
-  "soloTitulo": {
-   "kind": "title1",
-   "maxW": 4720,
-   "page": "solo",
-   "text": "Alta solo para mí · Samuel Esteban, gerente de Granja Los Olmos (broilers, Lleida)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "soloTitulo2": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "solo",
-   "text": "Primera consulta y vuelta a los 3 días",
-   "w": 240,
-   "x": 0,
-   "y": 1000
-  },
-  "sucT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursales",
-   "text": "Alta · Fabricante con sucursales (Zucami, Sede global)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "sucT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursales",
-   "text": "Permisos, página de cada sucursal y publicación",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "tabT1": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "tableros",
-   "text": "Tableros · Samuel Esteban (Granja Los Olmos)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "tabT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "tableros",
-   "text": "Comparador · sumario de comparaciones y comparativa (solo productos del mismo tipo)",
-   "w": 240,
-   "x": 0,
-   "y": 1020
-  },
-  "titulo": {
-   "kind": "title1",
-   "maxW": 4480,
-   "page": "header",
-   "text": "Header Agroolink · propuesta v2",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "iu2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "intusuario",
-   "text": "FACTURACIÓN · detalle de cada pestaña",
-   "w": 240,
-   "x": 0,
-   "y": 2700
-  }
- },
- "order": [
-  "Main.dc.html",
-  "Personal.dc.html",
-  "Experto.dc.html",
-  "ConEmpresa.dc.html",
-  "Empresa.dc.html",
-  "Login1Email.dc.html",
-  "Login1bCodigo.dc.html",
-  "LoginIntereses.dc.html",
-  "Login2SinCuenta.dc.html",
-  "Login3Crear.dc.html",
-  "Login4Empezar.dc.html",
-  "Login5Creada.dc.html",
-  "Alta4MiEspacio.dc.html",
-  "AltaMiEspacioIntereses.dc.html",
-  "AltaEmpresa.dc.html",
-  "AltaExperto.dc.html",
-  "AltaConsulta.dc.html",
-  "EmpE1Empezar.dc.html",
-  "EmpE2Creada.dc.html",
-  "EmpE3Buscar.dc.html",
-  "EmpE4Verificar.dc.html",
-  "EmpE5Datos.dc.html",
-  "EmpE6Producto.dc.html",
-  "EmpE7Panel.dc.html",
-  "MiM1Empezar.dc.html",
-  "MiM2Creada.dc.html",
-  "MiM3Guardado.dc.html",
-  "MiM4Comparar.dc.html",
-  "MiM5Consulta.dc.html",
-  "MiM6Dia3.dc.html",
-  "ExpX1Empezar.dc.html",
-  "ExpX2Creada.dc.html",
-  "ExpX3Especialidad.dc.html",
-  "ExpX4Servicios.dc.html",
-  "ExpX5Publicar.dc.html",
-  "ExpX6Publicado.dc.html",
-  "ExpX7Semana.dc.html",
-  "IntS1Comprador.dc.html",
-  "IntS2Experta.dc.html",
-  "IntS3Empresa.dc.html",
-  "IntS4Ficha.dc.html",
-  "IntP1Aviso.dc.html",
-  "IntP2Intro.dc.html",
-  "IntP3Asistente.dc.html",
-  "IntHeader.dc.html",
-  "IntSidebar.dc.html",
-  "AvatarMenu.dc.html",
-  "Precios.dc.html",
-  "PreciosExperto.dc.html",
-  "PreciosComprador.dc.html",
-  "Checkout.dc.html",
-  "CfgTipo.dc.html",
-  "CfgTipoDist.dc.html",
-  "CfgPerfil.dc.html",
-  "CfgSucursales.dc.html",
-  "CfgComerciales.dc.html",
-  "CfgDistribuidores.dc.html",
-  "CfgMarcas.dc.html",
-  "CfgContacto.dc.html",
-  "WizTop.dc.html",
-  "CfgFichaLocal.dc.html",
-  "CfgDondeComprar.dc.html",
-  "FabTipo.dc.html",
-  "FabCabecera.dc.html",
-  "FabSobre.dc.html",
-  "FabDistribuidores.dc.html",
-  "FabExpertos.dc.html",
-  "FabContenidos.dc.html",
-  "FabContacto.dc.html",
-  "FabPublicar.dc.html",
-  "ProdCatalogo.dc.html",
-  "ProdImportar.dc.html",
-  "ProdAcuerdos.dc.html",
-  "ProdFichaGeneral.dc.html",
-  "ProdFichaVariantes.dc.html",
-  "ProdFichaBeneficios.dc.html",
-  "ProdFichaEspecificaciones.dc.html",
-  "ProdFichaDocumentos.dc.html",
-  "ProdFichaMercados.dc.html",
-  "ProdVersionLocal.dc.html",
-  "ProdEspecEquipamiento.dc.html",
-  "TabMis.dc.html",
-  "TabVista.dc.html",
-  "TabGuardar.dc.html",
-  "TabCompartir.dc.html",
-  "CompSumario.dc.html",
-  "CompNueva1.dc.html",
-  "CompNueva2.dc.html",
-  "CompVista.dc.html",
-  "CompOtroTipo.dc.html",
-  "CompSolicitar.dc.html",
-  "ComTipo.dc.html",
-  "ComEquipo.dc.html",
-  "ComZonas.dc.html",
-  "ComContacto.dc.html",
-  "ComPublicar.dc.html",
-  "ComBandeja.dc.html",
-  "SucTipo.dc.html",
-  "SucRed.dc.html",
-  "SucPaises.dc.html",
-  "SucPermisos.dc.html",
-  "SucPagina.dc.html",
-  "SucPublicar.dc.html",
-  "DisTipo.dc.html",
-  "DisMarcas.dc.html",
-  "DisAutorizacion.dc.html",
-  "DisContacto.dc.html",
-  "DisPublicar.dc.html",
-  "DisElegir.dc.html",
-  "DisSubir.dc.html",
-  "SelEspecies.dc.html",
-  "SelMercados.dc.html",
-  "ServLista.dc.html",
-  "ServEditor.dc.html",
-  "SelRamasCargos.dc.html",
-  "SelIntereses.dc.html",
-  "ProyCrear.dc.html",
-  "ProyDestinatarios.dc.html",
-  "ProyMis.dc.html",
-  "ProyDetalle.dc.html",
-  "ProyOportunidades.dc.html",
-  "ProyPropuesta.dc.html",
-  "ProyExperto.dc.html",
-  "FabShell.dc.html",
-  "Fig01.dc.html",
-  "Fig02.dc.html",
-  "Fig03.dc.html",
-  "Fig04.dc.html",
-  "Fig05.dc.html",
-  "Fig06.dc.html",
-  "Fig07.dc.html",
-  "Fig08.dc.html",
-  "Fig09.dc.html",
-  "Fig10.dc.html",
-  "Fig19.dc.html",
-  "Fig11.dc.html",
-  "Fig12.dc.html",
-  "Fig47.dc.html",
-  "Fig48.dc.html",
-  "Fig51.dc.html",
-  "Fig52.dc.html",
-  "Fig56.dc.html",
-  "Fig57.dc.html",
-  "Fig60.dc.html",
-  "Fig62.dc.html",
-  "Fig28.dc.html",
-  "Fig29.dc.html",
-  "Fig36.dc.html",
-  "Fig45.dc.html",
-  "Fig20.dc.html",
-  "Fig21.dc.html",
-  "Fig22.dc.html",
-  "Fig23.dc.html",
-  "Fig24.dc.html",
-  "Fig30.dc.html",
-  "Fig31.dc.html",
-  "Fig32.dc.html",
-  "Fig13.dc.html",
-  "Fig14.dc.html",
-  "Fig15.dc.html",
-  "Fig16.dc.html",
-  "Fig25.dc.html",
-  "Fig26.dc.html",
-  "Fig27.dc.html",
-  "Fig33.dc.html",
-  "Fig34.dc.html",
-  "Fig35.dc.html",
-  "Fig17.dc.html",
-  "Fig18.dc.html",
-  "Fig37.dc.html",
-  "Fig38.dc.html",
-  "Fig39.dc.html",
-  "Fig40.dc.html",
-  "Fig41.dc.html",
-  "Fig42.dc.html",
-  "Fig43.dc.html",
-  "Fig44.dc.html",
-  "Fig46.dc.html",
-  "Fig49.dc.html",
-  "Fig50.dc.html",
-  "Fig53.dc.html",
-  "Fig54.dc.html",
-  "Fig55.dc.html",
-  "Fig58.dc.html",
-  "Fig59.dc.html",
-  "Fig64.dc.html",
-  "Fig65.dc.html",
-  "Fig66.dc.html",
-  "Fig67.dc.html",
-  "Fig68.dc.html",
-  "Fig61.dc.html",
-  "Fig63.dc.html",
-  "CuentaPerfil.dc.html",
-  "CuentaCompras.dc.html",
-  "CuentaAyuda.dc.html",
-  "CuentaIdioma.dc.html",
-  "MobHome.dc.html",
-  "MobHomeVisitante.dc.html",
-  "MobMenu.dc.html",
-  "MobBuscar.dc.html",
-  "MobIntereses.dc.html",
-  "MobExplorarEspecies.dc.html",
-  "MobEspecie.dc.html",
-  "MobResultados.dc.html",
-  "MobExplorarCategorias.dc.html",
-  "MobCategoria.dc.html",
-  "MobTabBar.dc.html",
-  "CuentaPlanes.dc.html",
-  "CuentaPedidos.dc.html",
-  "CuentaFacturas.dc.html",
-  "CuentaPagos.dc.html",
-  "CuentaDirecciones.dc.html",
-  "UsrEspacio.dc.html",
-  "UsrEspacioMenu.dc.html",
-  "UsrProyectos.dc.html",
-  "UsrTableros.dc.html",
-  "UsrComparaciones.dc.html",
-  "UsrHistorial.dc.html",
-  "UsrMensajes.dc.html",
-  "UsrPerfil.dc.html",
-  "UsrFacturacion.dc.html",
-  "UsrFactPlanes.dc.html",
-  "UsrFactPedidos.dc.html",
-  "UsrFactFacturas.dc.html",
-  "UsrFactPagos.dc.html",
-  "UsrFactDirecciones.dc.html",
-  "UsrIdioma.dc.html",
-  "UsrAyuda.dc.html",
-  "ExpPanel.dc.html",
-  "ExpOportunidades.dc.html",
-  "ExpConsultas.dc.html",
-  "ExpServicios.dc.html",
-  "ExpPerfil.dc.html"
- ],
- "pages": [
-  {
-   "id": "header",
-   "name": "Header"
-  },
-  {
-   "id": "proyectos",
-   "name": "OK_Proyectos (módulo central)"
-  },
-  {
-   "id": "componentes",
-   "name": "Componentes · especies, mercados, ramas y cargos"
-  },
-  {
-   "id": "alta",
-   "name": "001_Alta Usuario"
-  },
-  {
-   "id": "altaempresa",
-   "name": "Alta empresa"
-  },
-  {
-   "id": "solo",
-   "name": "Alta solo para mí"
-  },
-  {
-   "id": "experto",
-   "name": "Alta experto"
-  },
-  {
-   "id": "intusuario",
-   "name": "002_Intranet · Usuario (consolidada)"
-  },
-  {
-   "id": "intexperto",
-   "name": "Intranet · Experto (consolidada)"
-  },
-  {
-   "id": "intranet",
-   "name": "Intranet"
-  },
-  {
-   "id": "planes",
-   "name": "Planes"
-  },
-  {
-   "id": "configempresa",
-   "name": "Alta empresa · configuraciones"
-  },
-  {
-   "id": "fabdist",
-   "name": "Alta · Fabricante con distribuidores"
-  },
-  {
-   "id": "comerciales",
-   "name": "Alta · Fabricante con comerciales"
-  },
-  {
-   "id": "sucursales",
-   "name": "Alta · Fabricante con sucursales"
-  },
-  {
-   "id": "distmulti",
-   "name": "Alta · Distribuidor multimarca"
-  },
-  {
-   "id": "productos",
-   "name": "Productos (módulo)"
-  },
-  {
-   "id": "servicios",
-   "name": "Servicios (módulo)"
-  },
-  {
-   "id": "tableros",
-   "name": "OK_Tableros y comparador"
-  },
-  {
-   "id": "movil",
-   "name": "Móvil · Home y menú"
-  },
-  {
-   "id": "figma",
-   "name": "Front · Figma (referencia escritorio)"
-  }
- ],
- "title": "Agroolink Header v2"
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Alta4MiEspacio.dc.html": {
+      "h": 900,
+      "page": "alta",
+      "title": "7 · Solo para mí → Mi espacio (primer inicio · «Estabas consultando»)",
+      "w": 1280,
+      "x": 0,
+      "y": 2620
+    },
+    "AltaConsulta.dc.html": {
+      "h": 820,
+      "page": "solo",
+      "title": "Desde Alta (L4) · Más tarde → Primera consulta (datos just-in-time)",
+      "w": 1280,
+      "x": 0,
+      "y": 2520
+    },
+    "AltaEmpresa.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "Desde Alta (L4) · Represento una empresa → Tu empresa",
+      "w": 960,
+      "x": 0,
+      "y": 2400
+    },
+    "AltaExperto.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "Desde Alta (L4) · Soy experto → Perfil de experto",
+      "w": 1120,
+      "x": 0,
+      "y": 2400
+    },
+    "AltaMiEspacioIntereses.dc.html": {
+      "h": 900,
+      "page": "alta",
+      "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
+      "w": 1280,
+      "x": 1360,
+      "y": 2620
+    },
+    "AvatarMenu.dc.html": {
+      "h": 980,
+      "page": "header",
+      "title": "Componente · Menú del avatar (fuera de la intranet)",
+      "w": 400,
+      "x": 4080,
+      "y": 0
+    },
+    "CfgComerciales.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F4 · Paso 5 · Red comercial · Comerciales y asignación",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "CfgContacto.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F7 · Paso 6 · Botones de contacto y a quién llega cada solicitud",
+      "w": 1280,
+      "x": 4080,
+      "y": 1240
+    },
+    "CfgDistribuidores.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F5 · Paso 5 · Quién vende tus productos (DSM aprueba por producto)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "CfgDondeComprar.dc.html": {
+      "h": 1000,
+      "page": "configempresa",
+      "title": "F9 · Lo que ve el comprador: una ficha, versión de su país y «Dónde comprarlo»",
+      "w": 1280,
+      "x": 6800,
+      "y": 1240
+    },
+    "CfgFichaLocal.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F8 · Paso 7 · Versión local de una ficha (base del fabricante + país)",
+      "w": 1280,
+      "x": 5440,
+      "y": 1240
+    },
+    "CfgMarcas.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F6 · Paso 5 · Marcas y productos que vendes (AgroNova)",
+      "w": 1280,
+      "x": 2720,
+      "y": 1240
+    },
+    "CfgPerfil.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F2 · Paso 4 · Perfil público (cabecera de la ficha)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "CfgSucursales.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F3 · Paso 5 · Sucursales (con administradores propios)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "CfgTipo.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F1 · Paso 3 · Tipo de empresa — fabricante (Zucami)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "CfgTipoDist.dc.html": {
+      "h": 900,
+      "page": "configempresa",
+      "title": "F1b · Paso 3 · Tipo de empresa — distribuidor multimarca (AgroNova)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "Checkout.dc.html": {
+      "h": 900,
+      "page": "planes",
+      "title": "PL4 · Contratar Empresa Pro (desde la intranet, precio fundador)",
+      "w": 1280,
+      "x": 0,
+      "y": 2600
+    },
+    "ComBandeja.dc.html": {
+      "h": 900,
+      "page": "comerciales",
+      "title": "K6 · Bandeja de la comercial (Laura García)",
+      "w": 1280,
+      "x": 2720,
+      "y": 1240
+    },
+    "ComContacto.dc.html": {
+      "h": 940,
+      "page": "comerciales",
+      "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "ComEquipo.dc.html": {
+      "h": 940,
+      "page": "comerciales",
+      "title": "K2 · Equipo comercial (cuentas en Agroolink)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "ComPublicar.dc.html": {
+      "h": 940,
+      "page": "comerciales",
+      "title": "K5 · Revisar y publicar",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "ComTipo.dc.html": {
+      "h": 940,
+      "page": "comerciales",
+      "title": "K1 · Tipo de empresa: equipo comercial propio",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "ComZonas.dc.html": {
+      "h": 940,
+      "page": "comerciales",
+      "title": "K3 · Zonas de cada comercial",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "CompNueva1.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C0a · Nueva comparación · escribir unas letras",
+      "w": 1280,
+      "x": 1360,
+      "y": 1300
+    },
+    "CompNueva2.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C0b · Nueva comparación · añadir del mismo tipo",
+      "w": 1280,
+      "x": 2720,
+      "y": 1300
+    },
+    "CompOtroTipo.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C2 · Añadir un producto de otro tipo",
+      "w": 1280,
+      "x": 5440,
+      "y": 1300
+    },
+    "CompSolicitar.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C3 · Solicitar información a los 3",
+      "w": 1280,
+      "x": 6800,
+      "y": 1300
+    },
+    "CompSumario.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C0 · Mis comparaciones · sumario (copia de U4)",
+      "w": 1280,
+      "x": 0,
+      "y": 1300
+    },
+    "CompVista.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "C1 · Comparativa del mismo tipo (enzimas)",
+      "w": 1280,
+      "x": 4080,
+      "y": 1300
+    },
+    "ConEmpresa.dc.html": {
+      "h": 1060,
+      "page": "header",
+      "title": "4 · Personal con empresa",
+      "w": 1280,
+      "x": 0,
+      "y": 1180
+    },
+    "CuentaAyuda.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "C4 · Mi cuenta · Ayuda y contacto",
+      "w": 1280,
+      "x": 4080,
+      "y": 3720
+    },
+    "CuentaCompras.dc.html": {
+      "h": 980,
+      "page": "intranet",
+      "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
+      "w": 1280,
+      "x": 1360,
+      "y": 3720
+    },
+    "CuentaDirecciones.dc.html": {
+      "h": 980,
+      "page": "intranet",
+      "title": "C2e · Facturación · Direcciones",
+      "w": 1280,
+      "x": 5440,
+      "y": 5200
+    },
+    "CuentaFacturas.dc.html": {
+      "h": 980,
+      "page": "intranet",
+      "title": "C2c · Facturación · Facturas",
+      "w": 1280,
+      "x": 2720,
+      "y": 5200
+    },
+    "CuentaIdioma.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "C3 · Mi cuenta · Idioma y zona",
+      "w": 1280,
+      "x": 2720,
+      "y": 3720
+    },
+    "CuentaPagos.dc.html": {
+      "h": 980,
+      "page": "intranet",
+      "title": "C2d · Facturación · Métodos de pago",
+      "w": 1280,
+      "x": 4080,
+      "y": 5200
+    },
+    "CuentaPedidos.dc.html": {
+      "h": 980,
+      "page": "intranet",
+      "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
+      "w": 1280,
+      "x": 1360,
+      "y": 5200
+    },
+    "CuentaPerfil.dc.html": {
+      "h": 1100,
+      "page": "intranet",
+      "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
+      "w": 1280,
+      "x": 0,
+      "y": 3720
+    },
+    "CuentaPlanes.dc.html": {
+      "h": 1110,
+      "page": "intranet",
+      "title": "C2a · Facturación · Planes y suscripciones",
+      "w": 1280,
+      "x": 0,
+      "y": 5200
+    },
+    "DisAutorizacion.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X5 · Validación de la marca (lo que recibe Zucami)",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "DisContacto.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X6 · Contacto: delegaciones por país",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "DisElegir.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X3 · Añadir productos que ya existen en Agroolink",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "DisMarcas.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X2 · Marcas (se generan desde los productos)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "DisPublicar.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X7 · Revisar y publicar",
+      "w": 1280,
+      "x": 2720,
+      "y": 1240
+    },
+    "DisSubir.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X4 · Subir un producto nuevo (con control de duplicados)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "DisTipo.dc.html": {
+      "h": 940,
+      "page": "distmulti",
+      "title": "X1 · Tipo de empresa: distribuidor con marcas propias",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "EmpE1Empezar.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E1 · (tras L1–L3) ¿Cómo quieres empezar? → Empresa",
+      "w": 960,
+      "x": 0,
+      "y": 0
+    },
+    "EmpE2Creada.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E2 · Cuenta creada → seguir con la empresa",
+      "w": 960,
+      "x": 1040,
+      "y": 0
+    },
+    "EmpE3Buscar.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E3 · Busca tu empresa",
+      "w": 960,
+      "x": 2080,
+      "y": 0
+    },
+    "EmpE4Verificar.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E4 · Verifica que la representas",
+      "w": 960,
+      "x": 3120,
+      "y": 0
+    },
+    "EmpE5Datos.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E5 · Datos de la empresa",
+      "w": 1120,
+      "x": 0,
+      "y": 1180
+    },
+    "EmpE6Producto.dc.html": {
+      "h": 760,
+      "page": "altaempresa",
+      "title": "E6 · Primer producto",
+      "w": 960,
+      "x": 1200,
+      "y": 1180
+    },
+    "EmpE7Panel.dc.html": {
+      "h": 820,
+      "page": "altaempresa",
+      "title": "E7 · Panel de empresa (primer día)",
+      "w": 1280,
+      "x": 2240,
+      "y": 1180
+    },
+    "Empresa.dc.html": {
+      "h": 1060,
+      "page": "header",
+      "title": "5 · Modo empresa",
+      "w": 1280,
+      "x": 1360,
+      "y": 1180
+    },
+    "ExpConsultas.dc.html": {
+      "h": 1000,
+      "page": "intexperto",
+      "title": "E3 · Consultas recibidas",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ExpOportunidades.dc.html": {
+      "h": 1000,
+      "page": "intexperto",
+      "title": "E2 · Oportunidades (proyectos que encajan)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "ExpPanel.dc.html": {
+      "h": 1000,
+      "page": "intexperto",
+      "title": "E1 · Panel de experta",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "ExpPerfil.dc.html": {
+      "h": 1000,
+      "page": "intexperto",
+      "title": "E5 · Perfil de experta (editor + vista pública)",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    },
+    "ExpServicios.dc.html": {
+      "h": 1000,
+      "page": "intexperto",
+      "title": "E4 · Mis servicios",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "ExpX1Empezar.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X1 · (tras L1–L3) ¿Cómo quieres empezar? → Experto",
+      "w": 960,
+      "x": 0,
+      "y": 0
+    },
+    "ExpX2Creada.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X2 · Cuenta creada → crear perfil de experto",
+      "w": 960,
+      "x": 1040,
+      "y": 0
+    },
+    "ExpX3Especialidad.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X3 · Paso 1 · Especialidad",
+      "w": 1120,
+      "x": 2080,
+      "y": 0
+    },
+    "ExpX4Servicios.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X4 · Paso 2 · Servicios (opcional)",
+      "w": 1120,
+      "x": 3280,
+      "y": 0
+    },
+    "ExpX5Publicar.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X5 · Paso 3 · Revisar y publicar",
+      "w": 1120,
+      "x": 0,
+      "y": 1180
+    },
+    "ExpX6Publicado.dc.html": {
+      "h": 760,
+      "page": "experto",
+      "title": "X6 · Perfil publicado",
+      "w": 960,
+      "x": 1200,
+      "y": 1180
+    },
+    "ExpX7Semana.dc.html": {
+      "h": 820,
+      "page": "experto",
+      "title": "X7 · Mi espacio como experto, primera semana",
+      "w": 1280,
+      "x": 2240,
+      "y": 1180
+    },
+    "Experto.dc.html": {
+      "h": 1060,
+      "page": "header",
+      "title": "3 · Personal + perfil de experto",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "FabCabecera.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D2 · Cabecera de la ficha",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "FabContacto.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D7 · Contacto: «Solicitar información» y destinos",
+      "w": 1280,
+      "x": 2720,
+      "y": 1240
+    },
+    "FabContenidos.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D6 · Contenidos (Agrinews y propuesta editorial)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "FabDistribuidores.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D4 · Distribuidores y «Quiero ser distribuidor»",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "FabExpertos.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D5 · Expertos recomendados",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "FabPublicar.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D8 · Revisar y publicar",
+      "w": 1280,
+      "x": 4080,
+      "y": 1240
+    },
+    "FabShell.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "Componente · Constructor de ficha (barra y secciones)",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    },
+    "FabSobre.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D3 · Sobre la empresa",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "FabTipo.dc.html": {
+      "h": 940,
+      "page": "fabdist",
+      "title": "D1 · Tipo de empresa",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "Fig01.dc.html": {
+      "h": 66,
+      "page": "figma",
+      "title": "F01 · Header · usuario logueado",
+      "w": 922,
+      "x": 0,
+      "y": 0
+    },
+    "Fig02.dc.html": {
+      "h": 66,
+      "page": "figma",
+      "title": "F02 · Header · con selector de región",
+      "w": 1218,
+      "x": 1042,
+      "y": 0
+    },
+    "Fig03.dc.html": {
+      "h": 3389,
+      "page": "figma",
+      "title": "F03 · Home logueado «Hola Samuel»",
+      "w": 1292,
+      "x": 2380,
+      "y": 0
+    },
+    "Fig04.dc.html": {
+      "h": 999,
+      "page": "figma",
+      "title": "F04 · Mega-menú de categorías",
+      "w": 1292,
+      "x": 3792,
+      "y": 0
+    },
+    "Fig05.dc.html": {
+      "h": 3634,
+      "page": "figma",
+      "title": "F05 · Home logueado · variante",
+      "w": 1292,
+      "x": 5204,
+      "y": 0
+    },
+    "Fig06.dc.html": {
+      "h": 2381,
+      "page": "figma",
+      "title": "F06 · Categoría · Aves › Broilers › Nutrición",
+      "w": 1352,
+      "x": 0,
+      "y": 4134
+    },
+    "Fig07.dc.html": {
+      "h": 2381,
+      "page": "figma",
+      "title": "F07 · Categoría · variante",
+      "w": 1284,
+      "x": 1472,
+      "y": 4134
+    },
+    "Fig08.dc.html": {
+      "h": 2035,
+      "page": "figma",
+      "title": "F08 · Resultados «micotoxinas porcino»",
+      "w": 1284,
+      "x": 2876,
+      "y": 4134
+    },
+    "Fig09.dc.html": {
+      "h": 2072,
+      "page": "figma",
+      "title": "F09 · Resultados · variante",
+      "w": 1284,
+      "x": 4280,
+      "y": 4134
+    },
+    "Fig10.dc.html": {
+      "h": 1830,
+      "page": "figma",
+      "title": "F10 · Página de especie · Aves",
+      "w": 1284,
+      "x": 5684,
+      "y": 4134
+    },
+    "Fig11.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F11 · Producto OptiFeed · modal",
+      "w": 1286,
+      "x": 1400,
+      "y": 7015
+    },
+    "Fig12.dc.html": {
+      "h": 810,
+      "page": "figma",
+      "title": "F12 · Contactar con la empresa",
+      "w": 1184,
+      "x": 2806,
+      "y": 7015
+    },
+    "Fig13.dc.html": {
+      "h": 1610,
+      "page": "figma",
+      "title": "F13 · Directorio de expertos",
+      "w": 1280,
+      "x": 0,
+      "y": 10502
+    },
+    "Fig14.dc.html": {
+      "h": 2799,
+      "page": "figma",
+      "title": "F14 · Perfil · Dr. Carlos Martínez",
+      "w": 1280,
+      "x": 1400,
+      "y": 10502
+    },
+    "Fig15.dc.html": {
+      "h": 1502,
+      "page": "figma",
+      "title": "F15 · Perfil experto · variante",
+      "w": 1280,
+      "x": 2800,
+      "y": 10502
+    },
+    "Fig16.dc.html": {
+      "h": 1609,
+      "page": "figma",
+      "title": "F16 · Perfil experto · variante",
+      "w": 1280,
+      "x": 4200,
+      "y": 10502
+    },
+    "Fig17.dc.html": {
+      "h": 1281,
+      "page": "figma",
+      "title": "F17 · Modal · menú de categorías",
+      "w": 1288,
+      "x": 8238,
+      "y": 13801
+    },
+    "Fig18.dc.html": {
+      "h": 1281,
+      "page": "figma",
+      "title": "F18 · Modal · menú de categorías (variante)",
+      "w": 1288,
+      "x": 9646,
+      "y": 13801
+    },
+    "Fig19.dc.html": {
+      "h": 1421,
+      "page": "figma",
+      "title": "F19 · Ficha de producto OptiFeed",
+      "w": 1280,
+      "x": 0,
+      "y": 7015
+    },
+    "Fig20.dc.html": {
+      "h": 1027,
+      "page": "figma",
+      "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1286,
+      "x": 0,
+      "y": 8975
+    },
+    "Fig21.dc.html": {
+      "h": 913,
+      "page": "figma",
+      "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1223,
+      "x": 1406,
+      "y": 8975
+    },
+    "Fig22.dc.html": {
+      "h": 798,
+      "page": "figma",
+      "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1141,
+      "x": 2749,
+      "y": 8975
+    },
+    "Fig23.dc.html": {
+      "h": 928,
+      "page": "figma",
+      "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1200,
+      "x": 4010,
+      "y": 8975
+    },
+    "Fig24.dc.html": {
+      "h": 1026,
+      "page": "figma",
+      "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1286,
+      "x": 5330,
+      "y": 8975
+    },
+    "Fig25.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F25 · Login",
+      "w": 1228,
+      "x": 0,
+      "y": 13801
+    },
+    "Fig26.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F26 · Login · código",
+      "w": 1280,
+      "x": 1348,
+      "y": 13801
+    },
+    "Fig27.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F27 · Login · paso",
+      "w": 1280,
+      "x": 2748,
+      "y": 13801
+    },
+    "Fig28.dc.html": {
+      "h": 1392,
+      "page": "figma",
+      "title": "F28 · Producto Zucami Aviary Pro",
+      "w": 1280,
+      "x": 15358,
+      "y": 7015
+    },
+    "Fig29.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F29 · Guardar en tablero",
+      "w": 1280,
+      "x": 16758,
+      "y": 7015
+    },
+    "Fig30.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1280,
+      "x": 6736,
+      "y": 8975
+    },
+    "Fig31.dc.html": {
+      "h": 1025,
+      "page": "figma",
+      "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1282,
+      "x": 8136,
+      "y": 8975
+    },
+    "Fig32.dc.html": {
+      "h": 1025,
+      "page": "figma",
+      "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
+      "w": 1282,
+      "x": 9538,
+      "y": 8975
+    },
+    "Fig33.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F33 · Login · paso",
+      "w": 1280,
+      "x": 4148,
+      "y": 13801
+    },
+    "Fig34.dc.html": {
+      "h": 1004,
+      "page": "figma",
+      "title": "F34 · Cuenta creada",
+      "w": 1289,
+      "x": 5548,
+      "y": 13801
+    },
+    "Fig35.dc.html": {
+      "h": 833,
+      "page": "figma",
+      "title": "F35 · Login · paso",
+      "w": 1161,
+      "x": 6957,
+      "y": 13801
+    },
+    "Fig36.dc.html": {
+      "h": 1460,
+      "page": "figma",
+      "title": "F36 · Producto en catálogo de AgroNova",
+      "w": 1280,
+      "x": 18158,
+      "y": 7015
+    },
+    "Fig37.dc.html": {
+      "h": 1306,
+      "page": "figma",
+      "title": "F37 · Listado de empresas / expertos / eventos",
+      "w": 1280,
+      "x": 0,
+      "y": 15582
+    },
+    "Fig38.dc.html": {
+      "h": 1352,
+      "page": "figma",
+      "title": "F38 · Listado · variante",
+      "w": 1280,
+      "x": 1400,
+      "y": 15582
+    },
+    "Fig39.dc.html": {
+      "h": 1174,
+      "page": "figma",
+      "title": "F39 · Evento · AviForum",
+      "w": 1280,
+      "x": 2800,
+      "y": 15582
+    },
+    "Fig40.dc.html": {
+      "h": 3464,
+      "page": "figma",
+      "title": "F40 · Ficha empresa AgroNova",
+      "w": 1280,
+      "x": 0,
+      "y": 17434
+    },
+    "Fig41.dc.html": {
+      "h": 804,
+      "page": "figma",
+      "title": "F41 · AgroNova · sección",
+      "w": 1280,
+      "x": 1400,
+      "y": 17434
+    },
+    "Fig42.dc.html": {
+      "h": 1082,
+      "page": "figma",
+      "title": "F42 · AgroNova · sección",
+      "w": 1280,
+      "x": 2800,
+      "y": 17434
+    },
+    "Fig43.dc.html": {
+      "h": 1218,
+      "page": "figma",
+      "title": "F43 · AgroNova · sección",
+      "w": 1280,
+      "x": 4200,
+      "y": 17434
+    },
+    "Fig44.dc.html": {
+      "h": 1134,
+      "page": "figma",
+      "title": "F44 · AgroNova · sección",
+      "w": 1280,
+      "x": 5600,
+      "y": 17434
+    },
+    "Fig45.dc.html": {
+      "h": 1460,
+      "page": "figma",
+      "title": "F45 · Producto en catálogo de AgroNova · variante",
+      "w": 1280,
+      "x": 19558,
+      "y": 7015
+    },
+    "Fig46.dc.html": {
+      "h": 4365,
+      "page": "figma",
+      "title": "F46 · Ficha empresa DSM",
+      "w": 1280,
+      "x": 0,
+      "y": 21398
+    },
+    "Fig47.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F47 · Modal · guardar en tablero",
+      "w": 1286,
+      "x": 4110,
+      "y": 7015
+    },
+    "Fig48.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F48 · Modal · guardado en tablero",
+      "w": 1286,
+      "x": 5516,
+      "y": 7015
+    },
+    "Fig49.dc.html": {
+      "h": 1014,
+      "page": "figma",
+      "title": "F49 · DSM · sección",
+      "w": 1280,
+      "x": 1400,
+      "y": 21398
+    },
+    "Fig50.dc.html": {
+      "h": 1243,
+      "page": "figma",
+      "title": "F50 · DSM · sección",
+      "w": 1280,
+      "x": 2800,
+      "y": 21398
+    },
+    "Fig51.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F51 · Modal · descargar vademécum",
+      "w": 1286,
+      "x": 6922,
+      "y": 7015
+    },
+    "Fig52.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F52 · Modal · visitar la web",
+      "w": 1286,
+      "x": 8328,
+      "y": 7015
+    },
+    "Fig53.dc.html": {
+      "h": 1676,
+      "page": "figma",
+      "title": "F53 · DSM · sección",
+      "w": 1280,
+      "x": 4200,
+      "y": 21398
+    },
+    "Fig54.dc.html": {
+      "h": 2075,
+      "page": "figma",
+      "title": "F54 · DSM · sección",
+      "w": 1280,
+      "x": 5600,
+      "y": 21398
+    },
+    "Fig55.dc.html": {
+      "h": 1924,
+      "page": "figma",
+      "title": "F55 · DSM · sección",
+      "w": 1280,
+      "x": 7000,
+      "y": 21398
+    },
+    "Fig56.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F56 · Modal · únete como distribuidor",
+      "w": 1286,
+      "x": 9734,
+      "y": 7015
+    },
+    "Fig57.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F57 · Modal · solicitar información",
+      "w": 1286,
+      "x": 11140,
+      "y": 7015
+    },
+    "Fig58.dc.html": {
+      "h": 1744,
+      "page": "figma",
+      "title": "F58 · Ficha empresa Zucami",
+      "w": 1280,
+      "x": 0,
+      "y": 26263
+    },
+    "Fig59.dc.html": {
+      "h": 1555,
+      "page": "figma",
+      "title": "F59 · Zucami · sección",
+      "w": 1280,
+      "x": 1400,
+      "y": 26263
+    },
+    "Fig60.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F60 · Producto OptiFeed · modal",
+      "w": 1286,
+      "x": 12546,
+      "y": 7015
+    },
+    "Fig61.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F61 · Encontrar mi comercial",
+      "w": 1280,
+      "x": 9800,
+      "y": 26263
+    },
+    "Fig62.dc.html": {
+      "h": 1030,
+      "page": "figma",
+      "title": "F62 · Producto OptiFeed · modal",
+      "w": 1286,
+      "x": 13952,
+      "y": 7015
+    },
+    "Fig63.dc.html": {
+      "h": 1024,
+      "page": "figma",
+      "title": "F63 · Contactar con Laura García",
+      "w": 1280,
+      "x": 11200,
+      "y": 26263
+    },
+    "Fig64.dc.html": {
+      "h": 1461,
+      "page": "figma",
+      "title": "F64 · Zucami · catálogo",
+      "w": 1280,
+      "x": 2800,
+      "y": 26263
+    },
+    "Fig65.dc.html": {
+      "h": 1744,
+      "page": "figma",
+      "title": "F65 · Zucami · catálogo",
+      "w": 1280,
+      "x": 4200,
+      "y": 26263
+    },
+    "Fig66.dc.html": {
+      "h": 1461,
+      "page": "figma",
+      "title": "F66 · Zucami · catálogo",
+      "w": 1280,
+      "x": 5600,
+      "y": 26263
+    },
+    "Fig67.dc.html": {
+      "h": 1848,
+      "page": "figma",
+      "title": "F67 · Zucami · catálogo",
+      "w": 1280,
+      "x": 7000,
+      "y": 26263
+    },
+    "Fig68.dc.html": {
+      "h": 1997,
+      "page": "figma",
+      "title": "F68 · Zucami LATAM",
+      "w": 1280,
+      "x": 8400,
+      "y": 26263
+    },
+    "IntHeader.dc.html": {
+      "h": 68,
+      "page": "intranet",
+      "title": "Componente · Header intranet",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "IntP1Aviso.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "P1 · Laura (aún compradora) · aviso contextual en Mi espacio",
+      "w": 1280,
+      "x": 0,
+      "y": 2480
+    },
+    "IntP2Intro.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "P2 · «Ofrecer mis servicios»: qué cambia y qué gana",
+      "w": 1280,
+      "x": 1360,
+      "y": 2480
+    },
+    "IntP3Asistente.dc.html": {
+      "h": 760,
+      "page": "intranet",
+      "title": "P3 · Asistente de 3 pasos (mismo que en Alta experto) → resultado: S2",
+      "w": 1120,
+      "x": 2720,
+      "y": 2480
+    },
+    "IntS1Comprador.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "S1 · Samuel · Mi espacio (menú lateral + «Tus espacios» abierto)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "IntS2Experta.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "S2 · Laura · Mi espacio con sección «Como experta»",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "IntS3Empresa.dc.html": {
+      "h": 900,
+      "page": "intranet",
+      "title": "S3 · Carla · Panel de empresa (menú lateral de empresa)",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "IntS4Ficha.dc.html": {
+      "h": 820,
+      "page": "intranet",
+      "title": "S4 · Exploración · ficha de producto SIN barra lateral",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "IntSidebar.dc.html": {
+      "h": 832,
+      "page": "intranet",
+      "title": "Componente · Menú lateral",
+      "w": 256,
+      "x": 2720,
+      "y": 200
+    },
+    "Login1Email.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "1 · L1 · Accede con tu email (cuenta Agrinews)",
+      "w": 960,
+      "x": 0,
+      "y": 0
+    },
+    "Login1bCodigo.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "2a · L1b · Ya registrado → código por email (OTP)",
+      "w": 960,
+      "x": 1040,
+      "y": 0
+    },
+    "Login2SinCuenta.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "2b · L2 · No registrado → todavía no tienes cuenta",
+      "w": 960,
+      "x": 1040,
+      "y": 1300
+    },
+    "Login3Crear.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "3b · L3 · Registro actual de Agrinews (no se diseña) → 4",
+      "w": 960,
+      "x": 2080,
+      "y": 1300
+    },
+    "Login4Empezar.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "5 · L4 · ¿Cómo quieres empezar? · solo la 1.ª vez en Agroolink",
+      "w": 960,
+      "x": 3120,
+      "y": 0
+    },
+    "Login5Creada.dc.html": {
+      "h": 760,
+      "page": "alta",
+      "title": "6 · L5 · Cuenta lista (según elección)",
+      "w": 960,
+      "x": 4160,
+      "y": 0
+    },
+    "LoginIntereses.dc.html": {
+      "h": 900,
+      "page": "alta",
+      "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
+      "w": 960,
+      "x": 2080,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 960,
+      "page": "header",
+      "title": "1 · Sin sesión",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "MiM1Empezar.dc.html": {
+      "h": 760,
+      "page": "solo",
+      "title": "M1 · (tras L1–L3) ¿Cómo quieres empezar? → Solo para mí",
+      "w": 960,
+      "x": 0,
+      "y": 0
+    },
+    "MiM2Creada.dc.html": {
+      "h": 760,
+      "page": "solo",
+      "title": "M2 · Cuenta creada → vuelve a donde estaba",
+      "w": 960,
+      "x": 1040,
+      "y": 0
+    },
+    "MiM3Guardado.dc.html": {
+      "h": 820,
+      "page": "solo",
+      "title": "M3 · De vuelta en la ficha: producto guardado",
+      "w": 1280,
+      "x": 2080,
+      "y": 0
+    },
+    "MiM4Comparar.dc.html": {
+      "h": 820,
+      "page": "solo",
+      "title": "M4 · Comparar y pedir precio",
+      "w": 1280,
+      "x": 3440,
+      "y": 0
+    },
+    "MiM5Consulta.dc.html": {
+      "h": 820,
+      "page": "solo",
+      "title": "M5 · Primera consulta (datos solo esta vez)",
+      "w": 1280,
+      "x": 0,
+      "y": 1300
+    },
+    "MiM6Dia3.dc.html": {
+      "h": 820,
+      "page": "solo",
+      "title": "M6 · Mi espacio, 3 días después",
+      "w": 1280,
+      "x": 1360,
+      "y": 1300
+    },
+    "MobBuscar.dc.html": {
+      "h": 844,
+      "page": "movil",
+      "title": "M4 · Búsqueda",
+      "w": 390,
+      "x": 1590,
+      "y": 0
+    },
+    "MobCategoria.dc.html": {
+      "h": 1030,
+      "page": "movil",
+      "title": "M9 · Categoría → tipo de producto",
+      "w": 390,
+      "x": 2120,
+      "y": 2510
+    },
+    "MobEspecie.dc.html": {
+      "h": 900,
+      "page": "movil",
+      "title": "M6 · Especie → producción (opcional)",
+      "w": 390,
+      "x": 530,
+      "y": 2510
+    },
+    "MobExplorarCategorias.dc.html": {
+      "h": 940,
+      "page": "movil",
+      "title": "M8 · Explorar · por categoría",
+      "w": 390,
+      "x": 1590,
+      "y": 2510
+    },
+    "MobExplorarEspecies.dc.html": {
+      "h": 844,
+      "page": "movil",
+      "title": "M5 · Explorar · por especie",
+      "w": 390,
+      "x": 0,
+      "y": 2510
+    },
+    "MobHome.dc.html": {
+      "h": 2010,
+      "page": "movil",
+      "title": "M1 · Home con sesión",
+      "w": 390,
+      "x": 0,
+      "y": 0
+    },
+    "MobHomeVisitante.dc.html": {
+      "h": 1500,
+      "page": "movil",
+      "title": "M2 · Home sin sesión",
+      "w": 390,
+      "x": 530,
+      "y": 0
+    },
+    "MobIntereses.dc.html": {
+      "h": 1700,
+      "page": "movil",
+      "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
+      "w": 390,
+      "x": 2120,
+      "y": 0
+    },
+    "MobMenu.dc.html": {
+      "h": 1570,
+      "page": "movil",
+      "title": "M3 · Menú (pestaña 5)",
+      "w": 390,
+      "x": 1060,
+      "y": 0
+    },
+    "MobResultados.dc.html": {
+      "h": 920,
+      "page": "movil",
+      "title": "M7 · Resultados · categoría en chips",
+      "w": 390,
+      "x": 1060,
+      "y": 2510
+    },
+    "MobTabBar.dc.html": {
+      "h": 84,
+      "page": "movil",
+      "title": "MobTabBar · componente",
+      "w": 390,
+      "x": 0,
+      "y": 4040
+    },
+    "Personal.dc.html": {
+      "h": 1060,
+      "page": "header",
+      "title": "2 · Cuenta personal (menú alineado con la intranet)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "Precios.dc.html": {
+      "h": 2240,
+      "is_interactive": true,
+      "page": "planes",
+      "title": "PL1 · Página de planes · Para empresas (interactiva: pestañas y mensual/anual)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "PreciosComprador.dc.html": {
+      "h": 2240,
+      "page": "planes",
+      "title": "PL3 · Página de planes · Para compradores",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "PreciosExperto.dc.html": {
+      "h": 2240,
+      "page": "planes",
+      "title": "PL2 · Página de planes · Para expertos",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "ProdAcuerdos.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P3 · Acuerdos de distribución por línea y zona (con exclusividad)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ProdCatalogo.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P1 · Catálogo: filtros, completitud y acciones en bloque",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "ProdEspecEquipamiento.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P7b · Especificaciones · sugeridos + propios (Zucami, tipo Jaulas y alojamientos)",
+      "w": 1280,
+      "x": 1360,
+      "y": 2800
+    },
+    "ProdFichaBeneficios.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P6 · Ficha base · Beneficios y aplicación",
+      "w": 1280,
+      "x": 2720,
+      "y": 1400
+    },
+    "ProdFichaDocumentos.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P8 · Ficha base · Documentación, vídeo y certificaciones",
+      "w": 1280,
+      "x": 5440,
+      "y": 1400
+    },
+    "ProdFichaEspecificaciones.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P7 · Especificaciones · sugeridos + propios (Hy-D®, tipo Vitaminas)",
+      "w": 1280,
+      "x": 4080,
+      "y": 1400
+    },
+    "ProdFichaGeneral.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P4 · Ficha base · General",
+      "w": 1280,
+      "x": 0,
+      "y": 1400
+    },
+    "ProdFichaMercados.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P9 · Ficha base · Mercados y dónde comprar",
+      "w": 1280,
+      "x": 6800,
+      "y": 1400
+    },
+    "ProdFichaVariantes.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P5 · Ficha base · Variantes (embalaje o configuración)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1400
+    },
+    "ProdImportar.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P2 · Importar catálogo por Excel (actualiza por referencia)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "ProdVersionLocal.dc.html": {
+      "h": 940,
+      "page": "productos",
+      "title": "P10 · Versión local de AgroNova (lado del distribuidor)",
+      "w": 1280,
+      "x": 0,
+      "y": 2800
+    },
+    "ProyCrear.dc.html": {
+      "h": 900,
+      "page": "proyectos",
+      "title": "J1 · Crear proyecto · qué necesitas",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "ProyDestinatarios.dc.html": {
+      "h": 900,
+      "page": "proyectos",
+      "title": "J2 · Crear proyecto · a quién se lo enviamos",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "ProyDetalle.dc.html": {
+      "h": 900,
+      "page": "proyectos",
+      "title": "J4 · Detalle del proyecto y propuestas",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "ProyExperto.dc.html": {
+      "h": 1000,
+      "page": "proyectos",
+      "title": "J7 · Proyectos para la experta (Laura Gil)",
+      "w": 1280,
+      "x": 2720,
+      "y": 1300
+    },
+    "ProyMis.dc.html": {
+      "h": 900,
+      "page": "proyectos",
+      "title": "J3 · Mis proyectos",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ProyOportunidades.dc.html": {
+      "h": 1000,
+      "page": "proyectos",
+      "title": "J5 · Oportunidades para la empresa (AgroNova)",
+      "w": 1280,
+      "x": 0,
+      "y": 1300
+    },
+    "ProyPropuesta.dc.html": {
+      "h": 1000,
+      "page": "proyectos",
+      "title": "J6 · Enviar una propuesta",
+      "w": 1280,
+      "x": 1360,
+      "y": 1300
+    },
+    "SelEspecies.dc.html": {
+      "h": 900,
+      "page": "componentes",
+      "title": "Selector de especies",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "SelIntereses.dc.html": {
+      "h": 1100,
+      "page": "componentes",
+      "title": "Selector de intereses · especies, categorías y objetivos",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "SelMercados.dc.html": {
+      "h": 900,
+      "page": "componentes",
+      "title": "Selector de mercados",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "SelRamasCargos.dc.html": {
+      "h": 900,
+      "page": "componentes",
+      "title": "Rama de negocio y cargo (listas del CRM)",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ServEditor.dc.html": {
+      "h": 940,
+      "page": "servicios",
+      "title": "V2 · Editar un servicio: especies y dónde se presta",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "ServLista.dc.html": {
+      "h": 940,
+      "page": "servicios",
+      "title": "V1 · Servicios de AgroNova: especies, zonas y modalidad",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "SucPagina.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S5 · Página de la sucursal (lado de Zucami LATAM)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1240
+    },
+    "SucPaises.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S3 · Países de cada sucursal",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "SucPermisos.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S4 · Qué decide la Sede y qué cada sucursal",
+      "w": 1280,
+      "x": 0,
+      "y": 1240
+    },
+    "SucPublicar.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S6 · Revisar y publicar (Sede)",
+      "w": 1280,
+      "x": 2720,
+      "y": 1240
+    },
+    "SucRed.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S2 · Red de sucursales y administradores",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "SucTipo.dc.html": {
+      "h": 940,
+      "page": "sucursales",
+      "title": "S1 · Tipo de empresa: sucursales o filiales",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "TabCompartir.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "T4 · Compartir tablero (permisos y plan)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "TabGuardar.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "T3 · Guardar en tablero desde una ficha",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "TabMis.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "T1 · Mis tableros (con Historial automático)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "TabVista.dc.html": {
+      "h": 900,
+      "page": "tableros",
+      "title": "T2 · Vista de un tablero con seguimiento por estado",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "UsrAyuda.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U10 · Ayuda y contacto",
+      "w": 1280,
+      "x": 4080,
+      "y": 1400
+    },
+    "UsrComparaciones.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U4 · Mis comparaciones",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    },
+    "UsrEspacio.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U1 · Mi espacio (día a día)",
+      "w": 1280,
+      "x": 0,
+      "y": 0
+    },
+    "UsrEspacioMenu.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U1b · Mi espacio · menú de cuenta abierto («Tus espacios», como S1)",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "UsrFactDirecciones.dc.html": {
+      "h": 980,
+      "page": "intusuario",
+      "title": "U8e · Facturación · Direcciones (copia de C2e)",
+      "w": 1280,
+      "x": 5440,
+      "y": 3000
+    },
+    "UsrFactFacturas.dc.html": {
+      "h": 980,
+      "page": "intusuario",
+      "title": "U8c · Facturación · Facturas (copia de C2c)",
+      "w": 1280,
+      "x": 2720,
+      "y": 3000
+    },
+    "UsrFactPagos.dc.html": {
+      "h": 980,
+      "page": "intusuario",
+      "title": "U8d · Facturación · Métodos de pago (copia de C2d)",
+      "w": 1280,
+      "x": 4080,
+      "y": 3000
+    },
+    "UsrFactPedidos.dc.html": {
+      "h": 980,
+      "page": "intusuario",
+      "title": "U8b · Facturación · Pedidos (copia de C2b)",
+      "w": 1280,
+      "x": 1360,
+      "y": 3000
+    },
+    "UsrFactPlanes.dc.html": {
+      "h": 1110,
+      "page": "intusuario",
+      "title": "U8a · Facturación · Planes y suscripciones (copia de C2a)",
+      "w": 1280,
+      "x": 0,
+      "y": 3000
+    },
+    "UsrFacturacion.dc.html": {
+      "h": 980,
+      "page": "intusuario",
+      "title": "U8 · Facturación (copia de C2)",
+      "w": 1280,
+      "x": 1360,
+      "y": 1400
+    },
+    "UsrHistorial.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U5 · Historial",
+      "w": 1280,
+      "x": 6800,
+      "y": 0
+    },
+    "UsrIdioma.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U9 · Idioma y zona",
+      "w": 1280,
+      "x": 2720,
+      "y": 1400
+    },
+    "UsrMensajes.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U6 · Mensajes",
+      "w": 1280,
+      "x": 8160,
+      "y": 0
+    },
+    "UsrPerfil.dc.html": {
+      "h": 1100,
+      "page": "intusuario",
+      "title": "U7 · Mi perfil (copia de C1)",
+      "w": 1280,
+      "x": 0,
+      "y": 1400
+    },
+    "UsrProyectos.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U2 · Mis proyectos",
+      "w": 1280,
+      "x": 2720,
+      "y": 0
+    },
+    "UsrTableros.dc.html": {
+      "h": 900,
+      "page": "intusuario",
+      "title": "U3 · Mis tableros (copia de T1)",
+      "w": 1280,
+      "x": 4080,
+      "y": 0
+    },
+    "WizTop.dc.html": {
+      "h": 128,
+      "page": "configempresa",
+      "title": "Componente · Cabecera del asistente de empresa",
+      "w": 1280,
+      "x": 5440,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-13T10:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "page": "fabdist",
+    "view": "canvas"
+  },
+  "notes": {
+    "altaL1b": {
+      "kind": "title1",
+      "maxW": 4880,
+      "page": "alta",
+      "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
+      "w": 240,
+      "x": 1040,
+      "y": 1000
+    },
+    "altaTitulo": {
+      "kind": "title1",
+      "maxW": 5120,
+      "page": "alta",
+      "text": "Alta · 1 email → ya registrado: 2a código → 4 intereses → 5 «¿Cómo quieres empezar?» → 6 (4 y 5 solo la 1.ª vez)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "altaTitulo2": {
+      "kind": "title1",
+      "maxW": 4880,
+      "page": "alta",
+      "text": "7 · Solo para mí → Mi espacio. Empresa, experto y «más tarde» siguen en sus páginas",
+      "w": 240,
+      "x": 0,
+      "y": 2320
+    },
+    "cfgTitulo": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "configempresa",
+      "text": "Alta empresa · el formulario se adapta a cómo vende la empresa",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "cfgTitulo2": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "configempresa",
+      "text": "Red comercial y contacto",
+      "w": 240,
+      "x": 0,
+      "y": 940
+    },
+    "comT1": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "comerciales",
+      "text": "Alta · Fabricante con equipo comercial propio (Zucami)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "comT2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "comerciales",
+      "text": "Contacto, publicación y la bandeja de cada comercial",
+      "w": 240,
+      "x": 0,
+      "y": 1040
+    },
+    "disT1": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "distmulti",
+      "text": "Alta · Distribuidor multimarca (AgroNova): elige productos o los sube",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "disT2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "distmulti",
+      "text": "Validación de la marca, contacto y publicación",
+      "w": 240,
+      "x": 0,
+      "y": 1040
+    },
+    "empDesdeAlta": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "altaempresa",
+      "text": "Desde el alta general: opción «Represento una empresa»",
+      "w": 240,
+      "x": 0,
+      "y": 2100
+    },
+    "empTitulo": {
+      "kind": "title1",
+      "maxW": 4080,
+      "page": "altaempresa",
+      "text": "Alta empresa · Carla Martín, directora comercial de AgroExport SRL",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "empTitulo2": {
+      "kind": "title1",
+      "maxW": 3520,
+      "page": "altaempresa",
+      "text": "Configurar la empresa y primer día",
+      "w": 240,
+      "x": 0,
+      "y": 880
+    },
+    "expDesdeAlta": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "experto",
+      "text": "Desde el alta general: opción «Soy experto»",
+      "w": 240,
+      "x": 0,
+      "y": 2100
+    },
+    "expTitulo": {
+      "kind": "title1",
+      "maxW": 4400,
+      "page": "experto",
+      "text": "Alta experto · Laura Gil, veterinaria y consultora en nutrición avícola",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "expTitulo2": {
+      "kind": "title1",
+      "maxW": 3520,
+      "page": "experto",
+      "text": "Publicar el perfil y primera semana",
+      "w": 240,
+      "x": 0,
+      "y": 880
+    },
+    "fabT1": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "fabdist",
+      "text": "Alta · Fabricante con red de distribuidores (DSM-Firmenich)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "fabT2": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "fabdist",
+      "text": "Expertos, contenidos, contacto y publicación",
+      "w": 240,
+      "x": 0,
+      "y": 940
+    },
+    "figT0": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Header y home",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "figT1": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Listados, búsqueda y especie",
+      "w": 240,
+      "x": 0,
+      "y": 3834
+    },
+    "figT2": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Producto y modales",
+      "w": 240,
+      "x": 0,
+      "y": 6715
+    },
+    "figT3": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Pantallas con el nombre antiguo (Farm4You)",
+      "w": 240,
+      "x": 0,
+      "y": 8675
+    },
+    "figT4": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Expertos",
+      "w": 240,
+      "x": 0,
+      "y": 10202
+    },
+    "figT5": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Login y menús",
+      "w": 240,
+      "x": 0,
+      "y": 13501
+    },
+    "figT6": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Listados y eventos",
+      "w": 240,
+      "x": 0,
+      "y": 15282
+    },
+    "figT7": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Empresa · AgroNova",
+      "w": 240,
+      "x": 0,
+      "y": 17134
+    },
+    "figT8": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Empresa · DSM",
+      "w": 240,
+      "x": 0,
+      "y": 21098
+    },
+    "figT9": {
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "figma",
+      "text": "Empresa · Zucami",
+      "w": 240,
+      "x": 0,
+      "y": 25963
+    },
+    "ie0": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "intexperto",
+      "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "intTitulo": {
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "intranet",
+      "text": "Intranet · barra lateral en zonas de trabajo",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "intTitulo2": {
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "intranet",
+      "text": "Empresa y contraste con exploración",
+      "w": 240,
+      "x": 0,
+      "y": 940
+    },
+    "intTitulo3": {
+      "kind": "title1",
+      "maxW": 3840,
+      "page": "intranet",
+      "text": "Paso de comprador a experto desde la intranet",
+      "w": 240,
+      "x": 0,
+      "y": 2180
+    },
+    "intTitulo4": {
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "intranet",
+      "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
+      "w": 240,
+      "x": 0,
+      "y": 3420
+    },
+    "intTitulo5": {
+      "kind": "title1",
+      "maxW": 6720,
+      "page": "intranet",
+      "text": "Facturación · una pantalla por pestaña",
+      "w": 240,
+      "x": 0,
+      "y": 4900
+    },
+    "iu0": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "intusuario",
+      "text": "MI ESPACIO · Samuel (usuario)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "iu1": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "intusuario",
+      "text": "MI CUENTA · común a todos los roles",
+      "w": 240,
+      "x": 0,
+      "y": 1100
+    },
+    "iu2": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "intusuario",
+      "text": "FACTURACIÓN · detalle de cada pestaña",
+      "w": 240,
+      "x": 0,
+      "y": 2700
+    },
+    "movT0": {
+      "kind": "title1",
+      "maxW": 2600,
+      "page": "movil",
+      "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "movT1": {
+      "kind": "title1",
+      "maxW": 2600,
+      "page": "movil",
+      "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
+      "w": 240,
+      "x": 0,
+      "y": 2210
+    },
+    "movT2": {
+      "kind": "title1",
+      "maxW": 2600,
+      "page": "movil",
+      "text": "Componente · barra inferior (prop activo 1–5)",
+      "w": 240,
+      "x": 0,
+      "y": 3740
+    },
+    "plTitulo": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "planes",
+      "text": "Planes y precios · v3 (empresa, experto, comprador)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "plTitulo2": {
+      "kind": "title1",
+      "maxW": 1280,
+      "page": "planes",
+      "text": "Contratar un plan",
+      "w": 240,
+      "x": 0,
+      "y": 2300
+    },
+    "prodT1": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "productos",
+      "text": "Módulo Productos · catálogo amplio (DSM-Firmenich, fabricante con distribuidores)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "prodT2": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "productos",
+      "text": "Ficha base de un producto · las pestañas siguen las de la ficha pública",
+      "w": 240,
+      "x": 0,
+      "y": 1120
+    },
+    "prodT3": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "productos",
+      "text": "Versión local del distribuidor · y la misma pestaña con otra plantilla",
+      "w": 240,
+      "x": 0,
+      "y": 2520
+    },
+    "proyT1": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "proyectos",
+      "text": "Proyectos · el ganadero publica lo que necesita (Samuel)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "proyT2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "proyectos",
+      "text": "Empresas y expertos reciben oportunidades que encajan",
+      "w": 240,
+      "x": 0,
+      "y": 1020
+    },
+    "selT1": {
+      "kind": "title1",
+      "maxW": 5400,
+      "page": "componentes",
+      "text": "Componentes comunes · especies, mercados, rama de negocio, cargo e intereses",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "servT1": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "servicios",
+      "text": "Módulo Servicios (AgroNova)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "soloDesdeAlta": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "solo",
+      "text": "Desde el alta general: opción «Más tarde»",
+      "w": 240,
+      "x": 0,
+      "y": 2220
+    },
+    "soloTitulo": {
+      "kind": "title1",
+      "maxW": 4720,
+      "page": "solo",
+      "text": "Alta solo para mí · Samuel Esteban, gerente de Granja Los Olmos (broilers, Lleida)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "soloTitulo2": {
+      "kind": "title1",
+      "maxW": 2640,
+      "page": "solo",
+      "text": "Primera consulta y vuelta a los 3 días",
+      "w": 240,
+      "x": 0,
+      "y": 1000
+    },
+    "sucT1": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "sucursales",
+      "text": "Alta · Fabricante con sucursales (Zucami, Sede global)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "sucT2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "sucursales",
+      "text": "Permisos, página de cada sucursal y publicación",
+      "w": 240,
+      "x": 0,
+      "y": 1040
+    },
+    "tabT1": {
+      "kind": "title1",
+      "maxW": 5360,
+      "page": "tableros",
+      "text": "Tableros · Samuel Esteban (Granja Los Olmos)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "tabT2": {
+      "kind": "title1",
+      "maxW": 4000,
+      "page": "tableros",
+      "text": "Comparador · sumario de comparaciones y comparativa (solo productos del mismo tipo)",
+      "w": 240,
+      "x": 0,
+      "y": 1020
+    },
+    "titulo": {
+      "kind": "title1",
+      "maxW": 4480,
+      "page": "header",
+      "text": "Header Agroolink · propuesta v2",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Personal.dc.html",
+    "Experto.dc.html",
+    "ConEmpresa.dc.html",
+    "Empresa.dc.html",
+    "Login1Email.dc.html",
+    "Login1bCodigo.dc.html",
+    "LoginIntereses.dc.html",
+    "Login2SinCuenta.dc.html",
+    "Login3Crear.dc.html",
+    "Login4Empezar.dc.html",
+    "Login5Creada.dc.html",
+    "Alta4MiEspacio.dc.html",
+    "AltaMiEspacioIntereses.dc.html",
+    "AltaEmpresa.dc.html",
+    "AltaExperto.dc.html",
+    "AltaConsulta.dc.html",
+    "EmpE1Empezar.dc.html",
+    "EmpE2Creada.dc.html",
+    "EmpE3Buscar.dc.html",
+    "EmpE4Verificar.dc.html",
+    "EmpE5Datos.dc.html",
+    "EmpE6Producto.dc.html",
+    "EmpE7Panel.dc.html",
+    "MiM1Empezar.dc.html",
+    "MiM2Creada.dc.html",
+    "MiM3Guardado.dc.html",
+    "MiM4Comparar.dc.html",
+    "MiM5Consulta.dc.html",
+    "MiM6Dia3.dc.html",
+    "ExpX1Empezar.dc.html",
+    "ExpX2Creada.dc.html",
+    "ExpX3Especialidad.dc.html",
+    "ExpX4Servicios.dc.html",
+    "ExpX5Publicar.dc.html",
+    "ExpX6Publicado.dc.html",
+    "ExpX7Semana.dc.html",
+    "IntS1Comprador.dc.html",
+    "IntS2Experta.dc.html",
+    "IntS3Empresa.dc.html",
+    "IntS4Ficha.dc.html",
+    "IntP1Aviso.dc.html",
+    "IntP2Intro.dc.html",
+    "IntP3Asistente.dc.html",
+    "IntHeader.dc.html",
+    "IntSidebar.dc.html",
+    "AvatarMenu.dc.html",
+    "Precios.dc.html",
+    "PreciosExperto.dc.html",
+    "PreciosComprador.dc.html",
+    "Checkout.dc.html",
+    "CfgTipo.dc.html",
+    "CfgTipoDist.dc.html",
+    "CfgPerfil.dc.html",
+    "CfgSucursales.dc.html",
+    "CfgComerciales.dc.html",
+    "CfgDistribuidores.dc.html",
+    "CfgMarcas.dc.html",
+    "CfgContacto.dc.html",
+    "WizTop.dc.html",
+    "CfgFichaLocal.dc.html",
+    "CfgDondeComprar.dc.html",
+    "FabTipo.dc.html",
+    "FabCabecera.dc.html",
+    "FabSobre.dc.html",
+    "FabDistribuidores.dc.html",
+    "FabExpertos.dc.html",
+    "FabContenidos.dc.html",
+    "FabContacto.dc.html",
+    "FabPublicar.dc.html",
+    "ProdCatalogo.dc.html",
+    "ProdImportar.dc.html",
+    "ProdAcuerdos.dc.html",
+    "ProdFichaGeneral.dc.html",
+    "ProdFichaVariantes.dc.html",
+    "ProdFichaBeneficios.dc.html",
+    "ProdFichaEspecificaciones.dc.html",
+    "ProdFichaDocumentos.dc.html",
+    "ProdFichaMercados.dc.html",
+    "ProdVersionLocal.dc.html",
+    "ProdEspecEquipamiento.dc.html",
+    "TabMis.dc.html",
+    "TabVista.dc.html",
+    "TabGuardar.dc.html",
+    "TabCompartir.dc.html",
+    "CompSumario.dc.html",
+    "CompNueva1.dc.html",
+    "CompNueva2.dc.html",
+    "CompVista.dc.html",
+    "CompOtroTipo.dc.html",
+    "CompSolicitar.dc.html",
+    "ComTipo.dc.html",
+    "ComEquipo.dc.html",
+    "ComZonas.dc.html",
+    "ComContacto.dc.html",
+    "ComPublicar.dc.html",
+    "ComBandeja.dc.html",
+    "SucTipo.dc.html",
+    "SucRed.dc.html",
+    "SucPaises.dc.html",
+    "SucPermisos.dc.html",
+    "SucPagina.dc.html",
+    "SucPublicar.dc.html",
+    "DisTipo.dc.html",
+    "DisMarcas.dc.html",
+    "DisAutorizacion.dc.html",
+    "DisContacto.dc.html",
+    "DisPublicar.dc.html",
+    "DisElegir.dc.html",
+    "DisSubir.dc.html",
+    "SelEspecies.dc.html",
+    "SelMercados.dc.html",
+    "ServLista.dc.html",
+    "ServEditor.dc.html",
+    "SelRamasCargos.dc.html",
+    "SelIntereses.dc.html",
+    "ProyCrear.dc.html",
+    "ProyDestinatarios.dc.html",
+    "ProyMis.dc.html",
+    "ProyDetalle.dc.html",
+    "ProyOportunidades.dc.html",
+    "ProyPropuesta.dc.html",
+    "ProyExperto.dc.html",
+    "FabShell.dc.html",
+    "Fig01.dc.html",
+    "Fig02.dc.html",
+    "Fig03.dc.html",
+    "Fig04.dc.html",
+    "Fig05.dc.html",
+    "Fig06.dc.html",
+    "Fig07.dc.html",
+    "Fig08.dc.html",
+    "Fig09.dc.html",
+    "Fig10.dc.html",
+    "Fig19.dc.html",
+    "Fig11.dc.html",
+    "Fig12.dc.html",
+    "Fig47.dc.html",
+    "Fig48.dc.html",
+    "Fig51.dc.html",
+    "Fig52.dc.html",
+    "Fig56.dc.html",
+    "Fig57.dc.html",
+    "Fig60.dc.html",
+    "Fig62.dc.html",
+    "Fig28.dc.html",
+    "Fig29.dc.html",
+    "Fig36.dc.html",
+    "Fig45.dc.html",
+    "Fig20.dc.html",
+    "Fig21.dc.html",
+    "Fig22.dc.html",
+    "Fig23.dc.html",
+    "Fig24.dc.html",
+    "Fig30.dc.html",
+    "Fig31.dc.html",
+    "Fig32.dc.html",
+    "Fig13.dc.html",
+    "Fig14.dc.html",
+    "Fig15.dc.html",
+    "Fig16.dc.html",
+    "Fig25.dc.html",
+    "Fig26.dc.html",
+    "Fig27.dc.html",
+    "Fig33.dc.html",
+    "Fig34.dc.html",
+    "Fig35.dc.html",
+    "Fig17.dc.html",
+    "Fig18.dc.html",
+    "Fig37.dc.html",
+    "Fig38.dc.html",
+    "Fig39.dc.html",
+    "Fig40.dc.html",
+    "Fig41.dc.html",
+    "Fig42.dc.html",
+    "Fig43.dc.html",
+    "Fig44.dc.html",
+    "Fig46.dc.html",
+    "Fig49.dc.html",
+    "Fig50.dc.html",
+    "Fig53.dc.html",
+    "Fig54.dc.html",
+    "Fig55.dc.html",
+    "Fig58.dc.html",
+    "Fig59.dc.html",
+    "Fig64.dc.html",
+    "Fig65.dc.html",
+    "Fig66.dc.html",
+    "Fig67.dc.html",
+    "Fig68.dc.html",
+    "Fig61.dc.html",
+    "Fig63.dc.html",
+    "CuentaPerfil.dc.html",
+    "CuentaCompras.dc.html",
+    "CuentaAyuda.dc.html",
+    "CuentaIdioma.dc.html",
+    "MobHome.dc.html",
+    "MobHomeVisitante.dc.html",
+    "MobMenu.dc.html",
+    "MobBuscar.dc.html",
+    "MobIntereses.dc.html",
+    "MobExplorarEspecies.dc.html",
+    "MobEspecie.dc.html",
+    "MobResultados.dc.html",
+    "MobExplorarCategorias.dc.html",
+    "MobCategoria.dc.html",
+    "MobTabBar.dc.html",
+    "CuentaPlanes.dc.html",
+    "CuentaPedidos.dc.html",
+    "CuentaFacturas.dc.html",
+    "CuentaPagos.dc.html",
+    "CuentaDirecciones.dc.html",
+    "UsrEspacio.dc.html",
+    "UsrEspacioMenu.dc.html",
+    "UsrProyectos.dc.html",
+    "UsrTableros.dc.html",
+    "UsrComparaciones.dc.html",
+    "UsrHistorial.dc.html",
+    "UsrMensajes.dc.html",
+    "UsrPerfil.dc.html",
+    "UsrFacturacion.dc.html",
+    "UsrFactPlanes.dc.html",
+    "UsrFactPedidos.dc.html",
+    "UsrFactFacturas.dc.html",
+    "UsrFactPagos.dc.html",
+    "UsrFactDirecciones.dc.html",
+    "UsrIdioma.dc.html",
+    "UsrAyuda.dc.html",
+    "ExpPanel.dc.html",
+    "ExpOportunidades.dc.html",
+    "ExpConsultas.dc.html",
+    "ExpServicios.dc.html",
+    "ExpPerfil.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "header",
+      "name": "Header"
+    },
+    {
+      "id": "proyectos",
+      "name": "003_Proyectos (módulo central)"
+    },
+    {
+      "id": "componentes",
+      "name": "Componentes · especies, mercados, ramas y cargos"
+    },
+    {
+      "id": "alta",
+      "name": "001_Alta Usuario"
+    },
+    {
+      "id": "altaempresa",
+      "name": "Alta empresa"
+    },
+    {
+      "id": "solo",
+      "name": "Alta solo para mí"
+    },
+    {
+      "id": "experto",
+      "name": "Alta experto"
+    },
+    {
+      "id": "intusuario",
+      "name": "002_Intranet · Usuario (consolidada)"
+    },
+    {
+      "id": "intexperto",
+      "name": "Intranet · Experto (consolidada)"
+    },
+    {
+      "id": "intranet",
+      "name": "Intranet"
+    },
+    {
+      "id": "planes",
+      "name": "Planes"
+    },
+    {
+      "id": "configempresa",
+      "name": "Alta empresa · configuraciones"
+    },
+    {
+      "id": "fabdist",
+      "name": "Alta · Fabricante con distribuidores"
+    },
+    {
+      "id": "comerciales",
+      "name": "Alta · Fabricante con comerciales"
+    },
+    {
+      "id": "sucursales",
+      "name": "Alta · Fabricante con sucursales"
+    },
+    {
+      "id": "distmulti",
+      "name": "Alta · Distribuidor multimarca"
+    },
+    {
+      "id": "productos",
+      "name": "Productos (módulo)"
+    },
+    {
+      "id": "servicios",
+      "name": "Servicios (módulo)"
+    },
+    {
+      "id": "tableros",
+      "name": "004_Tableros y comparador"
+    },
+    {
+      "id": "movil",
+      "name": "Móvil · Home y menú"
+    },
+    {
+      "id": "figma",
+      "name": "Front · Figma (referencia escritorio)"
+    }
+  ],
+  "title": "Agroolink Header v2"
 }
