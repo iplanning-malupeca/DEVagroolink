@@ -26,7 +26,15 @@ body{margin:0}
           <span style="flex: 1;">{{ it.label }}</span>
           <sc-if value="{{ it.badge }}" hint-placeholder-val="{{ false }}"><span style="min-width: 22px; height: 22px; box-sizing: border-box; padding: 0 6px; border-radius: 999px; background: {{ it.badgeFondo }}; color: {{ it.badgeTinta }}; font-size: 11.5px; font-weight: 600; display: flex; align-items: center; justify-content: center;">{{ it.badge }}</span></sc-if>
           <sc-if value="{{ it.meta }}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #56615B;">{{ it.meta }}</span></sc-if>
+          <sc-if value="{{ it.tieneSubs }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="{{ it.flecha }}"/></svg></sc-if>
         </a>
+        <sc-if value="{{ it.abierto }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 1px; margin: 2px 0 4px; padding-left: 26px;">
+            <sc-for list="{{ it.subs }}" as="sb" hint-placeholder-count="3">
+              <a href="#" aria-current="{{ sb.current }}" style="display: flex; align-items: center; height: 30px; padding: 0 10px 0 21px; border-left: 2px solid {{ sb.borde }}; font-size: 13px; text-decoration: none; color: {{ sb.tinta }}; font-weight: {{ sb.peso }};"><span style="flex: 1;">{{ sb.label }}</span><sc-if value="{{ sb.n }}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #56615B;">{{ sb.n }}</span></sc-if></a>
+            </sc-for>
+          </div>
+        </sc-if>
       </sc-for>
     </div>
   </sc-for>
@@ -46,7 +54,7 @@ body{margin:0}
   </div></sc-if>
 </nav>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"modo":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"activo":{"editor":"text","default":"Mi espacio"},"alto":{"editor":"int","default":832},"$preview":{"width":256,"height":832}}'>
+<script type="text/x-dc" data-dc-script data-props='{"modo":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"activo":{"editor":"text","default":"Mi espacio"},"alto":{"editor":"int","default":832},"sub":{"editor":"text","default":""},"empresa":{"editor":"text","default":"AgroExport SRL"},"$preview":{"width":256,"height":832}}'>
 class Component extends DCLogic {
   renderVals() {
     const modo = this.props.modo ?? 'personal';
@@ -88,16 +96,23 @@ class Component extends DCLogic {
         h: morado ? '37px' : '40px'
       }, extra || {});
     };
+    const sub = this.props.sub ?? '';
+    const conSubs = (x, subs) => {
+      const acc = x.lila ? '#4B3BA6' : '#0E5A3A';
+      const abierto = x.current === 'page';
+      return Object.assign(x, { tieneSubs: true, abierto: abierto, flecha: abierto ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6',
+        subs: subs.map(([l, n]) => { const on = l === sub; return { label: l, n: n, current: on ? 'page' : 'false', borde: on ? acc : '#E3E8E4', tinta: on ? acc : '#4A5650', peso: on ? '600' : '400' }; }) });
+    };
     const espacio = { titulo: 'MI ESPACIO', chip: '', items: [
-      it('Mi espacio', I.home), it('Mis proyectos', I.file), it('Mis tableros', I.grid),
+      it('Mi espacio', I.home), conSubs(it('Mis proyectos', I.file, { badge: 'Nuevo', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), [['Activos', '2'], ['Borradores', '1'], ['Finalizados', '0']]), it('Mis tableros', I.grid),
       it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })
     ]};
     const experta = { titulo: 'COMO EXPERTA', chip: 'Público', chipFondo: '#F1EEFB', chipTinta: '#4B3BA6', items: [
-      it('Panel de experta', I.dash, { lila: true }), it('Oportunidades', I.target, { lila: true, badge: '3', badgeFondo: '#4B3BA6' }), it('Consultas recibidas', I.inbox, { lila: true, badge: '1', badgeFondo: '#4B3BA6' }),
+      it('Panel de experta', I.dash, { lila: true }), conSubs(it('Oportunidades', I.target, { lila: true, badge: '3', badgeFondo: '#4B3BA6' }), [['Para ti', '3'], ['Todas', ''], ['Mis candidaturas', '1'], ['Adjudicadas', '']]), it('Consultas recibidas', I.inbox, { lila: true, badge: '1', badgeFondo: '#4B3BA6' }),
       it('Mis servicios', I.layers, { lila: true, meta: '1 de 2' }), it('Perfil de experta', I.grad, { lila: true })
     ]};
-    const empresa = { titulo: 'AGROEXPORT SRL', chip: 'Empresa', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', items: [
-      it('Panel', I.dash), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mensajes', I.msg),
+    const empresa = { titulo: (this.props.empresa ?? 'AgroExport SRL').toUpperCase(), chip: 'Empresa', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', items: [
+      it('Panel', I.dash), conSubs(it('Oportunidades', I.target, { badge: '6', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), [['Recomendadas', '6'], ['Todas', ''], ['Mis propuestas', '2'], ['Adjudicadas', '']]), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mensajes', I.msg),
       it('Productos', I.pkg, { meta: '1 de 15' }), it('Perfil de empresa', I.bldg), it('Estadísticas', I.chart), it('Equipo', I.users, { meta: '1 de 2' })
     ]};
     const cuenta = { titulo: 'MI CUENTA', chip: 'Global', chipFondo: '#EEF0F3', chipTinta: '#4A5560', items: [
@@ -115,7 +130,7 @@ class Component extends DCLogic {
       secciones = [espacio, cuenta];
       plan = { planEtiqueta: 'Plan actual', plan: 'Gratis', planTexto: 'Accede a más funcionalidades con un plan Pro.', planBoton: 'Cambiar de plan' };
     }
-    return Object.assign({ secciones: secciones, alto: (this.props.alto ?? 832) + 'px', lema: !morado || (this.props.alto ?? 832) >= 900 }, plan);
+    return Object.assign({ secciones: secciones, alto: (this.props.alto ?? 832) + 'px', lema: secciones.every(x => x.items.every(y => !y.abierto)) && (!morado || (this.props.alto ?? 832) >= 900) }, plan);
   }
 }
 </script>
