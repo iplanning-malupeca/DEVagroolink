@@ -67,7 +67,7 @@ h1.t{margin:0;font-size:clamp(23px,3.4vw,30px);font-weight:600;letter-spacing:-.
 .chip:hover{border-color:var(--accent)}
 .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
 .chip.sub{min-height:32px;font-size:13px;padding:4px 12px}
-.chip.sub[aria-pressed="true"]{background:var(--soft2);border-color:var(--soft2);color:var(--accent)}
+.chip.sub[aria-pressed="true"]{background:var(--soft2);border-color:var(--soft2);color:var(--accent)}.chip.pt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
 input.in,textarea.in,select.in{width:100%;border:0;border-bottom:2px solid var(--line2);background:transparent;padding:10px 2px;font-size:20px;outline:none}
 input.in:focus,textarea.in:focus,select.in:focus{border-color:var(--accent)}
 textarea.in{font-size:16px;line-height:1.55;border:1.5px solid var(--line2);border-radius:12px;padding:12px 14px;min-height:150px;resize:vertical}
@@ -104,6 +104,7 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:50
 .files{display:flex;flex-direction:column;gap:6px}
 .file{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:var(--bg2);font-size:13.5px}
 .file button{margin-left:auto}
+.combo{position:relative}.combo-btn{display:flex;align-items:center;gap:10px;cursor:pointer;text-align:left;min-height:46px}.combo-btn .fl{font-size:20px;line-height:1}.combo-btn .ph{color:var(--muted)}.cpop{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:8;background:var(--bg);border:1.5px solid var(--line2);border-radius:14px;box-shadow:0 18px 40px rgba(16,40,28,.16);padding:10px;display:flex;flex-direction:column;gap:8px}.clist{max-height:280px;overflow:auto;display:flex;flex-direction:column;gap:2px}.clist .grp{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);padding:8px 8px 4px;text-transform:uppercase}.copt{display:flex;align-items:center;gap:10px;padding:8px 10px;border:0;border-radius:10px;background:none;cursor:pointer;text-align:left;width:100%;font-size:14.5px}.copt:hover,.copt.act{background:var(--soft)}.copt .fl{font-size:19px}.copt .cd{margin-left:auto;color:var(--muted);font-size:12px}.copt[aria-selected="true"]{font-weight:600;color:var(--accent)}.tray{border:1.5px solid var(--accent);background:var(--soft);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}.tray .hd{display:flex;align-items:center;gap:8px;font-size:14px}.tray .n{min-width:24px;height:22px;padding:0 7px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:600;display:inline-flex;align-items:center;justify-content:center}.sel{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:4px 6px 4px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line2);font-size:13px}.sel small{color:var(--muted)}.sel button{border:0;background:none;cursor:pointer;color:var(--muted);display:inline-flex;padding:4px;border-radius:50%}.sel button:hover{background:var(--soft2);color:var(--fg)}
 .note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--bg2);font-size:13.5px;color:var(--muted)}
 /* bienvenida */
 .wel{max-width:680px;display:flex;flex-direction:column;gap:22px}
@@ -160,7 +161,10 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:50
 const ESPECIES = __ESPECIES__;
 const FAMILIAS = __FAMILIAS__;
 const OBJETIVOS = ['Bienestar animal','Rendimiento productivo','Conversión alimenticia','Salud intestinal','Salud animal y prevención','Reproducción y fertilidad','Calidad del producto final','Reducción de costes','Sostenibilidad ambiental','Bioseguridad','Eficiencia operativa','Nutrición y aprovechamiento de nutrientes','Calidad y seguridad del alimento','Gestión del agua','Climatización y ambiente','Trazabilidad y control','Rentabilidad de la explotación','Innovación y digitalización'];
-const PAISES = ['España','Portugal','Francia','Italia','Marruecos','México','Colombia','Argentina','Chile','Perú','Brasil','Otro país'];
+const PAISES_ISO = [['ES','España'],['PT','Portugal'],['FR','Francia'],['IT','Italia'],['DE','Alemania'],['NL','Países Bajos'],['BE','Bélgica'],['GB','Reino Unido'],['IE','Irlanda'],['DK','Dinamarca'],['PL','Polonia'],['RO','Rumanía'],['HU','Hungría'],['GR','Grecia'],['AT','Austria'],['CH','Suiza'],['CZ','Chequia'],['SE','Suecia'],['FI','Finlandia'],['NO','Noruega'],['UA','Ucrania'],['TR','Turquía'],['MA','Marruecos'],['DZ','Argelia'],['TN','Túnez'],['EG','Egipto'],['SN','Senegal'],['CI','Costa de Marfil'],['NG','Nigeria'],['KE','Kenia'],['ZA','Sudáfrica'],['MX','México'],['GT','Guatemala'],['HN','Honduras'],['SV','El Salvador'],['NI','Nicaragua'],['CR','Costa Rica'],['PA','Panamá'],['CU','Cuba'],['DO','República Dominicana'],['CO','Colombia'],['VE','Venezuela'],['EC','Ecuador'],['PE','Perú'],['BO','Bolivia'],['CL','Chile'],['AR','Argentina'],['UY','Uruguay'],['PY','Paraguay'],['BR','Brasil'],['US','Estados Unidos'],['CA','Canadá'],['SA','Arabia Saudí'],['AE','Emiratos Árabes Unidos'],['IL','Israel'],['IN','India'],['CN','China'],['VN','Vietnam'],['TH','Tailandia'],['PH','Filipinas'],['ID','Indonesia'],['JP','Japón'],['KR','Corea del Sur'],['AU','Australia'],['NZ','Nueva Zelanda']];
+const FRECUENTES = ['ES','PT','FR','MX','CO','AR','CL','PE','MA'];
+const flag = c => String.fromCodePoint(...[...c].map(x => 127397 + x.charCodeAt(0)));
+const PAISES = PAISES_ISO.map(p => p[1]);
 const TABLEROS = [
   {id:'t1', name:'Ronozyme® HiPhos', by:'DSM-Firmenich', tipo:'Enzimas', board:'Nave 2 · broilers', col:'#1E4FA0'},
   {id:'t2', name:'Axtra® PHY', by:'IFF', tipo:'Enzimas', board:'Nave 2 · broilers', col:'#C8102E'},
@@ -293,7 +297,7 @@ const S = {
      q('i_entr','Servicios técnicos','¿Qué entregables esperas?','textarea',{ph:'Informe, plan de acción, formación…'}),
      q('i_rec','Servicios técnicos','¿Puntual o recurrente?','single',{opts:SI('Puntual','Recurrente')})],
  J: [q('j_tipo','Colaboración comercial','¿Qué tipo de colaboración buscas?','single',{opts:SI('Distribuir una marca','Representación comercial','Acuerdo de fabricación','Joint venture','Otro')}),
-     q('j_paises','Colaboración comercial','¿En qué países?','multi',{opts:PAISES.slice(0,-1)}),
+     q('j_paises','Colaboración comercial','¿En qué países?','multi',{opts:FRECUENTES.map(c => PAISES_ISO.find(p => p[0]===c)[1]).concat('Otros')}),
      q('j_cob','Colaboración comercial','¿Qué cobertura comercial tienes ahora?','textarea'),
      q('j_excl','Colaboración comercial','¿Buscas exclusividad?','single',{opts:SI('Sí, por país','Sí, por zona','No')}),
      q('j_cap','Colaboración comercial','¿Qué capacidad de distribución tienes?','text'),
@@ -409,13 +413,40 @@ const FIELDS = {
   },
   location(Q, f){
     const v = st.v.lugar || {};
-    f.innerHTML = `<div class="row">
-      <label class="f">País *<select class="box" id="l_pais"><option value="">Elige un país</option>${PAISES.map(p => `<option ${v.pais===p?'selected':''}>${p}</option>`).join('')}</select></label>
-      <label class="f">Región o provincia<input class="box" id="l_reg" type="text" placeholder="Ej.: Lleida" value="${esc(v.region||'')}"></label>
-      <label class="f">Localidad<input class="box" id="l_loc" type="text" placeholder="Ej.: Alcarràs" value="${esc(v.loc||'')}"></label></div>
+    const cur = PAISES_ISO.find(p => p[1] === v.pais);
+    f.innerHTML = `<div style="display:flex;flex-direction:column;gap:12px">
+      <div class="f" style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--muted)"><span id="l_lab">País *</span>
+        <div class="combo" id="combo"><button type="button" class="box combo-btn" id="l_pais" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="l_lab l_pais">${cur ? `<span class="fl">${flag(cur[0])}</span><span>${esc(cur[1])}</span>` : '<span class="ph">Elige un país</span>'}<span style="margin-left:auto;color:var(--muted)">▾</span></button>
+        <div class="cpop" id="cpop" hidden><div class="search" style="height:42px">${svg('search',16)}<input id="csrch" type="text" placeholder="Buscar país o código (ES, MX…)" autocomplete="off" aria-label="Buscar país"></div><div class="clist" id="clist2" role="listbox" aria-label="Países"></div></div></div></div>
+      <div class="row"><label class="f">Región o provincia<input class="box" id="l_reg" type="text" placeholder="Ej.: Lleida" value="${esc(v.region||'')}"></label>
+      <label class="f">Localidad<input class="box" id="l_loc" type="text" placeholder="Ej.: Alcarràs" value="${esc(v.loc||'')}"></label></div></div>
       <div class="note">${svg('lock',16)}<span>Las empresas solo verán la provincia hasta que tú decidas compartir más.</span></div>`;
-    const upd = () => set('lugar', {pais:$('#l_pais').value, region:$('#l_reg').value, loc:$('#l_loc').value});
-    ['#l_pais','#l_reg','#l_loc'].forEach(s => $(s).oninput = upd);
+    const upd = pais => set('lugar', {pais: pais ?? (st.v.lugar||{}).pais, region:$('#l_reg').value, loc:$('#l_loc').value});
+    ['#l_reg','#l_loc'].forEach(x => $(x).oninput = () => upd());
+    const btn = $('#l_pais'), pop = $('#cpop'), inp = $('#csrch'), lst = $('#clist2');
+    let act = 0, shown = [];
+    const opt = p => `<button type="button" role="option" class="copt" data-c="${p[0]}" aria-selected="${(st.v.lugar||{}).pais===p[1]}"><span class="fl">${flag(p[0])}</span>${esc(p[1])}<span class="cd">${p[0]}</span></button>`;
+    const fill = () => {
+      const t = inp.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      const m = p => !t || p[1].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(t) || p[0].toLowerCase() === t;
+      const all = PAISES_ISO.filter(m).sort((a,b) => { const n = p => p[1].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); const r = p => !t ? 0 : p[0].toLowerCase() === t ? 0 : n(p).startsWith(t) ? 1 : 2; return r(a) - r(b) || a[1].localeCompare(b[1],'es'); });
+      const fr = t ? [] : FRECUENTES.map(c => PAISES_ISO.find(p => p[0]===c));
+      shown = fr.concat(all);
+      lst.innerHTML = (fr.length ? '<div class="grp">Frecuentes</div>' + fr.map(opt).join('') + '<div class="grp">Todos los países</div>' : '') + (all.map(opt).join('') || '<div class="hint" style="padding:8px">Ningún país coincide</div>');
+      act = 0; mark();
+      lst.querySelectorAll('[data-c]').forEach(b => b.onclick = () => choose(b.dataset.c));
+    };
+    const mark = () => lst.querySelectorAll('.copt').forEach((b,i) => b.classList.toggle('act', i === act));
+    const open = o => { pop.hidden = !o; btn.setAttribute('aria-expanded', o); if (o){ inp.value=''; fill(); inp.focus(); } };
+    const choose = c => { const p = PAISES_ISO.find(x => x[0]===c); upd(p[1]); open(false); FIELDS.location(Q, f); $('#l_reg').focus(); };
+    btn.onclick = () => open(pop.hidden);
+    inp.oninput = fill;
+    inp.onkeydown = e => { const n = lst.querySelectorAll('.copt').length;
+      if (e.key==='ArrowDown'){ e.preventDefault(); act = Math.min(n-1, act+1); mark(); lst.querySelectorAll('.copt')[act]?.scrollIntoView({block:'nearest'}); }
+      else if (e.key==='ArrowUp'){ e.preventDefault(); act = Math.max(0, act-1); mark(); lst.querySelectorAll('.copt')[act]?.scrollIntoView({block:'nearest'}); }
+      else if (e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); const b = lst.querySelectorAll('.copt')[act]; if (b) choose(b.dataset.c); }
+      else if (e.key==='Escape'){ open(false); btn.focus(); } };
+    document.addEventListener('mousedown', e => { if (!$('#combo') || $('#combo').contains(e.target)) return; open(false); }, {once:false});
   },
   species(Q, f){
     const cur = () => st.v.especies || [];
@@ -436,15 +467,21 @@ const FIELDS = {
     const draw = () => {
       const t = term.toLowerCase();
       const fams = FAMILIAS.map(F => ({F, tipos: F.tipos.filter(x => !t || x.toLowerCase().includes(t) || F.label.toLowerCase().includes(t))})).filter(x => x.tipos.length);
-      f.innerHTML = `<div class="search">${svg('search',17)}<input id="psearch" type="text" placeholder="Buscar en el catálogo, p. ej. «ventilación»" value="${esc(term)}"></div>
-        <div class="list" style="margin-top:12px">${fams.map(({F, tipos}) => `<div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">${esc(F.label)}</strong><span class="hint">${tipos.length} tipos</span></div><div class="chips">${tipos.map(x => { const k = F.id + ':' + x; return `<button type="button" class="chip sub" data-k="${esc(k)}" aria-pressed="${v().tipos.includes(k)}">${esc(x)}</button>`; }).join('')}</div></div>`).join('') || '<p class="hint">Sin resultados en el catálogo. Puedes describirlo abajo.</p>'}</div>
+      f.innerHTML = `<div class="tray" aria-live="polite"><div class="hd"><strong>Tu selección</strong><span class="n">${v().tipos.length + v().tableros.length + (v().libre ? 1 : 0)}</span>${v().tipos.length || v().tableros.length ? '<button type="button" class="link" id="pclear" style="margin-left:auto;font-size:13px">Quitar todo</button>' : ''}</div>
+        ${v().tipos.length || v().tableros.length || v().libre ? `<div class="chips">${v().tipos.map(k => { const [fid, t] = k.split(':'); const F = FAMILIAS.find(x => x.id === fid); return `<span class="sel">${esc(t)} <small>· ${esc(F ? F.label.split(' ')[0] : '')}</small><button type="button" data-rm="${esc(k)}" aria-label="Quitar ${esc(t)}">${svg('x',13)}</button></span>`; }).join('')}${v().tableros.map(id => { const p = TABLEROS.find(x => x.id === id); return `<span class="sel">${esc(p.name)} <small>· tablero</small><button type="button" data-rmt="${id}" aria-label="Quitar ${esc(p.name)}">${svg('x',13)}</button></span>`; }).join('')}${v().libre ? `<span class="sel">${esc(v().libre)} <small>· a medida</small></span>` : ''}</div>` : '<span class="hint">Aún no has elegido nada. Marca tipos del catálogo o productos de tus tableros.</span>'}</div>
+        <div class="search">${svg('search',17)}<input id="psearch" type="text" placeholder="Buscar en el catálogo, p. ej. «ventilación»" value="${esc(term)}"></div>
+        <div class="list" style="margin-top:12px">${fams.map(({F, tipos}) => `<div class="branch" style="padding:10px 12px"><div class="hd"><strong style="font-size:14px">${esc(F.label)}</strong><span class="hint">${tipos.length} tipos</span></div><div class="chips">${tipos.map(x => { const k = F.id + ':' + x; return `<button type="button" class="chip sub pt" data-k="${esc(k)}" aria-pressed="${v().tipos.includes(k)}">${esc(x)}</button>`; }).join('')}</div></div>`).join('') || '<p class="hint">Sin resultados en el catálogo. Puedes describirlo abajo.</p>'}</div>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px"><strong style="font-size:14px">Recuperar productos de mis tableros</strong>${TABLEROS.map(p => `<button type="button" class="pick" data-t="${p.id}" aria-pressed="${v().tableros.includes(p.id)}"><span class="av" style="background:${p.col}">${esc(p.by.slice(0,2))}</span><span style="flex:1;min-width:0"><strong style="font-size:14px">${esc(p.name)}</strong><small>${esc(p.by)} · ${esc(p.tipo)}</small></span><span class="tag">${esc(p.board)}</span></button>`).join('')}</div>
         <label class="f" style="margin-top:14px">Necesidades específicas<input class="box" id="plibre" type="text" placeholder="Algo que no está en el catálogo" value="${esc(v().libre)}"></label>
-        <span class="hint" id="pcnt">${v().tipos.length + v().tableros.length} elegidos</span>`;
+`;
       const s = $('#psearch'); s.oninput = e => { term = e.target.value; draw(); const n = $('#psearch'); n.focus(); n.setSelectionRange(term.length, term.length); };
-      f.querySelectorAll('[data-k]').forEach(b => b.onclick = () => { v().tipos = toggle(v().tipos, b.dataset.k); save(); b.setAttribute('aria-pressed', v().tipos.includes(b.dataset.k)); $('#pcnt').textContent = (v().tipos.length + v().tableros.length) + ' elegidos'; });
-      f.querySelectorAll('[data-t]').forEach(b => b.onclick = () => { v().tableros = toggle(v().tableros, b.dataset.t); save(); b.setAttribute('aria-pressed', v().tableros.includes(b.dataset.t)); $('#pcnt').textContent = (v().tipos.length + v().tableros.length) + ' elegidos'; });
-      $('#plibre').oninput = e => { v().libre = e.target.value; save(); };
+      const keep = fn => { const y = f.querySelector('.list') ? f.querySelector('.list').scrollTop : 0; fn(); save(); draw(); if (f.querySelector('.list')) f.querySelector('.list').scrollTop = y; };
+      f.querySelectorAll('[data-k]').forEach(b => b.onclick = () => keep(() => v().tipos = toggle(v().tipos, b.dataset.k)));
+      f.querySelectorAll('[data-t]').forEach(b => b.onclick = () => keep(() => v().tableros = toggle(v().tableros, b.dataset.t)));
+      f.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => keep(() => v().tipos = v().tipos.filter(x => x !== b.dataset.rm)));
+      f.querySelectorAll('[data-rmt]').forEach(b => b.onclick = () => keep(() => v().tableros = v().tableros.filter(x => x !== b.dataset.rmt)));
+      if ($('#pclear')) $('#pclear').onclick = () => keep(() => { v().tipos = []; v().tableros = []; });
+      $('#plibre').onchange = e => { v().libre = e.target.value; save(); draw(); };
     }; draw();
   },
   when(Q, f){
