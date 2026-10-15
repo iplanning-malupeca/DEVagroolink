@@ -344,13 +344,13 @@ body = ('<div class="top"><span style="flex:1;font-size:22px;font-weight:600;let
         + mrow('compass', 'Productos') + mrow('building', 'Empresas') + mrow('user', 'Expertos', '', '#4B3BA6', '#F1EEFB')
         + mrow('tool', 'Servicios') + mrow('book', 'Contenido técnico') + mrow('cal', 'Eventos') + '</div></div>'
         '<div><p class="cap">Cuenta</p><div class="card" style="overflow:hidden;">'
-        + mrow('sliders', 'Mis intereses', val('9')) + mrow('star', 'Plan', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
+        + mrow('user', 'Mi perfil', val('Cuenta global')) + mrow('sliders', 'Mis intereses', val('9')) + mrow('star', 'Compras y facturación', val('Comprador Gratis'), '#8A5A00', '#FCEFD9') + mrow('globe', 'Región e idioma', val('España · ES'))
         + mrow('bell', 'Notificaciones') + mrow('help', 'Ayuda') +
         '<a href="#" class="li" style="min-height:50px;color:#B42318;"><span class="ico" style="width:32px;height:32px;border-radius:10px;background:#FDECEA;color:#B42318;">' + ic('logout', 17) + '</span><span class="t" style="font-weight:500;">Cerrar sesión</span></a>'
         '</div></div>'
         '<p style="margin:0;font-size:11.5px;color:#56615B;text-align:center;line-height:1.5;">Tu cuenta es la misma que en Agrinews.<br><a href="#">Ir a Agrinews ' + ic('ext', 11, G, 2) + '</a></p>'
         '<div style="height:96px;"></div></div>')
-B.append(board('MobMenu.dc.html', 'Móvil · Menú', 1520, body, 5))
+B.append(board('MobMenu.dc.html', 'Móvil · Menú', 1570, body, 5))
 
 # M4 Búsqueda
 body = ('<div class="top" style="gap:6px;"><span class="ib" style="margin-left:-8px;">' + ic('back', 22) + '</span>'

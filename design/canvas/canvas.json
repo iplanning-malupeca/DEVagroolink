@@ -34,6 +34,14 @@
    "x": 0,
    "y": 2400
   },
+  "AltaMiEspacioIntereses.dc.html": {
+   "h": 900,
+   "page": "alta",
+   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
+   "w": 1280,
+   "x": 1360,
+   "y": 2620
+  },
   "AvatarMenu.dc.html": {
    "h": 980,
    "page": "header",
@@ -1090,6 +1098,14 @@
    "x": 0,
    "y": 0
   },
+  "Login1bCodigo.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "2a · L1b · Ya registrado → código por email (OTP)",
+   "w": 960,
+   "x": 1040,
+   "y": 0
+  },
   "Login2SinCuenta.dc.html": {
    "h": 760,
    "page": "alta",
@@ -1120,6 +1136,14 @@
    "title": "6 · L5 · Cuenta lista (según elección)",
    "w": 960,
    "x": 4160,
+   "y": 0
+  },
+  "LoginIntereses.dc.html": {
+   "h": 900,
+   "page": "alta",
+   "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
+   "w": 960,
+   "x": 2080,
    "y": 0
   },
   "Main.dc.html": {
@@ -1363,6 +1387,14 @@
    "x": 0,
    "y": 0
   },
+  "SelIntereses.dc.html": {
+   "h": 1100,
+   "page": "componentes",
+   "title": "Selector de intereses · especies, categorías y objetivos",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
   "SelMercados.dc.html": {
    "h": 900,
    "page": "componentes",
@@ -1483,37 +1515,21 @@
    "x": 5440,
    "y": 0
   },
-  "Login1bCodigo.dc.html": {
-   "h": 760,
-   "page": "alta",
-   "title": "2a · L1b · Ya registrado → código por email (OTP)",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "LoginIntereses.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "4 · Tus intereses · especies, categorías y objetivos (solo la 1.ª vez)",
-   "w": 960,
-   "x": 2080,
-   "y": 0
-  },
-  "SelIntereses.dc.html": {
-   "h": 1100,
-   "page": "componentes",
-   "title": "Selector de intereses · especies, categorías y objetivos",
+  "CuentaPerfil.dc.html": {
+   "h": 1080,
+   "page": "intranet",
+   "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
    "w": 1280,
-   "x": 4080,
-   "y": 0
+   "x": 0,
+   "y": 3720
   },
-  "AltaMiEspacioIntereses.dc.html": {
-   "h": 900,
-   "page": "alta",
-   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
+  "CuentaCompras.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2 · Mi cuenta · Compras y facturación (centralizado, reflejado aquí)",
    "w": 1280,
    "x": 1360,
-   "y": 2620
+   "y": 3720
   },
   "MobHome.dc.html": {
    "h": 2010,
@@ -1532,7 +1548,7 @@
    "y": 0
   },
   "MobMenu.dc.html": {
-   "h": 1520,
+   "h": 1570,
    "page": "movil",
    "title": "M3 · Menú (pestaña 5)",
    "w": 390,
@@ -1614,6 +1630,15 @@
   "view": "canvas"
  },
  "notes": {
+  "altaL1b": {
+   "kind": "title1",
+   "maxW": 4880,
+   "page": "alta",
+   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
+   "w": 240,
+   "x": 1040,
+   "y": 1000
+  },
   "altaTitulo": {
    "kind": "title1",
    "maxW": 5120,
@@ -1686,6 +1711,15 @@
    "x": 0,
    "y": 1040
   },
+  "empDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaempresa",
+   "text": "Desde el alta general: opción «Represento una empresa»",
+   "w": 240,
+   "x": 0,
+   "y": 2100
+  },
   "empTitulo": {
    "kind": "title1",
    "maxW": 4080,
@@ -1703,6 +1737,15 @@
    "w": 240,
    "x": 0,
    "y": 880
+  },
+  "expDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "experto",
+   "text": "Desde el alta general: opción «Soy experto»",
+   "w": 240,
+   "x": 0,
+   "y": 2100
   },
   "expTitulo": {
    "kind": "title1",
@@ -1938,6 +1981,15 @@
    "x": 0,
    "y": -300
   },
+  "soloDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "solo",
+   "text": "Desde el alta general: opción «Más tarde»",
+   "w": 240,
+   "x": 0,
+   "y": 2220
+  },
   "soloTitulo": {
    "kind": "title1",
    "maxW": 4720,
@@ -2001,41 +2053,14 @@
    "x": 0,
    "y": -300
   },
-  "altaL1b": {
+  "intTitulo4": {
    "kind": "title1",
-   "maxW": 4880,
-   "page": "alta",
-   "text": "Sin cuenta: 2b → 3b registro de Agrinews → vuelve a 4",
-   "w": 240,
-   "x": 1040,
-   "y": 1000
-  },
-  "empDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaempresa",
-   "text": "Desde el alta general: opción «Represento una empresa»",
+   "maxW": 2640,
+   "page": "intranet",
+   "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
    "w": 240,
    "x": 0,
-   "y": 2100
-  },
-  "expDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "experto",
-   "text": "Desde el alta general: opción «Soy experto»",
-   "w": 240,
-   "x": 0,
-   "y": 2100
-  },
-  "soloDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "solo",
-   "text": "Desde el alta general: opción «Más tarde»",
-   "w": 240,
-   "x": 0,
-   "y": 2220
+   "y": 3420
   },
   "movT0": {
    "kind": "title1",
@@ -2255,6 +2280,8 @@
   "Fig68.dc.html",
   "Fig61.dc.html",
   "Fig63.dc.html",
+  "CuentaPerfil.dc.html",
+  "CuentaCompras.dc.html",
   "MobHome.dc.html",
   "MobHomeVisitante.dc.html",
   "MobMenu.dc.html",
@@ -2282,7 +2309,7 @@
   },
   {
    "id": "alta",
-   "name": "Alta"
+   "name": "OK Alta Usuario"
   },
   {
    "id": "altaempresa",
