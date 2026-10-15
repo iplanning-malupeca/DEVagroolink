@@ -1618,6 +1618,46 @@
    "w": 390,
    "x": 0,
    "y": 4040
+  },
+  "CuentaPlanes.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2a · Compras · Planes y suscripciones",
+   "w": 1280,
+   "x": 0,
+   "y": 5200
+  },
+  "CuentaPedidos.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2b · Compras · Pedidos (detalle a la derecha)",
+   "w": 1280,
+   "x": 1360,
+   "y": 5200
+  },
+  "CuentaFacturas.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2c · Compras · Facturas",
+   "w": 1280,
+   "x": 2720,
+   "y": 5200
+  },
+  "CuentaPagos.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2d · Compras · Métodos de pago",
+   "w": 1280,
+   "x": 4080,
+   "y": 5200
+  },
+  "CuentaDirecciones.dc.html": {
+   "h": 980,
+   "page": "intranet",
+   "title": "C2e · Compras · Direcciones",
+   "w": 1280,
+   "x": 5440,
+   "y": 5200
   }
  },
  "createdOnFiles": {
@@ -2088,6 +2128,15 @@
    "w": 240,
    "x": 0,
    "y": 3740
+  },
+  "intTitulo5": {
+   "kind": "title1",
+   "maxW": 6720,
+   "page": "intranet",
+   "text": "Compras y facturación · una pantalla por pestaña",
+   "w": 240,
+   "x": 0,
+   "y": 4900
   }
  },
  "order": [
@@ -2292,7 +2341,12 @@
   "MobResultados.dc.html",
   "MobExplorarCategorias.dc.html",
   "MobCategoria.dc.html",
-  "MobTabBar.dc.html"
+  "MobTabBar.dc.html",
+  "CuentaPlanes.dc.html",
+  "CuentaPedidos.dc.html",
+  "CuentaFacturas.dc.html",
+  "CuentaPagos.dc.html",
+  "CuentaDirecciones.dc.html"
  ],
  "pages": [
   {
