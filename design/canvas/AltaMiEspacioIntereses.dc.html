@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mi espacio · Editar intereses</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.ch{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font:500 12px 'Poppins',sans-serif;color:#17231D;cursor:pointer;white-space:nowrap}
+.ch.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.lg{display:flex;align-items:baseline;gap:8px;margin:0 0 7px;padding:0;font-size:13.5px;font-weight:600}
+.lg span{font-size:11.5px;font-weight:400;color:#56615B}
+.wr{display:flex;flex-wrap:wrap;gap:6px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden;">
+  <dc-import name="Alta4MiEspacio" origen="ninguno" hint-size="1280px,900px"></dc-import>
+  <div style="position: absolute; inset: 0; background: rgba(15, 30, 22, 0.45); display: flex; align-items: center; justify-content: center;">
+    <form role="dialog" aria-modal="true" aria-labelledby="ei" style="width: 680px; box-sizing: border-box; background: #FFFFFF; border-radius: 20px; box-shadow: 0 24px 60px rgba(16, 40, 28, 0.25); padding: 22px 26px; display: flex; flex-direction: column; gap: 15px;">
+      <div style="display: flex; align-items: flex-start; gap: 12px;">
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 3px;"><h2 id="ei" style="margin: 0; font-size: 20px; font-weight: 600;">Editar tus intereses</h2><p style="margin: 0; font-size: 13px; color: #4A5650;">Cambia lo que quieras. Tus recomendaciones se actualizan al guardar.</p></div>
+        <button type="button" aria-label="Cerrar" style="width: 34px; height: 34px; border: 0; background: none; color: #56615B; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="lg">Especies <span>Incluye todas sus producciones</span></legend><div class="wr"><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Avicultura</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Porcino</button><button type="button" class="ch" aria-pressed="false">Bovino</button><button type="button" class="ch" aria-pressed="false">Ovino</button><button type="button" class="ch" aria-pressed="false">Caprino</button><button type="button" class="ch" aria-pressed="false">Acuicultura</button><button type="button" class="ch" aria-pressed="false">Cunicultura</button></div></fieldset>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="lg">Categorías principales <span>Qué tipo de soluciones buscas</span></legend><div class="wr"><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Nutrición y aditivos</button><button type="button" class="ch" aria-pressed="false">Materias primas</button><button type="button" class="ch" aria-pressed="false">Salud y bioseguridad</button><button type="button" class="ch" aria-pressed="false">Genética y reproducción</button><button type="button" class="ch" aria-pressed="false">Equipamiento e instalaciones</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Equipamiento avícola</button><button type="button" class="ch" aria-pressed="false">Equipamiento porcino</button><button type="button" class="ch" aria-pressed="false">Equipamiento rumiantes</button><button type="button" class="ch" aria-pressed="false">Sostenibilidad y energía</button><button type="button" class="ch" aria-pressed="false">Tecnología y software</button></div></fieldset>
+      <fieldset style="border: 0; padding: 0; margin: 0;"><legend class="lg">Objetivos y tendencias <span>Se actualiza con lo que se mueve en el sector</span></legend><div class="wr"><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Bienestar animal</button><button type="button" class="ch" aria-pressed="false">Rendimiento</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Conversión alimenticia</button><button type="button" class="ch" aria-pressed="false">Salud intestinal</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Reducción antibióticos</button><button type="button" class="ch" aria-pressed="false">Calidad de canal</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Reducción de costes</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sostenibilidad</button><button type="button" class="ch on" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Huevo campero</button><button type="button" class="ch" aria-pressed="false">Producción ecológica</button><button type="button" class="ch" aria-pressed="false">Eficiencia operativa</button><button type="button" class="ch" aria-pressed="false">Seguridad alimentaria</button><button type="button" class="ch" aria-pressed="false">One Health</button><button type="button" class="ch" aria-pressed="false">Inteligencia Artificial</button></div></fieldset>
+      <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid #EEF1EE; padding-top: 14px;">
+        <span style="font-size: 12.5px; color: #56615B;">10 seleccionados · <strong style="color: #0E5A3A; font-weight: 600;">+1 nuevo</strong></span>
+        <a href="#" style="margin-left: auto; height: 42px; padding: 0 18px; border-radius: 10px; border: 1px solid #CFD8D2; color: #17231D; font-size: 14px; display: flex; align-items: center;">Cancelar</a>
+        <button type="submit" style="height: 42px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 600 14px 'Poppins', sans-serif; cursor: pointer;">Guardar intereses</button>
+      </div>
+    </form>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

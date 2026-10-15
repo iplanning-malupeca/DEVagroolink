@@ -99,7 +99,7 @@ class Component extends DCLogic {
   renderVals() {
     const o = this.props.origen ?? 'producto';
     const D = {
-      producto: { tipo: 'Producto', nombre: 'Ronozyme® ProAct', detalle: 'DSM-Firmenich · Nutrición · Enzimas · lo hemos guardado en «Guardados»', boton: 'Seguir consultando', ini: 'RP', fondo: '#FFF4DE', tinta: '#8A5A00', radio: '12px' },
+      producto: { tipo: 'Producto', nombre: 'Ronozyme® ProAct', detalle: 'DSM-Firmenich · Nutrición · Enzimas · queda en tu Historial', boton: 'Seguir consultando', ini: 'RP', fondo: '#FFF4DE', tinta: '#8A5A00', radio: '12px' },
       empresa: { tipo: 'Empresa', nombre: 'Zucami Poultry Equipment', detalle: 'Fabricante de equipamiento para ponedoras · Empresa verificada', boton: 'Seguir consultando', ini: 'Z', fondo: '#C8102E', tinta: '#FFFFFF', radio: '12px' },
       experto: { tipo: 'Experto', nombre: 'Dr. Carlos Martínez', detalle: 'Veterinario · Sanidad avícola · Responde en 24 h', boton: 'Seguir leyendo', ini: 'CM', fondo: '#F1EEFB', tinta: '#4B3BA6', radio: '50%' }
     };
@@ -107,10 +107,10 @@ class Component extends DCLogic {
     const conProducto = o === 'producto';
     return Object.assign({ tipo: '', nombre: '', detalle: '', boton: '', ini: '', fondo: '', tinta: '', radio: '12px' }, d || {}, {
       hayOrigen: !!d,
-      hechos: conProducto ? '1' : '0', pct: conProducto ? '25%' : '0%',
-      p1f: conProducto ? '#0E5A3A' : '#FFFFFF', p1b: conProducto ? '#0E5A3A' : '#B9CBBF',
-      tablerosTexto: conProducto ? 'Ronozyme® ProAct está en «Guardados». Crea un tablero para ordenarlo por proyecto.' : 'Aún no tienes tableros. Guarda productos para compararlos y pedir propuestas.',
-      tablerosLink: conProducto ? 'Crear tablero' : 'Explorar productos'
+      hechos: '0', pct: '0%',
+      p1f: '#FFFFFF', p1b: '#B9CBBF',
+      tablerosTexto: conProducto ? 'Ronozyme® ProAct está en tu Historial. Guárdalo en un tablero para compararlo o pedir propuestas.' : 'Aún no tienes tableros. Guarda productos para compararlos y pedir propuestas.',
+      tablerosLink: conProducto ? 'Guardar en un tablero' : 'Explorar productos'
     });
   }
 }

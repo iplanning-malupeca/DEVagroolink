@@ -12,27 +12,27 @@
   },
   "AltaConsulta.dc.html": {
    "h": 820,
-   "page": "alta",
-   "title": "7 · Más tarde → Primera consulta (datos just-in-time)",
+   "page": "solo",
+   "title": "Desde Alta (L4) · Más tarde → Primera consulta (datos just-in-time)",
    "w": 1280,
-   "x": 3600,
-   "y": 2620
+   "x": 0,
+   "y": 2520
   },
   "AltaEmpresa.dc.html": {
    "h": 760,
-   "page": "alta",
-   "title": "7 · Represento una empresa → Tu empresa",
+   "page": "altaempresa",
+   "title": "Desde Alta (L4) · Represento una empresa → Tu empresa",
    "w": 960,
-   "x": 1360,
-   "y": 2620
+   "x": 0,
+   "y": 2400
   },
   "AltaExperto.dc.html": {
    "h": 760,
-   "page": "alta",
-   "title": "7 · Soy experto → Perfil de experto",
+   "page": "experto",
+   "title": "Desde Alta (L4) · Soy experto → Perfil de experto",
    "w": 1120,
-   "x": 2400,
-   "y": 2620
+   "x": 0,
+   "y": 2400
   },
   "AvatarMenu.dc.html": {
    "h": 980,
@@ -1594,6 +1594,14 @@
    "w": 390,
    "x": 0,
    "y": 4040
+  },
+  "AltaMiEspacioIntereses.dc.html": {
+   "h": 900,
+   "page": "alta",
+   "title": "7b · Mi espacio · pop-up «Editar tus intereses»",
+   "w": 1280,
+   "x": 1360,
+   "y": 2620
   }
  },
  "createdOnFiles": {
@@ -1619,7 +1627,7 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "7 · Adónde lleva cada opción de L4",
+   "text": "7 · Solo para mí → Mi espacio. Empresa, experto y «más tarde» siguen en sus páginas",
    "w": 240,
    "x": 0,
    "y": 2320
@@ -2028,6 +2036,33 @@
    "w": 240,
    "x": 0,
    "y": 3740
+  },
+  "empDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaempresa",
+   "text": "Desde el alta general: opción «Represento una empresa»",
+   "w": 240,
+   "x": 0,
+   "y": 2100
+  },
+  "expDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "experto",
+   "text": "Desde el alta general: opción «Soy experto»",
+   "w": 240,
+   "x": 0,
+   "y": 2100
+  },
+  "soloDesdeAlta": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "solo",
+   "text": "Desde el alta general: opción «Más tarde»",
+   "w": 240,
+   "x": 0,
+   "y": 2220
   }
  },
  "order": [
@@ -2044,6 +2079,7 @@
   "Login4Empezar.dc.html",
   "Login5Creada.dc.html",
   "Alta4MiEspacio.dc.html",
+  "AltaMiEspacioIntereses.dc.html",
   "AltaEmpresa.dc.html",
   "AltaExperto.dc.html",
   "AltaConsulta.dc.html",
