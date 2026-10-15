@@ -184,8 +184,7 @@ def ccard(tit, tipo, n, cols, upd, cta):
             '<div style="display: flex; gap: 8px;"><a href="#" class="btnp">Abrir comparación</a>%s</div></section>') % (
         tit, tipo, n, upd, ''.join('<div style="border: 1px solid #E6EBE7; border-radius: 10px; padding: 8px; display: flex; flex-direction: column; gap: 4px;"><span style="height: 44px; border-radius: 8px; background: %s;"></span><span style="font-size: 12px; font-weight: 600;">%s</span><span class="k">%s</span></div>' % c for c in cols) +
         ('<div style="border: 1.5px dashed #CFD8D2; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #0E5A3A; font-size: 12.5px; font-weight: 500;">+ Añadir</div>' if len(cols) < 4 else ''), cta)
-body = ("""      <div style="display: flex; align-items: center; gap: 8px;"><span class="chip on">Todas 3</span><span class="chip">En tableros 2</span><span class="chip">Sueltas 1</span></div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">"""
+body = ("""      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">"""
         + ccard('Enzimas · fitasas', 'Enzimas', 3, [('#E6F0FA', 'Ronozyme® HiPhos', 'DSM-Firmenich'), ('#FDE9EC', 'Axtra® PHY', 'IFF'), ('#EEF2E6', 'Quantum® Blue', 'AB Vista')], 'Hoy', '<a href="#" class="btn">Solicitar información a los 3</a>')
         + ccard('Bebederos para broilers', 'Bebederos', 2, [('#E5F1F7', 'Nipple Pro', 'Fabricante A'), ('#F3EEE6', 'AquaLine', 'Fabricante B')], 'Hace 3 días', '<a href="#" class="btn">Guardar en tablero</a>')
         + ccard('Ventiladores de túnel', 'Sistemas de ventilación', 3, [('#DDE7E0', 'Turbo 50"', 'Fabricante C'), ('#EAF0EB', 'Cone Fan 54"', 'Fabricante D'), ('#F1EEFB', 'EcoFlow', 'Fabricante E')], '12 oct', '<a href="#" class="btn">Ver en tablero</a>')
