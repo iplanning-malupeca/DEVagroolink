@@ -287,7 +287,7 @@ erDiagram
 - **Destinatarios**: empresas (por rama de negocio) y/o expertos (por cargo); zona (quien trabaja en la provincia del comprador por mercados, zonas de comerciales o acuerdos de distribución, o todo el país). Visibilidad: abierto a quien encaje o solo invitados. Límite de propuestas (10 por defecto).
 - **Encaje (%)**: categoría en su catálogo o servicios + especie + zona (+ tamaño). Se muestran los motivos («Por qué encaja»).
 - Un fabricante con red de distribuidores recibe la oportunidad junto a su distribuidor de la zona.
-- **Privacidad**: el comprador aparece anónimo («Granja de broilers en Lleida»); su nombre y contacto solo los ve la empresa o experto a cuya propuesta responde.
+- **Privacidad**: el comprador aparece anónimo («Granja de broilers en Lleida»); su nombre solo lo ve la empresa o experto a cuya propuesta responde. **El teléfono y el email no se comparten nunca, en ninguna dirección**: toda la relación (mensajes, adjuntos, visitas, propuestas) se mantiene dentro de Agroolink.
 - **Propuesta**: mensaje, productos y servicios del catálogo, precio orientativo (o «a consultar»), plazo, garantía, adjuntos. Estados: nueva, vista, en conversación, descartada, adjudicada.
 - **Planes (propuesta)**: Comprador Gratis 2 proyectos activos; Empresa Gratis 3 propuestas/mes; Experto Gratis 3 candidaturas/mes; Pro ilimitado.
 
