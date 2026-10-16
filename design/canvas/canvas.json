@@ -1962,6 +1962,38 @@
    "h": 900,
    "page": "proyectos",
    "title": "J3f · Modal · editar un apartado desplegado debajo"
+  },
+  "MobHeaderSinSesion.dc.html": {
+   "x": 2720,
+   "y": 1180,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar"
+  },
+  "MobHeaderSesion.dc.html": {
+   "x": 3190,
+   "y": 1180,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo"
+  },
+  "MobHeaderExplorar.dc.html": {
+   "x": 3660,
+   "y": 1180,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M3 · Explorar (Especies y Categorías) desde el menú fijo"
+  },
+  "MobHeaderTu.dc.html": {
+   "x": 4130,
+   "y": 1180,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta"
   }
  },
  "createdOnFiles": {
@@ -2734,7 +2766,11 @@
   "ProyEditarModalItem.dc.html",
   "ProyEditar.dc.html",
   "ProyMisArchivar.dc.html",
-  "ProyArchivados.dc.html"
+  "ProyArchivados.dc.html",
+  "MobHeaderSinSesion.dc.html",
+  "MobHeaderSesion.dc.html",
+  "MobHeaderExplorar.dc.html",
+  "MobHeaderTu.dc.html"
  ],
  "pages": [
   {
