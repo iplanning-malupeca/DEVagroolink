@@ -14,19 +14,22 @@
 body{margin:0}
 .hb{width:40px;height:40px;border:0;background:none;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#17231D;cursor:pointer;position:relative}
 .hb:hover{background:#F2F6F3}
+.nb{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;font:500 14px 'Poppins',sans-serif;color:#17231D;background:none;border:0;white-space:nowrap;cursor:pointer}
+.nb:hover{background:#F2F6F3}
 .sp{display:flex;align-items:center;gap:12px;padding:12px 4px;border-top:1px solid #EEF1EE;color:#17231D;text-decoration:none}
 .sp:first-child{border-top:0}
 </style>
 </helmet>
 <div style="width: 1280px; height: 68px; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
-  <header style="height: 68px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; gap: 24px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
-    <a href="#" aria-label="Agroolink, inicio" style="width: 228px; flex: none; display: flex; align-items: center;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
-    <div role="search" style="flex: 1; max-width: 600px; display: flex; align-items: center; gap: 10px; height: 44px; box-sizing: border-box; border: 1px solid #DCE3DE; border-radius: 999px; background: #F7F9F7; padding: 0 5px 0 16px;">
+  <header style="height: 68px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
+    <a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex; align-items: center; margin-right: 8px;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
+    <button type="button" class="nb">Categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <button type="button" class="nb">Especies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div role="search" style="flex: 1; min-width: 280px; max-width: 560px; margin: 0 8px; display: flex; align-items: center; gap: 10px; height: 44px; box-sizing: border-box; border: 1px solid #DCE3DE; border-radius: 999px; background: #F7F9F7; padding: 0 5px 0 16px;">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input type="search" aria-label="Buscar" placeholder="Buscar productos, empresas, expertos, soluciones…" style="flex: 1; min-width: 0; border: 0; background: none; font: 400 14px 'Poppins', sans-serif; outline: none;">
       <button type="button" aria-label="Buscar" style="width: 34px; height: 34px; border-radius: 50%; background: {{ acento }}; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
     </div>
-    <button type="button" style="display: flex; align-items: center; gap: 6px; border: 0; background: none; font: 500 14px 'Poppins', sans-serif; color: #17231D; cursor: pointer; white-space: nowrap;">Todas las categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
       <button type="button" class="hb" aria-label="Mensajes, 3 sin leer" title="Mensajes"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><span style="position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; box-sizing: border-box; padding: 0 5px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>
       <button type="button" class="hb" aria-label="Historial" title="Historial"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 1-8.5 6M3 4v5h5M12 7v5l3 2"/></svg></button>
