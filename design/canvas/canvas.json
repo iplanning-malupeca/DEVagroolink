@@ -1922,14 +1922,6 @@
    "w": 1280,
    "x": 6800,
    "y": 0
-  },
-  "ProyFichaEmpresas.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J4b · Ficha del proyecto · Empresas y expertos (contactar uno a uno)",
-   "w": 1280,
-   "x": 0,
-   "y": 3100
   }
  },
  "createdOnFiles": {
@@ -2445,15 +2437,6 @@
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "proyT3": {
-   "kind": "title1",
-   "maxW": 6000,
-   "page": "proyectos",
-   "text": "Ficha del proyecto · empresas y expertos (contactar uno a uno)",
-   "w": 240,
-   "x": 0,
-   "y": 2950
   }
  },
  "order": [
@@ -2689,7 +2672,6 @@
   "ProyAsistEscenario.dc.html",
   "ProyAsistProductos.dc.html",
   "ProyAsistResumen.dc.html",
-  "ProyFichaEmpresas.dc.html",
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
   "ProyPropuestaVista.dc.html",
