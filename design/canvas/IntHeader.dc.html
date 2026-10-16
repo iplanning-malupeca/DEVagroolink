@@ -24,7 +24,7 @@ body{margin:0}
     <div role="search" style="flex: 1; max-width: 600px; display: flex; align-items: center; gap: 10px; height: 44px; box-sizing: border-box; border: 1px solid #DCE3DE; border-radius: 999px; background: #F7F9F7; padding: 0 5px 0 16px;">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input type="search" aria-label="Buscar" placeholder="Buscar productos, empresas, expertos, soluciones…" style="flex: 1; min-width: 0; border: 0; background: none; font: 400 14px 'Poppins', sans-serif; outline: none;">
-      <button type="button" aria-label="Buscar" style="width: 34px; height: 34px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button type="button" aria-label="Buscar" style="width: 34px; height: 34px; border-radius: 50%; background: {{ acento }}; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
     </div>
     <button type="button" style="display: flex; align-items: center; gap: 6px; border: 0; background: none; font: 500 14px 'Poppins', sans-serif; color: #17231D; cursor: pointer; white-space: nowrap;">Todas las categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
@@ -41,7 +41,7 @@ body{margin:0}
     <div role="dialog" aria-label="Tus espacios" style="position: absolute; top: 76px; right: 24px; width: 420px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 18px; box-shadow: 0 18px 44px rgba(16, 40, 28, 0.14); padding: 18px; display: flex; flex-direction: column; gap: 14px; z-index: 5;">
       <div style="display: flex; align-items: center; gap: 14px;">
         <span style="width: 64px; height: 64px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 20px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ iniciales }}</span>
-        <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 17px; font-weight: 600;">{{ nombreCompleto }}</span><span style="font-size: 13px; color: #56615B;">{{ email }}</span><span style="font-size: 13px; color: #0E5A3A; font-weight: 500;">{{ activoTexto }}</span></span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 17px; font-weight: 600;">{{ nombreCompleto }}</span><span style="font-size: 13px; color: #56615B;">{{ email }}</span><span style="font-size: 13px; color: {{ acento }}; font-weight: 500;">{{ activoTexto }}</span></span>
       </div>
       <div style="border: 1px solid #E3E8E4; border-radius: 14px; padding: 6px 14px;">
         <div style="font-size: 14px; font-weight: 600; padding: 8px 4px 4px;">Tus espacios</div>
@@ -74,20 +74,20 @@ class Component extends DCLogic {
         espacios: [
           Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Buscar, comparar y gestionar proyectos', accion: '✓' }),
           { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' },
-          { ini: '+', radio: '10px', fondo: '#EEF6EE', tinta: '#0E5A3A', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+          { ini: '+', radio: '10px', fondo: '#E9F0F9', tinta: '#1D4E89', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
         ]
       },
       experta: {
         nombreCompleto: 'Laura Gil', email: 'laura.gil@correo.com', activoTexto: 'Espacio personal · Experta',
         espacios: [
           Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Incluye tu perfil de experta (público)', accion: '✓' }),
-          { ini: '+', radio: '10px', fondo: '#EEF6EE', tinta: '#0E5A3A', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+          { ini: '+', radio: '10px', fondo: '#E9F0F9', tinta: '#1D4E89', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
         ]
       },
       empresa: {
         nombreCompleto: 'Carla Martín', email: 'carla@agroexport.com', activoTexto: 'AgroExport SRL',
         espacios: [
-          { ini: 'AE', radio: '10px', fondo: '#1F3A5F', tinta: '#FFFFFF', titulo: 'AgroExport SRL', chip: 'Activo', sub: 'Empresa · Administradora', accion: '✓' },
+          { ini: 'AE', radio: '10px', fondo: '#1D4E89', tinta: '#FFFFFF', titulo: 'AgroExport SRL', chip: 'Activo', sub: 'Empresa · Administradora', accion: '✓' },
           Object.assign({}, yo, { titulo: 'Personal', chip: '', sub: 'Buscar, comparar y gestionar proyectos', accion: '' }),
           { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' }
         ]
@@ -100,7 +100,8 @@ class Component extends DCLogic {
       color: color,
       abierto: abierto,
       chevron: (abierto || this.props.marcado) ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6',
-      topBorder: v === 'empresa' ? '3px solid #B5D334' : '0'
+      acento: v === 'empresa' ? '#1D4E89' : (v === 'experta' ? '#4B3BA6' : '#0E5A3A'),
+      topBorder: v === 'empresa' ? '3px solid #1D4E89' : (v === 'experta' ? '3px solid #4B3BA6' : '0')
     });
   }
 }

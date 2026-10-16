@@ -15,7 +15,7 @@
 <div style="width: 1280px; height: 128px; font-family: 'Poppins', sans-serif; color: #17231D; background: #FFFFFF; border-bottom: 1px solid #E3E8E4;">
   <div style="height: 64px; box-sizing: border-box; padding: 0 32px; display: flex; align-items: center; gap: 14px;">
     <img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 28px; width: auto; display: block;">
-    <span style="font-size: 12px; font-weight: 600; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 3px 10px;">Empresas</span>
+    <span style="font-size: 12px; font-weight: 600; color: #1D4E89; background: #E9F0F9; border-radius: 999px; padding: 3px 10px;">Empresas</span>
     <span style="font-size: 13.5px; color: #4A5650; margin-left: 8px;">Configurando <strong style="color: #17231D;">{{ empresa }}</strong></span>
     <a href="#" style="margin-left: auto; font-size: 13.5px; color: #4A5650; text-decoration: none;">Guardar y salir</a>
   </div>
@@ -39,11 +39,11 @@ class Component extends DCLogic {
       const k = i + 1, hecho = k < n, actual = k === n;
       return {
         label: l, marca: hecho ? '✓' : String(k), current: actual ? 'step' : 'false',
-        fondo: hecho ? '#0E5A3A' : (actual ? '#EEF6EE' : '#FFFFFF'),
-        tinta: hecho ? '#FFFFFF' : (actual ? '#0E5A3A' : '#8A948F'),
-        borde: hecho ? '0' : (actual ? '2px solid #0E5A3A' : '1.5px solid #CFD8D2'),
+        fondo: hecho ? '#1D4E89' : (actual ? '#E9F0F9' : '#FFFFFF'),
+        tinta: hecho ? '#FFFFFF' : (actual ? '#1D4E89' : '#8A948F'),
+        borde: hecho ? '0' : (actual ? '2px solid #1D4E89' : '1.5px solid #CFD8D2'),
         peso: actual ? '600' : '400', color: (hecho || actual) ? '#17231D' : '#8A948F',
-        linea: hecho ? '#0E5A3A' : '#E3E8E4'
+        linea: hecho ? '#1D4E89' : '#E3E8E4'
       };
     });
     pasos[pasos.length - 1].linea = 'transparent';

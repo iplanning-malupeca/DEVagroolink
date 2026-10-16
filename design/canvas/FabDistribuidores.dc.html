@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
-a{color:#0E5A3A;text-decoration:none;font-weight:500}
+a{color:#1D4E89;text-decoration:none;font-weight:500}
 .card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:7px}
 .h{font-size:13.5px;font-weight:600;margin:0}
 .hint{font-weight:400;color:#56615B;font-size:11.5px}
@@ -20,9 +20,9 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
 .row{display:grid;grid-template-columns:1.3fr 1.3fr 0.9fr;gap:8px;align-items:center;font-size:12px;padding:6px 0;border-top:1px solid #EEF1EE}
 .st{font-size:10.5px;font-weight:600;border-radius:999px;padding:2px 8px;white-space:nowrap}
 .tg{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px}
-.tg input{accent-color:#0E5A3A;width:16px;height:16px;margin:0;flex:none}
+.tg input{accent-color:#1D4E89;width:16px;height:16px;margin:0;flex:none}
 .fld{font-size:11px;padding:3px 8px;border-radius:6px;background:#F2F6F3;color:#2F3D36}
-.go{height:42px;padding:0 20px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#1D4E89;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
 </style>
 </helmet>
 <div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
@@ -33,8 +33,8 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
       <section class="card">
         <div style="display: flex; align-items: center; gap: 8px;"><p class="h">Tu red</p><select class="inp" aria-label="País" style="margin-left: auto;"><option>España (4)</option><option>Portugal (2)</option></select><a href="#" style="font-size: 12px;">Importar Excel</a></div>
         <div class="row" style="background: #FFF8E6; padding: 6px 8px; border-radius: 8px; border: 0;"><strong style="font-weight: 600;">AgroNova</strong><span style="color: #4A5650;">Añadió 3 productos · ES, PT</span><a href="#" style="font-size: 12px;">Validar distribuidor</a></div>
-        <div class="row"><strong style="font-weight: 600;">NutriGan Distribuciones</strong><span style="color: #4A5650;">12 productos · Zona Centro</span><span class="st" style="background: #EEF6EE; color: #0E5A3A; justify-self: start;">Aprobado</span></div>
-        <div class="row"><strong style="font-weight: 600;">AgroVet Ibérica</strong><span style="color: #4A5650;">8 productos · Valle del Ebro</span><span class="st" style="background: #EEF6EE; color: #0E5A3A; justify-self: start;">Aprobado</span></div>
+        <div class="row"><strong style="font-weight: 600;">NutriGan Distribuciones</strong><span style="color: #4A5650;">12 productos · Zona Centro</span><span class="st" style="background: #E9F0F9; color: #1D4E89; justify-self: start;">Aprobado</span></div>
+        <div class="row"><strong style="font-weight: 600;">AgroVet Ibérica</strong><span style="color: #4A5650;">8 productos · Valle del Ebro</span><span class="st" style="background: #E9F0F9; color: #1D4E89; justify-self: start;">Aprobado</span></div>
         <div class="row"><strong style="font-weight: 600;">Piensos del Sur</strong><span style="color: #4A5650;">2 productos · Andalucía Occ.</span><span class="st" style="background: #F2F6F3; color: #4A5650; justify-self: start;">Invitado</span></div>
         <a href="#" style="font-size: 12.5px;">+ Invitar a un distribuidor</a>
       </section>
@@ -44,24 +44,24 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
         <label class="tg">Detectar el país del comprador y mostrar su red primero<input type="checkbox" role="switch" defaultChecked="{{ yes }}"></label>
       </section>
       <section class="card">
-        <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">«Quiero ser distribuidor»</p><input type="checkbox" role="switch" aria-label="Activar Quiero ser distribuidor" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; width: 16px; height: 16px; margin: 0;"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between;"><p class="h">«Quiero ser distribuidor»</p><input type="checkbox" role="switch" aria-label="Activar Quiero ser distribuidor" defaultChecked="{{ yes }}" style="accent-color: #1D4E89; width: 16px; height: 16px; margin: 0;"></div>
         <span style="font-size: 12px; color: #4A5650;">El formulario pide:</span>
-        <div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="fld">Nombre</span><span class="fld">Empresa</span><span class="fld">Email</span><span class="fld">Teléfono</span><span class="fld">País</span><span class="fld">Tipo de actividad</span><span class="fld" style="background: #EEF6EE; color: #0E5A3A;">Productos que le interesan</span><span class="fld">Mensaje</span></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="fld">Nombre</span><span class="fld">Empresa</span><span class="fld">Email</span><span class="fld">Teléfono</span><span class="fld">País</span><span class="fld">Tipo de actividad</span><span class="fld" style="background: #E9F0F9; color: #1D4E89;">Productos que le interesan</span><span class="fld">Mensaje</span></div>
         <div style="display: flex; gap: 8px; align-items: center; font-size: 12px;"><span>Llega a</span><select class="inp" style="flex: 1;"><option>Desarrollo de negocio (2)</option></select><span>Buscas en</span><select class="inp" style="flex: 1;"><option>ES, PT, MA</option></select></div>
       </section>
     </form>
     <aside aria-label="Vista previa: Pestaña «Distribuidores»" style="width: 380px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
       <div style="display: flex; align-items: flex-start; gap: 10px;">
-        <span style="width: 38px; height: 38px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #1D4E89; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
         <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Así encontrarán a tus distribuidores.</span></span>
         <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
       </div>
       <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 10px;">
-        <div style="border-radius: 14px; background: linear-gradient(135deg,#F2F7F3,#E4EEE7); padding: 12px; display: flex; align-items: center; gap: 12px;">
+        <div style="border-radius: 14px; background: linear-gradient(135deg,#F1F5FB,#E2EAF5); padding: 12px; display: flex; align-items: center; gap: 12px;">
           <span style="width: 66px; height: 46px; border-radius: 10px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(16,40,28,.1); display: flex; align-items: center; justify-content: center; font-size: 8.5px; font-weight: 700; white-space: nowrap; flex: none;">dsm-firmenich</span>
           <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><strong style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 5px;">DSM-Firmenich <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E8B57"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></strong><span style="font-size: 11px; color: #4A5650;">Ciencia, innovación y soluciones en nutrición animal</span></span>
         </div>
-        <div style="display: flex; gap: 9px; border-bottom: 1px solid #E8ECE9; font-size: 10px; color: #56615B; white-space: nowrap; overflow: hidden;"><span style="padding-bottom: 7px;">Resumen</span><span style="padding-bottom: 7px;">Productos</span><span style="padding-bottom: 7px;">Servicios</span><span style="padding-bottom: 7px; color: #0E5A3A; font-weight: 600; border-bottom: 2px solid #0E5A3A; margin-bottom: -1px;">Distribuidores</span><span style="padding-bottom: 7px;">Expertos</span><span style="padding-bottom: 7px;">Contenidos</span></div>
+        <div style="display: flex; gap: 9px; border-bottom: 1px solid #E8ECE9; font-size: 10px; color: #56615B; white-space: nowrap; overflow: hidden;"><span style="padding-bottom: 7px;">Resumen</span><span style="padding-bottom: 7px;">Productos</span><span style="padding-bottom: 7px;">Servicios</span><span style="padding-bottom: 7px; color: #1D4E89; font-weight: 600; border-bottom: 2px solid #1D4E89; margin-bottom: -1px;">Distribuidores</span><span style="padding-bottom: 7px;">Expertos</span><span style="padding-bottom: 7px;">Contenidos</span></div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <div style="display: flex; align-items: center; justify-content: space-between;"><strong style="font-size: 15px;">Encuentra un distribuidor oficial</strong></div>
