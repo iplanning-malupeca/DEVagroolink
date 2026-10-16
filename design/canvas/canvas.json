@@ -2445,6 +2445,16 @@
    "w": 240,
    "x": 0,
    "y": -300
+  },
+  "proyDev1": {
+   "x": -480,
+   "y": 0,
+   "w": 400,
+   "maxH": 520,
+   "page": "proyectos",
+   "fill": "orange",
+   "size": "m",
+   "text": "PARA DESARROLLO · Asistente de alta de proyecto\n\nEstas pantallas (J1–J1f) son solo muestras de algunos pasos. Para programar el asistente, sigue el HTML del prototipo navegable: es el que contempla todos los escenarios (tipo de proyecto, preguntas que cambian según el tipo y la especie, productos, presupuesto, empresas, documentos, privacidad, borrador y edición desde el resumen).\n\nPrototipo: design/prototipos/crear-proyecto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/1vY68R2uw6sKU1vRT2QKo6\nModelo de datos: docs/modelo-producto/proyecto.json\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
   }
  },
  "order": [
