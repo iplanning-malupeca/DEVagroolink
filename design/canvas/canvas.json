@@ -1557,11 +1557,11 @@
   },
   "ProyExperto.dc.html": {
    "h": 1000,
-   "page": "proyectos",
+   "page": "proyempresas",
    "title": "J7 · Proyectos para la experta (Laura Gil)",
    "w": 1280,
    "x": 2720,
-   "y": 3420
+   "y": 200
   },
   "ProyMis.dc.html": {
    "h": 900,
@@ -1573,19 +1573,19 @@
   },
   "ProyOportunidades.dc.html": {
    "h": 1000,
-   "page": "proyectos",
+   "page": "proyempresas",
    "title": "J5 · Oportunidades para la empresa (AgroNova)",
    "w": 1280,
    "x": 0,
-   "y": 3420
+   "y": 200
   },
   "ProyPropuesta.dc.html": {
    "h": 1000,
-   "page": "proyectos",
+   "page": "proyempresas",
    "title": "J6 · Enviar una propuesta",
    "w": 1280,
    "x": 1360,
-   "y": 3420
+   "y": 200
   },
   "SelEspecies.dc.html": {
    "h": 900,
@@ -2285,11 +2285,11 @@
   "proyT2": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "proyectos",
+   "page": "proyempresas",
    "text": "Empresas y expertos reciben oportunidades cuando el proyecto se comparte",
    "w": 240,
    "x": 0,
-   "y": 3120
+   "y": 0
   },
   "selT1": {
    "kind": "title1",
@@ -2626,6 +2626,10 @@
   {
    "id": "proyectos",
    "name": "003_Proyectos (módulo central)"
+  },
+  {
+   "id": "proyempresas",
+   "name": "003b_Proyectos · Empresas y expertos"
   },
   {
    "id": "componentes",
