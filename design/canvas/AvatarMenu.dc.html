@@ -67,7 +67,7 @@ body{margin:0}
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"variante":{"editor":"enum","options":["personal","experto","conEmpresa","empresa"],"default":"personal"},"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"$preview":{"width":400,"height":980}}'>
+<script type="text/x-dc" data-dc-script data-props='{"variante":{"editor":"enum","options":["personal","experto","conEmpresa","empresa"],"default":"personal"},"persona":{"editor":"text","default":"Santiago E."},"iniciales":{"editor":"text","default":"SE"},"$preview":{"width":400,"height":980}}'>
 class Component extends DCLogic {
   renderVals() {
     const v = this.props.variante ?? 'personal';
@@ -105,7 +105,7 @@ class Component extends DCLogic {
     const empresa = { titulo: 'AGROEXPORT SRL', chip: 'Empresa', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', items: [
       it('Panel', I.dash), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Productos', I.pkg, { meta: '1 de 15' }), it('Mensajes', I.msg)] };
 
-    const base = { persona: this.props.persona ?? 'Samuel E.', iniciales: ini, color: color, email: 'samuel@granjalosolmos.es', irA: 'Ir a Mi espacio',
+    const base = { persona: this.props.persona ?? 'Santiago E.', iniciales: ini, color: color, email: 'santiago@correo.com', irA: 'Ir a Mi espacio',
       planEtiqueta: 'Plan actual', plan: 'Gratis', planBoton: 'Cambiar de plan' };
     const V = {
       personal: { espacios: [Object.assign({}, yo, activo, { titulo: 'Personal', sub: 'Buscar, comparar y gestionar proyectos' }), crearExp, crearEmp],
