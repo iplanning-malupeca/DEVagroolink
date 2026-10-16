@@ -1547,12 +1547,76 @@
    "x": 0,
    "y": 2800
   },
+  "ProyAsistBienvenida.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1 · Asistente · bienvenida",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ProyAsistEditar.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1f · Asistente · editar un apartado desde el resumen",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "ProyAsistEscenario.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1c · Asistente · pregunta del escenario (nueva explotación)",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "ProyAsistLugar.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1b · Asistente · dónde (país con buscador)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "ProyAsistProductos.dc.html": {
+   "h": 1420,
+   "page": "proyectos",
+   "title": "J1d · Asistente · productos y «Tu selección»",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "ProyAsistResumen.dc.html": {
+   "h": 1300,
+   "page": "proyectos",
+   "title": "J1e · Asistente · resumen con Editar",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "ProyAsistTipo.dc.html": {
+   "h": 1000,
+   "page": "proyectos",
+   "title": "J1a · Asistente · tipo de proyecto (10 tipos)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
   "ProyDetalle.dc.html": {
    "h": 1046,
    "page": "proyectos",
    "title": "J4c · Detalle del proyecto con propuestas recibidas",
    "w": 1280,
    "x": 1610,
+   "y": 1628
+  },
+  "ProyEditar.dc.html": {
+   "h": 960,
+   "page": "proyectos",
+   "title": "J4e · Editar proyecto por bloques + aviso a empresas",
+   "w": 1280,
+   "x": 5690,
    "y": 1628
   },
   "ProyExperto.dc.html": {
@@ -1571,6 +1635,14 @@
    "x": 0,
    "y": 1774
   },
+  "ProyMisAcciones.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3b · Mis proyectos · menú de acciones",
+   "w": 1280,
+   "x": 4330,
+   "y": 1628
+  },
   "ProyOportunidades.dc.html": {
    "h": 1000,
    "page": "proyempresas",
@@ -1586,6 +1658,14 @@
    "w": 1280,
    "x": 1360,
    "y": 200
+  },
+  "ProyPropuestaVista.dc.html": {
+   "h": 1140,
+   "page": "proyectos",
+   "title": "J4d · Propuesta de una empresa y conversación",
+   "w": 1280,
+   "x": 2970,
+   "y": 1628
   },
   "SelEspecies.dc.html": {
    "h": 900,
@@ -1851,85 +1931,21 @@
    "x": 5440,
    "y": 0
   },
-  "ProyPropuestaVista.dc.html": {
-   "x": 2970,
-   "y": 1628,
-   "w": 1280,
-   "h": 1140,
-   "page": "proyectos",
-   "title": "J4d · Propuesta de una empresa y conversación"
-  },
-  "ProyMisAcciones.dc.html": {
-   "x": 4330,
+  "ProyMisArchivar.dc.html": {
+   "x": 7050,
    "y": 1628,
    "w": 1280,
    "h": 900,
    "page": "proyectos",
-   "title": "J3b · Mis proyectos · menú de acciones"
+   "title": "J3c · Mis proyectos · tras archivar (Deshacer y Ver archivados)"
   },
-  "ProyEditar.dc.html": {
-   "x": 5690,
+  "ProyArchivados.dc.html": {
+   "x": 8410,
    "y": 1628,
    "w": 1280,
-   "h": 960,
-   "page": "proyectos",
-   "title": "J4e · Editar proyecto por bloques + aviso a empresas"
-  },
-  "ProyAsistBienvenida.dc.html": {
    "h": 900,
    "page": "proyectos",
-   "title": "J1 · Asistente · bienvenida",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "ProyAsistTipo.dc.html": {
-   "h": 1000,
-   "page": "proyectos",
-   "title": "J1a · Asistente · tipo de proyecto (10 tipos)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
-  "ProyAsistLugar.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J1b · Asistente · dónde (país con buscador)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ProyAsistEscenario.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J1c · Asistente · pregunta del escenario (nueva explotación)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "ProyAsistProductos.dc.html": {
-   "h": 1420,
-   "page": "proyectos",
-   "title": "J1d · Asistente · productos y «Tu selección»",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
-  "ProyAsistResumen.dc.html": {
-   "h": 1300,
-   "page": "proyectos",
-   "title": "J1e · Asistente · resumen con Editar",
-   "w": 1280,
-   "x": 6800,
-   "y": 0
-  },
-  "ProyAsistEditar.dc.html": {
-   "x": 8160,
-   "y": 0,
-   "w": 1280,
-   "h": 900,
-   "page": "proyectos",
-   "title": "J1f · Asistente · editar un apartado desde el resumen"
+   "title": "J3d · Proyectos archivados · Recuperar"
   }
  },
  "createdOnFiles": {
@@ -2338,6 +2354,25 @@
    "x": 0,
    "y": 2520
   },
+  "proyDev1": {
+   "fill": "orange",
+   "maxH": 520,
+   "page": "proyectos",
+   "size": 24,
+   "text": "PARA DESARROLLO · Asistente de alta de proyecto\n\nEstas pantallas (J1–J1f) son solo muestras de algunos pasos. Para programar el asistente, sigue el HTML del prototipo navegable: es el que contempla todos los escenarios (tipo de proyecto, preguntas que cambian según el tipo y la especie, productos, presupuesto, empresas, documentos, privacidad, borrador y edición desde el resumen).\n\nPrototipo: design/prototipos/crear-proyecto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/1vY68R2uw6sKU1vRT2QKo6\nModelo de datos: docs/modelo-producto/proyecto.json\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas.",
+   "w": 400,
+   "x": -667,
+   "y": 93
+  },
+  "proyT1": {
+   "kind": "title1",
+   "maxW": 5360,
+   "page": "proyectos",
+   "text": "Proyectos · el ganadero crea su proyecto con el asistente (una pregunta por pantalla) · prototipo navegable: design/prototipos/crear-proyecto.html",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
   "proyT2": {
    "kind": "title1",
    "maxW": 4000,
@@ -2436,25 +2471,6 @@
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "proyT1": {
-   "kind": "title1",
-   "maxW": 5360,
-   "page": "proyectos",
-   "text": "Proyectos · el ganadero crea su proyecto con el asistente (una pregunta por pantalla) · prototipo navegable: design/prototipos/crear-proyecto.html",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "proyDev1": {
-   "x": -480,
-   "y": 0,
-   "w": 400,
-   "maxH": 520,
-   "page": "proyectos",
-   "fill": "orange",
-   "size": "m",
-   "text": "PARA DESARROLLO · Asistente de alta de proyecto\n\nEstas pantallas (J1–J1f) son solo muestras de algunos pasos. Para programar el asistente, sigue el HTML del prototipo navegable: es el que contempla todos los escenarios (tipo de proyecto, preguntas que cambian según el tipo y la especie, productos, presupuesto, empresas, documentos, privacidad, borrador y edición desde el resumen).\n\nPrototipo: design/prototipos/crear-proyecto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/1vY68R2uw6sKU1vRT2QKo6\nModelo de datos: docs/modelo-producto/proyecto.json\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
   }
  },
  "order": [
@@ -2684,6 +2700,9 @@
   "ExpConsultas.dc.html",
   "ExpServicios.dc.html",
   "ExpPerfil.dc.html",
+  "ProyOportunidades.dc.html",
+  "ProyPropuesta.dc.html",
+  "ProyExperto.dc.html",
   "ProyAsistBienvenida.dc.html",
   "ProyAsistTipo.dc.html",
   "ProyAsistLugar.dc.html",
@@ -2696,9 +2715,8 @@
   "ProyPropuestaVista.dc.html",
   "ProyMisAcciones.dc.html",
   "ProyEditar.dc.html",
-  "ProyOportunidades.dc.html",
-  "ProyPropuesta.dc.html",
-  "ProyExperto.dc.html"
+  "ProyMisArchivar.dc.html",
+  "ProyArchivados.dc.html"
  ],
  "pages": [
   {
