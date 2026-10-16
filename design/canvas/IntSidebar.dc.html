@@ -104,7 +104,7 @@ class Component extends DCLogic {
         subs: subs.map(([l, n]) => { const on = l === sub; return { label: l, n: n, current: on ? 'page' : 'false', borde: on ? acc : '#E3E8E4', tinta: on ? acc : '#4A5650', peso: on ? '600' : '400' }; }) });
     };
     const espacio = { titulo: 'MI ESPACIO', chip: '', items: [
-      it('Mi espacio', I.home), conSubs(it('Mis proyectos', I.file, { badge: 'Nuevo', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), [['Ver proyectos', '3'], ['Borradores', '1'], ['Crear proyecto', '']]), it('Mis tableros', I.grid),
+      it('Mi espacio', I.home), it('Mis proyectos', I.file, { badge: 'Nuevo', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mis tableros', I.grid),
       it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })
     ]};
     const experta = { titulo: 'COMO EXPERTA', chip: 'Público', chipFondo: '#F1EEFB', chipTinta: '#4B3BA6', items: [
