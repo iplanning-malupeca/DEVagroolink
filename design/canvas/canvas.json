@@ -1922,6 +1922,14 @@
    "w": 1280,
    "x": 6800,
    "y": 0
+  },
+  "ProyAsistEditar.dc.html": {
+   "x": 8160,
+   "y": 0,
+   "w": 1280,
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1f · Asistente · editar un apartado desde el resumen"
   }
  },
  "createdOnFiles": {
@@ -2672,6 +2680,7 @@
   "ProyAsistEscenario.dc.html",
   "ProyAsistProductos.dc.html",
   "ProyAsistResumen.dc.html",
+  "ProyAsistEditar.dc.html",
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
   "ProyPropuestaVista.dc.html",
