@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Proyectos · Editar un apartado en el modal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px;min-width:0}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:38px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ta{border:1px solid #D5DED8;border-radius:10px;padding:9px 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;resize:none;line-height:1.45;width:100%;box-sizing:border-box}
+.on{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#0E5A3A;color:#FFFFFF;font-size:12px;font-weight:500;white-space:nowrap}
+.off{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.tok{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;border:1px solid #CFE0D5;font-size:12px;font-weight:500;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}.lila{background:#F1EEFB;color:#4B3BA6}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.sel{border:1.5px solid #0E5A3A;background:#F5FAF6}
+.opt input{accent-color:#0E5A3A;margin:2px 0 0}
+.tabs{display:flex;gap:22px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:9px}
+.tabs .t-on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.why{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#0E5A3A;background:#EEF6EE;border-radius:6px;padding:2px 7px;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden; background: #F6F8F6;">
+  <main style="position: absolute; top: 68px; left: 256px; right: 0; bottom: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: flex-end; gap: 14px;"><div style="flex: 1; min-width: 0;"><span class="eb">MI ESPACIO</span><h1 style="margin: 4px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em;">Mis proyectos</h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Publica lo que necesitas y recibe propuestas de empresas y expertos.</p></div><button type="button" class="btnp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Crear proyecto</button></div>
+      <article class="card" style="flex-direction: row; align-items: center; gap: 16px;">
+        <span role="img" aria-label="Imagen" style="width: 92px; height: 74px; border-radius: 12px;  display: flex; align-items: center; justify-content: center;  flex: none; background: #E6EBE7 url('/_blob/482aa9551e386fdb30306651ef167e6c') center / cover no-repeat;"></span>
+        <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 15px; font-weight: 600;">Sistema de alimentación · Nave 2</strong><span class="st ok">Evaluando propuestas</span></span><span style="font-size: 12px; color: #56615B;">Equipamiento › Sistemas de alimentación · Avicultura › Broilers · Lleida</span>
+          <span style="display: flex; gap: 16px; font-size: 12px; color: #2F3D36; margin-top: 2px;"><span><strong>4</strong> propuestas</span><span>23 empresas lo han visto</span><span>Cierra en 12 días</span></span></span>
+        <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;"><span class="st nw">2 nuevas</span><button type="button" class="btnp" style="height: 34px;">Ver propuestas</button></span>
+        <button type="button" class="btn" title="Más acciones" style="width: 34px; height: 34px; padding: 0; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg></button>
+      </article>
+      <article class="card" style="flex-direction: row; align-items: center; gap: 16px;">
+        <span role="img" aria-label="Imagen" style="width: 92px; height: 74px; border-radius: 12px;  display: flex; align-items: center; justify-content: center;  flex: none; background: #E6EBE7 url('/_blob/613352c1a286bd888bf87722c7309779') center / cover no-repeat;"></span>
+        <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 15px; font-weight: 600;">Asesoría en bioseguridad</strong><span class="st wn">Contactando proveedores</span></span><span style="font-size: 12px; color: #56615B;">Servicio › Consultoría veterinaria · Avicultura · Lleida</span>
+          <span style="display: flex; gap: 16px; font-size: 12px; color: #2F3D36; margin-top: 2px;"><span><strong>1</strong> propuesta</span><span>4 expertos lo han visto</span><span>Cierra en 20 días</span></span></span>
+        <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;"><button type="button" class="btn" style="height: 34px;">Ver propuesta</button></span>
+        <button type="button" class="btn" title="Más acciones" style="width: 34px; height: 34px; padding: 0; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg></button>
+      </article>
+      <article class="card" style="flex-direction: row; align-items: center; gap: 16px;">
+        <span role="img" aria-label="Imagen" style="width: 92px; height: 74px; border-radius: 12px;  display: flex; align-items: center; justify-content: center;  flex: none; background: #E6EBE7 url('/_blob/272663d3e08ffd129f99c54a39782a89') center / cover no-repeat;"></span>
+        <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="display: flex; align-items: center; gap: 8px;"><strong style="font-size: 15px; font-weight: 600;">Ventilación y cooling · Nave 1</strong><span class="st dr">Borrador</span></span><span style="font-size: 12px; color: #56615B;">Equipamiento › Ventilación · borrador</span>
+          <span style="display: flex; gap: 16px; font-size: 12px; color: #2F3D36; margin-top: 2px;"><span>Falta el paso «Detalles»</span><span></span><span></span></span></span>
+        <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;"><button type="button" class="btn" style="height: 34px;">Continuar</button></span>
+        <button type="button" class="btn" title="Más acciones" style="width: 34px; height: 34px; padding: 0; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg></button>
+      </article>
+    <section class="card" style="flex-direction: row; align-items: center; gap: 14px; background: #F2F7F3; border-color: #DCE9DF;"><span style="color: #0E5A3A; display: flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span><span style="flex: 1; font-size: 12.5px;"><strong style="font-weight: 600;">Ligado a tu tablero «Nave 2 · broilers».</strong> Las propuestas que te interesen se guardan allí con su estado.</span><a href="#" style="font-size: 12.5px;">Abrir tablero</a></section>
+  </main>
+  <div style="position: absolute; top: 68px; left: 0;"><dc-import name="IntSidebar" modo="personal" activo="Mis proyectos" sub="Ver proyectos" alto="832" hint-size="256px,832px"></dc-import></div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px; z-index: 2;"><dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import></div>
+  <div style="position: absolute; inset: 0; background: rgba(16,30,22,.55); z-index: 4;"></div>
+  <button type="button" aria-label="Cerrar" style="position: absolute; top: 18px; right: 34px; z-index: 6; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #FFFFFF; color: #17231D; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.2);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <section role="dialog" aria-modal="true" aria-labelledby="mt" style="position: absolute; top: 36px; bottom: 0; left: 50%; transform: translateX(-50%); width: 1060px; z-index: 5; background: #FFFFFF; border-radius: 20px 20px 0 0; box-shadow: 0 -10px 40px rgba(16,40,28,.25); display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 16px; padding: 22px 28px 18px; border-bottom: 1px solid #E3E8E4;">
+      <span role="img" aria-label="Imagen" style="width: 72px; height: 56px; border-radius: 12px; flex: none; background: #E6EBE7 url('/_blob/482aa9551e386fdb30306651ef167e6c') center / cover no-repeat;"></span>
+      <div style="flex: 1; min-width: 0;"><span class="eb">EDITAR PROYECTO</span><div style="display: flex; align-items: center; gap: 10px; margin-top: 2px;"><h2 id="mt" style="margin: 0; font-size: 22px; font-weight: 700;">Nave 2 de broilers en Alcarràs</h2><span class="st ok">Evaluando propuestas</span></div></div>
+      <a href="#" style="font-size: 12.5px; display: inline-flex; align-items: center; gap: 6px;">Abrir en página completa <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+    </div>
+    <div style="flex: 1; min-height: 0; overflow: hidden; padding: 18px 28px 0; display: flex; flex-direction: column; gap: 14px;">
+      <p style="margin: 0; font-size: 13.5px; color: #4A5650;">Cada «Editar» despliega su pregunta justo debajo, sin salir del resumen. Solo puede haber un apartado abierto a la vez.</p>
+      <div style="border: 1px solid #E3E8E4; border-radius: 16px; overflow: hidden;"><div style="background: #F5FAF6; box-shadow: inset 3px 0 0 #0E5A3A;"><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px 6px; align-items: start;"><span style="font-size: 12.5px; color: #0E5A3A; font-weight: 600;">Nombre del proyecto</span><span style="font-size: 13.5px; line-height: 1.45; color: #56615B;">Nave 2 de broilers en Alcarràs</span><button type="button" style="border: 0; background: none; color: #0E5A3A; font: 500 12.5px 'Poppins', sans-serif; display: inline-flex; align-items: center; gap: 4px; padding: 0;">Cerrar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></button></div>
+<div style="padding: 4px 18px 16px 222px; display: flex; flex-direction: column; gap: 10px;">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 500; color: #2F3D36;">¿Cómo quieres llamar a este proyecto?<span style="display: flex; align-items: center; gap: 10px; height: 44px; border: 1.5px solid #0E5A3A; border-radius: 12px; background: #FFFFFF; padding: 0 12px;"><input type="text" value="Nave 2 de broilers en Alcarràs · sistema de alimentación" aria-label="Nombre del proyecto" style="flex: 1; border: 0; outline: none; font: 400 14.5px 'Poppins', sans-serif; color: #17231D; background: none; min-width: 0;"><span style="font-size: 11.5px; color: #56615B;">56/80</span></span></label>
+<span style="font-size: 12px; color: #56615B;">Solo lo ves tú y las empresas que contactes. Ideas: <a href="#" style="font-size: 12px;">Sistema de alimentación · Nave 2</a> · <a href="#" style="font-size: 12px;">Nave 2 de broilers · Alcarràs</a></span>
+<div style="display: flex; gap: 8px; justify-content: flex-end;"><button type="button" class="btn">Cancelar</button><button type="button" class="btnp" style="height: 36px;">Aplicar</button></div>
+</div></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Tipo de proyecto</span><span style="font-size: 13.5px; line-height: 1.45;">Nueva explotación o instalación</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Especie</span><span style="font-size: 13.5px; line-height: 1.45;">Avicultura · Pollos de engorde · Broilers</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Ubicación</span><span style="font-size: 13.5px; line-height: 1.45;">Alcarràs · Lleida · España</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Objetivos</span><span style="font-size: 13.5px; line-height: 1.45;">Conversión alimenticia · Reducción de costes · Bienestar animal</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Detalles del proyecto</span><span style="font-size: 13.5px; line-height: 1.45;">10 de 14 preguntas respondidas</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Soluciones necesarias</span><span style="font-size: 13.5px; line-height: 1.45;">Sistemas de alimentación automática · Sistemas de ventilación · Silos y almacenamiento · Sensor NH₃ / CO₂ · Control de clima compatible con la nave 1</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Presupuesto</span><span style="font-size: 13.5px; line-height: 1.45;">60.000 – 90.000 €</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Calendario</span><span style="font-size: 13.5px; line-height: 1.45;">Comparando proveedores · En 3-6 meses · Financiación: por definir</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Empresas y expertos</span><span style="font-size: 13.5px; line-height: 1.45;">Zucami, Agropecuària del Segre, Laura Gil</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Documentación</span><span style="font-size: 13.5px; line-height: 1.45;">Plano_nave2.pdf, Parcela.jpg</span><a href="#" style="font-size: 12.5px;">Editar</a></div><div style="display: grid; grid-template-columns: 190px minmax(0,1fr) auto; gap: 14px; padding: 12px 18px; border-top: 1px solid #EEF1EE; align-items: start;"><span style="font-size: 12.5px; color: #56615B;">Privacidad</span><span style="font-size: 13.5px; line-height: 1.45;">Privado: solo yo</span><a href="#" style="font-size: 12.5px;">Editar</a></div></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 14px 28px; border-top: 1px solid #E3E8E4; background: #FFFFFF;">
+      <span style="flex: 1; font-size: 12px; color: #56615B;">4 empresas tienen propuesta: si cambias productos, cantidad, ubicación o plazo, podrás avisarlas al guardar.</span>
+      <button type="button" class="btn" style="height: 42px;">Cancelar</button>
+      <button type="button" class="btnp" style="height: 42px;">Guardar cambios</button>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

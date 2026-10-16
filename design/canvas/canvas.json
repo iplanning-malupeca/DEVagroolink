@@ -1954,6 +1954,14 @@
    "h": 900,
    "page": "proyectos",
    "title": "J3e · Editar desde el menú: resumen del proyecto en modal (se cierra con ×)"
+  },
+  "ProyEditarModalItem.dc.html": {
+   "x": 5690,
+   "y": 2648,
+   "w": 1280,
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3f · Modal · editar un apartado desplegado debajo"
   }
  },
  "createdOnFiles": {
@@ -2723,6 +2731,7 @@
   "ProyPropuestaVista.dc.html",
   "ProyMisAcciones.dc.html",
   "ProyEditarModal.dc.html",
+  "ProyEditarModalItem.dc.html",
   "ProyEditar.dc.html",
   "ProyMisArchivar.dc.html",
   "ProyArchivados.dc.html"
