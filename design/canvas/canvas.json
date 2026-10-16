@@ -1923,20 +1923,12 @@
    "x": 6800,
    "y": 0
   },
-  "ProyFicha.dc.html": {
-   "h": 900,
-   "page": "proyectos",
-   "title": "J4 · Ficha del proyecto · Resumen (estado editable)",
-   "w": 1280,
-   "x": 0,
-   "y": 3100
-  },
   "ProyFichaEmpresas.dc.html": {
    "h": 900,
    "page": "proyectos",
    "title": "J4b · Ficha del proyecto · Empresas y expertos (contactar uno a uno)",
    "w": 1280,
-   "x": 1360,
+   "x": 0,
    "y": 3100
   }
  },
@@ -2458,7 +2450,7 @@
    "kind": "title1",
    "maxW": 6000,
    "page": "proyectos",
-   "text": "Ficha del proyecto · resumen y empresas y expertos (contactar uno a uno)",
+   "text": "Ficha del proyecto · empresas y expertos (contactar uno a uno)",
    "w": 240,
    "x": 0,
    "y": 2950
@@ -2697,7 +2689,6 @@
   "ProyAsistEscenario.dc.html",
   "ProyAsistProductos.dc.html",
   "ProyAsistResumen.dc.html",
-  "ProyFicha.dc.html",
   "ProyFichaEmpresas.dc.html",
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
