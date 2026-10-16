@@ -1946,6 +1946,14 @@
    "h": 900,
    "page": "proyectos",
    "title": "J3d · Proyectos archivados · Recuperar"
+  },
+  "ProyEditarModal.dc.html": {
+   "x": 4330,
+   "y": 2648,
+   "w": 1280,
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3e · Editar desde el menú: resumen del proyecto en modal (se cierra con ×)"
   }
  },
  "createdOnFiles": {
@@ -2714,6 +2722,7 @@
   "ProyDetalle.dc.html",
   "ProyPropuestaVista.dc.html",
   "ProyMisAcciones.dc.html",
+  "ProyEditarModal.dc.html",
   "ProyEditar.dc.html",
   "ProyMisArchivar.dc.html",
   "ProyArchivados.dc.html"
