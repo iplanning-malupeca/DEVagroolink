@@ -1874,6 +1874,70 @@
    "h": 960,
    "page": "proyectos",
    "title": "J4e · Editar proyecto por bloques + aviso a empresas"
+  },
+  "ProyAsistBienvenida.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1 · Asistente · bienvenida",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ProyAsistTipo.dc.html": {
+   "h": 1000,
+   "page": "proyectos",
+   "title": "J1a · Asistente · tipo de proyecto (10 tipos)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "ProyAsistLugar.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1b · Asistente · dónde (país con buscador)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "ProyAsistEscenario.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J1c · Asistente · pregunta del escenario (nueva explotación)",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "ProyAsistProductos.dc.html": {
+   "h": 1420,
+   "page": "proyectos",
+   "title": "J1d · Asistente · productos y «Tu selección»",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "ProyAsistResumen.dc.html": {
+   "h": 1300,
+   "page": "proyectos",
+   "title": "J1e · Asistente · resumen con Editar",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "ProyFicha.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J4 · Ficha del proyecto · Resumen (estado editable)",
+   "w": 1280,
+   "x": 0,
+   "y": 3100
+  },
+  "ProyFichaEmpresas.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J4b · Ficha del proyecto · Empresas y expertos (contactar uno a uno)",
+   "w": 1280,
+   "x": 1360,
+   "y": 3100
   }
  },
  "createdOnFiles": {
@@ -2380,6 +2444,24 @@
    "w": 240,
    "x": 0,
    "y": -300
+  },
+  "proyT1": {
+   "kind": "title1",
+   "maxW": 5360,
+   "page": "proyectos",
+   "text": "Proyectos · el ganadero crea su proyecto con el asistente (una pregunta por pantalla) · prototipo navegable: design/prototipos/crear-proyecto.html",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "proyT3": {
+   "kind": "title1",
+   "maxW": 6000,
+   "page": "proyectos",
+   "text": "Ficha del proyecto · resumen y empresas y expertos (contactar uno a uno)",
+   "w": 240,
+   "x": 0,
+   "y": 2950
   }
  },
  "order": [
@@ -2609,6 +2691,14 @@
   "ExpConsultas.dc.html",
   "ExpServicios.dc.html",
   "ExpPerfil.dc.html",
+  "ProyAsistBienvenida.dc.html",
+  "ProyAsistTipo.dc.html",
+  "ProyAsistLugar.dc.html",
+  "ProyAsistEscenario.dc.html",
+  "ProyAsistProductos.dc.html",
+  "ProyAsistResumen.dc.html",
+  "ProyFicha.dc.html",
+  "ProyFichaEmpresas.dc.html",
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
   "ProyPropuestaVista.dc.html",
