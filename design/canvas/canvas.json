@@ -1858,6 +1858,22 @@
    "h": 1140,
    "page": "proyectos",
    "title": "J4d · Propuesta de una empresa y conversación"
+  },
+  "ProyMisAcciones.dc.html": {
+   "x": 4330,
+   "y": 1628,
+   "w": 1280,
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3b · Mis proyectos · menú de acciones"
+  },
+  "ProyEditar.dc.html": {
+   "x": 5690,
+   "y": 1628,
+   "w": 1280,
+   "h": 960,
+   "page": "proyectos",
+   "title": "J4e · Editar proyecto por bloques + aviso a empresas"
   }
  },
  "createdOnFiles": {
@@ -2596,6 +2612,8 @@
   "ProyMis.dc.html",
   "ProyDetalle.dc.html",
   "ProyPropuestaVista.dc.html",
+  "ProyMisAcciones.dc.html",
+  "ProyEditar.dc.html",
   "ProyOportunidades.dc.html",
   "ProyPropuesta.dc.html",
   "ProyExperto.dc.html"
