@@ -1969,7 +1969,8 @@
    "w": 390,
    "h": 844,
    "page": "header",
-   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar"
+   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar",
+   "is_interactive": true
   },
   "MobHeaderSesion.dc.html": {
    "x": 3190,
@@ -2002,6 +2003,15 @@
    "h": 760,
    "page": "header",
    "title": "M5 · Icono de Proyectos · 4 opciones"
+  },
+  "MobHeaderSinSesionMenu.dc.html": {
+   "x": 2720,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
+   "is_interactive": true
   }
  },
  "createdOnFiles": {
@@ -2779,7 +2789,8 @@
   "MobHeaderSesion.dc.html",
   "MobHeaderExplorar.dc.html",
   "MobHeaderTu.dc.html",
-  "MobIconoProyectos.dc.html"
+  "MobIconoProyectos.dc.html",
+  "MobHeaderSinSesionMenu.dc.html"
  ],
  "pages": [
   {
