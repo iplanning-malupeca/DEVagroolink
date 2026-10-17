@@ -1994,6 +1994,14 @@
    "h": 844,
    "page": "header",
    "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta"
+  },
+  "MobIconoProyectos.dc.html": {
+   "x": 4600,
+   "y": 1180,
+   "w": 390,
+   "h": 760,
+   "page": "header",
+   "title": "M5 · Icono de Proyectos · 4 opciones"
   }
  },
  "createdOnFiles": {
@@ -2770,7 +2778,8 @@
   "MobHeaderSinSesion.dc.html",
   "MobHeaderSesion.dc.html",
   "MobHeaderExplorar.dc.html",
-  "MobHeaderTu.dc.html"
+  "MobHeaderTu.dc.html",
+  "MobIconoProyectos.dc.html"
  ],
  "pages": [
   {
