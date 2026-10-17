@@ -2044,6 +2044,22 @@
    "h": 844,
    "page": "header",
    "title": "M9 · Modo empresa · menú «Empresa» abierto"
+  },
+  "MobCambioEmpresa.dc.html": {
+   "x": 5070,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M10 · Al cambiar a empresa: color azul y aviso «Ahora estás en…»"
+  },
+  "MobSelectorEspacios.dc.html": {
+   "x": 5540,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M11 · Selector de espacios con varias empresas"
   }
  },
  "createdOnFiles": {
@@ -2826,7 +2842,9 @@
   "MobHeaderExperto.dc.html",
   "MobHeaderConEmpresa.dc.html",
   "MobHeaderEmpresa.dc.html",
-  "MobHeaderEmpresaMenu.dc.html"
+  "MobHeaderEmpresaMenu.dc.html",
+  "MobCambioEmpresa.dc.html",
+  "MobSelectorEspacios.dc.html"
  ],
  "pages": [
   {
