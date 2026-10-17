@@ -2012,6 +2012,38 @@
    "page": "header",
    "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
    "is_interactive": true
+  },
+  "MobHeaderExperto.dc.html": {
+   "x": 3190,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M6 · Con perfil de experto · «Tú» abierto (lila)"
+  },
+  "MobHeaderConEmpresa.dc.html": {
+   "x": 3660,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M7 · Personal con empresa · «Tú» abierto"
+  },
+  "MobHeaderEmpresa.dc.html": {
+   "x": 4130,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M8 · Modo empresa · barra de empresa (azul)"
+  },
+  "MobHeaderEmpresaMenu.dc.html": {
+   "x": 4600,
+   "y": 2144,
+   "w": 390,
+   "h": 844,
+   "page": "header",
+   "title": "M9 · Modo empresa · menú «Empresa» abierto"
   }
  },
  "createdOnFiles": {
@@ -2790,7 +2822,11 @@
   "MobHeaderExplorar.dc.html",
   "MobHeaderTu.dc.html",
   "MobIconoProyectos.dc.html",
-  "MobHeaderSinSesionMenu.dc.html"
+  "MobHeaderSinSesionMenu.dc.html",
+  "MobHeaderExperto.dc.html",
+  "MobHeaderConEmpresa.dc.html",
+  "MobHeaderEmpresa.dc.html",
+  "MobHeaderEmpresaMenu.dc.html"
  ],
  "pages": [
   {
