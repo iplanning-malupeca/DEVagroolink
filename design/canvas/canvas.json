@@ -2124,6 +2124,22 @@
    "h": 844,
    "page": "busqueda",
    "title": "B8 · Móvil: ordenar en hoja inferior"
+  },
+  "BusFiltrosModal.dc.html": {
+   "x": 2000,
+   "y": 1640,
+   "w": 1920,
+   "h": 1080,
+   "page": "busqueda",
+   "title": "B9 · Variante Airbnb: todos los filtros en una ventana centrada"
+  },
+  "BusFiltrosIzquierda.dc.html": {
+   "x": 4000,
+   "y": 1640,
+   "w": 1920,
+   "h": 1080,
+   "page": "busqueda",
+   "title": "B10 · Variante: los mismos filtros en un panel desde la izquierda"
   }
  },
  "createdOnFiles": {
@@ -2932,7 +2948,9 @@
   "BusMasFiltros.dc.html",
   "BusMovil.dc.html",
   "BusMovilFiltros.dc.html",
-  "BusMovilOrden.dc.html"
+  "BusMovilOrden.dc.html",
+  "BusFiltrosModal.dc.html",
+  "BusFiltrosIzquierda.dc.html"
  ],
  "pages": [
   {
