@@ -2172,6 +2172,78 @@
    "h": 1120,
    "page": "busqueda",
    "title": "B13 · Sin resultados: qué filtro quitar (con recuento), «quizás buscabas» y crear proyecto"
+  },
+  "BusMovExplorar.dc.html": {
+   "x": 0,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F1 · Explorar: buscador + entrar por categorías o por especies"
+  },
+  "BusMovBuscar.dc.html": {
+   "x": 470,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F2 · Buscador con foco: recientes, especie, tipo de resultado y tendencias"
+  },
+  "BusMovEspecies.dc.html": {
+   "x": 940,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F3 · Explorar por especies: 7 especies del árbol v2"
+  },
+  "BusMovProduccion.dc.html": {
+   "x": 1410,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F4 · Producción de la especie (y subtipo si lo hay)"
+  },
+  "BusMovEspCategorias.dc.html": {
+   "x": 1880,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F5 · Categorías dentro de la especie (opcional) → resultados"
+  },
+  "BusMovCategorias.dc.html": {
+   "x": 2350,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F6 · Explorar por categorías: 12 familias del árbol v2"
+  },
+  "BusMovFamilia.dc.html": {
+   "x": 2820,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F7 · Familia → grupos (nivel 2)"
+  },
+  "BusMovGrupo.dc.html": {
+   "x": 3290,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F8 · Grupo → tipos (nivel 3), selección múltiple"
+  },
+  "BusMovFiltrosCompleto.dc.html": {
+   "x": 3760,
+   "y": 4000,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "F9 · Filtros a pantalla completa: mismo icono por dimensión, siempre con la explicación"
   }
  },
  "createdOnFiles": {
@@ -2713,6 +2785,24 @@
    "maxW": 1400,
    "page": "busqueda",
    "text": "Búsqueda · móvil"
+  },
+  "busT3": {
+   "kind": "title1",
+   "x": 0,
+   "y": 3880,
+   "maxW": 4200,
+   "page": "busqueda",
+   "text": "Búsqueda · móvil desde el Figma (flujo por especie y por categoría)"
+  },
+  "busN3": {
+   "x": 4250,
+   "y": 4000,
+   "w": 420,
+   "maxH": 520,
+   "page": "busqueda",
+   "fill": "yellow",
+   "size": 20,
+   "text": "Pasado del Figma 00_MB_Busqueda a Agroolink:\n• Marca Farms4You → Agroolink; campana → sobre de mensajes.\n• Barra inferior Inicio/Buscar/Guardados/Perfil → la nuestra (Explorar, Proyectos, Tableros, Tú).\n• Categorías inventadas (Salud animal, Manejo, Ambiente) → árbol v2: 12 familias › grupos › tipos.\n• «Pequeños rumiantes» → Ovino y Caprino por separado (especies v2), + Cunicultura.\n• Especie → producción → subtipo (Broilers) y luego categoría opcional.\n• Hoja de filtros: añadida Enfermedad y la regla de combinación siempre visible.\n• No incluyo splash ni home de marketing: no son búsqueda."
   }
  },
  "order": [
@@ -2986,7 +3076,16 @@
   "BusPopEnfermedad.dc.html",
   "BusAutocompletar.dc.html",
   "BusRecientes.dc.html",
-  "BusSinResultados.dc.html"
+  "BusSinResultados.dc.html",
+  "BusMovExplorar.dc.html",
+  "BusMovBuscar.dc.html",
+  "BusMovEspecies.dc.html",
+  "BusMovProduccion.dc.html",
+  "BusMovEspCategorias.dc.html",
+  "BusMovCategorias.dc.html",
+  "BusMovFamilia.dc.html",
+  "BusMovGrupo.dc.html",
+  "BusMovFiltrosCompleto.dc.html"
  ],
  "pages": [
   {
