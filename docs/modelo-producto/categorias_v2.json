@@ -1,0 +1,1034 @@
+{
+ "version": "2",
+ "fuente": "003productos.txt",
+ "nota": "Enfermedades: filtro independiente",
+ "familias": [
+  {
+   "id": "C01",
+   "label": "Genética",
+   "grupos": [
+    {
+     "id": "C01-01",
+     "label": "Animales y líneas genéticas",
+     "tipos": [
+      {
+       "id": "C01-01-01",
+       "label": "Líneas puras y núcleos de selección"
+      },
+      {
+       "id": "C01-01-02",
+       "label": "Líneas comerciales e híbridos"
+      },
+      {
+       "id": "C01-01-03",
+       "label": "Reproductores y reproductoras"
+      },
+      {
+       "id": "C01-01-04",
+       "label": "Animales de reposición"
+      },
+      {
+       "id": "C01-01-05",
+       "label": "Razas autóctonas y conservación"
+      }
+     ]
+    },
+    {
+     "id": "C01-02",
+     "label": "Material reproductivo",
+     "tipos": [
+      {
+       "id": "C01-02-01",
+       "label": "Semen y dosis seminales"
+      },
+      {
+       "id": "C01-02-02",
+       "label": "Embriones y ovocitos"
+      },
+      {
+       "id": "C01-02-03",
+       "label": "Huevos fértiles"
+      },
+      {
+       "id": "C01-02-04",
+       "label": "Material genético acuícola"
+      }
+     ]
+    },
+    {
+     "id": "C01-03",
+     "label": "Tecnologías reproductivas",
+     "tipos": [
+      {
+       "id": "C01-03-01",
+       "label": "Inseminación artificial"
+      },
+      {
+       "id": "C01-03-02",
+       "label": "Transferencia embrionaria"
+      },
+      {
+       "id": "C01-03-03",
+       "label": "Diagnóstico reproductivo"
+      },
+      {
+       "id": "C01-03-04",
+       "label": "Sexado y selección genética"
+      }
+     ]
+    },
+    {
+     "id": "C01-04",
+     "label": "Servicios de mejora genética",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "label": "Equipamiento",
+   "grupos": [
+    {
+     "id": "C02-01",
+     "label": "Construcción e instalaciones",
+     "tipos": [
+      {
+       "id": "C02-01-01",
+       "label": "Naves, galpones y establos"
+      },
+      {
+       "id": "C02-01-02",
+       "label": "Proyectos llave en mano"
+      },
+      {
+       "id": "C02-01-03",
+       "label": "Aviarios y sistemas alternativos"
+      },
+      {
+       "id": "C02-01-04",
+       "label": "Jaulas, baterías y módulos de alojamiento"
+      },
+      {
+       "id": "C02-01-05",
+       "label": "Nidales y sistemas de puesta"
+      },
+      {
+       "id": "C02-01-06",
+       "label": "Gallineros y alojamientos móviles"
+      },
+      {
+       "id": "C02-01-07",
+       "label": "Parideras, maternidad y alojamientos de transición"
+      },
+      {
+       "id": "C02-01-08",
+       "label": "Corrales, boxes, cubículos y separadores"
+      },
+      {
+       "id": "C02-01-09",
+       "label": "Slats, suelos y pavimentos"
+      },
+      {
+       "id": "C02-01-10",
+       "label": "Paneles, aislamientos, puertas y ventanas"
+      },
+      {
+       "id": "C02-01-11",
+       "label": "Camas, yacijas y aseladeros"
+      }
+     ]
+    },
+    {
+     "id": "C02-02",
+     "label": "Alimentación y agua",
+     "tipos": [
+      {
+       "id": "C02-02-01",
+       "label": "Comederos y tolvas"
+      },
+      {
+       "id": "C02-02-02",
+       "label": "Sistemas automáticos de alimentación"
+      },
+      {
+       "id": "C02-02-03",
+       "label": "Silos y almacenamiento de alimento"
+      },
+      {
+       "id": "C02-02-04",
+       "label": "Transporte y distribución de alimento"
+      },
+      {
+       "id": "C02-02-05",
+       "label": "Bebederos y líneas de bebida"
+      },
+      {
+       "id": "C02-02-06",
+       "label": "Dosificadores de agua y líquidos"
+      },
+      {
+       "id": "C02-02-07",
+       "label": "Tratamiento y filtración de agua"
+      }
+     ]
+    },
+    {
+     "id": "C02-03",
+     "label": "Climatización y energía",
+     "tipos": [
+      {
+       "id": "C02-03-01",
+       "label": "Ventilación y extracción"
+      },
+      {
+       "id": "C02-03-02",
+       "label": "Refrigeración y enfriamiento evaporativo"
+      },
+      {
+       "id": "C02-03-03",
+       "label": "Calefacción"
+      },
+      {
+       "id": "C02-03-04",
+       "label": "Intercambiadores y recuperación de calor"
+      },
+      {
+       "id": "C02-03-05",
+       "label": "Iluminación y control fotoperiódico"
+      },
+      {
+       "id": "C02-03-06",
+       "label": "Sensores ambientales"
+      },
+      {
+       "id": "C02-03-07",
+       "label": "Eficiencia energética y energías renovables"
+      }
+     ]
+    },
+    {
+     "id": "C02-04",
+     "label": "Automatización y control",
+     "tipos": [
+      {
+       "id": "C02-04-01",
+       "label": "Ordenadores y controladores de granja"
+      },
+      {
+       "id": "C02-04-02",
+       "label": "Sensores y monitorización"
+      },
+      {
+       "id": "C02-04-03",
+       "label": "Básculas y sistemas de pesaje"
+      },
+      {
+       "id": "C02-04-04",
+       "label": "Identificación y trazabilidad animal"
+      },
+      {
+       "id": "C02-04-05",
+       "label": "Cámaras y visión artificial"
+      },
+      {
+       "id": "C02-04-06",
+       "label": "Robótica y automatización"
+      },
+      {
+       "id": "C02-04-07",
+       "label": "Software de gestión de granja"
+      }
+     ]
+    },
+    {
+     "id": "C02-05",
+     "label": "Producción y manejo",
+     "tipos": [
+      {
+       "id": "C02-05-01",
+       "label": "Sistemas de ordeño y robots de ordeño"
+      },
+      {
+       "id": "C02-05-02",
+       "label": "Enfriamiento y almacenamiento de leche"
+      },
+      {
+       "id": "C02-05-03",
+       "label": "Recogida y transporte de huevos"
+      },
+      {
+       "id": "C02-05-04",
+       "label": "Clasificación y control de calidad de huevos en granja"
+      },
+      {
+       "id": "C02-05-05",
+       "label": "Manipulación, carga y transporte de animales"
+      },
+      {
+       "id": "C02-05-06",
+       "label": "Instalaciones de alimentación forzada / embuchado"
+      },
+      {
+       "id": "C02-05-07",
+       "label": "Equipos de manejo y bienestar animal"
+      }
+     ]
+    },
+    {
+     "id": "C02-06",
+     "label": "Residuos y purines",
+     "tipos": [
+      {
+       "id": "C02-06-01",
+       "label": "Recogida y retirada de estiércol"
+      },
+      {
+       "id": "C02-06-02",
+       "label": "Gestión y tratamiento de purines"
+      },
+      {
+       "id": "C02-06-03",
+       "label": "Secado, separación y valorización"
+      },
+      {
+       "id": "C02-06-04",
+       "label": "Gestión de cadáveres"
+      },
+      {
+       "id": "C02-06-05",
+       "label": "Almacenamiento y contenedores"
+      }
+     ]
+    },
+    {
+     "id": "C02-07",
+     "label": "Accesorios y repuestos",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "label": "Fábricas de alimentos",
+   "grupos": [
+    {
+     "id": "C03-01",
+     "label": "Recepción de materias primas",
+     "tipos": []
+    },
+    {
+     "id": "C03-02",
+     "label": "Silos y almacenamiento",
+     "tipos": []
+    },
+    {
+     "id": "C03-03",
+     "label": "Molinos",
+     "tipos": []
+    },
+    {
+     "id": "C03-04",
+     "label": "Mezcladoras",
+     "tipos": []
+    },
+    {
+     "id": "C03-05",
+     "label": "Dosificadoras",
+     "tipos": []
+    },
+    {
+     "id": "C03-06",
+     "label": "Granulación y extrusión",
+     "tipos": []
+    },
+    {
+     "id": "C03-07",
+     "label": "Enfriado y secado",
+     "tipos": []
+    },
+    {
+     "id": "C03-08",
+     "label": "Transporte interno",
+     "tipos": []
+    },
+    {
+     "id": "C03-09",
+     "label": "Envasado y paletización",
+     "tipos": []
+    },
+    {
+     "id": "C03-10",
+     "label": "Aspiración y filtración",
+     "tipos": []
+    },
+    {
+     "id": "C03-11",
+     "label": "Control de calidad",
+     "tipos": []
+    },
+    {
+     "id": "C03-12",
+     "label": "Automatización y software",
+     "tipos": []
+    },
+    {
+     "id": "C03-13",
+     "label": "Repuestos y mantenimiento",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "label": "Incubación",
+   "grupos": [
+    {
+     "id": "C04-01",
+     "label": "Incubadoras",
+     "tipos": []
+    },
+    {
+     "id": "C04-02",
+     "label": "Nacedoras",
+     "tipos": []
+    },
+    {
+     "id": "C04-03",
+     "label": "Clasificación de huevos",
+     "tipos": []
+    },
+    {
+     "id": "C04-04",
+     "label": "Transferencia de huevos",
+     "tipos": []
+    },
+    {
+     "id": "C04-05",
+     "label": "Vacunación in-ovo",
+     "tipos": []
+    },
+    {
+     "id": "C04-06",
+     "label": "Sexado",
+     "tipos": []
+    },
+    {
+     "id": "C04-07",
+     "label": "Manejo de pollitos",
+     "tipos": []
+    },
+    {
+     "id": "C04-08",
+     "label": "Transporte de pollitos",
+     "tipos": []
+    },
+    {
+     "id": "C04-09",
+     "label": "Limpieza y desinfección",
+     "tipos": []
+    },
+    {
+     "id": "C04-10",
+     "label": "Climatización y automatización",
+     "tipos": []
+    },
+    {
+     "id": "C04-11",
+     "label": "Proyectos llave en mano",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "label": "Procesamiento",
+   "grupos": [
+    {
+     "id": "C05-01",
+     "label": "Recepción y manejo",
+     "tipos": []
+    },
+    {
+     "id": "C05-02",
+     "label": "Aturdimiento y sacrificio",
+     "tipos": []
+    },
+    {
+     "id": "C05-03",
+     "label": "Escaldado y desplumado",
+     "tipos": []
+    },
+    {
+     "id": "C05-04",
+     "label": "Evisceración y lavado",
+     "tipos": []
+    },
+    {
+     "id": "C05-05",
+     "label": "Refrigeración",
+     "tipos": []
+    },
+    {
+     "id": "C05-06",
+     "label": "Clasificación y pesaje",
+     "tipos": []
+    },
+    {
+     "id": "C05-07",
+     "label": "Corte y despiece",
+     "tipos": []
+    },
+    {
+     "id": "C05-08",
+     "label": "Elaboración de productos",
+     "tipos": []
+    },
+    {
+     "id": "C05-09",
+     "label": "Envasado y etiquetado",
+     "tipos": []
+    },
+    {
+     "id": "C05-10",
+     "label": "Cadena de frío y almacenamiento",
+     "tipos": []
+    },
+    {
+     "id": "C05-11",
+     "label": "Higiene y subproductos",
+     "tipos": []
+    },
+    {
+     "id": "C05-12",
+     "label": "Automatización y software",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "label": "Nutrición",
+   "grupos": [
+    {
+     "id": "C06-01",
+     "label": "Salud digestiva",
+     "tipos": [
+      {
+       "id": "C06-01-01",
+       "label": "Probióticos"
+      },
+      {
+       "id": "C06-01-02",
+       "label": "Prebióticos"
+      },
+      {
+       "id": "C06-01-03",
+       "label": "Postbióticos y simbióticos"
+      },
+      {
+       "id": "C06-01-04",
+       "label": "Enzimas"
+      },
+      {
+       "id": "C06-01-05",
+       "label": "Acidificantes / ácidos orgánicos"
+      }
+     ]
+    },
+    {
+     "id": "C06-02",
+     "label": "Micotoxinas y endotoxinas",
+     "tipos": [
+      {
+       "id": "C06-02-01",
+       "label": "Adsorbentes de micotoxinas"
+      },
+      {
+       "id": "C06-02-02",
+       "label": "Biotransformadores / desactivadores"
+      },
+      {
+       "id": "C06-02-03",
+       "label": "Soluciones frente a endotoxinas"
+      }
+     ]
+    },
+    {
+     "id": "C06-03",
+     "label": "Aditivos nutricionales",
+     "tipos": [
+      {
+       "id": "C06-03-01",
+       "label": "Aminoácidos"
+      },
+      {
+       "id": "C06-03-02",
+       "label": "Vitaminas y metabolitos vitamínicos"
+      },
+      {
+       "id": "C06-03-03",
+       "label": "Macrominerales y microminerales"
+      },
+      {
+       "id": "C06-03-04",
+       "label": "Ácidos grasos y fuentes lipídicas funcionales"
+      },
+      {
+       "id": "C06-03-05",
+       "label": "Emulsionantes y mejoradores de digestibilidad"
+      },
+      {
+       "id": "C06-03-06",
+       "label": "Nucleótidos y otros nutrientes funcionales"
+      }
+     ]
+    },
+    {
+     "id": "C06-04",
+     "label": "Fitogénicos",
+     "tipos": []
+    },
+    {
+     "id": "C06-05",
+     "label": "Antioxidantes",
+     "tipos": []
+    },
+    {
+     "id": "C06-06",
+     "label": "Pigmentantes",
+     "tipos": []
+    },
+    {
+     "id": "C06-07",
+     "label": "Aromatizantes y palatabilizantes",
+     "tipos": []
+    },
+    {
+     "id": "C06-08",
+     "label": "Aditivos tecnológicos",
+     "tipos": [
+      {
+       "id": "C06-08-01",
+       "label": "Conservantes y antifúngicos"
+      },
+      {
+       "id": "C06-08-02",
+       "label": "Antiaglomerantes y fluidificantes"
+      },
+      {
+       "id": "C06-08-03",
+       "label": "Aglutinantes y estabilizantes"
+      },
+      {
+       "id": "C06-08-04",
+       "label": "Emulsionantes tecnológicos"
+      },
+      {
+       "id": "C06-08-05",
+       "label": "Otros aditivos tecnológicos"
+      }
+     ]
+    },
+    {
+     "id": "C06-09",
+     "label": "Nutracéuticos",
+     "tipos": []
+    },
+    {
+     "id": "C06-10",
+     "label": "Otros aditivos",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "label": "Fármacos",
+   "grupos": [
+    {
+     "id": "C07-01",
+     "label": "Antibióticos",
+     "tipos": []
+    },
+    {
+     "id": "C07-02",
+     "label": "Antiparasitarios internos",
+     "tipos": []
+    },
+    {
+     "id": "C07-03",
+     "label": "Antiparasitarios externos",
+     "tipos": []
+    },
+    {
+     "id": "C07-04",
+     "label": "Antiinflamatorios y analgésicos",
+     "tipos": []
+    },
+    {
+     "id": "C07-05",
+     "label": "Tratamientos respiratorios",
+     "tipos": []
+    },
+    {
+     "id": "C07-06",
+     "label": "Tratamientos digestivos y antidiarreicos",
+     "tipos": []
+    },
+    {
+     "id": "C07-07",
+     "label": "Tratamientos reproductivos y hormonales",
+     "tipos": []
+    },
+    {
+     "id": "C07-08",
+     "label": "Antifúngicos terapéuticos",
+     "tipos": []
+    },
+    {
+     "id": "C07-09",
+     "label": "Antisépticos y tratamientos tópicos",
+     "tipos": []
+    },
+    {
+     "id": "C07-10",
+     "label": "Sedantes, anestésicos y tranquilizantes",
+     "tipos": []
+    },
+    {
+     "id": "C07-11",
+     "label": "Terapias de soporte y rehidratación",
+     "tipos": []
+    },
+    {
+     "id": "C07-12",
+     "label": "Coccidiostatos y anticoccidiales medicinales",
+     "tipos": []
+    },
+    {
+     "id": "C07-13",
+     "label": "Otros fármacos",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C08",
+   "label": "Vacunas",
+   "grupos": [
+    {
+     "id": "C08-01",
+     "label": "Vacunas por enfermedad",
+     "tipos": []
+    },
+    {
+     "id": "C08-02",
+     "label": "Autovacunas",
+     "tipos": []
+    },
+    {
+     "id": "C08-03",
+     "label": "Vacunas multivalentes",
+     "tipos": []
+    },
+    {
+     "id": "C08-04",
+     "label": "Otros biológicos",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C09",
+   "label": "Bioseguridad",
+   "grupos": [
+    {
+     "id": "C09-01",
+     "label": "Limpieza y desinfección",
+     "tipos": [
+      {
+       "id": "C09-01-01",
+       "label": "Detergentes"
+      },
+      {
+       "id": "C09-01-02",
+       "label": "Desinfectantes de superficies"
+      },
+      {
+       "id": "C09-01-03",
+       "label": "Desinfectantes de vehículos y equipos"
+      },
+      {
+       "id": "C09-01-04",
+       "label": "Desinfectantes pediluvios y rodiluvios"
+      },
+      {
+       "id": "C09-01-05",
+       "label": "Equipos de limpieza, pulverización y nebulización"
+      }
+     ]
+    },
+    {
+     "id": "C09-02",
+     "label": "Control de plagas",
+     "tipos": [
+      {
+       "id": "C09-02-01",
+       "label": "Rodenticidas / raticidas"
+      },
+      {
+       "id": "C09-02-02",
+       "label": "Insecticidas"
+      },
+      {
+       "id": "C09-02-03",
+       "label": "Acaricidas"
+      },
+      {
+       "id": "C09-02-04",
+       "label": "Larvicidas"
+      },
+      {
+       "id": "C09-02-05",
+       "label": "Repelentes"
+      },
+      {
+       "id": "C09-02-06",
+       "label": "Trampas y sistemas de captura"
+      },
+      {
+       "id": "C09-02-07",
+       "label": "Monitorización de plagas"
+      }
+     ]
+    },
+    {
+     "id": "C09-03",
+     "label": "Tratamiento del agua",
+     "tipos": [
+      {
+       "id": "C09-03-01",
+       "label": "Productos para desinfección del agua"
+      },
+      {
+       "id": "C09-03-02",
+       "label": "Productos para limpieza de circuitos"
+      },
+      {
+       "id": "C09-03-03",
+       "label": "Equipos de dosificación y tratamiento"
+      }
+     ]
+    },
+    {
+     "id": "C09-04",
+     "label": "Barreras sanitarias",
+     "tipos": [
+      {
+       "id": "C09-04-01",
+       "label": "Pediluvios, rodiluvios y arcos sanitarios"
+      },
+      {
+       "id": "C09-04-02",
+       "label": "Duchas y vestuarios sanitarios"
+      },
+      {
+       "id": "C09-04-03",
+       "label": "Equipos de protección individual"
+      },
+      {
+       "id": "C09-04-04",
+       "label": "Control de accesos y zonificación"
+      },
+      {
+       "id": "C09-04-05",
+       "label": "Material de muestreo y vigilancia sanitaria"
+      }
+     ]
+    },
+    {
+     "id": "C09-05",
+     "label": "Otros productos de bioseguridad",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C10",
+   "label": "Alimentos",
+   "grupos": [
+    {
+     "id": "C10-01",
+     "label": "Alimentos completos",
+     "tipos": []
+    },
+    {
+     "id": "C10-02",
+     "label": "Alimentos complementarios",
+     "tipos": []
+    },
+    {
+     "id": "C10-03",
+     "label": "Alimentos dietéticos",
+     "tipos": []
+    },
+    {
+     "id": "C10-04",
+     "label": "Concentrados",
+     "tipos": []
+    },
+    {
+     "id": "C10-05",
+     "label": "Premezclas",
+     "tipos": []
+    },
+    {
+     "id": "C10-06",
+     "label": "Correctores vitamínico-minerales",
+     "tipos": []
+    },
+    {
+     "id": "C10-07",
+     "label": "Materias primas",
+     "tipos": [
+      {
+       "id": "C10-07-01",
+       "label": "Cereales y derivados"
+      },
+      {
+       "id": "C10-07-02",
+       "label": "Harinas y fuentes proteicas vegetales"
+      },
+      {
+       "id": "C10-07-03",
+       "label": "Proteínas de origen animal autorizadas"
+      },
+      {
+       "id": "C10-07-04",
+       "label": "Aceites y grasas"
+      },
+      {
+       "id": "C10-07-05",
+       "label": "Forrajes, fibras y coproductos fibrosos"
+      },
+      {
+       "id": "C10-07-06",
+       "label": "Subproductos agroindustriales"
+      },
+      {
+       "id": "C10-07-07",
+       "label": "Minerales, sales y fosfatos"
+      },
+      {
+       "id": "C10-07-08",
+       "label": "Otras materias primas"
+      }
+     ]
+    },
+    {
+     "id": "C10-08",
+     "label": "Otros alimentos",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C11",
+   "label": "Servicios",
+   "grupos": [
+    {
+     "id": "C11-01",
+     "label": "Consultoría técnica",
+     "tipos": []
+    },
+    {
+     "id": "C11-02",
+     "label": "Servicios veterinarios",
+     "tipos": []
+    },
+    {
+     "id": "C11-03",
+     "label": "Laboratorios y análisis",
+     "tipos": [
+      {
+       "id": "C11-03-01",
+       "label": "Análisis de alimentos y materias primas"
+      },
+      {
+       "id": "C11-03-02",
+       "label": "Análisis de agua"
+      },
+      {
+       "id": "C11-03-03",
+       "label": "Diagnóstico microbiológico y molecular"
+      },
+      {
+       "id": "C11-03-04",
+       "label": "Analítica NIR"
+      },
+      {
+       "id": "C11-03-05",
+       "label": "Otros análisis"
+      }
+     ]
+    },
+    {
+     "id": "C11-04",
+     "label": "Ingeniería y proyectos",
+     "tipos": []
+    },
+    {
+     "id": "C11-05",
+     "label": "Instalación y montaje",
+     "tipos": []
+    },
+    {
+     "id": "C11-06",
+     "label": "Mantenimiento",
+     "tipos": []
+    },
+    {
+     "id": "C11-07",
+     "label": "Servicios de reproducción y genética",
+     "tipos": []
+    },
+    {
+     "id": "C11-08",
+     "label": "Formación",
+     "tipos": []
+    },
+    {
+     "id": "C11-09",
+     "label": "Certificación y auditoría",
+     "tipos": []
+    },
+    {
+     "id": "C11-10",
+     "label": "Logística especializada",
+     "tipos": []
+    },
+    {
+     "id": "C11-11",
+     "label": "Gestión ambiental",
+     "tipos": []
+    },
+    {
+     "id": "C11-12",
+     "label": "Otros servicios",
+     "tipos": []
+    }
+   ]
+  },
+  {
+   "id": "C12",
+   "label": "Otros",
+   "grupos": [
+    {
+     "id": "C12-01",
+     "label": "Otros productos",
+     "tipos": []
+    }
+   ]
+  }
+ ]
+}

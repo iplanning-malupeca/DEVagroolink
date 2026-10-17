@@ -1,0 +1,152 @@
+{
+ "version": "2",
+ "fuente": "ESPECIES.txt",
+ "especies": [
+  {
+   "label": "Avicultura",
+   "producciones": [
+    {
+     "label": "Pollos de engorde",
+     "subtipos": [
+      "Broilers",
+      "Pollos de crecimiento lento"
+     ]
+    },
+    {
+     "label": "Gallinas ponedoras",
+     "subtipos": []
+    },
+    {
+     "label": "Reproductoras",
+     "subtipos": []
+    },
+    {
+     "label": "Pavos",
+     "subtipos": []
+    },
+    {
+     "label": "Patos",
+     "subtipos": []
+    },
+    {
+     "label": "Ocas",
+     "subtipos": []
+    },
+    {
+     "label": "Perdices",
+     "subtipos": []
+    },
+    {
+     "label": "Aves ornamentales",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Porcino",
+   "producciones": [
+    {
+     "label": "Hembras reproductoras",
+     "subtipos": []
+    },
+    {
+     "label": "Machos reproductores",
+     "subtipos": []
+    },
+    {
+     "label": "Lechones",
+     "subtipos": []
+    },
+    {
+     "label": "Cebo / Engorde",
+     "subtipos": []
+    },
+    {
+     "label": "Razas autóctonas",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Bovino",
+   "producciones": [
+    {
+     "label": "Vacuno de leche",
+     "subtipos": []
+    },
+    {
+     "label": "Vacuno de carne",
+     "subtipos": []
+    },
+    {
+     "label": "Razas autóctonas",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Ovino",
+   "producciones": [
+    {
+     "label": "Ovino de leche",
+     "subtipos": []
+    },
+    {
+     "label": "Ovino de carne",
+     "subtipos": []
+    },
+    {
+     "label": "Razas autóctonas",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Caprino",
+   "producciones": [
+    {
+     "label": "Caprino de leche",
+     "subtipos": []
+    },
+    {
+     "label": "Caprino de carne",
+     "subtipos": []
+    },
+    {
+     "label": "Razas autóctonas",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Acuicultura",
+   "producciones": [
+    {
+     "label": "Tilapias",
+     "subtipos": []
+    },
+    {
+     "label": "Camarones",
+     "subtipos": []
+    },
+    {
+     "label": "Salmón",
+     "subtipos": []
+    }
+   ]
+  },
+  {
+   "label": "Cunicultura",
+   "producciones": [
+    {
+     "label": "Conejos para carne",
+     "subtipos": []
+    },
+    {
+     "label": "Conejos para piel",
+     "subtipos": []
+    }
+   ]
+  }
+ ]
+}

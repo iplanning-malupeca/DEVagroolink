@@ -2081,17 +2081,17 @@
    "x": 4000,
    "y": 0,
    "w": 1920,
-   "h": 900,
+   "h": 980,
    "page": "busqueda",
-   "title": "B3 · Desplegable Especie: buscador, iconos, contador y producción"
+   "title": "B3 · Desplegable Especie: especie › producción › subtipo"
   },
   "BusPopCategoria.dc.html": {
    "x": 6000,
    "y": 0,
    "w": 1920,
-   "h": 900,
+   "h": 980,
    "page": "busqueda",
-   "title": "B4 · Desplegable Categoría: familia a la izquierda, tipos a la derecha"
+   "title": "B4 · Desplegable Categoría: 3 niveles (familia › grupo › tipo), árbol v2"
   },
   "BusMasFiltros.dc.html": {
    "x": 8000,
@@ -2140,6 +2140,14 @@
    "h": 1080,
    "page": "busqueda",
    "title": "B10 · Variante: los mismos filtros en un panel desde la izquierda"
+  },
+  "BusPopEnfermedad.dc.html": {
+   "x": 6000,
+   "y": 1640,
+   "w": 1920,
+   "h": 980,
+   "page": "busqueda",
+   "title": "B4b · Filtro Enfermedad: independiente, agrupado por tipo clínico y filtrado por especie"
   }
  },
  "createdOnFiles": {
@@ -2950,7 +2958,8 @@
   "BusMovilFiltros.dc.html",
   "BusMovilOrden.dc.html",
   "BusFiltrosModal.dc.html",
-  "BusFiltrosIzquierda.dc.html"
+  "BusFiltrosIzquierda.dc.html",
+  "BusPopEnfermedad.dc.html"
  ],
  "pages": [
   {

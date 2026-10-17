@@ -1,0 +1,381 @@
+{
+ "version": "1",
+ "fuente": "001_enfermedades.xlsx",
+ "uso": "Filtro independiente de categorías; multiselección",
+ "relaciones": "Una enfermedad puede aparecer en varias especies y tipos",
+ "precaucion": "No supone existencia de vacuna o fármaco autorizado",
+ "estado": "Borrador funcional sujeto a revisión veterinaria",
+ "enfermedades": [
+  {
+   "id": "ENF-035",
+   "nombre": "PRRS",
+   "especie": "Porcino",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-024",
+   "nombre": "Influenza porcina",
+   "especie": "Porcino",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-033",
+   "nombre": "Neumonía enzoótica",
+   "especie": "Porcino",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-022",
+   "nombre": "Ileítis",
+   "especie": "Porcino",
+   "tipo_clinico": "Digestivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-010",
+   "nombre": "Colibacilosis",
+   "especie": "Porcino",
+   "tipo_clinico": "Digestivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-039",
+   "nombre": "Salmonelosis",
+   "especie": "Porcino",
+   "tipo_clinico": "Digestivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-036",
+   "nombre": "Parvovirosis",
+   "especie": "Porcino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-027",
+   "nombre": "Leptospirosis",
+   "especie": "Porcino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-035",
+   "nombre": "PRRS",
+   "especie": "Porcino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-007",
+   "nombre": "Circovirosis porcina",
+   "especie": "Porcino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-038",
+   "nombre": "Peste porcina clásica",
+   "especie": "Porcino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-037",
+   "nombre": "Peste porcina africana",
+   "especie": "Porcino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-028",
+   "nombre": "Mal rojo",
+   "especie": "Porcino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-015",
+   "nombre": "Enfermedad de Aujeszky",
+   "especie": "Porcino",
+   "tipo_clinico": "Nerviosas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-009",
+   "nombre": "Coccidiosis",
+   "especie": "Porcino",
+   "tipo_clinico": "Parasitarias",
+   "agente": "Parasitaria"
+  },
+  {
+   "id": "ENF-005",
+   "nombre": "Bronquitis infecciosa aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-034",
+   "nombre": "Newcastle",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-023",
+   "nombre": "Influenza aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-012",
+   "nombre": "Coriza aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-025",
+   "nombre": "Laringotraqueítis infecciosa",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-031",
+   "nombre": "Micoplasmosis",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-030",
+   "nombre": "Metapneumovirus aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-009",
+   "nombre": "Coccidiosis",
+   "especie": "Avicultura",
+   "tipo_clinico": "Digestivas",
+   "agente": "Parasitaria"
+  },
+  {
+   "id": "ENF-039",
+   "nombre": "Salmonelosis",
+   "especie": "Avicultura",
+   "tipo_clinico": "Digestivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-010",
+   "nombre": "Colibacilosis",
+   "especie": "Avicultura",
+   "tipo_clinico": "Digestivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-040",
+   "nombre": "Síndrome de caída de puesta (EDS)",
+   "especie": "Avicultura",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-016",
+   "nombre": "Enfermedad de Marek",
+   "especie": "Avicultura",
+   "tipo_clinico": "Nerviosas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-014",
+   "nombre": "Encefalomielitis aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Nerviosas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-019",
+   "nombre": "Gumboro",
+   "especie": "Avicultura",
+   "tipo_clinico": "Inmunitarias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-043",
+   "nombre": "Viruela aviar",
+   "especie": "Avicultura",
+   "tipo_clinico": "Cutáneas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-003",
+   "nombre": "Artritis vírica por reovirus",
+   "especie": "Avicultura",
+   "tipo_clinico": "Musculoesqueléticas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-021",
+   "nombre": "IBR",
+   "especie": "Bovino",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-011",
+   "nombre": "Complejo respiratorio bovino",
+   "especie": "Bovino",
+   "tipo_clinico": "Respiratorias",
+   "agente": "Multifactorial"
+  },
+  {
+   "id": "ENF-013",
+   "nombre": "Diarrea por rotavirus y coronavirus",
+   "especie": "Bovino",
+   "tipo_clinico": "Digestivas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-004",
+   "nombre": "BVD",
+   "especie": "Bovino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-027",
+   "nombre": "Leptospirosis",
+   "especie": "Bovino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-029",
+   "nombre": "Mastitis",
+   "especie": "Bovino",
+   "tipo_clinico": "Mamarias",
+   "agente": "Multifactorial"
+  },
+  {
+   "id": "ENF-008",
+   "nombre": "Clostridiosis",
+   "especie": "Bovino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-026",
+   "nombre": "Lengua azul",
+   "especie": "Bovino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-006",
+   "nombre": "Cetosis",
+   "especie": "Bovino",
+   "tipo_clinico": "Metabólicas",
+   "agente": "Metabólica"
+  },
+  {
+   "id": "ENF-020",
+   "nombre": "Hipocalcemia",
+   "especie": "Bovino",
+   "tipo_clinico": "Metabólicas",
+   "agente": "Metabólica"
+  },
+  {
+   "id": "ENF-001",
+   "nombre": "Aborto enzoótico",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-041",
+   "nombre": "Toxoplasmosis",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Reproductivas",
+   "agente": "Parasitaria"
+  },
+  {
+   "id": "ENF-029",
+   "nombre": "Mastitis",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Mamarias",
+   "agente": "Multifactorial"
+  },
+  {
+   "id": "ENF-002",
+   "nombre": "Agalaxia contagiosa",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Mamarias",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-026",
+   "nombre": "Lengua azul",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-008",
+   "nombre": "Clostridiosis",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-041",
+   "nombre": "Toxoplasmosis",
+   "especie": "Ovino y caprino",
+   "tipo_clinico": "Parasitarias",
+   "agente": "Parasitaria"
+  },
+  {
+   "id": "ENF-017",
+   "nombre": "Enfermedad hemorrágica vírica del conejo (RHDV/RHDV2)",
+   "especie": "Cunicultura",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-032",
+   "nombre": "Mixomatosis",
+   "especie": "Cunicultura",
+   "tipo_clinico": "Sistémicas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-032",
+   "nombre": "Mixomatosis",
+   "especie": "Cunicultura",
+   "tipo_clinico": "Cutáneas",
+   "agente": "Vírica"
+  },
+  {
+   "id": "ENF-042",
+   "nombre": "Vibriosis",
+   "especie": "Acuicultura",
+   "tipo_clinico": "Bacterianas",
+   "agente": "Bacteriana"
+  },
+  {
+   "id": "ENF-018",
+   "nombre": "Estreptococosis",
+   "especie": "Acuicultura",
+   "tipo_clinico": "Bacterianas",
+   "agente": "Bacteriana"
+  }
+ ]
+}
