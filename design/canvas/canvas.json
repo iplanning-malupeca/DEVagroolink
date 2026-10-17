@@ -2148,6 +2148,30 @@
    "h": 980,
    "page": "busqueda",
    "title": "B4b · Filtro Enfermedad: independiente, agrupado por tipo clínico y filtrado por especie"
+  },
+  "BusAutocompletar.dc.html": {
+   "x": 8000,
+   "y": 1640,
+   "w": 1920,
+   "h": 1000,
+   "page": "busqueda",
+   "title": "B11 · Autocompletado al escribir: sugerencias, categorías, especie y vista previa por tipo"
+  },
+  "BusRecientes.dc.html": {
+   "x": 10000,
+   "y": 0,
+   "w": 1920,
+   "h": 1000,
+   "page": "busqueda",
+   "title": "B12 · Campo vacío con foco: búsquedas recientes, tendencias y «seguir donde lo dejaste»"
+  },
+  "BusSinResultados.dc.html": {
+   "x": 10000,
+   "y": 1640,
+   "w": 1920,
+   "h": 1120,
+   "page": "busqueda",
+   "title": "B13 · Sin resultados: qué filtro quitar (con recuento), «quizás buscabas» y crear proyecto"
   }
  },
  "createdOnFiles": {
@@ -2678,7 +2702,7 @@
    "kind": "title1",
    "x": 0,
    "y": -300,
-   "maxW": 9920,
+   "maxW": 11920,
    "page": "busqueda",
    "text": "Búsqueda · escritorio 1920 px (contenedor 1708 px, como Vevor): filtros en barra superior"
   },
@@ -2959,7 +2983,10 @@
   "BusMovilOrden.dc.html",
   "BusFiltrosModal.dc.html",
   "BusFiltrosIzquierda.dc.html",
-  "BusPopEnfermedad.dc.html"
+  "BusPopEnfermedad.dc.html",
+  "BusAutocompletar.dc.html",
+  "BusRecientes.dc.html",
+  "BusSinResultados.dc.html"
  ],
  "pages": [
   {
