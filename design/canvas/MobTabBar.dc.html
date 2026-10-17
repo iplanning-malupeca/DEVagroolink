@@ -78,7 +78,7 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
 class Component extends DCLogic {
   renderVals() {
     const a = this.props.activo ?? 1;
-    const T = [["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5", "Explorar"], ["M5 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18", "Proyectos"], ["M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z", "Tableros"], ["M4 6h16M4 12h16M4 18h16", "Menú"]];
+    const T = [["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5", "Explorar"], ["M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6", "Proyectos"], ["M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z", "Tableros"], ["M4 6h16M4 12h16M4 18h16", "Menú"]];
     const items = T.map(([d, label], i) => {
       const on = i === Math.max(a, 2) - 2;
       return { d: d, label: label, cur: on ? 'page' : 'false', tinta: on ? '#0E5A3A' : '#56615B', peso: on ? '600' : '500',
