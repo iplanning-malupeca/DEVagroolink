@@ -1977,7 +1977,7 @@
    "w": 390,
    "h": 844,
    "page": "header",
-   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo"
+   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo (Explorar es el inicio)"
   },
   "MobHeaderExplorar.dc.html": {
    "x": 3660,
@@ -1985,7 +1985,7 @@
    "w": 390,
    "h": 844,
    "page": "header",
-   "title": "M3 · Explorar (Especies y Categorías) desde el menú fijo"
+   "title": "M3 · Especies y Categorías desde Explorar"
   },
   "MobHeaderTu.dc.html": {
    "x": 4130,
