@@ -2244,6 +2244,54 @@
    "h": 844,
    "page": "busqueda",
    "title": "F9 · Filtros a pantalla completa: mismo icono por dimensión, siempre con la explicación"
+  },
+  "BusComHome.dc.html": {
+   "x": 0,
+   "y": 5100,
+   "w": 1920,
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C1 · Home: barra por segmentos tipo Airbnb (Qué · Especie · Categoría · Enfermedad)"
+  },
+  "BusComEspecie.dc.html": {
+   "x": 2000,
+   "y": 5100,
+   "w": 1920,
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C2 · Segmento Especie abierto: especie › producción"
+  },
+  "BusComCategoria.dc.html": {
+   "x": 4000,
+   "y": 5100,
+   "w": 1920,
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C3 · Segmento Categoría abierto: familia › grupo › tipo, con recuentos según la especie"
+  },
+  "BusComResCategoria.dc.html": {
+   "x": 6000,
+   "y": 5100,
+   "w": 1920,
+   "h": 1560,
+   "page": "busqueda",
+   "title": "C4 · Resultados con solo categoría: subtipos arriba y «¿Para qué especie?»"
+  },
+  "BusComResEspecie.dc.html": {
+   "x": 8000,
+   "y": 5100,
+   "w": 1920,
+   "h": 2050,
+   "page": "busqueda",
+   "title": "C5 · Resultados con solo especie: producción, «¿Qué buscas para porcino?» y enfermedades frecuentes"
+  },
+  "BusComMovil.dc.html": {
+   "x": 10000,
+   "y": 5100,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "C6 · Móvil: pasos apilados (Qué · Especie · Categoría · Enfermedad) como Airbnb"
   }
  },
  "createdOnFiles": {
@@ -2803,6 +2851,14 @@
    "fill": "yellow",
    "size": 20,
    "text": "Pasado del Figma 00_MB_Busqueda a Agroolink:\n• Marca Farms4You → Agroolink; campana → sobre de mensajes.\n• Barra inferior Inicio/Buscar/Guardados/Perfil → la nuestra (Explorar, Proyectos, Tableros, Tú).\n• Categorías inventadas (Salud animal, Manejo, Ambiente) → árbol v2: 12 familias › grupos › tipos.\n• «Pequeños rumiantes» → Ovino y Caprino por separado (especies v2), + Cunicultura.\n• Especie → producción → subtipo (Broilers) y luego categoría opcional.\n• Hoja de filtros: añadida Enfermedad y la regla de combinación siempre visible.\n• No incluyo splash ni home de marketing: no son búsqueda."
+  },
+  "busT4": {
+   "kind": "title1",
+   "x": 0,
+   "y": 4980,
+   "maxW": 10400,
+   "page": "busqueda",
+   "text": "Búsqueda combinada tipo Airbnb: una barra (Qué · Especie · Categoría · Enfermedad) en la home y compacta en resultados"
   }
  },
  "order": [
@@ -3085,7 +3141,13 @@
   "BusMovCategorias.dc.html",
   "BusMovFamilia.dc.html",
   "BusMovGrupo.dc.html",
-  "BusMovFiltrosCompleto.dc.html"
+  "BusMovFiltrosCompleto.dc.html",
+  "BusComHome.dc.html",
+  "BusComEspecie.dc.html",
+  "BusComCategoria.dc.html",
+  "BusComResCategoria.dc.html",
+  "BusComResEspecie.dc.html",
+  "BusComMovil.dc.html"
  ],
  "pages": [
   {
