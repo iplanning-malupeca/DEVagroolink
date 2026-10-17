@@ -2064,46 +2064,46 @@
   "BusTodo.dc.html": {
    "x": 0,
    "y": 0,
-   "w": 1440,
-   "h": 1960,
+   "w": 1920,
+   "h": 2400,
    "page": "busqueda",
    "title": "B1 · Resultados «Todo»: barra de filtros arriba y bloques por tipo"
   },
   "BusProductos.dc.html": {
-   "x": 1520,
+   "x": 2000,
    "y": 0,
-   "w": 1440,
+   "w": 1920,
    "h": 1500,
    "page": "busqueda",
    "title": "B2 · Pestaña Productos con categoría elegida: aparecen sus filtros técnicos"
   },
   "BusPopEspecie.dc.html": {
-   "x": 3040,
+   "x": 4000,
    "y": 0,
-   "w": 1440,
+   "w": 1920,
    "h": 900,
    "page": "busqueda",
    "title": "B3 · Desplegable Especie: buscador, iconos, contador y producción"
   },
   "BusPopCategoria.dc.html": {
-   "x": 4560,
+   "x": 6000,
    "y": 0,
-   "w": 1440,
+   "w": 1920,
    "h": 900,
    "page": "busqueda",
    "title": "B4 · Desplegable Categoría: familia a la izquierda, tipos a la derecha"
   },
   "BusMasFiltros.dc.html": {
-   "x": 6080,
+   "x": 8000,
    "y": 0,
-   "w": 1440,
+   "w": 1920,
    "h": 900,
    "page": "busqueda",
    "title": "B5 · «Más filtros»: técnicos de la categoría + generales"
   },
   "BusMovil.dc.html": {
    "x": 0,
-   "y": 2420,
+   "y": 2900,
    "w": 390,
    "h": 844,
    "page": "busqueda",
@@ -2111,7 +2111,7 @@
   },
   "BusMovilFiltros.dc.html": {
    "x": 470,
-   "y": 2420,
+   "y": 2900,
    "w": 390,
    "h": 844,
    "page": "busqueda",
@@ -2119,7 +2119,7 @@
   },
   "BusMovilOrden.dc.html": {
    "x": 940,
-   "y": 2420,
+   "y": 2900,
    "w": 390,
    "h": 844,
    "page": "busqueda",
@@ -2654,14 +2654,14 @@
    "kind": "title1",
    "x": 0,
    "y": -300,
-   "maxW": 7520,
+   "maxW": 9920,
    "page": "busqueda",
-   "text": "Búsqueda · escritorio 1440 px: filtros en barra superior, resultados a todo el ancho"
+   "text": "Búsqueda · escritorio 1920 px (contenedor 1708 px, como Vevor): filtros en barra superior"
   },
   "busT2": {
    "kind": "title1",
    "x": 0,
-   "y": 2100,
+   "y": 2580,
    "maxW": 1400,
    "page": "busqueda",
    "text": "Búsqueda · móvil"

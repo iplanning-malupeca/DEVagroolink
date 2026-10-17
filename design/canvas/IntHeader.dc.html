@@ -21,7 +21,7 @@ body{margin:0}
 </style>
 </helmet>
 <div style="width: {{ ancho }}; height: 68px; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
-  <header style="height: 68px; box-sizing: border-box; padding: 0 28px; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
+  <header style="height: 68px; box-sizing: border-box; padding: 0 {{ pad }}; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
     <a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex; align-items: center; margin-right: 8px;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
     <button type="button" class="nb">Categorías <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     <button type="button" class="nb">Especies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
@@ -63,7 +63,7 @@ body{margin:0}
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"$preview":{"width":1280,"height":68}}'>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
 class Component extends DCLogic {
   renderVals() {
     const v = this.props.variante ?? 'personal';
@@ -101,6 +101,7 @@ class Component extends DCLogic {
       persona: this.props.persona ?? 'Samuel E.',
       ancho: (this.props.ancho ?? 1280) + 'px',
       consulta: this.props.consulta ?? '',
+      pad: (this.props.contenedor ? Math.max(28, ((this.props.ancho ?? 1280) - this.props.contenedor) / 2) : 28) + 'px',
       iniciales: ini,
       color: color,
       abierto: abierto,
