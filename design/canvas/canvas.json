@@ -2273,9 +2273,9 @@
    "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "x": 1360,
+   "x": 2720,
    "y": 0,
-   "title": "PA0b · Importar catálogo por Excel (actualiza por referencia)"
+   "title": "PA3 · Si eliges importar: Excel con muchos productos a la vez"
   },
   "ProyArchivados.dc.html": {
    "h": 900,
@@ -2841,9 +2841,9 @@
    "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "x": 2720,
+   "x": 1360,
    "y": 0,
-   "title": "PA1 · Añadir un producto: crear, importar o duplicar · lo venden tus distribuidores"
+   "title": "PA2 · «Nuevo producto»: crear la ficha, importar o duplicar"
   },
   "PrdFabMercados.dc.html": {
    "w": 1280,
@@ -2851,7 +2851,7 @@
    "page": "prodfab",
    "x": 4080,
    "y": 0,
-   "title": "PA2 · Mercados y dónde comprar: distribuidores por país y zona"
+   "title": "PA4 · Último paso de la ficha: mercados y qué distribuidor lo vende en cada país"
   },
   "PrdSucNuevo.dc.html": {
    "w": 1280,
@@ -2963,7 +2963,7 @@
    "page": "prodfab",
    "x": 0,
    "y": 0,
-   "title": "PA0 · Catálogo de DSM-Firmenich: distribuidores por producto"
+   "title": "PA1 · Catálogo: tus productos y cuántos distribuidores tiene cada uno"
   },
   "PrdFabAcuerdos.dc.html": {
    "w": 1280,
@@ -2971,7 +2971,7 @@
    "page": "prodfab",
    "x": 5440,
    "y": 0,
-   "title": "PA3 · Acuerdos de distribución por línea y zona"
+   "title": "PA5 · De dónde salen esos distribuidores: acuerdos de distribución por línea y zona"
   },
   "PrdComCatalogo.dc.html": {
    "w": 1280,
@@ -3684,7 +3684,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodfab",
-   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. La ficha de cada producto está en «011_Alta de producto».",
+   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importar (o crear la ficha en «011_Alta de producto») → 4 Mercados → 5 Acuerdos de distribución",
    "w": 240,
    "x": 0,
    "y": -300
