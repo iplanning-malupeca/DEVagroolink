@@ -2372,6 +2372,30 @@
    "h": 900,
    "page": "busqueda",
    "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía"
+  },
+  "FabTipoEspecies.dc.html": {
+   "x": 0,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1b · Editar especies: especie › producción › subtipo, con «Todas excepto…» (exclusiones)"
+  },
+  "FabTipoRama.dc.html": {
+   "x": 1360,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal"
+  },
+  "FabTipoMercados.dc.html": {
+   "x": 2720,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1d · Editar mercados: inclusiones por nivel y exclusiones (excepto…)"
   }
  },
  "createdOnFiles": {
@@ -3261,7 +3285,10 @@
   "BusXCategoria.dc.html",
   "BusXEnfermedad.dc.html",
   "BusXResultados.dc.html",
-  "BusIntranetBuscar.dc.html"
+  "BusIntranetBuscar.dc.html",
+  "FabTipoEspecies.dc.html",
+  "FabTipoRama.dc.html",
+  "FabTipoMercados.dc.html"
  ],
  "pages": [
   {
