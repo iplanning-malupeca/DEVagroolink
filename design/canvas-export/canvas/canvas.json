@@ -12,11 +12,11 @@
   },
   "AltaConsulta.dc.html": {
    "h": 820,
-   "page": "solo",
-   "title": "Desde Alta (L4) · Más tarde → Primera consulta (datos just-in-time)",
+   "page": "alta",
+   "title": "8 · «Más tarde» → primera consulta (los datos se piden solo esta vez)",
    "w": 1280,
-   "x": 0,
-   "y": 2520
+   "x": 2720,
+   "y": 2620
   },
   "AltaExperto.dc.html": {
    "h": 760,
@@ -1794,54 +1794,6 @@
    "x": 0,
    "y": 0
   },
-  "MiM1Empezar.dc.html": {
-   "h": 760,
-   "page": "solo",
-   "title": "M1 · (tras L1–L3) ¿Cómo quieres empezar? → Solo para mí",
-   "w": 960,
-   "x": 0,
-   "y": 0
-  },
-  "MiM2Creada.dc.html": {
-   "h": 760,
-   "page": "solo",
-   "title": "M2 · Cuenta creada → vuelve a donde estaba",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "MiM3Guardado.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M3 · De vuelta en la ficha: producto guardado",
-   "w": 1280,
-   "x": 2080,
-   "y": 0
-  },
-  "MiM4Comparar.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M4 · Comparar y pedir precio",
-   "w": 1280,
-   "x": 3440,
-   "y": 0
-  },
-  "MiM5Consulta.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M5 · Primera consulta (datos solo esta vez)",
-   "w": 1280,
-   "x": 0,
-   "y": 1300
-  },
-  "MiM6Dia3.dc.html": {
-   "h": 820,
-   "page": "solo",
-   "title": "M6 · Mi espacio, 3 días después",
-   "w": 1280,
-   "x": 1360,
-   "y": 1300
-  },
   "MobBuscar.dc.html": {
    "h": 844,
    "page": "movil",
@@ -3078,7 +3030,7 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "7 · Solo para mí → Mi espacio. «Represento una empresa» sigue en 006–010 (según cómo vende la empresa); experto y «más tarde», en sus páginas",
+   "text": "7 · Solo para mí → Mi espacio · 8 · «Más tarde» → primera consulta. «Represento una empresa» sigue en 006–010 (según cómo vende la empresa); experto, en su página",
    "w": 240,
    "x": 0,
    "y": 2320
@@ -3516,33 +3468,6 @@
    "x": 0,
    "y": -300
   },
-  "soloDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "solo",
-   "text": "Desde el alta general: opción «Más tarde»",
-   "w": 240,
-   "x": 0,
-   "y": 2220
-  },
-  "soloTitulo": {
-   "kind": "title1",
-   "maxW": 4720,
-   "page": "solo",
-   "text": "Alta solo para mí · Samuel Esteban, gerente de Granja Los Olmos (broilers, Lleida)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "soloTitulo2": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "solo",
-   "text": "Primera consulta y vuelta a los 3 días",
-   "w": 240,
-   "x": 0,
-   "y": 1000
-  },
   "sucT1": {
    "kind": "title1",
    "maxW": 16000,
@@ -3724,12 +3649,6 @@
   "AltaMiEspacioIntereses.dc.html",
   "AltaExperto.dc.html",
   "AltaConsulta.dc.html",
-  "MiM1Empezar.dc.html",
-  "MiM2Creada.dc.html",
-  "MiM3Guardado.dc.html",
-  "MiM4Comparar.dc.html",
-  "MiM5Consulta.dc.html",
-  "MiM6Dia3.dc.html",
   "ExpX1Empezar.dc.html",
   "ExpX2Creada.dc.html",
   "ExpX3Especialidad.dc.html",
@@ -4113,10 +4032,6 @@
   {
    "id": "alta",
    "name": "001_Alta Usuario"
-  },
-  {
-   "id": "solo",
-   "name": "Alta solo para mí"
   },
   {
    "id": "experto",
