@@ -410,12 +410,68 @@
    "x": 0,
    "y": 2600
   },
+  "ComAltaComercial.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2d · El comercial se da de alta para ver la solicitud",
+   "w": 1280,
+   "x": 9520,
+   "y": 1340
+  },
+  "ComAvisoAdmin.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0d · Superadmin: altas en organizaciones",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "ComAvisoEmpresa.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0c · Aviso a los administradores de la empresa (copia al superadmin)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
   "ComBandeja.dc.html": {
    "h": 900,
    "page": "comerciales",
    "title": "K6 · Bandeja de la comercial (Laura García)",
    "w": 1280,
    "x": 13600,
+   "y": 1340
+  },
+  "ComCRM.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0a · ¿Cuál es tu empresa? Datos del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "ComCabecera.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "KC · Cabecera (paso 2): marca y sociedades del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
+  "ComCabeceraAdmin.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "KC-s · Cabecera vista por el superadmin: datos del CRM editables",
+   "w": 1280,
+   "x": 2720,
+   "y": 1340
+  },
+  "ComCabeceraObjetivos.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "KC-b · Elegir objetivos y tendencias (hasta 5)",
+   "w": 1280,
+   "x": 1360,
    "y": 1340
   },
   "ComContacto.dc.html": {
@@ -426,12 +482,28 @@
    "x": 10880,
    "y": 1340
   },
+  "ComEmailSolicitud.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
+   "w": 1280,
+   "x": 8160,
+   "y": 1340
+  },
   "ComEquipo.dc.html": {
    "h": 940,
    "page": "comerciales",
    "title": "K2 · Equipo comercial (cuentas en Agroolink)",
    "w": 1280,
    "x": 4080,
+   "y": 1340
+  },
+  "ComEquipoCrear.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
+   "w": 1280,
+   "x": 6800,
    "y": 1340
   },
   "ComPublicar.dc.html": {
@@ -448,6 +520,62 @@
    "title": "K1 · Tipo de empresa: equipo comercial propio",
    "w": 1280,
    "x": 6800,
+   "y": 0
+  },
+  "ComTipoEspecies.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "w": 1280,
+   "x": 9520,
+   "y": 0
+  },
+  "ComTipoEspeciesSolo.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1b-3 · Especies · modo «Solo algunas»: ponedoras y reproductoras",
+   "w": 1280,
+   "x": 10880,
+   "y": 0
+  },
+  "ComTipoEspeciesTodas.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1b-1 · Especies · modo «Todas» (por defecto)",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "ComTipoMercados.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1d · Editar mercados: inclusiones y «Excluir» (Francia sin Córcega)",
+   "w": 1280,
+   "x": 13600,
+   "y": 0
+  },
+  "ComTipoRama.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
+   "w": 1280,
+   "x": 12240,
+   "y": 0
+  },
+  "ComTipoVacio.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "ComVerifica.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0b · Confirma tu email de empresa (código de 6 cifras)",
+   "w": 1280,
+   "x": 1360,
    "y": 0
   },
   "ComZonas.dc.html": {
@@ -591,16 +719,32 @@
    "page": "distmulti",
    "title": "X5 · Validación de la marca (lo que recibe Zucami)",
    "w": 1280,
-   "x": 0,
-   "y": 1240
+   "x": 8160,
+   "y": 1340
+  },
+  "DisAvisoAdmin.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1c · Superadmin: altas en organizaciones",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "DisAvisoEmpresa.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b · Aviso a los administradores de la empresa (copia al superadmin)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
   },
   "DisContacto.dc.html": {
    "h": 940,
    "page": "distmulti",
    "title": "X6 · Contacto: delegaciones por país",
    "w": 1280,
-   "x": 1360,
-   "y": 1240
+   "x": 9520,
+   "y": 1340
   },
   "DisElegir.dc.html": {
    "h": 940,
@@ -608,7 +752,7 @@
    "title": "X3 · Añadir productos que ya existen en Agroolink",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 1340
   },
   "DisMarcas.dc.html": {
    "h": 940,
@@ -616,15 +760,15 @@
    "title": "X2 · Marcas (se generan desde los productos)",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 1340
   },
   "DisPublicar.dc.html": {
    "h": 940,
    "page": "distmulti",
    "title": "X7 · Revisar y publicar",
    "w": 1280,
-   "x": 2720,
-   "y": 1240
+   "x": 10880,
+   "y": 1340
   },
   "DisSubir.dc.html": {
    "h": 940,
@@ -632,14 +776,22 @@
    "title": "X4 · Subir un producto nuevo (con control de duplicados)",
    "w": 1280,
    "x": 6800,
-   "y": 0
+   "y": 1340
   },
   "DisTipo.dc.html": {
    "h": 940,
    "page": "distmulti",
    "title": "X1 · Tipo de empresa: distribuidor con marcas propias",
    "w": 1280,
-   "x": 0,
+   "x": 6800,
+   "y": 0
+  },
+  "EmpAvisoAdmin.dc.html": {
+   "h": 940,
+   "page": "altaempresa",
+   "title": "E4b · Superadmin: primera persona de AgroExport (solo se avisa al superadmin)",
+   "w": 1280,
+   "x": 4160,
    "y": 0
   },
   "EmpE1Empezar.dc.html": {
@@ -810,13 +962,29 @@
    "x": 2720,
    "y": 0
   },
-  "FabCRMVarias.dc.html": {
-   "x": 0,
-   "y": 0,
-   "w": 1280,
+  "FabAvisoAdmin.dc.html": {
    "h": 940,
    "page": "fabdist",
-   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
+   "title": "D0d · Superadmin: altas en organizaciones",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "FabAvisoEmpresa.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0c · Aviso a los administradores de la empresa (copia al superadmin)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "FabCRMVarias.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya",
+   "w": 1280,
+   "x": 0,
+   "y": 0
   },
   "FabCabecera.dc.html": {
    "h": 940,
@@ -827,20 +995,20 @@
    "y": 1340
   },
   "FabCabeceraAdmin.dc.html": {
-   "x": 2720,
-   "y": 1340,
-   "w": 1280,
    "h": 940,
    "page": "fabdist",
-   "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
+   "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables",
+   "w": 1280,
+   "x": 2720,
+   "y": 1340
   },
   "FabCabeceraObjetivos.dc.html": {
-   "x": 1360,
-   "y": 1340,
-   "w": 1280,
    "h": 940,
    "page": "fabdist",
-   "title": "D2b · Elegir objetivos y tendencias (hasta 5) · buscador para añadir especie o categoría"
+   "title": "D2b · Elegir objetivos y tendencias (hasta 5) · buscador para añadir especie o categoría",
+   "w": 1280,
+   "x": 1360,
+   "y": 1340
   },
   "FabContacto.dc.html": {
    "h": 940,
@@ -952,6 +1120,14 @@
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
    "x": 5440,
+   "y": 0
+  },
+  "FabVerifica.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0b · Confirma tu email de empresa (código de 6 cifras)",
+   "w": 1280,
+   "x": 1360,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2213,6 +2389,14 @@
    "x": 2720,
    "y": 0
   },
+  "SelTelefono.dc.html": {
+   "h": 900,
+   "page": "componentes",
+   "title": "Teléfono con prefijo internacional · cuándo se verifica",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
   "ServEditor.dc.html": {
    "h": 940,
    "page": "servicios",
@@ -2229,52 +2413,68 @@
    "x": 1360,
    "y": 0
   },
+  "SucAvisoAdmin.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S2c · Superadmin: altas en organizaciones",
+   "w": 1280,
+   "x": 6800,
+   "y": 1340
+  },
+  "SucAvisoEmpresa.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S2b · Aviso a la Sede y a la sucursal (copia al superadmin)",
+   "w": 1280,
+   "x": 5440,
+   "y": 1340
+  },
   "SucPagina.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S5 · Página de la sucursal (lado de Zucami LATAM)",
    "w": 1280,
-   "x": 1360,
-   "y": 1240
+   "x": 10880,
+   "y": 1340
   },
   "SucPaises.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S3 · Países de cada sucursal",
    "w": 1280,
-   "x": 5440,
-   "y": 0
+   "x": 8160,
+   "y": 1340
   },
   "SucPermisos.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S4 · Qué decide la Sede y qué cada sucursal",
    "w": 1280,
-   "x": 0,
-   "y": 1240
+   "x": 9520,
+   "y": 1340
   },
   "SucPublicar.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S6 · Revisar y publicar (Sede)",
    "w": 1280,
-   "x": 2720,
-   "y": 1240
+   "x": 12240,
+   "y": 1340
   },
   "SucRed.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S2 · Red de sucursales y administradores",
    "w": 1280,
-   "x": 1360,
-   "y": 0
+   "x": 4080,
+   "y": 1340
   },
   "SucTipo.dc.html": {
    "h": 940,
    "page": "sucursales",
    "title": "S1 · Tipo de empresa: sucursales o filiales",
    "w": 1280,
-   "x": 0,
+   "x": 4080,
    "y": 0
   },
   "TabCompartir.dc.html": {
@@ -2445,205 +2645,181 @@
    "x": 5440,
    "y": 0
   },
-  "ComCRM.dc.html": {
+  "SucCRM.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K0a · ¿Cuál es tu empresa? Datos del CRM",
+   "page": "sucursales",
+   "title": "S0a · ¿Cuál es tu empresa? Datos del CRM",
    "x": 0,
    "y": 0
   },
-  "ComTipoVacio.dc.html": {
+  "SucVerifica.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "page": "sucursales",
+   "title": "S0b · Confirma tu email de empresa (código de 6 cifras)",
+   "x": 1360,
+   "y": 0
+  },
+  "SucTipoVacio.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "x": 2720,
+   "y": 0
+  },
+  "SucTipoEspeciesTodas.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1b-1 · Especies · modo «Todas» (por defecto)",
    "x": 5440,
    "y": 0
   },
-  "ComTipoEspeciesTodas.dc.html": {
+  "SucTipoEspecies.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K1b-1 · Especies · modo «Todas» (por defecto)",
+   "page": "sucursales",
+   "title": "S1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "x": 6800,
+   "y": 0
+  },
+  "SucTipoEspeciesSolo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1b-3 · Especies · modo «Solo algunas»",
    "x": 8160,
    "y": 0
   },
-  "ComTipoEspecies.dc.html": {
+  "SucTipoRama.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "page": "sucursales",
+   "title": "S1c · Editar rama de negocio",
    "x": 9520,
    "y": 0
   },
-  "ComTipoEspeciesSolo.dc.html": {
+  "SucTipoMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K1b-3 · Especies · modo «Solo algunas»: ponedoras y reproductoras",
+   "page": "sucursales",
+   "title": "S1d · Editar mercados: inclusiones y «Excluir»",
    "x": 10880,
    "y": 0
   },
-  "ComTipoRama.dc.html": {
+  "SucCabecera.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
-   "x": 12240,
-   "y": 0
-  },
-  "ComTipoMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K1d · Editar mercados: inclusiones y «Excluir» (Francia sin Córcega)",
-   "x": 13600,
-   "y": 0
-  },
-  "ComCabecera.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "KC · Cabecera (paso 2): marca y sociedades del CRM",
+   "page": "sucursales",
+   "title": "SC · Cabecera (paso 2): marca y sociedades del CRM",
    "x": 0,
    "y": 1340
   },
-  "ComCabeceraObjetivos.dc.html": {
+  "SucCabeceraObjetivos.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "KC-b · Elegir objetivos y tendencias (hasta 5)",
+   "page": "sucursales",
+   "title": "SC-b · Elegir objetivos y tendencias (hasta 5)",
    "x": 1360,
    "y": 1340
   },
-  "ComCabeceraAdmin.dc.html": {
+  "SucCabeceraAdmin.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "KC-s · Cabecera vista por el superadmin: datos del CRM editables",
+   "page": "sucursales",
+   "title": "SC-s · Cabecera vista por el superadmin",
    "x": 2720,
    "y": 1340
   },
-  "ComVerifica.dc.html": {
+  "DisCRM.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "comerciales",
-   "title": "K0b · Confirma tu email de empresa (código de 6 cifras)",
+   "page": "distmulti",
+   "title": "X0a · ¿Cuál es tu empresa? Datos del CRM",
+   "x": 0,
+   "y": 0
+  },
+  "DisVerifica.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X0b · Confirma tu email de empresa (código de 6 cifras)",
    "x": 1360,
    "y": 0
   },
-  "FabVerifica.dc.html": {
+  "DisTipoVacio.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D0b · Confirma tu email de empresa (código de 6 cifras)",
-   "x": 1360,
-   "y": 0
-  },
-  "ComEquipoCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
-   "x": 6800,
-   "y": 1340
-  },
-  "ComEmailSolicitud.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
-   "x": 8160,
-   "y": 1340
-  },
-  "ComAltaComercial.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K2d · El comercial se da de alta para ver la solicitud",
-   "x": 9520,
-   "y": 1340
-  },
-  "SelTelefono.dc.html": {
+   "page": "distmulti",
+   "title": "X1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "x": 5440,
-   "y": 0,
-   "w": 1280,
-   "h": 900,
-   "page": "componentes",
-   "title": "Teléfono con prefijo internacional · cuándo se verifica"
-  },
-  "ComAvisoEmpresa.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K0c · Aviso a los administradores de la empresa (copia al superadmin)",
-   "x": 2720,
    "y": 0
   },
-  "ComAvisoAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "title": "K0d · Superadmin: altas en organizaciones",
-   "x": 4080,
-   "y": 0
-  },
-  "FabAvisoEmpresa.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "title": "D0c · Aviso a los administradores de la empresa (copia al superadmin)",
-   "x": 2720,
-   "y": 0
-  },
-  "FabAvisoAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "title": "D0d · Superadmin: altas en organizaciones",
-   "x": 4080,
-   "y": 0
-  },
-  "SucAvisoEmpresa.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S2b · Aviso a la Sede y a la sucursal (copia al superadmin)",
-   "x": 2720,
-   "y": 0
-  },
-  "SucAvisoAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S2c · Superadmin: altas en organizaciones",
-   "x": 4080,
-   "y": 0
-  },
-  "DisAvisoEmpresa.dc.html": {
+  "DisTipoEspeciesTodas.dc.html": {
    "w": 1280,
    "h": 940,
    "page": "distmulti",
-   "title": "X1b · Aviso a los administradores de la empresa (copia al superadmin)",
+   "title": "X1b-1 · Especies · modo «Todas» (por defecto)",
+   "x": 8160,
+   "y": 0
+  },
+  "DisTipoEspecies.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "x": 9520,
+   "y": 0
+  },
+  "DisTipoEspeciesSolo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b-3 · Especies · modo «Solo algunas»",
+   "x": 10880,
+   "y": 0
+  },
+  "DisTipoRama.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1c · Editar rama de negocio",
+   "x": 12240,
+   "y": 0
+  },
+  "DisTipoMercados.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1d · Editar mercados: inclusiones y «Excluir»",
+   "x": 13600,
+   "y": 0
+  },
+  "DisCabecera.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "XC · Cabecera (paso 2): marca y sociedades del CRM",
+   "x": 0,
+   "y": 1340
+  },
+  "DisCabeceraObjetivos.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "XC-b · Elegir objetivos y tendencias (hasta 5)",
    "x": 1360,
-   "y": 0
+   "y": 1340
   },
-  "DisAvisoAdmin.dc.html": {
+  "DisCabeceraAdmin.dc.html": {
    "w": 1280,
    "h": 940,
    "page": "distmulti",
-   "title": "X1c · Superadmin: altas en organizaciones",
+   "title": "XC-s · Cabecera vista por el superadmin",
    "x": 2720,
-   "y": 0
-  },
-  "EmpAvisoAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaempresa",
-   "title": "E4b · Superadmin: primera persona de AgroExport (solo se avisa al superadmin)",
-   "x": 4160,
-   "y": 0
+   "y": 1340
   }
  },
  "createdOnFiles": {
@@ -2775,7 +2951,7 @@
   },
   "comT1": {
    "kind": "title1",
-   "maxW": 14800,
+   "maxW": 8000,
    "page": "comerciales",
    "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a datos del CRM · K0b verificar email · K0c/K0d avisos al unirse · K1a/K1 tipo · editores de especies, rama y mercados",
    "w": 240,
@@ -2784,7 +2960,7 @@
   },
   "comT2": {
    "kind": "title1",
-   "maxW": 10800,
+   "maxW": 8000,
    "page": "comerciales",
    "text": "2 · La ficha: cabecera (KC) con su modal de objetivos y la vista superadmin · equipo comercial (K2) con el perfil sin cuenta, el email y el alta del comercial · zonas, contacto, publicar y bandeja",
    "w": 240,
@@ -2793,18 +2969,18 @@
   },
   "disT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 14800,
    "page": "distmulti",
-   "text": "Alta · Distribuidor multimarca (AgroNova): elige productos o los sube",
+   "text": "Alta · Distribuidor multimarca (AgroNova) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X1b/X1c avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
   },
   "disT2": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 12160,
    "page": "distmulti",
-   "text": "Validación de la marca, contacto y publicación",
+   "text": "2 · La ficha: cabecera (XC) con objetivos y vista superadmin · marcas, productos, validación de la marca, contacto y publicación",
    "w": 240,
    "x": 0,
    "y": 1040
@@ -2865,7 +3041,7 @@
   },
   "fabT1": {
    "kind": "title1",
-   "maxW": 14800,
+   "maxW": 8000,
    "page": "fabdist",
    "text": "1 · Empresa y tipo — D0a empresa del CRM · D0b verificar email · D0c/D0d avisos al unirse · D1a/D1 tipo de empresa · editores de especies, rama y mercados",
    "w": 240,
@@ -3208,18 +3384,18 @@
   },
   "sucT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 12160,
    "page": "sucursales",
-   "text": "Alta · Fabricante con sucursales (Zucami, Sede global)",
+   "text": "Alta · Fabricante con sucursales (Zucami, Sede global) — 1 · Empresa y tipo: S0a datos del CRM · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
   },
   "sucT2": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 13500,
    "page": "sucursales",
-   "text": "Permisos, página de cada sucursal y publicación",
+   "text": "2 · La ficha: cabecera (SC) con objetivos y vista superadmin · red de sucursales (S2) con sus avisos · países, permisos, página de la sucursal y publicación",
    "w": 240,
    "x": 0,
    "y": 1040
@@ -3380,7 +3556,18 @@
   "ComContacto.dc.html",
   "ComPublicar.dc.html",
   "ComBandeja.dc.html",
+  "SucCRM.dc.html",
+  "SucVerifica.dc.html",
+  "SucTipoVacio.dc.html",
   "SucTipo.dc.html",
+  "SucTipoEspeciesTodas.dc.html",
+  "SucTipoEspecies.dc.html",
+  "SucTipoEspeciesSolo.dc.html",
+  "SucTipoRama.dc.html",
+  "SucTipoMercados.dc.html",
+  "SucCabecera.dc.html",
+  "SucCabeceraObjetivos.dc.html",
+  "SucCabeceraAdmin.dc.html",
   "SucRed.dc.html",
   "SucAvisoEmpresa.dc.html",
   "SucAvisoAdmin.dc.html",
@@ -3388,9 +3575,20 @@
   "SucPermisos.dc.html",
   "SucPagina.dc.html",
   "SucPublicar.dc.html",
-  "DisTipo.dc.html",
+  "DisCRM.dc.html",
+  "DisVerifica.dc.html",
   "DisAvisoEmpresa.dc.html",
   "DisAvisoAdmin.dc.html",
+  "DisTipoVacio.dc.html",
+  "DisTipo.dc.html",
+  "DisTipoEspeciesTodas.dc.html",
+  "DisTipoEspecies.dc.html",
+  "DisTipoEspeciesSolo.dc.html",
+  "DisTipoRama.dc.html",
+  "DisTipoMercados.dc.html",
+  "DisCabecera.dc.html",
+  "DisCabeceraObjetivos.dc.html",
+  "DisCabeceraAdmin.dc.html",
   "DisMarcas.dc.html",
   "DisElegir.dc.html",
   "DisSubir.dc.html",
@@ -3647,7 +3845,7 @@
   },
   {
    "id": "comerciales",
-   "name": "Alta · Fabricante con comerciales"
+   "name": "007_Alta · Fabricante con comerciales"
   },
   {
    "id": "sucursales",
