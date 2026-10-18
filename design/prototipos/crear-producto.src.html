@@ -70,7 +70,7 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .chip.sm{height:28px;font-size:12px;padding:0 10px}
 .chip.soft.on{background:var(--soft);color:var(--accent);border-color:var(--soft2)}
 .chip .x{opacity:.7}
-.seg{display:inline-flex;border:1px solid var(--line2);border-radius:10px;overflow:hidden}
+.seg{display:inline-flex;align-self:flex-start;border:1px solid var(--line2);border-radius:10px;overflow:hidden}
 .seg button{border:0;background:var(--surface);height:36px;padding:0 16px;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:500}
 .fams{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px}
@@ -139,6 +139,23 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .thumb{width:92px;height:70px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--accent);font-weight:600;position:relative}
 .thumb .main{position:absolute;left:6px;top:6px;font-size:9.5px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 6px;font-weight:600;border:0}
 .addimg{width:92px;height:70px;border-radius:10px;border:1.5px dashed var(--line2);background:var(--surface);cursor:pointer;color:var(--muted);font-size:12px}
+.espgrid{display:grid;grid-template-columns:230px minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:700px){.espgrid{grid-template-columns:minmax(0,1fr)}}
+.esplist{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-radius:14px;padding:8px;background:var(--surface2)}
+.esprow{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:10px;border:1px solid transparent}
+.esprow.foco{border-color:var(--accent);background:var(--surface)}
+.esprow .nm{flex:1;border:0;background:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;font-size:13.5px;font-weight:500}
+.esprow .nm small{font-size:11.5px;color:var(--muted);font-weight:400}
+.ck{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line2);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;flex:none;padding:0}
+.ck.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.esppanel{border:1.5px solid var(--accent);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.prodrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.it{height:30px;padding:0 11px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:12.5px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;color:var(--fg)}
+.it.sub{height:26px;font-size:11.5px;margin-left:4px}
+.it.inc{background:var(--soft);color:var(--accent);border-color:var(--soft2);font-weight:500}
+.it.exc{background:var(--err-bg);color:var(--err);border-color:transparent;text-decoration:line-through}
+.it.half{border-style:dashed;border-color:var(--accent);color:var(--accent)}
+.queda{font-size:12.5px;color:var(--muted);line-height:1.45}.queda strong{color:var(--fg);font-weight:600}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -172,7 +189,7 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 <script>
 (function(){
 const M = JSON.parse(document.getElementById('modelo').textContent);
-const KEY = 'agroolink-alta-producto-v2';
+const KEY = 'agroolink-alta-producto-v3';
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const num = s => { const n = parseFloat(String(s).replace(/\s/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.')); return isNaN(n) ? null : n; };
 
@@ -207,40 +224,42 @@ const conRegistro = () => regla('registro_por_pais');
 
 // ---------- estado ----------
 function nuevo() {
-  return { paso: 'categoria', cat: null, especies: {}, paises: [], registros: {},
+  return { paso: 'especies', cat: null, especies: {}, paises: [], registros: {},
     ident: { nombre: '', marca: '', fabricante: 'Tu empresa', sku: '', corta: '', larga: '', objetivos: [], idiomas: ['Español'] },
     tec: {}, propios: [], enf: [], variantes: [{}], docs: {}, imgs: 0, estado: 'Borrador', visto: {}, guardado: null };
 }
-const UI = { fam: null, q: '', paisq: '', enfq: '', pend: null, intento: {} };
+const UI = { fam: null, q: '', paisq: '', enfq: '', pend: null, intento: {}, foco: null };
 let S = null;
 try { S = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { S = null; }
 const enfId = n => { const e = M.enfermedades.find(x => x.nombre === n); return e ? e.id : null; };
 const DEMOS = {
-  vitamina: () => Object.assign(nuevo(), { paso: 'tecnicos', cat: 'C06-03-02', especies: { Avicultura: ['Pollos de engorde', 'Gallinas ponedoras', 'Reproductoras'], Porcino: [] },
+  vitamina: () => Object.assign(nuevo(), { paso: 'especies', cat: 'C06-03-02', especies: { Avicultura: { modo: 'excluir', sel: ['Perdices', 'Aves ornamentales'] }, Porcino: { modo: 'todas', sel: [] } },
     paises: ['España', 'Portugal', 'Francia', 'Italia', 'México'], registros: { 'España': { n: 'ES-AD-0000 (ejemplo)', e: 'Registrado' }, 'Portugal': { n: 'PT-AD-0000 (ejemplo)', e: 'Registrado' }, 'México': { n: '', e: 'En trámite' } },
     ident: { nombre: 'Hy-D®', marca: 'Hy-D', fabricante: 'DSM-Firmenich', sku: 'HYD-25', corta: 'Fuente de 25-OH-D3 que se absorbe mejor que la vitamina D3 convencional. Refuerza el hueso, la cáscara y el rendimiento en aves y porcino.', larga: '', objetivos: ['Rendimiento', 'Bienestar animal'], idiomas: ['Español', 'Inglés', 'Portugués'] },
     tec: { vitamina: '25-OH-D3', concentracion: { v: '12500', u: 'mg/kg' }, estabilidad: 'Estable en granulación (ejemplo)', dosis: { v: '200', u: 'g/t' } },
     variantes: [{ c0: 'Saco', c1: '25 kg', c2: '40' }, { c0: 'Big bag', c1: '500 kg', c2: '2' }], docs: { ficha_tecnica: { n: 'HyD_ficha_tecnica_ES.pdf', i: 'Español', v: 'Público' }, sds: { n: 'HyD_SDS_ES.pdf', i: 'Español', v: 'Usuarios registrados' } }, imgs: 2,
-    visto: { categoria: 1, aplicacion: 1, identidad: 1 } }),
-  ventilador: () => Object.assign(nuevo(), { paso: 'tecnicos', cat: 'C02-03-01', especies: { Avicultura: ['Pollos de engorde', 'Reproductoras'], Porcino: ['Cebo / Engorde'] },
+    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
+  ventilador: () => Object.assign(nuevo(), { paso: 'tecnicos', cat: 'C02-03-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Reproductoras'] }, Porcino: { modo: 'solo', sel: ['Cebo / Engorde'] } },
     paises: ['Alemania', 'España', 'Países Bajos', 'Polonia', 'México', 'Estados Unidos'],
     ident: { nombre: 'Ventilador de túnel 50"', marca: 'Big Dutchman', fabricante: 'Big Dutchman', sku: 'BD-VT50', corta: 'Ventilador de alto caudal para ventilación de túnel en naves de broilers y cerdos, con persiana automática.', larga: '', objetivos: ['Bienestar animal', 'Eficiencia operativa'], idiomas: ['Español', 'Inglés', 'Alemán'] },
     tec: { caudal_aire: { v: '38000', u: 'm³/h' }, potencia: { v: '1,1', u: 'kW' }, consumo: { v: '0,9', u: 'kWh' }, temperatura: { min: '-10', max: '45' }, ruido: { v: '68', u: 'dB' } },
     variantes: [{ c0: '50" · 1,1 kW', c1: '38.000 m³/h', c2: 'Con persiana' }, { c0: '54" · 1,5 kW', c1: '44.000 m³/h', c2: 'Con persiana' }], docs: { manual: { n: 'Manual_VT50_ES.pdf', i: 'Español', v: 'Público' } }, imgs: 1,
-    visto: { categoria: 1, aplicacion: 1, identidad: 1 } }),
-  vacuna: () => Object.assign(nuevo(), { paso: 'enfermedad', cat: 'C08-01', especies: { Avicultura: ['Pollos de engorde', 'Gallinas ponedoras', 'Reproductoras'] },
+    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
+  vacuna: () => Object.assign(nuevo(), { paso: 'enfermedad', cat: 'C08-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Gallinas ponedoras', 'Reproductoras'] } },
     paises: ['España', 'Portugal'], registros: { 'España': { n: '0000 ESP (ejemplo)', e: 'Registrado' }, 'Portugal': { n: '', e: 'En trámite' } },
     ident: { nombre: 'AviVac ND (ejemplo)', marca: 'AviVac', fabricante: 'Laboratorio de ejemplo', sku: 'AVND-1000', corta: 'Vacuna viva frente a la enfermedad de Newcastle para pollitos de un día y refuerzos.', larga: '', objetivos: ['Reducción antibióticos'], idiomas: ['Español', 'Portugués'] },
     tec: { antigenos: 'Virus de la enfermedad de Newcastle', cepa: 'La Sota', tecnologia: 'Viva atenuada', edad: 'Día 1 · refuerzo día 21', dosis: '1 dosis por ave', via: ['Spray', 'Agua de bebida', 'Ocular'], conservacion_temp: { min: '2', max: '8' } },
     enf: [enfId('Newcastle')].filter(Boolean), variantes: [{ c0: 'Vial', c1: '1.000 dosis', c2: '' }, { c0: 'Vial', c1: '2.500 dosis', c2: '' }], imgs: 1,
-    visto: { categoria: 1, aplicacion: 1, identidad: 1, tecnicos: 1 } }),
-  laboratorio: () => Object.assign(nuevo(), { paso: 'revision', cat: 'C11-03-01', especies: { Avicultura: [], Porcino: [], Bovino: [] }, paises: ['España', 'Portugal', 'Francia'],
+    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1, tecnicos: 1 } }),
+  laboratorio: () => Object.assign(nuevo(), { paso: 'revision', cat: 'C11-03-01', especies: { Avicultura: { modo: 'todas', sel: [] }, Porcino: { modo: 'todas', sel: [] }, Bovino: { modo: 'todas', sel: [] } }, paises: ['España', 'Portugal', 'Francia'],
     ident: { nombre: 'Análisis de micotoxinas en pienso', marca: '', fabricante: 'DSM-Firmenich', sku: 'LAB-MYC', corta: 'Analizamos pienso y materias primas frente a las principales micotoxinas y te enviamos el informe con recomendaciones.', larga: '', objetivos: ['Seguridad alimentaria', 'Salud intestinal'], idiomas: ['Español', 'Inglés'] },
     tec: { tipo_analisis: 'Micotoxinas (multitoxina)', matriz: ['Pienso', 'Materias primas'], metodo: 'LC-MS/MS', acreditacion: true, plazo: { v: '5', u: 'días' } }, imgs: 1,
     docs: { ficha_tecnica: { n: 'Analisis_micotoxinas.pdf', i: 'Español', v: 'Público' } },
-    visto: { categoria: 1, aplicacion: 1, identidad: 1, tecnicos: 1, documentos: 1 } })
+    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1, tecnicos: 1, documentos: 1 } })
 };
 if (!S) S = DEMOS.vitamina();
+// especies: { Avicultura: { modo: 'todas' | 'excluir' | 'solo', sel: [...] } } (los borradores antiguos guardaban una lista)
+Object.keys(S.especies || {}).forEach(k => { const v = S.especies[k]; if (Array.isArray(v)) S.especies[k] = v.length ? { modo: 'solo', sel: v } : { modo: 'todas', sel: [] }; });
 
 function guardar() {
   S.guardado = new Date().toISOString();
@@ -284,8 +303,9 @@ function errorCampo(a, v) {
 function faltas() {
   const f = [];
   if (!S.cat) f.push({ p: 'categoria', t: 'Elige la categoría' });
-  if (!Object.keys(S.especies).length) f.push({ p: 'aplicacion', t: 'Elige al menos una especie' });
-  if (!S.paises.length) f.push({ p: 'aplicacion', t: 'Elige al menos un país' });
+  if (!Object.keys(S.especies).length) f.push({ p: 'especies', t: 'Elige al menos una especie' });
+  Object.keys(S.especies).forEach(k => { const v = S.especies[k]; if (v.modo === 'solo' && !v.sel.length) f.push({ p: 'especies', t: k + ': marca qué incluye o elige «Todas»' }); });
+  if (!S.paises.length) f.push({ p: 'mercados', t: 'Elige al menos un país' });
   if (!S.ident.nombre.trim()) f.push({ p: 'identidad', t: 'Falta el nombre comercial' });
   if (!S.ident.sku.trim()) f.push({ p: 'identidad', t: 'Falta la referencia' });
   if (!S.ident.corta.trim()) f.push({ p: 'identidad', t: 'Falta la descripción corta' });
@@ -365,18 +385,62 @@ V.categoria = () => {
   }
   return h;
 };
-V.aplicacion = () => {
-  let h = '<section class="sec"><h2>Especies <span class="hint">· elige la especie; afina los segmentos si no sirve para todos</span></h2><div class="chips">' +
-    M.especies.map(e => chip(e.label, !!S.especies[e.label], 'esp|' + e.label)).join('') + '</div>';
-  Object.keys(S.especies).forEach(sp => {
-    const e = M.especies.find(x => x.label === sp); if (!e) return;
-    const sel = S.especies[sp];
-    const segs = [];
-    e.producciones.forEach(p => { segs.push(p.label); if (sel.indexOf(p.label) > -1) (p.subtipos || []).forEach(st => segs.push(p.label + ' › ' + st)); });
-    h += '<div class="field"><span class="flabel">' + esc(sp) + ' <span class="hint">· ' + (sel.length ? sel.length + ' segmentos' : 'todos los segmentos') + '</span></span><div class="chips">' +
-      segs.map(s => chip(s, sel.indexOf(s) > -1, 'seg|' + sp + '|' + s, 'sm soft')).join('') + '</div></div>';
-  });
-  h += '</section><section class="sec"><h2>Mercados <span class="hint">· países donde lo vendes</span></h2>' +
+const ESTADO_TXT = { todas: 'Todas', excluir: 'Excluir', solo: 'Solo algunas' };
+function itemsDe(sp) {
+  const e = M.especies.find(x => x.label === sp), out = [];
+  e.producciones.forEach(p => { out.push({ id: p.label, label: p.label }); (p.subtipos || []).forEach(st => out.push({ id: p.label + ' › ' + st, label: st, padre: p.label })); });
+  return out;
+}
+function estadoItem(sp, it) {
+  const v = S.especies[sp];
+  if (v.modo === 'todas') return 'inc';
+  const en = id => v.sel.indexOf(id) > -1;
+  if (v.modo === 'excluir') return en(it.id) || (it.padre && en(it.padre)) ? 'exc' : 'inc';
+  if (en(it.id) || (it.padre && en(it.padre))) return 'inc';
+  if (!it.padre && v.sel.some(x => x.indexOf(it.id + ' › ') === 0)) return 'half';
+  return 'off';
+}
+const corto = x => x.split(' › ').pop();
+function resumenEsp(sp) {
+  const v = S.especies[sp]; if (!v) return '';
+  if (v.modo === 'todas') return 'todas';
+  if (!v.sel.length) return v.modo === 'solo' ? 'falta marcar' : 'todas';
+  if (v.modo === 'excluir') return v.sel.length === 1 ? 'excluye ' + corto(v.sel[0]) : v.sel.length + ' excluidas';
+  return 'solo ' + (v.sel.length <= 2 ? v.sel.map(corto).join(' y ') : v.sel.length);
+}
+function espTxt(sp) {
+  const v = S.especies[sp];
+  if (v.modo === 'todas' || !v.sel.length) return sp + (v.modo === 'solo' ? ' (sin marcar)' : ' · todas');
+  return sp + (v.modo === 'excluir' ? ' · excepto ' : ' · solo ') + v.sel.map(corto).join(', ');
+}
+V.especies = () => {
+  const sel = Object.keys(S.especies);
+  if (!UI.foco || !S.especies[UI.foco]) UI.foco = sel[0] || null;
+  let h = '<div class="espgrid"><div class="esplist" role="list">' + M.especies.map(e => {
+    const on = !!S.especies[e.label], foco = UI.foco === e.label;
+    return '<div class="esprow' + (foco ? ' foco' : '') + '" role="listitem"><button type="button" class="ck' + (on ? ' on' : '') + '" aria-pressed="' + on + '" aria-label="' + (on ? 'Quitar ' : 'Añadir ') + esc(e.label) + '" data-act="esp|' + esc(e.label) + '">' + (on ? '✓' : '') + '</button>' +
+      '<button type="button" class="nm" data-act="espfoco|' + esc(e.label) + '"' + (on ? '' : ' disabled') + '>' + esc(e.label) + (on ? '<small>' + esc(resumenEsp(e.label)) + ' ›</small>' : '') + '</button></div>';
+  }).join('') + '<span class="hint" style="padding:6px 8px">Marcar la especie incluye todas sus producciones. Pulsa una especie marcada para afinar.</span></div>';
+  if (UI.foco) {
+    const sp = UI.foco, v = S.especies[sp], items = itemsDe(sp);
+    const prods = items.filter(x => !x.padre);
+    h += '<div class="esppanel"><div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><strong style="font-size:15px">' + esc(sp) + '</strong><span class="hint">' + prods.length + ' producciones</span></div>' +
+      '<div class="seg" role="radiogroup" aria-label="Cómo afinar ' + esc(sp) + '">' + ['todas', 'excluir', 'solo'].map(m => '<button type="button" class="' + (v.modo === m ? 'on' : '') + '" data-act="espmodo|' + esc(sp) + '|' + m + '">' + ESTADO_TXT[m] + '</button>').join('') + '</div>' +
+      '<div style="display:flex;flex-direction:column;gap:8px">' + prods.map(p => {
+        const subs = items.filter(x => x.padre === p.id);
+        const it = (x, cls) => { const st = estadoItem(sp, x); return '<button type="button" class="it ' + cls + ' ' + st + '" aria-pressed="' + (st === 'inc') + '" data-act="espit|' + esc(sp) + '|' + esc(x.id) + '">' + (st === 'inc' ? '✓ ' : '') + esc(x.label) + (st === 'exc' ? ' <span class="hint" style="color:inherit;text-decoration:none">· excluida</span>' : st === 'half' ? ' <span class="hint" style="color:inherit">· a medias</span>' : '') + '</button>'; };
+        return '<div class="prodrow">' + it(p, '') + subs.map(x => it(x, 'sub')).join('') + '</div>';
+      }).join('') + '</div>' +
+      '<span class="hint">' + (v.modo === 'todas' ? '<strong>Todas:</strong> el producto sirve para todas las producciones de ' + esc(sp) + ', también las que se añadan. Un clic en una producción pasa a «Excluir».'
+        : v.modo === 'excluir' ? '<strong>Excluir:</strong> todo viene marcado. Un clic deja la producción excluida (en rojo); otro clic la vuelve a incluir. Las producciones nuevas entran solas.'
+        : '<strong>Solo algunas:</strong> todo viene vacío. Un clic marca lo que sí; marcar un subtipo deja su producción a medias. Las producciones nuevas no se añaden solas.') + '</span></div>';
+  } else h += '<div class="note">Marca al menos una especie a la izquierda.</div>';
+  h += '</div>';
+  if (sel.length) h += '<div class="queda"><strong>Quedará:</strong> ' + sel.map(sp => esc(espTxt(sp))).join(' · ') + '</div>';
+  return h;
+};
+V.mercados = () => {
+let h = '<section class="sec">' +
     '<div class="chips">' + Object.keys(M.regiones).map(r => '<button type="button" class="chip sm" data-act="reg|' + r + '">+ ' + esc(r) + '</button>').join('') + '</div>' +
     '<div class="field"><label for="paisq">Añadir país</label><input class="inp" id="paisq" type="search" placeholder="Escribe un país" value="' + esc(UI.paisq) + '" autocomplete="off"></div>';
   const pq = UI.paisq.trim().toLowerCase();
@@ -466,8 +530,8 @@ V.revision = () => {
   let h = '<div class="note' + (f.length ? ' w' : '') + '"><span><strong>' + (f.length ? 'Faltan ' + f.length + ' datos para enviarlo a revisión.' : 'Todo listo para enviarlo a revisión.') + '</strong> ' + (f.length ? 'Puedes guardarlo como borrador y terminarlo después.' : 'Crear el producto no lo publica: ' + (regla('receta') || (S.cat && S.cat.indexOf('C09') === 0) ? 'Agroolink revisa las fichas de fármacos, vacunas y biocidas antes de publicarlas.' : 'lo publicas cuando quieras desde el catálogo.')) + '</span></div>';
   h += '<div>' +
     fila('Categoría', S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>', 'categoria') +
-    fila('Especies', esc(Object.keys(S.especies).map(k => k + (S.especies[k].length ? ' (' + S.especies[k].join(', ') + ')' : '')).join(' · ')) + miss('aplicacion'), 'aplicacion') +
-    fila('Mercados', esc(S.paises.join(', ')) + (conRegistro() ? ' <span class="hint">· registro: ' + S.paises.filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + S.paises.length + '</span>' : ''), 'aplicacion') +
+    fila('Especies de destino', esc(Object.keys(S.especies).map(espTxt).join(' · ')) + miss('especies'), 'especies') +
+    fila('Mercados', esc(S.paises.join(', ')) + (conRegistro() ? ' <span class="hint">· registro: ' + S.paises.filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + S.paises.length + '</span>' : '') + miss('mercados'), 'mercados') +
     fila('Identidad', '<strong>' + esc(S.ident.nombre || '—') + '</strong> · ' + esc(S.ident.sku || '—') + '<br><span class="hint">' + esc(S.ident.corta) + '</span>' + miss('identidad'), 'identidad') +
     fila('Datos técnicos', t ? tecs + ' de ' + t.atributos.length + ' · ' + t.atributos.filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—', 'tecnicos') +
     (enfVis() ? fila('Enfermedad diana', esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).join(', ') || 'Ninguna') + miss('enfermedad'), 'enfermedad') : '') +
@@ -478,7 +542,8 @@ V.revision = () => {
 };
 const TIT = {
   categoria: ['¿Qué tipo de producto es?', 'La categoría decide qué datos técnicos te pedimos, cómo se organizan las variantes y el botón de la ficha.'],
-  aplicacion: ['¿Para qué animales y dónde lo vendes?', 'Especie, segmentos y países. Con esto te encuentran y sabemos qué enfermedades y registros aplican.'],
+  especies: ['¿Para qué especies es?', 'Todo producto va ligado a especies. Elige la especie y afina sus producciones si no sirve para todas.'],
+  mercados: ['¿Dónde lo vendes?', 'Países donde se vende. Si tu categoría lo pide, indica el registro en cada uno.'],
   identidad: ['¿Cómo se llama y cómo lo describes?', 'Lo que ve el comprador en la cabecera de la ficha.'],
   tecnicos: [null, 'Solo los datos de tu categoría. Las unidades están normalizadas para poder comparar.'],
   enfermedad: ['¿Frente a qué enfermedades?', 'Es un filtro aparte de la categoría.'],
@@ -547,7 +612,7 @@ function exportJSON() {
   Object.keys(S.tec).forEach(k => { if (lleno(S.tec[k])) attrs['attr.' + t + '.' + k] = S.tec[k]; });
   return { category_id: S.cat, template: t, archetype: arqKey(S.cat), name: S.ident.nombre, brand: S.ident.marca, sku: S.ident.sku, manufacturer: S.ident.fabricante,
     short_description: S.ident.corta, description: S.ident.larga, objectives: S.ident.objetivos, languages: S.ident.idiomas,
-    species: Object.keys(S.especies).map(k => ({ species: k, segments: S.especies[k] })), markets: S.paises.map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
+    species: Object.keys(S.especies).map(k => ({ species: k, mode: S.especies[k].modo, items: S.especies[k].sel })), markets: S.paises.map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
     attributes: attrs, custom_attributes: S.propios.filter(p => p.n), target_diseases: S.enf, variants: S.variantes.filter(v => Object.values(v).some(Boolean)),
     images: S.imgs, documents: Object.keys(S.docs).map(k => Object.assign({ type: k }, S.docs[k])), status: S.estado === 'En revisión' ? 'in_review' : 'draft' };
 }
@@ -564,8 +629,14 @@ document.addEventListener('click', ev => {
     case 'cat': setCat(x); return;
     case 'pendok': aplicaCat(UI.pend); return;
     case 'pendno': UI.pend = null; render(); return;
-    case 'esp': if (S.especies[x]) delete S.especies[x]; else S.especies[x] = []; S.enf = S.enf.filter(id => { const e = M.enfermedades.find(q => q.id === id); return e && e.especies.some(s => S.especies[s]); }); break;
-    case 'seg': toggle(S.especies[x], y); if (y.indexOf(' › ') < 0 && S.especies[x].indexOf(y) < 0) S.especies[x] = S.especies[x].filter(s => s.indexOf(y + ' › ') !== 0); break;
+    case 'esp': if (S.especies[x]) { delete S.especies[x]; if (UI.foco === x) UI.foco = null; } else { S.especies[x] = { modo: 'todas', sel: [] }; UI.foco = x; }
+      S.enf = S.enf.filter(id => { const e = M.enfermedades.find(q => q.id === id); return e && e.especies.some(sp => S.especies[sp]); }); break;
+    case 'espfoco': UI.foco = x; render(); return;
+    case 'espmodo': S.especies[x] = { modo: y, sel: [] }; break;
+    case 'espit': { const v = S.especies[x];
+      if (v.modo === 'todas') { v.modo = 'excluir'; v.sel = [y]; }
+      else { toggle(v.sel, y); if (y.indexOf(' › ') < 0) v.sel = v.sel.filter(q => q.indexOf(y + ' › ') !== 0); }
+      break; }
     case 'reg': M.regiones[x].forEach(p => { if (S.paises.indexOf(p) < 0) S.paises.push(p); }); break;
     case 'pais': toggle(S.paises, x); UI.paisq = ''; break;
     case 'obj': toggle(S.ident.objetivos, x); break;

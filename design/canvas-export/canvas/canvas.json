@@ -3033,113 +3033,129 @@
    "w": 1280,
    "h": 1580,
    "page": "productos",
-   "x": 0,
-   "y": 0,
-   "title": "G1 · ¿Qué tipo de producto es? Las 12 familias y sus tipos"
-  },
-  "ProdAltaAplicacion.dc.html": {
-   "w": 1280,
-   "h": 1190,
-   "page": "productos",
    "x": 1360,
    "y": 0,
-   "title": "G2 · Especies, segmentos y mercados (con registro por país si la categoría lo pide)"
+   "title": "G2 · ¿Qué tipo de producto es? Las 12 familias y sus tipos"
   },
   "ProdAltaIdentidad.dc.html": {
    "w": 1280,
-   "h": 1180,
-   "page": "productos",
-   "x": 2720,
-   "y": 0,
-   "title": "G3 · Identidad: nombre, referencia, descripciones y objetivos"
-  },
-  "ProdAltaTecnicos.dc.html": {
-   "w": 1280,
-   "h": 1190,
+   "h": 1210,
    "page": "productos",
    "x": 4080,
    "y": 0,
-   "title": "G4 · Datos técnicos de la plantilla de su categoría (aquí: Vitaminas)"
+   "title": "G4 · Identidad: nombre, referencia, descripciones y objetivos"
   },
-  "ProdAltaVariantes.dc.html": {
+  "ProdAltaTecnicos.dc.html": {
    "w": 1280,
-   "h": 1190,
+   "h": 1230,
    "page": "productos",
    "x": 5440,
    "y": 0,
-   "title": "G5 · Variantes: el eje depende del tipo (aquí: embalaje)"
+   "title": "G5 · Datos técnicos de la plantilla de su categoría (aquí: Vitaminas)"
   },
-  "ProdAltaDocumentos.dc.html": {
+  "ProdAltaVariantes.dc.html": {
    "w": 1280,
-   "h": 1190,
+   "h": 1230,
    "page": "productos",
    "x": 6800,
    "y": 0,
-   "title": "G6 · Imágenes y documentos, con idioma y quién los ve"
+   "title": "G6 · Variantes: el eje depende del tipo (aquí: embalaje)"
   },
-  "ProdAltaRevision.dc.html": {
+  "ProdAltaDocumentos.dc.html": {
    "w": 1280,
-   "h": 1190,
+   "h": 1230,
    "page": "productos",
    "x": 8160,
    "y": 0,
-   "title": "G7 · Revisión con Editar por apartado; enviar o guardar borrador"
+   "title": "G7 · Imágenes y documentos, con idioma y quién los ve"
+  },
+  "ProdAltaRevision.dc.html": {
+   "w": 1280,
+   "h": 1230,
+   "page": "productos",
+   "x": 9520,
+   "y": 0,
+   "title": "G8 · Revisión con Editar por apartado; enviar o guardar borrador"
   },
   "ProdAltaBuscar.dc.html": {
    "w": 1280,
-   "h": 1180,
+   "h": 1220,
    "page": "productos",
-   "x": 0,
+   "x": 1360,
    "y": 2000,
-   "title": "H1 · Buscar la categoría escribiendo («ventil»)"
+   "title": "H2 · Buscar la categoría escribiendo («ventil»)"
   },
   "ProdAltaCambio.dc.html": {
    "w": 1280,
    "h": 1710,
    "page": "productos",
-   "x": 1360,
+   "x": 2720,
    "y": 2000,
-   "title": "H2 · Cambiar de categoría: se conservan los datos compatibles y se avisa antes de descartar"
+   "title": "H3 · Cambiar de categoría: se conservan los datos compatibles y se avisa antes de descartar"
   },
   "ProdAltaTecEnzima.dc.html": {
    "w": 1280,
-   "h": 1220,
-   "page": "productos",
-   "x": 2720,
-   "y": 2000,
-   "title": "H3 · Enzimas: actividad + unidad + método van juntos"
-  },
-  "ProdAltaTecClima.dc.html": {
-   "w": 1280,
-   "h": 1160,
+   "h": 1250,
    "page": "productos",
    "x": 4080,
    "y": 2000,
-   "title": "H4 · Climatización: caudal y potencia, sin dosis"
+   "title": "H4 · Enzimas: actividad + unidad + método van juntos"
+  },
+  "ProdAltaTecClima.dc.html": {
+   "w": 1280,
+   "h": 1200,
+   "page": "productos",
+   "x": 5440,
+   "y": 2000,
+   "title": "H5 · Climatización: caudal y potencia, sin dosis"
   },
   "ProdAltaTecVacuna.dc.html": {
    "w": 1280,
    "h": 1420,
    "page": "productos",
-   "x": 5440,
+   "x": 6800,
    "y": 2000,
-   "title": "H5 · Vacunas: tecnología, vía, pauta y conservación"
+   "title": "H6 · Vacunas: tecnología, vía, pauta y conservación"
   },
   "ProdAltaEnfermedad.dc.html": {
    "w": 1280,
-   "h": 1200,
-   "page": "productos",
-   "x": 6800,
-   "y": 2000,
-   "title": "H6 · Enfermedad diana: obligatoria en vacunas, filtrada por especie"
-  },
-  "ProdAltaRevServicio.dc.html": {
-   "w": 1280,
-   "h": 1190,
+   "h": 1240,
    "page": "productos",
    "x": 8160,
    "y": 2000,
-   "title": "H7 · Revisión de un servicio: sin variantes ni envase"
+   "title": "H7 · Enfermedad diana: obligatoria en vacunas, filtrada por las especies elegidas"
+  },
+  "ProdAltaRevServicio.dc.html": {
+   "w": 1280,
+   "h": 1230,
+   "page": "productos",
+   "x": 9520,
+   "y": 2000,
+   "title": "H8 · Revisión de un servicio: sin variantes ni envase"
+  },
+  "ProdAltaEspecies.dc.html": {
+   "w": 1280,
+   "h": 1250,
+   "page": "productos",
+   "x": 0,
+   "y": 0,
+   "title": "G1 · Especies de destino: marcar la especie y afinar (aquí: Excluir)"
+  },
+  "ProdAltaMercados.dc.html": {
+   "w": 1280,
+   "h": 1230,
+   "page": "productos",
+   "x": 2720,
+   "y": 0,
+   "title": "G3 · Mercados, con registro por país si la categoría lo pide"
+  },
+  "ProdAltaEspeciesSolo.dc.html": {
+   "w": 1280,
+   "h": 1220,
+   "page": "productos",
+   "x": 0,
+   "y": 2000,
+   "title": "H1 · Especies en «Solo algunas»: un subtipo deja su producción a medias"
   }
  },
  "createdOnFiles": {
@@ -3615,7 +3631,7 @@
    "kind": "title1",
    "maxW": 9400,
    "page": "productos",
-   "text": "Alta de un producto · asistente por pasos, como Proyectos: los datos técnicos cambian según la categoría · prototipo navegable: design/prototipos/crear-producto.html",
+   "text": "Alta de un producto · asistente por pasos, como Proyectos: primero las especies de destino; los datos técnicos cambian según la categoría · prototipo navegable: design/prototipos/crear-producto.html",
    "w": 240,
    "x": 0,
    "y": -640
@@ -3845,7 +3861,7 @@
    "w": 1280,
    "x": 0,
    "y": -340,
-   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G7 y H1–H7) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
+   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G8 y H1–H8) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
   },
   "prodT4": {
    "kind": "title1",
@@ -3854,7 +3870,7 @@
    "w": 240,
    "x": 0,
    "y": 1700,
-   "text": "La plantilla cambia según la categoría · búsqueda, cambio de categoría, enzimas, climatización, vacunas, enfermedad diana y un servicio"
+   "text": "Variaciones · especies en «Solo algunas», búsqueda, cambio de categoría, enzimas, climatización, vacunas, enfermedad diana y un servicio"
   },
   "prodT5": {
    "kind": "title1",
@@ -4246,7 +4262,6 @@
   "PrdAviLocal.dc.html",
   "PrdDisCatalogo.dc.html",
   "ProdAltaCategoria.dc.html",
-  "ProdAltaAplicacion.dc.html",
   "ProdAltaIdentidad.dc.html",
   "ProdAltaTecnicos.dc.html",
   "ProdAltaVariantes.dc.html",
@@ -4258,7 +4273,10 @@
   "ProdAltaTecClima.dc.html",
   "ProdAltaTecVacuna.dc.html",
   "ProdAltaEnfermedad.dc.html",
-  "ProdAltaRevServicio.dc.html"
+  "ProdAltaRevServicio.dc.html",
+  "ProdAltaEspecies.dc.html",
+  "ProdAltaMercados.dc.html",
+  "ProdAltaEspeciesSolo.dc.html"
  ],
  "pages": [
   {

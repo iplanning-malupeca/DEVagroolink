@@ -3,7 +3,7 @@
 **Usa `producto.json` (v2) para el alta de producto.** Sustituye a `familias.json` (v1, 10 familias antiguas), que se conserva como referencia de arquetipos y bloques.
 
 - **Prototipo navegable:** `design/prototipos/crear-producto.html`. Si una pantalla del canvas y el prototipo no coinciden, manda el prototipo, salvo en estilos visuales.
-- **Asistente por pasos**, como el de proyectos: Categoría → Especies y mercados → Identidad → Datos técnicos → Enfermedad diana (si aplica) → Variantes (si aplica) → Imágenes y documentos → Revisión. Se autoguarda; se puede guardar como borrador y editar cualquier apartado desde la revisión.
+- **Asistente por pasos**, como el de proyectos: Especies de destino (mismo editor que la empresa: Todas · Excluir · Solo algunas) → Categoría → Mercados → Identidad → Datos técnicos → Enfermedad diana (si aplica) → Variantes (si aplica) → Imágenes y documentos → Revisión. Se autoguarda; se puede guardar como borrador y editar cualquier apartado desde la revisión.
 - **Taxonomía:** C01–C12 (`categorias`, de 003productos.txt). Solo se eligen hojas.
 - **Plantillas:** cada hoja hereda la plantilla de su nodo más concreto (`plantillas[*].nodos`). Cada atributo tiene `id` inmutable, `type`, `unit` (con `|` si hay varias), `min`/`max`, `options` y las marcas `filterable`, `comparable`, `decisivo` (sale entre los 5 primeros del comparador) y `required`.
 - **Arquetipos:** eje de variantes, botón principal y documentos sugeridos (`arquetipo_familia`, con excepciones en `arquetipo_nodo`).

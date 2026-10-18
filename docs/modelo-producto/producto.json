@@ -12,14 +12,19 @@
  "aviso": "Los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.",
  "pasos": [
   {
+   "id": "especies",
+   "label": "Especies de destino",
+   "ayuda": "Todo producto va ligado a especies. Marca la especie y se incluyen todas sus producciones; afina con «Excluir» o «Solo algunas» si no sirve para todas."
+  },
+  {
    "id": "categoria",
    "label": "Categoría",
    "ayuda": "Busca o navega por las 12 familias. La categoría decide los datos técnicos, las variantes y el botón de la ficha."
   },
   {
-   "id": "aplicacion",
-   "label": "Especies y mercados",
-   "ayuda": "Especie y segmentos donde se usa, y países donde se vende."
+   "id": "mercados",
+   "label": "Mercados",
+   "ayuda": "Países donde se vende y, si la categoría lo pide, su registro en cada uno."
   },
   {
    "id": "identidad",
@@ -132,18 +137,16 @@
     ]
    }
   ],
-  "aplicacion": [
+  "especies": [
    {
     "id": "especies",
-    "label": "Especies",
-    "type": "multiselect",
-    "required": true
-   },
-   {
-    "id": "segmentos",
-    "label": "Segmentos",
-    "type": "multiselect"
-   },
+    "label": "Especies de destino",
+    "type": "object",
+    "required": true,
+    "help": "Por especie: modo «todas», «excluir» o «solo» + lista de producciones o subtipos (mismo editor que en la empresa)"
+   }
+  ],
+  "mercados": [
    {
     "id": "paises",
     "label": "Países",
