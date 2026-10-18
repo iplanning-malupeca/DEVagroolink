@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agroolink · Buscar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Búsqueda de Agroolink: barra combinada (Qué · Especie · Categoría · Enfermedad), resultados y «Filtros». Escritorio y móvil con los mismos componentes. */
+:root{
+  --bg:#F6F8F6; --surface:#FFFFFF; --surface2:#F2F5F3; --fg:#17231D; --muted:#56615B; --line:#E3E8E4; --line2:#D5DED8;
+  --accent:#0E5A3A; --accent-ink:#FFFFFF; --soft:#EEF6EE; --soft2:#CFE6D6; --lime:#B5D334; --warn:#7A4B00; --warn-bg:#FFF4E0;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1513; --surface:#151E1B; --surface2:#1B2622; --fg:#E4ECE8; --muted:#9AA8A1; --line:#26332E; --line2:#31403A;
+  --accent:#7FD1A6; --accent-ink:#0B1A13; --soft:#16291F; --soft2:#24432F; --lime:#C6E05A; --warn:#F2C46B; --warn-bg:#2E2410; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --surface:#151E1B; --surface2:#1B2622; --fg:#E4ECE8; --muted:#9AA8A1; --line:#26332E; --line2:#31403A;
+  --accent:#7FD1A6; --accent-ink:#0B1A13; --soft:#16291F; --soft2:#24432F; --lime:#C6E05A; --warn:#F2C46B; --warn-bg:#2E2410; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.4}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.gut{padding-left:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,60px),env(safe-area-inset-right,0px))}
+.wrapw{max-width:1600px;margin:0 auto}
+/* cabecera */
+.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;gap:18px;min-height:76px;padding-block:10px}
+.logo{font-weight:700;font-size:20px;letter-spacing:-.01em;white-space:nowrap;border:0;background:none;padding:0}.logo b{color:var(--accent)}
+.av{width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+/* barra combinada */
+.bar{flex:1;max-width:880px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr auto;align-items:center;border:1px solid var(--line2);border-radius:999px;background:var(--surface);box-shadow:0 2px 10px rgba(16,40,28,.08);position:relative}
+.seg{border:0;background:none;text-align:left;padding:8px 18px;border-radius:999px;display:flex;flex-direction:column;gap:1px;min-width:0;position:relative}
+.seg+.seg::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:1px;background:var(--line)}
+.seg:hover,.seg.on{background:var(--surface2)}
+.seg.on::before,.seg.on+.seg::before{display:none}
+.seg .l{font-size:12px;font-weight:600}
+.seg .v{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg .v.set{color:var(--fg);font-weight:500}
+.seg input{border:0;outline:0;background:none;padding:0;font-size:14px;width:100%;min-width:0}
+.go{width:44px;height:44px;margin:4px 6px 4px 0;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center}
+.pop{position:absolute;top:calc(100% + 10px);left:0;right:0;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 50px rgba(16,40,28,.16);padding:18px;z-index:30;max-height:min(72vh,640px);overflow:auto}
+.pill{display:none}
+@media (max-width:899px){
+  .bar{display:none}
+  .pill{display:flex;flex:1;min-width:0;align-items:center;gap:10px;height:48px;border:1px solid var(--line2);border-radius:999px;padding:0 6px 0 16px;background:var(--surface);box-shadow:0 2px 10px rgba(16,40,28,.08);text-align:left}
+  .pill span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.2}
+  .pill strong{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pill small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topin{min-height:64px;gap:10px}
+  .logo .txt{display:none}
+}
+/* selectores (los mismos en la barra, en móvil y en «Filtros») */
+.qs{display:flex;align-items:center;gap:8px;height:40px;border:1px solid var(--line2);border-radius:10px;padding:0 12px;background:var(--surface)}
+.qs input{border:0;outline:0;background:none;flex:1;min-width:0;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);display:inline-flex;align-items:center;gap:6px;font-size:13.5px;white-space:nowrap}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sm{height:30px;font-size:12.5px;padding:0 11px}
+.chip.na{opacity:.45;cursor:not-allowed}
+.chip .n{font-size:11.5px;opacity:.75}
+.sl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.sl:first-child{margin-top:0}
+.hint{font-size:12.5px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.col{display:flex;flex-direction:column;gap:2px;min-width:0}
+.opt{border:0;background:none;text-align:left;padding:8px 10px;border-radius:10px;display:flex;align-items:center;gap:8px;font-size:14px;width:100%}
+.opt:hover{background:var(--surface2)}
+.opt.cur{background:var(--soft);color:var(--accent);font-weight:600}
+.opt.na{opacity:.45}
+.opt .c{margin-left:auto;font-size:12px;color:var(--muted)}
+.ck{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--line2);display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
+.ck.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.popfoot{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.popfoot .sp{flex:1}
+@media (max-width:899px){.cols{grid-template-columns:minmax(0,1fr)}}
+/* resultados */
+main{padding-block:22px 60px}
+h1{margin:0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.fbar{display:flex;align-items:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+.fbtn{height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.cnt{min-width:22px;height:22px;border-radius:11px;background:var(--lime);color:#17231D;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;padding:0 6px}
+.dbtn{height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:14px}
+.dbtn.set{border:1.5px solid var(--accent);background:var(--soft);color:var(--accent);font-weight:500}
+.ver{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin-left:4px}
+.ver input{accent-color:var(--accent);width:17px;height:17px;margin:0}
+.activos{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;font-size:13.5px}
+.achip{height:30px;padding:0 6px 0 11px;border-radius:999px;background:var(--soft);color:var(--accent);display:inline-flex;align-items:center;gap:6px;font-size:13px;border:0}
+.achip .x{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.achip .x:hover{background:var(--soft2)}
+.link{border:0;background:none;padding:0;color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.reglas{font-size:12.5px;color:var(--muted);margin-top:8px}.reglas .corto{display:none}
+.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-top:18px;align-items:flex-end}
+.tabs button{border:0;background:none;padding:0 0 10px;color:var(--muted);font-size:14.5px;white-space:nowrap}
+.tabs button.on{color:var(--accent);font-weight:600;border-bottom:2.5px solid var(--accent);margin-bottom:-1px}
+.tabs .sp{flex:1}
+.tabs select{border:1px solid var(--line2);border-radius:10px;height:34px;background:var(--surface);padding:0 8px;margin-bottom:6px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/3;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px}
+.cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cn{font-size:15px;font-weight:600;line-height:1.3}
+.ce{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11.5px;border-radius:999px;padding:2px 9px;background:var(--surface2);color:var(--fg)}
+.coin{font-size:12px;color:var(--accent);background:var(--soft);border-radius:8px;padding:5px 8px}
+.cact{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.cact .b{flex:1;height:36px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);font-size:13px;font-weight:500}
+.cact .b.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.erow{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.elist{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.vacio{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:18px;display:flex;flex-direction:column;gap:12px;max-width:760px}
+.vacio .r{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+@media (max-width:899px){
+  main{padding-block:14px 40px}
+  h1{font-size:20px}
+  .fbar{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1*max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px)));padding-inline:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));scrollbar-width:none}
+  .fbar .ver{display:none}
+  .activos .achip{display:none}
+  .tabs{gap:18px;overflow-x:auto}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .cb{padding:10px}
+  .cn{font-size:14px}
+  .cact .b:not(.p){display:none}
+  .reglas .largo{display:none}.reglas .corto{display:inline}
+  .ph{aspect-ratio:16/11;font-size:16px}
+  .activos{margin-top:8px}
+  .coin{display:none}
+}
+/* «Filtros» y hoja móvil: ventana centrada en escritorio, pantalla completa en móvil */
+.ov{position:fixed;inset:0;background:rgba(10,25,18,.45);z-index:50;display:flex;align-items:center;justify-content:center;padding:24px}
+.sheet{background:var(--surface);border-radius:22px;width:min(780px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden}
+.sh{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.sh strong{flex:1;font-size:17px;text-align:center}
+.sh .ico{width:36px;height:36px;border-radius:50%;border:0;background:none;font-size:18px}
+.sh .ico:hover{background:var(--surface2)}
+.sbody{overflow:auto;padding:4px 20px 20px}
+.fsec{border-bottom:1px solid var(--line);padding:16px 0}
+.fsec:last-child{border-bottom:0}
+.fsec h3{margin:0 0 10px;font-size:16px;font-weight:600;display:flex;align-items:center;gap:8px}
+.fsec h3 .s{font-size:13px;color:var(--muted);font-weight:400;margin-left:auto}
+.sf{display:flex;align-items:center;gap:10px;padding:12px 20px;border-top:1px solid var(--line)}
+.sf .sp{flex:1}
+.bp{height:44px;padding:0 20px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;white-space:nowrap}
+.rng{display:flex;align-items:center;gap:8px}
+.rng input{width:110px;height:38px;border:1px solid var(--line2);border-radius:10px;padding:0 10px;background:var(--surface)}
+.paso{border:1px solid var(--line);border-radius:18px;background:var(--surface);margin-top:10px}
+.paso>button{width:100%;border:0;background:none;display:flex;align-items:center;gap:10px;padding:14px 16px;text-align:left}
+.paso>button strong{font-size:15px}
+.paso>button span{margin-left:auto;font-size:14px;color:var(--muted);max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.paso .pb{padding:0 16px 16px}
+.paso.open{box-shadow:0 6px 24px rgba(16,40,28,.1)}
+@media (max-width:899px){.ov{padding:0}.sheet{border-radius:0;height:100%;width:100%}.ov.mov .sbody{background:var(--bg)}}
+/* solo para capturar pantallas del canvas */
+.cap .ov{position:relative;inset:auto;padding:0;background:none;display:block}.cap .sheet{max-height:none;width:100%;border-radius:0;height:auto}.cap .sbody{overflow:visible}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:60}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrapw gut topin" id="top"></div></header>
+<main class="wrapw gut" id="main"></main>
+<div id="layer"></div>
+<script id="modelo" type="application/json">/*MODELO*/</script>
+<script>
+(function(){
+const M = JSON.parse(document.getElementById('modelo').textContent);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+// ---------- árbol de categorías (nombres cortos, nunca códigos) ----------
+const NOD = {}, FAM = M.categorias;
+FAM.forEach(f => { NOD[f.id] = { label: f.label, corto: f.corto || f.label, nivel: 1, padre: null, hijos: (f.grupos || []).map(g => g.id) };
+  (f.grupos || []).forEach(g => { NOD[g.id] = { label: g.label, corto: g.corto || g.label, nivel: 2, padre: f.id, hijos: (g.tipos || []).map(t => t.id) };
+    (g.tipos || []).forEach(t => NOD[t.id] = { label: t.label, corto: t.corto || t.label, nivel: 3, padre: g.id, hijos: [] }); }); });
+const corto = id => NOD[id] ? NOD[id].corto : id;
+const ruta = id => { const o = []; let k = id; while (k) { o.unshift(corto(k)); k = NOD[k] && NOD[k].padre; } return o; };
+const dentro = (id, sel) => { let k = id; while (k) { if (k === sel) return true; k = NOD[k] && NOD[k].padre; } return false; };
+const ASIG = {}; Object.keys(M.plantillas).forEach(k => M.plantillas[k].nodos.forEach(n => ASIG[n] = k));
+const tplDe = id => { let k = id; while (k) { if (ASIG[k]) return M.plantillas[ASIG[k]]; k = NOD[k] && NOD[k].padre; } return null; };
+const ESP = M.especies.map(e => e.label);
+// pertinencia: una categoría solo para algunas especies o producciones
+function pertinente(id) {
+  const esp = Object.keys(F.esp); if (!esp.length) return true;
+  let k = id, regla = null; while (k) { if (M.pertinencia[k]) { regla = M.pertinencia[k]; break; } k = NOD[k] && NOD[k].padre; }
+  if (!regla) return true;
+  return esp.some(sp => regla.some(r => { const [rs, rp] = r.split(' › '); if (rs !== sp) return false; return !rp || !F.esp[sp].length || F.esp[sp].indexOf(rp) > -1; }));
+}
+// ---------- datos de ejemplo para el prototipo (marcas reales solo como ilustración) ----------
+const P = [
+  { n: 'Mycofix® Plus', e: 'DSM-Firmenich', cat: 'C06-02-01', esp: ['Porcino', 'Avicultura', 'Bovino'], pais: ['España', 'Portugal', 'Francia'], t: { toxinas: ['Aflatoxinas', 'DON', 'Zearalenona', 'Fumonisinas'], presentacion: 'Polvo', incorporacion: ['Pienso', 'Premezcla'] } },
+  { n: 'Biomin® BBSH 797', e: 'DSM-Firmenich', cat: 'C06-02-02', esp: ['Porcino', 'Avicultura'], pais: ['España', 'Francia'], t: {} },
+  { n: 'Toxfin® Dry', e: 'Kemin', cat: 'C06-02-01', esp: ['Porcino', 'Avicultura'], pais: ['España', 'Italia'], t: { toxinas: ['Aflatoxinas', 'Zearalenona'], presentacion: 'Polvo', incorporacion: ['Pienso'] } },
+  { n: 'Mastersorb® Gold', e: 'EW Nutrition', cat: 'C06-02-01', esp: ['Porcino › Lechones', 'Porcino › Cebo / Engorde'], pais: ['España', 'Alemania'], t: { toxinas: ['Aflatoxinas', 'DON', 'Fumonisinas', 'Ocratoxina A'], presentacion: 'Microgranulado', incorporacion: ['Pienso', 'Premezcla'] } },
+  { n: 'Unike® Plus', e: 'Adisseo', cat: 'C06-02-01', esp: ['Porcino', 'Bovino'], pais: ['España', 'Portugal'], t: { toxinas: ['DON', 'Zearalenona'], presentacion: 'Polvo', incorporacion: ['Pienso'] } },
+  { n: 'Mycosorb A+®', e: 'Alltech', cat: 'C06-02-01', esp: ['Porcino', 'Avicultura', 'Bovino'], pais: ['España', 'Francia', 'Italia'], t: { toxinas: ['Aflatoxinas', 'DON', 'Zearalenona', 'Fumonisinas', 'Ocratoxina A', 'T-2/HT-2'], presentacion: 'Polvo', incorporacion: ['Pienso'] } },
+  { n: 'Rovabio® Advance', e: 'DSM-Firmenich', cat: 'C06-01-04', esp: ['Avicultura', 'Porcino'], pais: ['España', 'Francia'], t: {} },
+  { n: 'Hy-D® 1,25 %', e: 'DSM-Firmenich', cat: 'C06-03-02', esp: ['Avicultura', 'Porcino', 'Bovino'], pais: ['España', 'Portugal'], t: {} },
+  { n: 'GalliPro® Fit', e: 'Novonesis', cat: 'C06-01-01', esp: ['Avicultura › Pollos de engorde'], enf: ['Clostridiosis'], pais: ['España'], t: { forma: 'Polvo', incorporacion: ['Pienso'] } },
+  { n: 'Hipracox® Broilers', e: 'Hipra', cat: 'C08-01', esp: ['Avicultura › Pollos de engorde'], enf: ['Coccidiosis'], pais: ['España', 'Portugal'], t: { tecnologia: 'Viva atenuada', via: ['Spray', 'Agua de bebida'] } },
+  { n: 'Coliprotec® F4/F18', e: 'Elanco', cat: 'C08-01', esp: ['Porcino › Lechones'], enf: ['Colibacilosis'], pais: ['España', 'Francia'], t: { tecnologia: 'Viva atenuada', via: ['Agua de bebida'] } },
+  { n: 'Ingelvac CircoFLEX®', e: 'Boehringer Ingelheim', cat: 'C08-01', esp: ['Porcino › Lechones'], enf: ['Circovirosis porcina'], pais: ['España', 'Italia'], t: { tecnologia: 'Subunidad', via: ['Inyectable IM'] } },
+  { n: 'Nobilis® IB 4-91', e: 'MSD Animal Health', cat: 'C08-01', esp: ['Avicultura'], enf: ['Bronquitis infecciosa aviar'], pais: ['España', 'Francia'], t: { tecnologia: 'Viva atenuada', via: ['Spray', 'Ocular'] } },
+  { n: 'Virkon® S', e: 'LANXESS', cat: 'C09-01-02', esp: [], pais: ['España', 'Portugal', 'Reino Unido'], t: { espectro: ['Bacterias', 'Virus con envoltura', 'Virus sin envoltura', 'Hongos'], superficie: ['Naves', 'Vehículos', 'Equipos'] } },
+  { n: 'Huwa-San® TR-50', e: 'Roam Technology', cat: 'C09-03-01', esp: [], enf: ['Colibacilosis'], pais: ['España', 'Bélgica'], t: {} },
+  { n: 'Zucami Aviary Pro', e: 'Zucami', cat: 'C02-01-03', esp: ['Avicultura › Gallinas ponedoras', 'Avicultura › Reproductoras'], pais: ['España', 'Francia', 'Portugal'], t: {} },
+  { n: 'Zucami Nest Pro', e: 'Zucami', cat: 'C02-01-05', esp: ['Avicultura › Gallinas ponedoras'], pais: ['España', 'Francia', 'Portugal'], t: {} },
+  { n: 'FlexFeed comedero', e: 'Big Dutchman', cat: 'C02-02-01', esp: ['Avicultura › Pollos de engorde'], pais: ['España', 'Alemania', 'México'], t: { material: 'Plástico' } },
+  { n: 'CallMatic bebedero', e: 'Big Dutchman', cat: 'C02-02-05', esp: ['Porcino'], pais: ['España', 'Alemania'], t: {} },
+  { n: 'Ross 308', e: 'Aviagen Ibérica', cat: 'C01-01-02', esp: ['Avicultura › Pollos de engorde'], pais: ['España', 'Portugal'], t: {} },
+  { n: 'Ventilador EM50', e: 'Munters', cat: 'C02-03-01', esp: [], pais: ['España', 'Italia'], t: {} }
+];
+P.forEach(p => { p.enf = p.enf || []; p.marca = p.e; p.verif = ['DSM-Firmenich', 'Zucami', 'Big Dutchman', 'Aviagen Ibérica', 'Hipra', 'Elanco', 'Kemin'].indexOf(p.e) > -1; });
+const EMP = [...new Set(P.map(p => p.e))];
+const PAISES_TOP = ['España', 'Portugal', 'Francia', 'Italia', 'Alemania', 'México'];
+// ---------- estado de la búsqueda ----------
+const F = { q: '', esp: {}, cat: [], enf: [], pais: [], marca: [], verif: false, tec: {} };   // esp: { Porcino: ['Lechones'] }
+const UI = { abierto: null, tab: 'productos', orden: 'rel', capa: null, foco: {}, paso: null, borr: null };
+const nActivos = () => Object.keys(F.esp).length + F.cat.length + F.enf.length + F.pais.length + F.marca.length + (F.verif ? 1 : 0) + Object.keys(F.tec).filter(k => lleno(F.tec[k])).length;
+const lleno = v => Array.isArray(v) ? v.length > 0 : v && typeof v === 'object' ? (v.min || v.max) : !!v;
+// ---------- coincidencias: Y entre filtros, O dentro de un filtro ----------
+function cumpleEsp(p, f) { const ks = Object.keys(f.esp); if (!ks.length) return true;
+  if (!p.esp.length) return true;   // «no depende de especie» (equipos, bioseguridad…) vale para todas
+  return ks.some(sp => p.esp.some(x => { const [s, pr] = x.split(' › '); if (s !== sp) return false; const sel = f.esp[sp]; return !sel.length || !pr || sel.indexOf(pr) > -1; })); }
+function cumple(p, f, sin) {
+  if (sin !== 'q' && f.q && norm([p.n, p.e, ruta(p.cat).join(' ')].join(' ')).indexOf(norm(f.q)) < 0 && !norm(f.q).split(/\s+/).every(w => norm([p.n, p.e, ruta(p.cat).join(' '), p.esp.join(' '), p.enf.join(' ')].join(' ')).indexOf(w) > -1)) return false;
+  if (sin !== 'esp' && !cumpleEsp(p, f)) return false;
+  if (sin !== 'cat' && f.cat.length && !f.cat.some(c => dentro(p.cat, c))) return false;
+  if (sin !== 'enf' && f.enf.length && !f.enf.some(e => p.enf.indexOf(e) > -1)) return false;
+  if (sin !== 'pais' && f.pais.length && !f.pais.some(x => p.pais.indexOf(x) > -1)) return false;
+  if (sin !== 'marca' && f.marca.length && f.marca.indexOf(p.marca) < 0) return false;
+  if (sin !== 'verif' && f.verif && !p.verif) return false;
+  if (sin !== 'tec') for (const k in f.tec) { const v = f.tec[k]; if (!lleno(v)) continue; const pv = p.t[k];
+    if (Array.isArray(v)) { if (!v.some(x => Array.isArray(pv) ? pv.indexOf(x) > -1 : pv === x)) return false; }
+    else if (typeof v === 'object') { const n = parseFloat(pv); if (isNaN(n) || (v.min && n < parseFloat(v.min)) || (v.max && n > parseFloat(v.max))) return false; }
+    else if (v === true && !pv) return false; }
+  return true;
+}
+const res = () => P.filter(p => cumple(p, F));
+const cuenta = mod => { const f = JSON.parse(JSON.stringify(F)); mod(f); return P.filter(p => cumple(p, f)).length; };
+function coincide(p) { const o = [];
+  Object.keys(F.esp).forEach(sp => { if (p.esp.some(x => x.split(' › ')[0] === sp)) o.push(F.esp[sp].length ? sp + ' · ' + F.esp[sp].join(', ') : sp); });
+  F.cat.forEach(c => { if (dentro(p.cat, c)) o.push(corto(c)); });
+  F.enf.forEach(e => { if (p.enf.indexOf(e) > -1) o.push(e); });
+  return o; }
+// ---------- iconos: el mismo por dimensión en botón y chip ----------
+const ICO = {
+  esp: '<path d="M8.5 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM15.5 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 12c-3 0-5 3.5-5 5.5S9 20 12 20s5-.5 5-2.5S15 12 12 12z"/>',
+  cat: '<path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/>',
+  enf: '<path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M5 19l2.8-2.8M16.2 7.8 19 5"/>',
+  pais: '<path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12zM12 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>',
+  marca: '<path d="M3 12V4h8l10 10-8 8L3 12zM7.5 7.5h.01"/>',
+  fil: '<path d="M4 6h16M7 12h10M10 18h4"/>', lupa: '<path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/>', tec: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6"/>'
+};
+const ic = (k, s) => '<svg width="' + (s || 17) + '" height="' + (s || 17) + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">' + ICO[k] + '</svg>';
+// ---------- textos de cada filtro ----------
+const txtEsp = () => { const k = Object.keys(F.esp); return k.length ? k.map(sp => F.esp[sp].length ? sp + ' · ' + F.esp[sp].join(', ') : sp).join(' · ') : ''; };
+const txtCat = () => F.cat.map(corto).join(', ');
+const txtEnf = () => F.enf.join(', ');
+const resumen = (lista, max) => !lista ? '' : lista;
+// ---------- selectores (uno por dimensión, compartidos) ----------
+function selEspecie() {
+  const q = norm(UI.foco.esp || '');
+  let h = '<div class="qs">' + ic('lupa', 16) + '<input data-q="esp" placeholder="Buscar especie o producción" value="' + esc(UI.foco.esp || '') + '"></div>';
+  h += '<div class="sl">Especies</div><div class="chips">' + M.especies.filter(e => !q || norm(e.label).indexOf(q) > -1 || e.producciones.some(p => norm(p.label).indexOf(q) > -1)).map(e => {
+    const on = !!F.esp[e.label], n = cuenta(f => { f.esp = {}; f.esp[e.label] = []; });
+    return '<button type="button" class="chip' + (on ? ' on' : '') + '" data-act="esp|' + esc(e.label) + '">' + (on ? '✓ ' : '') + esc(e.label) + ' <span class="n">' + n + '</span></button>'; }).join('') + '</div>';
+  Object.keys(F.esp).forEach(sp => { const e = M.especies.find(x => x.label === sp); if (!e) return;
+    h += '<div class="sl">' + esc(sp) + ' · producción <span style="text-transform:none;letter-spacing:0;font-weight:400">(opcional; sin marcar = todas)</span></div><div class="chips">' + e.producciones.filter(p => !q || norm(p.label).indexOf(q) > -1 || norm(sp).indexOf(q) > -1).map(p => {
+      const on = F.esp[sp].indexOf(p.label) > -1; return '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="prod|' + esc(sp) + '|' + esc(p.label) + '">' + (on ? '✓ ' : '') + esc(p.label) + '</button>'; }).join('') + '</div>'; });
+  return h;
+}
+function selCategoria(movil) {
+  const q = norm(UI.foco.cat || '');
+  let h = '<div class="qs">' + ic('lupa', 16) + '<input data-q="cat" placeholder="Buscar tipo de producto: «adsorbentes», «comederos»…" value="' + esc(UI.foco.cat || '') + '"></div>';
+  if (Object.keys(F.esp).length) h += '<p class="hint" style="margin:8px 0 0">Recuentos para <strong>' + esc(txtEsp()) + '</strong>. Lo que no aplica a esa especie sale en gris.</p>';
+  const fila = (id, cur) => { const on = F.cat.indexOf(id) > -1, ok = pertinente(id), n = cuenta(f => { f.cat = [id]; }), hijos = NOD[id].hijos.length;
+    return '<div style="display:flex;align-items:center;gap:4px"><button type="button" class="opt' + (cur ? ' cur' : '') + (ok ? '' : ' na') + '" data-act="' + (hijos ? 'abrir' : 'cat') + '|' + id + '"' + (ok ? '' : ' title="No aplica a la especie elegida"') + '>' +
+      (hijos ? '' : '<span class="ck' + (on ? ' on' : '') + '">' + (on ? '✓' : '') + '</span>') + '<span>' + esc(corto(id)) + '</span><span class="c">' + (ok ? n : 'no aplica') + (hijos ? ' ›' : '') + '</span></button>' +
+      (hijos && ok ? '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="cat|' + id + '" title="Elegir todo">' + (on ? '✓ ' : '') + 'Todo</button>' : '') + '</div>'; };
+  if (q) {   // búsqueda: lista plana con su ruta
+    const hits = Object.keys(NOD).filter(id => norm(NOD[id].label + ' ' + NOD[id].corto).indexOf(q) > -1).slice(0, 14);
+    return h + '<div class="sl">Resultados</div>' + (hits.length ? hits.map(id => { const on = F.cat.indexOf(id) > -1;
+      return '<button type="button" class="opt' + (pertinente(id) ? '' : ' na') + '" data-act="cat|' + id + '"><span class="ck' + (on ? ' on' : '') + '">' + (on ? '✓' : '') + '</span><span>' + esc(corto(id)) + '<br><span class="hint">' + esc(ruta(id).slice(0, -1).join(' › ') || 'Familia') + '</span></span><span class="c">' + cuenta(f => { f.cat = [id]; }) + '</span></button>'; }).join('') : '<p class="hint">Sin coincidencias. Prueba con otra palabra.</p>');
+  }
+  const f1 = UI.foco.f1, f2 = UI.foco.f2;
+  if (movil) {   // móvil: un nivel cada vez, con «atrás»
+    const nivel = f2 ? NOD[f2].hijos : f1 ? NOD[f1].hijos : FAM.map(f => f.id);
+    return h + (f1 ? '<button type="button" class="link" style="margin:12px 0 4px" data-act="volvercat">‹ ' + esc(f2 ? corto(f1) : 'Todas las familias') + '</button>' : '<div class="sl">Familias</div>') +
+      (f1 && !f2 ? '<div class="sl">' + esc(corto(f1)) + '</div>' : '') + (f2 ? '<div class="sl">' + esc(corto(f2)) + ' · puedes marcar varios</div>' : '') + nivel.map(id => fila(id, false)).join('');
+  }
+  return h + '<div class="cols" style="margin-top:12px"><div class="col"><div class="sl">Familia</div>' + FAM.map(f => fila(f.id, f.id === f1)).join('') + '</div>' +
+    '<div class="col"><div class="sl">' + (f1 ? 'Grupo en ' + esc(corto(f1)) : 'Grupo') + '</div>' + (f1 ? NOD[f1].hijos.map(id => fila(id, id === f2)).join('') : '<p class="hint">Elige una familia.</p>') + '</div>' +
+    '<div class="col"><div class="sl">' + (f2 ? 'Tipo · puedes marcar varios' : 'Tipo') + '</div>' + (f2 ? NOD[f2].hijos.map(id => fila(id, false)).join('') : '<p class="hint">Elige un grupo.</p>') + '</div></div>';
+}
+function selEnfermedad() {
+  const q = norm(UI.foco.enf || ''), esp = Object.keys(F.esp);
+  const lista = M.enfermedades.filter(e => (!esp.length || e.especies.some(s => esp.indexOf(s) > -1)) && (!q || norm(e.nombre).indexOf(q) > -1));
+  const grupos = {}; lista.forEach(e => (e.tipos && e.tipos.length ? e.tipos : ['Otras']).slice(0, 1).forEach(t => (grupos[t] = grupos[t] || []).push(e)));
+  let h = '<div class="qs">' + ic('lupa', 16) + '<input data-q="enf" placeholder="Buscar enfermedad" value="' + esc(UI.foco.enf || '') + '"></div>' +
+    '<p class="hint" style="margin:8px 0 0">' + (esp.length ? 'Solo las de <strong>' + esc(esp.join(', ')) + '</strong>; las compartidas salen una vez.' : 'Elige una especie para ver solo sus enfermedades.') + ' Es un filtro aparte de la categoría.</p>';
+  Object.keys(grupos).sort().forEach(g => { h += '<div class="sl">' + esc(g) + '</div><div class="chips">' + grupos[g].map(e => { const on = F.enf.indexOf(e.nombre) > -1;
+    return '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="enf|' + esc(e.nombre) + '">' + (on ? '✓ ' : '') + esc(e.nombre) + '</button>'; }).join('') + '</div>'; });
+  return h;
+}
+function selPais() {
+  const q = norm(UI.foco.pais || ''), lista = q ? M.paises.filter(p => norm(p).indexOf(q) > -1).slice(0, 12) : PAISES_TOP.concat(F.pais.filter(p => PAISES_TOP.indexOf(p) < 0));
+  return '<div class="qs">' + ic('lupa', 16) + '<input data-q="pais" placeholder="Buscar país" value="' + esc(UI.foco.pais || '') + '"></div><div class="chips" style="margin-top:10px">' +
+    lista.map(p => { const on = F.pais.indexOf(p) > -1; return '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="pais|' + esc(p) + '">' + (on ? '✓ ' : '') + esc(p) + '</button>'; }).join('') + '</div>';
+}
+function selMarca() {
+  return '<div class="chips">' + EMP.map(m => { const on = F.marca.indexOf(m) > -1, n = cuenta(f => { f.marca = [m]; }); return n || on ? '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="marca|' + esc(m) + '">' + (on ? '✓ ' : '') + esc(m) + ' <span class="n">' + n + '</span></button>' : ''; }).join('') + '</div>' +
+    '<label class="ver" style="margin:12px 0 0"><input type="checkbox" data-verif="1"' + (F.verif ? ' checked' : '') + '> Solo empresas verificadas</label>';
+}
+// filtros técnicos: solo con una categoría de un mismo tipo de producto (su plantilla)
+function tecPlantilla() { if (!F.cat.length) return null; const ts = [...new Set(F.cat.map(c => tplDe(c)).filter(Boolean))]; return ts.length === 1 && NOD[F.cat[0]].nivel > 1 ? ts[0] : null; }
+function selTecnicos() {
+  const t = tecPlantilla();
+  if (!t) return '<p class="hint" style="margin:0">Elige una categoría (un tipo de producto) y aquí salen sus datos técnicos: por ejemplo, la micotoxina objetivo en los adsorbentes.</p>';
+  return t.atributos.filter(a => a.filterable && ['enum', 'multiselect', 'boolean', 'integer', 'decimal'].indexOf(a.type) > -1).map(a => {
+    const v = F.tec[a.id];
+    let ctl;
+    if (a.type === 'boolean') ctl = '<div class="chips"><button type="button" class="chip sm' + (v === true ? ' on' : '') + '" data-act="tecb|' + a.id + '">' + (v === true ? '✓ ' : '') + 'Sí</button></div>';
+    else if (a.type === 'integer' || a.type === 'decimal') ctl = '<div class="rng"><input inputmode="decimal" placeholder="mín." data-rng="' + a.id + '|min" value="' + esc(v && v.min || '') + '"><span>a</span><input inputmode="decimal" placeholder="máx." data-rng="' + a.id + '|max" value="' + esc(v && v.max || '') + '"><span class="hint">' + esc((a.unit || '').split('|')[0]) + '</span></div>';
+    else ctl = '<div class="chips">' + a.options.map(o => { const on = Array.isArray(v) && v.indexOf(o) > -1; return '<button type="button" class="chip sm' + (on ? ' on' : '') + '" data-act="tec|' + a.id + '|' + esc(o) + '">' + (on ? '✓ ' : '') + esc(o) + '</button>'; }).join('') + '</div>';
+    return '<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;margin-bottom:6px">' + esc(a.label) + '</div>' + ctl + '</div>';
+  }).join('');
+}
+const SEL = { esp: selEspecie, cat: selCategoria, enf: selEnfermedad, pais: selPais, marca: selMarca };
+const DIM = [['esp', 'Especie', 'Cualquier especie', txtEsp], ['cat', 'Categoría', 'Cualquier categoría', txtCat], ['enf', 'Enfermedad', 'Cualquier enfermedad', txtEnf]];
+// ---------- cabecera con barra combinada ----------
+function cabecera() {
+  const n = nActivos();
+  const sug = UI.abierto === 'q' && F.q.trim().length > 1 ? autocompletar() : '';
+  document.getElementById('top').innerHTML =
+    '<button type="button" class="logo" data-act="inicio">agroo<b>link</b></button>' +
+    '<div class="bar" role="search">' +
+      '<label class="seg' + (UI.abierto === 'q' ? ' on' : '') + '" data-act="abrir-seg|q"><span class="l">Qué buscas</span><input id="qin" data-q="q" placeholder="Producto, empresa, marca…" value="' + esc(F.q) + '" autocomplete="off"></label>' +
+      DIM.map(([k, l, ph, f]) => '<button type="button" class="seg' + (UI.abierto === k ? ' on' : '') + '" data-act="abrir-seg|' + k + '"><span class="l">' + l + '</span><span class="v' + (f() ? ' set' : '') + '">' + esc(f() || ph) + '</span></button>').join('') +
+      '<button type="button" class="go" aria-label="Buscar" data-act="buscar">' + ic('lupa', 20) + '</button>' +
+      (UI.abierto && UI.abierto !== 'q' ? '<div class="pop" role="dialog" aria-label="' + esc(DIM.find(d => d[0] === UI.abierto)[1]) + '">' + SEL[UI.abierto]() + '<div class="popfoot"><button type="button" class="link" data-act="limpiar|' + UI.abierto + '">Borrar</button><span class="sp"></span><span class="hint">' + res().length + ' resultados</span><button type="button" class="bp" data-act="buscar">Buscar</button></div></div>' : '') +
+      sug +
+    '</div>' +
+    '<button type="button" class="pill" data-act="hoja">' + ic('lupa', 18) + '<span><strong>' + esc(F.q || '¿Qué buscas?') + '</strong><small>' + esc([txtEsp() || 'Cualquier especie', txtCat() || 'cualquier categoría'].join(' · ')) + '</small></span></button>' +
+    '<span class="av" aria-label="Samuel Esteban">SE</span>';
+}
+function autocompletar() {
+  const q = norm(F.q);
+  const cats = Object.keys(NOD).filter(id => norm(NOD[id].label + ' ' + NOD[id].corto).indexOf(q) > -1).slice(0, 4);
+  const esps = M.especies.filter(e => norm(e.label).indexOf(q) > -1 || e.producciones.some(p => norm(p.label).indexOf(q) > -1)).slice(0, 3);
+  const prods = P.filter(p => norm(p.n + ' ' + p.e).indexOf(q) > -1).slice(0, 4);
+  const emps = EMP.filter(e => norm(e).indexOf(q) > -1).slice(0, 3);
+  const grupo = (t, items) => items ? '<div class="sl">' + t + '</div>' + items : '';
+  return '<div class="pop" style="right:auto;width:min(560px,100%)">' +
+    '<button type="button" class="opt" data-act="buscar">' + ic('lupa', 16) + '<span>Buscar «<strong>' + esc(F.q) + '</strong>»</span><span class="c">' + res().length + '</span></button>' +
+    grupo('Categorías', cats.map(id => '<button type="button" class="opt" data-act="sugcat|' + id + '">' + ic('cat', 16) + '<span>' + esc(corto(id)) + ' <span class="hint">· ' + esc(ruta(id).slice(0, -1).join(' › ') || 'familia') + '</span></span></button>').join('')) +
+    grupo('Especies', esps.map(e => '<button type="button" class="opt" data-act="sugesp|' + esc(e.label) + '">' + ic('esp', 16) + '<span>' + esc(e.label) + '</span></button>').join('')) +
+    grupo('Productos', prods.map(p => '<button type="button" class="opt" data-act="sugq|' + esc(p.n) + '"><span class="ck" style="border:0;background:var(--soft);color:var(--accent);width:28px;height:28px;border-radius:8px;font-size:10px;font-weight:700">' + esc(p.n.replace(/[^A-Za-z]/g, '').slice(0, 2).toUpperCase()) + '</span><span>' + esc(p.n) + ' <span class="hint">· ' + esc(p.e) + '</span></span></button>').join('')) +
+    grupo('Empresas', emps.map(e => '<button type="button" class="opt" data-act="sugq|' + esc(e) + '">' + ic('marca', 16) + '<span>' + esc(e) + '</span></button>').join('')) +
+    '</div>';
+}
+// ---------- resultados ----------
+function botonesFiltro() {
+  const n = nActivos();
+  const dims = [['esp', 'Especie', txtEsp()], ['cat', 'Categoría', txtCat()], ['enf', 'Enfermedad', txtEnf()], ['pais', 'País', F.pais.join(', ')], ['marca', 'Marca', F.marca.join(', ')]];
+  const t = tecPlantilla();
+  return '<div class="fbar"><button type="button" class="fbtn" data-act="filtros">' + ic('fil', 18) + 'Filtros' + (n ? '<span class="cnt">' + n + '</span>' : '') + '</button>' +
+    dims.map(([k, l, v]) => '<button type="button" class="dbtn' + (v ? ' set' : '') + '" data-act="filtros|' + k + '">' + ic(k) + esc(v ? (v.length > 26 ? v.slice(0, 24) + '…' : v) : l) + '</button>').join('') +
+    (t ? '<button type="button" class="dbtn' + (Object.keys(F.tec).some(k => lleno(F.tec[k])) ? ' set' : '') + '" data-act="filtros|tec">' + ic('tec') + 'Filtros técnicos</button>' : '') +
+    '<label class="ver"><input type="checkbox" data-verif="1"' + (F.verif ? ' checked' : '') + '> Solo verificadas</label></div>';
+}
+function activos() {
+  const ch = [];
+  Object.keys(F.esp).forEach(sp => ch.push(['esp', sp, F.esp[sp].length ? sp + ' · ' + F.esp[sp].join(', ') : sp]));
+  F.cat.forEach(c => ch.push(['cat', c, ruta(c).join(' › ')]));
+  F.enf.forEach(e => ch.push(['enf', e, e])); F.pais.forEach(p => ch.push(['pais', p, p])); F.marca.forEach(m => ch.push(['marca', m, m]));
+  if (F.verif) ch.push(['verif', '1', 'Solo verificadas']);
+  Object.keys(F.tec).forEach(k => { const v = F.tec[k]; if (!lleno(v)) return; const a = (tecPlantilla() || { atributos: [] }).atributos.find(x => x.id === k) || { label: k };
+    ch.push(['tec', k, a.label + ': ' + (Array.isArray(v) ? v.join(', ') : typeof v === 'object' ? (v.min || '…') + '–' + (v.max || '…') : 'Sí')]); });
+  return '<div class="activos"><strong>Filtros activos (' + ch.length + ')</strong>' + ch.map(([d, id, t]) => '<span class="achip">' + (ICO[d] ? ic(d, 14) : '') + esc(t) + '<button type="button" class="x" aria-label="Quitar ' + esc(t) + '" data-act="quitar|' + d + '|' + esc(id) + '">×</button></span>').join('') +
+    (ch.length ? '<button type="button" class="link" data-act="limpiartodo">Limpiar todo</button>' : '') + '</div>' +
+    '<p class="reglas"><span class="largo">Los filtros se combinan: ves lo que cumple <strong>todos</strong>. Dentro de un mismo filtro basta con <strong>una</strong> opción. Lo que no depende de especie (equipos, bioseguridad…) sale con cualquier especie.</span><span class="corto">Se cumplen <strong>todos</strong> a la vez; dentro de un filtro, basta <strong>una</strong> opción.</span></p>';
+}
+function tarjeta(p) {
+  const c = coincide(p);
+  return '<article class="card"><div class="ph">' + esc(p.n.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase()) + '</div><div class="cb">' +
+    '<span class="hint">' + esc(ruta(p.cat).slice(-1)[0]) + '</span><span class="cn">' + esc(p.n) + '</span>' +
+    '<span class="ce">' + esc(p.e) + (p.verif ? ' <span title="Empresa verificada" style="color:var(--accent)">✓</span>' : '') + '</span>' +
+    '<div class="tags">' + (p.esp.length ? [...new Set(p.esp.map(x => x.split(' › ').pop()))].slice(0, 3).map(x => '<span class="tag">' + esc(x) + '</span>').join('') : '<span class="tag">Cualquier especie</span>') + '</div>' +
+    (c.length ? '<span class="coin">Coincide con: ' + esc(c.join(' · ')) + '</span>' : '') +
+    '<div class="cact"><button type="button" class="b">Comparar</button><button type="button" class="b p">Ver ficha</button></div></div></article>';
+}
+function vacio() {
+  const op = [];
+  Object.keys(F.esp).forEach(sp => op.push(['esp', sp, sp, cuenta(f => delete f.esp[sp])]));
+  F.cat.forEach(c => op.push(['cat', c, corto(c), cuenta(f => f.cat = f.cat.filter(x => x !== c))]));
+  F.enf.forEach(e => op.push(['enf', e, e, cuenta(f => f.enf = f.enf.filter(x => x !== e))]));
+  F.pais.forEach(p => op.push(['pais', p, p, cuenta(f => f.pais = f.pais.filter(x => x !== p))]));
+  F.marca.forEach(m => op.push(['marca', m, m, cuenta(f => f.marca = f.marca.filter(x => x !== m))]));
+  if (F.q) op.push(['q', '', '«' + F.q + '»', cuenta(f => f.q = '')]);
+  Object.keys(F.tec).forEach(k => { if (lleno(F.tec[k])) op.push(['tec', k, 'filtro técnico', cuenta(f => delete f.tec[k])]); });
+  return '<div class="vacio"><strong style="font-size:17px">No hay resultados con todos estos filtros</strong><span class="hint">Quita uno para ver más:</span>' +
+    op.sort((a, b) => b[3] - a[3]).map(([d, id, t, n]) => '<div class="r">' + (ICO[d] ? ic(d) : ic('lupa')) + '<span style="flex:1">Sin <strong>' + esc(t) + '</strong></span><span class="hint">' + n + ' resultados</span><button type="button" class="link" data-act="quitar|' + d + '|' + esc(id) + '">Quitar</button></div>').join('') +
+    '<div class="r"><span style="flex:1">¿No lo encuentras? Publica un proyecto y te escriben las empresas.</span><button type="button" class="bp" style="height:38px">Crear proyecto</button></div></div>';
+}
+function resultados() {
+  const r = res(), emp = [...new Set(r.map(p => p.e))];
+  const orden = UI.orden === 'az' ? r.slice().sort((a, b) => a.n.localeCompare(b.n)) : r;
+  let h = '<h1>' + (F.q ? 'Resultados para «' + esc(F.q) + '»' : 'Resultados') + ' <span class="hint" style="font-size:15px;font-weight:400">· ' + r.length + ' productos</span></h1>' + botonesFiltro() + activos() +
+    '<div class="tabs" role="tablist"><button type="button" role="tab" class="' + (UI.tab === 'productos' ? 'on' : '') + '" data-act="tab|productos">Productos ' + r.length + '</button><button type="button" role="tab" class="' + (UI.tab === 'empresas' ? 'on' : '') + '" data-act="tab|empresas">Empresas ' + emp.length + '</button><span class="sp"></span>' +
+    '<select data-orden="1" aria-label="Ordenar"><option value="rel"' + (UI.orden === 'rel' ? ' selected' : '') + '>Más relevantes</option><option value="az"' + (UI.orden === 'az' ? ' selected' : '') + '>A–Z</option></select></div>';
+  if (!r.length) return h + vacio();
+  if (UI.tab === 'empresas') return h + '<div class="elist">' + emp.map(e => { const n = r.filter(p => p.e === e).length, v = P.find(p => p.e === e).verif;
+    return '<div class="erow"><span class="av" style="background:var(--soft);color:var(--accent)">' + esc(e.replace(/[^A-Za-z]/g, '').slice(0, 2).toUpperCase()) + '</span><span style="flex:1;min-width:0"><strong>' + esc(e) + '</strong>' + (v ? ' <span style="color:var(--accent)">✓</span>' : '') + '<br><span class="hint">' + n + (n === 1 ? ' producto' : ' productos') + ' con estos filtros</span></span><button type="button" class="cact b p" style="height:36px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);padding:0 14px;font-weight:500">Ver empresa</button></div>'; }).join('') + '</div>';
+  return h + '<div class="grid">' + orden.map(tarjeta).join('') + '</div>';
+}
+// ---------- «Filtros» (todo en un sitio) ----------
+function capaFiltros() {
+  const t = tecPlantilla(), movil = innerWidth < 900;
+  const sec = (k, titulo, icono, v, html) => '<section class="fsec" id="f-' + k + '"><h3>' + ic(icono) + titulo + '<span class="s">' + esc(v || '') + '</span></h3>' + html + '</section>';
+  return '<div class="ov" data-act="cerrarcapa"><div class="sheet" role="dialog" aria-modal="true" aria-label="Filtros" data-stop="1">' +
+    '<div class="sh"><button type="button" class="ico" aria-label="Cerrar" data-act="cerrarcapa">×</button><strong>Filtros</strong><span style="width:36px"></span></div>' +
+    '<div class="sbody"><p class="reglas" style="margin:12px 0 0">Se combinan: ves lo que cumple todos. Dentro de un filtro basta con una opción.</p>' +
+    sec('esp', 'Especie', 'esp', txtEsp(), selEspecie()) +
+    sec('cat', 'Categoría', 'cat', txtCat(), selCategoria(movil)) +
+    sec('enf', 'Enfermedad', 'enf', txtEnf(), selEnfermedad()) +
+    sec('tec', 'Filtros técnicos' + (t ? ' · ' + esc(t.label) : ''), 'tec', '', selTecnicos()) +
+    sec('pais', 'País', 'pais', F.pais.join(', '), selPais()) +
+    sec('marca', 'Marca', 'marca', F.marca.join(', '), selMarca()) +
+    '</div><div class="sf"><button type="button" class="link" data-act="limpiartodo">Limpiar todo</button><span class="sp"></span><button type="button" class="bp" data-act="cerrarcapa">Ver ' + res().length + ' resultados</button></div></div></div>';
+}
+// ---------- móvil: búsqueda por pasos apilados ----------
+function capaHoja() {
+  const pasos = [['q', 'Qué buscas', F.q || 'Producto, empresa, marca…'], ['esp', 'Especie', txtEsp() || 'Cualquiera'], ['cat', 'Categoría', txtCat() || 'Cualquiera'], ['enf', 'Enfermedad', txtEnf() || 'Cualquiera']];
+  return '<div class="ov mov" data-act="cerrarcapa"><div class="sheet" role="dialog" aria-modal="true" aria-label="Buscar" data-stop="1">' +
+    '<div class="sh"><button type="button" class="ico" aria-label="Cerrar" data-act="cerrarcapa">×</button><strong>Buscar</strong><span style="width:36px"></span></div><div class="sbody">' +
+    pasos.map(([k, l, v]) => { const open = UI.paso === k;
+      return '<div class="paso' + (open ? ' open' : '') + '"><button type="button" data-act="paso|' + k + '">' + (k === 'q' ? ic('lupa') : ic(k)) + '<strong>' + l + '</strong><span>' + esc(v) + '</span></button>' +
+        (open ? '<div class="pb">' + (k === 'q' ? '<div class="qs">' + ic('lupa', 16) + '<input data-q="q" placeholder="Producto, empresa, marca…" value="' + esc(F.q) + '"></div>' : SEL[k](true)) + '</div>' : '') + '</div>'; }).join('') +
+    '</div><div class="sf"><button type="button" class="link" data-act="limpiartodo">Limpiar todo</button><span class="sp"></span><button type="button" class="bp" data-act="buscar">' + ic('lupa', 17) + ' Buscar · ' + res().length + '</button></div></div></div>';
+}
+// ---------- render ----------
+function render() {
+  cabecera();
+  document.getElementById('main').innerHTML = resultados();
+  document.getElementById('layer').innerHTML = UI.capa === 'filtros' ? capaFiltros() : UI.capa === 'hoja' ? capaHoja() : '';
+  if (UI.capa === 'filtros' && UI.ir) { const s = document.getElementById('f-' + UI.ir); if (s) s.scrollIntoView({ block: 'start' }); UI.ir = null; }
+}
+function enfocar(sel, pos) { const n = document.querySelector(sel); if (n) { n.focus(); if (pos != null) n.setSelectionRange(pos, pos); } }
+function abrirEnCat() {   // el árbol se abre donde está la primera categoría elegida
+  const c = F.cat[0]; if (!c) return; const n = NOD[c];
+  if (n.nivel === 1) { UI.foco.f1 = c; UI.foco.f2 = null; } else if (n.nivel === 2) { UI.foco.f1 = n.padre; UI.foco.f2 = n.hijos.length ? c : null; } else { UI.foco.f2 = n.padre; UI.foco.f1 = NOD[n.padre].padre; }
+}
+const toggle = (arr, x) => { const i = arr.indexOf(x); i > -1 ? arr.splice(i, 1) : arr.push(x); };
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-act]');
+  if (!b) { if (UI.abierto && !ev.target.closest('.bar')) { UI.abierto = null; render(); } return; }
+  const [act, x, y] = b.getAttribute('data-act').split('|');
+  if (act === 'cerrarcapa' && ev.target.closest('[data-stop]') && b.classList.contains('ov')) return;
+  switch (act) {
+    case 'abrir-seg': if (x === 'cat') { UI.abierto = UI.abierto === 'cat' ? null : 'cat'; UI.foco = {}; abrirEnCat(); break; }
+      if (x === 'q') { UI.abierto = 'q'; render(); enfocar('#qin', F.q.length); return; } UI.abierto = UI.abierto === x ? null : x; UI.foco = {}; break;
+    case 'buscar': UI.abierto = null; UI.capa = null; break;
+    case 'inicio': Object.assign(F, { q: '', esp: {}, cat: [], enf: [], pais: [], marca: [], verif: false, tec: {} }); UI.abierto = null; break;
+    case 'esp': if (F.esp[x]) delete F.esp[x]; else F.esp[x] = []; break;
+    case 'prod': toggle(F.esp[x], y); break;
+    case 'abrir': if (NOD[x].nivel === 1) { UI.foco.f1 = x; UI.foco.f2 = null; } else UI.foco.f2 = x; break;
+    case 'volvercat': if (UI.foco.f2) UI.foco.f2 = null; else UI.foco.f1 = null; break;
+    case 'cat': { if (!pertinente(x)) return; F.cat = F.cat.filter(c => !dentro(c, x) || c === x); toggle(F.cat, x); F.cat = F.cat.filter(c => !F.cat.some(o => o !== c && dentro(c, o))); if (!tecPlantilla()) F.tec = {}; break; }
+    case 'enf': toggle(F.enf, x); break;
+    case 'pais': toggle(F.pais, x); break;
+    case 'marca': toggle(F.marca, x); break;
+    case 'tec': { if (!Array.isArray(F.tec[x])) F.tec[x] = []; toggle(F.tec[x], y); break; }
+    case 'tecb': F.tec[x] = F.tec[x] === true ? false : true; break;
+    case 'limpiar': if (x === 'esp') F.esp = {}; if (x === 'cat') { F.cat = []; F.tec = {}; } if (x === 'enf') F.enf = []; break;
+    case 'limpiartodo': Object.assign(F, { esp: {}, cat: [], enf: [], pais: [], marca: [], verif: false, tec: {} }); break;
+    case 'quitar': if (x === 'esp') delete F.esp[y]; else if (x === 'cat') { F.cat = F.cat.filter(c => c !== y); if (!tecPlantilla()) F.tec = {}; } else if (x === 'tec') delete F.tec[y]; else if (x === 'verif') F.verif = false; else if (x === 'q') F.q = ''; else F[x] = F[x].filter(v => v !== y); break;
+    case 'filtros': UI.capa = 'filtros'; UI.abierto = null; UI.ir = x || null; abrirEnCat(); break;
+    case 'hoja': UI.capa = 'hoja'; UI.paso = UI.paso || 'q'; break;
+    case 'paso': UI.paso = UI.paso === x ? null : x; UI.foco = {}; break;
+    case 'cerrarcapa': UI.capa = null; break;
+    case 'tab': UI.tab = x; break;
+    case 'sugcat': F.cat = [x]; F.q = ''; UI.abierto = null; break;
+    case 'sugesp': F.esp[x] = F.esp[x] || []; F.q = ''; UI.abierto = null; break;
+    case 'sugq': F.q = x; UI.abierto = null; break;
+  }
+  render();
+});
+document.addEventListener('input', ev => {
+  const el = ev.target, d = el.dataset;
+  if (d.q) { const pos = el.selectionStart; if (d.q === 'q') { F.q = el.value; if (innerWidth >= 900) UI.abierto = 'q'; } else UI.foco[d.q] = el.value;
+    render(); const sel = d.q === 'q' ? (UI.capa === 'hoja' ? '.sheet [data-q="q"]' : '#qin') : '[data-q="' + d.q + '"]'; enfocar(sel, pos); return; }
+  if (d.rng) { const [k, w] = d.rng.split('|'); const o = F.tec[k] && typeof F.tec[k] === 'object' && !Array.isArray(F.tec[k]) ? F.tec[k] : {}; o[w] = el.value; F.tec[k] = o; }
+});
+document.addEventListener('change', ev => {
+  const el = ev.target;
+  if (el.dataset.verif) { F.verif = el.checked; render(); }
+  if (el.dataset.orden) { UI.orden = el.value; render(); }
+  if (el.dataset.rng) render();
+});
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape') { UI.abierto = null; UI.capa = null; render(); } if (ev.key === 'Enter' && ev.target.dataset.q === 'q') { UI.abierto = null; UI.capa = null; render(); } });
+if (/[?&]captura/.test(location.search)) { window.__F = F; window.__UI = UI; window.__render = render; }
+render();
+})();
+</script>
+</body>
+</html>
