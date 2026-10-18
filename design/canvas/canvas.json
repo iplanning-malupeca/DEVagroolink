@@ -607,7 +607,7 @@
    "page": "distmulti",
    "title": "X3 · Añadir productos que ya existen en Agroolink",
    "w": 1280,
-   "x": 2720,
+   "x": 5440,
    "y": 0
   },
   "DisMarcas.dc.html": {
@@ -615,7 +615,7 @@
    "page": "distmulti",
    "title": "X2 · Marcas (se generan desde los productos)",
    "w": 1280,
-   "x": 1360,
+   "x": 4080,
    "y": 0
   },
   "DisPublicar.dc.html": {
@@ -631,7 +631,7 @@
    "page": "distmulti",
    "title": "X4 · Subir un producto nuevo (con control de duplicados)",
    "w": 1280,
-   "x": 4080,
+   "x": 6800,
    "y": 0
   },
   "DisTipo.dc.html": {
@@ -903,7 +903,7 @@
    "page": "fabdist",
    "title": "D1 · Tipo de empresa",
    "w": 1280,
-   "x": 4080,
+   "x": 6800,
    "y": 0
   },
   "FabTipoEspecies.dc.html": {
@@ -911,7 +911,7 @@
    "page": "fabdist",
    "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
    "w": 1280,
-   "x": 6800,
+   "x": 9520,
    "y": 0
   },
   "FabTipoEspeciesSolo.dc.html": {
@@ -919,7 +919,7 @@
    "page": "fabdist",
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir",
    "w": 1280,
-   "x": 8160,
+   "x": 10880,
    "y": 0
   },
   "FabTipoEspeciesTodas.dc.html": {
@@ -927,7 +927,7 @@
    "page": "fabdist",
    "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada",
    "w": 1280,
-   "x": 5440,
+   "x": 8160,
    "y": 0
   },
   "FabTipoMercados.dc.html": {
@@ -935,7 +935,7 @@
    "page": "fabdist",
    "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»",
    "w": 1280,
-   "x": 10880,
+   "x": 13600,
    "y": 0
   },
   "FabTipoRama.dc.html": {
@@ -943,7 +943,7 @@
    "page": "fabdist",
    "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
    "w": 1280,
-   "x": 9520,
+   "x": 12240,
    "y": 0
   },
   "FabTipoVacio.dc.html": {
@@ -951,7 +951,7 @@
    "page": "fabdist",
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 2720,
+   "x": 5440,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2242,7 +2242,7 @@
    "page": "sucursales",
    "title": "S3 · Países de cada sucursal",
    "w": 1280,
-   "x": 2720,
+   "x": 5440,
    "y": 0
   },
   "SucPermisos.dc.html": {
@@ -2588,6 +2588,62 @@
    "title": "K0d · Superadmin: altas en organizaciones",
    "x": 4080,
    "y": 0
+  },
+  "FabAvisoEmpresa.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0c · Aviso a los administradores de la empresa (copia al superadmin)",
+   "x": 2720,
+   "y": 0
+  },
+  "FabAvisoAdmin.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0d · Superadmin: altas en organizaciones",
+   "x": 4080,
+   "y": 0
+  },
+  "SucAvisoEmpresa.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "title": "S2b · Aviso a la Sede y a la sucursal (copia al superadmin)",
+   "x": 2720,
+   "y": 0
+  },
+  "SucAvisoAdmin.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "title": "S2c · Superadmin: altas en organizaciones",
+   "x": 4080,
+   "y": 0
+  },
+  "DisAvisoEmpresa.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b · Aviso a los administradores de la empresa (copia al superadmin)",
+   "x": 1360,
+   "y": 0
+  },
+  "DisAvisoAdmin.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1c · Superadmin: altas en organizaciones",
+   "x": 2720,
+   "y": 0
+  },
+  "EmpAvisoAdmin.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaempresa",
+   "title": "E4b · Superadmin: primera persona de AgroExport (solo se avisa al superadmin)",
+   "x": 4160,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -2737,7 +2793,7 @@
   },
   "disT1": {
    "kind": "title1",
-   "maxW": 5360,
+   "maxW": 8000,
    "page": "distmulti",
    "text": "Alta · Distribuidor multimarca (AgroNova): elige productos o los sube",
    "w": 240,
@@ -2809,9 +2865,9 @@
   },
   "fabT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 14800,
    "page": "fabdist",
-   "text": "1 · Empresa y tipo — D0a empresa del CRM · D0b verificar email · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
+   "text": "1 · Empresa y tipo — D0a empresa del CRM · D0b verificar email · D0c/D0d avisos al unirse · D1a/D1 tipo de empresa · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3152,7 +3208,7 @@
   },
   "sucT1": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 8000,
    "page": "sucursales",
    "text": "Alta · Fabricante con sucursales (Zucami, Sede global)",
    "w": 240,
@@ -3218,6 +3274,7 @@
   "EmpE2Creada.dc.html",
   "EmpE3Buscar.dc.html",
   "EmpE4Verificar.dc.html",
+  "EmpAvisoAdmin.dc.html",
   "EmpE5Datos.dc.html",
   "EmpE6Producto.dc.html",
   "EmpE7Panel.dc.html",
@@ -3261,6 +3318,8 @@
   "CfgDondeComprar.dc.html",
   "FabCRMVarias.dc.html",
   "FabVerifica.dc.html",
+  "FabAvisoEmpresa.dc.html",
+  "FabAvisoAdmin.dc.html",
   "FabTipoVacio.dc.html",
   "FabTipo.dc.html",
   "FabTipoEspeciesTodas.dc.html",
@@ -3323,17 +3382,21 @@
   "ComBandeja.dc.html",
   "SucTipo.dc.html",
   "SucRed.dc.html",
+  "SucAvisoEmpresa.dc.html",
+  "SucAvisoAdmin.dc.html",
   "SucPaises.dc.html",
   "SucPermisos.dc.html",
   "SucPagina.dc.html",
   "SucPublicar.dc.html",
   "DisTipo.dc.html",
+  "DisAvisoEmpresa.dc.html",
+  "DisAvisoAdmin.dc.html",
   "DisMarcas.dc.html",
+  "DisElegir.dc.html",
+  "DisSubir.dc.html",
   "DisAutorizacion.dc.html",
   "DisContacto.dc.html",
   "DisPublicar.dc.html",
-  "DisElegir.dc.html",
-  "DisSubir.dc.html",
   "SelEspecies.dc.html",
   "SelMercados.dc.html",
   "ServLista.dc.html",
