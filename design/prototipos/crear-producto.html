@@ -337,11 +337,11 @@ V.categoria = () => {
   let h = '<div class="field"><label for="q">Busca la categoría</label><input class="inp" id="q" type="search" placeholder="Por ejemplo: enzimas, ventiladores, vacunas, silos…" value="' + esc(UI.q) + '" autocomplete="off"></div>';
   if (q) {
     const res = HOJAS.filter(id => ruta(id).join(' ').toLowerCase().indexOf(q) > -1).slice(0, 12);
-    h += res.length ? '<div class="results">' + res.map(id => '<button type="button" data-act="cat|' + id + '"><span>' + esc(NOD[id].label) + '</span><span class="p">' + esc(ruta(id).slice(0, -1).join(' › ')) + ' · ' + id + '</span></button>').join('') + '</div>'
+    h += res.length ? '<div class="results">' + res.map(id => '<button type="button" data-act="cat|' + id + '"><span>' + esc(NOD[id].label) + '</span><span class="p">' + esc(ruta(id).slice(0, -1).join(' › ')) + '</span></button>').join('') + '</div>'
       : '<div class="note">No hay ninguna categoría con «' + esc(UI.q) + '». Prueba con otra palabra o elige <button type="button" class="link" data-act="cat|C12-01">Otros productos</button> y Agroolink lo clasificará.</div>';
   } else {
     h += '<div class="fams">' + M.categorias.map(f => { const n = HOJAS.filter(x => x.indexOf(f.id) === 0).length;
-      return '<button type="button" class="fam' + (UI.fam === f.id || (!UI.fam && S.cat && S.cat.indexOf(f.id) === 0) ? ' on' : '') + '" data-act="fam|' + f.id + '"><span class="c">' + f.id + ' · ' + n + ' tipos</span><span class="l">' + esc(f.label) + '</span></button>'; }).join('') + '</div>';
+      return '<button type="button" class="fam' + (UI.fam === f.id || (!UI.fam && S.cat && S.cat.indexOf(f.id) === 0) ? ' on' : '') + '" data-act="fam|' + f.id + '"><span class="c">' + n + ' tipos</span><span class="l">' + esc(f.label) + '</span></button>'; }).join('') + '</div>';
     const fid = UI.fam || (S.cat && S.cat.slice(0, 3));
     const f = M.categorias.find(x => x.id === fid);
     if (f) h += '<div class="groups">' + f.grupos.map(g => '<div class="group"><span class="gl">' + esc(g.label) + '</span><div class="chips">' +
@@ -359,7 +359,7 @@ V.categoria = () => {
     if (enfObl()) tags.push('<span class="tag w">Enfermedad diana obligatoria</span>'); else if (enfVis()) tags.push('<span class="tag">Enfermedad diana opcional</span>');
     if (conRegistro()) tags.push('<span class="tag">Registro por país</span>');
     if (regla('receta')) tags.push('<span class="tag w">Puede requerir receta · revisión de Agroolink</span>');
-    h += '<div class="picked"><span class="path">' + esc(ruta(S.cat).slice(0, -1).join(' › ')) + ' · ' + S.cat + '</span><span class="name">' + esc(NOD[S.cat].label) + '</span>' +
+    h += '<div class="picked"><span class="path">' + esc(ruta(S.cat).slice(0, -1).join(' › ')) + '</span><span class="name">' + esc(NOD[S.cat].label) + '</span>' +
       '<span class="hint">Plantilla <strong>' + esc(t.label) + '</strong> · ' + t.atributos.length + ' datos técnicos · ' + esc(a.label) + (a.variantes ? ' · variantes por ' + esc(a.variantes.eje.toLowerCase()) : ' · sin variantes') + ' · botón «' + esc(a.cta) + '»</span>' +
       (tags.length ? '<div class="tags">' + tags.join('') + '</div>' : '') + (t.nota ? '<span class="hint">' + esc(t.nota) + '</span>' : '') + '</div>';
   }
