@@ -3204,6 +3204,14 @@
    "x": 14960,
    "y": 2000,
    "title": "H12 · Así entra en el comparador: misma plantilla y especie, «No informado» si falta"
+  },
+  "CompTamanos.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "componentes",
+   "x": 6800,
+   "y": 0,
+   "title": "Tamaños y anchos para todo el proyecto (inspirado en vevor.es, con Poppins)"
   }
  },
  "createdOnFiles": {
@@ -3714,7 +3722,7 @@
   },
   "selT1": {
    "kind": "title1",
-   "maxW": 5400,
+   "maxW": 8080,
    "page": "componentes",
    "text": "Componentes comunes · especies, mercados, rama de negocio, cargo e intereses",
    "w": 240,
@@ -4330,7 +4338,8 @@
   "ProdAltaNoAplica.dc.html",
   "ProdAltaOcultos.dc.html",
   "ProdAltaPublica.dc.html",
-  "ProdAltaComparador.dc.html"
+  "ProdAltaComparador.dc.html",
+  "CompTamanos.dc.html"
  ],
  "pages": [
   {
