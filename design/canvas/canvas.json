@@ -2864,73 +2864,73 @@
   "PrdFabNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 0,
+   "page": "prodfab",
+   "x": 1360,
    "y": 0,
    "title": "PA1 · Añadir un producto: crear, importar o duplicar · lo venden tus distribuidores"
   },
   "PrdFabMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 1360,
+   "page": "prodfab",
+   "x": 2720,
    "y": 0,
    "title": "PA2 · Mercados y dónde comprar: distribuidores por país y zona (= P9)"
   },
   "PrdSucNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 0,
-   "y": 1340,
+   "page": "prodsede",
+   "x": 1360,
+   "y": 0,
    "title": "PB1 · Añadir un producto: la Sede crea la ficha base"
   },
   "PrdSucMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 1360,
-   "y": 1340,
+   "page": "prodsede",
+   "x": 2720,
+   "y": 0,
    "title": "PB2 · Mercados y quién lo vende: cada país, su sucursal"
   },
   "PrdSucLocal.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 2720,
-   "y": 1340,
+   "page": "prodsede",
+   "x": 5440,
+   "y": 0,
    "title": "PB3 · La sucursal (Big Dutchman México) activa el producto y añade su versión local"
   },
   "PrdComNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 0,
-   "y": 2680,
+   "page": "prodcom",
+   "x": 1360,
+   "y": 0,
    "title": "PC1 · Añadir un producto: lo atiende el comercial de la zona"
   },
   "PrdComMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 1360,
-   "y": 2680,
+   "page": "prodcom",
+   "x": 2720,
+   "y": 0,
    "title": "PC2 · Mercados y quién lo atiende: el comercial de cada zona"
   },
   "PrdDisNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 0,
-   "y": 4020,
+   "page": "proddis",
+   "x": 1360,
+   "y": 0,
    "title": "PD1 · Añadir un producto: de una marca, de una marca que no está o propio"
   },
   "PrdDisLocal.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "altaprod",
-   "x": 1360,
-   "y": 4020,
+   "page": "proddis",
+   "x": 2720,
+   "y": 0,
    "title": "PD2 · Versión local de un producto de la marca (= P10, con NewFarms)"
   },
   "SrvFab.dc.html": {
@@ -2980,6 +2980,78 @@
    "x": 1360,
    "y": 5360,
    "title": "SE2 · Editar un servicio: qué expertos lo prestan y a quién llega"
+  },
+  "PrdFabCatalogo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodfab",
+   "x": 0,
+   "y": 0,
+   "title": "PA0 · Catálogo de DSM-Firmenich: distribuidores por producto (= P1)"
+  },
+  "PrdFabAcuerdos.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodfab",
+   "x": 4080,
+   "y": 0,
+   "title": "PA3 · Acuerdos de distribución por línea y zona (= P3)"
+  },
+  "PrdComCatalogo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodcom",
+   "x": 0,
+   "y": 0,
+   "title": "PC0 · Catálogo de Zucami: quién atiende cada producto y sus solicitudes"
+  },
+  "PrdSucCatalogo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodsede",
+   "x": 0,
+   "y": 0,
+   "title": "PB0 · Catálogo de la Sede: activación por sucursal y versiones locales"
+  },
+  "PrdSucActivacion.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodsede",
+   "x": 4080,
+   "y": 0,
+   "title": "PB2b · Activación por sucursal: qué ha activado cada una"
+  },
+  "PrdAviCatalogo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodsuc",
+   "x": 0,
+   "y": 0,
+   "title": "PS0 · Catálogo de la sucursal: los de la Sede (activar y adaptar) y los locales"
+  },
+  "PrdAviNuevo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodsuc",
+   "x": 1360,
+   "y": 0,
+   "title": "PS1 · Añadir: activar los de la Sede, crear uno local o pedirlo a la Sede"
+  },
+  "PrdAviLocal.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodsuc",
+   "x": 2720,
+   "y": 0,
+   "title": "PS2 · Versión local de un producto de la Sede (Ross 308 en España y Portugal)"
+  },
+  "PrdDisCatalogo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "proddis",
+   "x": 0,
+   "y": 0,
+   "title": "PD0 · Catálogo del distribuidor: de las marcas, subidos y propios"
   }
  },
  "createdOnFiles": {
@@ -3605,42 +3677,6 @@
    "x": 0,
    "y": -300
   },
-  "altaprodT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaprod",
-   "text": "A · DSM-Firmenich · fabricante con distribuidores — la ficha completa (P1–P9) está en «Productos (módulo)»",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "altaprodT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaprod",
-   "text": "B · Big Dutchman · Sede con sucursales — la Sede crea la ficha base; cada sucursal la activa y la adapta",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "altaprodT3": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaprod",
-   "text": "C · Zucami · fabricante con equipo comercial — cada solicitud va al comercial de la zona",
-   "w": 240,
-   "x": 0,
-   "y": 2380
-  },
-  "altaprodT4": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaprod",
-   "text": "D · NewFarms · distribuidor multimarca — ficha oficial de la marca + versión local",
-   "w": 240,
-   "x": 0,
-   "y": 3720
-  },
   "altaservT1": {
    "kind": "title1",
    "maxW": 4000,
@@ -3685,6 +3721,51 @@
    "w": 240,
    "x": 0,
    "y": 5060
+  },
+  "prodfabT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodfab",
+   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. La ficha base (General → Documentación) es la de «Productos (módulo)», P4–P8.",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodcomT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodcom",
+   "text": "Productos de un fabricante con equipo comercial — Zucami. Cada solicitud va al comercial de la zona por Agroolink.",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodsedeT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodsede",
+   "text": "Productos de una Sede con sucursales — Big Dutchman. La Sede crea la ficha base; cada sucursal la activa y la adapta.",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodsucT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodsuc",
+   "text": "Productos de una sucursal — Aviagen Ibérica. Activa los de la Sede, los adapta a su país y puede crear productos locales.",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "proddisT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "proddis",
+   "text": "Productos de un distribuidor — NewFarms. Fichas oficiales de las marcas, productos subidos por él y propios. Elegir y subir: ver «010_Alta · Distribuidor multimarca».",
+   "w": 240,
+   "x": 0,
+   "y": -300
   }
  },
  "order": [
@@ -4059,7 +4140,16 @@
   "SrvCom.dc.html",
   "SrvDis.dc.html",
   "SrvAsvLista.dc.html",
-  "SrvAsvEditor.dc.html"
+  "SrvAsvEditor.dc.html",
+  "PrdFabCatalogo.dc.html",
+  "PrdFabAcuerdos.dc.html",
+  "PrdComCatalogo.dc.html",
+  "PrdSucCatalogo.dc.html",
+  "PrdSucActivacion.dc.html",
+  "PrdAviCatalogo.dc.html",
+  "PrdAviNuevo.dc.html",
+  "PrdAviLocal.dc.html",
+  "PrdDisCatalogo.dc.html"
  ],
  "pages": [
   {
@@ -4139,8 +4229,24 @@
    "name": "010_Alta · Distribuidor multimarca"
   },
   {
-   "id": "altaprod",
-   "name": "011_Alta productos · 4 escenarios"
+   "id": "prodfab",
+   "name": "011a_Productos · Fabricante con distribuidores (DSM-Firmenich)"
+  },
+  {
+   "id": "prodcom",
+   "name": "011b_Productos · Fabricante con comerciales (Zucami)"
+  },
+  {
+   "id": "prodsede",
+   "name": "011c_Productos · Sede con sucursales (Big Dutchman)"
+  },
+  {
+   "id": "prodsuc",
+   "name": "011d_Productos · Sucursal de un grupo (Aviagen Ibérica)"
+  },
+  {
+   "id": "proddis",
+   "name": "011e_Productos · Distribuidor multimarca (NewFarms)"
   },
   {
    "id": "altaserv",
