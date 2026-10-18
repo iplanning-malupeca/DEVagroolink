@@ -603,7 +603,7 @@ V.identidad = () => {
     '<div class="field full"><label for="i-larga">Descripción completa <span class="hint">· opcional, pestaña «Información»</span></label><textarea class="ta" id="i-larga" rows="4" data-i="larga">' + esc(I.larga) + '</textarea></div>' +
     '<div class="field full"><span class="flabel">Objetivos <span class="hint">· de la lista de tendencias; ayudan a salir en recomendaciones</span></span><div class="chips">' + M.objetivos.map(o => chip(o, I.objetivos.indexOf(o) > -1, 'obj|' + o, 'sm')).join('') + '</div></div>' +
     ((I.sku || UI.verSku) ? '<div class="field"><label for="i-sku">Tu código de producto <span class="hint">· opcional</span></label><input class="inp" id="i-sku" data-i="sku" value="' + esc(I.sku) + '" placeholder="Por ejemplo: PRB-25"><span class="ex">Solo si quieres actualizar tu catálogo por Excel. No lo ve el comprador.</span></div>' : '<div class="field"><button type="button" class="link" style="align-self:flex-start" data-act="versku">+ Añadir tu código de producto (opcional)</button></div>') +
-    '<div class="field full"><span class="flabel">Idiomas de la ficha</span><div class="chips">' + ['Español', 'Inglés', 'Portugués', 'Francés', 'Italiano', 'Alemán'].map(o => chip(o, I.idiomas.indexOf(o) > -1, 'idi|' + o, 'sm')).join('') + '</div></div></div>';
+    '<div class="field full"><span class="flabel">Idiomas de la ficha</span><div class="chips">' + ['Español', 'Inglés', 'Portugués', 'Francés'].map(o => chip(o, I.idiomas.indexOf(o) > -1, 'idi|' + o, 'sm')).join('') + '</div></div></div>';
 };
 V.tecnicos = () => {
   const t = tpl(S.cat);
