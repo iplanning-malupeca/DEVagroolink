@@ -156,6 +156,26 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .it.exc{background:var(--err-bg);color:var(--err);border-color:transparent;text-decoration:line-through}
 .it.half{border-style:dashed;border-color:var(--accent);color:var(--accent)}
 .queda{font-size:12.5px;color:var(--muted);line-height:1.45}.queda strong{color:var(--fg);font-weight:600}
+.mgrid{display:grid;grid-template-columns:270px minmax(0,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+@media (max-width:760px){.mgrid{grid-template-columns:minmax(0,1fr)}.mright{border-left:0!important;border-top:1px solid var(--line)}}
+.mcol{display:flex;flex-direction:column;gap:10px;padding:14px;min-width:0}
+.mright{border-left:1px solid var(--line);gap:8px}
+.sl{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.mres{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;padding:4px}
+.mres button{border:0;background:none;text-align:left;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:13px;display:flex;gap:6px;align-items:baseline}
+.mres button:hover{background:var(--soft)}
+.ment{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.ment.open{border-color:var(--soft2);background:var(--surface2);border-radius:12px 12px 0 0}
+.mtags{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px}
+.mtags strong{font-weight:600}
+.tg{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.tg.g{background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.tg.r{background:var(--err-bg);color:var(--err)}
+.tg.b{background:var(--soft);color:var(--accent)}
+.tg.w{background:var(--warn-bg);color:var(--warn)}
+.ico{width:30px;height:30px;border:0;background:none;border-radius:8px;cursor:pointer;color:var(--muted);font-size:15px}
+.ico:hover{background:var(--soft)}
+.mbody{border:1px solid var(--soft2);border-top:0;border-radius:0 0 12px 12px;padding:12px 14px;margin-top:-8px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -228,7 +248,7 @@ const conRegistro = () => regla('registro_por_pais');
 
 // ---------- estado ----------
 function nuevo() {
-  return { paso: 'especies', cat: null, especies: {}, mercados: { modo: 'todo', sel: [] }, registros: {},
+  return { paso: 'especies', cat: null, especies: {}, mercados: { entradas: [] }, registros: {},
     ident: { nombre: '', marca: '', fabricante: 'Tu empresa', sku: '', corta: '', larga: '', objetivos: [], idiomas: ['Español'] },
     tec: {}, propios: [], enf: [], enfOtra: '', catOtro: '', variantes: [{}], docs: {}, imgs: 0, estado: 'Borrador', visto: {}, guardado: null };
 }
@@ -238,24 +258,24 @@ try { S = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { S = nul
 const enfId = n => { const e = M.enfermedades.find(x => x.nombre === n); return e ? e.id : null; };
 const DEMOS = {
   vitamina: () => Object.assign(nuevo(), { paso: 'especies', cat: 'C06-03-02', especies: { Avicultura: { modo: 'excluir', sel: ['Perdices', 'Aves ornamentales'] }, Porcino: { modo: 'todas', sel: [] } },
-    mercados: { modo: 'solo', sel: ['Europa', 'México'] }, registros: { 'España': { n: 'ES-AD-0000 (ejemplo)', e: 'Registrado' }, 'Portugal': { n: 'PT-AD-0000 (ejemplo)', e: 'Registrado' }, 'México': { n: '', e: 'En trámite' } },
+    mercados: { entradas: [{ id: 'Europa', modo: 'excluir', sel: ['Rusia'] }, { id: 'México', modo: 'toda', sel: [] }], abierta: 'Europa' }, registros: { 'España': { n: 'ES-AD-0000 (ejemplo)', e: 'Registrado' }, 'Portugal': { n: 'PT-AD-0000 (ejemplo)', e: 'Registrado' }, 'México': { n: '', e: 'En trámite' } },
     ident: { nombre: 'Hy-D®', marca: 'Hy-D', fabricante: 'DSM-Firmenich', sku: 'HYD-25', corta: 'Fuente de 25-OH-D3 que se absorbe mejor que la vitamina D3 convencional. Refuerza el hueso, la cáscara y el rendimiento en aves y porcino.', larga: '', objetivos: ['Rendimiento', 'Bienestar animal'], idiomas: ['Español', 'Inglés', 'Portugués'] },
     tec: { vitamina: '25-OH-D3', concentracion: { v: '12500', u: 'mg/kg' }, estabilidad: 'Estable en granulación (ejemplo)', dosis: { v: '200', u: 'g/t' } },
     variantes: [{ c0: 'Saco', c1: '25 kg', c2: '40' }, { c0: 'Big bag', c1: '500 kg', c2: '2' }], docs: { ficha_tecnica: { n: 'HyD_ficha_tecnica_ES.pdf', i: 'Español', v: 'Público' }, sds: { n: 'HyD_SDS_ES.pdf', i: 'Español', v: 'Usuarios registrados' } }, imgs: 2,
     visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
   ventilador: () => Object.assign(nuevo(), { paso: 'tecnicos', cat: 'C02-03-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Reproductoras'] }, Porcino: { modo: 'solo', sel: ['Cebo / Engorde'] } },
-    mercados: { modo: 'excluir', sel: ['Asia-Pacífico', 'África', 'Rusia', 'Irán'] },
+    mercados: { entradas: [{ id: 'Todo el mundo', modo: 'excluir', sel: ['Asia-Pacífico', 'África', 'Rusia', 'Irán'] }], abierta: 'Todo el mundo' },
     ident: { nombre: 'Ventilador de túnel 50"', marca: 'Big Dutchman', fabricante: 'Big Dutchman', sku: 'BD-VT50', corta: 'Ventilador de alto caudal para ventilación de túnel en naves de broilers y cerdos, con persiana automática.', larga: '', objetivos: ['Bienestar animal', 'Eficiencia operativa'], idiomas: ['Español', 'Inglés', 'Alemán'] },
     tec: { caudal_aire: { v: '38000', u: 'm³/h' }, potencia: { v: '1,1', u: 'kW' }, consumo: { v: '0,9', u: 'kWh' }, temperatura: { min: '-10', max: '45' }, ruido: { v: '68', u: 'dB' } },
     variantes: [{ c0: '50" · 1,1 kW', c1: '38.000 m³/h', c2: 'Con persiana' }, { c0: '54" · 1,5 kW', c1: '44.000 m³/h', c2: 'Con persiana' }], docs: { manual: { n: 'Manual_VT50_ES.pdf', i: 'Español', v: 'Público' } }, imgs: 1,
     visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
   vacuna: () => Object.assign(nuevo(), { paso: 'enfermedad', cat: 'C08-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Gallinas ponedoras', 'Reproductoras'] } },
-    mercados: { modo: 'solo', sel: ['España', 'Portugal'] }, registros: { 'España': { n: '0000 ESP (ejemplo)', e: 'Registrado' }, 'Portugal': { n: '', e: 'En trámite' } },
+    mercados: { entradas: [{ id: 'España', modo: 'toda', sel: [] }, { id: 'Portugal', modo: 'toda', sel: [] }] }, registros: { 'España': { n: '0000 ESP (ejemplo)', e: 'Registrado' }, 'Portugal': { n: '', e: 'En trámite' } },
     ident: { nombre: 'AviVac ND (ejemplo)', marca: 'AviVac', fabricante: 'Laboratorio de ejemplo', sku: 'AVND-1000', corta: 'Vacuna viva frente a la enfermedad de Newcastle para pollitos de un día y refuerzos.', larga: '', objetivos: ['Reducción antibióticos'], idiomas: ['Español', 'Portugués'] },
     tec: { antigenos: 'Virus de la enfermedad de Newcastle', cepa: 'La Sota', tecnologia: 'Viva atenuada', edad: 'Día 1 · refuerzo día 21', dosis: '1 dosis por ave', via: ['Spray', 'Agua de bebida', 'Ocular'], conservacion_temp: { min: '2', max: '8' } },
     enf: [enfId('Newcastle')].filter(Boolean), variantes: [{ c0: 'Vial', c1: '1.000 dosis', c2: '' }, { c0: 'Vial', c1: '2.500 dosis', c2: '' }], imgs: 1,
     visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1, tecnicos: 1 } }),
-  laboratorio: () => Object.assign(nuevo(), { paso: 'revision', cat: 'C11-03-01', especies: { Avicultura: { modo: 'todas', sel: [] }, Porcino: { modo: 'todas', sel: [] }, Bovino: { modo: 'todas', sel: [] } }, mercados: { modo: 'solo', sel: ['España', 'Portugal', 'Francia'] },
+  laboratorio: () => Object.assign(nuevo(), { paso: 'revision', cat: 'C11-03-01', especies: { Avicultura: { modo: 'todas', sel: [] }, Porcino: { modo: 'todas', sel: [] }, Bovino: { modo: 'todas', sel: [] } }, mercados: { entradas: [{ id: 'España', modo: 'toda', sel: [] }, { id: 'Portugal', modo: 'toda', sel: [] }, { id: 'Francia', modo: 'toda', sel: [] }] },
     ident: { nombre: 'Análisis de micotoxinas en pienso', marca: '', fabricante: 'DSM-Firmenich', sku: 'LAB-MYC', corta: 'Analizamos pienso y materias primas frente a las principales micotoxinas y te enviamos el informe con recomendaciones.', larga: '', objetivos: ['Seguridad alimentaria', 'Salud intestinal'], idiomas: ['Español', 'Inglés'] },
     tec: { tipo_analisis: 'Micotoxinas (multitoxina)', matriz: ['Pienso', 'Materias primas'], metodo: 'LC-MS/MS', acreditacion: true, plazo: { v: '5', u: 'días' } }, imgs: 1,
     docs: { ficha_tecnica: { n: 'Analisis_micotoxinas.pdf', i: 'Español', v: 'Público' } },
@@ -263,7 +283,8 @@ const DEMOS = {
 };
 if (!S) S = DEMOS.vitamina();
 // especies: { Avicultura: { modo: 'todas' | 'excluir' | 'solo', sel: [...] } } (los borradores antiguos guardaban una lista)
-if (!S.mercados) S.mercados = (S.paises && S.paises.length) ? { modo: 'solo', sel: S.paises.slice() } : { modo: 'todo', sel: [] };
+if (!S.mercados) S.mercados = { entradas: (S.paises || []).map(p => ({ id: p, modo: 'toda', sel: [] })) };
+if (!S.mercados.entradas) { const m = S.mercados; S.mercados = { entradas: m.modo === 'solo' ? m.sel.map(x => ({ id: x, modo: 'toda', sel: [] })) : [{ id: 'Todo el mundo', modo: m.modo === 'excluir' ? 'excluir' : 'toda', sel: m.modo === 'excluir' ? m.sel : [] }] }; }
 delete S.paises;
 Object.keys(S.especies || {}).forEach(k => { const v = S.especies[k]; if (Array.isArray(v)) S.especies[k] = v.length ? { modo: 'solo', sel: v } : { modo: 'todas', sel: [] }; });
 
@@ -288,32 +309,28 @@ function toast(t) {
 // ---------- mercados: regiones (continentes) y países; todo · excluir · solo algunas ----------
 const REG = M.regiones, REG_DE = {};
 Object.keys(REG).forEach(r => REG[r].forEach(p => REG_DE[p] = r));
-function paisesSel() {
-  const m = S.mercados, en = x => m.sel.indexOf(x) > -1;
-  if (m.modo === 'todo') return M.paises.slice();
-  if (m.modo === 'excluir') return M.paises.filter(p => !en(p) && !en(REG_DE[p]));
-  return M.paises.filter(p => en(p) || en(REG_DE[p]));
+const MUNDO = 'Todo el mundo';
+// cada entrada es una región del mundo, «Todo el mundo» o un país; dentro, «toda», «excluir» o «solo algunas»
+function paisesEntrada(e) {
+  const en = x => e.sel.indexOf(x) > -1;
+  if (e.id === MUNDO) { if (e.modo === 'toda') return M.paises.slice(); if (e.modo === 'excluir') return M.paises.filter(p => !en(p) && !en(REG_DE[p])); return M.paises.filter(p => en(p) || en(REG_DE[p])); }
+  if (REG[e.id]) { if (e.modo === 'toda') return REG[e.id].slice(); if (e.modo === 'excluir') return REG[e.id].filter(p => !en(p)); return REG[e.id].filter(en); }
+  return [e.id];
 }
-function estadoMerc(x) {
-  const m = S.mercados, esReg = !!REG[x], en = y => m.sel.indexOf(y) > -1;
-  if (m.modo === 'todo') return 'inc';
-  if (m.modo === 'excluir') { if (en(x) || (!esReg && en(REG_DE[x]))) return 'exc'; return esReg && REG[x].some(en) ? 'half' : 'inc'; }
-  if (en(x) || (!esReg && en(REG_DE[x]))) return 'inc';
+function paisesSel() { const set = {}; S.mercados.entradas.forEach(e => paisesEntrada(e).forEach(p => set[p] = 1)); return M.paises.filter(p => set[p]); }
+function estadoMerc(e, x) {
+  const en = y => e.sel.indexOf(y) > -1, esReg = !!REG[x], porReg = !esReg && e.id === MUNDO && en(REG_DE[x]);
+  if (e.modo === 'toda') return 'inc';
+  if (e.modo === 'excluir') { if (en(x) || porReg) return 'exc'; return esReg && REG[x].some(en) ? 'half' : 'inc'; }
+  if (en(x) || porReg) return 'inc';
   return esReg && REG[x].some(en) ? 'half' : 'off';
 }
-function mercTxt() {
-  const m = S.mercados;
-  if (m.modo === 'todo' || (m.modo === 'excluir' && !m.sel.length)) return 'Todo el mundo';
-  const ps = paisesSel(), set = m.modo === 'excluir' ? M.paises.filter(p => ps.indexOf(p) < 0) : ps, partes = [];
-  Object.keys(REG).forEach(r => {
-    const c = REG[r].filter(p => set.indexOf(p) > -1); if (!c.length) return;
-    if (c.length === REG[r].length) partes.push(r);
-    else if (c.length > 2 && REG[r].length - c.length <= 2) partes.push(r + ' salvo ' + REG[r].filter(p => c.indexOf(p) < 0).join(' y '));
-    else partes.push(c.join(', '));
-  });
-  if (m.modo === 'excluir') return 'Todo el mundo salvo ' + partes.join(' · ');
-  return partes.length ? 'Solo ' + partes.join(' · ') : 'Sin elegir';
+function entradaTxt(e) {
+  if (!REG[e.id] && e.id !== MUNDO) return e.id;
+  if (e.modo === 'toda' || !e.sel.length) return e.id + (e.modo === 'solo' ? ' (sin marcar)' : '');
+  return e.id + (e.modo === 'excluir' ? ' salvo ' : ': solo ') + e.sel.join(', ');
 }
+const mercTxt = () => S.mercados.entradas.length ? S.mercados.entradas.map(entradaTxt).join(' · ') : 'Sin elegir';
 // ---------- pasos ----------
 const pasos = () => M.pasos.filter(p => p.id === 'enfermedad' ? (S.cat && enfVis()) : p.id === 'variantes' ? !(S.cat && arqKey(S.cat) === 'servicio') : true);
 const pasoActual = () => pasos().find(p => p.id === S.paso) || pasos()[0];
@@ -343,6 +360,7 @@ function faltas() {
   if (!Object.keys(S.especies).length) f.push({ p: 'especies', t: 'Elige al menos una especie' });
   Object.keys(S.especies).forEach(k => { const v = S.especies[k]; if (v.modo === 'solo' && !v.sel.length) f.push({ p: 'especies', t: k + ': marca qué incluye o elige «Todas»' }); });
   if (!paisesSel().length) f.push({ p: 'mercados', t: 'Elige al menos un país o región' });
+  S.mercados.entradas.forEach(e => { if (e.modo === 'solo' && !e.sel.length) f.push({ p: 'mercados', t: e.id + ': marca qué incluye o elige «Toda»' }); });
   if (!S.ident.nombre.trim()) f.push({ p: 'identidad', t: 'Falta el nombre comercial' });
   if (!S.ident.sku.trim()) f.push({ p: 'identidad', t: 'Falta la referencia' });
   if (!S.ident.corta.trim()) f.push({ p: 'identidad', t: 'Falta la descripción corta' });
@@ -491,18 +509,37 @@ V.especies = () => {
 };
 V.mercados = () => {
   const m = S.mercados, ps = paisesSel();
-  const item = (x, cls) => { const st = estadoMerc(x); return '<button type="button" class="it ' + cls + ' ' + st + '" aria-pressed="' + (st === 'inc') + '" data-act="merc|' + esc(x) + '">' + (st === 'inc' ? '✓ ' : '') + esc(x) + (st === 'exc' ? ' <span class="hint" style="color:inherit">· excluido</span>' : st === 'half' ? ' <span class="hint" style="color:inherit">· a medias</span>' : '') + '</button>'; };
-  let h = '<div class="esppanel"><div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><strong style="font-size:15px">Dónde se vende</strong><span class="hint">' + ps.length + ' países · regiones como atajo</span></div>' +
-    '<div class="seg" role="radiogroup" aria-label="Cómo eliges los mercados">' + Object.keys(M.mercados_modos).map(k => '<button type="button" class="' + (m.modo === k ? 'on' : '') + '" data-act="mercmodo|' + k + '">' + esc(M.mercados_modos[k]) + '</button>').join('') + '</div>' +
-    '<div class="field"><label for="paisq">Buscar país</label><input class="inp" id="paisq" type="search" placeholder="Escribe un país para marcarlo o excluirlo" value="' + esc(UI.paisq) + '" autocomplete="off"></div>';
+  const tg = (t, k) => '<span class="tg ' + k + '">' + esc(t) + '</span>';
   const pq = UI.paisq.trim().toLowerCase();
-  if (pq) { const r = M.paises.filter(p => p.toLowerCase().indexOf(pq) > -1).slice(0, 8);
-    h += '<div class="prodrow">' + (r.length ? r.map(p => item(p, 'sub')).join('') : '<span class="hint">Sin resultados</span>') + '</div>'; }
-  h += '<div style="display:flex;flex-direction:column;gap:8px">' + Object.keys(REG).map(r => '<div class="prodrow">' + item(r, '') + REG[r].map(p => item(p, 'sub')).join('') + '</div>').join('') + '</div>' +
-    '<span class="hint">' + (m.modo === 'todo' ? '<strong>Todo el mundo:</strong> se vende en todos los países, también los que se añadan. Un clic en una región o un país pasa a «Excluir».'
-      : m.modo === 'excluir' ? '<strong>Excluir:</strong> todo viene marcado. Un clic en una región la excluye entera; en un país, solo ese país. Otro clic lo vuelve a incluir.'
-      : '<strong>Solo algunas:</strong> todo viene vacío. Un clic en una región la marca entera; en un país, solo ese país.') + '</span></div>';
-  h += '<div class="queda"><strong>Quedará:</strong> ' + esc(mercTxt()) + ' · ' + ps.length + ' países</div>';
+  const opciones = [MUNDO].concat(Object.keys(REG), M.paises);
+  const res = pq ? opciones.filter(x => x.toLowerCase().indexOf(pq) > -1).slice(0, 6) : [];
+  let izq = '<span class="sl">1 · Buscar y añadir</span>' +
+    '<input class="inp" id="paisq" type="search" placeholder="Región del mundo o país" value="' + esc(UI.paisq) + '" autocomplete="off" aria-label="Buscar región o país">' +
+    (pq ? '<div class="mres">' + (res.length ? res.map(x => '<button type="button" data-act="madd|' + esc(x) + '"><strong>' + esc(x) + '</strong><span class="hint">· ' + (x === MUNDO ? M.paises.length + ' países' : REG[x] ? 'región · ' + REG[x].length + ' países' : 'país · ' + REG_DE[x]) + '</span></button>').join('') : '<span class="hint" style="padding:6px">Sin resultados</span>') + '</div>' : '') +
+    '<span class="sl">Atajos</span><div class="chips">' + [MUNDO].concat(Object.keys(REG)).map(x => '<button type="button" class="chip sm" data-act="madd|' + esc(x) + '">' + esc(x) + '</button>').join('') + '</div>' +
+    '<div class="note" style="margin-top:auto"><span><strong>Niveles</strong><br>1 Región del mundo · 2 País · 3 Región del país · 4 Provincia (solo zonas de comerciales y distribuidores). Elegir un nivel incluye todo lo de debajo.</span></div>';
+  let der = '<span class="sl">2 · Dónde vendes · inclusiones y exclusiones</span>';
+  if (!m.entradas.length) der += '<div class="note">Busca o usa un atajo para añadir dónde vendes.</div>';
+  m.entradas.forEach((e, i) => {
+    const abierta = m.abierta === e.id, hijos = e.id === MUNDO ? Object.keys(REG) : (REG[e.id] || []);
+    let tags = '';
+    if (!hijos.length) { const otra = m.entradas.find(o => o !== e && paisesEntrada(o).indexOf(e.id) > -1); tags = tg('todo el país', 'g') + (otra ? '<span class="hint">ya incluido en ' + esc(otra.id) + '</span>' : ''); }
+    else if (e.modo === 'toda') tags = tg((e.id === MUNDO ? 'todo · ' : 'toda · ') + paisesEntrada(e).length + ' países', 'g');
+    else if (e.modo === 'excluir') tags = e.sel.length ? tg('excluye', 'r') + e.sel.map(x => tg(x, 'r')).join('') : tg('toda · ' + paisesEntrada(e).length + ' países', 'g');
+    else tags = e.sel.length ? tg('solo ' + (e.sel.length <= 3 ? e.sel.join(', ') : paisesEntrada(e).length + ' países'), 'b') : tg('marca qué incluye', 'w');
+    der += '<div class="ment' + (abierta ? ' open' : '') + '"><span class="mtags"><strong>' + esc(e.id) + '</strong>' + tags + '</span>' +
+      (hijos.length ? '<button type="button" class="ico" aria-expanded="' + abierta + '" aria-label="' + (abierta ? 'Cerrar ' : 'Abrir ') + esc(e.id) + '" data-act="mabrir|' + esc(e.id) + '">' + (abierta ? '▴' : '▾') + '</button>' : '') +
+      '<button type="button" class="ico" aria-label="Quitar ' + esc(e.id) + '" data-act="mquitar|' + i + '">×</button></div>';
+    if (abierta && hijos.length) {
+      const item = (x, cls) => { const st = estadoMerc(e, x); return '<button type="button" class="it ' + cls + ' ' + st + '" aria-pressed="' + (st === 'inc') + '" data-act="mit|' + i + '|' + esc(x) + '">' + (st === 'inc' ? '✓ ' : '') + esc(x) + (st === 'half' ? ' <span class="hint" style="color:inherit">· a medias</span>' : '') + '</button>'; };
+      der += '<div class="mbody"><div class="seg" role="radiogroup">' + [['toda', e.id === MUNDO ? 'Todo el mundo' : 'Toda la región'], ['excluir', 'Excluir'], ['solo', 'Solo algunas']].map(o => '<button type="button" class="' + (e.modo === o[0] ? 'on' : '') + '" data-act="mmodo|' + i + '|' + o[0] + '">' + o[1] + '</button>').join('') + '</div>' +
+        (e.id === MUNDO ? '<div style="display:flex;flex-direction:column;gap:6px">' + Object.keys(REG).map(r => '<div class="prodrow">' + item(r, '') + REG[r].map(p => item(p, 'sub')).join('') + '</div>').join('') + '</div>'
+          : '<div class="prodrow">' + REG[e.id].map(p => item(p, 'sub')).join('') + '</div>') +
+        '<span class="hint">' + (e.modo === 'toda' ? 'Incluye todo, también lo que se añada. Un clic en una región o un país pasa a «Excluir».' : e.modo === 'excluir' ? 'Todo viene marcado; un clic excluye (en rojo). Si alguien de ahí busca, no te verá como proveedor de su zona.' : 'Todo viene vacío; un clic marca lo que sí.') + '</span></div>';
+    }
+  });
+  let h = '<div class="mgrid"><div class="mcol">' + izq + '</div><div class="mcol mright">' + der + '</div></div>' +
+    '<div class="queda"><strong>Vendes en ' + ps.length + ' países.</strong> ' + esc(mercTxt()) + '</div>';
   if (conRegistro() && ps.length) {
     h += '<div class="field"><span class="flabel">Registro o autorización por país <span class="hint">· tu categoría lo pide; lo que no tengas queda «En trámite»</span></span><div class="tblwrap" style="max-height:330px;overflow:auto"><table class="tbl"><thead><tr><th>País</th><th>Nº de registro</th><th>Estado</th></tr></thead><tbody>' +
       ps.map(p => { const r = S.registros[p] || { n: '', e: 'En trámite' };
@@ -669,7 +706,7 @@ function exportJSON() {
   Object.keys(S.tec).forEach(k => { if (lleno(S.tec[k])) attrs['attr.' + t + '.' + k] = S.tec[k]; });
   return { category_id: S.cat, category_other: esOtro(S.cat) ? S.catOtro : undefined, template: t, archetype: arqKey(S.cat), name: S.ident.nombre, brand: S.ident.marca, sku: S.ident.sku, manufacturer: S.ident.fabricante,
     short_description: S.ident.corta, description: S.ident.larga, objectives: S.ident.objetivos, languages: S.ident.idiomas,
-    species: Object.keys(S.especies).map(k => k === 'Otra especie' ? { species: 'other', text: S.especies[k].texto } : ({ species: k, mode: S.especies[k].modo, items: S.especies[k].sel, other_production: S.especies[k].otra })), markets_rule: S.mercados, markets: paisesSel().map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
+    species: Object.keys(S.especies).map(k => k === 'Otra especie' ? { species: 'other', text: S.especies[k].texto } : ({ species: k, mode: S.especies[k].modo, items: S.especies[k].sel, other_production: S.especies[k].otra })), markets_rule: S.mercados.entradas, markets: paisesSel().map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
     attributes: attrs, custom_attributes: S.propios.filter(p => p.n), target_diseases: S.enf, target_disease_other: S.enfOtra || undefined, variants: S.variantes.filter(v => Object.values(v).some(Boolean)),
     images: S.imgs, documents: Object.keys(S.docs).map(k => Object.assign({ type: k }, S.docs[k])), status: S.estado === 'En revisión' ? 'in_review' : 'draft' };
 }
@@ -696,11 +733,14 @@ document.addEventListener('click', ev => {
       if (v.modo === 'todas') { v.modo = 'excluir'; v.sel = [y]; }
       else { toggle(v.sel, y); if (y.indexOf(' › ') < 0) v.sel = v.sel.filter(q => q.indexOf(y + ' › ') !== 0); }
       break; }
-    case 'mercmodo': S.mercados = { modo: x, sel: [] }; break;
-    case 'merc': { const m = S.mercados;
-      if (m.modo === 'todo') { m.modo = 'excluir'; m.sel = [x]; }
-      else if (!REG[x] && m.sel.indexOf(REG_DE[x]) > -1) { const r = REG_DE[x]; m.sel = m.sel.filter(y => y !== r).concat(REG[r].filter(p => p !== x)); }
-      else { toggle(m.sel, x); if (REG[x]) m.sel = m.sel.filter(p => REG_DE[p] !== x); }
+    case 'madd': { const m = S.mercados; if (!m.entradas.some(e => e.id === x)) m.entradas.push({ id: x, modo: 'toda', sel: [] }); m.abierta = (x === MUNDO || REG[x]) ? x : m.abierta; UI.paisq = ''; break; }
+    case 'mquitar': { const m = S.mercados, e = m.entradas.splice(+x, 1)[0]; if (e && m.abierta === e.id) m.abierta = null; break; }
+    case 'mabrir': S.mercados.abierta = S.mercados.abierta === x ? null : x; break;
+    case 'mmodo': { const e = S.mercados.entradas[+x]; e.modo = y; e.sel = []; break; }
+    case 'mit': { const e = S.mercados.entradas[+x];
+      if (e.modo === 'toda') { e.modo = 'excluir'; e.sel = [y]; }
+      else if (e.id === MUNDO && !REG[y] && e.sel.indexOf(REG_DE[y]) > -1) { const r = REG_DE[y]; e.sel = e.sel.filter(q => q !== r).concat(REG[r].filter(p => p !== y)); }
+      else { toggle(e.sel, y); if (REG[y]) e.sel = e.sel.filter(p => REG_DE[p] !== y); }
       break; }
     case 'obj': toggle(S.ident.objetivos, x); break;
     case 'idi': toggle(S.ident.idiomas, x); break;
