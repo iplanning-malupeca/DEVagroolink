@@ -3116,6 +3116,62 @@
    "x": 1360,
    "y": 1340,
    "title": "PC1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»"
+  },
+  "MsgFabDistribuidor.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "x": 0,
+   "y": 4020,
+   "title": "DM1 · Mensajes (bandeja común): hilo fabricante ↔ distribuidor ligado al acuerdo, con los avisos de cambios por escrito"
+  },
+  "MsgComSolicitud.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "x": 0,
+   "y": 2680,
+   "title": "KM1 · Mensajes: la solicitud de un comprador es un hilo; la atiende el comercial de la zona y la Dirección comercial lo ve"
+  },
+  "MsgComInterno.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "x": 1360,
+   "y": 2680,
+   "title": "KM2 · Hilo interno Dirección comercial ↔ comercial: reasignaciones, avisos de 48 h y cambios de zona por escrito"
+  },
+  "MsgSedeSucursal.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 0,
+   "y": 2680,
+   "title": "SM1 · Hilo Sede ↔ sucursal: activaciones, versiones locales y cambios de la ficha base quedan por escrito"
+  },
+  "MsgSucursalSede.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursal",
+   "x": 0,
+   "y": 1340,
+   "title": "U2 · Mensajes de la sucursal: su hilo con la Sede guarda el alta, los avisos y lo que pide la Sede"
+  },
+  "MsgDisFabricante.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "x": 0,
+   "y": 2680,
+   "title": "XM1 · Hilo distribuidor ↔ fabricante: la validación de la marca y sus motivos quedan por escrito"
+  },
+  "MsgDisSolicitud.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "x": 1360,
+   "y": 2680,
+   "title": "XM2 · Solicitud atendida por una delegación: el comprador escribe a NewFarms y queda todo en el hilo"
   }
  },
  "createdOnFiles": {
@@ -3786,6 +3842,51 @@
    "x": 0,
    "y": 1040,
    "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a comerciales o solicitudes, eliges si avisar"
+  },
+  "msg_fabdist": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "fabdist",
+   "w": 240,
+   "x": 0,
+   "y": 3720,
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
+  },
+  "msg_comerciales": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "comerciales",
+   "w": 240,
+   "x": 0,
+   "y": 2380,
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
+  },
+  "msg_sucursales": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "sucursales",
+   "w": 240,
+   "x": 0,
+   "y": 2380,
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
+  },
+  "msg_sucursal": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "sucursal",
+   "w": 240,
+   "x": 0,
+   "y": 1040,
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
+  },
+  "msg_distmulti": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "distmulti",
+   "w": 240,
+   "x": 0,
+   "y": 2380,
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
   }
  },
  "order": [
@@ -4177,7 +4278,14 @@
   "PrdFabCatalogoMenu.dc.html",
   "PrdFabCatalogoCopia.dc.html",
   "PrdComCatalogoMenu.dc.html",
-  "PrdComCatalogoCopia.dc.html"
+  "PrdComCatalogoCopia.dc.html",
+  "MsgFabDistribuidor.dc.html",
+  "MsgComSolicitud.dc.html",
+  "MsgComInterno.dc.html",
+  "MsgSedeSucursal.dc.html",
+  "MsgSucursalSede.dc.html",
+  "MsgDisFabricante.dc.html",
+  "MsgDisSolicitud.dc.html"
  ],
  "pages": [
   {
