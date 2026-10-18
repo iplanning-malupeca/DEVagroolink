@@ -2364,6 +2364,14 @@
    "h": 1150,
    "page": "busqueda",
    "title": "X4 · Resultado: filtros activos por dimensión, «Y además» entre ellas y «Coincide con» en cada tarjeta"
+  },
+  "BusIntranetBuscar.dc.html": {
+   "x": 0,
+   "y": 9900,
+   "w": 1280,
+   "h": 900,
+   "page": "busqueda",
+   "title": "I1 · Intranet: al pulsar «Buscar» se abre la búsqueda combinada vacía"
   }
  },
  "createdOnFiles": {
@@ -2947,6 +2955,14 @@
    "maxW": 7920,
    "page": "busqueda",
    "text": "Caso complejo: veterinario con broilers y lechones · 2 especies × 5 categorías en 3 niveles × 2 enfermedades compartidas"
+  },
+  "busT7": {
+   "kind": "title1",
+   "x": 0,
+   "y": 9780,
+   "maxW": 2400,
+   "page": "busqueda",
+   "text": "Buscar desde la intranet: botón «Buscar» en la cabecera → búsqueda nueva"
   }
  },
  "order": [
@@ -3244,7 +3260,8 @@
   "BusXEspecie.dc.html",
   "BusXCategoria.dc.html",
   "BusXEnfermedad.dc.html",
-  "BusXResultados.dc.html"
+  "BusXResultados.dc.html",
+  "BusIntranetBuscar.dc.html"
  ],
  "pages": [
   {

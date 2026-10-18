@@ -23,6 +23,7 @@ body{margin:0}
 <div style="width: {{ ancho }}; height: 68px; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
   <header style="height: 68px; box-sizing: border-box; padding: 0 {{ pad }}; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
     <a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex; align-items: center; margin-right: 8px;"><img src="/_blob/efc8ad652a1438d78ae82dbb2369ee52" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
+    <sc-if value="{{ conBarra }}" hint-placeholder-val="{{ false }}">
     <div style="flex: 1; min-width: 0; display: flex; justify-content: center; margin: 0 12px;">
       <div role="search" aria-label="Búsqueda combinada: qué buscas, especie, categoría y enfermedad" style="width: {{ barW }}; max-width: 100%; height: 48px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; border: 1px solid #DCE3DE; background: #FFFFFF; box-shadow: 0 2px 8px rgba(16, 40, 28, 0.08); cursor: pointer;">
         <sc-for list="{{ segs }}" as="s" hint-placeholder-count="4">
@@ -34,7 +35,12 @@ body{margin:0}
         <button type="button" aria-label="Buscar" style="width: 36px; height: 36px; margin-right: 6px; border-radius: 50%; background: {{ acento }}; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
       </div>
     </div>
-    <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
+    </sc-if>
+    <sc-if value="{{ conIcono }}" hint-placeholder-val="{{ true }}">
+      <span style="flex: 1;"></span>
+      <a href="BusIntranetBuscar.dc.html" role="button" aria-label="Nueva búsqueda" style="display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px 0 14px; border-radius: 999px; border: 1.5px solid {{ acento }}; color: {{ acento }}; background: #FFFFFF; font: 600 14px 'Poppins', sans-serif; text-decoration: none; margin-right: 6px; white-space: nowrap;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a>
+    </sc-if>
+    <div style="display: flex; align-items: center; gap: 6px; flex: none;">
       <button type="button" class="hb" aria-label="Mensajes, 3 sin leer" title="Mensajes"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><span style="position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; box-sizing: border-box; padding: 0 5px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>
       <button type="button" class="hb" aria-label="Historial" title="Historial"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8M3 3v5h5M12 7v5l3 2"/></svg></button>
       <button type="button" aria-expanded="{{ abierto }}" aria-label="Tus espacios y cuenta" style="display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 4px 6px 4px 4px; border-radius: 999px; font: 500 15px 'Poppins', sans-serif; color: #17231D; cursor: pointer; margin-left: 8px;">
@@ -67,7 +73,7 @@ body{margin:0}
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"icono"},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
 class Component extends DCLogic {
   renderVals() {
     const v = this.props.variante ?? 'personal';
@@ -113,10 +119,12 @@ class Component extends DCLogic {
     const segs = vals.map((x, i) => ({ icono: x[0], texto: x[1] || x[2], tinta: x[1] ? '#17231D' : '#56615B', peso: x[1] ? '600' : '400', flex: x[3], sep: i ? '1px solid #DCE3DE' : '0' }));
     return Object.assign({}, d, {
       segs: segs,
+      conBarra: (this.props.buscador ?? 'icono') === 'barra',
+      conIcono: (this.props.buscador ?? 'icono') !== 'barra',
       barW: (w >= 1700 ? 760 : (w >= 1400 ? 680 : 600)) + 'px',
       segPad: corto ? '12px' : '16px',
       segFont: corto ? '13px' : '13.5px',
-      personaVisible: corto ? '' : (this.props.persona ?? 'Samuel E.'),
+      personaVisible: (corto && this.props.buscador === 'barra') ? '' : (this.props.persona ?? 'Samuel E.'),
       persona: this.props.persona ?? 'Samuel E.',
       ancho: (this.props.ancho ?? 1280) + 'px',
       consulta: this.props.consulta ?? '',
