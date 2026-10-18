@@ -2825,9 +2825,9 @@
    "w": 1280,
    "h": 940,
    "page": "sucursales",
-   "x": 0,
+   "x": 4080,
    "y": 2680,
-   "title": "S3 · Tipo de empresa cuando eres sucursal: Aviagen Ibérica SL (hereda de la Sede)"
+   "title": "S3 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país"
   },
   "EmpConsultor.dc.html": {
    "w": 1280,
@@ -2836,6 +2836,30 @@
    "x": 1200,
    "y": 2400,
    "title": "E5b · Tipo de empresa de un consultor: Asvet Veterinaris (servicios + expertos)"
+  },
+  "SucAltaCRM.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 0,
+   "y": 2680,
+   "title": "S3a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen"
+  },
+  "SucAltaVerifica.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 1360,
+   "y": 2680,
+   "title": "S3b · Confirma tu email de empresa"
+  },
+  "SucAltaSede.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 2720,
+   "y": 2680,
+   "title": "S3c · Aviso a la Sede: confirma al administrador de la sucursal (copia al superadmin)"
   }
  },
  "createdOnFiles": {
@@ -3445,9 +3469,9 @@
   },
   "sucT3": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 5400,
    "page": "sucursales",
-   "text": "3 · Si tu empresa es la sucursal — Aviagen Ibérica SL, sucursal de Aviagen",
+   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c la Sede confirma · S3 tipo de empresa",
    "w": 240,
    "x": 0,
    "y": 2380
@@ -3815,6 +3839,9 @@
   "BusXResultados.dc.html",
   "BusIntranetBuscar.dc.html",
   "SelTelefono.dc.html",
+  "SucAltaCRM.dc.html",
+  "SucAltaVerifica.dc.html",
+  "SucAltaSede.dc.html",
   "SucEsSucursal.dc.html",
   "EmpConsultor.dc.html"
  ],
