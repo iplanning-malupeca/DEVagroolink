@@ -738,6 +738,38 @@
    "x": 2720,
    "y": 0
   },
+  "DisCRM.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X0a · ¿Cuál es tu empresa? Datos del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "DisCabecera.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "XC · Cabecera (paso 2): marca y sociedades del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
+  "DisCabeceraAdmin.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "XC-s · Cabecera vista por el superadmin",
+   "w": 1280,
+   "x": 2720,
+   "y": 1340
+  },
+  "DisCabeceraObjetivos.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "XC-b · Elegir objetivos y tendencias (hasta 5)",
+   "w": 1280,
+   "x": 1360,
+   "y": 1340
+  },
   "DisContacto.dc.html": {
    "h": 940,
    "page": "distmulti",
@@ -786,6 +818,62 @@
    "x": 6800,
    "y": 0
   },
+  "DisTipoEspecies.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "w": 1280,
+   "x": 9520,
+   "y": 0
+  },
+  "DisTipoEspeciesSolo.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b-3 · Especies · modo «Solo algunas»",
+   "w": 1280,
+   "x": 10880,
+   "y": 0
+  },
+  "DisTipoEspeciesTodas.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1b-1 · Especies · modo «Todas» (por defecto)",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "DisTipoMercados.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1d · Editar mercados: inclusiones y «Excluir»",
+   "w": 1280,
+   "x": 13600,
+   "y": 0
+  },
+  "DisTipoRama.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1c · Editar rama de negocio",
+   "w": 1280,
+   "x": 12240,
+   "y": 0
+  },
+  "DisTipoVacio.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "DisVerifica.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X0b · Confirma tu email de empresa (código de 6 cifras)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
   "EmpAvisoAdmin.dc.html": {
    "h": 940,
    "page": "altaempresa",
@@ -793,6 +881,14 @@
    "w": 1280,
    "x": 4160,
    "y": 0
+  },
+  "EmpConsultor.dc.html": {
+   "h": 940,
+   "page": "altaempresa",
+   "title": "E5b · Tipo de empresa de un consultor: Asvet Veterinaris (servicios + expertos)",
+   "w": 1280,
+   "x": 1200,
+   "y": 2400
   },
   "EmpE1Empezar.dc.html": {
    "h": 760,
@@ -2413,6 +2509,30 @@
    "x": 1360,
    "y": 0
   },
+  "SucAltaCRM.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "S3a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "SucAltaSede.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "S3c · Aviso a la Sede y al superadmin: la sucursal entra directamente",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "SucAltaVerifica.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "S3b · Confirma tu email de empresa",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
   "SucAvisoAdmin.dc.html": {
    "h": 940,
    "page": "sucursales",
@@ -2428,6 +2548,46 @@
    "w": 1280,
    "x": 5440,
    "y": 1340
+  },
+  "SucCRM.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S0a · ¿Cuál es tu empresa? Datos del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "SucCabecera.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "SC · Cabecera (paso 2): marca y sociedades del CRM",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
+  "SucCabeceraAdmin.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "SC-s · Cabecera vista por el superadmin",
+   "w": 1280,
+   "x": 2720,
+   "y": 1340
+  },
+  "SucCabeceraObjetivos.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "SC-b · Elegir objetivos y tendencias (hasta 5)",
+   "w": 1280,
+   "x": 1360,
+   "y": 1340
+  },
+  "SucEsSucursal.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "S3 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
   },
   "SucPagina.dc.html": {
    "h": 940,
@@ -2475,6 +2635,62 @@
    "title": "S1 · Tipo de empresa: sucursales o filiales · con estatuto",
    "w": 1280,
    "x": 4080,
+   "y": 0
+  },
+  "SucTipoEspecies.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "SucTipoEspeciesSolo.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1b-3 · Especies · modo «Solo algunas»",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "SucTipoEspeciesTodas.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1b-1 · Especies · modo «Todas» (por defecto)",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "SucTipoMercados.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1d · Editar mercados: inclusiones y «Excluir»",
+   "w": 1280,
+   "x": 10880,
+   "y": 0
+  },
+  "SucTipoRama.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1c · Editar rama de negocio",
+   "w": 1280,
+   "x": 9520,
+   "y": 0
+  },
+  "SucTipoVacio.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "SucVerifica.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S0b · Confirma tu email de empresa (código de 6 cifras)",
+   "w": 1280,
+   "x": 1360,
    "y": 0
   },
   "TabCompartir.dc.html": {
@@ -2645,221 +2861,125 @@
    "x": 5440,
    "y": 0
   },
-  "SucCRM.dc.html": {
+  "PrdFabNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursales",
-   "title": "S0a · ¿Cuál es tu empresa? Datos del CRM",
-   "x": 0,
-   "y": 0
-  },
-  "SucVerifica.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S0b · Confirma tu email de empresa (código de 6 cifras)",
-   "x": 1360,
-   "y": 0
-  },
-  "SucTipoVacio.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1a · Tipo de empresa: aún sin especies, rama ni mercados",
-   "x": 2720,
-   "y": 0
-  },
-  "SucTipoEspeciesTodas.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1b-1 · Especies · modo «Todas» (por defecto)",
-   "x": 5440,
-   "y": 0
-  },
-  "SucTipoEspecies.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1b · Especies · modo «Excluir»: desmarcar = excluida",
-   "x": 6800,
-   "y": 0
-  },
-  "SucTipoEspeciesSolo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1b-3 · Especies · modo «Solo algunas»",
-   "x": 8160,
-   "y": 0
-  },
-  "SucTipoRama.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1c · Editar rama de negocio",
-   "x": 9520,
-   "y": 0
-  },
-  "SucTipoMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "S1d · Editar mercados: inclusiones y «Excluir»",
-   "x": 10880,
-   "y": 0
-  },
-  "SucCabecera.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "SC · Cabecera (paso 2): marca y sociedades del CRM",
-   "x": 0,
-   "y": 1340
-  },
-  "SucCabeceraObjetivos.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "SC-b · Elegir objetivos y tendencias (hasta 5)",
-   "x": 1360,
-   "y": 1340
-  },
-  "SucCabeceraAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "title": "SC-s · Cabecera vista por el superadmin",
-   "x": 2720,
-   "y": 1340
-  },
-  "DisCRM.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X0a · ¿Cuál es tu empresa? Datos del CRM",
-   "x": 0,
-   "y": 0
-  },
-  "DisVerifica.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X0b · Confirma tu email de empresa (código de 6 cifras)",
-   "x": 1360,
-   "y": 0
-  },
-  "DisTipoVacio.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1a · Tipo de empresa: aún sin especies, rama ni mercados",
-   "x": 5440,
-   "y": 0
-  },
-  "DisTipoEspeciesTodas.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1b-1 · Especies · modo «Todas» (por defecto)",
-   "x": 8160,
-   "y": 0
-  },
-  "DisTipoEspecies.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1b · Especies · modo «Excluir»: desmarcar = excluida",
-   "x": 9520,
-   "y": 0
-  },
-  "DisTipoEspeciesSolo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1b-3 · Especies · modo «Solo algunas»",
-   "x": 10880,
-   "y": 0
-  },
-  "DisTipoRama.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1c · Editar rama de negocio",
-   "x": 12240,
-   "y": 0
-  },
-  "DisTipoMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "X1d · Editar mercados: inclusiones y «Excluir»",
-   "x": 13600,
-   "y": 0
-  },
-  "DisCabecera.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "XC · Cabecera (paso 2): marca y sociedades del CRM",
-   "x": 0,
-   "y": 1340
-  },
-  "DisCabeceraObjetivos.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "XC-b · Elegir objetivos y tendencias (hasta 5)",
-   "x": 1360,
-   "y": 1340
-  },
-  "DisCabeceraAdmin.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "title": "XC-s · Cabecera vista por el superadmin",
-   "x": 2720,
-   "y": 1340
-  },
-  "SucEsSucursal.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursal",
-   "x": 4080,
-   "y": 0,
-   "title": "S3 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país"
-  },
-  "EmpConsultor.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaempresa",
-   "x": 1200,
-   "y": 2400,
-   "title": "E5b · Tipo de empresa de un consultor: Asvet Veterinaris (servicios + expertos)"
-  },
-  "SucAltaCRM.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursal",
+   "page": "altaprod",
    "x": 0,
    "y": 0,
-   "title": "S3a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen"
+   "title": "PA1 · Añadir un producto: crear, importar o duplicar · lo venden tus distribuidores"
   },
-  "SucAltaVerifica.dc.html": {
+  "PrdFabMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursal",
+   "page": "altaprod",
    "x": 1360,
    "y": 0,
-   "title": "S3b · Confirma tu email de empresa"
+   "title": "PA2 · Mercados y dónde comprar: distribuidores por país y zona (= P9)"
   },
-  "SucAltaSede.dc.html": {
+  "PrdSucNuevo.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursal",
+   "page": "altaprod",
+   "x": 0,
+   "y": 1340,
+   "title": "PB1 · Añadir un producto: la Sede crea la ficha base"
+  },
+  "PrdSucMercados.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
+   "x": 1360,
+   "y": 1340,
+   "title": "PB2 · Mercados y quién lo vende: cada país, su sucursal"
+  },
+  "PrdSucLocal.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
    "x": 2720,
+   "y": 1340,
+   "title": "PB3 · La sucursal (Big Dutchman México) activa el producto y añade su versión local"
+  },
+  "PrdComNuevo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
+   "x": 0,
+   "y": 2680,
+   "title": "PC1 · Añadir un producto: lo atiende el comercial de la zona"
+  },
+  "PrdComMercados.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
+   "x": 1360,
+   "y": 2680,
+   "title": "PC2 · Mercados y quién lo atiende: el comercial de cada zona"
+  },
+  "PrdDisNuevo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
+   "x": 0,
+   "y": 4020,
+   "title": "PD1 · Añadir un producto: de una marca, de una marca que no está o propio"
+  },
+  "PrdDisLocal.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaprod",
+   "x": 1360,
+   "y": 4020,
+   "title": "PD2 · Versión local de un producto de la marca (= P10, con NewFarms)"
+  },
+  "SrvFab.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 0,
    "y": 0,
-   "title": "S3c · Aviso a la Sede y al superadmin: la sucursal entra directamente"
+   "title": "SA · Fabricante con distribuidores: lo prestas tú, tus distribuidores o los dos"
+  },
+  "SrvSuc.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 0,
+   "y": 1340,
+   "title": "SB · Sede con sucursales: lo presta cada sucursal en sus países"
+  },
+  "SrvCom.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 0,
+   "y": 2680,
+   "title": "SC · Fabricante con comerciales: llega al comercial de la zona"
+  },
+  "SrvDis.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 0,
+   "y": 4020,
+   "title": "SD · Distribuidor: lo presta tu equipo desde cada delegación"
+  },
+  "SrvAsvLista.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 0,
+   "y": 5360,
+   "title": "SE1 · Empresa solo de servicios (Asvet Veterinaris): sus servicios son su catálogo"
+  },
+  "SrvAsvEditor.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaserv",
+   "x": 1360,
+   "y": 5360,
+   "title": "SE2 · Editar un servicio: qué expertos lo prestan y a quién llega"
   }
  },
  "createdOnFiles": {
@@ -3009,7 +3129,7 @@
   },
   "disT1": {
    "kind": "title1",
-   "maxW": 14800,
+   "maxW": 8000,
    "page": "distmulti",
    "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X1b/X1c avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
    "w": 240,
@@ -3018,12 +3138,21 @@
   },
   "disT2": {
    "kind": "title1",
-   "maxW": 12160,
+   "maxW": 8000,
    "page": "distmulti",
    "text": "2 · La ficha: cabecera (XC) con objetivos y vista superadmin · marcas, productos, validación de la marca, contacto y publicación",
    "w": 240,
    "x": 0,
    "y": 1040
+  },
+  "empConsultor": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaempresa",
+   "text": "Otro ejemplo · consultoría: Asvet Veterinaris",
+   "w": 240,
+   "x": 1200,
+   "y": 2100
   },
   "empDesdeAlta": {
    "kind": "title1",
@@ -3424,7 +3553,7 @@
   },
   "sucT1": {
    "kind": "title1",
-   "maxW": 12160,
+   "maxW": 8000,
    "page": "sucursales",
    "text": "Alta · Fabricante con sucursales (Big Dutchman, Sede global) — 1 · Empresa y tipo: S0a datos del CRM · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
    "w": 240,
@@ -3433,12 +3562,21 @@
   },
   "sucT2": {
    "kind": "title1",
-   "maxW": 13500,
+   "maxW": 8000,
    "page": "sucursales",
    "text": "2 · La ficha: cabecera (SC) con objetivos y vista superadmin · red de sucursales (S2) con sus avisos · países, permisos, página de la sucursal y publicación",
    "w": 240,
    "x": 0,
    "y": 1040
+  },
+  "sucT3": {
+   "kind": "title1",
+   "maxW": 5400,
+   "page": "sucursal",
+   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c aviso a la Sede y al superadmin · S3 tipo de empresa",
+   "w": 240,
+   "x": 0,
+   "y": -300
   },
   "tabT1": {
    "kind": "title1",
@@ -3467,23 +3605,86 @@
    "x": 0,
    "y": -300
   },
-  "sucT3": {
+  "altaprodT1": {
    "kind": "title1",
-   "maxW": 5400,
-   "page": "sucursal",
-   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c aviso a la Sede y al superadmin · S3 tipo de empresa",
+   "maxW": 4000,
+   "page": "altaprod",
+   "text": "A · DSM-Firmenich · fabricante con distribuidores — la ficha completa (P1–P9) está en «Productos (módulo)»",
    "w": 240,
    "x": 0,
    "y": -300
   },
-  "empConsultor": {
+  "altaprodT2": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "altaempresa",
-   "text": "Otro ejemplo · consultoría: Asvet Veterinaris",
+   "page": "altaprod",
+   "text": "B · Big Dutchman · Sede con sucursales — la Sede crea la ficha base; cada sucursal la activa y la adapta",
    "w": 240,
-   "x": 1200,
-   "y": 2100
+   "x": 0,
+   "y": 1040
+  },
+  "altaprodT3": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaprod",
+   "text": "C · Zucami · fabricante con equipo comercial — cada solicitud va al comercial de la zona",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "altaprodT4": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaprod",
+   "text": "D · NewFarms · distribuidor multimarca — ficha oficial de la marca + versión local",
+   "w": 240,
+   "x": 0,
+   "y": 3720
+  },
+  "altaservT1": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "A · DSM-Firmenich · fabricante con distribuidores",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "altaservT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "B · Big Dutchman · Sede con sucursales",
+   "w": 240,
+   "x": 0,
+   "y": 1040
+  },
+  "altaservT3": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "C · Zucami · fabricante con equipo comercial",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "altaservT4": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "D · NewFarms · distribuidor multimarca",
+   "w": 240,
+   "x": 0,
+   "y": 3720
+  },
+  "altaservT5": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "E · Asvet Veterinaris · empresa solo de servicios (con expertos)",
+   "w": 240,
+   "x": 0,
+   "y": 5060
   }
  },
  "order": [
@@ -3843,7 +4044,22 @@
   "SucAltaVerifica.dc.html",
   "SucAltaSede.dc.html",
   "SucEsSucursal.dc.html",
-  "EmpConsultor.dc.html"
+  "EmpConsultor.dc.html",
+  "PrdFabNuevo.dc.html",
+  "PrdFabMercados.dc.html",
+  "PrdSucNuevo.dc.html",
+  "PrdSucMercados.dc.html",
+  "PrdSucLocal.dc.html",
+  "PrdComNuevo.dc.html",
+  "PrdComMercados.dc.html",
+  "PrdDisNuevo.dc.html",
+  "PrdDisLocal.dc.html",
+  "SrvFab.dc.html",
+  "SrvSuc.dc.html",
+  "SrvCom.dc.html",
+  "SrvDis.dc.html",
+  "SrvAsvLista.dc.html",
+  "SrvAsvEditor.dc.html"
  ],
  "pages": [
   {
@@ -3912,15 +4128,23 @@
   },
   {
    "id": "sucursales",
-   "name": "Alta · Fabricante con sucursales"
+   "name": "008_Alta · Fabricante con sucursales"
   },
   {
    "id": "sucursal",
-   "name": "Alta · Sucursal de un grupo (Aviagen Ibérica)"
+   "name": "009_Alta · Sucursal de un grupo (Aviagen Ibérica)"
   },
   {
    "id": "distmulti",
-   "name": "Alta · Distribuidor multimarca"
+   "name": "010_Alta · Distribuidor multimarca"
+  },
+  {
+   "id": "altaprod",
+   "name": "011_Alta productos · 4 escenarios"
+  },
+  {
+   "id": "altaserv",
+   "name": "012_Alta servicios · 5 escenarios"
   },
   {
    "id": "productos",
