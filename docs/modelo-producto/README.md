@@ -13,6 +13,24 @@
 - **Enfermedades:** filtro independiente (`enfermedades`), filtrado por las especies elegidas.
 - **Aviso:** los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.
 
+## Condicionantes (18/10/2026)
+
+Fuente: `condicionantes.xlsx`, la misma revisión ya sin nada «Pendiente»: todo está aprobado salvo «edad» en animales y líneas genéticas. Lo aplicado en `producto.json` y en el prototipo:
+- **Campos aprobados que faltaban** (ninguno obligatorio):
+  - genética: sanidad declarada; en material reproductivo, raza o línea, fertilidad declarada, estadio, método de conservación, edad del lote, incubabilidad y controles sanitarios; en tecnologías, compatibilidad por especie y consumibles;
+  - equipamiento: tipo de alojamiento, plazas y necesidades de instalación; distribución en comederos; presión, superficie atendida, control y dimensiones en clima; licencias en sensores; rendimiento y requisitos ambientales en purines;
+  - fábricas: potencia en mezcladoras, caudal en dosificadoras, proceso en granulación y automatización en control;
+  - incubación: especie compatible en sexado;
+  - nutrición: «objetivos funcionales» en todas las plantillas (no es indicación ni enfermedad diana);
+  - fármacos: indicación y tiempo de espera en todas las plantillas;
+  - bioseguridad: objetivo de uso, aplicación y seguridad en plagas, finalidad y caudal en agua, consumibles en barreras;
+  - alimentos: ingredientes, minerales, vitaminas, ración, finalidad e inclusión; compatibilidades en premezclas; composición, origen y trazabilidad en materias primas;
+  - servicios: servicio prestado, ámbito geográfico, modalidad, entregables, plazos y metodología en todos; formato de resultados en laboratorios, tipo de instalación y fases en ingeniería, especialidad y requisitos regulatorios en veterinaria, idiomas en formación. Las certificaciones del servicio van en el paso «Certificaciones y sellos».
+- **Nombres** ajustados al Excel (por ejemplo: orientación productiva, tipo de vacuna, organismo objetivo, modo de empleo y restricciones).
+- **Eliminado:** «edad» en animales (las variantes genéticas usan «Estado») y «evidencia» en soluciones frente a endotoxinas (igual que en adsorbentes y biotransformadores).
+- **Campo condicionado por otro campo** (`visible_when.campo`): en material reproductivo, motilidad y fertilidad solo con semen; estadio y método de conservación con embriones u ovocitos; edad del lote e incubabilidad con huevo fértil; controles sanitarios con material acuícola.
+- **Condiciones por especie y reglas de interfaz:** todas aprobadas; ya estaban en el prototipo (fases sugeridas sin preselección, «no depende de especie», enfermedades filtradas por especie, nombres cortos sin códigos, datos ocultos que no se publican).
+
 ## Revisión de campos y certificaciones (18/10/2026)
 
 Fuente: `revision_campos_certificaciones.xlsx` (hojas: campos condicionales con decisión, condiciones por especie, reglas de interfaz, catálogo de certificaciones, producción ecológica y sellos).

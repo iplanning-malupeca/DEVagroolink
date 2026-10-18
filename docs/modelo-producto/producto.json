@@ -288,7 +288,7 @@
     "eje": "Formato",
     "campos": [
      "Formato",
-     "Edad o estado",
+     "Estado",
      "Unidades"
     ]
    },
@@ -401,7 +401,7 @@
     },
     {
      "id": "finalidad",
-     "label": "Finalidad",
+     "label": "Orientación productiva",
      "type": "enum",
      "options": [
       "Carne",
@@ -433,7 +433,7 @@
     },
     {
      "id": "ganancia_diaria",
-     "label": "Ganancia media diaria",
+     "label": "Ganancia diaria / crecimiento",
      "type": "integer",
      "unit": "g/d",
      "filterable": true,
@@ -451,7 +451,7 @@
     },
     {
      "id": "genealogia",
-     "label": "Genealogía",
+     "label": "Genealogía y evaluaciones genéticas",
      "type": "file"
     },
     {
@@ -538,7 +538,7 @@
     },
     {
      "id": "indice_leche",
-     "label": "Índice de leche",
+     "label": "Índices de leche o carne",
      "type": "text",
      "decisivo": true,
      "visible_when": {
@@ -564,6 +564,11 @@
        "Caprino"
       ]
      }
+    },
+    {
+     "id": "sanidad",
+     "label": "Parámetros de rendimiento y sanidad declarada",
+     "type": "textarea"
     }
    ]
   },
@@ -595,7 +600,7 @@
     },
     {
      "id": "dosis_envase",
-     "label": "Dosis por envase",
+     "label": "Tipo de dosis",
      "type": "integer",
      "unit": "dosis",
      "comparable": true
@@ -616,11 +621,18 @@
      "min": 0,
      "max": 100,
      "comparable": true,
-     "decisivo": true
+     "decisivo": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Semen"
+       ]
+      }
+     }
     },
     {
      "id": "conservacion_temp",
-     "label": "Temperatura de conservación",
+     "label": "Conservación",
      "type": "decimal",
      "unit": "°C",
      "decisivo": true
@@ -635,9 +647,111 @@
     },
     {
      "id": "lote",
-     "label": "Lote",
+     "label": "Lote y trazabilidad",
      "type": "text",
      "help": "Se puede indicar por variante"
+    },
+    {
+     "id": "raza_linea",
+     "label": "Raza o línea",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "fertilidad",
+     "label": "Fertilidad declarada",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Semen"
+       ]
+      }
+     }
+    },
+    {
+     "id": "estadio",
+     "label": "Estadio",
+     "type": "text",
+     "decisivo": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Embrión",
+        "Ovocito",
+        "Material genético acuícola"
+       ]
+      }
+     }
+    },
+    {
+     "id": "metodo_conservacion",
+     "label": "Método de conservación",
+     "type": "enum",
+     "options": [
+      "Congelado",
+      "Vitrificado",
+      "Fresco",
+      "Refrigerado"
+     ],
+     "filterable": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Embrión",
+        "Ovocito"
+       ]
+      }
+     }
+    },
+    {
+     "id": "edad_lote",
+     "label": "Edad del lote",
+     "type": "integer",
+     "unit": "semanas",
+     "comparable": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Huevo fértil"
+       ]
+      }
+     }
+    },
+    {
+     "id": "incubabilidad",
+     "label": "Incubabilidad declarada",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Huevo fértil"
+       ]
+      }
+     }
+    },
+    {
+     "id": "controles_sanitarios",
+     "label": "Rendimiento y controles sanitarios",
+     "type": "textarea",
+     "visible_when": {
+      "campo": {
+       "tipo_material": [
+        "Material genético acuícola"
+       ]
+      }
+     }
     }
    ]
   },
@@ -650,7 +764,7 @@
    "atributos": [
     {
      "id": "tecnica",
-     "label": "Técnica",
+     "label": "Método",
      "type": "text",
      "filterable": true,
      "decisivo": true
@@ -677,7 +791,7 @@
     },
     {
      "id": "equipamiento",
-     "label": "Equipamiento necesario",
+     "label": "Requisitos de instalación",
      "type": "textarea"
     },
     {
@@ -685,6 +799,16 @@
      "label": "Entregables",
      "type": "textarea",
      "decisivo": true
+    },
+    {
+     "id": "compatibilidad",
+     "label": "Compatibilidad por especie",
+     "type": "text"
+    },
+    {
+     "id": "consumibles",
+     "label": "Consumibles",
+     "type": "text"
     }
    ]
   },
@@ -721,7 +845,7 @@
     },
     {
      "id": "material",
-     "label": "Material principal",
+     "label": "Materiales",
      "type": "enum",
      "options": [
       "Acero galvanizado",
@@ -757,6 +881,25 @@
      "type": "integer",
      "unit": "años",
      "comparable": true
+    },
+    {
+     "id": "alojamiento",
+     "label": "Tipo de alojamiento",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "plazas",
+     "label": "Plazas",
+     "type": "integer",
+     "unit": "plazas",
+     "comparable": true
+    },
+    {
+     "id": "instalacion",
+     "label": "Necesidades de instalación",
+     "type": "textarea"
     }
    ]
   },
@@ -866,6 +1009,33 @@
      "type": "decimal",
      "unit": "m³/h por W",
      "comparable": true
+    },
+    {
+     "id": "presion",
+     "label": "Presión",
+     "type": "decimal",
+     "unit": "Pa",
+     "comparable": true
+    },
+    {
+     "id": "superficie_atendida",
+     "label": "Superficie o capacidad atendida",
+     "type": "decimal",
+     "unit": "m²",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "control",
+     "label": "Control",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "dimensiones",
+     "label": "Dimensiones",
+     "type": "object",
+     "unit": "mm"
     }
    ],
    "nota": "Regla: se muestran caudal y potencia; nunca dosis ni ingredientes."
@@ -878,7 +1048,7 @@
    "atributos": [
     {
      "id": "variables",
-     "label": "Variables que mide o controla",
+     "label": "Parámetros medidos",
      "type": "multiselect",
      "options": [
       "Temperatura",
@@ -931,7 +1101,7 @@
     },
     {
      "id": "alarmas",
-     "label": "Alarmas",
+     "label": "Alertas",
      "type": "multiselect",
      "options": [
       "App",
@@ -943,9 +1113,14 @@
     },
     {
      "id": "compatibilidad",
-     "label": "Compatible con",
+     "label": "Integración",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "licencias",
+     "label": "Licencias",
+     "type": "text"
     }
    ]
   },
@@ -1038,6 +1213,21 @@
     {
      "id": "efluentes",
      "label": "Efluentes",
+     "type": "textarea"
+    },
+    {
+     "id": "rendimiento",
+     "label": "Rendimiento",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "requisitos_amb",
+     "label": "Requisitos ambientales",
      "type": "textarea"
     }
    ]
@@ -1220,6 +1410,14 @@
      "comparable": true,
      "decisivo": true,
      "help": "Cuanto más bajo, más homogénea"
+    },
+    {
+     "id": "potencia",
+     "label": "Potencia",
+     "type": "decimal",
+     "unit": "kW",
+     "comparable": true,
+     "decisivo": true
     }
    ]
   },
@@ -1249,9 +1447,17 @@
     },
     {
      "id": "ingredientes",
-     "label": "Ingredientes simultáneos",
+     "label": "Compatibilidad de ingredientes",
      "type": "integer",
      "unit": "ingredientes",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "caudal",
+     "label": "Caudal",
+     "type": "decimal",
+     "unit": "kg/h",
      "comparable": true,
      "decisivo": true
     }
@@ -1293,6 +1499,18 @@
      "type": "decimal",
      "unit": "kW",
      "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "proceso",
+     "label": "Proceso",
+     "type": "enum",
+     "options": [
+      "Granulación",
+      "Extrusión",
+      "Expansión"
+     ],
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1450,6 +1668,18 @@
       "OPC UA"
      ],
      "filterable": true
+    },
+    {
+     "id": "automatizacion",
+     "label": "Automatización",
+     "type": "enum",
+     "options": [
+      "Manual",
+      "Semiautomático",
+      "Automático"
+     ],
+     "filterable": true,
+     "decisivo": true
     }
    ]
   },
@@ -1611,7 +1841,7 @@
    "atributos": [
     {
      "id": "metodo",
-     "label": "Método",
+     "label": "Tecnología",
      "type": "enum",
      "options": [
       "Óptico",
@@ -1639,6 +1869,12 @@
      "unit": "huevos/h",
      "comparable": true,
      "decisivo": true
+    },
+    {
+     "id": "especie_compatible",
+     "label": "Especie compatible",
+     "type": "text",
+     "filterable": true
     }
    ]
   },
@@ -2081,6 +2317,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2092,7 +2334,7 @@
    "atributos": [
     {
      "id": "ingrediente",
-     "label": "Ingrediente",
+     "label": "Ingrediente activo",
      "type": "text",
      "filterable": true,
      "decisivo": true
@@ -2155,6 +2397,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2229,6 +2477,12 @@
       "Directo al animal"
      ],
      "filterable": true
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2316,6 +2570,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2423,6 +2683,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2515,6 +2781,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2596,6 +2868,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2609,12 +2887,6 @@
      "id": "mecanismo",
      "label": "Mecanismo",
      "type": "text",
-     "decisivo": true
-    },
-    {
-     "id": "evidencia",
-     "label": "Evidencia",
-     "type": "textarea",
      "decisivo": true
     },
     {
@@ -2663,6 +2935,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2744,6 +3022,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2848,6 +3132,12 @@
       "Directo al animal"
      ],
      "filterable": true
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -2948,6 +3238,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3023,6 +3319,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3097,6 +3399,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3182,6 +3490,12 @@
       "Directo al animal"
      ],
      "filterable": true
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3258,6 +3572,12 @@
       "Directo al animal"
      ],
      "filterable": true
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3326,6 +3646,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3427,6 +3753,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3502,6 +3834,12 @@
      "id": "estabilidad",
      "label": "Estabilidad",
      "type": "text"
+    },
+    {
+     "id": "objetivos_funcionales",
+     "label": "Objetivos funcionales",
+     "type": "text",
+     "help": "No es una indicación terapéutica ni una enfermedad diana"
     }
    ]
   },
@@ -3593,7 +3931,7 @@
     },
     {
      "id": "espera",
-     "label": "Tiempo de espera",
+     "label": "Pauta y tiempo de espera",
      "type": "object",
      "unit": "días",
      "comparable": true,
@@ -3695,7 +4033,7 @@
     },
     {
      "id": "espera",
-     "label": "Tiempo de espera",
+     "label": "Pauta y tiempo de espera",
      "type": "object",
      "unit": "días",
      "comparable": true,
@@ -3731,6 +4069,13 @@
      ],
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "indicacion",
+     "label": "Indicación",
+     "type": "textarea",
+     "help": "La de la ficha oficial; no se sugiere",
+     "por_especie": true
     }
    ]
   },
@@ -3787,7 +4132,7 @@
     },
     {
      "id": "espera",
-     "label": "Tiempo de espera",
+     "label": "Pauta y tiempo de espera",
      "type": "object",
      "unit": "días",
      "comparable": true,
@@ -3917,6 +4262,13 @@
      "label": "Duración del tratamiento",
      "type": "text",
      "por_especie": true
+    },
+    {
+     "id": "espera",
+     "label": "Tiempo de espera",
+     "type": "text",
+     "help": "Por especie y producto (carne, leche, huevos)",
+     "por_especie": true
     }
    ]
   },
@@ -4015,6 +4367,13 @@
      "id": "restricciones",
      "label": "Restricciones",
      "type": "textarea"
+    },
+    {
+     "id": "espera",
+     "label": "Tiempo de espera",
+     "type": "text",
+     "help": "Por especie y producto (carne, leche, huevos)",
+     "por_especie": true
     }
    ]
   },
@@ -4096,6 +4455,20 @@
      "label": "Duración del tratamiento",
      "type": "text",
      "por_especie": true
+    },
+    {
+     "id": "indicacion",
+     "label": "Indicación",
+     "type": "textarea",
+     "help": "La de la ficha oficial; no se sugiere",
+     "por_especie": true
+    },
+    {
+     "id": "espera",
+     "label": "Tiempo de espera",
+     "type": "text",
+     "help": "Por especie y producto (carne, leche, huevos)",
+     "por_especie": true
     }
    ]
   },
@@ -4175,6 +4548,20 @@
      "id": "duracion",
      "label": "Duración del tratamiento",
      "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "indicacion",
+     "label": "Indicación",
+     "type": "textarea",
+     "help": "La de la ficha oficial; no se sugiere",
+     "por_especie": true
+    },
+    {
+     "id": "espera",
+     "label": "Tiempo de espera",
+     "type": "text",
+     "help": "Por especie y producto (carne, leche, huevos)",
      "por_especie": true
     }
    ]
@@ -4256,6 +4643,20 @@
      "id": "duracion",
      "label": "Duración del tratamiento",
      "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "indicacion",
+     "label": "Indicación",
+     "type": "textarea",
+     "help": "La de la ficha oficial; no se sugiere",
+     "por_especie": true
+    },
+    {
+     "id": "espera",
+     "label": "Tiempo de espera",
+     "type": "text",
+     "help": "Por especie y producto (carne, leche, huevos)",
      "por_especie": true
     }
    ]
@@ -4358,7 +4759,7 @@
    "atributos": [
     {
      "id": "antigenos",
-     "label": "Antígenos",
+     "label": "Antígenos / cepas",
      "type": "textarea",
      "decisivo": true
     },
@@ -4371,7 +4772,7 @@
     },
     {
      "id": "tecnologia",
-     "label": "Tecnología",
+     "label": "Tipo de vacuna",
      "type": "enum",
      "options": [
       "Viva atenuada",
@@ -4458,7 +4859,7 @@
    "atributos": [
     {
      "id": "antigenos",
-     "label": "Antígenos",
+     "label": "Antígenos / cepas",
      "type": "textarea",
      "decisivo": true
     },
@@ -4471,7 +4872,7 @@
     },
     {
      "id": "tecnologia",
-     "label": "Tecnología",
+     "label": "Tipo de vacuna",
      "type": "enum",
      "options": [
       "Viva atenuada",
@@ -4532,7 +4933,7 @@
     },
     {
      "id": "aislamiento",
-     "label": "Aislamiento",
+     "label": "Patógeno objetivo",
      "type": "text"
     },
     {
@@ -4542,7 +4943,7 @@
     },
     {
      "id": "ambito",
-     "label": "Ámbito autorizado",
+     "label": "Alcance y condiciones de disponibilidad",
      "type": "textarea"
     },
     {
@@ -4578,7 +4979,7 @@
    "atributos": [
     {
      "id": "antigenos",
-     "label": "Antígenos",
+     "label": "Antígenos / cepas",
      "type": "textarea",
      "decisivo": true
     },
@@ -4591,7 +4992,7 @@
     },
     {
      "id": "tecnologia",
-     "label": "Tecnología",
+     "label": "Tipo de vacuna",
      "type": "enum",
      "options": [
       "Viva atenuada",
@@ -4722,7 +5123,7 @@
    "atributos": [
     {
      "id": "activo",
-     "label": "Activo",
+     "label": "Sustancia(s) activa(s)",
      "type": "text",
      "filterable": true,
      "decisivo": true
@@ -4772,7 +5173,7 @@
     },
     {
      "id": "superficie",
-     "label": "Superficies",
+     "label": "Superficie o matriz",
      "type": "multiselect",
      "options": [
       "Naves",
@@ -4793,6 +5194,12 @@
      "id": "seguridad",
      "label": "Seguridad de uso",
      "type": "textarea"
+    },
+    {
+     "id": "objetivo_uso",
+     "label": "Objetivo de uso",
+     "type": "text",
+     "decisivo": true
     }
    ]
   },
@@ -4844,7 +5251,7 @@
    "atributos": [
     {
      "id": "plaga",
-     "label": "Plaga",
+     "label": "Organismo objetivo",
      "type": "multiselect",
      "options": [
       "Ratas",
@@ -4859,14 +5266,14 @@
     },
     {
      "id": "activo",
-     "label": "Activo",
+     "label": "Principio activo (si aplica)",
      "type": "text",
      "filterable": true,
      "decisivo": true
     },
     {
      "id": "formulacion",
-     "label": "Formulación",
+     "label": "Presentación",
      "type": "enum",
      "options": [
       "Cebo",
@@ -4890,6 +5297,16 @@
      "label": "Autorización",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "aplicacion",
+     "label": "Aplicación",
+     "type": "text"
+    },
+    {
+     "id": "seguridad",
+     "label": "Seguridad",
+     "type": "textarea"
     }
    ]
   },
@@ -4909,7 +5326,7 @@
     },
     {
      "id": "dosis_mgl",
-     "label": "Dosis",
+     "label": "Dosis o capacidad",
      "type": "decimal",
      "unit": "mg/l",
      "comparable": true,
@@ -4933,9 +5350,23 @@
     },
     {
      "id": "compatibilidad",
-     "label": "Compatibilidad (vacunas, medicamentos)",
+     "label": "Parámetros de agua y compatibilidad",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "finalidad",
+     "label": "Finalidad",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "caudal",
+     "label": "Caudal",
+     "type": "decimal",
+     "unit": "m³/h",
+     "comparable": true
     }
    ]
   },
@@ -4989,7 +5420,7 @@
     },
     {
      "id": "material",
-     "label": "Material",
+     "label": "Materiales",
      "type": "text",
      "filterable": true,
      "decisivo": true
@@ -5006,6 +5437,11 @@
      "label": "Capacidad",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "consumibles",
+     "label": "Consumibles y modo de operación",
+     "type": "textarea"
     }
    ]
   },
@@ -5083,7 +5519,7 @@
     },
     {
      "id": "energia",
-     "label": "Energía",
+     "label": "Energía (indica el sistema)",
      "type": "decimal",
      "unit": "MJ/kg",
      "comparable": true,
@@ -5091,7 +5527,7 @@
     },
     {
      "id": "instrucciones",
-     "label": "Instrucciones de uso",
+     "label": "Modo de empleo y restricciones declaradas",
      "type": "textarea",
      "por_especie": true
     },
@@ -5174,6 +5610,43 @@
        "Caprino"
       ]
      }
+    },
+    {
+     "id": "ingredientes",
+     "label": "Ingredientes",
+     "type": "textarea"
+    },
+    {
+     "id": "minerales",
+     "label": "Minerales",
+     "type": "text"
+    },
+    {
+     "id": "vitaminas",
+     "label": "Vitaminas",
+     "type": "text"
+    },
+    {
+     "id": "racion",
+     "label": "Dosis o ración y presentación",
+     "type": "text"
+    },
+    {
+     "id": "finalidad",
+     "label": "Finalidad",
+     "type": "text",
+     "help": "Complementarios y dietéticos"
+    },
+    {
+     "id": "inclusion",
+     "label": "Proporción de inclusión",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "help": "Complementarios y concentrados",
+     "por_especie": true
     }
    ],
    "nota": "Regla: alimentos completos llevan perfil nutricional."
@@ -5188,7 +5661,7 @@
    "atributos": [
     {
      "id": "composicion",
-     "label": "Composición",
+     "label": "Componentes activos",
      "type": "textarea",
      "decisivo": true
     },
@@ -5200,7 +5673,7 @@
     },
     {
      "id": "inclusion",
-     "label": "Inclusión",
+     "label": "Dosis de inclusión",
      "type": "decimal",
      "unit": "kg/t",
      "comparable": true,
@@ -5212,6 +5685,11 @@
      "label": "Estabilidad",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "compatibilidades",
+     "label": "Compatibilidades",
+     "type": "text"
     }
    ],
    "nota": "Regla: premezclas se expresan por inclusión por tonelada."
@@ -5268,6 +5746,16 @@
      "type": "range",
      "unit": "µm",
      "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "trazabilidad",
+     "label": "Trazabilidad",
+     "type": "text"
     }
    ]
   },
@@ -5345,6 +5833,18 @@
      "label": "Contaminantes",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "origen",
+     "label": "Origen",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "trazabilidad",
+     "label": "Trazabilidad",
+     "type": "text"
     }
    ]
   },
@@ -5357,7 +5857,7 @@
    "atributos": [
     {
      "id": "ambito",
-     "label": "Ámbito",
+     "label": "Alcance",
      "type": "textarea",
      "decisivo": true
     },
@@ -5391,6 +5891,41 @@
      "type": "text",
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "plazos",
+     "label": "Plazos",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
+    },
+    {
+     "id": "especialidad",
+     "label": "Especialidad",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "requisitos_reg",
+     "label": "Requisitos regulatorios",
+     "type": "text"
     }
    ]
   },
@@ -5436,18 +5971,58 @@
     },
     {
      "id": "acreditacion",
-     "label": "Acreditación ISO 17025",
+     "label": "Acreditación",
      "type": "boolean",
      "filterable": true,
      "decisivo": true
     },
     {
      "id": "plazo",
-     "label": "Plazo de resultados",
+     "label": "Plazo de entrega",
      "type": "integer",
      "unit": "días",
      "comparable": true,
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "modalidad",
+     "label": "Modalidad",
+     "type": "enum",
+     "options": [
+      "Presencial",
+      "Remota",
+      "Mixta"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "entregables",
+     "label": "Entregables",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
+    },
+    {
+     "id": "formato_resultados",
+     "label": "Formato de resultados",
+     "type": "text"
     }
    ]
   },
@@ -5484,6 +6059,53 @@
      "label": "Certificaciones",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "modalidad",
+     "label": "Modalidad",
+     "type": "enum",
+     "options": [
+      "Presencial",
+      "Remota",
+      "Mixta"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "entregables",
+     "label": "Entregables",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
+    },
+    {
+     "id": "tipo_instalacion",
+     "label": "Tipo de instalación",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "fases",
+     "label": "Fases del proyecto",
+     "type": "text"
     }
    ]
   },
@@ -5511,6 +6133,41 @@
      "label": "Entregables",
      "type": "textarea",
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "modalidad",
+     "label": "Modalidad",
+     "type": "enum",
+     "options": [
+      "Presencial",
+      "Remota",
+      "Mixta"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "plazos",
+     "label": "Plazos",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
     }
    ]
   },
@@ -5552,6 +6209,46 @@
      "label": "Acreditación",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "entregables",
+     "label": "Entregables",
+     "type": "text"
+    },
+    {
+     "id": "plazos",
+     "label": "Plazos",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
+    },
+    {
+     "id": "idiomas",
+     "label": "Idiomas",
+     "type": "multiselect",
+     "options": [
+      "Español",
+      "Inglés",
+      "Portugués",
+      "Francés"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -5588,6 +6285,46 @@
      "label": "SLA",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "servicio",
+     "label": "Servicio prestado",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ambito_geo",
+     "label": "Ámbito geográfico",
+     "type": "text",
+     "filterable": true
+    },
+    {
+     "id": "modalidad",
+     "label": "Modalidad",
+     "type": "enum",
+     "options": [
+      "Presencial",
+      "Remota",
+      "Mixta"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "entregables",
+     "label": "Entregables",
+     "type": "text"
+    },
+    {
+     "id": "plazos",
+     "label": "Plazos",
+     "type": "text"
+    },
+    {
+     "id": "metodologia",
+     "label": "Metodología y contacto",
+     "type": "textarea"
     }
    ]
   },
@@ -5659,13 +6396,18 @@
     },
     {
      "id": "ajuste",
-     "label": "Ajuste y regulación",
+     "label": "Ajuste y limpieza",
      "type": "text",
      "decisivo": true
     },
     {
      "id": "limpieza",
      "label": "Limpieza",
+     "type": "text"
+    },
+    {
+     "id": "distribucion",
+     "label": "Distribución",
      "type": "text"
     }
    ]
@@ -5693,7 +6435,7 @@
     },
     {
      "id": "animales_punto",
-     "label": "Animales por punto",
+     "label": "Número de animales",
      "type": "integer",
      "unit": "animales",
      "comparable": true,
@@ -6102,6 +6844,27 @@
     ]
    },
    "efecto": "En fármacos, la enfermedad diana va ligada a la especie y no sustituye a la indicación autorizada"
+  },
+  {
+   "id": "segmentos_sugerencia",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Los segmentos y fases son sugerencias del formulario, no categorías nuevas del árbol; no se preseleccionan"
+  },
+  {
+   "id": "nombres_cortos",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Se separa el nombre corto de navegación del nombre técnico completo; nunca se muestran códigos"
+  },
+  {
+   "id": "campo_condicional",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Un campo con visible_when.campo solo se muestra si otro campo tiene uno de esos valores (p. ej. motilidad solo para semen)"
   },
   {
    "id": "cert_solo_si_corresponde",

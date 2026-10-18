@@ -277,6 +277,7 @@ function visibleAttr(a) {
   const w = a.visible_when; if (!w) return true;
   if (w.especies) return w.especies.some(sp => S.especies[sp]);
   if (w.segmentos) return Object.keys(S.especies).some(sp => selSegs(sp).some(x => w.segmentos.indexOf(x) > -1));
+  if (w.campo) return Object.keys(w.campo).every(k => w.campo[k].indexOf(S.tec[k]) > -1);
   return true;
 }
 const attrsTec = t => t ? t.atributos.filter(a => !(a.por_especie && conAplicacion(S.cat)) && visibleAttr(a)) : [];
@@ -333,6 +334,7 @@ const qEj = (location.search.match(/[?&]ejemplo=(\w+)/) || [])[1];
 if (qEj && DEMOS[qEj]) S = DEMOS[qEj]();
 if (!S) S = nuevo();
 if (/[?&]captura/.test(location.search)) window.__demo = v => { S = DEMOS[v] ? DEMOS[v]() : nuevo(); UI.fam = null; UI.q = ''; UI.intento = {}; UI.foco = null; guardar(); render(); };
+if (/[?&]captura/.test(location.search)) window.__t = code => eval(code);
 if (!S.apl) S.apl = {};
 if (!S.fotos) S.fotos = Array.from({ length: S.imgs || 0 }, (_, i) => ({ src: null, nombre: 'Foto ' + (i + 1) }));
 if (!S.videos) S.videos = [];
@@ -995,6 +997,7 @@ document.addEventListener('change', ev => {
   else if (d.doci) S.docs[d.doci].i = el.value;
   else if (d.docv) S.docs[d.docv].v = el.value;
   else if (el.id === 'demoSel') { if (!el.value) return; S = el.value === 'cero' ? nuevo() : DEMOS[el.value](); UI.fam = null; UI.q = ''; UI.intento = {}; el.value = ''; guardar(); render(); toast(S.cat ? 'Ejemplo cargado: ' + (S.ident.nombre || '') + ' · datos de ejemplo' : 'Producto nuevo en blanco.'); return; }
+  else if (d.tv && tpl(S.cat) && tpl(S.cat).atributos.some(a => a.visible_when && a.visible_when.campo && a.visible_when.campo[d.tv])) { S.tec[d.tv] = el.value; guardar(); render(); return; }
   else if (d.tv || d.tr) { refrescaError((d.tv || d.tr.split('|')[0]), el); return; }
   else return;
   guardar(); pintaLado();
