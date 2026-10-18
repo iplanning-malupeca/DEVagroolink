@@ -2444,6 +2444,14 @@
    "h": 940,
    "page": "fabdist",
    "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
+  },
+  "FabCabeceraObjetivos.dc.html": {
+   "x": 4080,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D2b · Elegir objetivos y tendencias (modal, hasta 5)"
   }
  },
  "createdOnFiles": {
@@ -3350,7 +3358,8 @@
   "FabTipoVacio.dc.html",
   "FabCRM.dc.html",
   "FabCabeceraAdmin.dc.html",
-  "FabCRMVarias.dc.html"
+  "FabCRMVarias.dc.html",
+  "FabCabeceraObjetivos.dc.html"
  ],
  "pages": [
   {
