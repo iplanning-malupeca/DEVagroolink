@@ -2859,7 +2859,7 @@
    "page": "prodsede",
    "x": 1360,
    "y": 0,
-   "title": "PB1 · Añadir un producto: la Sede crea la ficha base"
+   "title": "PB2 · «Nuevo producto»: la Sede crea la ficha base"
   },
   "PrdSucMercados.dc.html": {
    "w": 1280,
@@ -2867,7 +2867,7 @@
    "page": "prodsede",
    "x": 2720,
    "y": 0,
-   "title": "PB2 · Mercados y quién lo vende: cada país, su sucursal"
+   "title": "PB3 · Último paso de la ficha: mercados y qué sucursal lo vende en cada país"
   },
   "PrdSucLocal.dc.html": {
    "w": 1280,
@@ -2875,7 +2875,7 @@
    "page": "prodsede",
    "x": 5440,
    "y": 0,
-   "title": "PB3 · La sucursal (Big Dutchman México) activa el producto y añade su versión local"
+   "title": "PB5 · Lado de la sucursal (Big Dutchman México): activa el producto y añade su versión local"
   },
   "PrdComNuevo.dc.html": {
    "w": 1280,
@@ -2883,7 +2883,7 @@
    "page": "prodcom",
    "x": 1360,
    "y": 0,
-   "title": "PC1 · Añadir un producto: lo atiende el comercial de la zona"
+   "title": "PC2 · «Nuevo producto»: crear la ficha, importar o duplicar"
   },
   "PrdComMercados.dc.html": {
    "w": 1280,
@@ -2891,7 +2891,7 @@
    "page": "prodcom",
    "x": 2720,
    "y": 0,
-   "title": "PC2 · Mercados y quién lo atiende: el comercial de cada zona"
+   "title": "PC3 · Último paso de la ficha: mercados y qué comercial atiende cada zona"
   },
   "PrdDisNuevo.dc.html": {
    "w": 1280,
@@ -2899,7 +2899,7 @@
    "page": "proddis",
    "x": 1360,
    "y": 0,
-   "title": "PD1 · Añadir un producto: de una marca, de una marca que no está o propio"
+   "title": "PD2 · «Añadir producto»: de una marca en Agroolink, de una que no está o propio"
   },
   "PrdDisLocal.dc.html": {
    "w": 1280,
@@ -2907,7 +2907,7 @@
    "page": "proddis",
    "x": 2720,
    "y": 0,
-   "title": "PD2 · Versión local de un producto de la marca"
+   "title": "PD3 · Si es de una marca: tu versión local (la ficha de la marca no se edita)"
   },
   "SrvFab.dc.html": {
    "w": 1280,
@@ -2979,7 +2979,7 @@
    "page": "prodcom",
    "x": 0,
    "y": 0,
-   "title": "PC0 · Catálogo de Zucami: quién atiende cada producto y sus solicitudes"
+   "title": "PC1 · Catálogo: tus productos y quién atiende cada uno"
   },
   "PrdSucCatalogo.dc.html": {
    "w": 1280,
@@ -2987,7 +2987,7 @@
    "page": "prodsede",
    "x": 0,
    "y": 0,
-   "title": "PB0 · Catálogo de la Sede: activación por sucursal y versiones locales"
+   "title": "PB1 · Catálogo de la Sede: en cuántas sucursales está activado cada producto"
   },
   "PrdSucActivacion.dc.html": {
    "w": 1280,
@@ -2995,7 +2995,7 @@
    "page": "prodsede",
    "x": 4080,
    "y": 0,
-   "title": "PB2b · Activación por sucursal: qué ha activado cada una"
+   "title": "PB4 · Después: qué ha activado cada sucursal"
   },
   "PrdAviCatalogo.dc.html": {
    "w": 1280,
@@ -3003,7 +3003,7 @@
    "page": "prodsuc",
    "x": 0,
    "y": 0,
-   "title": "PS0 · Catálogo de la sucursal: los de la Sede (activar y adaptar) y los locales"
+   "title": "PS1 · Catálogo de la sucursal: los de la Sede (por activar) y los locales"
   },
   "PrdAviNuevo.dc.html": {
    "w": 1280,
@@ -3011,7 +3011,7 @@
    "page": "prodsuc",
    "x": 1360,
    "y": 0,
-   "title": "PS1 · Añadir: activar los de la Sede, crear uno local o pedirlo a la Sede"
+   "title": "PS2 · «Añadir»: activar los de la Sede, crear uno local o pedirlo a la Sede"
   },
   "PrdAviLocal.dc.html": {
    "w": 1280,
@@ -3019,7 +3019,7 @@
    "page": "prodsuc",
    "x": 2720,
    "y": 0,
-   "title": "PS2 · Versión local de un producto de la Sede (Ross 308 en España y Portugal)"
+   "title": "PS3 · Si activas uno de la Sede: tu versión local (Ross 308)"
   },
   "PrdDisCatalogo.dc.html": {
    "w": 1280,
@@ -3027,7 +3027,7 @@
    "page": "proddis",
    "x": 0,
    "y": 0,
-   "title": "PD0 · Catálogo del distribuidor: de las marcas, subidos y propios"
+   "title": "PD1 · Catálogo: productos de las marcas, subidos por ti y propios"
   }
  },
  "createdOnFiles": {
@@ -3693,7 +3693,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodcom",
-   "text": "Productos de un fabricante con equipo comercial — Zucami. Cada solicitud va al comercial de la zona por Agroolink.",
+   "text": "Productos de un fabricante con equipo comercial — Zucami. 1 Catálogo → 2 Nuevo producto (la ficha en «011_Alta de producto») → 3 Mercados y quién lo atiende",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3702,7 +3702,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodsede",
-   "text": "Productos de una Sede con sucursales — Big Dutchman. La Sede crea la ficha base; cada sucursal la activa y la adapta.",
+   "text": "Productos de una Sede con sucursales — Big Dutchman. 1 Catálogo de la Sede → 2 Nuevo producto (ficha base) → 3 Mercados → 4 Activación por sucursal → 5 La sucursal lo activa y lo adapta",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3711,7 +3711,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodsuc",
-   "text": "Productos de una sucursal — Aviagen Ibérica. Activa los de la Sede, los adapta a su país y puede crear productos locales.",
+   "text": "Productos de una sucursal — Aviagen Ibérica. 1 Catálogo → 2 Añadir (activar de la Sede, local o pedirlo) → 3 Versión local",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3720,7 +3720,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "proddis",
-   "text": "Productos de un distribuidor — NewFarms. Fichas oficiales de las marcas, productos subidos por él y propios. Elegir y subir: ver «010_Alta · Distribuidor multimarca».",
+   "text": "Productos de un distribuidor — NewFarms. 1 Catálogo → 2 Añadir producto (elegir y subir: ver «010_Alta · Distribuidor multimarca») → 3 Versión local",
    "w": 240,
    "x": 0,
    "y": -300
