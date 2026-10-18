@@ -541,7 +541,7 @@
   "FabCabecera.dc.html": {
    "h": 940,
    "page": "fabdist",
-   "title": "D2 · Cabecera de la ficha",
+   "title": "D2 · Cabecera: marca (lo que ve el comprador) y sociedades del CRM",
    "w": 1280,
    "x": 1360,
    "y": 0
@@ -2420,6 +2420,22 @@
    "h": 940,
    "page": "fabdist",
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
+  },
+  "FabCRM.dc.html": {
+   "x": -2720,
+   "y": 0,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0 · ¿Es esta tu empresa? Datos del CRM (marca, sede central y filiales)"
+  },
+  "FabCabeceraAdmin.dc.html": {
+   "x": 2720,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
   }
  },
  "createdOnFiles": {
@@ -3323,7 +3339,9 @@
   "FabTipoMercados.dc.html",
   "FabTipoEspeciesTodas.dc.html",
   "FabTipoEspeciesSolo.dc.html",
-  "FabTipoVacio.dc.html"
+  "FabTipoVacio.dc.html",
+  "FabCRM.dc.html",
+  "FabCabeceraAdmin.dc.html"
  ],
  "pages": [
   {
