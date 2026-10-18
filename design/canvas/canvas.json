@@ -50,6 +50,278 @@
    "x": 4080,
    "y": 0
   },
+  "BusAutocompletar.dc.html": {
+   "h": 1000,
+   "page": "busqueda",
+   "title": "B11 · Autocompletado al escribir: sugerencias, categorías, especie y vista previa por tipo",
+   "w": 1920,
+   "x": 8000,
+   "y": 1640
+  },
+  "BusComCategoria.dc.html": {
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C3 · Segmento Categoría abierto: familia › grupo › tipo, con recuentos según la especie",
+   "w": 1920,
+   "x": 4000,
+   "y": 5100
+  },
+  "BusComEspecie.dc.html": {
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C2 · Segmento Especie abierto: especie › producción",
+   "w": 1920,
+   "x": 2000,
+   "y": 5100
+  },
+  "BusComHome.dc.html": {
+   "h": 1100,
+   "page": "busqueda",
+   "title": "C1 · Home: barra por segmentos tipo Airbnb (Qué · Especie · Categoría · Enfermedad)",
+   "w": 1920,
+   "x": 0,
+   "y": 5100
+  },
+  "BusComMovil.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "C6 · Móvil: pasos apilados (Qué · Especie · Categoría · Enfermedad) como Airbnb",
+   "w": 390,
+   "x": 10000,
+   "y": 5100
+  },
+  "BusComResCategoria.dc.html": {
+   "h": 1560,
+   "page": "busqueda",
+   "title": "C4 · Resultados con solo categoría: subtipos arriba y «¿Para qué especie?»",
+   "w": 1920,
+   "x": 6000,
+   "y": 5100
+  },
+  "BusComResEspecie.dc.html": {
+   "h": 2050,
+   "page": "busqueda",
+   "title": "C5 · Resultados con solo especie: producción, «¿Qué buscas para porcino?» y enfermedades frecuentes",
+   "w": 1920,
+   "x": 8000,
+   "y": 5100
+  },
+  "BusFiltrosIzquierda.dc.html": {
+   "h": 1080,
+   "page": "busqueda",
+   "title": "B10 · Variante: los mismos filtros en un panel desde la izquierda",
+   "w": 1920,
+   "x": 4000,
+   "y": 1640
+  },
+  "BusFiltrosModal.dc.html": {
+   "h": 1080,
+   "page": "busqueda",
+   "title": "B9 · Variante Airbnb: todos los filtros en una ventana centrada",
+   "w": 1920,
+   "x": 2000,
+   "y": 1640
+  },
+  "BusIntranetBuscar.dc.html": {
+   "h": 900,
+   "page": "busqueda",
+   "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía",
+   "w": 1280,
+   "x": 0,
+   "y": 9900
+  },
+  "BusMasFiltros.dc.html": {
+   "h": 900,
+   "page": "busqueda",
+   "title": "B5 · Filtros técnicos de la categoría (desde «Todos los filtros técnicos») + generales",
+   "w": 1920,
+   "x": 8000,
+   "y": 0
+  },
+  "BusMovBuscar.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F2 · Buscador con foco: recientes, especie, tipo de resultado y tendencias",
+   "w": 390,
+   "x": 470,
+   "y": 4000
+  },
+  "BusMovCategorias.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F6 · Explorar por categorías: 12 familias del árbol v2",
+   "w": 390,
+   "x": 2350,
+   "y": 4000
+  },
+  "BusMovEspCategorias.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F5 · Categorías dentro de la especie (opcional) → resultados",
+   "w": 390,
+   "x": 1880,
+   "y": 4000
+  },
+  "BusMovEspecies.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F3 · Explorar por especies: 7 especies del árbol v2",
+   "w": 390,
+   "x": 940,
+   "y": 4000
+  },
+  "BusMovExplorar.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F1 · Explorar: buscador + entrar por categorías o por especies",
+   "w": 390,
+   "x": 0,
+   "y": 4000
+  },
+  "BusMovFamilia.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F7 · Familia → grupos (nivel 2)",
+   "w": 390,
+   "x": 2820,
+   "y": 4000
+  },
+  "BusMovFiltrosCompleto.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F9 · Filtros a pantalla completa: mismo icono por dimensión, siempre con la explicación",
+   "w": 390,
+   "x": 3760,
+   "y": 4000
+  },
+  "BusMovGrupo.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F8 · Grupo → tipos (nivel 3), selección múltiple",
+   "w": 390,
+   "x": 3290,
+   "y": 4000
+  },
+  "BusMovProduccion.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "F4 · Producción de la especie (y subtipo si lo hay)",
+   "w": 390,
+   "x": 1410,
+   "y": 4000
+  },
+  "BusMovil.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "B6 · Móvil: resultados con chips de filtro deslizables",
+   "w": 390,
+   "x": 0,
+   "y": 2900
+  },
+  "BusMovilFiltros.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "B7 · Móvil: hoja «Filtros» con contador en vivo",
+   "w": 390,
+   "x": 470,
+   "y": 2900
+  },
+  "BusMovilOrden.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "B8 · Móvil: ordenar en hoja inferior",
+   "w": 390,
+   "x": 940,
+   "y": 2900
+  },
+  "BusPopCategoria.dc.html": {
+   "h": 980,
+   "page": "busqueda",
+   "title": "B4 · Desplegable Categoría: 3 niveles (familia › grupo › tipo), árbol v2",
+   "w": 1920,
+   "x": 6000,
+   "y": 0
+  },
+  "BusPopEnfermedad.dc.html": {
+   "h": 980,
+   "page": "busqueda",
+   "title": "B4b · Filtro Enfermedad: independiente, agrupado por tipo clínico y filtrado por especie",
+   "w": 1920,
+   "x": 6000,
+   "y": 1640
+  },
+  "BusPopEspecie.dc.html": {
+   "h": 980,
+   "page": "busqueda",
+   "title": "B3 · Desplegable Especie: especie › producción › subtipo",
+   "w": 1920,
+   "x": 4000,
+   "y": 0
+  },
+  "BusProductos.dc.html": {
+   "h": 1500,
+   "page": "busqueda",
+   "title": "B2 · Pestaña Productos con categoría elegida: aparecen sus filtros técnicos",
+   "w": 1920,
+   "x": 2000,
+   "y": 0
+  },
+  "BusRecientes.dc.html": {
+   "h": 1000,
+   "page": "busqueda",
+   "title": "B12 · Campo vacío con foco: búsquedas recientes, tendencias y «seguir donde lo dejaste»",
+   "w": 1920,
+   "x": 10000,
+   "y": 0
+  },
+  "BusSinResultados.dc.html": {
+   "h": 1120,
+   "page": "busqueda",
+   "title": "B13 · Sin resultados: qué filtro quitar (con recuento), «quizás buscabas» y crear proyecto",
+   "w": 1920,
+   "x": 10000,
+   "y": 1640
+  },
+  "BusTodo.dc.html": {
+   "h": 2400,
+   "page": "busqueda",
+   "title": "B1 · Resultados «Todo»: barra de filtros arriba y bloques por tipo",
+   "w": 1920,
+   "x": 0,
+   "y": 0
+  },
+  "BusXCategoria.dc.html": {
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X2 · Cinco categorías en los 3 niveles (familia, grupo y tipos sueltos)",
+   "w": 1920,
+   "x": 2000,
+   "y": 8500
+  },
+  "BusXEnfermedad.dc.html": {
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X3 · Enfermedades de las dos especies, agrupadas por tipo clínico; las compartidas cuentan una vez",
+   "w": 1920,
+   "x": 4000,
+   "y": 8500
+  },
+  "BusXEspecie.dc.html": {
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X1 · Dos especies a distinta profundidad: Broilers (3 niveles) + Lechones (2 niveles)",
+   "w": 1920,
+   "x": 0,
+   "y": 8500
+  },
+  "BusXResultados.dc.html": {
+   "h": 1150,
+   "page": "busqueda",
+   "title": "X4 · Resultado: filtros activos por dimensión, «Y además» entre ellas y «Coincide con» en cada tarjeta",
+   "w": 1920,
+   "x": 6000,
+   "y": 8500
+  },
   "CfgComerciales.dc.html": {
    "h": 900,
    "page": "configempresa",
@@ -143,39 +415,39 @@
    "page": "comerciales",
    "title": "K6 · Bandeja de la comercial (Laura García)",
    "w": 1280,
-   "x": 2720,
-   "y": 1240
+   "x": 9520,
+   "y": 1340
   },
   "ComContacto.dc.html": {
    "h": 940,
    "page": "comerciales",
    "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
    "w": 1280,
-   "x": 0,
-   "y": 1240
+   "x": 6800,
+   "y": 1340
   },
   "ComEquipo.dc.html": {
    "h": 940,
    "page": "comerciales",
    "title": "K2 · Equipo comercial (cuentas en Agroolink)",
    "w": 1280,
-   "x": 1360,
-   "y": 0
+   "x": 4080,
+   "y": 1340
   },
   "ComPublicar.dc.html": {
    "h": 940,
    "page": "comerciales",
    "title": "K5 · Revisar y publicar",
    "w": 1280,
-   "x": 1360,
-   "y": 1240
+   "x": 8160,
+   "y": 1340
   },
   "ComTipo.dc.html": {
    "h": 940,
    "page": "comerciales",
    "title": "K1 · Tipo de empresa: equipo comercial propio",
    "w": 1280,
-   "x": 0,
+   "x": 2720,
    "y": 0
   },
   "ComZonas.dc.html": {
@@ -183,8 +455,8 @@
    "page": "comerciales",
    "title": "K3 · Zonas de cada comercial",
    "w": 1280,
-   "x": 2720,
-   "y": 0
+   "x": 5440,
+   "y": 1340
   },
   "CompNueva1.dc.html": {
    "h": 900,
@@ -538,6 +810,14 @@
    "x": 2720,
    "y": 0
   },
+  "FabCRMVarias.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
+  },
   "FabCabecera.dc.html": {
    "h": 940,
    "page": "fabdist",
@@ -545,6 +825,22 @@
    "w": 1280,
    "x": 0,
    "y": 1340
+  },
+  "FabCabeceraAdmin.dc.html": {
+   "x": 2720,
+   "y": 1340,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
+  },
+  "FabCabeceraObjetivos.dc.html": {
+   "x": 1360,
+   "y": 1340,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D2b · Elegir objetivos y tendencias (hasta 5) · buscador para añadir especie o categoría"
   },
   "FabContacto.dc.html": {
    "h": 940,
@@ -608,6 +904,54 @@
    "title": "D1 · Tipo de empresa",
    "w": 1280,
    "x": 2720,
+   "y": 0
+  },
+  "FabTipoEspecies.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "FabTipoEspeciesSolo.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
+  "FabTipoEspeciesTodas.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "FabTipoMercados.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»",
+   "w": 1280,
+   "x": 9520,
+   "y": 0
+  },
+  "FabTipoRama.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "FabTipoVacio.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "w": 1280,
+   "x": 1360,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -1154,6 +1498,46 @@
    "x": 8400,
    "y": 26263
   },
+  "HeaderHd1280.dc.html": {
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1280 px",
+   "w": 1280,
+   "x": 3520,
+   "y": 7420
+  },
+  "HeaderHd1280Abierta.dc.html": {
+   "h": 820,
+   "page": "busqueda",
+   "title": "Cabecera 1280 px · barra desplegada al pulsarla",
+   "w": 1280,
+   "x": 4880,
+   "y": 7420
+  },
+  "HeaderHd1440.dc.html": {
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1440 px",
+   "w": 1440,
+   "x": 2000,
+   "y": 7420
+  },
+  "HeaderHd1920.dc.html": {
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1920 px",
+   "w": 1920,
+   "x": 0,
+   "y": 7420
+  },
+  "HeaderHdMovil.dc.html": {
+   "h": 844,
+   "page": "busqueda",
+   "title": "Cabecera móvil · la búsqueda combinada resumida en una pastilla",
+   "w": 390,
+   "x": 6240,
+   "y": 7420
+  },
   "IntHeader.dc.html": {
    "h": 68,
    "page": "intranet",
@@ -1346,6 +1730,14 @@
    "x": 1590,
    "y": 0
   },
+  "MobCambioEmpresa.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M10 · Al cambiar a empresa: color azul y aviso «Ahora estás en…»",
+   "w": 390,
+   "x": 5070,
+   "y": 2144
+  },
   "MobCategoria.dc.html": {
    "h": 1030,
    "page": "movil",
@@ -1378,6 +1770,80 @@
    "x": 0,
    "y": 2510
   },
+  "MobHeaderConEmpresa.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M7 · Personal con empresa · «Tú» abierto",
+   "w": 390,
+   "x": 3660,
+   "y": 2144
+  },
+  "MobHeaderEmpresa.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M8 · Modo empresa · barra de empresa (azul)",
+   "w": 390,
+   "x": 4130,
+   "y": 2144
+  },
+  "MobHeaderEmpresaMenu.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M9 · Modo empresa · menú «Empresa» abierto",
+   "w": 390,
+   "x": 4600,
+   "y": 2144
+  },
+  "MobHeaderExperto.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M6 · Con perfil de experto · «Tú» abierto (lila)",
+   "w": 390,
+   "x": 3190,
+   "y": 2144
+  },
+  "MobHeaderExplorar.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M3 · Especies y Categorías desde Explorar",
+   "w": 390,
+   "x": 3660,
+   "y": 1180
+  },
+  "MobHeaderSesion.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo (Explorar es el inicio)",
+   "w": 390,
+   "x": 3190,
+   "y": 1180
+  },
+  "MobHeaderSinSesion.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "header",
+   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar",
+   "w": 390,
+   "x": 2720,
+   "y": 1180
+  },
+  "MobHeaderSinSesionMenu.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "header",
+   "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
+   "w": 390,
+   "x": 2720,
+   "y": 2144
+  },
+  "MobHeaderTu.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta",
+   "w": 390,
+   "x": 4130,
+   "y": 1180
+  },
   "MobHome.dc.html": {
    "h": 2010,
    "page": "movil",
@@ -1393,6 +1859,14 @@
    "w": 390,
    "x": 530,
    "y": 0
+  },
+  "MobIconoProyectos.dc.html": {
+   "h": 760,
+   "page": "header",
+   "title": "M5 · Icono de Proyectos · 4 opciones",
+   "w": 390,
+   "x": 4600,
+   "y": 1180
   },
   "MobIntereses.dc.html": {
    "h": 1700,
@@ -1417,6 +1891,14 @@
    "w": 390,
    "x": 1060,
    "y": 2510
+  },
+  "MobSelectorEspacios.dc.html": {
+   "h": 844,
+   "page": "header",
+   "title": "M11 · Selector de espacios con varias empresas",
+   "w": 390,
+   "x": 5540,
+   "y": 2144
   },
   "MobTabBar.dc.html": {
    "h": 84,
@@ -1547,6 +2029,14 @@
    "x": 0,
    "y": 2800
   },
+  "ProyArchivados.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3d · Proyectos archivados · Recuperar",
+   "w": 1280,
+   "x": 8410,
+   "y": 1628
+  },
   "ProyAsistBienvenida.dc.html": {
    "h": 900,
    "page": "proyectos",
@@ -1619,6 +2109,22 @@
    "x": 5690,
    "y": 1628
   },
+  "ProyEditarModal.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3e · Editar desde el menú: resumen del proyecto en modal (se cierra con ×)",
+   "w": 1280,
+   "x": 4330,
+   "y": 2648
+  },
+  "ProyEditarModalItem.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3f · Modal · editar un apartado desplegado debajo",
+   "w": 1280,
+   "x": 5690,
+   "y": 2648
+  },
   "ProyExperto.dc.html": {
    "h": 1000,
    "page": "proyempresas",
@@ -1641,6 +2147,14 @@
    "title": "J3b · Mis proyectos · menú de acciones",
    "w": 1280,
    "x": 4330,
+   "y": 1628
+  },
+  "ProyMisArchivar.dc.html": {
+   "h": 900,
+   "page": "proyectos",
+   "title": "J3c · Mis proyectos · tras archivar (Deshacer y Ver archivados)",
+   "w": 1280,
+   "x": 7050,
    "y": 1628
   },
   "ProyOportunidades.dc.html": {
@@ -1931,519 +2445,85 @@
    "x": 5440,
    "y": 0
   },
-  "ProyMisArchivar.dc.html": {
-   "x": 7050,
-   "y": 1628,
-   "w": 1280,
-   "h": 900,
-   "page": "proyectos",
-   "title": "J3c · Mis proyectos · tras archivar (Deshacer y Ver archivados)"
-  },
-  "ProyArchivados.dc.html": {
-   "x": 8410,
-   "y": 1628,
-   "w": 1280,
-   "h": 900,
-   "page": "proyectos",
-   "title": "J3d · Proyectos archivados · Recuperar"
-  },
-  "ProyEditarModal.dc.html": {
-   "x": 4330,
-   "y": 2648,
-   "w": 1280,
-   "h": 900,
-   "page": "proyectos",
-   "title": "J3e · Editar desde el menú: resumen del proyecto en modal (se cierra con ×)"
-  },
-  "ProyEditarModalItem.dc.html": {
-   "x": 5690,
-   "y": 2648,
-   "w": 1280,
-   "h": 900,
-   "page": "proyectos",
-   "title": "J3f · Modal · editar un apartado desplegado debajo"
-  },
-  "MobHeaderSinSesion.dc.html": {
-   "x": 2720,
-   "y": 1180,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar",
-   "is_interactive": true
-  },
-  "MobHeaderSesion.dc.html": {
-   "x": 3190,
-   "y": 1180,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo (Explorar es el inicio)"
-  },
-  "MobHeaderExplorar.dc.html": {
-   "x": 3660,
-   "y": 1180,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M3 · Especies y Categorías desde Explorar"
-  },
-  "MobHeaderTu.dc.html": {
-   "x": 4130,
-   "y": 1180,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta"
-  },
-  "MobIconoProyectos.dc.html": {
-   "x": 4600,
-   "y": 1180,
-   "w": 390,
-   "h": 760,
-   "page": "header",
-   "title": "M5 · Icono de Proyectos · 4 opciones"
-  },
-  "MobHeaderSinSesionMenu.dc.html": {
-   "x": 2720,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
-   "is_interactive": true
-  },
-  "MobHeaderExperto.dc.html": {
-   "x": 3190,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M6 · Con perfil de experto · «Tú» abierto (lila)"
-  },
-  "MobHeaderConEmpresa.dc.html": {
-   "x": 3660,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M7 · Personal con empresa · «Tú» abierto"
-  },
-  "MobHeaderEmpresa.dc.html": {
-   "x": 4130,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M8 · Modo empresa · barra de empresa (azul)"
-  },
-  "MobHeaderEmpresaMenu.dc.html": {
-   "x": 4600,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M9 · Modo empresa · menú «Empresa» abierto"
-  },
-  "MobCambioEmpresa.dc.html": {
-   "x": 5070,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M10 · Al cambiar a empresa: color azul y aviso «Ahora estás en…»"
-  },
-  "MobSelectorEspacios.dc.html": {
-   "x": 5540,
-   "y": 2144,
-   "w": 390,
-   "h": 844,
-   "page": "header",
-   "title": "M11 · Selector de espacios con varias empresas"
-  },
-  "BusTodo.dc.html": {
-   "x": 0,
-   "y": 0,
-   "w": 1920,
-   "h": 2400,
-   "page": "busqueda",
-   "title": "B1 · Resultados «Todo»: barra de filtros arriba y bloques por tipo"
-  },
-  "BusProductos.dc.html": {
-   "x": 2000,
-   "y": 0,
-   "w": 1920,
-   "h": 1500,
-   "page": "busqueda",
-   "title": "B2 · Pestaña Productos con categoría elegida: aparecen sus filtros técnicos"
-  },
-  "BusPopEspecie.dc.html": {
-   "x": 4000,
-   "y": 0,
-   "w": 1920,
-   "h": 980,
-   "page": "busqueda",
-   "title": "B3 · Desplegable Especie: especie › producción › subtipo"
-  },
-  "BusPopCategoria.dc.html": {
-   "x": 6000,
-   "y": 0,
-   "w": 1920,
-   "h": 980,
-   "page": "busqueda",
-   "title": "B4 · Desplegable Categoría: 3 niveles (familia › grupo › tipo), árbol v2"
-  },
-  "BusMasFiltros.dc.html": {
-   "x": 8000,
-   "y": 0,
-   "w": 1920,
-   "h": 900,
-   "page": "busqueda",
-   "title": "B5 · Filtros técnicos de la categoría (desde «Todos los filtros técnicos») + generales"
-  },
-  "BusMovil.dc.html": {
-   "x": 0,
-   "y": 2900,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "B6 · Móvil: resultados con chips de filtro deslizables"
-  },
-  "BusMovilFiltros.dc.html": {
-   "x": 470,
-   "y": 2900,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "B7 · Móvil: hoja «Filtros» con contador en vivo"
-  },
-  "BusMovilOrden.dc.html": {
-   "x": 940,
-   "y": 2900,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "B8 · Móvil: ordenar en hoja inferior"
-  },
-  "BusFiltrosModal.dc.html": {
-   "x": 2000,
-   "y": 1640,
-   "w": 1920,
-   "h": 1080,
-   "page": "busqueda",
-   "title": "B9 · Variante Airbnb: todos los filtros en una ventana centrada"
-  },
-  "BusFiltrosIzquierda.dc.html": {
-   "x": 4000,
-   "y": 1640,
-   "w": 1920,
-   "h": 1080,
-   "page": "busqueda",
-   "title": "B10 · Variante: los mismos filtros en un panel desde la izquierda"
-  },
-  "BusPopEnfermedad.dc.html": {
-   "x": 6000,
-   "y": 1640,
-   "w": 1920,
-   "h": 980,
-   "page": "busqueda",
-   "title": "B4b · Filtro Enfermedad: independiente, agrupado por tipo clínico y filtrado por especie"
-  },
-  "BusAutocompletar.dc.html": {
-   "x": 8000,
-   "y": 1640,
-   "w": 1920,
-   "h": 1000,
-   "page": "busqueda",
-   "title": "B11 · Autocompletado al escribir: sugerencias, categorías, especie y vista previa por tipo"
-  },
-  "BusRecientes.dc.html": {
-   "x": 10000,
-   "y": 0,
-   "w": 1920,
-   "h": 1000,
-   "page": "busqueda",
-   "title": "B12 · Campo vacío con foco: búsquedas recientes, tendencias y «seguir donde lo dejaste»"
-  },
-  "BusSinResultados.dc.html": {
-   "x": 10000,
-   "y": 1640,
-   "w": 1920,
-   "h": 1120,
-   "page": "busqueda",
-   "title": "B13 · Sin resultados: qué filtro quitar (con recuento), «quizás buscabas» y crear proyecto"
-  },
-  "BusMovExplorar.dc.html": {
-   "x": 0,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F1 · Explorar: buscador + entrar por categorías o por especies"
-  },
-  "BusMovBuscar.dc.html": {
-   "x": 470,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F2 · Buscador con foco: recientes, especie, tipo de resultado y tendencias"
-  },
-  "BusMovEspecies.dc.html": {
-   "x": 940,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F3 · Explorar por especies: 7 especies del árbol v2"
-  },
-  "BusMovProduccion.dc.html": {
-   "x": 1410,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F4 · Producción de la especie (y subtipo si lo hay)"
-  },
-  "BusMovEspCategorias.dc.html": {
-   "x": 1880,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F5 · Categorías dentro de la especie (opcional) → resultados"
-  },
-  "BusMovCategorias.dc.html": {
-   "x": 2350,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F6 · Explorar por categorías: 12 familias del árbol v2"
-  },
-  "BusMovFamilia.dc.html": {
-   "x": 2820,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F7 · Familia → grupos (nivel 2)"
-  },
-  "BusMovGrupo.dc.html": {
-   "x": 3290,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F8 · Grupo → tipos (nivel 3), selección múltiple"
-  },
-  "BusMovFiltrosCompleto.dc.html": {
-   "x": 3760,
-   "y": 4000,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "F9 · Filtros a pantalla completa: mismo icono por dimensión, siempre con la explicación"
-  },
-  "BusComHome.dc.html": {
-   "x": 0,
-   "y": 5100,
-   "w": 1920,
-   "h": 1100,
-   "page": "busqueda",
-   "title": "C1 · Home: barra por segmentos tipo Airbnb (Qué · Especie · Categoría · Enfermedad)"
-  },
-  "BusComEspecie.dc.html": {
-   "x": 2000,
-   "y": 5100,
-   "w": 1920,
-   "h": 1100,
-   "page": "busqueda",
-   "title": "C2 · Segmento Especie abierto: especie › producción"
-  },
-  "BusComCategoria.dc.html": {
-   "x": 4000,
-   "y": 5100,
-   "w": 1920,
-   "h": 1100,
-   "page": "busqueda",
-   "title": "C3 · Segmento Categoría abierto: familia › grupo › tipo, con recuentos según la especie"
-  },
-  "BusComResCategoria.dc.html": {
-   "x": 6000,
-   "y": 5100,
-   "w": 1920,
-   "h": 1560,
-   "page": "busqueda",
-   "title": "C4 · Resultados con solo categoría: subtipos arriba y «¿Para qué especie?»"
-  },
-  "BusComResEspecie.dc.html": {
-   "x": 8000,
-   "y": 5100,
-   "w": 1920,
-   "h": 2050,
-   "page": "busqueda",
-   "title": "C5 · Resultados con solo especie: producción, «¿Qué buscas para porcino?» y enfermedades frecuentes"
-  },
-  "BusComMovil.dc.html": {
-   "x": 10000,
-   "y": 5100,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "C6 · Móvil: pasos apilados (Qué · Especie · Categoría · Enfermedad) como Airbnb"
-  },
-  "HeaderHd1920.dc.html": {
-   "x": 0,
-   "y": 7420,
-   "w": 1920,
-   "h": 640,
-   "page": "busqueda",
-   "title": "Cabecera con búsqueda combinada · 1920 px"
-  },
-  "HeaderHd1440.dc.html": {
-   "x": 2000,
-   "y": 7420,
-   "w": 1440,
-   "h": 640,
-   "page": "busqueda",
-   "title": "Cabecera con búsqueda combinada · 1440 px"
-  },
-  "HeaderHd1280.dc.html": {
-   "x": 3520,
-   "y": 7420,
-   "w": 1280,
-   "h": 640,
-   "page": "busqueda",
-   "title": "Cabecera con búsqueda combinada · 1280 px"
-  },
-  "HeaderHd1280Abierta.dc.html": {
-   "x": 4880,
-   "y": 7420,
-   "w": 1280,
-   "h": 820,
-   "page": "busqueda",
-   "title": "Cabecera 1280 px · barra desplegada al pulsarla"
-  },
-  "HeaderHdMovil.dc.html": {
-   "x": 6240,
-   "y": 7420,
-   "w": 390,
-   "h": 844,
-   "page": "busqueda",
-   "title": "Cabecera móvil · la búsqueda combinada resumida en una pastilla"
-  },
-  "BusXEspecie.dc.html": {
-   "x": 0,
-   "y": 8500,
-   "w": 1920,
-   "h": 1080,
-   "page": "busqueda",
-   "title": "X1 · Dos especies a distinta profundidad: Broilers (3 niveles) + Lechones (2 niveles)"
-  },
-  "BusXCategoria.dc.html": {
-   "x": 2000,
-   "y": 8500,
-   "w": 1920,
-   "h": 1080,
-   "page": "busqueda",
-   "title": "X2 · Cinco categorías en los 3 niveles (familia, grupo y tipos sueltos)"
-  },
-  "BusXEnfermedad.dc.html": {
-   "x": 4000,
-   "y": 8500,
-   "w": 1920,
-   "h": 1080,
-   "page": "busqueda",
-   "title": "X3 · Enfermedades de las dos especies, agrupadas por tipo clínico; las compartidas cuentan una vez"
-  },
-  "BusXResultados.dc.html": {
-   "x": 6000,
-   "y": 8500,
-   "w": 1920,
-   "h": 1150,
-   "page": "busqueda",
-   "title": "X4 · Resultado: filtros activos por dimensión, «Y además» entre ellas y «Coincide con» en cada tarjeta"
-  },
-  "BusIntranetBuscar.dc.html": {
-   "x": 0,
-   "y": 9900,
-   "w": 1280,
-   "h": 900,
-   "page": "busqueda",
-   "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía"
-  },
-  "FabTipoEspecies.dc.html": {
-   "x": 5440,
-   "y": 0,
+  "ComCRM.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida"
+   "page": "comerciales",
+   "title": "K0a · ¿Cuál es tu empresa? Datos del CRM",
+   "x": 0,
+   "y": 0
   },
-  "FabTipoRama.dc.html": {
-   "x": 8160,
-   "y": 0,
+  "ComTipoVacio.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal"
+   "page": "comerciales",
+   "title": "K1a · Tipo de empresa: aún sin especies, rama ni mercados",
+   "x": 1360,
+   "y": 0
   },
-  "FabTipoMercados.dc.html": {
-   "x": 9520,
-   "y": 0,
+  "ComTipoEspeciesTodas.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»"
-  },
-  "FabTipoEspeciesTodas.dc.html": {
+   "page": "comerciales",
+   "title": "K1b-1 · Especies · modo «Todas» (por defecto)",
    "x": 4080,
-   "y": 0,
+   "y": 0
+  },
+  "ComTipoEspecies.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada"
+   "page": "comerciales",
+   "title": "K1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "x": 5440,
+   "y": 0
   },
-  "FabTipoEspeciesSolo.dc.html": {
+  "ComTipoEspeciesSolo.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "K1b-3 · Especies · modo «Solo algunas»: ponedoras y reproductoras",
    "x": 6800,
-   "y": 0,
+   "y": 0
+  },
+  "ComTipoRama.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir"
+   "page": "comerciales",
+   "title": "K1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
+   "x": 8160,
+   "y": 0
   },
-  "FabTipoVacio.dc.html": {
-   "x": 1360,
-   "y": 0,
+  "ComTipoMercados.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
+   "page": "comerciales",
+   "title": "K1d · Editar mercados: inclusiones y «Excluir» (Francia sin Córcega)",
+   "x": 9520,
+   "y": 0
   },
-  "FabCabeceraAdmin.dc.html": {
-   "x": 2720,
-   "y": 1340,
+  "ComCabecera.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
-  },
-  "FabCRMVarias.dc.html": {
+   "page": "comerciales",
+   "title": "KC · Cabecera (paso 2): marca y sociedades del CRM",
    "x": 0,
-   "y": 0,
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
+   "y": 1340
   },
-  "FabCabeceraObjetivos.dc.html": {
-   "x": 1360,
-   "y": 1340,
+  "ComCabeceraObjetivos.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "fabdist",
-   "title": "D2b · Elegir objetivos y tendencias (hasta 5) · buscador para añadir especie o categoría"
+   "page": "comerciales",
+   "title": "KC-b · Elegir objetivos y tendencias (hasta 5)",
+   "x": 1360,
+   "y": 1340
+  },
+  "ComCabeceraAdmin.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "KC-s · Cabecera vista por el superadmin: datos del CRM editables",
+   "x": 2720,
+   "y": 1340
   }
  },
  "createdOnFiles": {
@@ -2483,6 +2563,78 @@
    "x": 0,
    "y": 2320
   },
+  "busN3": {
+   "maxH": 520,
+   "page": "busqueda",
+   "size": 20,
+   "text": "Pasado del Figma 00_MB_Busqueda a Agroolink:\n• Marca Farms4You → Agroolink; campana → sobre de mensajes.\n• Barra inferior Inicio/Buscar/Guardados/Perfil → la nuestra (Explorar, Proyectos, Tableros, Tú).\n• Categorías inventadas (Salud animal, Manejo, Ambiente) → árbol v2: 12 familias › grupos › tipos.\n• «Pequeños rumiantes» → Ovino y Caprino por separado (especies v2), + Cunicultura.\n• Especie → producción → subtipo (Broilers) y luego categoría opcional.\n• Hoja de filtros: añadida Enfermedad y la regla de combinación siempre visible.\n• No incluyo splash ni home de marketing: no son búsqueda.",
+   "w": 420,
+   "x": 4250,
+   "y": 4000
+  },
+  "busT1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "busqueda",
+   "text": "Búsqueda · escritorio 1920 px (contenedor 1708 px, como Vevor): filtros en barra superior",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "busT2": {
+   "kind": "title1",
+   "maxW": 1400,
+   "page": "busqueda",
+   "text": "Búsqueda · móvil",
+   "w": 240,
+   "x": 0,
+   "y": 2580
+  },
+  "busT3": {
+   "kind": "title1",
+   "maxW": 4200,
+   "page": "busqueda",
+   "text": "Búsqueda · móvil desde el Figma (flujo por especie y por categoría)",
+   "w": 240,
+   "x": 0,
+   "y": 3880
+  },
+  "busT4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "busqueda",
+   "text": "Búsqueda combinada tipo Airbnb: una barra (Qué · Especie · Categoría · Enfermedad) en la home y compacta en resultados",
+   "w": 240,
+   "x": 0,
+   "y": 4980
+  },
+  "busT5": {
+   "kind": "title1",
+   "maxW": 6700,
+   "page": "busqueda",
+   "text": "Cabecera con búsqueda combinada según el tamaño de pantalla (propuesta: sin Categorías / Especies junto al logo)",
+   "w": 240,
+   "x": 0,
+   "y": 7300
+  },
+  "busT6": {
+   "kind": "title1",
+   "maxW": 7920,
+   "page": "busqueda",
+   "text": "Caso complejo: veterinario con broilers y lechones · 2 especies × 5 categorías en 3 niveles × 2 enfermedades compartidas",
+   "w": 240,
+   "x": 0,
+   "y": 8380
+  },
+  "busT7": {
+   "kind": "title1",
+   "maxW": 2400,
+   "page": "busqueda",
+   "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa",
+   "w": 240,
+   "x": 0,
+   "y": 9780
+  },
   "cfgTitulo": {
    "kind": "title1",
    "maxW": 6720,
@@ -2503,18 +2655,18 @@
   },
   "comT1": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 10800,
    "page": "comerciales",
-   "text": "Alta · Fabricante con equipo comercial propio (Zucami)",
+   "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a datos del CRM · K1a/K1 tipo · a su derecha, los editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
   },
   "comT2": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 10800,
    "page": "comerciales",
-   "text": "Contacto, publicación y la bandeja de cada comercial",
+   "text": "2 · La ficha: cabecera (KC) con su modal de objetivos y la vista superadmin · luego equipo, zonas, contacto, publicar y la bandeja de cada comercial",
    "w": 240,
    "x": 0,
    "y": 1040
@@ -2593,7 +2745,7 @@
   },
   "fabT1": {
    "kind": "title1",
-   "maxW": 12160,
+   "maxW": 8000,
    "page": "fabdist",
    "text": "1 · Empresa y tipo — D0a empresa del CRM · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
    "w": 240,
@@ -2602,12 +2754,21 @@
   },
   "fabT2": {
    "kind": "title1",
-   "maxW": 12160,
+   "maxW": 8000,
    "page": "fabdist",
    "text": "2 · La ficha — D2 cabecera · a su derecha, el modal de objetivos (D2b) y la vista superadmin (D2s) · luego D3 a D8",
    "w": 240,
    "x": 0,
    "y": 1040
+  },
+  "fabT3": {
+   "kind": "title1",
+   "maxW": 5000,
+   "page": "fabdist",
+   "text": "Componente · constructor de ficha (barra y secciones)",
+   "w": 240,
+   "x": 0,
+   "y": 2380
   },
   "figT0": {
    "kind": "title1",
@@ -2969,80 +3130,6 @@
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "busT1": {
-   "kind": "title1",
-   "x": 0,
-   "y": -300,
-   "maxW": 11920,
-   "page": "busqueda",
-   "text": "Búsqueda · escritorio 1920 px (contenedor 1708 px, como Vevor): filtros en barra superior"
-  },
-  "busT2": {
-   "kind": "title1",
-   "x": 0,
-   "y": 2580,
-   "maxW": 1400,
-   "page": "busqueda",
-   "text": "Búsqueda · móvil"
-  },
-  "busT3": {
-   "kind": "title1",
-   "x": 0,
-   "y": 3880,
-   "maxW": 4200,
-   "page": "busqueda",
-   "text": "Búsqueda · móvil desde el Figma (flujo por especie y por categoría)"
-  },
-  "busN3": {
-   "x": 4250,
-   "y": 4000,
-   "w": 420,
-   "maxH": 520,
-   "page": "busqueda",
-   "fill": "yellow",
-   "size": 20,
-   "text": "Pasado del Figma 00_MB_Busqueda a Agroolink:\n• Marca Farms4You → Agroolink; campana → sobre de mensajes.\n• Barra inferior Inicio/Buscar/Guardados/Perfil → la nuestra (Explorar, Proyectos, Tableros, Tú).\n• Categorías inventadas (Salud animal, Manejo, Ambiente) → árbol v2: 12 familias › grupos › tipos.\n• «Pequeños rumiantes» → Ovino y Caprino por separado (especies v2), + Cunicultura.\n• Especie → producción → subtipo (Broilers) y luego categoría opcional.\n• Hoja de filtros: añadida Enfermedad y la regla de combinación siempre visible.\n• No incluyo splash ni home de marketing: no son búsqueda."
-  },
-  "busT4": {
-   "kind": "title1",
-   "x": 0,
-   "y": 4980,
-   "maxW": 10400,
-   "page": "busqueda",
-   "text": "Búsqueda combinada tipo Airbnb: una barra (Qué · Especie · Categoría · Enfermedad) en la home y compacta en resultados"
-  },
-  "busT5": {
-   "kind": "title1",
-   "x": 0,
-   "y": 7300,
-   "maxW": 6700,
-   "page": "busqueda",
-   "text": "Cabecera con búsqueda combinada según el tamaño de pantalla (propuesta: sin Categorías / Especies junto al logo)"
-  },
-  "busT6": {
-   "kind": "title1",
-   "x": 0,
-   "y": 8380,
-   "maxW": 7920,
-   "page": "busqueda",
-   "text": "Caso complejo: veterinario con broilers y lechones · 2 especies × 5 categorías en 3 niveles × 2 enfermedades compartidas"
-  },
-  "busT7": {
-   "kind": "title1",
-   "x": 0,
-   "y": 9780,
-   "maxW": 2400,
-   "page": "busqueda",
-   "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa"
-  },
-  "fabT3": {
-   "kind": "title1",
-   "x": 0,
-   "y": 2380,
-   "maxW": 5000,
-   "page": "fabdist",
-   "text": "Componente · constructor de ficha (barra y secciones)"
   }
  },
  "order": [
@@ -3147,7 +3234,17 @@
   "CompVista.dc.html",
   "CompOtroTipo.dc.html",
   "CompSolicitar.dc.html",
+  "ComCRM.dc.html",
+  "ComTipoVacio.dc.html",
   "ComTipo.dc.html",
+  "ComTipoEspeciesTodas.dc.html",
+  "ComTipoEspecies.dc.html",
+  "ComTipoEspeciesSolo.dc.html",
+  "ComTipoRama.dc.html",
+  "ComTipoMercados.dc.html",
+  "ComCabecera.dc.html",
+  "ComCabeceraObjetivos.dc.html",
+  "ComCabeceraAdmin.dc.html",
   "ComEquipo.dc.html",
   "ComZonas.dc.html",
   "ComContacto.dc.html",
@@ -3411,7 +3508,7 @@
   },
   {
    "id": "fabdist",
-   "name": "Alta · Fabricante con distribuidores"
+   "name": "006_Alta · Fabricante con distribuidores"
   },
   {
    "id": "comerciales",
