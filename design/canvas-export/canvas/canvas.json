@@ -2988,6 +2988,278 @@
    "x": 9520,
    "y": 5180,
    "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)"
+  },
+  "MvMobHeaderSinSesion.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "movil2",
+   "x": 0,
+   "y": 0,
+   "title": "Sin sesión"
+  },
+  "MvMobHeaderSesion.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "movil2",
+   "x": 470,
+   "y": 0,
+   "title": "Con sesión"
+  },
+  "MvMobHeaderTu.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "movil2",
+   "x": 940,
+   "y": 0,
+   "title": "«Tú»"
+  },
+  "MvMobHome.dc.html": {
+   "w": 390,
+   "h": 2010,
+   "page": "movil2",
+   "x": 1410,
+   "y": 0,
+   "title": "Home"
+  },
+  "MvBuscaMovResultados.dc.html": {
+   "w": 390,
+   "h": 1370,
+   "page": "movil2",
+   "x": 0,
+   "y": 2430,
+   "title": "Resultados"
+  },
+  "MvBuscaMovEspecie.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "movil2",
+   "x": 470,
+   "y": 2430,
+   "title": "Buscar por pasos"
+  },
+  "MvBuscaMovCategoria.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "movil2",
+   "x": 940,
+   "y": 2430,
+   "title": "Categoría"
+  },
+  "MvBuscaMovFiltros.dc.html": {
+   "w": 390,
+   "h": 2380,
+   "page": "movil2",
+   "x": 1410,
+   "y": 2430,
+   "title": "Filtros"
+  },
+  "MvMP1.dc.html": {
+   "w": 390,
+   "h": 1510,
+   "page": "movil2",
+   "x": 0,
+   "y": 5230,
+   "title": "Especies"
+  },
+  "MvMP2.dc.html": {
+   "w": 390,
+   "h": 2810,
+   "page": "movil2",
+   "x": 470,
+   "y": 5230,
+   "title": "Categoría"
+  },
+  "MvMP3.dc.html": {
+   "w": 390,
+   "h": 1890,
+   "page": "movil2",
+   "x": 940,
+   "y": 5230,
+   "title": "Mercados"
+  },
+  "MvMP4.dc.html": {
+   "w": 390,
+   "h": 1730,
+   "page": "movil2",
+   "x": 1410,
+   "y": 5230,
+   "title": "Identidad (idioma detectado)"
+  },
+  "MvMP5.dc.html": {
+   "w": 390,
+   "h": 2090,
+   "page": "movil2",
+   "x": 1880,
+   "y": 5230,
+   "title": "Datos técnicos"
+  },
+  "MvMP6.dc.html": {
+   "w": 390,
+   "h": 1200,
+   "page": "movil2",
+   "x": 2350,
+   "y": 5230,
+   "title": "Aplicación por especie"
+  },
+  "MvMP7.dc.html": {
+   "w": 390,
+   "h": 1400,
+   "page": "movil2",
+   "x": 2820,
+   "y": 5230,
+   "title": "Fotos, vídeos y documentos"
+  },
+  "MvMP8.dc.html": {
+   "w": 390,
+   "h": 2180,
+   "page": "movil2",
+   "x": 3290,
+   "y": 5230,
+   "title": "Certificaciones"
+  },
+  "MvMP9.dc.html": {
+   "w": 390,
+   "h": 1750,
+   "page": "movil2",
+   "x": 3760,
+   "y": 5230,
+   "title": "Revisión"
+  },
+  "MvME1.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "movil2",
+   "x": 0,
+   "y": 8460,
+   "title": "Mis productos"
+  },
+  "MvME2.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "movil2",
+   "x": 470,
+   "y": 8460,
+   "title": "Menú ⋯"
+  },
+  "MvME3.dc.html": {
+   "w": 390,
+   "h": 3750,
+   "page": "movil2",
+   "x": 940,
+   "y": 8460,
+   "title": "Editar por bloques"
+  },
+  "MvME4.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "movil2",
+   "x": 1410,
+   "y": 8460,
+   "title": "Guardar y avisar"
+  },
+  "MvME5.dc.html": {
+   "w": 390,
+   "h": 3320,
+   "page": "movil2",
+   "x": 1880,
+   "y": 8460,
+   "title": "Traducciones"
+  },
+  "MvME6.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "movil2",
+   "x": 2350,
+   "y": 8460,
+   "title": "Ficha en inglés"
+  },
+  "MvMS1.dc.html": {
+   "w": 390,
+   "h": 2620,
+   "page": "movil2",
+   "x": 0,
+   "y": 12630,
+   "title": "Tipo de servicio"
+  },
+  "MvMS2.dc.html": {
+   "w": 390,
+   "h": 1230,
+   "page": "movil2",
+   "x": 470,
+   "y": 12630,
+   "title": "Especies"
+  },
+  "MvMS3.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "movil2",
+   "x": 940,
+   "y": 12630,
+   "title": "Dirigido a"
+  },
+  "MvMS4.dc.html": {
+   "w": 390,
+   "h": 1390,
+   "page": "movil2",
+   "x": 1410,
+   "y": 12630,
+   "title": "Dónde lo prestas"
+  },
+  "MvMS5.dc.html": {
+   "w": 390,
+   "h": 2050,
+   "page": "movil2",
+   "x": 1880,
+   "y": 12630,
+   "title": "Detalles"
+  },
+  "MvMS6.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "movil2",
+   "x": 2350,
+   "y": 12630,
+   "title": "Revisión"
+  },
+  "MvMS7.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "movil2",
+   "x": 2820,
+   "y": 12630,
+   "title": "Mis servicios"
+  },
+  "MvMJ1.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "movil2",
+   "x": 0,
+   "y": 15670,
+   "title": "Bienvenida"
+  },
+  "MvMJ2.dc.html": {
+   "w": 390,
+   "h": 1470,
+   "page": "movil2",
+   "x": 470,
+   "y": 15670,
+   "title": "Una pregunta por pantalla"
+  },
+  "MvMJ3.dc.html": {
+   "w": 390,
+   "h": 1860,
+   "page": "movil2",
+   "x": 940,
+   "y": 15670,
+   "title": "Resumen"
+  },
+  "MvMJ4.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "movil2",
+   "x": 1410,
+   "y": 15670,
+   "title": "Editar desde el resumen"
   }
  },
  "createdOnFiles": {
@@ -3678,6 +3950,70 @@
    "x": 0,
    "y": 4840,
    "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu"
+  },
+  "m2t0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Navegación · cabecera y menú inferior nuevos (Explorar · Proyectos · Tableros · Tú)"
+  },
+  "m2t1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 2130,
+   "text": "Búsqueda y filtros (de 005)"
+  },
+  "m2t2": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 4930,
+   "text": "Alta de producto (prototipo crear-producto)"
+  },
+  "m2t3": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 8160,
+   "text": "Mis productos, edición y traducciones"
+  },
+  "m2t4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 12330,
+   "text": "Alta de servicios del experto (prototipo crear-servicio)"
+  },
+  "m2t5": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 15370,
+   "text": "Proyectos (prototipo crear-proyecto)"
+  },
+  "m2dev": {
+   "fill": "orange",
+   "maxH": 320,
+   "page": "movil2",
+   "size": 24,
+   "w": 1280,
+   "x": 4400,
+   "y": -300,
+   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nPendiente de pasar a móvil: alta de empresa (006–010), catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   }
  },
  "order": [
@@ -4053,7 +4389,41 @@
   "ServExpDetalles.dc.html",
   "ServExpCondiciones.dc.html",
   "ServExpRevision.dc.html",
-  "ServExpLista.dc.html"
+  "ServExpLista.dc.html",
+  "MvMobHeaderSinSesion.dc.html",
+  "MvMobHeaderSesion.dc.html",
+  "MvMobHeaderTu.dc.html",
+  "MvMobHome.dc.html",
+  "MvBuscaMovResultados.dc.html",
+  "MvBuscaMovEspecie.dc.html",
+  "MvBuscaMovCategoria.dc.html",
+  "MvBuscaMovFiltros.dc.html",
+  "MvMP1.dc.html",
+  "MvMP2.dc.html",
+  "MvMP3.dc.html",
+  "MvMP4.dc.html",
+  "MvMP5.dc.html",
+  "MvMP6.dc.html",
+  "MvMP7.dc.html",
+  "MvMP8.dc.html",
+  "MvMP9.dc.html",
+  "MvME1.dc.html",
+  "MvME2.dc.html",
+  "MvME3.dc.html",
+  "MvME4.dc.html",
+  "MvME5.dc.html",
+  "MvME6.dc.html",
+  "MvMS1.dc.html",
+  "MvMS2.dc.html",
+  "MvMS3.dc.html",
+  "MvMS4.dc.html",
+  "MvMS5.dc.html",
+  "MvMS6.dc.html",
+  "MvMS7.dc.html",
+  "MvMJ1.dc.html",
+  "MvMJ2.dc.html",
+  "MvMJ3.dc.html",
+  "MvMJ4.dc.html"
  ],
  "pages": [
   {
@@ -4147,6 +4517,10 @@
   {
    "id": "altaserv",
    "name": "012_Alta servicios · 5 escenarios"
+  },
+  {
+   "id": "movil2",
+   "name": "013_Móvil · todo lo trabajado"
   },
   {
    "id": "servicios",
