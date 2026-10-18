@@ -453,9 +453,9 @@
   "ComZonas.dc.html": {
    "h": 940,
    "page": "comerciales",
-   "title": "K3 · Zonas de cada comercial",
+   "title": "K3 · Detalle del comercial: datos y zona que cubre (se abre desde el equipo)",
    "w": 1280,
-   "x": 9520,
+   "x": 5440,
    "y": 1340
   },
   "CompNueva1.dc.html": {
@@ -2546,7 +2546,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
-   "x": 5440,
+   "x": 6800,
    "y": 1340
   },
   "ComEmailSolicitud.dc.html": {
@@ -2554,7 +2554,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
-   "x": 6800,
+   "x": 8160,
    "y": 1340
   },
   "ComAltaComercial.dc.html": {
@@ -2562,7 +2562,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K2d · El comercial se da de alta para ver la solicitud",
-   "x": 8160,
+   "x": 9520,
    "y": 1340
   }
  },
@@ -3288,10 +3288,10 @@
   "ComCabeceraObjetivos.dc.html",
   "ComCabeceraAdmin.dc.html",
   "ComEquipo.dc.html",
+  "ComZonas.dc.html",
   "ComEquipoCrear.dc.html",
   "ComEmailSolicitud.dc.html",
   "ComAltaComercial.dc.html",
-  "ComZonas.dc.html",
   "ComContacto.dc.html",
   "ComPublicar.dc.html",
   "ComBandeja.dc.html",
