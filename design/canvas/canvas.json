@@ -2824,9 +2824,9 @@
   "SucEsSucursal.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursales",
+   "page": "sucursal",
    "x": 4080,
-   "y": 2680,
+   "y": 0,
    "title": "S3 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país"
   },
   "EmpConsultor.dc.html": {
@@ -2840,25 +2840,25 @@
   "SucAltaCRM.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursales",
+   "page": "sucursal",
    "x": 0,
-   "y": 2680,
+   "y": 0,
    "title": "S3a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen"
   },
   "SucAltaVerifica.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursales",
+   "page": "sucursal",
    "x": 1360,
-   "y": 2680,
+   "y": 0,
    "title": "S3b · Confirma tu email de empresa"
   },
   "SucAltaSede.dc.html": {
    "w": 1280,
    "h": 940,
-   "page": "sucursales",
+   "page": "sucursal",
    "x": 2720,
-   "y": 2680,
+   "y": 0,
    "title": "S3c · Aviso a la Sede y al superadmin: la sucursal entra directamente"
   }
  },
@@ -3470,11 +3470,11 @@
   "sucT3": {
    "kind": "title1",
    "maxW": 5400,
-   "page": "sucursales",
+   "page": "sucursal",
    "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c aviso a la Sede y al superadmin · S3 tipo de empresa",
    "w": 240,
    "x": 0,
-   "y": 2380
+   "y": -300
   },
   "empConsultor": {
    "kind": "title1",
@@ -3913,6 +3913,10 @@
   {
    "id": "sucursales",
    "name": "Alta · Fabricante con sucursales"
+  },
+  {
+   "id": "sucursal",
+   "name": "Alta · Sucursal de un grupo (Aviagen Ibérica)"
   },
   {
    "id": "distmulti",
