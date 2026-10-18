@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
 a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
 .lbl{font-size:13px;font-weight:500;display:flex;flex-direction:column;gap:6px;min-width:0}
 .inp{height:40px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
@@ -37,17 +37,17 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
       <button type="button" aria-label="Cerrar" style="width: 34px; height: 34px; border: 0; background: none; color: #56615B; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
     <label class="lbl">Tu mensaje
-      <textarea rows="3" style="border: 1px solid #D5DED8; border-radius: 10px; padding: 10px 12px; font: 400 13.5px 'Poppins', sans-serif; color: #17231D; resize: none; line-height: 1.5;">Hola, me interesa este producto para una granja de broilers. ¿Podéis enviarme precio y disponibilidad?</textarea>
+      <textarea rows="3" style="border: 1px solid #D5DED8; border-radius: 10px; padding: 10px 12px; font: 400 13.5px 'Poppins', sans-serif; color: #17231D; resize: none; line-height: 1.35;">Hola, me interesa este producto para una granja de broilers. ¿Podéis enviarme precio y disponibilidad?</textarea>
     </label>
     <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #F6F8F6;">
-      <span style="font-size: 12.5px; color: #2F3D36; line-height: 1.45;"><strong>Solo esta vez:</strong> AgroExport ya verá tu nombre, Granja Los Olmos y tu cargo. Para responderte mejor, añade:</span>
+      <span style="font-size: 12.5px; color: #2F3D36; line-height: 1.32;"><strong>Solo esta vez:</strong> AgroExport ya verá tu nombre, Granja Los Olmos y tu cargo. Para responderte mejor, añade:</span>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
         <label class="lbl"><span>Provincia de la explotación</span><select class="inp"><option>Selecciona</option><option>Lleida</option><option>Huesca</option><option>Segovia</option></select></label>
         <label class="lbl"><span>Teléfono <span class="opt">(opcional)</span></span><input class="inp" type="tel" placeholder="+34"></label>
         <label class="lbl"><span>Tamaño <span class="opt">(opcional)</span></span><select class="inp"><option>Selecciona</option><option>Menos de 20.000 aves</option><option>20.000 – 100.000 aves</option><option>Más de 100.000 aves</option></select></label>
       </div>
     </div>
-    <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; color: #2F3D36; line-height: 1.45; cursor: pointer;">
+    <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; color: #2F3D36; line-height: 1.32; cursor: pointer;">
       <input type="checkbox" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; width: 17px; height: 17px; margin: 1px 0 0; flex: none;">
       <span>Compartiremos tu nombre, email y estos datos con AgroExport SRL para que pueda responderte. <a href="#">Más información</a></span>
     </label>

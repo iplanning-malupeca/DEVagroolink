@@ -21,7 +21,7 @@
 
 
 html,body{height:100%}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.5}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.35}
 *{box-sizing:border-box}
 button,input,textarea,select{font:inherit;color:inherit}
 :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
@@ -56,7 +56,7 @@ h1.t{margin:0;font-size:clamp(23px,3.4vw,30px);font-weight:600;letter-spacing:-.
 .card .ic{width:38px;height:38px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
 .card[aria-pressed="true"] .ic{background:var(--accent);color:var(--accent-ink)}
 .card .tt{font-weight:600;font-size:15px;display:block}
-.card .dd{font-size:13px;color:var(--muted);display:block;line-height:1.4}
+.card .dd{font-size:13px;color:var(--muted);display:block;line-height:1.3}
 .key{font-size:11px;font-weight:600;border:1px solid var(--line2);border-radius:5px;padding:0 6px;color:var(--muted);margin-left:auto;flex:none;line-height:20px}
 .card[aria-pressed="true"] .key{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .opts{display:flex;flex-direction:column;gap:8px}
@@ -73,7 +73,7 @@ h1.t{margin:0;font-size:clamp(23px,3.4vw,30px);font-weight:600;letter-spacing:-.
 .chip.sub[aria-pressed="true"]{background:var(--soft2);border-color:var(--soft2);color:var(--accent)}.chip.pt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
 input.in,textarea.in,select.in{width:100%;border:0;border-bottom:2px solid var(--line2);background:transparent;padding:10px 2px;font-size:20px;outline:none}
 input.in:focus,textarea.in:focus,select.in:focus{border-color:var(--accent)}
-textarea.in{font-size:16px;line-height:1.55;border:1.5px solid var(--line2);border-radius:12px;padding:12px 14px;min-height:150px;resize:vertical}
+textarea.in{font-size:16px;line-height:1.38;border:1.5px solid var(--line2);border-radius:12px;padding:12px 14px;min-height:150px;resize:vertical}
 textarea.in:focus{border-color:var(--accent)}
 .box{border:1.5px solid var(--line2);border-radius:12px;padding:10px 12px;font-size:15px;background:var(--bg);width:100%}
 .box:focus{border-color:var(--accent);outline:none}
@@ -146,7 +146,7 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:50
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:9}
 .copt .cc{width:30px;height:22px;border-radius:6px;background:var(--bg2);border:1px solid var(--line);font-size:10.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;flex:none}.copt[aria-selected="true"] .cc{background:var(--accent);border-color:var(--accent);color:#FFFFFF}.clist{max-height:300px}
 [hidden]{display:none!important}
-body{margin:0}
+body{margin:0;line-height:1.3}
 .q.enter{animation:none}</style>
 </helmet>
 <div style="width: 1280px; height: 900px; overflow: hidden; background: #FFFFFF; font-family: 'Poppins', sans-serif;"><div class="app">

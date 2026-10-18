@@ -11,10 +11,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
 a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
 .seg{height:40px;padding:0 18px;border:0;border-radius:999px;font:500 14px 'Poppins',sans-serif;cursor:pointer}
-.feat{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#2F3D36}
+.feat{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.32;color:#2F3D36}
 .tr{display:grid;align-items:center;min-height:42px;border-bottom:1px solid #EEF1EE;font-size:13.5px}
 .tr > span{padding:8px 14px}
 .faq{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
@@ -27,7 +27,7 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
 
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;">
       <h1 style="margin: 0; font-size: 38px; font-weight: 700; letter-spacing: -0.02em;">Planes de Agroolink</h1>
-      <p style="margin: 0; font-size: 16px; color: #4A5650; max-width: 620px; line-height: 1.5;">Empieza gratis. Preguntar y responder nunca se cobra: pagas solo por gestionar mejor y por nuevas oportunidades.</p>
+      <p style="margin: 0; font-size: 16px; color: #4A5650; max-width: 620px; line-height: 1.35;">Empieza gratis. Preguntar y responder nunca se cobra: pagas solo por gestionar mejor y por nuevas oportunidades.</p>
       <div role="tablist" aria-label="Tipo de plan" style="display: flex; gap: 4px; padding: 4px; background: #E7EEE9; border-radius: 999px; margin-top: 12px;">
         <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
           <button type="button" role="tab" aria-selected="{{ t.sel }}" class="seg" onClick="{{ t.pick }}" style="background: {{ t.fondo }}; color: {{ t.tinta }}; box-shadow: {{ t.sombra }};">{{ t.label }}</button>
@@ -115,10 +115,10 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
     <section aria-label="Preguntas frecuentes" style="display: flex; flex-direction: column; gap: 12px;">
       <h2 style="margin: 0; font-size: 22px; font-weight: 600;">Preguntas frecuentes</h2>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
-        <div class="faq"><strong style="font-size: 14.5px;">¿Tengo que pagar para responder consultas?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">No. Empresas y expertos responden gratis dentro de Agroolink. Los planes de pago añaden gestión de leads, oportunidades y visibilidad.</span></div>
-        <div class="faq"><strong style="font-size: 14.5px;">¿Qué pasa si bajo de plan?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">Nada se borra. Lo que supere el límite del nuevo plan queda en solo lectura hasta que vuelvas a subir o lo reduzcas.</span></div>
-        <div class="faq"><strong style="font-size: 14.5px;">¿Cómo funciona la Oferta Empresa Fundadora?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">Para las 100 primeras empresas que contraten Pro o Premium en pago anual antes del 30/06/2027. El precio se mantiene 24 meses mientras sigas suscrito.</span></div>
-        <div class="faq"><strong style="font-size: 14.5px;">Soy experto y también compro, ¿pago dos veces?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.5;">No. Experto Pro incluye todas las ventajas de Comprador Pro. El plan de tu empresa es aparte y lo paga la empresa.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Tengo que pagar para responder consultas?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">No. Empresas y expertos responden gratis dentro de Agroolink. Los planes de pago añaden gestión de leads, oportunidades y visibilidad.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Qué pasa si bajo de plan?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">Nada se borra. Lo que supere el límite del nuevo plan queda en solo lectura hasta que vuelvas a subir o lo reduzcas.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Cómo funciona la Oferta Empresa Fundadora?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">Para las 100 primeras empresas que contraten Pro o Premium en pago anual antes del 30/06/2027. El precio se mantiene 24 meses mientras sigas suscrito.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">Soy experto y también compro, ¿pago dos veces?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">No. Experto Pro incluye todas las ventajas de Comprador Pro. El plan de tu empresa es aparte y lo paga la empresa.</span></div>
       </div>
     </section>
   </div>
