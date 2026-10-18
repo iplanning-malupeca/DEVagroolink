@@ -1,0 +1,21 @@
+const wait=ms=>new Promise(r=>setTimeout(r,ms)); await wait(500);
+const q=s=>{const e=document.querySelector(s); if(!e) throw new Error('no '+s); return e;};
+const click=a=>q(`[data-act="${a}"]`).click();
+const type=(sel,val)=>{const e=q(sel); e.value=val; e.dispatchEvent(new Event('input',{bubbles:true})); e.dispatchEvent(new Event('change',{bubbles:true}));};
+const css=document.querySelector('style').textContent;
+async function snap(name,title,conLayer){ await wait(150); document.querySelectorAll('.toast').forEach(t=>t.remove()); scrollTo(0,0);
+  const h=Math.max(900, Math.ceil(document.documentElement.scrollHeight/10)*10);
+  const body=document.querySelector('header.top').outerHTML+document.querySelector('.wrap').outerHTML+(conLayer?document.getElementById('layer').innerHTML:'');
+  await fetch('/save?name='+name,{method:'POST',body:JSON.stringify({title,h,css,body})}); return name+':'+h; }
+const out=[];
+window.__cat(); click('editar|demo1'); click('babrir|traducciones');
+type('[data-tr2="ident:corta|en"]','Complete feed for laying hens in the laying phase, with coarse-particle calcium.');
+click('tl|pt'); click('trok|ident:corta|pt'); click('tl|en');
+out.push(await snap('L1','Traducciones'));
+click('bcerrar'); click('babrir|identidad'); type('#i-corta','Pienso completo para gallinas ponedoras en puesta, con calcio de partícula gruesa y vitamina D3.'); click('baplicar'); click('babrir|traducciones');
+out.push(await snap('L2','Original cambiado'));
+click('bdescartar'); click('publica'); click('fl|en'); out.push(await snap('L3','Ficha en inglés',true)); click('cerrar');
+click('volvercat'); click('editar|demo0'); click('babrir|traducciones'); out.push(await snap('L4','Vacuna sensibles'));
+click('bcerrar'); click('publica'); click('fl|fr'); out.push(await snap('L5','Vacuna en francés',true)); click('cerrar');
+window.__demo('cero');
+return out.join(' ');

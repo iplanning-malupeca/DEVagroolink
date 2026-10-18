@@ -6895,6 +6895,106 @@
    "efecto": "En productos multiespecie la certificación se registra una vez, con restricciones por especie o mercado si las hay"
   }
  ],
+ "traduccion": {
+  "idiomas": {
+   "es": "Español",
+   "en": "Inglés",
+   "pt": "Portugués",
+   "fr": "Francés"
+  },
+  "traducibles": [
+   "descripcion_corta",
+   "descripcion",
+   "atributos de texto",
+   "datos propios",
+   "aplicación por especie (texto)",
+   "perfil de empresa y experto",
+   "servicios",
+   "proyectos"
+  ],
+  "no_traducir": [
+   "nombre comercial",
+   "marca",
+   "cepa",
+   "principio activo",
+   "referencia interna",
+   "cifras y unidades",
+   "documentos PDF (uno por idioma)"
+  ],
+  "sensibles": [
+   "indicacion",
+   "dosis",
+   "posologia",
+   "espera",
+   "retirada",
+   "contraindicaciones",
+   "advertencias",
+   "momento",
+   "edad",
+   "primovacunacion",
+   "revacunacion",
+   "duracion"
+  ],
+  "estados": {
+   "auto": "Automática",
+   "rev": "Revisada",
+   "edit": "Editada a mano",
+   "desact": "Desactualizada: el original cambió"
+  },
+  "reglas": [
+   "Cada campo guarda su idioma de origen (detectado al guardar; el usuario puede corregirlo).",
+   "Se traduce al publicar o al cambiar el original, nunca en cada visita.",
+   "Si cambia el original: las automáticas y revisadas se rehacen (vuelven a «Automática»); las editadas a mano no se pisan y pasan a «Desactualizada».",
+   "En fármacos, vacunas y biocidas los campos sensibles no se publican traducidos sin revisión: se muestra el original con «Traducción no revisada: consulte la ficha técnica oficial».",
+   "El comprador ve «Traducido automáticamente · Ver original» si la traducción no está revisada ni editada.",
+   "Los mensajes no se guardan traducidos: botón «Traducir» al leer; el original queda como constancia.",
+   "El glosario del sector y la lista de términos que no se traducen los gestiona el superadmin."
+  ],
+  "glosario": [
+   {
+    "es": "Pollos de engorde",
+    "en": "Broilers",
+    "pt": "Frangos de corte",
+    "fr": "Poulets de chair"
+   },
+   {
+    "es": "Gallinas ponedoras",
+    "en": "Laying hens",
+    "pt": "Galinhas poedeiras",
+    "fr": "Poules pondeuses"
+   },
+   {
+    "es": "Lechones",
+    "en": "Piglets",
+    "pt": "Leitões",
+    "fr": "Porcelets"
+   },
+   {
+    "es": "Cebo",
+    "en": "Finishing pigs",
+    "pt": "Engorda",
+    "fr": "Engraissement"
+   },
+   {
+    "es": "Pienso",
+    "en": "Feed",
+    "pt": "Ração",
+    "fr": "Aliment"
+   },
+   {
+    "es": "Tiempo de espera",
+    "en": "Withdrawal period",
+    "pt": "Intervalo de segurança",
+    "fr": "Temps d'attente"
+   },
+   {
+    "es": "Micotoxinas",
+    "en": "Mycotoxins",
+    "pt": "Micotoxinas",
+    "fr": "Mycotoxines"
+   }
+  ]
+ },
  "certificaciones": [
   {
    "id": "eco_autorizado",

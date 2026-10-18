@@ -50,6 +50,110 @@
    "x": 0,
    "y": 5420
   },
+  "BuscaAutocompletar.dc.html": {
+   "h": 1120,
+   "page": "busqueda",
+   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "BuscaCategoria.dc.html": {
+   "h": 1630,
+   "page": "busqueda",
+   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "BuscaEnfermedad.dc.html": {
+   "h": 2060,
+   "page": "busqueda",
+   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "BuscaEspecie.dc.html": {
+   "h": 1630,
+   "page": "busqueda",
+   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "BuscaFiltros.dc.html": {
+   "h": 2200,
+   "page": "busqueda",
+   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»",
+   "w": 1280,
+   "x": 9520,
+   "y": 0
+  },
+  "BuscaMovCategoria.dc.html": {
+   "h": 850,
+   "page": "busqueda",
+   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»",
+   "w": 390,
+   "x": 940,
+   "y": 2620
+  },
+  "BuscaMovEspecie.dc.html": {
+   "h": 860,
+   "page": "busqueda",
+   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)",
+   "w": 390,
+   "x": 470,
+   "y": 2620
+  },
+  "BuscaMovFiltros.dc.html": {
+   "h": 2380,
+   "page": "busqueda",
+   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»",
+   "w": 390,
+   "x": 1410,
+   "y": 2620
+  },
+  "BuscaMovResultados.dc.html": {
+   "h": 1370,
+   "page": "busqueda",
+   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan",
+   "w": 390,
+   "x": 0,
+   "y": 2620
+  },
+  "BuscaResultados.dc.html": {
+   "h": 1120,
+   "page": "busqueda",
+   "title": "B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se comb",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "BuscaSinResultados.dc.html": {
+   "h": 860,
+   "page": "busqueda",
+   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto",
+   "w": 1280,
+   "x": 10880,
+   "y": 0
+  },
+  "BuscaTecnicos.dc.html": {
+   "h": 860,
+   "page": "busqueda",
+   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)",
+   "w": 1280,
+   "x": 8160,
+   "y": 0
+  },
+  "BuscaVarios.dc.html": {
+   "h": 860,
+   "page": "busqueda",
+   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
   "Checkout.dc.html": {
    "h": 900,
    "page": "planes",
@@ -129,6 +233,14 @@
    "w": 1280,
    "x": 10880,
    "y": 1340
+  },
+  "ComCrear.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   },
   "ComEmailSolicitud.dc.html": {
    "h": 940,
@@ -274,6 +386,14 @@
    "x": 0,
    "y": 1300
   },
+  "CompTamanos.dc.html": {
+   "h": 1000,
+   "page": "componentes",
+   "title": "Tamaños y anchos para todo el proyecto (inspirado en vevor.es, con Poppins)",
+   "w": 1280,
+   "x": 6800,
+   "y": 0
+  },
   "CompVista.dc.html": {
    "h": 900,
    "page": "tableros",
@@ -289,78 +409,6 @@
    "w": 1280,
    "x": 0,
    "y": 1180
-  },
-  "CuentaAyuda.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "C4 · Mi cuenta · Ayuda y contacto",
-   "w": 1280,
-   "x": 4080,
-   "y": 3720
-  },
-  "CuentaCompras.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2 · Mi cuenta · Facturación · resumen (centralizado, reflejado aquí)",
-   "w": 1280,
-   "x": 1360,
-   "y": 3720
-  },
-  "CuentaDirecciones.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2e · Facturación · Direcciones",
-   "w": 1280,
-   "x": 5440,
-   "y": 5200
-  },
-  "CuentaFacturas.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2c · Facturación · Facturas",
-   "w": 1280,
-   "x": 2720,
-   "y": 5200
-  },
-  "CuentaIdioma.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "C3 · Mi cuenta · Idioma y zona",
-   "w": 1280,
-   "x": 2720,
-   "y": 3720
-  },
-  "CuentaPagos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2d · Facturación · Métodos de pago",
-   "w": 1280,
-   "x": 4080,
-   "y": 5200
-  },
-  "CuentaPedidos.dc.html": {
-   "h": 980,
-   "page": "intranet",
-   "title": "C2b · Facturación · Pedidos (detalle a la derecha)",
-   "w": 1280,
-   "x": 1360,
-   "y": 5200
-  },
-  "CuentaPerfil.dc.html": {
-   "h": 1100,
-   "page": "intranet",
-   "title": "C1 · Mi cuenta · Mi perfil (datos de la cuenta global + lo propio de Agroolink)",
-   "w": 1280,
-   "x": 0,
-   "y": 3720
-  },
-  "CuentaPlanes.dc.html": {
-   "h": 1110,
-   "page": "intranet",
-   "title": "C2a · Facturación · Planes y suscripciones",
-   "w": 1280,
-   "x": 0,
-   "y": 5200
   },
   "DisAutorizacion.dc.html": {
    "h": 940,
@@ -425,6 +473,14 @@
    "w": 1280,
    "x": 9520,
    "y": 1340
+  },
+  "DisCrear.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "X0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   },
   "DisElegir.dc.html": {
    "h": 940,
@@ -705,6 +761,14 @@
    "w": 1280,
    "x": 8160,
    "y": 1340
+  },
+  "FabCrear.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   },
   "FabDistribuidores.dc.html": {
    "h": 940,
@@ -1356,75 +1420,59 @@
   },
   "IntHeader.dc.html": {
    "h": 68,
-   "page": "intranet",
+   "page": "componentes",
    "title": "Componente · Header intranet",
    "w": 1280,
-   "x": 2720,
+   "x": 8160,
    "y": 0
   },
   "IntP1Aviso.dc.html": {
    "h": 900,
-   "page": "intranet",
+   "page": "experto",
    "title": "P1 · Laura (aún compradora) · aviso contextual en Mi espacio",
    "w": 1280,
    "x": 0,
-   "y": 2480
+   "y": 3580
   },
   "IntP2Intro.dc.html": {
    "h": 900,
-   "page": "intranet",
+   "page": "experto",
    "title": "P2 · «Ofrecer mis servicios»: qué cambia y qué gana",
    "w": 1280,
    "x": 1360,
-   "y": 2480
+   "y": 3580
   },
   "IntP3Asistente.dc.html": {
    "h": 760,
-   "page": "intranet",
-   "title": "P3 · Asistente de 3 pasos (mismo que en Alta experto) → resultado: S2",
+   "page": "experto",
+   "title": "P3 · Asistente de 3 pasos (el mismo X3–X5) → resultado: E1 Panel de experta",
    "w": 1120,
    "x": 2720,
-   "y": 2480
-  },
-  "IntS1Comprador.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "S1 · Samuel · Mi espacio (menú lateral + «Tus espacios» abierto)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "IntS2Experta.dc.html": {
-   "h": 900,
-   "page": "intranet",
-   "title": "S2 · Laura · Mi espacio con sección «Como experta»",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
+   "y": 3580
   },
   "IntS3Empresa.dc.html": {
    "h": 900,
-   "page": "intranet",
-   "title": "S3 · Carla · Panel de empresa (menú lateral de empresa)",
+   "page": "intempresa",
+   "title": "EM1 · Carla · Panel de empresa (menú lateral de empresa, azul)",
    "w": 1280,
    "x": 0,
-   "y": 1240
+   "y": 0
   },
   "IntS4Ficha.dc.html": {
    "h": 820,
-   "page": "intranet",
+   "page": "busqueda",
    "title": "S4 · Exploración · ficha de producto SIN barra lateral",
    "w": 1280,
-   "x": 1360,
-   "y": 1240
+   "x": 0,
+   "y": 6740
   },
   "IntSidebar.dc.html": {
    "h": 832,
-   "page": "intranet",
+   "page": "componentes",
    "title": "Componente · Menú lateral",
    "w": 256,
-   "x": 2720,
-   "y": 200
+   "x": 9520,
+   "y": 0
   },
   "Login1Email.dc.html": {
    "h": 760,
@@ -1466,6 +1514,14 @@
    "x": 3120,
    "y": 0
   },
+  "Login4Empresa.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "5b · L4 · ¿Cómo quieres empezar? · «Represento una empresa» elegida",
+   "w": 960,
+   "x": 3120,
+   "y": 1300
+  },
   "Login5Creada.dc.html": {
    "h": 760,
    "page": "alta",
@@ -1473,6 +1529,14 @@
    "w": 960,
    "x": 4160,
    "y": 0
+  },
+  "Login5Empresa.dc.html": {
+   "h": 760,
+   "page": "alta",
+   "title": "6b · L5 · Cuenta lista → seguir con la empresa (006–010)",
+   "w": 960,
+   "x": 4160,
+   "y": 1300
   },
   "LoginIntereses.dc.html": {
    "h": 900,
@@ -1676,10 +1740,242 @@
    "x": 0,
    "y": 4040
   },
+  "MsgComInterno.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "KM2 · Hilo interno Dirección comercial ↔ comercial: reasignaciones, avisos de 48 h y cambios de zona por escrito",
+   "w": 1280,
+   "x": 1360,
+   "y": 2680
+  },
+  "MsgComSolicitud.dc.html": {
+   "h": 940,
+   "page": "comerciales",
+   "title": "KM1 · Mensajes: la solicitud de un comprador es un hilo; la atiende el comercial de la zona y la Dirección comercial lo",
+   "w": 1280,
+   "x": 0,
+   "y": 2680
+  },
+  "MsgDisFabricante.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "XM1 · Hilo distribuidor ↔ fabricante: la validación de la marca y sus motivos quedan por escrito",
+   "w": 1280,
+   "x": 0,
+   "y": 2680
+  },
+  "MsgDisSolicitud.dc.html": {
+   "h": 940,
+   "page": "distmulti",
+   "title": "XM2 · Solicitud atendida por una delegación: el comprador escribe a NewFarms y queda todo en el hilo",
+   "w": 1280,
+   "x": 1360,
+   "y": 2680
+  },
+  "MsgFabDistribuidor.dc.html": {
+   "h": 940,
+   "page": "fabdist",
+   "title": "DM1 · Mensajes (bandeja común): hilo fabricante ↔ distribuidor ligado al acuerdo, con los avisos de cambios por escrito",
+   "w": 1280,
+   "x": 0,
+   "y": 4020
+  },
+  "MsgSedeSucursal.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "SM1 · Hilo Sede ↔ sucursal: activaciones, versiones locales y cambios de la ficha base quedan por escrito",
+   "w": 1280,
+   "x": 0,
+   "y": 2680
+  },
+  "MsgSucursalSede.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "U2 · Mensajes de la sucursal: su hilo con la Sede guarda el alta, los avisos y lo que pide la Sede",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
   "Personal.dc.html": {
    "h": 1060,
    "page": "header",
    "title": "2 · Cuenta personal (menú alineado con la intranet)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "PrdAviCatalogo.dc.html": {
+   "h": 940,
+   "page": "prodsuc",
+   "title": "PS1 · Catálogo de la sucursal: los de la Sede (por activar) y los locales",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "PrdAviLocal.dc.html": {
+   "h": 940,
+   "page": "prodsuc",
+   "title": "PS3 · Si activas uno de la Sede: tu versión local (Ross 308)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "PrdAviNuevo.dc.html": {
+   "h": 940,
+   "page": "prodsuc",
+   "title": "PS2 · «Añadir»: activar los de la Sede, crear uno local o pedirlo a la Sede",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "PrdComCatalogo.dc.html": {
+   "h": 940,
+   "page": "prodcom",
+   "title": "PC1 · Catálogo: tus productos y quién atiende cada uno",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "PrdComCatalogoCopia.dc.html": {
+   "h": 940,
+   "page": "prodcom",
+   "title": "PC1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»",
+   "w": 1280,
+   "x": 1360,
+   "y": 1340
+  },
+  "PrdComCatalogoMenu.dc.html": {
+   "h": 940,
+   "page": "prodcom",
+   "title": "PC1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
+  "PrdComMercados.dc.html": {
+   "h": 940,
+   "page": "prodcom",
+   "title": "PC3 · Último paso de la ficha: mercados y qué comercial atiende cada zona",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "PrdComNuevo.dc.html": {
+   "h": 940,
+   "page": "prodcom",
+   "title": "PC2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "PrdDisCatalogo.dc.html": {
+   "h": 940,
+   "page": "proddis",
+   "title": "PD1 · Catálogo: productos de las marcas, subidos por ti y propios",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "PrdDisLocal.dc.html": {
+   "h": 940,
+   "page": "proddis",
+   "title": "PD3 · Si es de una marca: tu versión local (la ficha de la marca no se edita)",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "PrdDisNuevo.dc.html": {
+   "h": 940,
+   "page": "proddis",
+   "title": "PD2 · «Añadir producto»: de una marca en Agroolink, de una que no está o propio",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "PrdFabAcuerdos.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA5 · De dónde salen esos distribuidores: acuerdos de distribución por línea y zona",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "PrdFabCatalogo.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA1 · Catálogo: tus productos y cuántos distribuidores tiene cada uno",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "PrdFabCatalogoCopia.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»",
+   "w": 1280,
+   "x": 1360,
+   "y": 1340
+  },
+  "PrdFabCatalogoMenu.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
+  "PrdFabMercados.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA4 · Último paso de la ficha: mercados y qué distribuidor lo vende en cada país",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "PrdFabNuevo.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
+  },
+  "PrdSucActivacion.dc.html": {
+   "h": 940,
+   "page": "prodsede",
+   "title": "PB4 · Después: qué ha activado cada sucursal",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "PrdSucCatalogo.dc.html": {
+   "h": 940,
+   "page": "prodsede",
+   "title": "PB1 · Catálogo de la Sede: en cuántas sucursales está activado cada producto",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "PrdSucLocal.dc.html": {
+   "h": 940,
+   "page": "prodsede",
+   "title": "PB5 · Lado de la sucursal (Big Dutchman México): activa el producto y añade su versión local",
+   "w": 1280,
+   "x": 5440,
+   "y": 0
+  },
+  "PrdSucMercados.dc.html": {
+   "h": 940,
+   "page": "prodsede",
+   "title": "PB3 · Último paso de la ficha: mercados y qué sucursal lo vende en cada país",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "PrdSucNuevo.dc.html": {
+   "h": 940,
+   "page": "prodsede",
+   "title": "PB2 · «Nuevo producto»: la Sede crea la ficha base",
    "w": 1280,
    "x": 1360,
    "y": 0
@@ -1709,13 +2005,269 @@
    "x": 1360,
    "y": 0
   },
-  "ProdImportar.dc.html": {
+  "ProdAltaAplicaciones.dc.html": {
    "w": 1280,
-   "h": 940,
-   "page": "prodfab",
+   "h": 1210,
+   "page": "productos",
+   "x": 6800,
+   "y": 0,
+   "title": "G6 · Aplicación por especie: una tarjeta por segmento con fases y dosis propias"
+  },
+  "ProdAltaCategoria.dc.html": {
+   "w": 1280,
+   "h": 1620,
+   "page": "productos",
+   "x": 1360,
+   "y": 0,
+   "title": "G2 · Tipo de producto: familia › subfamilia › tipo, con nombres cortos"
+  },
+  "ProdAltaCertificaciones.dc.html": {
+   "w": 1280,
+   "h": 1880,
+   "page": "productos",
+   "x": 12240,
+   "y": 0,
+   "title": "G10 · Certificaciones y sellos: alcance, entidad, fechas y documento; sin documento no hay sello"
+  },
+  "ProdAltaComparador.dc.html": {
+   "w": 1280,
+   "h": 1130,
+   "page": "productos",
+   "x": 14960,
+   "y": 2300,
+   "title": "H12 · Así entra en el comparador: misma plantilla y especie, «No informado» si falta"
+  },
+  "ProdAltaDocumentos.dc.html": {
+   "w": 1280,
+   "h": 1220,
+   "page": "productos",
+   "x": 10880,
+   "y": 0,
+   "title": "G9 · Fotos (subir, arrastrar, principal, ordenar), vídeos con capítulos y documentos"
+  },
+  "ProdAltaEnfermedad.dc.html": {
+   "w": 1280,
+   "h": 1450,
+   "page": "productos",
+   "x": 8160,
+   "y": 0,
+   "title": "G7 · Enfermedad diana: filtro aparte, solo de las especies elegidas"
+  },
+  "ProdAltaEspecies.dc.html": {
+   "w": 1280,
+   "h": 1190,
+   "page": "productos",
+   "x": 0,
+   "y": 0,
+   "title": "G1 · Especies de destino: Porcino › Lechones y Avicultura › Pollos de engorde (o «no depende de especie»)"
+  },
+  "ProdAltaIdentidad.dc.html": {
+   "w": 1280,
+   "h": 1170,
+   "page": "productos",
+   "x": 4080,
+   "y": 0,
+   "title": "G4 · Identidad: nombre, marca, web o contacto, descripciones"
+  },
+  "ProdAltaMercados.dc.html": {
+   "w": 1280,
+   "h": 1250,
+   "page": "productos",
    "x": 2720,
    "y": 0,
-   "title": "PA3 · Importaciones (solo superadmin): carga masiva del catálogo por Excel; actualiza por referencia interna"
+   "title": "G3 · Mercados: buscar y atajos + inclusiones y exclusiones"
+  },
+  "ProdAltaMercadosExcluir.dc.html": {
+   "w": 1280,
+   "h": 1650,
+   "page": "productos",
+   "x": 9520,
+   "y": 2300,
+   "title": "H8 · Mercados: todo el mundo salvo regiones o países"
+  },
+  "ProdAltaMolino.dc.html": {
+   "w": 1280,
+   "h": 1020,
+   "page": "productos",
+   "x": 6800,
+   "y": 2300,
+   "title": "H6 · Molino sin especie: rendimiento, granulometría y potencia"
+  },
+  "ProdAltaNoAplica.dc.html": {
+   "w": 1280,
+   "h": 1740,
+   "page": "productos",
+   "x": 8160,
+   "y": 2300,
+   "title": "H7 · Con vacuno de leche no se ofrecen aviarios, nidales, parideras ni incubación"
+  },
+  "ProdAltaOcultos.dc.html": {
+   "w": 1280,
+   "h": 1300,
+   "page": "productos",
+   "x": 12240,
+   "y": 2300,
+   "title": "H10 · Al cambiar de tipo, los datos que ya no aplican se guardan pero no se publican"
+  },
+  "ProdAltaOrdeno.dc.html": {
+   "w": 1280,
+   "h": 1070,
+   "page": "productos",
+   "x": 0,
+   "y": 2300,
+   "title": "H1 · Ordeño + vacuno de leche: capacidad, rendimiento y conectividad; ningún campo de vacunas"
+  },
+  "ProdAltaOtro.dc.html": {
+   "w": 1280,
+   "h": 1710,
+   "page": "productos",
+   "x": 10880,
+   "y": 2300,
+   "title": "H9 · «Otro…» en cada grupo y familia: se escribe y lo revisa Agroolink"
+  },
+  "ProdAltaPienso.dc.html": {
+   "w": 1280,
+   "h": 1480,
+   "page": "productos",
+   "x": 4080,
+   "y": 2300,
+   "title": "H4 · Pienso completo + ponedoras: composición con calcio y fósforo"
+  },
+  "ProdAltaPublica.dc.html": {
+   "w": 1280,
+   "h": 1130,
+   "page": "productos",
+   "x": 13600,
+   "y": 2300,
+   "title": "H11 · Vista previa de la ficha pública: solo lo rellenado que aplica"
+  },
+  "ProdAltaRevision.dc.html": {
+   "w": 1280,
+   "h": 1210,
+   "page": "productos",
+   "x": 13600,
+   "y": 0,
+   "title": "G11 · Revisión: qué falta, estado, ficha pública y comparador"
+  },
+  "ProdAltaSinEspecie.dc.html": {
+   "w": 1280,
+   "h": 1050,
+   "page": "productos",
+   "x": 5440,
+   "y": 2300,
+   "title": "H5 · «No depende de especie» para equipos y servicios transversales"
+  },
+  "ProdAltaTecnicos.dc.html": {
+   "w": 1280,
+   "h": 1370,
+   "page": "productos",
+   "x": 5440,
+   "y": 0,
+   "title": "G5 · Datos técnicos del tipo (aquí: probióticos)"
+  },
+  "ProdAltaVacunaApl.dc.html": {
+   "w": 1280,
+   "h": 1140,
+   "page": "productos",
+   "x": 2720,
+   "y": 2300,
+   "title": "H3 · Vacuna: edad, dosis, primovacunación y revacunación por especie"
+  },
+  "ProdAltaVacunaEnf.dc.html": {
+   "w": 1280,
+   "h": 1190,
+   "page": "productos",
+   "x": 1360,
+   "y": 2300,
+   "title": "H2 · Vacuna + gallinas ponedoras: solo enfermedades aviares"
+  },
+  "ProdAltaVariantes.dc.html": {
+   "w": 1280,
+   "h": 1190,
+   "page": "productos",
+   "x": 9520,
+   "y": 0,
+   "title": "G8 · Variantes según el tipo (aquí: embalaje)"
+  },
+  "ProdEdArchivados.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 9520,
+   "y": 4460,
+   "title": "K8 · Productos archivados: «Recuperar» con su estado"
+  },
+  "ProdEdArchivar.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 8160,
+   "y": 4460,
+   "title": "K7 · Tras archivar: «Deshacer» y «Ver archivados»"
+  },
+  "ProdEdBloques.dc.html": {
+   "w": 1280,
+   "h": 2460,
+   "page": "productos",
+   "x": 2720,
+   "y": 4460,
+   "title": "K3 · Editar por bloques: cada «Editar» abre su paso aquí mismo; uno abierto a la vez"
+  },
+  "ProdEdCatalogo.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 0,
+   "y": 4460,
+   "title": "K1 · Mis productos: cada ficha con su estado, «Editar» y el menú ⋯"
+  },
+  "ProdEdDesdeRevision.dc.html": {
+   "w": 1280,
+   "h": 1160,
+   "page": "productos",
+   "x": 10880,
+   "y": 4460,
+   "title": "K9 · En el alta: editar un apartado desde la revisión y volver a ella"
+  },
+  "ProdEdGuardado.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 5440,
+   "y": 4460,
+   "title": "K5 · Tras guardar: el catálogo indica a quién se avisó"
+  },
+  "ProdEdGuardar.dc.html": {
+   "w": 1280,
+   "h": 2460,
+   "page": "productos",
+   "x": 4080,
+   "y": 4460,
+   "title": "K4 · Guardar cambios: qué cambia y si avisar a distribuidores, sucursales y compradores"
+  },
+  "ProdEdMenu.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 1360,
+   "y": 4460,
+   "title": "K2 · Menú de acciones: Editar, Duplicar, Ocultar y Archivar"
+  },
+  "ProdEdRegulado.dc.html": {
+   "w": 1280,
+   "h": 1180,
+   "page": "productos",
+   "x": 6800,
+   "y": 4460,
+   "title": "K6 · Vacuna (regulado): los cambios vuelven a revisión; se sigue viendo la versión publicada"
+  },
+  "ProdImportar.dc.html": {
+   "h": 940,
+   "page": "prodfab",
+   "title": "PA3 · Importaciones (solo superadmin): carga masiva del catálogo por Excel; actualiza por referencia interna",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
   },
   "ProyArchivados.dc.html": {
    "h": 900,
@@ -1925,12 +2477,68 @@
    "x": 1360,
    "y": 0
   },
+  "SrvAsvEditor.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SE2 · Editar un servicio: qué expertos lo prestan y a quién llega",
+   "w": 1280,
+   "x": 2720,
+   "y": 5360
+  },
+  "SrvAsvLista.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SE1 · Empresa solo de servicios (Asvet Veterinaris): sus servicios son su catálogo",
+   "w": 1280,
+   "x": 1360,
+   "y": 5360
+  },
+  "SrvCom.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SC · Fabricante con comerciales: llega al comercial de la zona",
+   "w": 1280,
+   "x": 0,
+   "y": 2680
+  },
+  "SrvDis.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SD · Distribuidor: lo presta tu equipo desde cada delegación",
+   "w": 1280,
+   "x": 0,
+   "y": 4020
+  },
+  "SrvFab.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SA · Fabricante con distribuidores: lo prestas tú, tus distribuidores o los dos",
+   "w": 1280,
+   "x": 0,
+   "y": 0
+  },
+  "SrvSuc.dc.html": {
+   "h": 940,
+   "page": "altaserv",
+   "title": "SB · Sede con sucursales: lo presta cada sucursal en sus países",
+   "w": 1280,
+   "x": 0,
+   "y": 1340
+  },
   "SucAltaCRM.dc.html": {
    "h": 940,
    "page": "sucursal",
    "title": "U0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
+   "y": 0
+  },
+  "SucAltaCrear.dc.html": {
+   "h": 940,
+   "page": "sucursal",
+   "title": "U0a-2 · Ninguna es la mía: crear la sucursal (basta con el nombre)",
+   "w": 1280,
+   "x": 1360,
    "y": 0
   },
   "SucAltaSede.dc.html": {
@@ -1996,6 +2604,14 @@
    "w": 1280,
    "x": 1360,
    "y": 1340
+  },
+  "SucCrear.dc.html": {
+   "h": 940,
+   "page": "sucursales",
+   "title": "S0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   },
   "SucEsSucursal.dc.html": {
    "h": 940,
@@ -2168,7 +2784,7 @@
   "UsrEspacioMenu.dc.html": {
    "h": 900,
    "page": "intusuario",
-   "title": "U1b · Mi espacio · menú de cuenta abierto («Tus espacios», como S1)",
+   "title": "U1b · Mi espacio · menú de cuenta abierto («Tus espacios»)",
    "w": 1280,
    "x": 1360,
    "y": 0
@@ -2176,7 +2792,7 @@
   "UsrFactDirecciones.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8e · Facturación · Direcciones (copia de C2e)",
+   "title": "U8e · Facturación · Direcciones",
    "w": 1280,
    "x": 5440,
    "y": 3000
@@ -2184,7 +2800,7 @@
   "UsrFactFacturas.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8c · Facturación · Facturas (copia de C2c)",
+   "title": "U8c · Facturación · Facturas",
    "w": 1280,
    "x": 2720,
    "y": 3000
@@ -2192,7 +2808,7 @@
   "UsrFactPagos.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8d · Facturación · Métodos de pago (copia de C2d)",
+   "title": "U8d · Facturación · Métodos de pago",
    "w": 1280,
    "x": 4080,
    "y": 3000
@@ -2200,7 +2816,7 @@
   "UsrFactPedidos.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8b · Facturación · Pedidos (copia de C2b)",
+   "title": "U8b · Facturación · Pedidos",
    "w": 1280,
    "x": 1360,
    "y": 3000
@@ -2208,7 +2824,7 @@
   "UsrFactPlanes.dc.html": {
    "h": 1110,
    "page": "intusuario",
-   "title": "U8a · Facturación · Planes y suscripciones (copia de C2a)",
+   "title": "U8a · Facturación · Planes y suscripciones",
    "w": 1280,
    "x": 0,
    "y": 3000
@@ -2216,7 +2832,7 @@
   "UsrFacturacion.dc.html": {
    "h": 980,
    "page": "intusuario",
-   "title": "U8 · Facturación (copia de C2)",
+   "title": "U8 · Facturación",
    "w": 1280,
    "x": 1360,
    "y": 1400
@@ -2248,7 +2864,7 @@
   "UsrPerfil.dc.html": {
    "h": 1100,
    "page": "intusuario",
-   "title": "U7 · Mi perfil (copia de C1)",
+   "title": "U7 · Mi perfil",
    "w": 1280,
    "x": 0,
    "y": 1400
@@ -2269,709 +2885,53 @@
    "x": 4080,
    "y": 0
   },
-  "PrdFabNuevo.dc.html": {
+  "ProdTradEdicion.dc.html": {
    "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 1360,
-   "y": 0,
-   "title": "PA2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar"
-  },
-  "PrdFabMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 4080,
-   "y": 0,
-   "title": "PA4 · Último paso de la ficha: mercados y qué distribuidor lo vende en cada país"
-  },
-  "PrdSucNuevo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsede",
-   "x": 1360,
-   "y": 0,
-   "title": "PB2 · «Nuevo producto»: la Sede crea la ficha base"
-  },
-  "PrdSucMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsede",
-   "x": 2720,
-   "y": 0,
-   "title": "PB3 · Último paso de la ficha: mercados y qué sucursal lo vende en cada país"
-  },
-  "PrdSucLocal.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsede",
-   "x": 5440,
-   "y": 0,
-   "title": "PB5 · Lado de la sucursal (Big Dutchman México): activa el producto y añade su versión local"
-  },
-  "PrdComNuevo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodcom",
-   "x": 1360,
-   "y": 0,
-   "title": "PC2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar"
-  },
-  "PrdComMercados.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodcom",
-   "x": 2720,
-   "y": 0,
-   "title": "PC3 · Último paso de la ficha: mercados y qué comercial atiende cada zona"
-  },
-  "PrdDisNuevo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "proddis",
-   "x": 1360,
-   "y": 0,
-   "title": "PD2 · «Añadir producto»: de una marca en Agroolink, de una que no está o propio"
-  },
-  "PrdDisLocal.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "proddis",
-   "x": 2720,
-   "y": 0,
-   "title": "PD3 · Si es de una marca: tu versión local (la ficha de la marca no se edita)"
-  },
-  "SrvFab.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaserv",
+   "h": 2060,
+   "page": "productos",
    "x": 0,
-   "y": 0,
-   "title": "SA · Fabricante con distribuidores: lo prestas tú, tus distribuidores o los dos"
+   "y": 7340,
+   "title": "L1 · Traducciones en la edición: original y traducción lado a lado; automática, revisada o editada a mano"
   },
-  "SrvSuc.dc.html": {
+  "ProdTradDesact.dc.html": {
    "w": 1280,
-   "h": 940,
-   "page": "altaserv",
-   "x": 0,
-   "y": 1340,
-   "title": "SB · Sede con sucursales: lo presta cada sucursal en sus países"
-  },
-  "SrvCom.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaserv",
-   "x": 0,
-   "y": 2680,
-   "title": "SC · Fabricante con comerciales: llega al comercial de la zona"
-  },
-  "SrvDis.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaserv",
-   "x": 0,
-   "y": 4020,
-   "title": "SD · Distribuidor: lo presta tu equipo desde cada delegación"
-  },
-  "SrvAsvLista.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaserv",
-   "x": 1360,
-   "y": 5360,
-   "title": "SE1 · Empresa solo de servicios (Asvet Veterinaris): sus servicios son su catálogo"
-  },
-  "SrvAsvEditor.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "altaserv",
-   "x": 2720,
-   "y": 5360,
-   "title": "SE2 · Editar un servicio: qué expertos lo prestan y a quién llega"
-  },
-  "PrdFabCatalogo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 0,
-   "y": 0,
-   "title": "PA1 · Catálogo: tus productos y cuántos distribuidores tiene cada uno"
-  },
-  "PrdFabAcuerdos.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 5440,
-   "y": 0,
-   "title": "PA5 · De dónde salen esos distribuidores: acuerdos de distribución por línea y zona"
-  },
-  "PrdComCatalogo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodcom",
-   "x": 0,
-   "y": 0,
-   "title": "PC1 · Catálogo: tus productos y quién atiende cada uno"
-  },
-  "PrdSucCatalogo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsede",
-   "x": 0,
-   "y": 0,
-   "title": "PB1 · Catálogo de la Sede: en cuántas sucursales está activado cada producto"
-  },
-  "PrdSucActivacion.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsede",
-   "x": 4080,
-   "y": 0,
-   "title": "PB4 · Después: qué ha activado cada sucursal"
-  },
-  "PrdAviCatalogo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsuc",
-   "x": 0,
-   "y": 0,
-   "title": "PS1 · Catálogo de la sucursal: los de la Sede (por activar) y los locales"
-  },
-  "PrdAviNuevo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsuc",
-   "x": 1360,
-   "y": 0,
-   "title": "PS2 · «Añadir»: activar los de la Sede, crear uno local o pedirlo a la Sede"
-  },
-  "PrdAviLocal.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodsuc",
-   "x": 2720,
-   "y": 0,
-   "title": "PS3 · Si activas uno de la Sede: tu versión local (Ross 308)"
-  },
-  "PrdDisCatalogo.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "proddis",
-   "x": 0,
-   "y": 0,
-   "title": "PD1 · Catálogo: productos de las marcas, subidos por ti y propios"
-  },
-  "ProdAltaCategoria.dc.html": {
-   "w": 1280,
-   "h": 1620,
+   "h": 2060,
    "page": "productos",
    "x": 1360,
-   "y": 0,
-   "title": "G2 · Tipo de producto: familia › subfamilia › tipo, con nombres cortos"
+   "y": 7340,
+   "title": "L2 · Cambió el original: lo editado a mano no se pisa, pasa a «Desactualizada» (mantener la mía o volver a traducir)"
   },
-  "ProdAltaIdentidad.dc.html": {
-   "w": 1280,
-   "h": 1170,
-   "page": "productos",
-   "x": 4080,
-   "y": 0,
-   "title": "G4 · Identidad: nombre, marca, web o contacto, descripciones"
-  },
-  "ProdAltaTecnicos.dc.html": {
-   "w": 1280,
-   "h": 1370,
-   "page": "productos",
-   "x": 5440,
-   "y": 0,
-   "title": "G5 · Datos técnicos del tipo (aquí: probióticos)"
-  },
-  "ProdAltaVariantes.dc.html": {
-   "w": 1280,
-   "h": 1190,
-   "page": "productos",
-   "x": 9520,
-   "y": 0,
-   "title": "G8 · Variantes según el tipo (aquí: embalaje)"
-  },
-  "ProdAltaDocumentos.dc.html": {
-   "w": 1280,
-   "h": 1220,
-   "page": "productos",
-   "x": 10880,
-   "y": 0,
-   "title": "G9 · Fotos (subir, arrastrar, principal, ordenar), vídeos con capítulos y documentos"
-  },
-  "ProdAltaRevision.dc.html": {
-   "w": 1280,
-   "h": 1210,
-   "page": "productos",
-   "x": 13600,
-   "y": 0,
-   "title": "G11 · Revisión: qué falta, estado, ficha pública y comparador"
-  },
-  "ProdAltaEnfermedad.dc.html": {
-   "w": 1280,
-   "h": 1450,
-   "page": "productos",
-   "x": 8160,
-   "y": 0,
-   "title": "G7 · Enfermedad diana: filtro aparte, solo de las especies elegidas"
-  },
-  "ProdAltaEspecies.dc.html": {
-   "w": 1280,
-   "h": 1190,
-   "page": "productos",
-   "x": 0,
-   "y": 0,
-   "title": "G1 · Especies de destino: Porcino › Lechones y Avicultura › Pollos de engorde (o «no depende de especie»)"
-  },
-  "ProdAltaMercados.dc.html": {
-   "w": 1280,
-   "h": 1250,
-   "page": "productos",
-   "x": 2720,
-   "y": 0,
-   "title": "G3 · Mercados: buscar y atajos + inclusiones y exclusiones"
-  },
-  "ProdAltaOtro.dc.html": {
-   "w": 1280,
-   "h": 1710,
-   "page": "productos",
-   "x": 10880,
-   "y": 2300,
-   "title": "H9 · «Otro…» en cada grupo y familia: se escribe y lo revisa Agroolink"
-  },
-  "ProdAltaMercadosExcluir.dc.html": {
-   "w": 1280,
-   "h": 1650,
-   "page": "productos",
-   "x": 9520,
-   "y": 2300,
-   "title": "H8 · Mercados: todo el mundo salvo regiones o países"
-  },
-  "ProdAltaAplicaciones.dc.html": {
-   "w": 1280,
-   "h": 1210,
-   "page": "productos",
-   "x": 6800,
-   "y": 0,
-   "title": "G6 · Aplicación por especie: una tarjeta por segmento con fases y dosis propias"
-  },
-  "ProdAltaOrdeno.dc.html": {
+  "ProdTradFicha.dc.html": {
    "w": 1280,
    "h": 1070,
    "page": "productos",
-   "x": 0,
-   "y": 2300,
-   "title": "H1 · Ordeño + vacuno de leche: capacidad, rendimiento y conectividad; ningún campo de vacunas"
-  },
-  "ProdAltaVacunaEnf.dc.html": {
-   "w": 1280,
-   "h": 1190,
-   "page": "productos",
-   "x": 1360,
-   "y": 2300,
-   "title": "H2 · Vacuna + gallinas ponedoras: solo enfermedades aviares"
-  },
-  "ProdAltaVacunaApl.dc.html": {
-   "w": 1280,
-   "h": 1140,
-   "page": "productos",
    "x": 2720,
-   "y": 2300,
-   "title": "H3 · Vacuna: edad, dosis, primovacunación y revacunación por especie"
+   "y": 7340,
+   "title": "L3 · Lo que ve el comprador en inglés: «Traducido automáticamente · Ver original»"
   },
-  "ProdAltaPienso.dc.html": {
+  "ProdTradRegulado.dc.html": {
    "w": 1280,
-   "h": 1480,
+   "h": 2200,
    "page": "productos",
    "x": 4080,
-   "y": 2300,
-   "title": "H4 · Pienso completo + ponedoras: composición con calcio y fósforo"
+   "y": 7340,
+   "title": "L4 · Vacuna: los campos sensibles no se publican traducidos hasta que se revisan"
   },
-  "ProdAltaSinEspecie.dc.html": {
-   "w": 1280,
-   "h": 1050,
-   "page": "productos",
-   "x": 5440,
-   "y": 2300,
-   "title": "H5 · «No depende de especie» para equipos y servicios transversales"
-  },
-  "ProdAltaMolino.dc.html": {
-   "w": 1280,
-   "h": 1020,
-   "page": "productos",
-   "x": 6800,
-   "y": 2300,
-   "title": "H6 · Molino sin especie: rendimiento, granulometría y potencia"
-  },
-  "ProdAltaNoAplica.dc.html": {
-   "w": 1280,
-   "h": 1740,
-   "page": "productos",
-   "x": 8160,
-   "y": 2300,
-   "title": "H7 · Con vacuno de leche no se ofrecen aviarios, nidales, parideras ni incubación"
-  },
-  "ProdAltaOcultos.dc.html": {
-   "w": 1280,
-   "h": 1300,
-   "page": "productos",
-   "x": 12240,
-   "y": 2300,
-   "title": "H10 · Al cambiar de tipo, los datos que ya no aplican se guardan pero no se publican"
-  },
-  "ProdAltaPublica.dc.html": {
-   "w": 1280,
-   "h": 1130,
-   "page": "productos",
-   "x": 13600,
-   "y": 2300,
-   "title": "H11 · Vista previa de la ficha pública: solo lo rellenado que aplica"
-  },
-  "ProdAltaComparador.dc.html": {
-   "w": 1280,
-   "h": 1130,
-   "page": "productos",
-   "x": 14960,
-   "y": 2300,
-   "title": "H12 · Así entra en el comparador: misma plantilla y especie, «No informado» si falta"
-  },
-  "CompTamanos.dc.html": {
-   "w": 1280,
-   "h": 1000,
-   "page": "componentes",
-   "x": 6800,
-   "y": 0,
-   "title": "Tamaños y anchos para todo el proyecto (inspirado en vevor.es, con Poppins)"
-  },
-  "ProdAltaCertificaciones.dc.html": {
-   "w": 1280,
-   "h": 1880,
-   "page": "productos",
-   "x": 12240,
-   "y": 0,
-   "title": "G10 · Certificaciones y sellos: alcance, entidad, fechas y documento; sin documento no hay sello"
-  },
-  "FabCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "x": 1360,
-   "y": 0,
-   "title": "D0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
-  },
-  "ComCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "x": 1360,
-   "y": 0,
-   "title": "K0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
-  },
-  "SucCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "x": 1360,
-   "y": 0,
-   "title": "S0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
-  },
-  "SucAltaCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursal",
-   "x": 1360,
-   "y": 0,
-   "title": "U0a-2 · Ninguna es la mía: crear la sucursal (basta con el nombre)"
-  },
-  "DisCrear.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "x": 1360,
-   "y": 0,
-   "title": "X0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
-  },
-  "Login4Empresa.dc.html": {
-   "w": 960,
-   "h": 760,
-   "page": "alta",
-   "x": 3120,
-   "y": 1300,
-   "title": "5b · L4 · ¿Cómo quieres empezar? · «Represento una empresa» elegida"
-  },
-  "Login5Empresa.dc.html": {
-   "w": 960,
-   "h": 760,
-   "page": "alta",
-   "x": 4160,
-   "y": 1300,
-   "title": "6b · L5 · Cuenta lista → seguir con la empresa (006–010)"
-  },
-  "ProdEdCatalogo.dc.html": {
-   "w": 1280,
-   "h": 920,
-   "page": "productos",
-   "x": 0,
-   "y": 4460,
-   "title": "K1 · Mis productos: cada ficha con su estado, «Editar» y el menú ⋯"
-  },
-  "ProdEdMenu.dc.html": {
-   "w": 1280,
-   "h": 920,
-   "page": "productos",
-   "x": 1360,
-   "y": 4460,
-   "title": "K2 · Menú de acciones: Editar, Duplicar, Ocultar y Archivar"
-  },
-  "ProdEdBloques.dc.html": {
-   "w": 1280,
-   "h": 2370,
-   "page": "productos",
-   "x": 2720,
-   "y": 4460,
-   "title": "K3 · Editar por bloques: cada «Editar» abre su paso aquí mismo; uno abierto a la vez"
-  },
-  "ProdEdGuardar.dc.html": {
-   "w": 1280,
-   "h": 2370,
-   "page": "productos",
-   "x": 4080,
-   "y": 4460,
-   "title": "K4 · Guardar cambios: qué cambia y si avisar a distribuidores, sucursales y compradores"
-  },
-  "ProdEdGuardado.dc.html": {
-   "w": 1280,
-   "h": 920,
-   "page": "productos",
-   "x": 5440,
-   "y": 4460,
-   "title": "K5 · Tras guardar: el catálogo indica a quién se avisó"
-  },
-  "ProdEdRegulado.dc.html": {
-   "w": 1280,
-   "h": 1090,
-   "page": "productos",
-   "x": 6800,
-   "y": 4460,
-   "title": "K6 · Vacuna (regulado): los cambios vuelven a revisión; se sigue viendo la versión publicada"
-  },
-  "ProdEdArchivar.dc.html": {
-   "w": 1280,
-   "h": 920,
-   "page": "productos",
-   "x": 8160,
-   "y": 4460,
-   "title": "K7 · Tras archivar: «Deshacer» y «Ver archivados»"
-  },
-  "ProdEdArchivados.dc.html": {
-   "w": 1280,
-   "h": 920,
-   "page": "productos",
-   "x": 9520,
-   "y": 4460,
-   "title": "K8 · Productos archivados: «Recuperar» con su estado"
-  },
-  "ProdEdDesdeRevision.dc.html": {
+  "ProdTradReguladoFicha.dc.html": {
    "w": 1280,
    "h": 1160,
    "page": "productos",
-   "x": 10880,
-   "y": 4460,
-   "title": "K9 · En el alta: editar un apartado desde la revisión y volver a ella"
-  },
-  "PrdFabCatalogoMenu.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 0,
-   "y": 1340,
-   "title": "PA1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar"
-  },
-  "PrdFabCatalogoCopia.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodfab",
-   "x": 1360,
-   "y": 1340,
-   "title": "PA1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»"
-  },
-  "PrdComCatalogoMenu.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodcom",
-   "x": 0,
-   "y": 1340,
-   "title": "PC1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar"
-  },
-  "PrdComCatalogoCopia.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "prodcom",
-   "x": 1360,
-   "y": 1340,
-   "title": "PC1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»"
-  },
-  "MsgFabDistribuidor.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "x": 0,
-   "y": 4020,
-   "title": "DM1 · Mensajes (bandeja común): hilo fabricante ↔ distribuidor ligado al acuerdo, con los avisos de cambios por escrito"
-  },
-  "MsgComSolicitud.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "x": 0,
-   "y": 2680,
-   "title": "KM1 · Mensajes: la solicitud de un comprador es un hilo; la atiende el comercial de la zona y la Dirección comercial lo"
-  },
-  "MsgComInterno.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "comerciales",
-   "x": 1360,
-   "y": 2680,
-   "title": "KM2 · Hilo interno Dirección comercial ↔ comercial: reasignaciones, avisos de 48 h y cambios de zona por escrito"
-  },
-  "MsgSedeSucursal.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursales",
-   "x": 0,
-   "y": 2680,
-   "title": "SM1 · Hilo Sede ↔ sucursal: activaciones, versiones locales y cambios de la ficha base quedan por escrito"
-  },
-  "MsgSucursalSede.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "sucursal",
-   "x": 0,
-   "y": 1340,
-   "title": "U2 · Mensajes de la sucursal: su hilo con la Sede guarda el alta, los avisos y lo que pide la Sede"
-  },
-  "MsgDisFabricante.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "x": 0,
-   "y": 2680,
-   "title": "XM1 · Hilo distribuidor ↔ fabricante: la validación de la marca y sus motivos quedan por escrito"
-  },
-  "MsgDisSolicitud.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "distmulti",
-   "x": 1360,
-   "y": 2680,
-   "title": "XM2 · Solicitud atendida por una delegación: el comprador escribe a NewFarms y queda todo en el hilo"
-  },
-  "BuscaResultados.dc.html": {
-   "w": 1280,
-   "h": 1120,
-   "page": "busqueda",
-   "x": 0,
-   "y": 0,
-   "title": "B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan"
-  },
-  "BuscaAutocompletar.dc.html": {
-   "w": 1280,
-   "h": 1120,
-   "page": "busqueda",
-   "x": 1360,
-   "y": 0,
-   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa"
-  },
-  "BuscaEspecie.dc.html": {
-   "w": 1280,
-   "h": 1630,
-   "page": "busqueda",
-   "x": 2720,
-   "y": 0,
-   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)"
-  },
-  "BuscaCategoria.dc.html": {
-   "w": 1280,
-   "h": 1630,
-   "page": "busqueda",
-   "x": 4080,
-   "y": 0,
-   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie"
-  },
-  "BuscaEnfermedad.dc.html": {
-   "w": 1280,
-   "h": 2060,
-   "page": "busqueda",
    "x": 5440,
-   "y": 0,
-   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez"
+   "y": 7340,
+   "title": "L5 · Vacuna en francés sin revisar: se muestra el original con el aviso de la ficha técnica oficial"
   },
-  "BuscaVarios.dc.html": {
+  "ProdTradGlosario.dc.html": {
    "w": 1280,
-   "h": 860,
-   "page": "busqueda",
+   "h": 1180,
+   "page": "productos",
    "x": 6800,
-   "y": 0,
-   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta"
-  },
-  "BuscaTecnicos.dc.html": {
-   "w": 1280,
-   "h": 860,
-   "page": "busqueda",
-   "x": 8160,
-   "y": 0,
-   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)"
-  },
-  "BuscaFiltros.dc.html": {
-   "w": 1280,
-   "h": 2200,
-   "page": "busqueda",
-   "x": 9520,
-   "y": 0,
-   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»"
-  },
-  "BuscaSinResultados.dc.html": {
-   "w": 1280,
-   "h": 860,
-   "page": "busqueda",
-   "x": 10880,
-   "y": 0,
-   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto"
-  },
-  "BuscaMovResultados.dc.html": {
-   "w": 390,
-   "h": 1370,
-   "page": "busqueda",
-   "x": 0,
-   "y": 2620,
-   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan"
-  },
-  "BuscaMovEspecie.dc.html": {
-   "w": 390,
-   "h": 860,
-   "page": "busqueda",
-   "x": 470,
-   "y": 2620,
-   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)"
-  },
-  "BuscaMovCategoria.dc.html": {
-   "w": 390,
-   "h": 850,
-   "page": "busqueda",
-   "x": 940,
-   "y": 2620,
-   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»"
-  },
-  "BuscaMovFiltros.dc.html": {
-   "w": 390,
-   "h": 2380,
-   "page": "busqueda",
-   "x": 1410,
-   "y": 2620,
-   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»"
+   "y": 7340,
+   "title": "L6 · Superadmin: glosario del sector, términos que no se traducen y fichas sin revisar"
   }
  },
  "createdOnFiles": {
@@ -2984,6 +2944,15 @@
   "view": "canvas"
  },
  "notes": {
+  "altaEmpresa": {
+   "kind": "title1",
+   "maxW": 2000,
+   "page": "alta",
+   "text": "Represento una empresa: 5b → 6b → sigue en 006–010, empezando por el nombre de tu organización",
+   "w": 240,
+   "x": 3120,
+   "y": 1000
+  },
   "altaL1b": {
    "kind": "title1",
    "maxW": 4880,
@@ -3007,6 +2976,88 @@
    "maxW": 4880,
    "page": "alta",
    "text": "7 · Solo para mí → Mi espacio · 8 · «Más tarde» → primera consulta. «Represento una empresa» sigue en 006–010 (según cómo vende la empresa); experto, en su página",
+   "w": 240,
+   "x": 0,
+   "y": 2320
+  },
+  "altaservT1": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "A · DSM-Firmenich · fabricante con distribuidores",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "altaservT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "B · Big Dutchman · Sede con sucursales",
+   "w": 240,
+   "x": 0,
+   "y": 1040
+  },
+  "altaservT3": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "C · Zucami · fabricante con equipo comercial",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "altaservT4": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "D · NewFarms · distribuidor multimarca",
+   "w": 240,
+   "x": 0,
+   "y": 3720
+  },
+  "altaservT5": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaserv",
+   "text": "E · Asvet Veterinaris · empresa solo de servicios (con expertos)",
+   "w": 240,
+   "x": 0,
+   "y": 5060
+  },
+  "busDev": {
+   "fill": "orange",
+   "maxH": 300,
+   "page": "busqueda",
+   "size": 24,
+   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
+   "w": 1280,
+   "x": 0,
+   "y": -340
+  },
+  "busFicha": {
+   "kind": "title1",
+   "maxW": 1280,
+   "page": "busqueda",
+   "text": "Ficha de producto en exploración: sin barra lateral",
+   "w": 240,
+   "x": 0,
+   "y": 6440
+  },
+  "busT1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "busqueda",
+   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»",
+   "w": 240,
+   "x": 0,
+   "y": -640
+  },
+  "busT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "busqueda",
+   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla",
    "w": 240,
    "x": 0,
    "y": 2320
@@ -3064,6 +3115,15 @@
    "w": 240,
    "x": 0,
    "y": 2100
+  },
+  "expDesdeIntranet": {
+   "kind": "title1",
+   "maxW": 3840,
+   "page": "experto",
+   "text": "Desde la intranet: de comprador a experto",
+   "w": 240,
+   "x": 0,
+   "y": 3280
   },
   "expTitulo": {
    "kind": "title1",
@@ -3209,50 +3269,14 @@
    "x": 0,
    "y": -300
   },
-  "intTitulo": {
+  "iem0": {
    "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Intranet · barra lateral en zonas de trabajo",
+   "maxW": 1840,
+   "page": "intempresa",
+   "text": "COMO EMPRESA · Carla · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "intTitulo2": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Empresa y contraste con exploración",
-   "w": 240,
-   "x": 0,
-   "y": 940
-  },
-  "intTitulo3": {
-   "kind": "title1",
-   "maxW": 3840,
-   "page": "intranet",
-   "text": "Paso de comprador a experto desde la intranet",
-   "w": 240,
-   "x": 0,
-   "y": 2180
-  },
-  "intTitulo4": {
-   "kind": "title1",
-   "maxW": 2640,
-   "page": "intranet",
-   "text": "Mi cuenta · lo global (cuenta Agrinews) y lo propio de Agroolink",
-   "w": 240,
-   "x": 0,
-   "y": 3420
-  },
-  "intTitulo5": {
-   "kind": "title1",
-   "maxW": 6720,
-   "page": "intranet",
-   "text": "Facturación · una pantalla por pestaña",
-   "w": 240,
-   "x": 0,
-   "y": 4900
   },
   "iu0": {
    "kind": "title1",
@@ -3308,6 +3332,51 @@
    "x": 0,
    "y": 3740
   },
+  "msg_comerciales": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "comerciales",
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "msg_distmulti": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "distmulti",
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "msg_fabdist": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "fabdist",
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
+   "w": 240,
+   "x": 0,
+   "y": 3720
+  },
+  "msg_sucursal": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "sucursal",
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
+   "w": 240,
+   "x": 0,
+   "y": 1040
+  },
+  "msg_sucursales": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "sucursales",
+   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
   "plTitulo": {
    "kind": "title1",
    "maxW": 4000,
@@ -3326,6 +3395,16 @@
    "x": 0,
    "y": 2300
   },
+  "prodDev1": {
+   "fill": "orange",
+   "maxH": 300,
+   "page": "productos",
+   "size": 24,
+   "w": 1280,
+   "x": 0,
+   "y": -340,
+   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G11, H1–H12, K1–K9 y L1–L6) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
+  },
   "prodT2": {
    "kind": "title1",
    "maxW": 8000,
@@ -3334,6 +3413,87 @@
    "w": 240,
    "x": 0,
    "y": -640
+  },
+  "prodT4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "productos",
+   "w": 240,
+   "x": 0,
+   "y": 2000,
+   "text": "Casos de prueba del documento del árbol condicional y reglas · ordeño, vacuna, pienso de ponedoras, molino sin especie, categorías que no aplican, mercados, «Otro…», datos que no se publican, ficha pública y comparador"
+  },
+  "prodT6": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "productos",
+   "w": 240,
+   "x": 0,
+   "y": 4160,
+   "text": "Edición del producto, como en Proyectos · catálogo con acciones, edición por bloques con aviso a quien lo vende o lo ha pedido, revisión de nuevo en productos regulados, archivar y recuperar"
+  },
+  "prodcomT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodcom",
+   "text": "Productos de un fabricante con equipo comercial — Zucami. 1 Catálogo → 2 Nuevo producto (la ficha en «011_Alta de producto») → 3 Mercados y quién lo atiende",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodcomT2": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodcom",
+   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a comerciales o solicitudes, eliges si avisar",
+   "w": 240,
+   "x": 0,
+   "y": 1040
+  },
+  "proddisT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "proddis",
+   "text": "Productos de un distribuidor — NewFarms. 1 Catálogo → 2 Añadir producto (elegir y subir: ver «010_Alta · Distribuidor multimarca») → 3 Versión local",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodfabT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodfab",
+   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importaciones (solo superadmin: carga masiva por Excel) o crear la ficha en «011_Alta de producto» → 4 Mercados → 5 Acuerdos de distribución",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodfabT2": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodfab",
+   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a distribuidores o solicitudes, eliges si avisar",
+   "w": 240,
+   "x": 0,
+   "y": 1040
+  },
+  "prodsedeT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodsede",
+   "text": "Productos de una Sede con sucursales — Big Dutchman. 1 Catálogo de la Sede → 2 Nuevo producto (ficha base) → 3 Mercados → 4 Activación por sucursal → 5 La sucursal lo activa y lo adapta",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "prodsucT1": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodsuc",
+   "text": "Productos de una sucursal — Aviagen Ibérica. 1 Catálogo → 2 Añadir (activar de la Sede, local o pedirlo) → 3 Versión local",
+   "w": 240,
+   "x": 0,
+   "y": -300
   },
   "proyDev1": {
    "fill": "orange",
@@ -3435,223 +3595,14 @@
    "x": 0,
    "y": -300
   },
-  "altaservT1": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaserv",
-   "text": "A · DSM-Firmenich · fabricante con distribuidores",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "altaservT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaserv",
-   "text": "B · Big Dutchman · Sede con sucursales",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "altaservT3": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaserv",
-   "text": "C · Zucami · fabricante con equipo comercial",
-   "w": 240,
-   "x": 0,
-   "y": 2380
-  },
-  "altaservT4": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaserv",
-   "text": "D · NewFarms · distribuidor multimarca",
-   "w": 240,
-   "x": 0,
-   "y": 3720
-  },
-  "altaservT5": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaserv",
-   "text": "E · Asvet Veterinaris · empresa solo de servicios (con expertos)",
-   "w": 240,
-   "x": 0,
-   "y": 5060
-  },
-  "prodfabT1": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodfab",
-   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importaciones (solo superadmin: carga masiva por Excel) o crear la ficha en «011_Alta de producto» → 4 Mercados → 5 Acuerdos de distribución",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "prodcomT1": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodcom",
-   "text": "Productos de un fabricante con equipo comercial — Zucami. 1 Catálogo → 2 Nuevo producto (la ficha en «011_Alta de producto») → 3 Mercados y quién lo atiende",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "prodsedeT1": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodsede",
-   "text": "Productos de una Sede con sucursales — Big Dutchman. 1 Catálogo de la Sede → 2 Nuevo producto (ficha base) → 3 Mercados → 4 Activación por sucursal → 5 La sucursal lo activa y lo adapta",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "prodsucT1": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodsuc",
-   "text": "Productos de una sucursal — Aviagen Ibérica. 1 Catálogo → 2 Añadir (activar de la Sede, local o pedirlo) → 3 Versión local",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "proddisT1": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "proddis",
-   "text": "Productos de un distribuidor — NewFarms. 1 Catálogo → 2 Añadir producto (elegir y subir: ver «010_Alta · Distribuidor multimarca») → 3 Versión local",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "prodDev1": {
-   "fill": "orange",
-   "maxH": 300,
-   "page": "productos",
-   "size": 24,
-   "w": 1280,
-   "x": 0,
-   "y": -340,
-   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G11, H1–H12 y K1–K9) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
-  },
-  "prodT4": {
+  "prodT7": {
    "kind": "title1",
    "maxW": 8000,
    "page": "productos",
    "w": 240,
    "x": 0,
-   "y": 2000,
-   "text": "Casos de prueba del documento del árbol condicional y reglas · ordeño, vacuna, pienso de ponedoras, molino sin especie, categorías que no aplican, mercados, «Otro…», datos que no se publican, ficha pública y comparador"
-  },
-  "altaEmpresa": {
-   "kind": "title1",
-   "maxW": 2000,
-   "page": "alta",
-   "text": "Represento una empresa: 5b → 6b → sigue en 006–010, empezando por el nombre de tu organización",
-   "w": 240,
-   "x": 3120,
-   "y": 1000
-  },
-  "prodT6": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "productos",
-   "w": 240,
-   "x": 0,
-   "y": 4160,
-   "text": "Edición del producto, como en Proyectos · catálogo con acciones, edición por bloques con aviso a quien lo vende o lo ha pedido, revisión de nuevo en productos regulados, archivar y recuperar"
-  },
-  "prodfabT2": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodfab",
-   "w": 240,
-   "x": 0,
-   "y": 1040,
-   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a distribuidores o solicitudes, eliges si avisar"
-  },
-  "prodcomT2": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodcom",
-   "w": 240,
-   "x": 0,
-   "y": 1040,
-   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a comerciales o solicitudes, eliges si avisar"
-  },
-  "msg_fabdist": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "fabdist",
-   "w": 240,
-   "x": 0,
-   "y": 3720,
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
-  },
-  "msg_comerciales": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "comerciales",
-   "w": 240,
-   "x": 0,
-   "y": 2380,
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
-  },
-  "msg_sucursales": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursales",
-   "w": 240,
-   "x": 0,
-   "y": 2380,
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
-  },
-  "msg_sucursal": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursal",
-   "w": 240,
-   "x": 0,
-   "y": 1040,
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
-  },
-  "msg_distmulti": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "distmulti",
-   "w": 240,
-   "x": 0,
-   "y": 2380,
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas."
-  },
-  "busT1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "busqueda",
-   "w": 240,
-   "x": 0,
-   "y": -640,
-   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»"
-  },
-  "busDev": {
-   "fill": "orange",
-   "maxH": 300,
-   "page": "busqueda",
-   "size": 24,
-   "w": 1280,
-   "x": 0,
-   "y": -340,
-   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip."
-  },
-  "busT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "busqueda",
-   "w": 240,
-   "x": 0,
-   "y": 2320,
-   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla"
+   "y": 7040,
+   "text": "Traducciones · la IA traduce el texto libre a ES, EN, PT y FR; la empresa revisa o edita y lo editado no se pisa; en regulados, lo sensible no se publica sin revisar; los mensajes se traducen solo al leer"
   }
  },
  "order": [
@@ -3680,8 +3631,6 @@
   "ExpX5Publicar.dc.html",
   "ExpX6Publicado.dc.html",
   "ExpX7Semana.dc.html",
-  "IntS1Comprador.dc.html",
-  "IntS2Experta.dc.html",
   "IntS3Empresa.dc.html",
   "IntS4Ficha.dc.html",
   "IntP1Aviso.dc.html",
@@ -3865,10 +3814,6 @@
   "Fig68.dc.html",
   "Fig61.dc.html",
   "Fig63.dc.html",
-  "CuentaPerfil.dc.html",
-  "CuentaCompras.dc.html",
-  "CuentaAyuda.dc.html",
-  "CuentaIdioma.dc.html",
   "MobHome.dc.html",
   "MobHomeVisitante.dc.html",
   "MobMenu.dc.html",
@@ -3880,11 +3825,6 @@
   "MobExplorarCategorias.dc.html",
   "MobCategoria.dc.html",
   "MobTabBar.dc.html",
-  "CuentaPlanes.dc.html",
-  "CuentaPedidos.dc.html",
-  "CuentaFacturas.dc.html",
-  "CuentaPagos.dc.html",
-  "CuentaDirecciones.dc.html",
   "UsrEspacio.dc.html",
   "UsrEspacioMenu.dc.html",
   "UsrProyectos.dc.html",
@@ -4025,12 +3965,18 @@
   "BuscaMovResultados.dc.html",
   "BuscaMovEspecie.dc.html",
   "BuscaMovCategoria.dc.html",
-  "BuscaMovFiltros.dc.html"
+  "BuscaMovFiltros.dc.html",
+  "ProdTradEdicion.dc.html",
+  "ProdTradDesact.dc.html",
+  "ProdTradFicha.dc.html",
+  "ProdTradRegulado.dc.html",
+  "ProdTradReguladoFicha.dc.html",
+  "ProdTradGlosario.dc.html"
  ],
  "pages": [
   {
    "id": "header",
-   "name": "Header"
+   "name": "000_Header"
   },
   {
    "id": "proyectos",
@@ -4065,8 +4011,8 @@
    "name": "Intranet · Experto (consolidada)"
   },
   {
-   "id": "intranet",
-   "name": "Intranet"
+   "id": "intempresa",
+   "name": "002c_Intranet · Empresa (consolidada)"
   },
   {
    "id": "planes",

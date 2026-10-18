@@ -13,6 +13,22 @@
 - **Enfermedades:** filtro independiente (`enfermedades`), filtrado por las especies elegidas.
 - **Aviso:** los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.
 
+## Traducciones (19/10/2026)
+
+Clave `traduccion` de `producto.json` y prototipo `crear-producto.html` (bloque «Traducciones» en la edición):
+- **Sin IA:** categorías, especies, enfermedades, opciones y unidades se traducen una vez en el modelo.
+- **Con IA:** el texto libre (descripciones, datos de texto, datos propios, aplicación por especie, perfiles, servicios, proyectos) se traduce a ES, EN, PT y FR, según «Se publica en».
+- **No se traducen:** nombres comerciales, marcas, cepas, principios activos, referencias, cifras y unidades. Los PDF van uno por idioma.
+- **Idioma de origen:** cada campo guarda el suyo, detectado al guardar y corregible («Escrito en … · Cambiar»).
+- **Cuándo se traduce:** al publicar o al cambiar el original, nunca en cada visita.
+- **Estados:** automática, revisada o editada a mano.
+  - Si cambia el original, las automáticas y las revisadas se rehacen.
+  - Las editadas a mano no se pisan: pasan a «Desactualizada», con las opciones «Mantener la mía» o «Volver a traducir».
+- **Fármacos, vacunas y biocidas:** los campos sensibles (indicación, dosis, posología, espera, retirada, contraindicaciones, advertencias, pauta, edad, primo y revacunación, duración) no se publican traducidos sin revisión. Mientras tanto se muestra el original con «Traducción no revisada: consulte la ficha técnica oficial».
+- **Comprador:** ve la ficha en su idioma; si la traducción no está revisada ni editada, aparece «Traducido automáticamente · Ver original».
+- **Mensajes:** «Traducir» al leer; la traducción no se guarda.
+- **Superadmin:** gestiona el glosario del sector y la lista de términos que no se traducen, y ve las fichas pendientes de revisar.
+
 ## Edición del producto (18/10/2026)
 
 Igual que en Proyectos. En el prototipo (`crear-producto.html`):
