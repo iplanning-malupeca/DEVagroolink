@@ -5946,6 +5946,58 @@
   "One Health",
   "Inteligencia Artificial"
  ],
+ "regiones": {
+  "Europa": [
+   "España",
+   "Portugal",
+   "Francia",
+   "Italia",
+   "Alemania",
+   "Países Bajos",
+   "Bélgica",
+   "Polonia",
+   "Reino Unido",
+   "Irlanda",
+   "Rusia"
+  ],
+  "Latinoamérica": [
+   "México",
+   "Guatemala",
+   "Colombia",
+   "Ecuador",
+   "Perú",
+   "Brasil",
+   "Argentina",
+   "Chile"
+  ],
+  "Norteamérica": [
+   "Estados Unidos",
+   "Canadá"
+  ],
+  "África": [
+   "Marruecos",
+   "Argelia",
+   "Egipto",
+   "Nigeria",
+   "Sudáfrica"
+  ],
+  "Oriente Medio": [
+   "Turquía",
+   "Arabia Saudí",
+   "Emiratos Árabes",
+   "Irán"
+  ],
+  "Asia-Pacífico": [
+   "China",
+   "India",
+   "Vietnam",
+   "Tailandia",
+   "Filipinas",
+   "Indonesia",
+   "Japón",
+   "Australia"
+  ]
+ },
  "paises": [
   "España",
   "Portugal",
@@ -5957,49 +6009,38 @@
   "Polonia",
   "Reino Unido",
   "Irlanda",
+  "Rusia",
   "México",
+  "Guatemala",
+  "Colombia",
+  "Ecuador",
+  "Perú",
   "Brasil",
   "Argentina",
   "Chile",
-  "Colombia",
-  "Perú",
-  "Ecuador",
   "Estados Unidos",
   "Canadá",
   "Marruecos",
   "Argelia",
   "Egipto",
+  "Nigeria",
   "Sudáfrica",
   "Turquía",
   "Arabia Saudí",
+  "Emiratos Árabes",
+  "Irán",
   "China",
   "India",
   "Vietnam",
   "Tailandia",
   "Filipinas",
   "Indonesia",
+  "Japón",
   "Australia"
  ],
- "regiones": {
-  "UE": [
-   "España",
-   "Portugal",
-   "Francia",
-   "Italia",
-   "Alemania",
-   "Países Bajos",
-   "Bélgica",
-   "Polonia",
-   "Irlanda"
-  ],
-  "Latinoamérica": [
-   "México",
-   "Brasil",
-   "Argentina",
-   "Chile",
-   "Colombia",
-   "Perú",
-   "Ecuador"
-  ]
+ "mercados_modos": {
+  "todo": "Todo el mundo",
+  "excluir": "Excluir",
+  "solo": "Solo algunas regiones o países"
  }
 }
