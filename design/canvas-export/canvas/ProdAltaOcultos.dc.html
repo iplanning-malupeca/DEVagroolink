@@ -23,49 +23,49 @@
 
 *{box-sizing:border-box}
 html,body{min-height:100%}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.4}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.4}
 button,input,select,textarea{font:inherit;color:inherit}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.top{z-index:10;background:var(--surface);border-bottom:1px solid var(--line);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.top{z-index:10;background:var(--surface);border-bottom:1px solid var(--line);min-height:56px;box-sizing:border-box;padding-block:8px;padding-left:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,60px),env(safe-area-inset-right,0px));display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .logo{font-weight:700;font-size:18px;letter-spacing:-.01em}.logo b{color:var(--accent)}
-.crumb{color:var(--muted);font-size:13px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb{color:var(--muted);font-size:15px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .crumb strong{color:var(--fg);font-weight:500}
 .saved{font-size:12px;color:var(--ok);display:flex;align-items:center;gap:5px;white-space:nowrap}
 .demo{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
-.demo select{height:32px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);padding:0 8px;font-size:12.5px}
-.wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:22px;max-width:1320px;margin:0 auto;padding-block:22px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.demo select{height:32px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);padding:0 8px;font-size:13px}
+.wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:24px;max-width:1720px;margin:0 auto;padding-block:20px 40px;padding-left:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,60px),env(safe-area-inset-right,0px))}
 @media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}.side{order:-1}.side .help,.side .prevbox{display:none}.steps{flex-direction:row!important;overflow-x:auto;gap:6px!important}.steps button{white-space:nowrap}.steps .lbl2{display:none}}
 .main{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:18px;min-width:0}
 @media (max-width:600px){.main{padding:18px 16px}}
-.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}
-h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap:balance;line-height:1.2}
-.sub{margin:6px 0 0;color:var(--muted);font-size:13.5px;max-width:68ch}
+.eb{font-size:12px;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}
+h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap:balance;line-height:1.2}
+.sub{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:68ch}
 .sec{display:flex;flex-direction:column;gap:10px}
-.sec>h2{margin:0;font-size:15px;font-weight:600;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.sec>h2{margin:0;font-size:16px;font-weight:600;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .hint{font-size:12px;color:var(--muted);font-weight:400}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 @media (max-width:600px){.grid2{grid-template-columns:minmax(0,1fr)}}
 .full{grid-column:1/-1}
 .field{display:flex;flex-direction:column;gap:5px;min-width:0}
-.field>label,.flabel{font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.field>label,.flabel{font-size:15px;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .req{color:var(--err)}
 .star{color:#C98A12;font-size:12px}
-.badge{font-size:10.5px;font-weight:600;border-radius:999px;padding:1px 7px;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.badge{font-size:11px;font-weight:600;border-radius:999px;padding:1px 7px;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
 .inp,.ta,.sel{height:38px;border:1px solid var(--line2);border-radius:10px;padding:0 11px;background:var(--surface);width:100%;min-width:0}
 .ta{height:auto;padding:9px 11px;resize:vertical;line-height:1.4}
 .inp:disabled{background:var(--surface2);color:var(--muted)}
 .unit{display:flex;gap:6px;align-items:center}.unit .inp{flex:1}
-.unit .u{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.unit .u{font-size:13px;color:var(--muted);white-space:nowrap}
 .unit select{height:38px;border:1px solid var(--line2);border-radius:10px;background:var(--surface);padding:0 6px;max-width:130px}
-.fx{display:flex;gap:10px;font-size:11.5px;color:var(--muted)}
-.fx button{border:0;background:none;padding:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:11.5px}
+.fx{display:flex;gap:10px;font-size:12px;color:var(--muted)}
+.fx button{border:0;background:none;padding:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:12px}
 .fx button.on{color:var(--accent);font-weight:600;text-decoration:none}
-.ex{font-size:11.5px;color:var(--muted)}
+.ex{font-size:12px;color:var(--muted)}
 .errtxt{font-size:12px;color:var(--err)}
 .field.bad .inp,.field.bad .ta{border-color:var(--err)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:12.5px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.chip{height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:13px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .chip:hover{border-color:var(--accent)}
 .chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
 .chip.sm{height:28px;font-size:12px;padding:0 10px}
@@ -78,34 +78,34 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .fam{border:1px solid var(--line2);border-radius:14px;background:var(--surface);padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;min-height:64px}
 .fam:hover{border-color:var(--accent)}
 .fam.on{border:1.5px solid var(--accent);background:var(--soft)}
-.fam .c{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.04em}
-.fam .l{font-size:13.5px;font-weight:600}
+.fam .c{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.fam .l{font-size:15px;font-weight:600}
 .groups{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface2)}
 .group{display:flex;flex-direction:column;gap:6px}
-.group .gl{font-size:12.5px;font-weight:600;color:var(--muted)}
+.group .gl{font-size:13px;font-weight:600;color:var(--muted)}
 .results{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .results button{border:0;border-top:1px solid var(--line);background:var(--surface);text-align:left;padding:9px 12px;cursor:pointer;display:flex;flex-direction:column;gap:1px}
 .results button:first-child{border-top:0}
 .results button:hover{background:var(--soft)}
-.results .p{font-size:11.5px;color:var(--muted)}
+.results .p{font-size:12px;color:var(--muted)}
 .picked{border:1.5px solid var(--accent);background:var(--soft);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
 .picked .path{font-size:12px;color:var(--muted)}
-.picked .name{font-size:17px;font-weight:600}
+.picked .name{font-size:18px;font-weight:600}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-size:11.5px;font-weight:500;border-radius:999px;padding:3px 10px;background:var(--surface);border:1px solid var(--soft2);color:var(--accent)}
+.tag{font-size:12px;font-weight:500;border-radius:999px;padding:3px 10px;background:var(--surface);border:1px solid var(--soft2);color:var(--accent)}
 .tag.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
-.note{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.4}
+.note{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.4}
 .note.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
 .note.e{background:var(--err-bg);border-color:transparent;color:var(--err)}
 .note strong{color:var(--fg)}
 .note.w strong,.note.e strong{color:inherit}
-.tbl{width:100%;border-collapse:collapse;font-size:13px}
-.tbl th{text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line)}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th{text-align:left;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line)}
 .tbl td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
 .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;padding:4px 8px}
-.btn{height:40px;padding:0 16px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btn{height:36px;padding:0 16px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
 .btn:hover{border-color:var(--accent)}
-.btnp{height:42px;padding:0 20px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp{height:38px;padding:0 20px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
 .btnp:disabled{opacity:.45;cursor:not-allowed}
 .link{border:0;background:none;color:var(--accent);cursor:pointer;padding:0;font-weight:500}
 .nav{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:16px;margin-top:4px;flex-wrap:wrap}
@@ -113,120 +113,110 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .side{display:flex;flex-direction:column;gap:14px;min-width:0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
 .steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
-.steps button{width:100%;border:0;background:none;text-align:left;padding:7px 8px;border-radius:9px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px}
+.steps button{width:100%;border:0;background:none;text-align:left;padding:7px 8px;border-radius:9px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px}
 .steps button:hover{background:var(--surface2)}
 .steps button[aria-current="step"]{background:var(--soft);color:var(--accent);font-weight:600}
-.dot{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex:none;color:var(--muted)}
+.dot{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex:none;color:var(--muted)}
 .dot.ok{background:var(--ok);border-color:var(--ok);color:var(--surface)}
 .dot.cur{border-color:var(--accent);color:var(--accent)}
 .dot.miss{border-color:#C98A12;color:#C98A12}
 .prog{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:10px}.prog span{display:block;height:100%;background:var(--accent)}
-.help p{margin:6px 0 0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.help p{margin:6px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
 .prev{display:flex;flex-direction:column;gap:10px}
 .pimg{aspect-ratio:16/9;max-width:100%;border-radius:12px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:22px}
 .pname{font-size:16px;font-weight:600;line-height:1.25}
-.ppath{font-size:11.5px;color:var(--muted)}
+.ppath{font-size:12px;color:var(--muted)}
 .kv{display:flex;justify-content:space-between;gap:10px;font-size:12px;border-top:1px solid var(--line);padding-top:6px}
 .kv span:first-child{color:var(--muted)}
 .kv span:last-child{text-align:right;font-variant-numeric:tabular-nums}
-.pcta{height:36px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center}
-.sumrow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:12px;align-items:start;padding:10px 0;border-top:1px solid var(--line);font-size:13px}
+.pcta{height:36px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.sumrow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:12px;align-items:start;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
 @media (max-width:600px){.sumrow{grid-template-columns:minmax(0,1fr) auto}.sumrow .v{grid-column:1/-1;grid-row:2}}
 .sumrow .k{color:var(--muted)}
 .sumrow .v{min-width:0}
 .miss{color:var(--warn);font-weight:500}
 .file{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:8px;background:var(--surface2);border:1px solid var(--line);font-size:12px}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}
-.thumb{width:92px;height:70px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--accent);font-weight:600;position:relative}
-.thumb .main{position:absolute;left:6px;top:6px;font-size:9.5px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 6px;font-weight:600;border:0}
+.thumb{width:92px;height:70px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--accent);font-weight:600;position:relative}
+.thumb .main{position:absolute;left:6px;top:6px;font-size:10.5px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 6px;font-weight:600;border:0}
 .addimg{width:92px;height:70px;border-radius:10px;border:1.5px dashed var(--line2);background:var(--surface);cursor:pointer;color:var(--muted);font-size:12px}
-.espgrid{display:grid;grid-template-columns:230px minmax(0,1fr);gap:14px;align-items:start}
+.espgrid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:14px;align-items:start}
 @media (max-width:700px){.espgrid{grid-template-columns:minmax(0,1fr)}}
 .esplist{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-radius:14px;padding:8px;background:var(--surface2)}
 .esprow{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:10px;border:1px solid transparent}
 .esprow.foco{border-color:var(--accent);background:var(--surface)}
-.esprow .nm{flex:1;border:0;background:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;font-size:13.5px;font-weight:500}
-.esprow .nm small{font-size:11.5px;color:var(--muted);font-weight:400}
+.esprow .nm{flex:1;border:0;background:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;font-size:15px;font-weight:500}
+.esprow .nm small{font-size:12px;color:var(--muted);font-weight:400}
 .ck{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line2);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;flex:none;padding:0}
 .ck.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .esppanel{border:1.5px solid var(--accent);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .prodrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.it{height:30px;padding:0 11px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:12.5px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;color:var(--fg)}
-.it.sub{height:26px;font-size:11.5px;margin-left:4px}
+.it{height:30px;padding:0 11px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:13px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;color:var(--fg)}
+.it.sub{height:26px;font-size:12px;margin-left:4px}
 .it.inc{background:var(--soft);color:var(--accent);border-color:var(--soft2);font-weight:500}
 .it.exc{background:var(--err-bg);color:var(--err);border-color:transparent;text-decoration:line-through}
 .it.half{border-style:dashed;border-color:var(--accent);color:var(--accent)}
-.queda{font-size:12.5px;color:var(--muted);line-height:1.45}.queda strong{color:var(--fg);font-weight:600}
-.mgrid{display:grid;grid-template-columns:270px minmax(0,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.queda{font-size:13px;color:var(--muted);line-height:1.45}.queda strong{color:var(--fg);font-weight:600}
+.mgrid{display:grid;grid-template-columns:290px minmax(0,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 @media (max-width:760px){.mgrid{grid-template-columns:minmax(0,1fr)}.mright{border-left:0!important;border-top:1px solid var(--line)}}
 .mcol{display:flex;flex-direction:column;gap:10px;padding:14px;min-width:0}
 .mright{border-left:1px solid var(--line);gap:8px}
-.sl{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.sl{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
 .mres{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;padding:4px}
-.mres button{border:0;background:none;text-align:left;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:13px;display:flex;gap:6px;align-items:baseline}
+.mres button{border:0;background:none;text-align:left;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:15px;display:flex;gap:6px;align-items:baseline}
 .mres button:hover{background:var(--soft)}
 .ment{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
 .ment.open{border-color:var(--soft2);background:var(--surface2);border-radius:12px 12px 0 0}
-.mtags{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px}
+.mtags{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:15px}
 .mtags strong{font-weight:600}
-.tg{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;font-size:11.5px;font-weight:500;white-space:nowrap}
+.tg{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap}
 .tg.g{background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
 .tg.r{background:var(--err-bg);color:var(--err)}
 .tg.b{background:var(--soft);color:var(--accent)}
 .tg.w{background:var(--warn-bg);color:var(--warn)}
-.ico{width:30px;height:30px;border:0;background:none;border-radius:8px;cursor:pointer;color:var(--muted);font-size:15px}
+.tg.ok{background:var(--ok-bg);color:var(--ok)}
+.ico{width:30px;height:30px;border:0;background:none;border-radius:8px;cursor:pointer;color:var(--muted);font-size:16px}
 .ico:hover{background:var(--soft)}
 .mbody{border:1px solid var(--soft2);border-top:0;border-radius:0 0 12px 12px;padding:12px 14px;margin-top:-8px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
 .chip.na{opacity:.45;cursor:not-allowed;text-decoration:line-through}
 .fam.na{opacity:.45;cursor:not-allowed}
 .aplcard{border:1.5px solid var(--soft2);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
-.aplh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
+.aplh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:16px}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .fthumb{margin:0;position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column}
 .fthumb img,.fthumb .fph{width:100%;aspect-ratio:4/3;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,var(--soft),var(--soft2));color:var(--accent);font-size:12px;font-weight:600}
-.fthumb .main{position:absolute;left:8px;top:8px;font-size:10.5px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:2px 8px;font-weight:600}
+.fthumb .main{position:absolute;left:8px;top:8px;font-size:11px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:2px 8px;font-weight:600}
 .fthumb figcaption{display:flex;align-items:center;gap:4px;padding:4px 6px}
-.fnm{flex:1;min-width:0;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fact{display:flex}.fact .ico{width:26px;height:26px;font-size:14px}
+.fnm{flex:1;min-width:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fact{display:flex}.fact .ico{width:26px;height:26px;font-size:15px}
 .drop{border:1.5px dashed var(--line2);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:14px;text-align:center;cursor:pointer;min-height:140px;background:var(--surface)}
 .drop:hover,.drop.over{border-color:var(--accent);background:var(--soft)}
-.drop strong{color:var(--accent);font-size:13px}
+.drop strong{color:var(--accent);font-size:15px}
 .vcard{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .vico{width:40px;height:40px;border-radius:10px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
 .vbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .caps{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 .cap{display:flex;gap:6px;align-items:center;width:100%}
 .vadd{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.vadd .inp{flex:1;min-width:220px}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:15px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
-.modal pre,.modal textarea{margin:0;flex:1;min-height:240px;overflow:auto;font-size:11.5px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px;white-space:pre;font-family:ui-monospace,Menlo,monospace}
+.modal pre,.modal textarea{margin:0;flex:1;min-height:240px;overflow:auto;font-size:12px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px;white-space:pre;font-family:ui-monospace,Menlo,monospace}
 @media (prefers-reduced-motion:no-preference){.chip,.btn,.fam{transition:border-color .12s,background .12s}}
 
 </style>
 </helmet>
-<div style="width: 1280px; height: 1150px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
+<div style="width: 1280px; height: 1280px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
   <span class="logo">agroo<b>link</b></span>
   <span class="crumb">Productos › <strong id="crumbName">Probiótico (ejemplo)</strong></span>
-  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 21:49</span>
-  <label class="demo" for="demoSel">Ejemplo
-    <select id="demoSel">
-      <option value="">Elegir…</option>
-      <option value="probiotico">Probiótico · lechones y pollos de engorde</option>
-      <option value="ordeno">Sistema de ordeño · vacuno de leche</option>
-      <option value="vacuna">Vacuna · gallinas ponedoras</option>
-      <option value="pienso">Pienso completo · gallinas ponedoras</option>
-      <option value="molino">Molino · sin especie</option>
-      <option value="cero">Empezar de cero</option>
-    </select>
-  </label>
+  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 22:40</span>
   <button class="btn" type="button" id="salir">Guardar y salir</button>
 </header><div class="wrap">
-  <main class="main" id="main"><div><span class="eb">Paso 5 de 10 · Datos técnicos</span><h1>Datos técnicos · Enzimas</h1><p class="sub">Solo los datos de tu categoría. Las unidades están normalizadas para poder comparar.</p></div><div class="note"><span>Plantilla <strong>Enzimas</strong> · <span class="star">★</span> sale primero en el comparador · <span class="badge">Filtro</span> el comprador puede filtrar por ello. Lo que dejes vacío no se publica; usa «No aplica» o «No lo sé» para que quede claro.<br>Regla: actividad, unidad y método de ensayo son inseparables.</span></div><div class="note w"><span><strong>2 datos guardados ya no aplican</strong> a esta categoría o a estas especies. Se conservan por si vuelves atrás, pero no se publicarán. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div><div class="grid2"><div class="field full"><span class="flabel"><label for="f-tipo_enzima">Tipo de enzima</label><span class="star" title="Sale entre los primeros datos del comparador">★</span><span class="badge" title="Los compradores pueden filtrar por este dato">Filtro</span></span><div class="chips" role="radiogroup"><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Fitasa">Fitasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Xilanasa">Xilanasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Proteasa">Proteasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Amilasa">Amilasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|β-glucanasa">β-glucanasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Mananasa">Mananasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Multienzima">Multienzima</button></div><span class="fx"><button type="button" data-act="mark|tipo_enzima|na">No aplica</button><button type="button" data-act="mark|tipo_enzima|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-sustrato">Sustrato</label><span class="badge" title="Los compradores pueden filtrar por este dato">Filtro</span></span><input class="inp" id="f-sustrato" data-t="sustrato" value="" placeholder="Fitato, arabinoxilanos"><span class="ex">Ej.: Fitato, arabinoxilanos</span><span class="fx"><button type="button" data-act="mark|sustrato|na">No aplica</button><button type="button" data-act="mark|sustrato|ni">No lo sé</button></span></div><div class="field full"><span class="flabel"><label for="f-actividad">Actividad</label><span class="star" title="Sale entre los primeros datos del comparador">★</span></span><div class="unit"><input class="inp" id="f-actividad" placeholder="Valor" data-tv="actividad" value=""><span class="u">U/g</span></div><input class="inp" placeholder="Método de ensayo *" aria-label="Detalle" data-tm="actividad" value=""><span class="ex">Valor, unidad y método de ensayo van juntos: no se comparan actividades con métodos distintos · Ej.: 5.000 FTU/g · método ISO 30024</span><span class="fx"><button type="button" data-act="mark|actividad|na">No aplica</button><button type="button" data-act="mark|actividad|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-ph">Rango de pH</label></span><div class="unit"><input class="inp" id="f-ph" inputmode="decimal" aria-label="Mínimo" placeholder="mín." data-tr="ph|min" value=""><span class="u">a</span><input class="inp" inputmode="decimal" aria-label="Máximo" placeholder="máx." data-tr="ph|max" value=""><span class="u">pH</span></div><span class="fx"><button type="button" data-act="mark|ph|na">No aplica</button><button type="button" data-act="mark|ph|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-termo">Termoestabilidad</label><span class="star" title="Sale entre los primeros datos del comparador">★</span></span><div class="unit"><input class="inp" id="f-termo" inputmode="decimal" data-tv="termo" value="" placeholder=""><span class="u">°C</span></div><span class="fx"><button type="button" data-act="mark|termo|na">No aplica</button><button type="button" data-act="mark|termo|ni">No lo sé</button></span></div></div><div class="note"><span>Dosis recomendada se indican <strong>por especie</strong> en el paso siguiente.</span></div><section class="sec"><h2>Datos propios <span class="hint">· lo que no está en la plantilla; solo los numéricos con unidad se pueden comparar</span></h2><div><button type="button" class="btn" data-act="ppadd">+ Añadir un dato propio</button></div></section><div class="nav"><button type="button" class="btn" data-act="atras">Atrás</button><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
-  <aside class="side" id="side"><div class="card"><strong style="font-size:13px">Tu producto · 44 %</strong><div class="prog"><span style="width:44%"></span></div><div style="margin-top:10px"><ol class="steps"><li><button type="button" data-act="ir|especies"><span class="dot ok">✓</span><span class="lbl2">Especies de destino</span></button></li><li><button type="button" data-act="ir|categoria"><span class="dot ok">✓</span><span class="lbl2">Categoría</span></button></li><li><button type="button" data-act="ir|mercados"><span class="dot">3</span><span class="lbl2">Mercados</span></button></li><li><button type="button" data-act="ir|identidad"><span class="dot">4</span><span class="lbl2">Identidad</span></button></li><li><button type="button" data-act="ir|tecnicos" aria-current="step"><span class="dot ok">✓</span><span class="lbl2">Datos técnicos</span></button></li><li><button type="button" data-act="ir|aplicaciones"><span class="dot ok">✓</span><span class="lbl2">Aplicación por especie</span></button></li><li><button type="button" data-act="ir|enfermedad"><span class="dot">7</span><span class="lbl2">Enfermedad diana</span></button></li><li><button type="button" data-act="ir|variantes"><span class="dot">8</span><span class="lbl2">Variantes</span></button></li><li><button type="button" data-act="ir|documentos"><span class="dot">9</span><span class="lbl2">Fotos, vídeos y documentos</span></button></li><li><button type="button" data-act="ir|revision"><span class="dot">10</span><span class="lbl2">Revisión</span></button></li></ol></div></div><div class="card help"><strong style="font-size:13px">Datos técnicos</strong><p>Campos de la plantilla de tu categoría. Los marcados ★ salen primero en el comparador.</p></div><div class="card prevbox"><strong style="font-size:13px">Vista previa</strong><div class="prev" style="margin-top:10px"><div class="pimg">PRO</div><span class="ppath">Salud digestiva › Enzimas</span><span class="pname">Probiótico (ejemplo)</span><div class="tags"><span class="tag">Porcino</span><span class="tag">Avicultura</span></div><span class="pcta">Solicitar información →</span></div></div></aside>
+  <main class="main" id="main"><div><span class="eb">Paso 5 de 11 · Datos técnicos</span><h1>Datos técnicos · Enzimas</h1><p class="sub">Solo los datos de tu categoría. Las unidades están normalizadas para poder comparar.</p></div><div class="note"><span>Plantilla <strong>Enzimas</strong> · <span class="star">★</span> sale primero en el comparador · <span class="badge">Filtro</span> el comprador puede filtrar por ello. Lo que dejes vacío no se publica; usa «No aplica» o «No lo sé» para que quede claro.</span></div><div class="note w"><span><strong>2 datos guardados ya no aplican</strong> a esta categoría o a estas especies. Se conservan por si vuelves atrás, pero no se publicarán. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div><div class="grid2"><div class="field full"><span class="flabel"><label for="f-tipo_enzima">Clase de enzima</label><span class="star" title="Sale entre los primeros datos del comparador">★</span><span class="badge" title="Los compradores pueden filtrar por este dato">Filtro</span></span><div class="chips" role="radiogroup"><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Fitasa">Fitasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Xilanasa">Xilanasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Proteasa">Proteasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Amilasa">Amilasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|β-glucanasa">β-glucanasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Mananasa">Mananasa</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|tipo_enzima|Multienzima">Multienzima</button></div><span class="fx"><button type="button" data-act="mark|tipo_enzima|na">No aplica</button><button type="button" data-act="mark|tipo_enzima|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-ph">Rango de pH</label></span><div class="unit"><input class="inp" id="f-ph" inputmode="decimal" aria-label="Mínimo" placeholder="mín." data-tr="ph|min" value=""><span class="u">a</span><input class="inp" inputmode="decimal" aria-label="Máximo" placeholder="máx." data-tr="ph|max" value=""><span class="u">pH</span></div><span class="fx"><button type="button" data-act="mark|ph|na">No aplica</button><button type="button" data-act="mark|ph|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-termo">Estabilidad térmica</label><span class="star" title="Sale entre los primeros datos del comparador">★</span></span><div class="unit"><input class="inp" id="f-termo" inputmode="decimal" data-tv="termo" value="" placeholder=""><span class="u">°C</span></div><span class="fx"><button type="button" data-act="mark|termo|na">No aplica</button><button type="button" data-act="mark|termo|ni">No lo sé</button></span></div><div class="field full"><span class="flabel"><label for="f-composicion">Composición</label></span><textarea class="ta" id="f-composicion" rows="3" data-t="composicion"></textarea><span class="fx"><button type="button" data-act="mark|composicion|na">No aplica</button><button type="button" data-act="mark|composicion|ni">No lo sé</button></span></div><div class="field full"><span class="flabel"><label for="f-presentacion">Presentación</label><span class="badge" title="Los compradores pueden filtrar por este dato">Filtro</span></span><div class="chips" role="radiogroup"><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Polvo">Polvo</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Microgranulado">Microgranulado</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Granulado">Granulado</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Líquido">Líquido</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Pasta">Pasta</button><button type="button" class="chip sm" aria-pressed="false" data-act="enum|presentacion|Bloque">Bloque</button></div><span class="fx"><button type="button" data-act="mark|presentacion|na">No aplica</button><button type="button" data-act="mark|presentacion|ni">No lo sé</button></span></div><div class="field full"><span class="flabel"><label for="f-incorporacion">Forma de incorporación</label><span class="badge" title="Los compradores pueden filtrar por este dato">Filtro</span></span><div class="chips"><button type="button" class="chip sm" aria-pressed="false" data-act="multi|incorporacion|Pienso">Pienso</button><button type="button" class="chip sm" aria-pressed="false" data-act="multi|incorporacion|Premezcla">Premezcla</button><button type="button" class="chip sm" aria-pressed="false" data-act="multi|incorporacion|Agua de bebida">Agua de bebida</button><button type="button" class="chip sm" aria-pressed="false" data-act="multi|incorporacion|Top-dressing">Top-dressing</button><button type="button" class="chip sm" aria-pressed="false" data-act="multi|incorporacion|Directo al animal">Directo al animal</button></div><span class="fx"><button type="button" data-act="mark|incorporacion|na">No aplica</button><button type="button" data-act="mark|incorporacion|ni">No lo sé</button></span></div><div class="field"><span class="flabel"><label for="f-estabilidad">Estabilidad</label></span><input class="inp" id="f-estabilidad" data-t="estabilidad" value="" placeholder=""><span class="fx"><button type="button" data-act="mark|estabilidad|na">No aplica</button><button type="button" data-act="mark|estabilidad|ni">No lo sé</button></span></div></div><div class="note"><span>Dosis recomendada se indican <strong>por especie</strong> en el paso siguiente.</span></div><section class="sec"><h2>Datos propios <span class="hint">· lo que no está en la plantilla; solo los numéricos con unidad se pueden comparar</span></h2><div><button type="button" class="btn" data-act="ppadd">+ Añadir un dato propio</button></div></section><div class="nav"><button type="button" class="btn" data-act="atras">Atrás</button><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
+  <aside class="side" id="side"><div class="card"><strong style="font-size:15px">Tu producto · 40 %</strong><div class="prog"><span style="width:40%"></span></div><div style="margin-top:10px"><ol class="steps"><li><button type="button" data-act="ir|especies"><span class="dot ok">✓</span><span class="lbl2">Especies de destino</span></button></li><li><button type="button" data-act="ir|categoria"><span class="dot ok">✓</span><span class="lbl2">Categoría</span></button></li><li><button type="button" data-act="ir|mercados"><span class="dot">3</span><span class="lbl2">Mercados</span></button></li><li><button type="button" data-act="ir|identidad"><span class="dot">4</span><span class="lbl2">Identidad</span></button></li><li><button type="button" data-act="ir|tecnicos" aria-current="step"><span class="dot ok">✓</span><span class="lbl2">Datos técnicos</span></button></li><li><button type="button" data-act="ir|aplicaciones"><span class="dot ok">✓</span><span class="lbl2">Aplicación por especie</span></button></li><li><button type="button" data-act="ir|enfermedad"><span class="dot">7</span><span class="lbl2">Enfermedad diana</span></button></li><li><button type="button" data-act="ir|variantes"><span class="dot">8</span><span class="lbl2">Variantes</span></button></li><li><button type="button" data-act="ir|documentos"><span class="dot">9</span><span class="lbl2">Fotos, vídeos y documentos</span></button></li><li><button type="button" data-act="ir|certificaciones"><span class="dot">10</span><span class="lbl2">Certificaciones y sellos</span></button></li><li><button type="button" data-act="ir|revision"><span class="dot">11</span><span class="lbl2">Revisión</span></button></li></ol></div></div><div class="card help"><strong style="font-size:15px">Datos técnicos</strong><p>Campos de la plantilla de tu categoría. Los marcados ★ salen primero en el comparador.</p></div><div class="card prevbox"><strong style="font-size:15px">Vista previa</strong><div class="prev" style="margin-top:10px"><div class="pimg">PRO</div><span class="ppath">Salud digestiva › Enzimas</span><span class="pname">Probiótico (ejemplo)</span><div class="tags"><span class="tag">Porcino</span><span class="tag">Avicultura</span></div><span class="pcta">Solicitar información →</span></div></div></aside>
 </div></div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1150}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1280}}'>
 class Component extends DCLogic {
   renderVals() { return {}; }
 }

@@ -6,6 +6,7 @@
  "fuentes": [
   "AGROOLINK_Especificacion_Generador_Productos_Claude.docx",
   "AGROOLINK_arbol_condicional_para_Claude.txt",
+  "AGROOLINK_certificaciones_ecologico_ampliado.xlsx",
   "003productos.txt (categorias_v2.json)",
   "ESPECIES.txt (especies_v2.json)",
   "enfermedades.json"
@@ -66,6 +67,11 @@
    "id": "documentos",
    "label": "Fotos, vídeos y documentos",
    "ayuda": "Sube o arrastra las fotos (la primera es la principal), añade vídeos de YouTube o Vimeo o un archivo, con capítulos si quieres, y los documentos que pida tu categoría."
+  },
+  {
+   "id": "certificaciones",
+   "label": "Certificaciones y sellos",
+   "ayuda": "Solo las que correspondan a tu producto, tu planta o tu empresa. Cada una con alcance, entidad, fechas y documento: sin documento no se muestra el sello."
   },
   {
    "id": "revision",
@@ -1419,6 +1425,31 @@
      "type": "boolean",
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "metodos",
+     "label": "Métodos",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "parametros",
+     "label": "Parámetros",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "conectividad",
+     "label": "Conectividad",
+     "type": "multiselect",
+     "options": [
+      "WiFi",
+      "Ethernet",
+      "4G/5G",
+      "Modbus",
+      "OPC UA"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -1478,6 +1509,24 @@
      "type": "decimal",
      "unit": "kWh/1.000 huevos",
      "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ventilacion",
+     "label": "Ventilación",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "automatizacion",
+     "label": "Automatización",
+     "type": "enum",
+     "options": [
+      "Manual",
+      "Semiautomático",
+      "Automático"
+     ],
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1551,12 +1600,6 @@
      "max": 100,
      "comparable": true,
      "decisivo": true
-    },
-    {
-     "id": "compatibilidad",
-     "label": "Vacunas compatibles",
-     "type": "textarea",
-     "decisivo": true
     }
    ]
   },
@@ -1577,13 +1620,6 @@
       "Otro"
      ],
      "filterable": true,
-     "decisivo": true
-    },
-    {
-     "id": "dia",
-     "label": "Día de incubación",
-     "type": "integer",
-     "unit": "día",
      "decisivo": true
     },
     {
@@ -1653,6 +1689,18 @@
      "unit": "semanas",
      "comparable": true,
      "decisivo": true
+    },
+    {
+     "id": "ventilacion",
+     "label": "Ventilación",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "dimensiones",
+     "label": "Dimensiones",
+     "type": "object",
+     "unit": "m"
     }
    ]
   },
@@ -1681,8 +1729,15 @@
     },
     {
      "id": "bienestar",
-     "label": "Bienestar animal",
+     "label": "Parámetros de bienestar y seguridad",
      "type": "textarea",
+     "decisivo": true
+    },
+    {
+     "id": "sistema",
+     "label": "Sistema",
+     "type": "text",
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1712,7 +1767,7 @@
     },
     {
      "id": "agua",
-     "label": "Consumo de agua",
+     "label": "Consumo",
      "type": "decimal",
      "unit": "l/h",
      "comparable": true,
@@ -1736,18 +1791,25 @@
      "decisivo": true
     },
     {
-     "id": "temp_final",
-     "label": "Temperatura final",
-     "type": "decimal",
-     "unit": "°C",
-     "comparable": true,
-     "decisivo": true
-    },
-    {
      "id": "consumo",
      "label": "Consumo",
      "type": "decimal",
      "unit": "kWh",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "temperatura",
+     "label": "Rango de temperatura",
+     "type": "range",
+     "unit": "°C",
+     "decisivo": true
+    },
+    {
+     "id": "tiempo_enfriamiento",
+     "label": "Tiempo de enfriamiento",
+     "type": "decimal",
+     "unit": "min",
      "comparable": true,
      "decisivo": true
     }
@@ -1802,13 +1864,6 @@
      "decisivo": true
     },
     {
-     "id": "tipo_corte",
-     "label": "Tipo de corte o producto",
-     "type": "text",
-     "filterable": true,
-     "decisivo": true
-    },
-    {
      "id": "rendimiento",
      "label": "Rendimiento",
      "type": "decimal",
@@ -1816,6 +1871,18 @@
      "min": 0,
      "max": 100,
      "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "automatizacion",
+     "label": "Automatización",
+     "type": "enum",
+     "options": [
+      "Manual",
+      "Semiautomático",
+      "Automático"
+     ],
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1844,7 +1911,7 @@
     },
     {
      "id": "trazabilidad",
-     "label": "Trazabilidad",
+     "label": "Etiquetado y trazabilidad",
      "type": "boolean",
      "filterable": true,
      "decisivo": true
@@ -1854,6 +1921,25 @@
      "label": "Temperatura",
      "type": "decimal",
      "unit": "°C",
+     "decisivo": true
+    },
+    {
+     "id": "materiales",
+     "label": "Materiales",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "atmosfera",
+     "label": "Atmósfera",
+     "type": "enum",
+     "options": [
+      "Aire",
+      "Modificada (MAP)",
+      "Vacío",
+      "Skin"
+     ],
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1914,15 +2000,6 @@
      "ejemplo": "Bacillus subtilis DSM 32315"
     },
     {
-     "id": "ufc",
-     "label": "Concentración",
-     "type": "decimal",
-     "unit": "UFC/g",
-     "comparable": true,
-     "decisivo": true,
-     "ejemplo": "1 × 10⁹"
-    },
-    {
      "id": "dosis",
      "label": "Dosis recomendada",
      "type": "decimal",
@@ -1934,7 +2011,7 @@
     },
     {
      "id": "viabilidad",
-     "label": "Viabilidad",
+     "label": "Estabilidad",
      "type": "text",
      "decisivo": true
     },
@@ -1946,6 +2023,64 @@
      "comparable": true,
      "decisivo": true,
      "help": "Temperatura máxima de granulación que resiste"
+    },
+    {
+     "id": "identificacion",
+     "label": "Identificación de la cepa",
+     "type": "text",
+     "help": "Código de colección o depósito"
+    },
+    {
+     "id": "forma",
+     "label": "Forma",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -1963,16 +2098,6 @@
      "decisivo": true
     },
     {
-     "id": "pureza",
-     "label": "Pureza",
-     "type": "decimal",
-     "unit": "%",
-     "min": 0,
-     "max": 100,
-     "comparable": true,
-     "decisivo": true
-    },
-    {
      "id": "dosis",
      "label": "Dosis recomendada",
      "type": "decimal",
@@ -1987,6 +2112,49 @@
      "label": "Fermentabilidad",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "mecanismo",
+     "label": "Mecanismo",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2004,7 +2172,7 @@
     },
     {
      "id": "metodo",
-     "label": "Método de obtención",
+     "label": "Proceso",
      "type": "text",
      "decisivo": true
     },
@@ -2023,6 +2191,44 @@
      "label": "Estabilidad",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -2034,7 +2240,7 @@
    "atributos": [
     {
      "id": "tipo_enzima",
-     "label": "Tipo de enzima",
+     "label": "Clase de enzima",
      "type": "enum",
      "options": [
       "Fitasa",
@@ -2047,23 +2253,6 @@
      ],
      "filterable": true,
      "decisivo": true
-    },
-    {
-     "id": "sustrato",
-     "label": "Sustrato",
-     "type": "text",
-     "filterable": true,
-     "ejemplo": "Fitato, arabinoxilanos"
-    },
-    {
-     "id": "actividad",
-     "label": "Actividad",
-     "type": "object",
-     "unit": "U/g",
-     "comparable": true,
-     "decisivo": true,
-     "help": "Valor, unidad y método de ensayo van juntos: no se comparan actividades con métodos distintos",
-     "ejemplo": "5.000 FTU/g · método ISO 30024"
     },
     {
      "id": "dosis",
@@ -2085,14 +2274,50 @@
     },
     {
      "id": "termo",
-     "label": "Termoestabilidad",
+     "label": "Estabilidad térmica",
      "type": "decimal",
      "unit": "°C",
      "comparable": true,
      "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
-   ],
-   "nota": "Regla: actividad, unidad y método de ensayo son inseparables."
+   ]
   },
   "nut_acidificantes": {
    "label": "Acidificantes",
@@ -2102,7 +2327,7 @@
    "atributos": [
     {
      "id": "acidos",
-     "label": "Ácidos",
+     "label": "Ácidos activos",
      "type": "multiselect",
      "options": [
       "Fórmico",
@@ -2140,6 +2365,64 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "forma",
+     "label": "Forma",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "capacidad_acid",
+     "label": "Capacidad acidificante",
+     "type": "text",
+     "help": "Solo si se declara"
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2151,7 +2434,7 @@
    "atributos": [
     {
      "id": "toxinas",
-     "label": "Toxinas objetivo",
+     "label": "Micotoxinas objetivo",
      "type": "multiselect",
      "options": [
       "Aflatoxinas",
@@ -2166,7 +2449,7 @@
     },
     {
      "id": "adsorcion",
-     "label": "Capacidad de adsorción",
+     "label": "Capacidad o eficacia según ensayo",
      "type": "object",
      "unit": "%",
      "comparable": true,
@@ -2189,6 +2472,49 @@
      "type": "text",
      "decisivo": true,
      "help": "Si adsorbe también vitaminas o minerales"
+    },
+    {
+     "id": "mecanismo",
+     "label": "Mecanismo",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2233,6 +2559,43 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2263,6 +2626,43 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2273,34 +2673,8 @@
    ],
    "atributos": [
     {
-     "id": "aminoacido",
-     "label": "Aminoácido",
-     "type": "enum",
-     "options": [
-      "L-Lisina",
-      "DL-Metionina",
-      "L-Treonina",
-      "L-Triptófano",
-      "L-Valina",
-      "L-Arginina",
-      "L-Isoleucina"
-     ],
-     "filterable": true,
-     "decisivo": true
-    },
-    {
-     "id": "pureza",
-     "label": "Pureza",
-     "type": "decimal",
-     "unit": "%",
-     "min": 0,
-     "max": 100,
-     "comparable": true,
-     "decisivo": true
-    },
-    {
      "id": "digestibilidad",
-     "label": "Digestibilidad",
+     "label": "Digestibilidad declarada",
      "type": "decimal",
      "unit": "%",
      "min": 0,
@@ -2317,6 +2691,59 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "forma_quimica",
+     "label": "Forma química",
+     "type": "text",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "inclusion",
+     "label": "Inclusión",
+     "type": "decimal",
+     "unit": "kg/t",
+     "comparable": true,
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2328,7 +2755,7 @@
    "atributos": [
     {
      "id": "vitamina",
-     "label": "Vitamina",
+     "label": "Compuesto",
      "type": "enum",
      "options": [
       "A",
@@ -2370,6 +2797,57 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "forma",
+     "label": "Forma",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "biodisponibilidad",
+     "label": "Biodisponibilidad declarada",
+     "type": "text"
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -2381,7 +2859,7 @@
    "atributos": [
     {
      "id": "elemento",
-     "label": "Elemento",
+     "label": "Compuesto",
      "type": "enum",
      "options": [
       "Zinc",
@@ -2421,9 +2899,55 @@
     },
     {
      "id": "biodisponibilidad",
-     "label": "Biodisponibilidad",
+     "label": "Biodisponibilidad declarada",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "dosis",
+     "label": "Dosis recomendada",
+     "type": "decimal",
+     "unit": "g/t | kg/t | ml/l",
+     "comparable": true,
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2462,6 +2986,43 @@
      "type": "decimal",
      "comparable": true,
      "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2473,7 +3034,7 @@
    "atributos": [
     {
      "id": "extractos",
-     "label": "Extractos",
+     "label": "Extractos o compuestos",
      "type": "textarea",
      "filterable": true,
      "decisivo": true
@@ -2481,12 +3042,6 @@
     {
      "id": "marcadores",
      "label": "Marcadores activos",
-     "type": "text",
-     "decisivo": true
-    },
-    {
-     "id": "estandarizacion",
-     "label": "Estandarización",
      "type": "text",
      "decisivo": true
     },
@@ -2499,6 +3054,49 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2510,7 +3108,7 @@
    "atributos": [
     {
      "id": "activo",
-     "label": "Activo",
+     "label": "Principio(s) activo(s)",
      "type": "text",
      "filterable": true,
      "decisivo": true
@@ -2537,7 +3135,7 @@
     },
     {
      "id": "matriz",
-     "label": "Matriz",
+     "label": "Matriz objetivo",
      "type": "enum",
      "options": [
       "Pienso",
@@ -2547,6 +3145,43 @@
      ],
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -2573,7 +3208,7 @@
     },
     {
      "id": "escala",
-     "label": "Escala de color",
+     "label": "Escala de color (si procede)",
      "type": "text",
      "decisivo": true
     },
@@ -2586,6 +3221,43 @@
      "decisivo": true,
      "ejemplo": "100 g/t",
      "por_especie": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
     }
    ]
   },
@@ -2617,6 +3289,43 @@
      "label": "Aplicación",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2629,7 +3338,7 @@
    "atributos": [
     {
      "id": "funcion",
-     "label": "Función",
+     "label": "Función tecnológica",
      "type": "enum",
      "options": [
       "Conservante",
@@ -2664,6 +3373,60 @@
      "label": "Compatibilidad con el proceso",
      "type": "text",
      "decisivo": true
+    },
+    {
+     "id": "matriz",
+     "label": "Matriz",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "eficacia",
+     "label": "Parámetros de eficacia",
+     "type": "text"
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2702,6 +3465,43 @@
      "label": "Evidencia",
      "type": "textarea",
      "decisivo": true
+    },
+    {
+     "id": "composicion",
+     "label": "Composición",
+     "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "enum",
+     "options": [
+      "Polvo",
+      "Microgranulado",
+      "Granulado",
+      "Líquido",
+      "Pasta",
+      "Bloque"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "incorporacion",
+     "label": "Forma de incorporación",
+     "type": "multiselect",
+     "options": [
+      "Pienso",
+      "Premezcla",
+      "Agua de bebida",
+      "Top-dressing",
+      "Directo al animal"
+     ],
+     "filterable": true
+    },
+    {
+     "id": "estabilidad",
+     "label": "Estabilidad",
+     "type": "text"
     }
    ]
   },
@@ -2811,6 +3611,22 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "espectro",
+     "label": "Espectro e indicaciones aprobadas",
+     "type": "textarea"
+    },
+    {
+     "id": "advertencias",
+     "label": "Prescripción y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2847,7 +3663,7 @@
     },
     {
      "id": "parasitos",
-     "label": "Parásitos diana",
+     "label": "Parásito objetivo",
      "type": "textarea",
      "filterable": true,
      "decisivo": true
@@ -2891,6 +3707,30 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "interno_externo",
+     "label": "Interno o externo",
+     "type": "enum",
+     "options": [
+      "Interno",
+      "Externo",
+      "Ambos"
+     ],
+     "filterable": true,
+     "decisivo": true
     }
    ]
   },
@@ -2957,8 +3797,45 @@
     },
     {
      "id": "contraindicaciones",
-     "label": "Contraindicaciones y advertencias",
+     "label": "Precauciones",
      "type": "textarea"
+    },
+    {
+     "id": "via",
+     "label": "Vía",
+     "type": "multiselect",
+     "options": [
+      "Oral",
+      "Agua de bebida",
+      "Pienso",
+      "Inyectable",
+      "Tópica",
+      "Intramamaria",
+      "Spray",
+      "Ocular",
+      "In-ovo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "clase",
+     "label": "Clase",
+     "type": "enum",
+     "options": [
+      "AINE",
+      "Corticoide",
+      "Analgésico",
+      "Otro"
+     ],
+     "filterable": true,
+     "decisivo": true
     }
    ]
   },
@@ -3028,6 +3905,18 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3069,7 +3958,7 @@
     },
     {
      "id": "momento",
-     "label": "Momento de aplicación",
+     "label": "Pauta",
      "type": "text",
      "decisivo": true,
      "por_especie": true
@@ -3084,6 +3973,47 @@
     {
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "via",
+     "label": "Vía",
+     "type": "multiselect",
+     "options": [
+      "Oral",
+      "Agua de bebida",
+      "Pienso",
+      "Inyectable",
+      "Tópica",
+      "Intramamaria",
+      "Spray",
+      "Ocular",
+      "In-ovo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "finalidad",
+     "label": "Finalidad",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "restricciones",
+     "label": "Restricciones",
      "type": "textarea"
     }
    ]
@@ -3136,6 +4066,36 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "via",
+     "label": "Vía",
+     "type": "multiselect",
+     "options": [
+      "Oral",
+      "Agua de bebida",
+      "Pienso",
+      "Inyectable",
+      "Tópica",
+      "Intramamaria",
+      "Spray",
+      "Ocular",
+      "In-ovo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3204,6 +4164,18 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3273,6 +4245,18 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3333,6 +4317,36 @@
      "id": "contraindicaciones",
      "label": "Contraindicaciones y advertencias",
      "type": "textarea"
+    },
+    {
+     "id": "concentracion",
+     "label": "Concentración",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "via",
+     "label": "Vía",
+     "type": "multiselect",
+     "options": [
+      "Oral",
+      "Agua de bebida",
+      "Pienso",
+      "Inyectable",
+      "Tópica",
+      "Intramamaria",
+      "Spray",
+      "Ocular",
+      "In-ovo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "duracion",
+     "label": "Duración del tratamiento",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -5005,15 +6019,6 @@
    "efecto": "Nunca dosis ni ingredientes; caudal y potencia"
   },
   {
-   "id": "enzima_actividad",
-   "cuando": {
-    "nodo": [
-     "C06-01-04"
-    ]
-   },
-   "efecto": "Actividad = valor + unidad + método; no se compara entre métodos distintos"
-  },
-  {
    "id": "especie_segmentos",
    "cuando": {
     "siempre": true
@@ -5079,7 +6084,393 @@
     "siempre": true
    },
    "efecto": "Se distinguen 0, «No informado» y «No aplica»; lo vacío no se publica"
+  },
+  {
+   "id": "objetivo_no_indicacion",
+   "cuando": {
+    "nodo_empieza": [
+     "C06"
+    ]
+   },
+   "efecto": "Un objetivo funcional no equivale a una indicación terapéutica ni a una enfermedad diana"
+  },
+  {
+   "id": "enfermedad_ligada_especie",
+   "cuando": {
+    "nodo_empieza": [
+     "C07"
+    ]
+   },
+   "efecto": "En fármacos, la enfermedad diana va ligada a la especie y no sustituye a la indicación autorizada"
+  },
+  {
+   "id": "cert_solo_si_corresponde",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Solo se ofrecen las certificaciones que corresponden a la familia (y a la especie si aplica); una ficha puede tener varias"
+  },
+  {
+   "id": "cert_con_evidencia",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Cada certificación registra alcance, entidad, fechas y documento; sin documento no se muestra el sello (queda como «Declarada»)"
+  },
+  {
+   "id": "cert_tipos",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Se distinguen certificación, acreditación, autorización oficial, ensayo y declaración del fabricante; las autorizaciones y registros van en Mercados"
+  },
+  {
+   "id": "cert_multiespecie",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "En productos multiespecie la certificación se registra una vez, con restricciones por especie o mercado si las hay"
   }
+ ],
+ "certificaciones": [
+  {
+   "id": "eco_autorizado",
+   "nombre": "Autorizado para uso en producción ecológica",
+   "grupo": "Producción ecológica",
+   "tipo": "declaracion",
+   "familias": [
+    "C06",
+    "C10",
+    "C09"
+   ],
+   "datos": "País o mercado, normativa, categoría de uso, restricciones, organismo o evaluación, documento, vigencia",
+   "precaucion": "No equivale a una certificación ecológica del producto; verifica la normativa vigente y el uso concreto."
+  },
+  {
+   "id": "eco_certificado",
+   "nombre": "Producto certificado ecológico / orgánico",
+   "grupo": "Producción ecológica",
+   "tipo": "cert_producto",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Organismo de control, número, alcance, país, certificado, vigencia",
+   "precaucion": "Distinto de un producto solo utilizable en producción ecológica."
+  },
+  {
+   "id": "eco_apto_alimentacion",
+   "nombre": "Apto para alimentación animal ecológica",
+   "grupo": "Producción ecológica",
+   "tipo": "declaracion",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Especie, dosis, restricciones, base normativa, documento",
+   "precaucion": "La aptitud puede variar por ingrediente, función, mercado y especie."
+  },
+  {
+   "id": "eco_apto_ganaderia",
+   "nombre": "Apto para ganadería ecológica",
+   "grupo": "Producción ecológica",
+   "tipo": "declaracion",
+   "familias": [
+    "C09"
+   ],
+   "datos": "Uso exacto, superficies, condiciones, país, documento",
+   "precaucion": "No se infiere una autorización universal por pertenecer a una categoría."
+  },
+  {
+   "id": "fibl",
+   "nombre": "FiBL Inputs List",
+   "grupo": "Producción ecológica",
+   "tipo": "listado",
+   "familias": [
+    "C06",
+    "C10",
+    "C09"
+   ],
+   "datos": "País o lista, identificador, versión y vigencia",
+   "precaucion": "Estar en la lista no sustituye permisos ni normativa local."
+  },
+  {
+   "id": "omri",
+   "nombre": "OMRI Listed",
+   "grupo": "Producción ecológica",
+   "tipo": "listado",
+   "familias": [
+    "C06",
+    "C10",
+    "C09"
+   ],
+   "datos": "Nº de listado, categoría, mercado, fecha y enlace",
+   "precaucion": "No equivale automáticamente a la normativa UE."
+  },
+  {
+   "id": "usda_organic",
+   "nombre": "USDA Organic",
+   "grupo": "Producción ecológica",
+   "tipo": "cert_producto",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Certificador acreditado, alcance, número, vigencia",
+   "precaucion": "Distinto de la aptitud de insumos."
+  },
+  {
+   "id": "eu_organic",
+   "nombre": "Ecológico UE (logotipo)",
+   "grupo": "Producción ecológica",
+   "tipo": "cert_producto",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Organismo de control, código, alcance, documento",
+   "precaucion": "No se aplica a aditivos ni a productos no elegibles."
+  },
+  {
+   "id": "non_gmo",
+   "nombre": "Sin OGM / Non-GMO",
+   "grupo": "Sin OGM",
+   "tipo": "cert_producto",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Estándar, organismo, método, alcance, documento",
+   "precaucion": "Separa la declaración propia de la certificación independiente."
+  },
+  {
+   "id": "vlog",
+   "nombre": "VLOG / Ohne Gentechnik",
+   "grupo": "Sin OGM",
+   "tipo": "cert_producto",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Certificador, alcance, número, vigencia",
+   "precaucion": "El alcance depende del estándar."
+  },
+  {
+   "id": "gmp_fsa",
+   "nombre": "GMP+ FSA",
+   "grupo": "Seguridad y calidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Entidad, instalación, actividades cubiertas, vigencia",
+   "precaucion": "Certifica la planta o la cadena, no cada producto."
+  },
+  {
+   "id": "fami_qs",
+   "nombre": "FAMI-QS",
+   "grupo": "Seguridad y calidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C06"
+   ],
+   "datos": "Entidad, centro, alcance, vigencia",
+   "precaucion": "Comprueba que el producto y la actividad están en el alcance."
+  },
+  {
+   "id": "ufas",
+   "nombre": "UFAS",
+   "grupo": "Seguridad y calidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Certificado, alcance, vigencia",
+   "precaucion": "Según mercado."
+  },
+  {
+   "id": "iso22000",
+   "nombre": "ISO 22000 / FSSC 22000",
+   "grupo": "Seguridad y calidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C06",
+    "C10",
+    "C05"
+   ],
+   "datos": "Planta, alcance, organismo, certificado, vigencia",
+   "precaucion": "No equivale a una autorización ecológica."
+  },
+  {
+   "id": "haccp",
+   "nombre": "HACCP / APPCC",
+   "grupo": "Seguridad y calidad",
+   "tipo": "declaracion",
+   "familias": [
+    "C06",
+    "C10",
+    "C05"
+   ],
+   "datos": "Tipo de evidencia, alcance, auditoría",
+   "precaucion": "Tener APPCC implantado no es una certificación."
+  },
+  {
+   "id": "halal",
+   "nombre": "Halal",
+   "grupo": "Religiosas",
+   "tipo": "cert_producto",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Certificador, alcance, mercado, vigencia",
+   "precaucion": "No todos los certificadores se reconocen en todos los mercados."
+  },
+  {
+   "id": "kosher",
+   "nombre": "Kosher",
+   "grupo": "Religiosas",
+   "tipo": "cert_producto",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Certificador, alcance, vigencia",
+   "precaucion": "Revisa qué producto y planta cubre."
+  },
+  {
+   "id": "msc_asc",
+   "nombre": "MSC / ASC",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_producto",
+   "familias": [
+    "C10",
+    "C01"
+   ],
+   "datos": "Estándar, cadena de custodia, certificado, alcance",
+   "precaucion": "MSC y ASC tienen alcances distintos.",
+   "especies": [
+    "Acuicultura"
+   ]
+  },
+  {
+   "id": "marintrust",
+   "nombre": "MarinTrust",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Instalación, alcance, vigencia",
+   "precaucion": "No cubre todos los ingredientes automáticamente."
+  },
+  {
+   "id": "rspo",
+   "nombre": "RSPO",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Modelo de cadena de custodia, alcance, certificado",
+   "precaucion": "Indica la modalidad de cadena de custodia."
+  },
+  {
+   "id": "rtrs",
+   "nombre": "RTRS / ProTerra",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C10"
+   ],
+   "datos": "Estándar, alcance, cadena de custodia",
+   "precaucion": "No son equivalentes entre sí."
+  },
+  {
+   "id": "globalgap",
+   "nombre": "GLOBALG.A.P. / esquemas acuícolas",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C01",
+    "C10"
+   ],
+   "datos": "Esquema, explotación, alcance, vigencia",
+   "precaucion": "No se extiende a aditivos ni alimentos sin cobertura.",
+   "especies": [
+    "Acuicultura"
+   ]
+  },
+  {
+   "id": "sostenibilidad",
+   "nombre": "Otra certificación de sostenibilidad",
+   "grupo": "Sostenibilidad",
+   "tipo": "cert_sistema",
+   "familias": [
+    "C06",
+    "C10"
+   ],
+   "datos": "Esquema, auditor, alcance, vigencia",
+   "precaucion": "Evita alegaciones genéricas."
+  },
+  {
+   "id": "iso17025",
+   "nombre": "ISO/IEC 17025",
+   "grupo": "Laboratorio",
+   "tipo": "acreditacion",
+   "familias": [
+    "C11"
+   ],
+   "datos": "Organismo acreditador, ensayos o métodos acreditados, alcance",
+   "precaucion": "Acredita la competencia del laboratorio; no certifica un producto."
+  },
+  {
+   "id": "ensayo",
+   "nombre": "Ensayo de eficacia",
+   "grupo": "Ensayos",
+   "tipo": "ensayo",
+   "familias": [
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+   ],
+   "datos": "Informe, método, fecha, laboratorio",
+   "precaucion": "No se muestra como sello."
+  },
+  {
+   "id": "sanitaria",
+   "nombre": "Certificación sanitaria o de origen",
+   "grupo": "Sanitarias",
+   "tipo": "cert_producto",
+   "familias": [
+    "C01"
+   ],
+   "datos": "Lote, animales o establecimiento, entidad, vigencia",
+   "precaucion": "Distingue lote, animales y establecimiento."
+  }
+ ],
+ "tipos_certificacion": {
+  "cert_producto": "Certificación de producto",
+  "cert_sistema": "Certificación de sistema o planta",
+  "declaracion": "Declaración del fabricante",
+  "listado": "Inclusión en un listado",
+  "acreditacion": "Acreditación",
+  "autorizacion": "Autorización oficial (no es certificación)",
+  "ensayo": "Ensayo (no es certificación)"
+ },
+ "alcances_certificacion": [
+  "Producto",
+  "Instalación o planta",
+  "Proceso",
+  "Empresa",
+  "Materia prima o cadena"
+ ],
+ "estados_certificacion": [
+  "Declarada",
+  "Documentada",
+  "Verificada",
+  "Caducada"
  ],
  "fases": {
   "Avicultura": {

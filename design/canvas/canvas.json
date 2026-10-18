@@ -2975,7 +2975,7 @@
   },
   "ProdAltaCategoria.dc.html": {
    "w": 1280,
-   "h": 1580,
+   "h": 1620,
    "page": "productos",
    "x": 1360,
    "y": 0,
@@ -2983,7 +2983,7 @@
   },
   "ProdAltaIdentidad.dc.html": {
    "w": 1280,
-   "h": 1140,
+   "h": 1170,
    "page": "productos",
    "x": 4080,
    "y": 0,
@@ -2991,7 +2991,7 @@
   },
   "ProdAltaTecnicos.dc.html": {
    "w": 1280,
-   "h": 1160,
+   "h": 1340,
    "page": "productos",
    "x": 5440,
    "y": 0,
@@ -2999,7 +2999,7 @@
   },
   "ProdAltaVariantes.dc.html": {
    "w": 1280,
-   "h": 1160,
+   "h": 1190,
    "page": "productos",
    "x": 9520,
    "y": 0,
@@ -3007,7 +3007,7 @@
   },
   "ProdAltaDocumentos.dc.html": {
    "w": 1280,
-   "h": 1230,
+   "h": 1220,
    "page": "productos",
    "x": 10880,
    "y": 0,
@@ -3015,15 +3015,15 @@
   },
   "ProdAltaRevision.dc.html": {
    "w": 1280,
-   "h": 1160,
+   "h": 1210,
    "page": "productos",
-   "x": 12240,
+   "x": 13600,
    "y": 0,
-   "title": "G10 · Revisión: qué falta, estado, ficha pública y comparador"
+   "title": "G11 · Revisión: qué falta, estado, ficha pública y comparador"
   },
   "ProdAltaEnfermedad.dc.html": {
    "w": 1280,
-   "h": 1280,
+   "h": 1450,
    "page": "productos",
    "x": 8160,
    "y": 0,
@@ -3031,7 +3031,7 @@
   },
   "ProdAltaEspecies.dc.html": {
    "w": 1280,
-   "h": 1140,
+   "h": 1190,
    "page": "productos",
    "x": 0,
    "y": 0,
@@ -3047,23 +3047,23 @@
   },
   "ProdAltaOtro.dc.html": {
    "w": 1280,
-   "h": 1670,
+   "h": 1710,
    "page": "productos",
    "x": 10880,
-   "y": 2000,
+   "y": 2300,
    "title": "H9 · «Otro…» en cada grupo y familia: se escribe y lo revisa Agroolink"
   },
   "ProdAltaMercadosExcluir.dc.html": {
    "w": 1280,
-   "h": 1550,
+   "h": 1650,
    "page": "productos",
    "x": 9520,
-   "y": 2000,
+   "y": 2300,
    "title": "H8 · Mercados: todo el mundo salvo regiones o países"
   },
   "ProdAltaAplicaciones.dc.html": {
    "w": 1280,
-   "h": 1170,
+   "h": 1210,
    "page": "productos",
    "x": 6800,
    "y": 0,
@@ -3071,26 +3071,26 @@
   },
   "ProdAltaOrdeno.dc.html": {
    "w": 1280,
-   "h": 1040,
+   "h": 1070,
    "page": "productos",
    "x": 0,
-   "y": 2000,
+   "y": 2300,
    "title": "H1 · Ordeño + vacuno de leche: capacidad, rendimiento y conectividad; ningún campo de vacunas"
   },
   "ProdAltaVacunaEnf.dc.html": {
    "w": 1280,
-   "h": 1170,
+   "h": 1190,
    "page": "productos",
    "x": 1360,
-   "y": 2000,
+   "y": 2300,
    "title": "H2 · Vacuna + gallinas ponedoras: solo enfermedades aviares"
   },
   "ProdAltaVacunaApl.dc.html": {
    "w": 1280,
-   "h": 1110,
+   "h": 1140,
    "page": "productos",
    "x": 2720,
-   "y": 2000,
+   "y": 2300,
    "title": "H3 · Vacuna: edad, dosis, primovacunación y revacunación por especie"
   },
   "ProdAltaPienso.dc.html": {
@@ -3098,55 +3098,55 @@
    "h": 1090,
    "page": "productos",
    "x": 4080,
-   "y": 2000,
+   "y": 2300,
    "title": "H4 · Pienso completo + ponedoras: composición con calcio y fósforo"
   },
   "ProdAltaSinEspecie.dc.html": {
    "w": 1280,
-   "h": 1000,
+   "h": 1050,
    "page": "productos",
    "x": 5440,
-   "y": 2000,
+   "y": 2300,
    "title": "H5 · «No depende de especie» para equipos y servicios transversales"
   },
   "ProdAltaMolino.dc.html": {
    "w": 1280,
-   "h": 990,
+   "h": 1020,
    "page": "productos",
    "x": 6800,
-   "y": 2000,
+   "y": 2300,
    "title": "H6 · Molino sin especie: rendimiento, granulometría y potencia"
   },
   "ProdAltaNoAplica.dc.html": {
    "w": 1280,
-   "h": 1680,
+   "h": 1740,
    "page": "productos",
    "x": 8160,
-   "y": 2000,
+   "y": 2300,
    "title": "H7 · Con vacuno de leche no se ofrecen aviarios, nidales, parideras ni incubación"
   },
   "ProdAltaOcultos.dc.html": {
    "w": 1280,
-   "h": 1150,
+   "h": 1280,
    "page": "productos",
    "x": 12240,
-   "y": 2000,
+   "y": 2300,
    "title": "H10 · Al cambiar de tipo, los datos que ya no aplican se guardan pero no se publican"
   },
   "ProdAltaPublica.dc.html": {
    "w": 1280,
-   "h": 1080,
+   "h": 1130,
    "page": "productos",
    "x": 13600,
-   "y": 2000,
+   "y": 2300,
    "title": "H11 · Vista previa de la ficha pública: solo lo rellenado que aplica"
   },
   "ProdAltaComparador.dc.html": {
    "w": 1280,
-   "h": 1080,
+   "h": 1130,
    "page": "productos",
    "x": 14960,
-   "y": 2000,
+   "y": 2300,
    "title": "H12 · Así entra en el comparador: misma plantilla y especie, «No informado» si falta"
   },
   "CompTamanos.dc.html": {
@@ -3156,6 +3156,14 @@
    "x": 6800,
    "y": 0,
    "title": "Tamaños y anchos para todo el proyecto (inspirado en vevor.es, con Poppins)"
+  },
+  "ProdAltaCertificaciones.dc.html": {
+   "w": 1280,
+   "h": 1880,
+   "page": "productos",
+   "x": 12240,
+   "y": 0,
+   "title": "G10 · Certificaciones y sellos: alcance, entidad, fechas y documento; sin documento no hay sello"
   }
  },
  "createdOnFiles": {
@@ -3861,7 +3869,7 @@
    "w": 1280,
    "x": 0,
    "y": -340,
-   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G10 y H1–H12) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
+   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G11 y H1–H12) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
   },
   "prodT4": {
    "kind": "title1",
@@ -3869,7 +3877,7 @@
    "page": "productos",
    "w": 240,
    "x": 0,
-   "y": 1700,
+   "y": 2000,
    "text": "Casos de prueba del documento del árbol condicional y reglas · ordeño, vacuna, pienso de ponedoras, molino sin especie, categorías que no aplican, mercados, «Otro…», datos que no se publican, ficha pública y comparador"
   }
  },
@@ -4267,7 +4275,8 @@
   "ProdAltaOcultos.dc.html",
   "ProdAltaPublica.dc.html",
   "ProdAltaComparador.dc.html",
-  "CompTamanos.dc.html"
+  "CompTamanos.dc.html",
+  "ProdAltaCertificaciones.dc.html"
  ],
  "pages": [
   {

@@ -7,11 +7,25 @@
 - **Taxonomía:** C01–C12 (`categorias`, de 003productos.txt). Solo se eligen hojas.
 - **Plantillas:** cada hoja hereda la plantilla de su nodo más concreto (`plantillas[*].nodos`). Cada atributo tiene `id` inmutable, `type`, `unit` (con `|` si hay varias), `min`/`max`, `options` y las marcas `filterable`, `comparable`, `decisivo` (sale entre los 5 primeros del comparador) y `required`.
 - **Arquetipos:** eje de variantes, botón principal y documentos sugeridos (`arquetipo_familia`, con excepciones en `arquetipo_nodo`).
-- **Reglas** (`reglas`): enfermedad diana obligatoria en vacunas y opcional en fármacos, bioseguridad y algunos aditivos; registro por país; receta; autovacunas; servicios sin variantes; climatización sin dosis; actividad enzimática con valor + unidad + método; especies → segmentos → enfermedades; cambio de categoría que conserva lo compatible y avisa antes de descartar; 0, «No informado» y «No aplica» son distintos.
+- **Reglas** (`reglas`): enfermedad diana obligatoria en vacunas y opcional en fármacos, bioseguridad y algunos aditivos; registro por país; receta; autovacunas; servicios sin variantes; climatización sin dosis; especies → segmentos → enfermedades; cambio de categoría que conserva lo compatible y avisa antes de descartar; 0, «No informado» y «No aplica» son distintos.
 - **Mercados (mismo diseño que la empresa):** a la izquierda, buscador y atajos (Todo el mundo y regiones); a la derecha, una lista de entradas (región, «Todo el mundo» o país). Cada entrada que tiene países dentro se abre con «Toda», «Excluir» o «Solo algunas» y muestra las exclusiones en rojo. Se guardan las entradas (`id`, `modo`, `sel`) y se calculan los países; un país ya cubierto por otra entrada lo indica.
 - **«Otro» rellenable en todos los niveles:** «Otro…» en cada grupo y cada familia de categorías (ids `<grupo>-OTRO`, `<familia>-OTRO`), «Otra especie», «Otra producción» en cada especie y «Otra enfermedad». Llevan texto libre obligatorio y los revisa Agroolink. Un «Otro» de categoría usa la plantilla de su grupo si existe; si no, la plantilla general `otros`.
 - **Enfermedades:** filtro independiente (`enfermedades`), filtrado por las especies elegidas.
 - **Aviso:** los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.
+
+## Revisión de campos y certificaciones (18/10/2026)
+
+Fuente: `revision_campos_certificaciones.xlsx` (hojas: campos condicionales con decisión, condiciones por especie, reglas de interfaz, catálogo de certificaciones, producción ecológica y sellos).
+- **Decisiones aplicadas en `producto.json`:**
+  - lo marcado «Eliminar» se ha quitado (por ejemplo: UFC en probióticos, sustrato y actividad en enzimas, identidad y pureza en aminoácidos, estandarización en fitogénicos, momento de sexado, especies compatibles en vacunación in-ovo, formato de salida en despiece);
+  - lo «Aprobado» que faltaba se ha añadido (campos generales de nutrición —composición, presentación, forma de incorporación, estabilidad—; en fármacos, concentración, vía y duración; espectro y advertencias en antibióticos; clase en antiinflamatorios; finalidad y restricciones en reproductivos; ventilación y automatización en incubadoras; atmósfera y materiales en envasado; tiempo de enfriamiento en refrigeración…);
+  - lo «Pendiente» sigue como propuesta.
+- **Paso nuevo «Certificaciones y sellos»** (`certificaciones`, `tipos_certificacion`, `alcances_certificacion`, `estados_certificacion`):
+  - solo se ofrecen las que corresponden a la familia (y a la especie, por ejemplo MSC/ASC con acuicultura), agrupadas en: producción ecológica, sin OGM, seguridad y calidad, religiosas, sostenibilidad, laboratorio, ensayos y sanitarias;
+  - cada una registra tipo, alcance, entidad, número, país o mercado, fechas, documento y, en multiespecie, restricciones por especie o mercado;
+  - el estado se calcula: «Declarada» (sin documento), «Documentada», «Verificada» (la da Agroolink) o «Caducada»;
+  - el sello solo aparece en la ficha pública si está documentada o verificada; los ensayos y las autorizaciones nunca salen como sello;
+  - los registros y autorizaciones oficiales siguen en Mercados.
 
 ## Árbol condicional (18/10/2026)
 
