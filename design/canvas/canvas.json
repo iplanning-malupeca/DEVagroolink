@@ -2436,6 +2436,14 @@
    "h": 940,
    "page": "fabdist",
    "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
+  },
+  "FabCRMVarias.dc.html": {
+   "x": -4080,
+   "y": 0,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
   }
  },
  "createdOnFiles": {
@@ -3341,7 +3349,8 @@
   "FabTipoEspeciesSolo.dc.html",
   "FabTipoVacio.dc.html",
   "FabCRM.dc.html",
-  "FabCabeceraAdmin.dc.html"
+  "FabCabeceraAdmin.dc.html",
+  "FabCRMVarias.dc.html"
  ],
  "pages": [
   {
