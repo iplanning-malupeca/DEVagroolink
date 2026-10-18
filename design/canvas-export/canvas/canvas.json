@@ -3039,7 +3039,7 @@
   },
   "ProdAltaIdentidad.dc.html": {
    "w": 1280,
-   "h": 1110,
+   "h": 1140,
    "page": "productos",
    "x": 4080,
    "y": 0,
@@ -3047,7 +3047,7 @@
   },
   "ProdAltaTecnicos.dc.html": {
    "w": 1280,
-   "h": 1130,
+   "h": 1160,
    "page": "productos",
    "x": 5440,
    "y": 0,
@@ -3055,7 +3055,7 @@
   },
   "ProdAltaVariantes.dc.html": {
    "w": 1280,
-   "h": 1130,
+   "h": 1160,
    "page": "productos",
    "x": 9520,
    "y": 0,
@@ -3063,15 +3063,15 @@
   },
   "ProdAltaDocumentos.dc.html": {
    "w": 1280,
-   "h": 1130,
+   "h": 1230,
    "page": "productos",
    "x": 10880,
    "y": 0,
-   "title": "G9 · Imágenes y documentos"
+   "title": "G9 · Fotos (subir, arrastrar, principal, ordenar), vídeos con capítulos y documentos"
   },
   "ProdAltaRevision.dc.html": {
    "w": 1280,
-   "h": 1130,
+   "h": 1160,
    "page": "productos",
    "x": 12240,
    "y": 0,
@@ -3087,7 +3087,7 @@
   },
   "ProdAltaEspecies.dc.html": {
    "w": 1280,
-   "h": 1110,
+   "h": 1140,
    "page": "productos",
    "x": 0,
    "y": 0,
@@ -3119,7 +3119,7 @@
   },
   "ProdAltaAplicaciones.dc.html": {
    "w": 1280,
-   "h": 1150,
+   "h": 1170,
    "page": "productos",
    "x": 6800,
    "y": 0,
@@ -3191,7 +3191,7 @@
   },
   "ProdAltaPublica.dc.html": {
    "w": 1280,
-   "h": 1060,
+   "h": 1080,
    "page": "productos",
    "x": 13600,
    "y": 2000,
@@ -3199,7 +3199,7 @@
   },
   "ProdAltaComparador.dc.html": {
    "w": 1280,
-   "h": 1060,
+   "h": 1080,
    "page": "productos",
    "x": 14960,
    "y": 2000,

@@ -64,8 +64,8 @@
   },
   {
    "id": "documentos",
-   "label": "Imágenes y documentos",
-   "ayuda": "Fotos, ficha técnica y lo que pida tu categoría, con idioma y visibilidad."
+   "label": "Fotos, vídeos y documentos",
+   "ayuda": "Sube o arrastra las fotos (la primera es la principal), añade vídeos de YouTube o Vimeo o un archivo, con capítulos si quieres, y los documentos que pida tu categoría."
   },
   {
    "id": "revision",
@@ -168,11 +168,17 @@
   ],
   "documentos": [
    {
-    "id": "imagenes",
-    "label": "Imágenes",
+    "id": "fotos",
+    "label": "Fotos",
     "type": "file",
     "required": true,
-    "help": "Mín. 1, máx. 12, desde 1.200 px"
+    "help": "Mín. 1, máx. 12, desde 1.200 px; la primera es la principal; se pueden reordenar"
+   },
+   {
+    "id": "videos",
+    "label": "Vídeos",
+    "type": "object",
+    "help": "Enlace de YouTube o Vimeo o archivo; título y capítulos (minuto + título)"
    },
    {
     "id": "documentos",
