@@ -2213,29 +2213,13 @@
    "x": 1360,
    "y": 0
   },
-  "ProdAcuerdos.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P3 · Acuerdos de distribución por línea y zona (con exclusividad)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "ProdCatalogo.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P1 · Catálogo: filtros, completitud y acciones en bloque",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
   "ProdEspecEquipamiento.dc.html": {
    "h": 940,
    "page": "productos",
-   "title": "P7b · Especificaciones · sugeridos + propios (Zucami, tipo Jaulas y alojamientos)",
+   "title": "P7b · La misma pestaña con otra plantilla (Zucami, tipo Jaulas y alojamientos)",
    "w": 1280,
-   "x": 1360,
-   "y": 2800
+   "x": 5440,
+   "y": 0
   },
   "ProdFichaBeneficios.dc.html": {
    "h": 940,
@@ -2243,15 +2227,15 @@
    "title": "P6 · Ficha base · Beneficios y aplicación",
    "w": 1280,
    "x": 2720,
-   "y": 1400
+   "y": 0
   },
   "ProdFichaDocumentos.dc.html": {
    "h": 940,
    "page": "productos",
    "title": "P8 · Ficha base · Documentación, vídeo y certificaciones",
    "w": 1280,
-   "x": 5440,
-   "y": 1400
+   "x": 6800,
+   "y": 0
   },
   "ProdFichaEspecificaciones.dc.html": {
    "h": 940,
@@ -2259,7 +2243,7 @@
    "title": "P7 · Especificaciones · sugeridos + propios (Hy-D®, tipo Vitaminas)",
    "w": 1280,
    "x": 4080,
-   "y": 1400
+   "y": 0
   },
   "ProdFichaGeneral.dc.html": {
    "h": 940,
@@ -2267,15 +2251,15 @@
    "title": "P4 · Ficha base · General",
    "w": 1280,
    "x": 0,
-   "y": 1400
+   "y": 0
   },
   "ProdFichaMercados.dc.html": {
    "h": 940,
    "page": "productos",
-   "title": "P9 · Ficha base · Mercados y dónde comprar",
+   "title": "P9 · Mercados y dónde comprar · cambia según el tipo de empresa (ver 011a–011e)",
    "w": 1280,
-   "x": 6800,
-   "y": 1400
+   "x": 8160,
+   "y": 0
   },
   "ProdFichaVariantes.dc.html": {
    "h": 940,
@@ -2283,23 +2267,15 @@
    "title": "P5 · Ficha base · Variantes (embalaje o configuración)",
    "w": 1280,
    "x": 1360,
-   "y": 1400
+   "y": 0
   },
   "ProdImportar.dc.html": {
    "h": 940,
-   "page": "productos",
-   "title": "P2 · Importar catálogo por Excel (actualiza por referencia)",
+   "page": "prodfab",
+   "title": "PA0b · Importar catálogo por Excel (actualiza por referencia)",
    "w": 1280,
    "x": 1360,
    "y": 0
-  },
-  "ProdVersionLocal.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P10 · Versión local de NewFarms (lado del distribuidor)",
-   "w": 1280,
-   "x": 0,
-   "y": 2800
   },
   "ProyArchivados.dc.html": {
    "h": 900,
@@ -2865,7 +2841,7 @@
    "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "x": 1360,
+   "x": 2720,
    "y": 0,
    "title": "PA1 · Añadir un producto: crear, importar o duplicar · lo venden tus distribuidores"
   },
@@ -2873,9 +2849,9 @@
    "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "x": 2720,
+   "x": 4080,
    "y": 0,
-   "title": "PA2 · Mercados y dónde comprar: distribuidores por país y zona (= P9)"
+   "title": "PA2 · Mercados y dónde comprar: distribuidores por país y zona"
   },
   "PrdSucNuevo.dc.html": {
    "w": 1280,
@@ -2931,7 +2907,7 @@
    "page": "proddis",
    "x": 2720,
    "y": 0,
-   "title": "PD2 · Versión local de un producto de la marca (= P10, con NewFarms)"
+   "title": "PD2 · Versión local de un producto de la marca"
   },
   "SrvFab.dc.html": {
    "w": 1280,
@@ -2987,15 +2963,15 @@
    "page": "prodfab",
    "x": 0,
    "y": 0,
-   "title": "PA0 · Catálogo de DSM-Firmenich: distribuidores por producto (= P1)"
+   "title": "PA0 · Catálogo de DSM-Firmenich: distribuidores por producto"
   },
   "PrdFabAcuerdos.dc.html": {
    "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "x": 4080,
+   "x": 5440,
    "y": 0,
-   "title": "PA3 · Acuerdos de distribución por línea y zona (= P3)"
+   "title": "PA3 · Acuerdos de distribución por línea y zona"
   },
   "PrdComCatalogo.dc.html": {
    "w": 1280,
@@ -3523,32 +3499,14 @@
    "x": 0,
    "y": 2300
   },
-  "prodT1": {
+  "prodT2": {
    "kind": "title1",
-   "maxW": 4000,
+   "maxW": 9400,
    "page": "productos",
-   "text": "Módulo Productos · catálogo amplio (DSM-Firmenich, fabricante con distribuidores)",
+   "text": "Alta de un producto · la ficha, pestaña a pestaña (ejemplo: Hy-D® de DSM-Firmenich). Es igual para todos los tipos de empresa; lo que cambia según la empresa está en 011a–011e.",
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "prodT2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "productos",
-   "text": "Ficha base de un producto · las pestañas siguen las de la ficha pública",
-   "w": 240,
-   "x": 0,
-   "y": 1120
-  },
-  "prodT3": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "productos",
-   "text": "Versión local del distribuidor · y la misma pestaña con otra plantilla",
-   "w": 240,
-   "x": 0,
-   "y": 2520
   },
   "proyDev1": {
    "fill": "orange",
@@ -3726,7 +3684,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodfab",
-   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. La ficha base (General → Documentación) es la de «Productos (módulo)», P4–P8.",
+   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. La ficha de cada producto está en «011_Alta de producto».",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3853,16 +3811,13 @@
   "FabContacto.dc.html",
   "FabPublicar.dc.html",
   "FabShell.dc.html",
-  "ProdCatalogo.dc.html",
   "ProdImportar.dc.html",
-  "ProdAcuerdos.dc.html",
   "ProdFichaGeneral.dc.html",
   "ProdFichaVariantes.dc.html",
   "ProdFichaBeneficios.dc.html",
   "ProdFichaEspecificaciones.dc.html",
   "ProdFichaDocumentos.dc.html",
   "ProdFichaMercados.dc.html",
-  "ProdVersionLocal.dc.html",
   "ProdEspecEquipamiento.dc.html",
   "TabMis.dc.html",
   "TabVista.dc.html",
@@ -4229,6 +4184,10 @@
    "name": "010_Alta · Distribuidor multimarca"
   },
   {
+   "id": "productos",
+   "name": "011_Alta de producto · la ficha"
+  },
+  {
    "id": "prodfab",
    "name": "011a_Productos · Fabricante con distribuidores (DSM-Firmenich)"
   },
@@ -4251,10 +4210,6 @@
   {
    "id": "altaserv",
    "name": "012_Alta servicios · 5 escenarios"
-  },
-  {
-   "id": "productos",
-   "name": "Productos (módulo)"
   },
   {
    "id": "servicios",
