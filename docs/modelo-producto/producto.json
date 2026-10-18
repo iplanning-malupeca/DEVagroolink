@@ -100,9 +100,10 @@
    },
    {
     "id": "sku",
-    "label": "Referencia (SKU)",
+    "label": "Referencia interna",
     "type": "text",
-    "required": true
+    "required": true,
+    "help": "Código del producto en el catálogo o ERP de la empresa (SKU). No lo ve el comprador; sirve para actualizar por Excel."
    },
    {
     "id": "descripcion_corta",
