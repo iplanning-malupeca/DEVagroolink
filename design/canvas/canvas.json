@@ -415,7 +415,7 @@
    "page": "comerciales",
    "title": "K6 · Bandeja de la comercial (Laura García)",
    "w": 1280,
-   "x": 9520,
+   "x": 13600,
    "y": 1340
   },
   "ComContacto.dc.html": {
@@ -423,7 +423,7 @@
    "page": "comerciales",
    "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
    "w": 1280,
-   "x": 6800,
+   "x": 10880,
    "y": 1340
   },
   "ComEquipo.dc.html": {
@@ -439,7 +439,7 @@
    "page": "comerciales",
    "title": "K5 · Revisar y publicar",
    "w": 1280,
-   "x": 8160,
+   "x": 12240,
    "y": 1340
   },
   "ComTipo.dc.html": {
@@ -455,7 +455,7 @@
    "page": "comerciales",
    "title": "K3 · Zonas de cada comercial",
    "w": 1280,
-   "x": 5440,
+   "x": 9520,
    "y": 1340
   },
   "CompNueva1.dc.html": {
@@ -2540,6 +2540,30 @@
    "title": "D0b · Confirma tu email de empresa (código de 6 cifras)",
    "x": 1360,
    "y": 0
+  },
+  "ComEquipoCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
+   "x": 5440,
+   "y": 1340
+  },
+  "ComEmailSolicitud.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
+   "x": 6800,
+   "y": 1340
+  },
+  "ComAltaComercial.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "K2d · El comercial se da de alta para ver la solicitud",
+   "x": 8160,
+   "y": 1340
   }
  },
  "createdOnFiles": {
@@ -2682,7 +2706,7 @@
    "kind": "title1",
    "maxW": 10800,
    "page": "comerciales",
-   "text": "2 · La ficha: cabecera (KC) con su modal de objetivos y la vista superadmin · luego equipo, zonas, contacto, publicar y la bandeja de cada comercial",
+   "text": "2 · La ficha: cabecera (KC) con su modal de objetivos y la vista superadmin · equipo comercial (K2) con el perfil sin cuenta, el email y el alta del comercial · zonas, contacto, publicar y bandeja",
    "w": 240,
    "x": 0,
    "y": 1040
@@ -3264,6 +3288,9 @@
   "ComCabeceraObjetivos.dc.html",
   "ComCabeceraAdmin.dc.html",
   "ComEquipo.dc.html",
+  "ComEquipoCrear.dc.html",
+  "ComEmailSolicitud.dc.html",
+  "ComAltaComercial.dc.html",
   "ComZonas.dc.html",
   "ComContacto.dc.html",
   "ComPublicar.dc.html",
