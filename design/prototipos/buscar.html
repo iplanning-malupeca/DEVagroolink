@@ -45,6 +45,15 @@ button{cursor:pointer}
 .go{width:44px;height:44px;margin:4px 6px 4px 0;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center}
 .pop{position:absolute;top:calc(100% + 10px);left:0;right:0;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 50px rgba(16,40,28,.16);padding:18px;z-index:30;max-height:min(72vh,640px);overflow:auto}
 .pill{display:none}
+.ibm,.tabbar{display:none}
+.ibm{width:44px;height:44px;border-radius:12px;border:0;background:none;align-items:center;justify-content:center;color:var(--fg);position:relative;flex:none}
+.ibm .bdg{position:absolute;top:5px;right:3px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#D93A3A;color:#FFFFFF;font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--surface);border-top:1px solid var(--line);padding:2px 6px env(safe-area-inset-bottom,0px)}
+.tabbar a{flex:1;min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:500;color:var(--muted);text-decoration:none}
+.tabbar a[aria-current="page"]{color:var(--accent);font-weight:600}
+.tabbar .tp{width:54px;height:30px;border-radius:15px;display:flex;align-items:center;justify-content:center}
+.tabbar a[aria-current="page"] .tp{background:#E4F0D0}
+.tabbar .tav{width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center}
 @media (max-width:899px){
   .bar{display:none}
   .pill{display:flex;flex:1;min-width:0;align-items:center;gap:10px;height:48px;border:1px solid var(--line2);border-radius:999px;padding:0 6px 0 16px;background:var(--surface);box-shadow:0 2px 10px rgba(16,40,28,.08);text-align:left}
@@ -53,6 +62,10 @@ button{cursor:pointer}
   .pill small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .topin{min-height:64px;gap:10px}
   .logo svg{height:22px}
+  .top .av{display:none}
+  .ibm{display:inline-flex}
+  .tabbar{display:flex}
+  main{padding-bottom:110px}
 }
 /* selectores (los mismos en la barra, en móvil y en «Filtros») */
 .qs{display:flex;align-items:center;gap:8px;height:40px;border:1px solid var(--line2);border-radius:10px;padding:0 12px;background:var(--surface)}
@@ -164,6 +177,12 @@ h1{margin:0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2
 <body>
 <header class="top"><div class="wrapw gut topin" id="top"></div></header>
 <main class="wrapw gut" id="main"></main>
+<nav class="tabbar" aria-label="Navegación principal">
+  <a href="#" aria-current="page"><span class="tp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/></svg></span>Explorar</a>
+  <a href="#"><span class="tp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6"/></svg></span>Proyectos</a>
+  <a href="#"><span class="tp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>Tableros</a>
+  <a href="#"><span class="tp"><span class="tav">SE</span></span>Tú</a>
+</nav>
 <div id="layer"></div>
 <template id="logo"><svg role="img" aria-label="Agroolink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8038 1766">
   <path fill="#12412a" d="M1234.19,1412.23l517.18-.38c31.09-.02,61.66-31.54,62.11-51.89l1.56-71.24,3.25-19.62c-3.36-1.67-9.75-.62-13.12,1.9-14.78,11.05-28.92,21.45-46.52,27.92l-29.01,2.69-220.67-.61-140.07-2.03c-31.5-.46-62.46-4.37-91.22-16.7-25.68-11.02-49.62-25.32-68.38-45.12-32.11-33.89-55.2-85.18-55.8-131.32l-1.6-12.15-.09-383.29,1.55-26.26c-.63-29.75,6.27-55.56,18.15-82.61,11.22-25.52,28.16-46.05,49.08-65.24,38.02-34.86,94.85-56.55,147.8-56.43l464.68,1.08,218.86,1.12c5.7.03,9.98,1.86,10,8.18l1.01,285.14.59,605.67-2.75,50.06c-1.14,20.67-6.47,40.82-14.08,59.36-16.89,41.16-43.6,73.57-80.15,98.18-30.04,20.22-61.95,34.82-98.58,39.34l-32.17,3.96-343.47-.36-37.22-.6-44.17.43-31-.47-23.85-.35-125.19-.69.31-18.4-.24-46.45-.41-116.81-.1-20.22c-.03-5.92-.82-10.57,3.75-15.79ZM1549.88,1065.42l219.62-.19c16.76-.01,42.33-19.63,42.33-45.47v-293.32c-.02-6.1-6.66-8.39-12.02-8.37l-294.67,1.01-66.58,2.38c-24.49,3.09-42.18,25.06-50.87,46.27l1.49,164.91,1.69,83.6c.44,21.92,23.32,46.16,45.2,46.65l113.81,2.54Z"/>
@@ -358,6 +377,7 @@ function cabecera() {
       sug +
     '</div>' +
     '<button type="button" class="pill" data-act="hoja">' + ic('lupa', 18) + '<span><strong>' + esc(F.q || '¿Qué buscas?') + '</strong><small>' + esc([txtEsp() || 'Cualquier especie', txtCat() || 'cualquier categoría'].join(' · ')) + '</small></span></button>' +
+    '<button type="button" class="ibm" aria-label="Mensajes, 3 sin leer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6"/></svg><span class="bdg">3</span></button>' +
     '<span class="av" aria-label="Samuel Esteban">SE</span>';
 }
 function autocompletar() {

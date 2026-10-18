@@ -38,7 +38,7 @@ MOV = [('T1', 'BuscaMovResultados', 'M1 · Móvil · Resultados: pastilla de bú
        ('T3', 'BuscaMovCategoria', 'M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»'),
        ('T4', 'BuscaMovFiltros', 'M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»')]
 c = json.load(open(PR + 'canvas.json')); B = c['boards']
-viejos = [k for k, b in B.items() if b.get('page') == 'busqueda' and k != 'BusIntranetBuscar.dc.html' and not k.startswith('Busca')]
+viejos = [k for k, b in B.items() if b.get('page') == 'busqueda' and (k.startswith('Bus') or k.startswith('HeaderHd')) and k != 'BusIntranetBuscar.dc.html' and not k.startswith('Busca')]
 for k in viejos: del B[k]
 c['order'] = [k for k in c['order'] if k not in viejos]
 for k in [k for k, n in c['notes'].items() if n.get('page') == 'busqueda' and k != 'busT7']: del c['notes'][k]

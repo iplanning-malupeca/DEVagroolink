@@ -27,7 +27,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--surface);border-bottom:1px solid var(--line);min-height:56px;box-sizing:border-box;padding-block:8px;padding-left:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,60px),env(safe-area-inset-right,0px));display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.logo{font-weight:700;font-size:18px;letter-spacing:-.01em}.logo b{color:var(--accent)}
+.logo{display:flex;align-items:center;flex:none}.logo svg{height:28px;width:auto;display:block}
 .crumb{color:var(--muted);font-size:15px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .crumb strong{color:var(--fg);font-weight:500}
 .saved{font-size:12px;color:var(--ok);display:flex;align-items:center;gap:5px;white-space:nowrap}
@@ -225,7 +225,7 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
 </style>
 
 <header class="top">
-  <span class="logo">agroo<b>link</b></span>
+  <span class="logo">/*LOGO*/</span>
   <span class="crumb">Productos › <strong id="crumbName">Nuevo producto</strong></span>
   <span class="saved" id="saved" aria-live="polite"></span>
   <button class="btn" type="button" id="salir">Guardar y salir</button>

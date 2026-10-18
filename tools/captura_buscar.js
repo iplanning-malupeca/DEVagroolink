@@ -4,7 +4,7 @@ const reset=()=>{Object.assign(__F,{q:'',esp:{},cat:[],enf:[],pais:[],marca:[],v
 async function snap(name,title,capa){ __render(); await wait(150); scrollTo(0,0);
   if(capa) document.body.classList.add('cap');
   const main=document.getElementById('main'), layer=document.getElementById('layer');
-  const body=document.querySelector('header.top').outerHTML+(capa?'<div id="layer">'+layer.innerHTML+'</div>':main.outerHTML+layer.innerHTML);
+  const nav=document.querySelector('nav.tabbar'); const body=document.querySelector('header.top').outerHTML+(capa?'<div id="layer">'+layer.innerHTML+'</div>':main.outerHTML+(innerWidth<900?nav.outerHTML.replace('class="tabbar"','class="tabbar" style="position:absolute;top:'+(Math.max(844,Math.ceil(document.documentElement.scrollHeight/10)*10)-84)+'px;bottom:auto"'):'')+layer.innerHTML);
   if(capa) main.style.display='none';
   const h=Math.max(innerWidth<900?844:860, Math.ceil(document.documentElement.scrollHeight/10)*10);
   main.style.display=''; document.body.classList.remove('cap');

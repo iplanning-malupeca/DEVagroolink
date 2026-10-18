@@ -1708,14 +1708,6 @@
    "x": 2120,
    "y": 0
   },
-  "MobMenu.dc.html": {
-   "h": 1570,
-   "page": "movil",
-   "title": "M3 · Menú (pestaña 5)",
-   "w": 390,
-   "x": 1060,
-   "y": 0
-  },
   "MobResultados.dc.html": {
    "h": 920,
    "page": "movil",
@@ -1735,7 +1727,7 @@
   "MobTabBar.dc.html": {
    "h": 84,
    "page": "movil",
-   "title": "MobTabBar · componente",
+   "title": "MobTabBar · componente: Explorar · Proyectos · Tableros · Tú (como 000_Header)",
    "w": 390,
    "x": 0,
    "y": 4040
@@ -3816,7 +3808,6 @@
   "Fig63.dc.html",
   "MobHome.dc.html",
   "MobHomeVisitante.dc.html",
-  "MobMenu.dc.html",
   "MobBuscar.dc.html",
   "MobIntereses.dc.html",
   "MobExplorarEspecies.dc.html",

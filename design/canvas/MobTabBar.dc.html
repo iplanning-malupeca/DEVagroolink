@@ -70,19 +70,22 @@ a{color:#0E5A3A;text-decoration:none;font-weight:500}
 </helmet>
 <nav class="tb" aria-label="Navegación principal"><div class="tbr">
 <sc-for list="{{ items }}" as="t" hint-placeholder-count="4">
-<a href="#" class="tbi" aria-current="{{ t.cur }}" style="color: {{ t.tinta }}; font-weight: {{ t.peso }};"><span class="tbp" style="background: {{ t.fondo }};"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ t.grosor }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ t.d }}"/></svg></span><span>{{ t.label }}</span><sc-if value="{{ t.badge }}" hint-placeholder-val="{{ false }}"><span class="nb">{{ t.badge }}</span></sc-if></a>
+<a href="#" class="tbi" aria-current="{{ t.cur }}" style="color: {{ t.tinta }}; font-weight: {{ t.peso }};"><span class="tbp" style="background: {{ t.fondo }};"><sc-if value="{{ t.esAv }}" hint-placeholder-val="{{ false }}"><span style="width: 26px; height: 26px; border-radius: 50%; background: {{ t.avFondo }}; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center;">{{ t.ini }}</span></sc-if><sc-if value="{{ t.esIco }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ t.grosor }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ t.d }}"/></svg></sc-if></span><span>{{ t.label }}</span><sc-if value="{{ t.badge }}" hint-placeholder-val="{{ false }}"><span class="nb">{{ t.badge }}</span></sc-if></a>
 </sc-for>
 </div><div class="hi"><span></span></div></nav>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":1,"min":1,"max":5},"proyectos":{"editor":"text","default":"3"},"$preview":{"width":390,"height":84}}'>
+<script type="text/x-dc" data-dc-script data-props='{"activo":{"editor":"int","default":1,"min":1,"max":5},"sesion":{"editor":"bool","default":true},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"proyectos":{"editor":"text","default":""},"$preview":{"width":390,"height":84}}'>
 class Component extends DCLogic {
   renderVals() {
-    const a = this.props.activo ?? 1;
-    const T = [["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5", "Explorar"], ["M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6", "Proyectos"], ["M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z", "Tableros"], ["M4 6h16M4 12h16M4 18h16", "Menú"]];
+    // Menú móvil de 000_Header: Explorar · Proyectos · Tableros · Tú (avatar). Sin sesión, el último es «Entrar».
+    const a = this.props.activo ?? 1, sesion = this.props.sesion ?? true;
+    const T = [["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5", "Explorar"], ["M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6", "Proyectos"], ["M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z", "Tableros"], ["M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0", sesion ? "Tú" : "Entrar"]];
     const items = T.map(([d, label], i) => {
       const on = i === Math.max(a, 2) - 2;
+      const av = i === 3 && sesion;
       return { d: d, label: label, cur: on ? 'page' : 'false', tinta: on ? '#0E5A3A' : '#56615B', peso: on ? '600' : '500',
-        fondo: on ? '#E4F0D0' : 'transparent', grosor: on ? '2.1' : '1.8', badge: i === 1 ? (this.props.proyectos ?? '3') : '' };
+        fondo: on && !av ? '#E4F0D0' : 'transparent', grosor: on ? '2.1' : '1.8', badge: i === 1 ? (this.props.proyectos ?? '') : '',
+        esAv: av, esIco: !av, ini: this.props.iniciales ?? 'SE', avFondo: this.props.color ?? '#0E5A3A' };
     });
     return { items: items };
   }
