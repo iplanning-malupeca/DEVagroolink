@@ -18,14 +18,6 @@
    "x": 0,
    "y": 2520
   },
-  "AltaEmpresa.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "Desde Alta (L4) · Represento una empresa → Tu empresa",
-   "w": 960,
-   "x": 0,
-   "y": 2400
-  },
   "AltaExperto.dc.html": {
    "h": 760,
    "page": "experto",
@@ -322,86 +314,6 @@
    "x": 6000,
    "y": 8500
   },
-  "CfgComerciales.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F4 · Paso 5 · Red comercial · Comerciales y asignación",
-   "w": 1280,
-   "x": 0,
-   "y": 1240
-  },
-  "CfgContacto.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F7 · Paso 6 · Botones de contacto y a quién llega cada solicitud",
-   "w": 1280,
-   "x": 4080,
-   "y": 1240
-  },
-  "CfgDistribuidores.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F5 · Paso 5 · Quién vende tus productos (DSM aprueba por producto)",
-   "w": 1280,
-   "x": 1360,
-   "y": 1240
-  },
-  "CfgDondeComprar.dc.html": {
-   "h": 1000,
-   "page": "configempresa",
-   "title": "F9 · Lo que ve el comprador: una ficha, versión de su país y «Dónde comprarlo»",
-   "w": 1280,
-   "x": 6800,
-   "y": 1240
-  },
-  "CfgFichaLocal.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F8 · Paso 7 · Versión local de una ficha (base del fabricante + país)",
-   "w": 1280,
-   "x": 5440,
-   "y": 1240
-  },
-  "CfgMarcas.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F6 · Paso 5 · Marcas y productos que vendes (AgroNova)",
-   "w": 1280,
-   "x": 2720,
-   "y": 1240
-  },
-  "CfgPerfil.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F2 · Paso 4 · Perfil público (cabecera de la ficha)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
-  },
-  "CfgSucursales.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F3 · Paso 5 · Sucursales (con administradores propios)",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
-  },
-  "CfgTipo.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F1 · Paso 3 · Tipo de empresa — fabricante (Zucami)",
-   "w": 1280,
-   "x": 0,
-   "y": 0
-  },
-  "CfgTipoDist.dc.html": {
-   "h": 900,
-   "page": "configempresa",
-   "title": "F1b · Paso 3 · Tipo de empresa — distribuidor multimarca (AgroNova)",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
-  },
   "Checkout.dc.html": {
    "h": 900,
    "page": "planes",
@@ -415,7 +327,7 @@
    "page": "comerciales",
    "title": "K2d · El comercial se da de alta para ver la solicitud",
    "w": 1280,
-   "x": 9520,
+   "x": 8160,
    "y": 1340
   },
   "ComAvisoAdmin.dc.html": {
@@ -487,7 +399,7 @@
    "page": "comerciales",
    "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
    "w": 1280,
-   "x": 8160,
+   "x": 6800,
    "y": 1340
   },
   "ComEquipo.dc.html": {
@@ -503,7 +415,7 @@
    "page": "comerciales",
    "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
    "w": 1280,
-   "x": 6800,
+   "x": 5440,
    "y": 1340
   },
   "ComPublicar.dc.html": {
@@ -525,7 +437,7 @@
   "ComTipoEspecies.dc.html": {
    "h": 940,
    "page": "comerciales",
-   "title": "K1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "title": "K1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
    "x": 9520,
    "y": 0
@@ -583,7 +495,7 @@
    "page": "comerciales",
    "title": "K3 · Detalle del comercial: datos y zona que cubre (se abre desde el equipo)",
    "w": 1280,
-   "x": 5440,
+   "x": 9520,
    "y": 1340
   },
   "CompNueva1.dc.html": {
@@ -725,7 +637,7 @@
   "DisAvisoAdmin.dc.html": {
    "h": 940,
    "page": "distmulti",
-   "title": "X1c · Superadmin: altas en organizaciones",
+   "title": "X0d · Superadmin: altas en organizaciones",
    "w": 1280,
    "x": 4080,
    "y": 0
@@ -733,7 +645,7 @@
   "DisAvisoEmpresa.dc.html": {
    "h": 940,
    "page": "distmulti",
-   "title": "X1b · Aviso a los administradores de la empresa (copia al superadmin)",
+   "title": "X0c · Aviso a los administradores de la empresa (copia al superadmin)",
    "w": 1280,
    "x": 2720,
    "y": 0
@@ -821,7 +733,7 @@
   "DisTipoEspecies.dc.html": {
    "h": 940,
    "page": "distmulti",
-   "title": "X1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "title": "X1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
    "x": 9520,
    "y": 0
@@ -874,77 +786,13 @@
    "x": 1360,
    "y": 0
   },
-  "EmpAvisoAdmin.dc.html": {
-   "h": 940,
-   "page": "altaempresa",
-   "title": "E4b · Superadmin: primera persona de AgroExport (solo se avisa al superadmin)",
-   "w": 1280,
-   "x": 4160,
-   "y": 0
-  },
   "EmpConsultor.dc.html": {
    "h": 940,
-   "page": "altaempresa",
-   "title": "E5b · Tipo de empresa de un consultor: Asvet Veterinaris (servicios + expertos)",
+   "page": "altaserv",
+   "title": "SE0 · Tipo de empresa solo de servicios (Asvet Veterinaris): atiende con su equipo de expertos",
    "w": 1280,
-   "x": 1200,
-   "y": 2400
-  },
-  "EmpE1Empezar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E1 · (tras L1–L3) ¿Cómo quieres empezar? → Empresa",
-   "w": 960,
    "x": 0,
-   "y": 0
-  },
-  "EmpE2Creada.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E2 · Cuenta creada → seguir con la empresa",
-   "w": 960,
-   "x": 1040,
-   "y": 0
-  },
-  "EmpE3Buscar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E3 · Busca tu empresa",
-   "w": 960,
-   "x": 2080,
-   "y": 0
-  },
-  "EmpE4Verificar.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E4 · Verifica que la representas",
-   "w": 960,
-   "x": 3120,
-   "y": 0
-  },
-  "EmpE5Datos.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E5 · Datos de la empresa",
-   "w": 1120,
-   "x": 0,
-   "y": 1180
-  },
-  "EmpE6Producto.dc.html": {
-   "h": 760,
-   "page": "altaempresa",
-   "title": "E6 · Primer producto",
-   "w": 960,
-   "x": 1200,
-   "y": 1180
-  },
-  "EmpE7Panel.dc.html": {
-   "h": 820,
-   "page": "altaempresa",
-   "title": "E7 · Panel de empresa (primer día)",
-   "w": 1280,
-   "x": 2240,
-   "y": 1180
+   "y": 5360
   },
   "Empresa.dc.html": {
    "h": 1060,
@@ -1173,7 +1021,7 @@
   "FabTipoEspecies.dc.html": {
    "h": 940,
    "page": "fabdist",
-   "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
+   "title": "D1b-2 · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
    "w": 1280,
    "x": 9520,
    "y": 0
@@ -2432,7 +2280,7 @@
   "SucAltaCRM.dc.html": {
    "h": 940,
    "page": "sucursal",
-   "title": "S3a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen",
+   "title": "U0a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -2440,7 +2288,7 @@
   "SucAltaSede.dc.html": {
    "h": 940,
    "page": "sucursal",
-   "title": "S3c · Aviso a la Sede y al superadmin: la sucursal entra directamente",
+   "title": "U0c · Aviso a la Sede y al superadmin: la sucursal entra directamente",
    "w": 1280,
    "x": 2720,
    "y": 0
@@ -2448,7 +2296,7 @@
   "SucAltaVerifica.dc.html": {
    "h": 940,
    "page": "sucursal",
-   "title": "S3b · Confirma tu email de empresa",
+   "title": "U0b · Confirma tu email de empresa",
    "w": 1280,
    "x": 1360,
    "y": 0
@@ -2504,7 +2352,7 @@
   "SucEsSucursal.dc.html": {
    "h": 940,
    "page": "sucursal",
-   "title": "S3 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país",
+   "title": "U1 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país",
    "w": 1280,
    "x": 4080,
    "y": 0
@@ -2560,7 +2408,7 @@
   "SucTipoEspecies.dc.html": {
    "h": 940,
    "page": "sucursales",
-   "title": "S1b · Especies · modo «Excluir»: desmarcar = excluida",
+   "title": "S1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
    "x": 6800,
    "y": 0
@@ -2773,14 +2621,6 @@
    "x": 4080,
    "y": 0
   },
-  "WizTop.dc.html": {
-   "h": 128,
-   "page": "configempresa",
-   "title": "Componente · Cabecera del asistente de empresa",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
-  },
   "PrdFabNuevo.dc.html": {
    "w": 1280,
    "h": 940,
@@ -2889,7 +2729,7 @@
    "w": 1280,
    "h": 940,
    "page": "altaserv",
-   "x": 0,
+   "x": 1360,
    "y": 5360,
    "title": "SE1 · Empresa solo de servicios (Asvet Veterinaris): sus servicios son su catálogo"
   },
@@ -2897,7 +2737,7 @@
    "w": 1280,
    "h": 940,
    "page": "altaserv",
-   "x": 1360,
+   "x": 2720,
    "y": 5360,
    "title": "SE2 · Editar un servicio: qué expertos lo prestan y a quién llega"
   },
@@ -3198,7 +3038,7 @@
    "kind": "title1",
    "maxW": 4880,
    "page": "alta",
-   "text": "7 · Solo para mí → Mi espacio. Empresa, experto y «más tarde» siguen en sus páginas",
+   "text": "7 · Solo para mí → Mi espacio. «Represento una empresa» sigue en 006–010 (según cómo vende la empresa); experto y «más tarde», en sus páginas",
    "w": 240,
    "x": 0,
    "y": 2320
@@ -3275,24 +3115,6 @@
    "x": 0,
    "y": 9780
   },
-  "cfgTitulo": {
-   "kind": "title1",
-   "maxW": 6720,
-   "page": "configempresa",
-   "text": "Alta empresa · el formulario se adapta a cómo vende la empresa",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "cfgTitulo2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "configempresa",
-   "text": "Red comercial y contacto",
-   "w": 240,
-   "x": 0,
-   "y": 940
-  },
   "comT1": {
    "kind": "title1",
    "maxW": 8000,
@@ -3315,7 +3137,7 @@
    "kind": "title1",
    "maxW": 8000,
    "page": "distmulti",
-   "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X1b/X1c avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X0c/X0d avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3328,42 +3150,6 @@
    "w": 240,
    "x": 0,
    "y": 1040
-  },
-  "empConsultor": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaempresa",
-   "text": "Otro ejemplo · consultoría: Asvet Veterinaris",
-   "w": 240,
-   "x": 1200,
-   "y": 2100
-  },
-  "empDesdeAlta": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "altaempresa",
-   "text": "Desde el alta general: opción «Represento una empresa»",
-   "w": 240,
-   "x": 0,
-   "y": 2100
-  },
-  "empTitulo": {
-   "kind": "title1",
-   "maxW": 4080,
-   "page": "altaempresa",
-   "text": "Alta empresa · Carla Martín, directora comercial de AgroExport SRL",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "empTitulo2": {
-   "kind": "title1",
-   "maxW": 3520,
-   "page": "altaempresa",
-   "text": "Configurar la empresa y primer día",
-   "w": 240,
-   "x": 0,
-   "y": 880
   },
   "expDesdeAlta": {
    "kind": "title1",
@@ -3739,7 +3525,7 @@
    "kind": "title1",
    "maxW": 5400,
    "page": "sucursal",
-   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c aviso a la Sede y al superadmin · S3 tipo de empresa",
+   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): U0a empresa del CRM · U0b verificar email · U0c aviso a la Sede y al superadmin · U1 tipo de empresa",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3896,17 +3682,8 @@
   "Login5Creada.dc.html",
   "Alta4MiEspacio.dc.html",
   "AltaMiEspacioIntereses.dc.html",
-  "AltaEmpresa.dc.html",
   "AltaExperto.dc.html",
   "AltaConsulta.dc.html",
-  "EmpE1Empezar.dc.html",
-  "EmpE2Creada.dc.html",
-  "EmpE3Buscar.dc.html",
-  "EmpE4Verificar.dc.html",
-  "EmpAvisoAdmin.dc.html",
-  "EmpE5Datos.dc.html",
-  "EmpE6Producto.dc.html",
-  "EmpE7Panel.dc.html",
   "MiM1Empezar.dc.html",
   "MiM2Creada.dc.html",
   "MiM3Guardado.dc.html",
@@ -3934,17 +3711,6 @@
   "PreciosExperto.dc.html",
   "PreciosComprador.dc.html",
   "Checkout.dc.html",
-  "CfgTipo.dc.html",
-  "CfgTipoDist.dc.html",
-  "CfgPerfil.dc.html",
-  "CfgSucursales.dc.html",
-  "CfgComerciales.dc.html",
-  "CfgDistribuidores.dc.html",
-  "CfgMarcas.dc.html",
-  "CfgContacto.dc.html",
-  "WizTop.dc.html",
-  "CfgFichaLocal.dc.html",
-  "CfgDondeComprar.dc.html",
   "FabCRMVarias.dc.html",
   "FabVerifica.dc.html",
   "FabAvisoEmpresa.dc.html",
@@ -4304,10 +4070,6 @@
    "name": "001_Alta Usuario"
   },
   {
-   "id": "altaempresa",
-   "name": "Alta empresa"
-  },
-  {
    "id": "solo",
    "name": "Alta solo para mí"
   },
@@ -4332,28 +4094,24 @@
    "name": "Planes"
   },
   {
-   "id": "configempresa",
-   "name": "Alta empresa · configuraciones"
-  },
-  {
    "id": "fabdist",
-   "name": "006_Alta · Fabricante con distribuidores"
+   "name": "006_Alta empresa · Fabricante con distribuidores (DSM-Firmenich)"
   },
   {
    "id": "comerciales",
-   "name": "007_Alta · Fabricante con comerciales"
+   "name": "007_Alta empresa · Fabricante con comerciales (Zucami)"
   },
   {
    "id": "sucursales",
-   "name": "008_Alta · Fabricante con sucursales"
+   "name": "008_Alta empresa · Fabricante con sucursales (Big Dutchman)"
   },
   {
    "id": "sucursal",
-   "name": "009_Alta · Sucursal de un grupo (Aviagen Ibérica)"
+   "name": "009_Alta empresa · Sucursal de un grupo (Aviagen Ibérica)"
   },
   {
    "id": "distmulti",
-   "name": "010_Alta · Distribuidor multimarca"
+   "name": "010_Alta empresa · Distribuidor multimarca (NewFarms)"
   },
   {
    "id": "productos",
