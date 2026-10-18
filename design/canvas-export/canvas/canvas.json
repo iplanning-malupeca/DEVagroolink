@@ -2213,62 +2213,6 @@
    "x": 1360,
    "y": 0
   },
-  "ProdEspecEquipamiento.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P7b · La misma pestaña con otra plantilla (Zucami, tipo Jaulas y alojamientos)",
-   "w": 1280,
-   "x": 5440,
-   "y": 4100
-  },
-  "ProdFichaBeneficios.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P6 · Ficha base · Beneficios y aplicación",
-   "w": 1280,
-   "x": 2720,
-   "y": 4100
-  },
-  "ProdFichaDocumentos.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P8 · Ficha base · Documentación, vídeo y certificaciones",
-   "w": 1280,
-   "x": 6800,
-   "y": 4100
-  },
-  "ProdFichaEspecificaciones.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P7 · Especificaciones · sugeridos + propios (Hy-D®, tipo Vitaminas)",
-   "w": 1280,
-   "x": 4080,
-   "y": 4100
-  },
-  "ProdFichaGeneral.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P4 · Ficha base · General",
-   "w": 1280,
-   "x": 0,
-   "y": 4100
-  },
-  "ProdFichaMercados.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P9 · Mercados y dónde comprar · cambia según el tipo de empresa (ver 011a–011e)",
-   "w": 1280,
-   "x": 8160,
-   "y": 4100
-  },
-  "ProdFichaVariantes.dc.html": {
-   "h": 940,
-   "page": "productos",
-   "title": "P5 · Ficha base · Variantes (embalaje o configuración)",
-   "w": 1280,
-   "x": 1360,
-   "y": 4100
-  },
   "ProdImportar.dc.html": {
    "w": 1280,
    "h": 940,
@@ -3927,15 +3871,6 @@
    "x": 0,
    "y": 1700,
    "text": "Casos de prueba del documento del árbol condicional y reglas · ordeño, vacuna, pienso de ponedoras, molino sin especie, categorías que no aplican, mercados, «Otro…», datos que no se publican, ficha pública y comparador"
-  },
-  "prodT5": {
-   "kind": "title1",
-   "maxW": 9400,
-   "page": "productos",
-   "w": 240,
-   "x": 0,
-   "y": 3800,
-   "text": "Después de crearlo · la ficha se edita por pestañas (P4–P9)"
   }
  },
  "order": [
@@ -4024,13 +3959,6 @@
   "FabPublicar.dc.html",
   "FabShell.dc.html",
   "ProdImportar.dc.html",
-  "ProdFichaGeneral.dc.html",
-  "ProdFichaVariantes.dc.html",
-  "ProdFichaBeneficios.dc.html",
-  "ProdFichaEspecificaciones.dc.html",
-  "ProdFichaDocumentos.dc.html",
-  "ProdFichaMercados.dc.html",
-  "ProdEspecEquipamiento.dc.html",
   "TabMis.dc.html",
   "TabVista.dc.html",
   "TabGuardar.dc.html",
