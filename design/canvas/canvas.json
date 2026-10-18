@@ -2412,6 +2412,14 @@
    "h": 940,
    "page": "fabdist",
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir"
+  },
+  "FabTipoVacio.dc.html": {
+   "x": -1360,
+   "y": 0,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
   }
  },
  "createdOnFiles": {
@@ -3314,7 +3322,8 @@
   "FabTipoRama.dc.html",
   "FabTipoMercados.dc.html",
   "FabTipoEspeciesTodas.dc.html",
-  "FabTipoEspeciesSolo.dc.html"
+  "FabTipoEspeciesSolo.dc.html",
+  "FabTipoVacio.dc.html"
  ],
  "pages": [
   {
