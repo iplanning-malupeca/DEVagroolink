@@ -607,7 +607,7 @@
    "page": "fabdist",
    "title": "D1 · Tipo de empresa",
    "w": 1280,
-   "x": 4080,
+   "x": 2720,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2374,7 +2374,7 @@
    "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía"
   },
   "FabTipoEspecies.dc.html": {
-   "x": 6800,
+   "x": 5440,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2382,7 +2382,7 @@
    "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida"
   },
   "FabTipoRama.dc.html": {
-   "x": 9520,
+   "x": 8160,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2390,7 +2390,7 @@
    "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal"
   },
   "FabTipoMercados.dc.html": {
-   "x": 10880,
+   "x": 9520,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2398,7 +2398,7 @@
    "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»"
   },
   "FabTipoEspeciesTodas.dc.html": {
-   "x": 5440,
+   "x": 4080,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2406,7 +2406,7 @@
    "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada"
   },
   "FabTipoEspeciesSolo.dc.html": {
-   "x": 8160,
+   "x": 6800,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2414,20 +2414,12 @@
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir"
   },
   "FabTipoVacio.dc.html": {
-   "x": 2720,
-   "y": 0,
-   "w": 1280,
-   "h": 940,
-   "page": "fabdist",
-   "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
-  },
-  "FabCRM.dc.html": {
    "x": 1360,
    "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
-   "title": "D0 · ¿Es esta tu empresa? Datos del CRM (marca, sede central y filiales)"
+   "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
   },
   "FabCabeceraAdmin.dc.html": {
    "x": 2720,
@@ -2603,7 +2595,7 @@
    "kind": "title1",
    "maxW": 12160,
    "page": "fabdist",
-   "text": "1 · Empresa y tipo — D0a/D0 datos del CRM · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
+   "text": "1 · Empresa y tipo — D0a empresa del CRM · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3117,7 +3109,6 @@
   "CfgFichaLocal.dc.html",
   "CfgDondeComprar.dc.html",
   "FabCRMVarias.dc.html",
-  "FabCRM.dc.html",
   "FabTipoVacio.dc.html",
   "FabTipo.dc.html",
   "FabTipoEspeciesTodas.dc.html",
