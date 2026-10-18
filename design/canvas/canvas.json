@@ -2292,6 +2292,46 @@
    "h": 844,
    "page": "busqueda",
    "title": "C6 · Móvil: pasos apilados (Qué · Especie · Categoría · Enfermedad) como Airbnb"
+  },
+  "HeaderHd1920.dc.html": {
+   "x": 0,
+   "y": 7420,
+   "w": 1920,
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1920 px"
+  },
+  "HeaderHd1440.dc.html": {
+   "x": 2000,
+   "y": 7420,
+   "w": 1440,
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1440 px"
+  },
+  "HeaderHd1280.dc.html": {
+   "x": 3520,
+   "y": 7420,
+   "w": 1280,
+   "h": 640,
+   "page": "busqueda",
+   "title": "Cabecera con búsqueda combinada · 1280 px"
+  },
+  "HeaderHd1280Abierta.dc.html": {
+   "x": 4880,
+   "y": 7420,
+   "w": 1280,
+   "h": 820,
+   "page": "busqueda",
+   "title": "Cabecera 1280 px · barra desplegada al pulsarla"
+  },
+  "HeaderHdMovil.dc.html": {
+   "x": 6240,
+   "y": 7420,
+   "w": 390,
+   "h": 844,
+   "page": "busqueda",
+   "title": "Cabecera móvil · la búsqueda combinada resumida en una pastilla"
   }
  },
  "createdOnFiles": {
@@ -2859,6 +2899,14 @@
    "maxW": 10400,
    "page": "busqueda",
    "text": "Búsqueda combinada tipo Airbnb: una barra (Qué · Especie · Categoría · Enfermedad) en la home y compacta en resultados"
+  },
+  "busT5": {
+   "kind": "title1",
+   "x": 0,
+   "y": 7300,
+   "maxW": 6700,
+   "page": "busqueda",
+   "text": "Cabecera con búsqueda combinada según el tamaño de pantalla (propuesta: sin Categorías / Especies junto al logo)"
   }
  },
  "order": [
@@ -3147,7 +3195,12 @@
   "BusComCategoria.dc.html",
   "BusComResCategoria.dc.html",
   "BusComResEspecie.dc.html",
-  "BusComMovil.dc.html"
+  "BusComMovil.dc.html",
+  "HeaderHd1920.dc.html",
+  "HeaderHd1440.dc.html",
+  "HeaderHd1280.dc.html",
+  "HeaderHd1280Abierta.dc.html",
+  "HeaderHdMovil.dc.html"
  ],
  "pages": [
   {
