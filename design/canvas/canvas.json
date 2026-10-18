@@ -3012,6 +3012,78 @@
    "x": 4160,
    "y": 1300,
    "title": "6b · L5 · Cuenta lista → seguir con la empresa (006–010)"
+  },
+  "ProdEdCatalogo.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 0,
+   "y": 4460,
+   "title": "K1 · Mis productos: cada ficha con su estado, «Editar» y el menú ⋯"
+  },
+  "ProdEdMenu.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 1360,
+   "y": 4460,
+   "title": "K2 · Menú de acciones: Editar, Duplicar, Ocultar y Archivar"
+  },
+  "ProdEdBloques.dc.html": {
+   "w": 1280,
+   "h": 1690,
+   "page": "productos",
+   "x": 2720,
+   "y": 4460,
+   "title": "K3 · Editar por bloques: cada «Editar» abre su paso aquí mismo; uno abierto a la vez"
+  },
+  "ProdEdGuardar.dc.html": {
+   "w": 1280,
+   "h": 1690,
+   "page": "productos",
+   "x": 4080,
+   "y": 4460,
+   "title": "K4 · Guardar cambios: qué cambia y si avisar a distribuidores, sucursales y compradores"
+  },
+  "ProdEdGuardado.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 5440,
+   "y": 4460,
+   "title": "K5 · Tras guardar: el catálogo indica a quién se avisó"
+  },
+  "ProdEdRegulado.dc.html": {
+   "w": 1280,
+   "h": 1090,
+   "page": "productos",
+   "x": 6800,
+   "y": 4460,
+   "title": "K6 · Vacuna (regulado): los cambios vuelven a revisión; se sigue viendo la versión publicada"
+  },
+  "ProdEdArchivar.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 8160,
+   "y": 4460,
+   "title": "K7 · Tras archivar: «Deshacer» y «Ver archivados»"
+  },
+  "ProdEdArchivados.dc.html": {
+   "w": 1280,
+   "h": 920,
+   "page": "productos",
+   "x": 9520,
+   "y": 4460,
+   "title": "K8 · Productos archivados: «Recuperar» con su estado"
+  },
+  "ProdEdDesdeRevision.dc.html": {
+   "w": 1280,
+   "h": 1110,
+   "page": "productos",
+   "x": 10880,
+   "y": 4460,
+   "title": "K9 · En el alta: editar un apartado desde la revisión y volver a ella"
   }
  },
  "createdOnFiles": {
@@ -3636,7 +3708,7 @@
    "w": 1280,
    "x": 0,
    "y": -340,
-   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G11 y H1–H12) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
+   "text": "PARA DESARROLLO · Asistente de alta de producto\n\nEstas pantallas (G1–G11, H1–H12 y K1–K9) son muestras de algunos estados. Para programar el asistente, sigue el HTML del prototipo navegable: monta los campos técnicos a partir del modelo declarativo (una plantilla por grupo de categorías, reglas condicionales, especies, enfermedades y arquetipos), no con formularios fijos por producto.\n\nPrototipo: design/prototipos/crear-producto.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/FhRs7ySjp5wCRVgvHbhuwS\nModelo de datos: docs/modelo-producto/producto.json (v2, taxonomía C01–C12)\n\nSi una pantalla del canvas y el HTML no coinciden, manda el HTML, salvo en estilos visuales (colores, tipografía), que se toman del canvas."
   },
   "prodT4": {
    "kind": "title1",
@@ -3655,6 +3727,15 @@
    "w": 240,
    "x": 3120,
    "y": 1000
+  },
+  "prodT6": {
+   "kind": "title1",
+   "maxW": 9400,
+   "page": "productos",
+   "w": 240,
+   "x": 0,
+   "y": 4160,
+   "text": "Edición del producto, como en Proyectos · catálogo con acciones, edición por bloques con aviso a quien lo vende o lo ha pedido, revisión de nuevo en productos regulados, archivar y recuperar"
   }
  },
  "order": [
@@ -4033,7 +4114,16 @@
   "ProdAltaPublica.dc.html",
   "ProdAltaComparador.dc.html",
   "CompTamanos.dc.html",
-  "ProdAltaCertificaciones.dc.html"
+  "ProdAltaCertificaciones.dc.html",
+  "ProdEdCatalogo.dc.html",
+  "ProdEdMenu.dc.html",
+  "ProdEdBloques.dc.html",
+  "ProdEdGuardar.dc.html",
+  "ProdEdGuardado.dc.html",
+  "ProdEdRegulado.dc.html",
+  "ProdEdArchivar.dc.html",
+  "ProdEdArchivados.dc.html",
+  "ProdEdDesdeRevision.dc.html"
  ],
  "pages": [
   {

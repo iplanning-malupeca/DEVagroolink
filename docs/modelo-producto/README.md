@@ -13,6 +13,20 @@
 - **Enfermedades:** filtro independiente (`enfermedades`), filtrado por las especies elegidas.
 - **Aviso:** los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.
 
+## Edición del producto (18/10/2026)
+
+Igual que en Proyectos. En el prototipo (`crear-producto.html`):
+- **Mis productos** (catálogo): cada ficha muestra su estado (Borrador, En revisión, Publicado u Oculto), el botón «Editar» (o «Continuar» si es un borrador) y el menú ⋯ con estas acciones:
+  - Editar;
+  - Duplicar: crea un borrador igual;
+  - Ocultar: deja de salir en búsquedas, pero las solicitudes abiertas siguen;
+  - Archivar: con «Deshacer», y luego «Ver archivados» → «Recuperar».
+- **Editar por bloques:** el resumen del producto, con un «Editar» en cada apartado que abre su paso del asistente debajo, uno a la vez, con «Cancelar» y «Aplicar». Los apartados cambiados se marcan «Modificado» y una barra indica cuántos cambios hay sin guardar.
+- **Guardar cambios:** muestra qué cambia (antes → ahora).
+  - Si cambian datos que afectan a quien lo vende o lo ha pedido (técnicos, aplicación, enfermedad, variantes, mercados, documentos, certificaciones, especies o categoría), pregunta si avisar a los distribuidores y sucursales con versión local y a los compradores con una solicitud abierta. Sus versiones locales se marcan «Revisar cambios del fabricante».
+  - En fármacos, vacunas y biocidas esos cambios vuelven a revisión de Agroolink, y mientras tanto se sigue viendo la versión publicada.
+- **En el alta,** «Editar» desde la revisión lleva al paso con el botón «Guardar y volver a la revisión».
+
 ## Condicionantes (18/10/2026)
 
 Fuente: `condicionantes.xlsx`, la misma revisión ya sin nada «Pendiente»: todo está aprobado salvo «edad» en animales y líneas genéticas. Lo aplicado en `producto.json` y en el prototipo:

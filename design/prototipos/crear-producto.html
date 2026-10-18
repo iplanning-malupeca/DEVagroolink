@@ -197,6 +197,26 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
 .caps{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 .cap{display:flex;gap:6px;align-items:center;width:100%}
 .vadd{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.vadd .inp{flex:1;min-width:220px}
+.cat{display:flex;flex-direction:column;gap:10px}
+.prow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface);position:relative}
+.prow .pth{width:64px;height:64px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:13px;overflow:hidden}
+.prow .pth img{width:100%;height:100%;object-fit:cover}
+.prow .pn{font-size:16px;font-weight:600}
+.prow .pm{font-size:13px;color:var(--muted)}
+.pacts{display:flex;gap:8px;align-items:center}
+.menu{position:absolute;right:14px;top:58px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(10,20,30,.16);padding:6px;display:flex;flex-direction:column;min-width:300px}
+.menu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;gap:1px;font-weight:500}
+.menu button:hover{background:var(--soft)}
+.menu button small{font-size:12px;color:var(--muted);font-weight:400}
+.blk{border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.blk.open{border:1.5px solid var(--accent)}
+.blkh{display:grid;grid-template-columns:190px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 14px}
+@media (max-width:600px){.blkh{grid-template-columns:minmax(0,1fr) auto}.blkh .v{grid-column:1/-1;grid-row:2}}
+.blkh .k{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.blkb{border-top:1px solid var(--line);padding:14px;display:flex;flex-direction:column;gap:14px}
+.savebar{position:sticky;bottom:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--surface);border-top:1px solid var(--line);padding:12px 0 2px}
+.diffl{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.diffl .old{color:var(--muted);text-decoration:line-through}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:15px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -316,7 +336,21 @@ function nuevo() {
     ident: { nombre: '', marca: '', fabricante: 'Tu empresa', sku: '', web: '', corta: '', larga: '', objetivos: [], idiomas: ['Español'] },
     tec: {}, apl: {}, sinEspecie: false, propios: [], enf: [], enfOtra: '', catOtro: '', variantes: [{}], docs: {}, fotos: [], videos: [], certs: [], estado: 'Borrador', visto: {}, guardado: null };
 }
-const UI = { fam: null, q: '', paisq: '', enfq: '', pend: null, intento: {}, foco: null };
+const KEYCAT = 'agroolink-catalogo-productos-v1';
+let CAT = [];
+try { CAT = JSON.parse(localStorage.getItem(KEYCAT) || '[]') || []; } catch (e) { CAT = []; }
+function guardarCat() { try { localStorage.setItem(KEYCAT, JSON.stringify(CAT)); } catch (e) { try { localStorage.setItem(KEYCAT, JSON.stringify(CAT.map(it => Object.assign({}, it, { data: Object.assign({}, it.data, { fotos: (it.data.fotos || []).map(f => ({ src: null, nombre: f.nombre })) }), base: null })))); } catch (e2) {} } }
+const clon = o => JSON.parse(JSON.stringify(o));
+const hoy = () => new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+const regulado = () => !!S.cat && ['C07', 'C08', 'C09'].indexOf(S.cat.slice(0, 3)) > -1;
+function alCatalogo(estado) {   // guarda el borrador actual en el catálogo
+  if (!S.id) S.id = 'p' + Date.now();
+  let it = CAT.find(x => x.id === S.id);
+  if (!it) { it = { id: S.id, creado: hoy() }; CAT.unshift(it); }
+  it.data = clon(S); it.estado = estado || it.estado || 'Borrador'; it.actualizado = hoy(); it.archivado = false;
+  guardarCat(); return it;
+}
+const UI = { vista: 'asistente', fam: null, q: '', paisq: '', enfq: '', pend: null, intento: {}, foco: null };
 let S = null;
 try { S = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { S = null; }
 const enfId = n => { const e = M.enfermedades.find(x => x.nombre === n); return e ? e.id : null; };
@@ -333,8 +367,9 @@ const DEMOS = {
 const qEj = (location.search.match(/[?&]ejemplo=(\w+)/) || [])[1];
 if (qEj && DEMOS[qEj]) S = DEMOS[qEj]();
 if (!S) S = nuevo();
-if (/[?&]captura/.test(location.search)) window.__demo = v => { S = DEMOS[v] ? DEMOS[v]() : nuevo(); UI.fam = null; UI.q = ''; UI.intento = {}; UI.foco = null; guardar(); render(); };
+if (/[?&]captura/.test(location.search)) window.__demo = v => { S = DEMOS[v] ? DEMOS[v]() : nuevo(); UI.vista = 'asistente'; UI.desdeRev = false; UI.fam = null; UI.q = ''; UI.intento = {}; UI.foco = null; guardar(); render(); };
 if (/[?&]captura/.test(location.search)) window.__t = code => eval(code);
+if (/[?&]captura/.test(location.search)) window.__cat = () => { CAT = []; ['vacuna', 'pienso', 'probiotico'].forEach((v, i) => { const d = DEMOS[v](); d.id = 'demo' + i; d.ident.corta = 'Descripción corta de ejemplo.'; d.mercados = { entradas: [{ id: 'Europa', modo: 'toda', sel: [] }] }; if (v === 'vacuna') { const e = M.enfermedades.find(x => JSON.stringify(x).indexOf('Avicultura') > -1); if (e) d.enf = [e.id]; } CAT.push({ id: d.id, data: d, estado: ['Publicado', 'Publicado', 'Borrador'][i], creado: '2 oct', actualizado: ['14 oct', '9 oct', '18 oct'][i] }); }); guardarCat(); UI.vista = 'catalogo'; UI.menu = null; render(); };
 if (!S.apl) S.apl = {};
 if (!S.fotos) S.fotos = Array.from({ length: S.imgs || 0 }, (_, i) => ({ src: null, nombre: 'Foto ' + (i + 1) }));
 if (!S.videos) S.videos = [];
@@ -393,7 +428,7 @@ const mercTxt = () => S.mercados.entradas.length ? S.mercados.entradas.map(entra
 // ---------- pasos ----------
 const pasos = () => M.pasos.filter(p => p.id === 'enfermedad' ? (S.cat && enfVis()) : p.id === 'variantes' ? !(S.cat && arqKey(S.cat) === 'servicio') : p.id === 'aplicaciones' ? (conAplicacion(S.cat) && Object.keys(S.especies).length > 0) : true);
 const pasoActual = () => pasos().find(p => p.id === S.paso) || pasos()[0];
-function ir(id) { S.visto[S.paso] = 1; S.paso = id; UI.pend = null; guardar(); render(); window.scrollTo({ top: 0 }); }
+function ir(id) { S.visto[S.paso] = 1; S.paso = id; UI.pend = null; if (id === 'revision') UI.desdeRev = false; guardar(); render(); window.scrollTo({ top: 0 }); }
 
 // ---------- valores ----------
 function lleno(v) {
@@ -755,25 +790,38 @@ function valorTxt(a, v) {
     return (v.v || '') + (v.v ? ' ' + (v.u || unidades(a.unit)[0] || '') : '') + (v.m ? ' · ' + v.m : ''); }
   return v || '';
 }
+function bloques() {
+  const t = tpl(S.cat), a = arq(S.cat);
+  const miss = p => faltasDe(p).length ? ' <span class="miss">· ' + esc(faltasDe(p).map(x => x.t).join(' · ')) + '</span>' : '';
+  const tecs = attrsTec(t).filter(x => lleno(S.tec[x.id])).length;
+  const B = {
+    especies: (S.sinEspecie ? 'No depende de especie' : esc(Object.keys(S.especies).map(espTxt).join(' · ')) || '—') + miss('especies'),
+    categoria: S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>',
+    mercados: esc(mercTxt()) + ' <span class="hint">· ' + paisesSel().length + ' países</span>' + (conRegistro() ? ' <span class="hint">· registro: ' + paisesSel().filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + paisesSel().length + '</span>' : '') + miss('mercados'),
+    identidad: '<strong>' + esc(S.ident.nombre || '—') + '</strong>' + (S.ident.sku ? ' · ' + esc(S.ident.sku) : '') + (S.ident.corta ? '<br><span class="hint">' + esc(S.ident.corta) + '</span>' : '') + miss('identidad'),
+    tecnicos: t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—',
+    aplicaciones: destinos().map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {}; const n = attrsApl(t).filter(x => lleno(vals[x.id])).length; return esc(d.label) + ' <span class="hint">· ' + n + ' de ' + attrsApl(t).length + ' datos' + ((st.fases || []).length ? ' · ' + esc(st.fases.join(', ')) : '') + '</span>'; }).join('<br>') + miss('aplicaciones'),
+    enfermedad: esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).concat((S.enfOtra || '').trim() ? ['Otra: ' + S.enfOtra.trim()] : []).join(', ') || 'Ninguna') + miss('enfermedad'),
+    variantes: a && a.variantes ? S.variantes.filter(v => Object.values(v).some(Boolean)).map(v => esc(Object.values(v).filter(Boolean).join(' · '))).join('<br>') || '—' : '—',
+    documentos: S.fotos.length + (S.fotos.length === 1 ? ' foto · ' : ' fotos · ') + S.videos.length + (S.videos.length === 1 ? ' vídeo' : ' vídeos') + (Object.keys(S.docs).length ? ' · ' + Object.keys(S.docs).map(k => esc(M.documentos[k] || k)).join(', ') : '') + miss('documentos'),
+    certificaciones: S.certs.length ? S.certs.map(c => esc(c.nombre || 'Otra') + ' <span class="hint">· ' + estadoCert(c) + '</span>').join('<br>') : 'Ninguna'
+  };
+  return pasos().filter(p => p.id !== 'revision').map(p => ({ id: p.id, k: p.label, v: B[p.id] || '—' }));
+}
+const plano = h => String(h).replace(/<br>/g, ' · ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+function conEstado(obj, fn) { const o = S; S = obj; try { return fn(); } finally { S = o; } }
+function cambios() {   // apartados que cambian respecto a la versión guardada
+  if (!UI.base) return [];
+  const antes = {}; conEstado(UI.base, () => bloques().forEach(b => antes[b.id] = plano(b.v)));
+  return bloques().filter(b => plano(b.v) !== (antes[b.id] || '')).map(b => ({ id: b.id, k: b.k, antes: antes[b.id] || '—', ahora: plano(b.v) }));
+}
 V.revision = () => {
   const f = faltas(), ps = pasos().filter(p => p.id !== 'revision');
   const t = tpl(S.cat), a = arq(S.cat);
   const total = ps.length, ok = ps.filter(p => !faltasDe(p.id).length).length;
-  const fila = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="ir|' + p + '">Editar</button></div>';
-  const miss = p => faltasDe(p).length ? ' <span class="miss">· ' + esc(faltasDe(p).map(x => x.t).join(' · ')) + '</span>' : '';
-  const tecs = attrsTec(t).filter(x => lleno(S.tec[x.id])).length;
+  const fila = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="desderev|' + p + '">Editar</button></div>';
   let h = '<div class="note' + (f.length ? ' w' : '') + '"><span><strong>' + (f.length ? 'Faltan ' + f.length + ' datos para enviarlo a revisión.' : 'Todo listo para enviarlo a revisión.') + '</strong> ' + (f.length ? 'Puedes guardarlo como borrador y terminarlo después.' : 'Crear el producto no lo publica: ' + (regla('receta') || (S.cat && S.cat.indexOf('C09') === 0) ? 'Agroolink revisa las fichas de fármacos, vacunas y biocidas antes de publicarlas.' : 'lo publicas cuando quieras desde el catálogo.')) + '</span></div>';
-  h += '<div>' +
-    fila('Categoría', S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>', 'categoria') +
-    fila('Especies de destino', (S.sinEspecie ? 'No depende de especie' : esc(Object.keys(S.especies).map(espTxt).join(' · '))) + miss('especies'), 'especies') +
-    fila('Mercados', esc(mercTxt()) + ' <span class="hint">· ' + paisesSel().length + ' países</span>' + (conRegistro() ? ' <span class="hint">· registro: ' + paisesSel().filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + paisesSel().length + '</span>' : '') + miss('mercados'), 'mercados') +
-    fila('Identidad', '<strong>' + esc(S.ident.nombre || '—') + '</strong>' + (S.ident.sku ? ' · ' + esc(S.ident.sku) : '') + '<br><span class="hint">' + esc(S.ident.corta) + '</span>' + miss('identidad'), 'identidad') +
-    fila('Datos técnicos', t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—', 'tecnicos') +
-    (conAplicacion(S.cat) && destinos().length ? fila('Aplicación por especie', destinos().map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {}; const n = attrsApl(t).filter(a => lleno(vals[a.id])).length; return esc(d.label) + ' <span class="hint">· ' + n + ' de ' + attrsApl(t).length + ' datos' + ((st.fases || []).length ? ' · ' + esc(st.fases.join(', ')) : '') + '</span>'; }).join('<br>') + miss('aplicaciones'), 'aplicaciones') : '') +
-    (enfVis() ? fila('Enfermedad diana', esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).concat((S.enfOtra || '').trim() ? ['Otra: ' + S.enfOtra.trim()] : []).join(', ') || 'Ninguna') + miss('enfermedad'), 'enfermedad') : '') +
-    (a && a.variantes ? fila('Variantes', S.variantes.filter(v => Object.values(v).some(Boolean)).map(v => esc(Object.values(v).filter(Boolean).join(' · '))).join('<br>') || '—', 'variantes') : '') +
-    fila('Fotos, vídeos y documentos', S.fotos.length + (S.fotos.length === 1 ? ' foto · ' : ' fotos · ') + S.videos.length + (S.videos.length === 1 ? ' vídeo · ' : ' vídeos · ') + Object.keys(S.docs).map(k => esc(M.documentos[k] || k)).join(', ') + miss('documentos'), 'documentos') + '</div>';
-  if (S.certs.length) h += '<div class="sumrow"><span class="k">Certificaciones</span><span class="v">' + S.certs.map(c => esc(c.nombre || 'Otra') + ' <span class="hint">· ' + estadoCert(c) + '</span>').join('<br>') + '</span><button type="button" class="link" data-act="ir|certificaciones">Editar</button></div>';
+  h += '<div>' + bloques().map(b => fila(b.k, b.v, b.id)).join('') + '</div>';
   const oc = ocultos();
   if (oc.length) h += '<div class="note w"><span><strong>No se publicarán ' + oc.length + ' datos</strong> guardados de otra categoría o de especies que ya no están elegidas. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div>';
   h += '<div class="sumrow"><span class="k">Estado</span><span class="v"><span class="tg ' + (S.estado === 'En revisión' ? 'b' : 'g') + '">' + esc(S.estado) + '</span> <span class="hint">· se publica cuando Agroolink lo valida</span></span><span></span></div>';
@@ -793,7 +841,72 @@ const TIT = {
   documentos: ['Fotos, vídeos y documentos', 'La primera foto es la principal. Los documentos llevan idioma y quién puede verlos.'],
   revision: ['Revisa tu producto', 'Puedes cambiar cualquier apartado.']
 };
+const ESTADO_CLS = { 'Publicado': 'ok', 'En revisión': 'b', 'Borrador': 'g', 'Oculto': 'w' };
+function miniatura(d) { const f = (d.fotos || [])[0]; return f && f.src ? '<img src="' + f.src + '" alt="">' : esc(((d.ident || {}).nombre || 'P').replace(/[^A-Za-zÀ-ÿ0-9]/g, '').slice(0, 3).toUpperCase()); }
+function filaProducto(it, arch) {
+  const d = it.data, esp = d.sinEspecie ? 'No depende de especie' : Object.keys(d.especies || {}).join(', ');
+  const cat = d.cat ? cortoCat(d.cat) : 'Sin categoría';
+  const acc = arch ? '<button type="button" class="btn" data-act="recuperar|' + it.id + '">Recuperar</button>'
+    : it.estado === 'Borrador' ? '<button type="button" class="btnp" data-act="continuar|' + it.id + '">Continuar</button><button type="button" class="ico" aria-label="Más acciones" data-act="menu|' + it.id + '">⋯</button>'
+    : '<button type="button" class="btn" data-act="editar|' + it.id + '">Editar</button><button type="button" class="ico" aria-label="Más acciones" data-act="menu|' + it.id + '">⋯</button>';
+  const menu = UI.menu === it.id ? '<div class="menu" role="menu">' +
+    (it.estado !== 'Borrador' ? '<button type="button" role="menuitem" data-act="editar|' + it.id + '">Editar<small>Cambia cualquier apartado; si afecta a quien lo vende o lo ha pedido, eliges si avisar</small></button>' : '') +
+    '<button type="button" role="menuitem" data-act="duplicar|' + it.id + '">Duplicar<small>Crea un borrador igual, por ejemplo para otra presentación</small></button>' +
+    (it.estado === 'Publicado' ? '<button type="button" role="menuitem" data-act="ocultar|' + it.id + '">Ocultar<small>Deja de salir en búsquedas y en tu ficha; las solicitudes abiertas siguen</small></button>' : '') +
+    (it.estado === 'Oculto' ? '<button type="button" role="menuitem" data-act="mostrar|' + it.id + '">Volver a mostrar<small>Vuelve a salir con la versión publicada</small></button>' : '') +
+    (it.estado === 'En revisión' ? '<button type="button" role="menuitem" data-act="aprobar|' + it.id + '">Marcar como aprobado<small>Solo en el prototipo: simula la revisión de Agroolink</small></button>' : '') +
+    '<button type="button" role="menuitem" data-act="archivar|' + it.id + '">Archivar<small>Lo quita de tu lista; se puede recuperar</small></button></div>' : '';
+  return '<div class="prow"><span class="pth">' + miniatura(d) + '</span><span style="min-width:0;display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="pn">' + esc((d.ident || {}).nombre || 'Sin nombre') + '</span><span class="tg ' + (arch ? 'g' : ESTADO_CLS[it.estado] || 'g') + '">' + esc(arch ? 'Archivado' : it.estado) + '</span>' + (it.cambiosPend ? '<span class="tg w">Cambios en revisión</span>' : '') + '</span>' +
+    '<span class="pm">' + esc(cat) + (esp ? ' · ' + esc(esp) : '') + '</span><span class="pm">' + (arch ? 'Archivado el ' + esc(it.archivadoEl || it.actualizado) : 'Actualizado el ' + esc(it.actualizado)) + (it.avisados ? ' · avisados ' + it.avisados : '') + '</span></span>' +
+    '<span class="pacts">' + acc + '</span>' + menu + '</div>';
+}
+function vistaCatalogo() {
+  const vis = CAT.filter(x => !x.archivado), arch = CAT.filter(x => x.archivado);
+  return '<div style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap"><div style="flex:1"><span class="eb">Catálogo</span><h1>Mis productos</h1><p class="sub">Crea, edita y publica tus fichas. Cambiar una ficha publicada no la quita de la vista: los cambios se ven al guardar' + ' (o al aprobarlos Agroolink, en fármacos, vacunas y biocidas).</p></div><button type="button" class="btnp" data-act="nuevo">+ Nuevo producto</button></div>' +
+    (vis.length ? '<div class="cat">' + vis.map(it => filaProducto(it)).join('') + '</div>' : '<div class="note"><span><strong>Aún no tienes productos.</strong> Crea el primero con el asistente; se guarda solo mientras lo rellenas.</span></div>') +
+    (arch.length ? '<button type="button" class="link" style="align-self:flex-start" data-act="vista|archivados">Ver archivados (' + arch.length + ') →</button>' : '');
+}
+function vistaArchivados() {
+  const arch = CAT.filter(x => x.archivado);
+  return '<div><button type="button" class="link" data-act="vista|catalogo">← Mis productos</button><h1>Productos archivados</h1><p class="sub">No salen en tu catálogo ni en las búsquedas. Archivar no borra nada: al recuperarlos vuelven con todo lo que tenían y con su estado.</p></div>' +
+    (arch.length ? '<div class="cat">' + arch.map(it => filaProducto(it, true)).join('') + '</div>' : '<div class="note"><span>No tienes productos archivados.</span></div>') +
+    '<div class="note"><span>Mientras está archivado, los distribuidores y sucursales no pueden activarlo y las solicitudes abiertas siguen en Mensajes.</span></div>';
+}
+function vistaEditar() {
+  const it = CAT.find(x => x.id === UI.edit) || {}, ch = cambios(), chIds = ch.map(c => c.id);
+  let h = '<div><button type="button" class="link" data-act="volvercat">← Mis productos</button><span class="eb" style="display:block;margin-top:8px">Editar producto</span><h1>' + esc(S.ident.nombre || 'Sin nombre') + ' <span class="tg ' + (ESTADO_CLS[it.estado] || 'g') + '" style="vertical-align:middle">' + esc(it.estado || '') + '</span></h1>' +
+    '<p class="sub">Cambia solo lo que necesites: cada «Editar» abre su paso del asistente aquí mismo. Solo hay un apartado abierto a la vez.</p></div>';
+  if (regulado()) h += '<div class="note"><span><strong>Fármaco, vacuna o biocida:</strong> los cambios de datos técnicos, aplicación, enfermedad, mercados o documentos vuelven a revisión de Agroolink. Mientras tanto se sigue viendo la versión publicada.</span></div>';
+  h += '<div class="cat">' + bloques().map(b => {
+    const open = UI.abierto === b.id, mod = chIds.indexOf(b.id) > -1;
+    return '<section class="blk' + (open ? ' open' : '') + '"><div class="blkh"><span class="k">' + esc(b.k) + (mod ? '<span class="tg w">Modificado</span>' : '') + '</span><span class="v">' + b.v + '</span>' +
+      '<button type="button" class="link" data-act="' + (open ? 'bcerrar' : 'babrir|' + b.id) + '">' + (open ? 'Cerrar' : 'Editar') + '</button></div>' +
+      (open ? '<div class="blkb">' + V[b.id]() + '<div class="chips" style="justify-content:flex-end"><button type="button" class="btn" data-act="bcancelar">Cancelar</button><button type="button" class="btnp" data-act="baplicar">Aplicar</button></div></div>' : '') + '</section>';
+  }).join('') + '</div>';
+  const oc = ocultos();
+  if (oc.length) h += '<div class="note w"><span><strong>No se publicarán ' + oc.length + ' datos</strong> que ya no aplican. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div>';
+  h += '<div class="savebar"><span class="hint" style="flex:1">' + (ch.length ? '<strong style="color:var(--fg)">' + ch.length + (ch.length === 1 ? ' cambio sin guardar' : ' cambios sin guardar') + '</strong> · ' + esc(ch.map(c => c.k).join(', ')) : 'Sin cambios') + '</span>' +
+    '<button type="button" class="btn" data-act="bdescartar"' + (ch.length ? '' : ' disabled') + '>Descartar cambios</button><button type="button" class="btn" data-act="publica">Ver ficha pública</button><button type="button" class="btnp" data-act="bguardar"' + (ch.length ? '' : ' disabled') + '>Guardar cambios</button></div>';
+  return h;
+}
+const AFECTA = ['tecnicos', 'aplicaciones', 'enfermedad', 'variantes', 'mercados', 'documentos', 'certificaciones', 'especies', 'categoria'];
+function dialogoGuardar() {
+  const ch = cambios(), afecta = ch.filter(c => AFECTA.indexOf(c.id) > -1), rev = regulado() && afecta.length;
+  let h = '<strong style="font-size:18px">Guardar cambios en «' + esc(S.ident.nombre || 'producto') + '»</strong>' +
+    '<div class="diffl">' + ch.map(c => '<span><strong>' + esc(c.k) + ':</strong> <span class="old">' + esc(c.antes.slice(0, 90)) + '</span> → ' + esc(c.ahora.slice(0, 90)) + '</span>').join('') + '</div>';
+  if (rev) h += '<div class="note"><span><strong>Vuelve a revisión de Agroolink.</strong> Hasta que se apruebe, el comprador sigue viendo la versión publicada.</span></div>';
+  if (afecta.length) h += '<div class="note w"><span><strong>¿Avisar a quien lo vende o lo ha pedido?</strong> Has cambiado datos que pueden afectar a los distribuidores y sucursales con versión local y a los compradores con una solicitud abierta. Les llega un aviso en Agroolink y las versiones locales se marcan «Revisar cambios del fabricante».</span></div>' +
+    '<div class="chips" style="justify-content:flex-end"><button type="button" class="btn" data-act="cerrar">Seguir editando</button><button type="button" class="btn" data-act="bconfirmar|no">Guardar sin avisar</button><button type="button" class="btnp" data-act="bconfirmar|si">Guardar y avisar</button></div>';
+  else h += '<span class="hint">Son cambios de presentación: no hace falta avisar a nadie.</span><div class="chips" style="justify-content:flex-end"><button type="button" class="btn" data-act="cerrar">Seguir editando</button><button type="button" class="btnp" data-act="bconfirmar|no">Guardar cambios</button></div>';
+  modal(h);
+}
 function render() {
+  if (UI.vista !== 'asistente') {
+    document.getElementById('crumbName').textContent = UI.vista === 'editar' ? (S.ident.nombre || 'Producto') + ' · Editar' : UI.vista === 'archivados' ? 'Archivados' : 'Mis productos';
+    document.getElementById('main').innerHTML = UI.vista === 'editar' ? vistaEditar() : UI.vista === 'archivados' ? vistaArchivados() : vistaCatalogo();
+    if (UI.vista === 'editar') pintaLado(); else document.getElementById('side').innerHTML = '<div class="card help"><strong style="font-size:15px">' + (UI.vista === 'archivados' ? 'Archivados' : 'Tu catálogo') + '</strong><p>' + (UI.vista === 'archivados' ? 'Recuperar devuelve el producto a tu lista con el estado que tenía.' : 'Borrador: lo terminas cuando quieras. En revisión: Agroolink lo valida. Publicado: lo ven los compradores. Oculto: no sale en búsquedas, pero conserva todo.') + '</p></div>';
+    return;
+  }
   const ps = pasos(), p = pasoActual(), i = ps.indexOf(p);
   const t = tpl(S.cat), a = arq(S.cat);
   let tit = TIT[p.id][0];
@@ -802,15 +915,18 @@ function render() {
   const fin = p.id === 'revision', f = faltas();
   document.getElementById('crumbName').textContent = S.ident.nombre || 'Nuevo producto';
   document.getElementById('main').innerHTML =
+    (UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p.label) + '</strong> desde la revisión. Al guardar vuelves a ella; el resto no cambia.</span></div>' : '') +
     '<div><span class="eb">Paso ' + (i + 1) + ' de ' + ps.length + ' · ' + esc(p.label) + '</span><h1>' + esc(tit) + '</h1><p class="sub">' + esc(TIT[p.id][1]) + '</p></div>' +
     V[p.id]() +
     '<div class="nav">' + (i > 0 ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
     (fin ? '<button type="button" class="btn" data-act="borrador">Guardar como borrador</button><button type="button" class="btnp" data-act="enviar"' + (f.length ? ' disabled title="Completa lo que falta"' : '') + '>Enviar a revisión</button>'
+         : UI.desdeRev ? '<button type="button" class="btnp" data-act="ir|revision">Guardar y volver a la revisión</button>'
          : '<button type="button" class="btnp" data-act="seguir"' + (p.id === 'categoria' && !S.cat ? ' disabled' : '') + '>Continuar</button>') + '</div>';
   pintaLado();
 }
 function pintaLado() {
   const ps = pasos(), p = pasoActual(), t = tpl(S.cat), a = arq(S.cat);
+  const enEdicion = UI.vista === 'editar';
   const hechos = ps.filter(x => x.id !== 'revision' && S.visto[x.id] && !faltasDe(x.id).length).length;
   const pct = Math.round(hechos * 100 / (ps.length - 1));
   const lista = '<ol class="steps">' + ps.map((x, j) => { const cur = x.id === p.id, miss = S.visto[x.id] && faltasDe(x.id).length, ok = S.visto[x.id] && !miss && x.id !== 'revision';
@@ -818,8 +934,9 @@ function pintaLado() {
   const keys = attrsTec(t).filter(x => x.decisivo && lleno(S.tec[x.id]) && !marca(S.tec[x.id])).slice(0, 3);
   const esp = Object.keys(S.especies);
   document.getElementById('side').innerHTML =
-    '<div class="card"><strong style="font-size:15px">Tu producto · ' + pct + ' %</strong><div class="prog"><span style="width:' + pct + '%"></span></div><div style="margin-top:10px">' + lista + '</div></div>' +
-    '<div class="card help"><strong style="font-size:15px">' + esc(p.label) + '</strong><p>' + esc(p.ayuda) + '</p></div>' +
+    (enEdicion ? '<div class="card help"><strong style="font-size:15px">Cambios</strong><p>' + (cambios().length ? esc(cambios().map(c => c.k).join(', ')) : 'Aún no has cambiado nada.') + '</p><p>Al guardar eliges si avisar a los distribuidores, sucursales y compradores a los que afecta.</p></div>'
+     : '<div class="card"><strong style="font-size:15px">Tu producto · ' + pct + ' %</strong><div class="prog"><span style="width:' + pct + '%"></span></div><div style="margin-top:10px">' + lista + '</div></div>' +
+    '<div class="card help"><strong style="font-size:15px">' + esc(p.label) + '</strong><p>' + esc(p.ayuda) + '</p></div>') +
     '<div class="card prevbox"><strong style="font-size:15px">Vista previa</strong><div class="prev" style="margin-top:10px">' +
     (S.fotos[0] && S.fotos[0].src ? '<img class="pimg" style="object-fit:cover;width:100%" src="' + S.fotos[0].src + '" alt="Foto principal">' : '<div class="pimg">' + esc((S.ident.nombre || 'Producto').replace(/[^A-Za-zÀ-ÿ0-9]/g, '').slice(0, 3).toUpperCase()) + '</div>') +
     (S.fotos.length > 1 || S.videos.length ? '<span class="hint">' + S.fotos.length + ' fotos' + (S.videos.length ? ' · ' + S.videos.length + ' vídeos' : '') + '</span>' : '') +
@@ -884,11 +1001,37 @@ function comparador() {
 }
 function modal(html) { document.getElementById('layer').innerHTML = '<div class="modal" role="dialog" aria-modal="true"><div class="box">' + html + '</div></div>'; }
 document.addEventListener('click', ev => {
-  const b = ev.target.closest('[data-act]'); if (!b) return;
+  const b = ev.target.closest('[data-act]'); if (!b) { if (UI.menu) { UI.menu = null; render(); } return; }
   const [act, x, y, z] = b.getAttribute('data-act').split('|');
   const P = pasos(), i = P.indexOf(pasoActual());
   switch (act) {
-    case 'ir': ir(x); return;
+    case 'ir': if (UI.vista === 'editar') { UI.abierto = x; UI.snap = clon(S); render(); return; } ir(x); return;
+    case 'desderev': UI.desdeRev = true; ir(x); return;
+    case 'vista': UI.vista = x; UI.menu = null; render(); window.scrollTo({ top: 0 }); return;
+    case 'menu': UI.menu = UI.menu === x ? null : x; render(); return;
+    case 'nuevo': S = nuevo(); UI.vista = 'asistente'; UI.desdeRev = false; UI.intento = {}; guardar(); render(); window.scrollTo({ top: 0 }); return;
+    case 'continuar': { const it = CAT.find(c => c.id === x); S = clon(it.data); UI.vista = 'asistente'; UI.menu = null; guardar(); render(); window.scrollTo({ top: 0 }); return; }
+    case 'editar': { const it = CAT.find(c => c.id === x); S = clon(it.data); UI.base = clon(it.data); UI.edit = x; UI.vista = 'editar'; UI.abierto = null; UI.menu = null; render(); window.scrollTo({ top: 0 }); return; }
+    case 'duplicar': { const it = CAT.find(c => c.id === x), d = clon(it.data); d.id = 'p' + Date.now(); d.ident.nombre = (d.ident.nombre || 'Producto') + ' (copia)'; d.paso = 'identidad'; CAT.unshift({ id: d.id, data: d, estado: 'Borrador', creado: hoy(), actualizado: hoy() }); UI.menu = null; guardarCat(); render(); toast('Borrador creado: «' + d.ident.nombre + '». Cambia lo que necesites.'); return; }
+    case 'ocultar': { const it = CAT.find(c => c.id === x); it.estado = 'Oculto'; UI.menu = null; guardarCat(); render(); toast('Oculto. Ya no sale en búsquedas; las solicitudes abiertas siguen.'); return; }
+    case 'mostrar': { const it = CAT.find(c => c.id === x); it.estado = 'Publicado'; UI.menu = null; guardarCat(); render(); toast('Vuelve a mostrarse.'); return; }
+    case 'aprobar': { const it = CAT.find(c => c.id === x); it.estado = 'Publicado'; it.cambiosPend = false; UI.menu = null; guardarCat(); render(); toast('Aprobado y publicado (simulado).'); return; }
+    case 'archivar': { const it = CAT.find(c => c.id === x); it.archivado = true; it.archivadoEl = hoy(); UI.menu = null; UI.deshacer = x; guardarCat(); render();
+      const tt = document.createElement('div'); tt.className = 'toast'; tt.innerHTML = '«' + esc(it.data.ident.nombre || 'Producto') + '» archivado · <button type="button" class="link" style="color:inherit;text-decoration:underline" data-act="deshacer|' + x + '">Deshacer</button>'; document.body.appendChild(tt); setTimeout(() => tt.remove(), 6000); return; }
+    case 'deshacer': case 'recuperar': { const it = CAT.find(c => c.id === x); it.archivado = false; guardarCat(); document.querySelectorAll('.toast').forEach(t => t.remove()); if (act === 'recuperar' && !CAT.some(c => c.archivado)) UI.vista = 'catalogo'; render(); toast(act === 'recuperar' ? 'Recuperado con su estado: ' + it.estado + '.' : 'Deshecho.'); return; }
+    case 'volvercat': if (cambios().length && !confirm('Tienes cambios sin guardar. ¿Salir sin guardarlos?')) return; UI.vista = 'catalogo'; UI.base = null; S = nuevo(); render(); return;
+    case 'babrir': UI.abierto = x;   // si había otro abierto, sus cambios se quedan aplicados
+      UI.snap = clon(S); render(); return;
+    case 'bcerrar': case 'baplicar': UI.abierto = null; UI.snap = null; render(); return;
+    case 'bcancelar': if (UI.snap) S = UI.snap; UI.abierto = null; UI.snap = null; render(); return;
+    case 'bdescartar': S = clon(UI.base); UI.abierto = null; render(); toast('Cambios descartados.'); return;
+    case 'bguardar': UI.abierto = null; dialogoGuardar(); return;
+    case 'bconfirmar': { const it = CAT.find(c => c.id === UI.edit), ch = cambios(), afecta = ch.filter(c => AFECTA.indexOf(c.id) > -1);
+      it.data = clon(S); it.actualizado = hoy();
+      if (regulado() && afecta.length) it.cambiosPend = true;
+      if (x === 'si') it.avisados = '3 distribuidores y 2 solicitudes';
+      UI.base = clon(S); guardarCat(); document.getElementById('layer').innerHTML = ''; render();
+      toast(regulado() && afecta.length ? 'Guardado. Los cambios van a revisión; se sigue viendo la versión publicada.' : x === 'si' ? 'Guardado y avisado.' : 'Cambios guardados.'); return; }
     case 'atras': ir(P[i - 1].id); return;
     case 'seguir': UI.intento[S.paso] = 1; ir(P[i + 1].id); return;
     case 'fam': UI.fam = UI.fam === x ? null : x; render(); return;
@@ -949,8 +1092,8 @@ document.addEventListener('click', ev => {
     case 'vcapdel': S.videos[+x].capitulos.splice(+y, 1); break;
     case 'doc': S.docs[x] = { n: (S.ident.sku || 'producto') + '_' + (FICT[x] || x) + '_ES.pdf', i: 'Español', v: x === 'sds' ? 'Usuarios registrados' : 'Público' }; break;
     case 'docdel': delete S.docs[x]; break;
-    case 'borrador': guardar(); toast('Borrador guardado. Lo encontrarás en Catálogo › Borradores.'); return;
-    case 'enviar': S.estado = 'En revisión'; guardar(); toast(regla('receta') ? 'Enviado. Agroolink lo revisa antes de publicarlo y te avisa.' : 'Enviado a revisión. Te avisamos cuando esté listo para publicar.'); render(); return;
+    case 'borrador': guardar(); alCatalogo('Borrador'); toast('Borrador guardado en Mis productos.'); return;
+    case 'enviar': S.estado = 'En revisión'; guardar(); alCatalogo('En revisión'); UI.vista = 'catalogo'; toast(regla('receta') ? 'Enviado. Agroolink lo revisa antes de publicarlo y te avisa.' : 'Enviado a revisión. Te avisamos cuando esté listo para publicar.'); render(); return;
     case 'json': modal('<strong>JSON del producto</strong><span class="hint">Contrato de ejemplo para desarrollo. Copia y pega donde lo necesites.</span><pre id="jsonout">' + esc(JSON.stringify(exportJSON(), null, 2)) + '</pre><div class="chips"><button type="button" class="btnp" data-act="copiar">Copiar</button><button type="button" class="btn" data-act="cerrar">Cerrar</button></div>'); return;
     case 'jsonin': modal('<strong>Importar JSON</strong><span class="hint">Pega un estado exportado de este asistente (Ver JSON no sirve: es el contrato, no el borrador).</span><textarea id="jsonin" aria-label="JSON del borrador">' + esc(JSON.stringify(S, null, 2)) + '</textarea><div class="chips"><button type="button" class="btnp" data-act="importar">Cargar</button><button type="button" class="btn" data-act="cerrar">Cerrar</button></div>'); return;
     case 'importar': try { S = Object.assign(nuevo(), JSON.parse(document.getElementById('jsonin').value)); document.getElementById('layer').innerHTML = ''; guardar(); render(); toast('Borrador cargado.'); } catch (e) { toast('Ese texto no es un JSON válido. Revisa que esté completo.'); } return;
@@ -1031,7 +1174,12 @@ document.addEventListener('dragover', ev => { const d = ev.target.closest && ev.
 document.addEventListener('dragleave', ev => { const d = ev.target.closest && ev.target.closest('#dropFotos'); if (d) d.classList.remove('over'); });
 document.addEventListener('drop', ev => { const d = ev.target.closest && ev.target.closest('#dropFotos'); if (d) { ev.preventDefault(); d.classList.remove('over'); anadirFotos(ev.dataTransfer.files); } });
 function guardarSeguro() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { const s2 = Object.assign({}, S, { fotos: S.fotos.map(f => ({ src: null, nombre: f.nombre })) }); try { localStorage.setItem(KEY, JSON.stringify(s2)); } catch (e2) {} } }
-document.getElementById('salir').addEventListener('click', () => { guardar(); toast('Borrador guardado. Puedes retomarlo desde Catálogo › Borradores.'); });
+document.getElementById('salir').addEventListener('click', () => {
+  if (UI.vista === 'asistente') { guardar(); if (S.ident.nombre || S.cat) { alCatalogo(); toast('Guardado en Mis productos.'); } UI.vista = 'catalogo'; S = nuevo(); render(); return; }
+  if (UI.vista === 'editar' && cambios().length) { dialogoGuardar(); return; }
+  UI.vista = 'catalogo'; render();
+});
+document.querySelector('.crumb').innerHTML = '<button type="button" class="link" data-act="vista|catalogo">Productos</button> › <strong id="crumbName">Nuevo producto</strong>';
 const h = (location.hash || '').slice(1);
 if (h && M.pasos.some(p => p.id === h)) S.paso = h;
 pintaGuardado(); render();

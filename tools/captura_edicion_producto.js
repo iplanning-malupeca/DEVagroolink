@@ -1,0 +1,20 @@
+const wait=ms=>new Promise(r=>setTimeout(r,ms)); await wait(500);
+const q=s=>{const e=document.querySelector(s); if(!e) throw new Error('no '+s); return e;};
+const click=a=>q(`[data-act="${a}"]`).click();
+const type=(sel,val)=>{const e=q(sel); e.value=val; e.dispatchEvent(new Event('input',{bubbles:true})); e.dispatchEvent(new Event('change',{bubbles:true}));};
+const css=document.querySelector('style').textContent;
+async function snap(name,title,conLayer,extra){ await wait(150); if(!extra) document.querySelectorAll('.toast').forEach(t=>t.remove()); scrollTo(0,0);
+  const h=Math.max(900, Math.ceil(document.documentElement.scrollHeight/10)*10);
+  const body=document.querySelector('header.top').outerHTML+document.querySelector('.wrap').outerHTML+(conLayer?document.getElementById('layer').innerHTML:'')+(extra?[...document.querySelectorAll('.toast')].map(t=>t.outerHTML.replace('position:fixed','position:absolute')).join(''):'');
+  await fetch('/save?name='+name,{method:'POST',body:JSON.stringify({title,h,css,body})}); return name+':'+h; }
+const out=[];
+window.__cat(); out.push(await snap('K1','Mis productos'));
+click('menu|demo1'); out.push(await snap('K2','Menú de acciones'));
+document.body.click(); click('editar|demo1'); click('babrir|tecnicos'); type('[data-tv="proteina"]','17,5'); click('baplicar'); click('babrir|identidad'); out.push(await snap('K3','Editar por bloques'));
+click('bguardar'); out.push(await snap('K4','Guardar y avisar',true)); click('bconfirmar|si'); click('vista|catalogo'); out.push(await snap('K5','Tras guardar'));
+click('editar|demo0'); click('babrir|enfermedad'); const b=[...document.querySelectorAll('[data-act^="enf|"]')].find(x=>x.getAttribute('aria-pressed')!=='true'); if(b) b.click(); click('baplicar'); click('bguardar'); out.push(await snap('K6','Vacuna: vuelve a revisión',true)); click('cerrar'); click('bdescartar');
+click('volvercat'); click('menu|demo2'); click('archivar|demo2'); out.push(await snap('K7','Tras archivar',false,true));
+document.querySelectorAll('.toast').forEach(t=>t.remove()); click('vista|archivados'); out.push(await snap('K8','Archivados'));
+click('recuperar|demo2'); window.__demo('probiotico'); click('ir|revision'); click('desderev|identidad'); out.push(await snap('K9','Editar desde la revisión'));
+window.__demo('cero');
+return out.join(' ');
