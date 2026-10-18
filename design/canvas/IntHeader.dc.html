@@ -73,7 +73,7 @@ body{margin:0}
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"icono"},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"barra"},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
 class Component extends DCLogic {
   renderVals() {
     const v = this.props.variante ?? 'personal';
@@ -119,12 +119,12 @@ class Component extends DCLogic {
     const segs = vals.map((x, i) => ({ icono: x[0], texto: x[1] || x[2], tinta: x[1] ? '#17231D' : '#56615B', peso: x[1] ? '600' : '400', flex: x[3], sep: i ? '1px solid #DCE3DE' : '0' }));
     return Object.assign({}, d, {
       segs: segs,
-      conBarra: (this.props.buscador ?? 'icono') === 'barra',
-      conIcono: (this.props.buscador ?? 'icono') !== 'barra',
+      conBarra: (this.props.buscador ?? 'barra') === 'barra',
+      conIcono: (this.props.buscador ?? 'barra') !== 'barra',
       barW: (w >= 1700 ? 760 : (w >= 1400 ? 680 : 600)) + 'px',
       segPad: corto ? '12px' : '16px',
       segFont: corto ? '13px' : '13.5px',
-      personaVisible: (corto && this.props.buscador === 'barra') ? '' : (this.props.persona ?? 'Samuel E.'),
+      personaVisible: (corto && (this.props.buscador ?? 'barra') === 'barra') ? '' : (this.props.persona ?? 'Samuel E.'),
       persona: this.props.persona ?? 'Samuel E.',
       ancho: (this.props.ancho ?? 1280) + 'px',
       consulta: this.props.consulta ?? '',

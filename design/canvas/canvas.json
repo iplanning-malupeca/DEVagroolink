@@ -2371,7 +2371,7 @@
    "w": 1280,
    "h": 900,
    "page": "busqueda",
-   "title": "I1 · Intranet: al pulsar «Buscar» se abre la búsqueda combinada vacía"
+   "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía"
   }
  },
  "createdOnFiles": {
@@ -2962,7 +2962,7 @@
    "y": 9780,
    "maxW": 2400,
    "page": "busqueda",
-   "text": "Buscar desde la intranet: botón «Buscar» en la cabecera → búsqueda nueva"
+   "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa"
   }
  },
  "order": [
