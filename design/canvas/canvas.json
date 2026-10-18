@@ -2270,12 +2270,12 @@
    "y": 0
   },
   "ProdImportar.dc.html": {
+   "w": 1280,
    "h": 940,
    "page": "prodfab",
-   "title": "PA0b · Importar catálogo por Excel (actualiza por referencia)",
-   "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 0,
+   "title": "PA0b · Importar catálogo por Excel (actualiza por referencia)"
   },
   "ProyArchivados.dc.html": {
    "h": 900,
