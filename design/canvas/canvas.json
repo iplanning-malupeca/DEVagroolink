@@ -2452,6 +2452,14 @@
    "h": 940,
    "page": "fabdist",
    "title": "D2b · Elegir objetivos y tendencias (modal, hasta 5)"
+  },
+  "FabCabeceraObjetivosCat.dc.html": {
+   "x": 5440,
+   "y": 2480,
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D2c · Mismo modal, pestaña Categorías: elegir libremente familia, grupo o tipo"
   }
  },
  "createdOnFiles": {
@@ -3359,7 +3367,8 @@
   "FabCRM.dc.html",
   "FabCabeceraAdmin.dc.html",
   "FabCRMVarias.dc.html",
-  "FabCabeceraObjetivos.dc.html"
+  "FabCabeceraObjetivos.dc.html",
+  "FabCabeceraObjetivosCat.dc.html"
  ],
  "pages": [
   {
