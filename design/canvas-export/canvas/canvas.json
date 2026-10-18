@@ -2859,7 +2859,7 @@
    "page": "sucursales",
    "x": 2720,
    "y": 2680,
-   "title": "S3c · Aviso a la Sede: confirma al administrador de la sucursal (copia al superadmin)"
+   "title": "S3c · Aviso a la Sede y al superadmin: la sucursal entra directamente"
   }
  },
  "createdOnFiles": {
@@ -3471,7 +3471,7 @@
    "kind": "title1",
    "maxW": 5400,
    "page": "sucursales",
-   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c la Sede confirma · S3 tipo de empresa",
+   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): S3a empresa del CRM · S3b verificar email · S3c aviso a la Sede y al superadmin · S3 tipo de empresa",
    "w": 240,
    "x": 0,
    "y": 2380
