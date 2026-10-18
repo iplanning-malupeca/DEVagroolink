@@ -395,7 +395,6 @@ function faltas() {
   if (!paisesSel().length) f.push({ p: 'mercados', t: 'Elige al menos un país o región' });
   S.mercados.entradas.forEach(e => { if (e.modo === 'solo' && !e.sel.length) f.push({ p: 'mercados', t: e.id + ': marca qué incluye o elige «Toda»' }); });
   if (!S.ident.nombre.trim()) f.push({ p: 'identidad', t: 'Falta el nombre comercial' });
-  if (!S.ident.sku.trim()) f.push({ p: 'identidad', t: 'Falta la referencia interna' });
   if (!S.ident.corta.trim()) f.push({ p: 'identidad', t: 'Falta la descripción corta' });
   const t = tpl(S.cat);
   attrsTec(t).forEach(a => {
@@ -597,13 +596,13 @@ V.identidad = () => {
   const I = S.ident, n = I.corta.length;
   return '<div class="grid2">' +
     '<div class="field"><span class="flabel"><label for="i-nombre">Nombre comercial</label><span class="req">*</span></span><input class="inp" id="i-nombre" data-i="nombre" value="' + esc(I.nombre) + '"></div>' +
-    '<div class="field"><span class="flabel"><label for="i-sku">Referencia interna</label><span class="req">*</span></span><input class="inp" id="i-sku" data-i="sku" value="' + esc(I.sku) + '" placeholder="Por ejemplo: PRB-25"><span class="ex">El código con el que identificas el producto en tu catálogo o tu ERP. No lo ve el comprador; sirve para actualizar el catálogo por Excel.</span></div>' +
     '<div class="field"><label for="i-marca">Marca</label><input class="inp" id="i-marca" data-i="marca" value="' + esc(I.marca) + '" placeholder="La de tu empresa"></div>' +
     '<div class="field"><label for="i-web">Web o contacto</label><input class="inp" id="i-web" data-i="web" value="' + esc(S.ident.web || '') + '" placeholder="Página del producto o email de contacto"></div>' +
     '<div class="field"><label for="i-fab">Fabricante</label><input class="inp" id="i-fab" value="' + esc(I.fabricante) + '" disabled><span class="ex">Tu empresa. Lo fija tu cuenta.</span></div>' +
     '<div class="field full"><span class="flabel"><label for="i-corta">Descripción corta</label><span class="req">*</span><span class="hint">· sale junto a las fotos · ' + n + ' / 300</span></span><textarea class="ta" id="i-corta" rows="2" maxlength="300" data-i="corta">' + esc(I.corta) + '</textarea></div>' +
     '<div class="field full"><label for="i-larga">Descripción completa <span class="hint">· opcional, pestaña «Información»</span></label><textarea class="ta" id="i-larga" rows="4" data-i="larga">' + esc(I.larga) + '</textarea></div>' +
     '<div class="field full"><span class="flabel">Objetivos <span class="hint">· de la lista de tendencias; ayudan a salir en recomendaciones</span></span><div class="chips">' + M.objetivos.map(o => chip(o, I.objetivos.indexOf(o) > -1, 'obj|' + o, 'sm')).join('') + '</div></div>' +
+    ((I.sku || UI.verSku) ? '<div class="field"><label for="i-sku">Tu código de producto <span class="hint">· opcional</span></label><input class="inp" id="i-sku" data-i="sku" value="' + esc(I.sku) + '" placeholder="Por ejemplo: PRB-25"><span class="ex">Solo si quieres actualizar tu catálogo por Excel. No lo ve el comprador.</span></div>' : '<div class="field"><button type="button" class="link" style="align-self:flex-start" data-act="versku">+ Añadir tu código de producto (opcional)</button></div>') +
     '<div class="field full"><span class="flabel">Idiomas de la ficha</span><div class="chips">' + ['Español', 'Inglés', 'Portugués', 'Francés', 'Italiano', 'Alemán'].map(o => chip(o, I.idiomas.indexOf(o) > -1, 'idi|' + o, 'sm')).join('') + '</div></div></div>';
 };
 V.tecnicos = () => {
@@ -699,7 +698,7 @@ V.revision = () => {
     fila('Categoría', S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>', 'categoria') +
     fila('Especies de destino', (S.sinEspecie ? 'No depende de especie' : esc(Object.keys(S.especies).map(espTxt).join(' · '))) + miss('especies'), 'especies') +
     fila('Mercados', esc(mercTxt()) + ' <span class="hint">· ' + paisesSel().length + ' países</span>' + (conRegistro() ? ' <span class="hint">· registro: ' + paisesSel().filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + paisesSel().length + '</span>' : '') + miss('mercados'), 'mercados') +
-    fila('Identidad', '<strong>' + esc(S.ident.nombre || '—') + '</strong> · ' + esc(S.ident.sku || '—') + '<br><span class="hint">' + esc(S.ident.corta) + '</span>' + miss('identidad'), 'identidad') +
+    fila('Identidad', '<strong>' + esc(S.ident.nombre || '—') + '</strong>' + (S.ident.sku ? ' · ' + esc(S.ident.sku) : '') + '<br><span class="hint">' + esc(S.ident.corta) + '</span>' + miss('identidad'), 'identidad') +
     fila('Datos técnicos', t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—', 'tecnicos') +
     (conAplicacion(S.cat) && destinos().length ? fila('Aplicación por especie', destinos().map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {}; const n = attrsApl(t).filter(a => lleno(vals[a.id])).length; return esc(d.label) + ' <span class="hint">· ' + n + ' de ' + attrsApl(t).length + ' datos' + ((st.fases || []).length ? ' · ' + esc(st.fases.join(', ')) : '') + '</span>'; }).join('<br>') + miss('aplicaciones'), 'aplicaciones') : '') +
     (enfVis() ? fila('Enfermedad diana', esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).concat((S.enfOtra || '').trim() ? ['Otra: ' + S.enfOtra.trim()] : []).join(', ') || 'Ninguna') + miss('enfermedad'), 'enfermedad') : '') +
@@ -823,6 +822,7 @@ document.addEventListener('click', ev => {
     case 'esp': S.sinEspecie = false; if (S.especies[x]) { delete S.especies[x]; if (UI.foco === x) UI.foco = null; } else { S.especies[x] = { modo: 'todas', sel: [] }; UI.foco = x; }
       S.enf = S.enf.filter(id => { const e = M.enfermedades.find(q => q.id === id); return e && e.especies.some(sp => S.especies[sp]); }); break;
     case 'espfoco': UI.foco = x; render(); return;
+    case 'versku': UI.verSku = true; break;
     case 'sinesp': S.sinEspecie = !S.sinEspecie; if (S.sinEspecie) { S.especies = {}; UI.foco = null; } break;
     case 'descartar': ocultos().forEach(k => delete S.tec[k]); toast('Datos descartados.'); break;
     case 'afase': { const st = S.apl[x] = S.apl[x] || {}; st.fases = st.fases || []; toggle(st.fases, y); break; }
