@@ -3084,6 +3084,38 @@
    "x": 10880,
    "y": 4460,
    "title": "K9 · En el alta: editar un apartado desde la revisión y volver a ella"
+  },
+  "PrdFabCatalogoMenu.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodfab",
+   "x": 0,
+   "y": 1340,
+   "title": "PA1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar"
+  },
+  "PrdFabCatalogoCopia.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodfab",
+   "x": 1360,
+   "y": 1340,
+   "title": "PA1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»"
+  },
+  "PrdComCatalogoMenu.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodcom",
+   "x": 0,
+   "y": 1340,
+   "title": "PC1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar"
+  },
+  "PrdComCatalogoCopia.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "prodcom",
+   "x": 1360,
+   "y": 1340,
+   "title": "PC1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»"
   }
  },
  "createdOnFiles": {
@@ -3736,6 +3768,24 @@
    "x": 0,
    "y": 4160,
    "text": "Edición del producto, como en Proyectos · catálogo con acciones, edición por bloques con aviso a quien lo vende o lo ha pedido, revisión de nuevo en productos regulados, archivar y recuperar"
+  },
+  "prodfabT2": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodfab",
+   "w": 240,
+   "x": 0,
+   "y": 1040,
+   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a distribuidores o solicitudes, eliges si avisar"
+  },
+  "prodcomT2": {
+   "kind": "title1",
+   "maxW": 6800,
+   "page": "prodcom",
+   "w": 240,
+   "x": 0,
+   "y": 1040,
+   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a comerciales o solicitudes, eliges si avisar"
   }
  },
  "order": [
@@ -4123,7 +4173,11 @@
   "ProdEdRegulado.dc.html",
   "ProdEdArchivar.dc.html",
   "ProdEdArchivados.dc.html",
-  "ProdEdDesdeRevision.dc.html"
+  "ProdEdDesdeRevision.dc.html",
+  "PrdFabCatalogoMenu.dc.html",
+  "PrdFabCatalogoCopia.dc.html",
+  "PrdComCatalogoMenu.dc.html",
+  "PrdComCatalogoCopia.dc.html"
  ],
  "pages": [
   {
