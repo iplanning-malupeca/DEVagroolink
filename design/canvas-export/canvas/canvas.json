@@ -2924,6 +2924,70 @@
    "x": 6800,
    "y": 7340,
    "title": "L6 · Superadmin: glosario del sector, términos que no se traducen y fichas sin revisar"
+  },
+  "ServExpTipo.dc.html": {
+   "w": 1280,
+   "h": 1850,
+   "page": "experto",
+   "x": 0,
+   "y": 5180,
+   "title": "SX1 · Tipo de servicio: los de la familia Servicios, con «Otro servicio…»"
+  },
+  "ServExpEspecies.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 1360,
+   "y": 5180,
+   "title": "SX2 · Especies y, si quieres, su producción (sin marcar = todas)"
+  },
+  "ServExpPublico.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 2720,
+   "y": 5180,
+   "title": "SX3 · Dirigido a: ramas de negocio y cargos del CRM"
+  },
+  "ServExpDonde.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 4080,
+   "y": 5180,
+   "title": "SX4 · Dónde lo prestas: presencial por zonas y a distancia con idiomas"
+  },
+  "ServExpDetalles.dc.html": {
+   "w": 1280,
+   "h": 1170,
+   "page": "experto",
+   "x": 5440,
+   "y": 5180,
+   "title": "SX5 · Detalles: nombre, descripción, datos del tipo de servicio y «Se publica en» (traducción)"
+  },
+  "ServExpCondiciones.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 6800,
+   "y": 5180,
+   "title": "SX6 · Plazo de respuesta y precio; las solicitudes llegan por Mensajes"
+  },
+  "ServExpRevision.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 8160,
+   "y": 5180,
+   "title": "SX7 · Revisión con «Editar» por apartado y «Publicar servicio»"
+  },
+  "ServExpLista.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 9520,
+   "y": 5180,
+   "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)"
   }
  },
  "createdOnFiles": {
@@ -3595,6 +3659,25 @@
    "x": 0,
    "y": 7040,
    "text": "Traducciones · la IA traduce el texto libre a ES, EN, PT y FR; la empresa revisa o edita y lo editado no se pisa; en regulados, lo sensible no se publica sin revisar; los mensajes se traducen solo al leer"
+  },
+  "servExpT": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "experto",
+   "w": 240,
+   "x": 0,
+   "y": 4540,
+   "text": "Alta de servicios del experto · asistente por pasos, en lila, con los mismos campos que el editor de servicios de empresa · prototipo: design/prototipos/crear-servicio.html"
+  },
+  "servExpDev": {
+   "fill": "orange",
+   "maxH": 260,
+   "page": "experto",
+   "size": 24,
+   "w": 1280,
+   "x": 0,
+   "y": 4840,
+   "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu"
   }
  },
  "order": [
@@ -3962,7 +4045,15 @@
   "ProdTradFicha.dc.html",
   "ProdTradRegulado.dc.html",
   "ProdTradReguladoFicha.dc.html",
-  "ProdTradGlosario.dc.html"
+  "ProdTradGlosario.dc.html",
+  "ServExpTipo.dc.html",
+  "ServExpEspecies.dc.html",
+  "ServExpPublico.dc.html",
+  "ServExpDonde.dc.html",
+  "ServExpDetalles.dc.html",
+  "ServExpCondiciones.dc.html",
+  "ServExpRevision.dc.html",
+  "ServExpLista.dc.html"
  ],
  "pages": [
   {

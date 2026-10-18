@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agroolink · Nuevo servicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Alta de servicios del experto: asistente por pasos (como producto y proyectos), color lila de expertos. Formulario 70 % + vista previa 30 %; una columna en móvil. */
+:root{
+  --bg:#F6F8F6; --surface:#FFFFFF; --surface2:#F7F6FC; --fg:#17231D; --muted:#56615B; --line:#E3E8E4; --line2:#D5DED8;
+  --accent:#4B3BA6; --accent-ink:#FFFFFF; --soft:#F1EEFB; --soft2:#DCD5F5; --ok:#0E5A3A; --ok-bg:#EEF6EE; --warn:#7A4B00; --warn-bg:#FFF4E0;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12111A; --surface:#1A1824; --surface2:#211E2E; --fg:#ECEAF4; --muted:#A39FB8; --line:#2C2840; --line2:#3A3552;
+  --accent:#B3A7F2; --accent-ink:#17142A; --soft:#2A2445; --soft2:#3B3363; --ok:#7FD1A6; --ok-bg:#15291F; --warn:#F2C46B; --warn-bg:#2E2410; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12111A; --surface:#1A1824; --surface2:#211E2E; --fg:#ECEAF4; --muted:#A39FB8; --line:#2C2840; --line2:#3A3552;
+  --accent:#B3A7F2; --accent-ink:#17142A; --soft:#2A2445; --soft2:#3B3363; --ok:#7FD1A6; --ok-bg:#15291F; --warn:#F2C46B; --warn-bg:#2E2410; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.4}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line);min-height:56px;padding-block:8px;padding-inline:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;flex:none}.logo svg{height:28px;width:auto;display:block}
+.rol{font-size:12px;font-weight:600;color:var(--accent);background:var(--soft);border-radius:999px;padding:3px 10px}
+.crumb{color:var(--muted);font-size:14px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb strong{color:var(--fg);font-weight:500}
+.wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:24px;max-width:1500px;margin:0 auto;padding-block:20px 40px;padding-inline:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px))}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}.side .prevbox{order:2}}
+.main{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:600px){.main{padding:18px 16px}}
+.eb{font-size:12px;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}
+h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.sub{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:68ch}
+.steps{display:grid;gap:6px;grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+.steps span{height:5px;border-radius:3px;background:var(--line2)}
+.steps span.on{background:var(--accent)}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.flabel{font-size:15px;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hint{font-size:12.5px;color:var(--muted);font-weight:400}
+.inp,.ta,.sel{height:40px;border:1px solid var(--line2);border-radius:10px;padding:0 12px;background:var(--surface);width:100%;min-width:0}
+.ta{height:auto;padding:10px 12px;resize:vertical;line-height:1.4}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);display:inline-flex;align-items:center;gap:6px;font-size:13.5px;white-space:nowrap}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sm{height:30px;font-size:12.5px;padding:0 11px}
+.chip.soft.on{background:var(--soft);color:var(--accent);border-color:var(--soft2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.tcard{border:1px solid var(--line2);border-radius:14px;background:var(--surface);padding:12px 14px;text-align:left;display:flex;flex-direction:column;gap:2px;min-height:62px}
+.tcard:hover{border-color:var(--accent)}
+.tcard.on{border:1.5px solid var(--accent);background:var(--soft)}
+.tcard strong{font-size:14.5px;font-weight:600}
+.box{border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.row{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.rl{width:120px;flex:none;font-size:13.5px;color:var(--muted);padding-top:6px}
+@media (max-width:600px){.rl{width:100%;padding:0}}
+.sw{display:flex;align-items:center;gap:8px;font-weight:500}
+.sw input{accent-color:var(--accent);width:18px;height:18px;margin:0}
+.note{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);font-size:13.5px;color:var(--muted);line-height:1.4}
+.note strong{color:var(--fg)}
+.note.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
+.nav{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:16px;flex-wrap:wrap}
+.nav .sp{flex:1}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp{height:40px;padding:0 20px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp:disabled{opacity:.45;cursor:not-allowed}
+.link{border:0;background:none;color:var(--accent);padding:0;font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.prev{display:flex;flex-direction:column;gap:9px}
+.prev .nm{font-weight:600;font-size:16px;line-height:1.28}
+.who{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.av{width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.tag{font-size:12px;font-weight:500;background:var(--soft);color:var(--accent);border-radius:999px;padding:3px 10px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.zona{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--accent);font-weight:500}
+.pcta{height:36px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.caso{border:1px dashed var(--line2);border-radius:12px;padding:10px 12px;font-size:12.5px;color:var(--muted);line-height:1.35}
+.caso strong{color:var(--fg)}
+.sumrow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:12px;align-items:start;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+@media (max-width:600px){.sumrow{grid-template-columns:minmax(0,1fr) auto}.sumrow .v{grid-column:1/-1;grid-row:2}}
+.sumrow .k{color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:10px}
+.srow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface);position:relative}
+.srow .t{font-size:16px;font-weight:600}
+.st{font-size:11.5px;font-weight:600;border-radius:999px;padding:2px 9px}
+.st.ok{background:var(--ok-bg);color:var(--ok)}.st.g{background:var(--surface2);color:var(--muted)}.st.w{background:var(--warn-bg);color:var(--warn)}
+.menu{position:absolute;right:14px;top:54px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(20,16,40,.16);padding:6px;display:flex;flex-direction:column;min-width:290px}
+.menu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:8px;display:flex;flex-direction:column;gap:1px;font-weight:500}
+.menu button:hover{background:var(--soft)}
+.menu button small{font-size:12px;color:var(--muted);font-weight:400}
+.ico{width:34px;height:34px;border:0;background:none;border-radius:8px;font-size:18px}
+.ico:hover{background:var(--soft)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:30}
+</style>
+</head>
+<body>
+<header class="top">
+  <span class="logo">/*LOGO*/</span><span class="rol">Expertos</span>
+  <span class="crumb" id="crumb"></span>
+  <button class="btn" type="button" data-act="salir">Guardar y salir</button>
+</header>
+<div class="wrap">
+  <main class="main" id="main"></main>
+  <aside class="side" id="side"></aside>
+</div>
+<script id="modelo" type="application/json">/*MODELO*/</script>
+<script>
+(function(){
+const M = JSON.parse(document.getElementById('modelo').textContent);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const KEY = 'agroolink-servicios-experto-v1';
+// tipos de servicio: grupos y tipos de la familia Servicios del árbol de categorías
+const SERV = M.categorias.find(f => f.id === 'C11');
+const TIPOS = []; SERV.grupos.forEach(g => (g.tipos && g.tipos.length ? g.tipos : [g]).forEach(t => TIPOS.push({ id: t.id, label: t.corto || t.label, grupo: g.label, gid: g.id })));
+const nombreTipo = id => id === 'otro' ? 'Otro servicio' : (TIPOS.find(t => t.id === id) || {}).label || '';
+const ASIG = {}; Object.keys(M.plantillas).forEach(k => M.plantillas[k].nodos.forEach(n => ASIG[n] = k));
+const plantilla = id => { if (!id || id === 'otro') return null; let k = id; while (k) { if (ASIG[k]) return M.plantillas[ASIG[k]]; k = k.indexOf('-') > -1 ? k.slice(0, k.lastIndexOf('-')) : null; } return null; };
+const YA = ['servicio', 'ambito_geo', 'modalidad', 'cobertura', 'territorio', 'idiomas'];   // ya se piden en otros pasos
+const datosTipo = () => { const t = plantilla(S.tipo); return t ? t.atributos.filter(a => YA.indexOf(a.id) < 0) : []; };
+const RAMAS = M.ramas.ramas_negocio, CARGOS = M.ramas.cargos;
+const CCAA = ['Andalucía', 'Aragón', 'Asturias', 'Baleares', 'Canarias', 'Cantabria', 'Castilla-La Mancha', 'Castilla y León', 'Cataluña', 'Comunidad Valenciana', 'Extremadura', 'Galicia', 'La Rioja', 'Madrid', 'Murcia', 'Navarra', 'País Vasco'];
+const IDIOMAS = ['Español', 'Inglés', 'Portugués', 'Francés'];
+const PASOS = [
+  ['tipo', 'Tipo de servicio', '¿Qué servicio ofreces?', 'Elige el tipo; decide qué datos te pedimos y dónde te encuentran.'],
+  ['especies', 'Especies', '¿Para qué especies?', 'Solo lo verán quienes trabajan con esas especies. Afina la producción si no es para todas.'],
+  ['publico', 'Dirigido a', '¿A quién va dirigido?', 'Las mismas ramas de negocio y cargos del CRM. Si no marcas nada, lo ve todo el mundo.'],
+  ['donde', 'Dónde lo prestas', '¿Dónde lo prestas?', 'Presencial en unas zonas y, si quieres, a distancia en otras. Cada comprador ve solo lo que puede contratar.'],
+  ['detalles', 'Detalles', 'Cuéntalo', 'Nombre, descripción y los datos propios de tu tipo de servicio. Ninguno es obligatorio salvo el nombre.'],
+  ['condiciones', 'Plazo y precio', 'Plazo de respuesta y precio', 'Lo que ve el comprador antes de pulsar «Solicitar».'],
+  ['revision', 'Revisión', 'Revisa tu servicio', 'Puedes cambiar cualquier apartado antes de publicarlo.']];
+function nuevo() { return { id: null, paso: 'tipo', tipo: null, tipoOtro: '', esp: {}, ramas: [], cargos: [], pres: true, presZ: [], dist: false, distZ: [], idiomas: ['Español'], nombre: '', desc: '', tec: {}, plazo: '48 horas', precio: 'A consultar', desde: '', publica: ['Español', 'Inglés', 'Portugués', 'Francés'], estado: 'Borrador' }; }
+let S = nuevo(), LISTA = [];
+try { LISTA = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { LISTA = []; }
+const UI = { vista: 'asistente', desdeRev: false, menu: null, zq: '' };
+const guardaLista = () => { try { localStorage.setItem(KEY, JSON.stringify(LISTA)); } catch (e) {} };
+const chip = (t, on, act, cls) => '<button type="button" class="chip ' + (cls || '') + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '" data-act="' + esc(act) + '">' + (on ? '✓ ' : '') + esc(t) + '</button>';
+const toggle = (a, x) => { const i = a.indexOf(x); i > -1 ? a.splice(i, 1) : a.push(x); };
+function toast(t) { const d = document.createElement('div'); d.className = 'toast'; d.textContent = t; document.body.appendChild(d); setTimeout(() => d.remove(), 3200); }
+// ---------- textos ----------
+const espTxt = () => { const k = Object.keys(S.esp); return k.length ? k.map(sp => S.esp[sp].length ? sp + ' · ' + S.esp[sp].join(', ') : sp).join(' · ') : 'Todas las especies'; };
+const pubTxt = () => (S.ramas.length || S.cargos.length) ? [S.ramas.map(r => r.split(' › ').pop()).join(', '), S.cargos.join(', ')].filter(Boolean).join(' · ') : 'Todo el mundo';
+const zonaTxt = z => z.join(', ');
+const dondeTxt = () => [S.pres && S.presZ.length ? 'Presencial: ' + zonaTxt(S.presZ) : '', S.dist ? 'A distancia: ' + (S.distZ.length ? zonaTxt(S.distZ) : 'cualquier sitio') + ' (' + S.idiomas.join(', ').toLowerCase() + ')' : ''].filter(Boolean).join(' · ') || 'Sin indicar';
+const precioTxt = () => S.precio === 'Desde' ? 'Desde ' + (S.desde || '…') + ' €' : S.precio === 'Gratis' ? 'Gratis' : 'A consultar';
+// ---------- pasos ----------
+const V = {};
+V.tipo = () => {
+  const grupos = {}; TIPOS.forEach(t => (grupos[t.grupo] = grupos[t.grupo] || []).push(t));
+  return Object.keys(grupos).map(g => '<div class="field"><span class="flabel">' + esc(g) + '</span><div class="cards">' + grupos[g].map(t => '<button type="button" class="tcard' + (S.tipo === t.id ? ' on' : '') + '" data-act="tipo|' + t.id + '"><strong>' + esc(t.label) + '</strong>' + (t.label !== g ? '<span class="hint">' + esc(g) + '</span>' : '') + '</button>').join('') + '</div></div>').join('') +
+    '<div class="field"><span class="flabel">¿No está?</span><div class="cards"><button type="button" class="tcard' + (S.tipo === 'otro' ? ' on' : '') + '" data-act="tipo|otro"><strong>Otro servicio…</strong><span class="hint">Escríbelo y lo revisa Agroolink</span></button></div>' +
+    (S.tipo === 'otro' ? '<input class="inp" data-f="tipoOtro" value="' + esc(S.tipoOtro) + '" placeholder="Por ejemplo: gestión de purines">' : '') + '</div>';
+};
+V.especies = () => {
+  let h = '<div class="chips">' + chip('Todas las especies', !Object.keys(S.esp).length, 'esptodas', '') + M.especies.map(e => chip(e.label, !!S.esp[e.label], 'esp|' + e.label)).join('') + '</div>';
+  Object.keys(S.esp).forEach(sp => { const e = M.especies.find(x => x.label === sp);
+    h += '<div class="field"><span class="flabel">' + esc(sp) + ' <span class="hint">· producción (opcional; sin marcar = todas)</span></span><div class="chips">' + e.producciones.map(p => chip(p.label, S.esp[sp].indexOf(p.label) > -1, 'prod|' + sp + '|' + p.label, 'sm soft')).join('') + '</div></div>'; });
+  return h;
+};
+V.publico = () => '<div class="field"><span class="flabel">Rama de negocio</span><div class="chips">' + RAMAS.map(r => chip(r.label, S.ramas.indexOf(r.label) > -1 || S.ramas.some(x => x.indexOf(r.label + ' › ') === 0), 'rama|' + r.label)).join('') + '</div></div>' +
+  RAMAS.filter(r => r.subramas && S.ramas.some(x => x === r.label || x.indexOf(r.label + ' › ') === 0)).map(r => '<div class="field"><span class="flabel">' + esc(r.label) + ' <span class="hint">· afina si quieres</span></span><div class="chips">' + r.subramas.map(sr => chip(sr.label, S.ramas.indexOf(r.label + ' › ' + sr.label) > -1, 'subrama|' + r.label + '|' + sr.label, 'sm soft')).join('') + '</div></div>').join('') +
+  '<div class="field"><span class="flabel">Cargo</span><div class="chips">' + CARGOS.map(c => { const l = c.label || c; return chip(l, S.cargos.indexOf(l) > -1, 'cargo|' + l, 'sm'); }).join('') + '</div></div>';
+function zonas(lista, act) {
+  const q = (UI.zq || '').toLowerCase();
+  const opts = ['España', 'Portugal'].concat(CCAA.map(c => 'España › ' + c)).concat(M.paises.filter(p => p !== 'España' && p !== 'Portugal')).concat(Object.keys(M.regiones)).concat(['Todo el mundo']);
+  const hits = q ? opts.filter(o => o.toLowerCase().indexOf(q) > -1).slice(0, 10) : [];
+  return '<div class="chips">' + lista.map(z => '<button type="button" class="chip sm on" data-act="' + act + 'q|' + esc(z) + '">' + esc(z) + ' ×</button>').join('') + '</div>' +
+    '<input class="inp" data-zq="' + act + '" placeholder="Añadir zona: país, comunidad o región" value="' + esc(UI.zqAct === act ? UI.zq : '') + '">' +
+    (UI.zqAct === act && hits.length ? '<div class="chips">' + hits.map(o => chip('+ ' + o, false, act + 'a|' + o, 'sm')).join('') + '</div>' : '');
+}
+V.donde = () => '<div class="box"><label class="sw"><input type="checkbox" data-sw="pres"' + (S.pres ? ' checked' : '') + '> Presencial <span class="hint">· vas a la explotación, la planta o el laboratorio</span></label>' + (S.pres ? zonas(S.presZ, 'pz') : '') + '</div>' +
+  '<div class="box"><label class="sw"><input type="checkbox" data-sw="dist"' + (S.dist ? ' checked' : '') + '> A distancia <span class="hint">· videollamada, informe, envío de muestras…</span></label>' + (S.dist ? zonas(S.distZ, 'dz') + '<span class="hint">Sin zonas = desde cualquier sitio.</span><div class="field"><span class="flabel">Idiomas en los que atiendes</span><div class="chips">' + IDIOMAS.map(i => chip(i, S.idiomas.indexOf(i) > -1, 'idio|' + i, 'sm')).join('') + '</div></div>' : '') + '</div>' +
+  (!S.pres && !S.dist ? '<div class="note w"><span>Marca al menos una forma de prestarlo para que te puedan encontrar.</span></div>' : '');
+function campo(a) {
+  const v = S.tec[a.id];
+  if (a.type === 'enum' || a.type === 'multiselect') return '<div class="field"><span class="flabel">' + esc(a.label) + '</span><div class="chips">' + (a.options || []).map(o => chip(o, Array.isArray(v) ? v.indexOf(o) > -1 : v === o, (a.type === 'enum' ? 'tenum|' : 'tmulti|') + a.id + '|' + o, 'sm')).join('') + '</div></div>';
+  if (a.type === 'textarea') return '<div class="field" style="grid-column:1/-1"><span class="flabel">' + esc(a.label) + '</span><textarea class="ta" rows="2" data-t="' + a.id + '">' + esc(v || '') + '</textarea></div>';
+  return '<div class="field"><span class="flabel">' + esc(a.label) + (a.unit ? ' <span class="hint">· ' + esc(a.unit.split('|')[0]) + '</span>' : '') + '</span><input class="inp" data-t="' + a.id + '" value="' + esc(v || '') + '"></div>';
+}
+V.detalles = () => '<div class="field"><span class="flabel">Nombre del servicio</span><input class="inp" data-f="nombre" value="' + esc(S.nombre) + '" placeholder="Por ejemplo: Auditoría nutricional de lotes de broilers"></div>' +
+  '<div class="field"><span class="flabel">Descripción <span class="hint">· ' + S.desc.length + ' / 300 · qué incluye y cómo trabajas</span></span><textarea class="ta" rows="3" maxlength="300" data-f="desc">' + esc(S.desc) + '</textarea></div>' +
+  (datosTipo().length ? '<div class="field"><span class="flabel">Datos de ' + esc(nombreTipo(S.tipo).toLowerCase()) + ' <span class="hint">· opcionales</span></span><div class="grid2">' + datosTipo().map(campo).join('') + '</div></div>' : '') +
+  '<div class="field"><span class="flabel">Se publica en <span class="hint">· la IA traduce el nombre y la descripción; lo puedes revisar después</span></span><div class="chips">' + IDIOMAS.map(i => chip(i, S.publica.indexOf(i) > -1, 'pub|' + i, 'sm')).join('') + '</div></div>';
+V.condiciones = () => '<div class="grid2"><div class="field"><span class="flabel">Plazo de respuesta</span><div class="chips">' + ['24 horas', '48 horas', '1 semana'].map(p => chip(p, S.plazo === p, 'plazo|' + p, 'sm')).join('') + '</div></div>' +
+  '<div class="field"><span class="flabel">Precio</span><div class="chips">' + ['A consultar', 'Desde', 'Gratis'].map(p => chip(p === 'Desde' ? 'Desde… (importe)' : p, S.precio === p, 'precio|' + p, 'sm')).join('') + '</div>' + (S.precio === 'Desde' ? '<input class="inp" inputmode="decimal" data-f="desde" value="' + esc(S.desde) + '" placeholder="Importe en €" style="max-width:200px">' : '') + '</div></div>' +
+  '<div class="note"><span>Las solicitudes te llegan por <strong>Mensajes</strong> de Agroolink; el comprador no ve tu teléfono ni tu email.</span></div>';
+const filaR = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="desderev|' + p + '">Editar</button></div>';
+V.revision = () => { const falta = !S.nombre.trim() || !S.tipo || (!S.pres && !S.dist);
+  return '<div class="note' + (falta ? ' w' : '') + '"><span><strong>' + (falta ? 'Falta ' + [!S.tipo ? 'el tipo' : '', !S.nombre.trim() ? 'el nombre' : '', !S.pres && !S.dist ? 'dónde lo prestas' : ''].filter(Boolean).join(', ') + '.' : 'Todo listo para publicar.') + '</strong> ' + (falta ? 'Puedes guardarlo como borrador.' : 'Se publica al momento; puedes pausarlo cuando quieras.') + '</span></div>' +
+    '<div>' + filaR('Tipo', esc(S.tipo === 'otro' ? 'Otro: ' + (S.tipoOtro || '…') : nombreTipo(S.tipo) || '—'), 'tipo') + filaR('Especies', esc(espTxt()), 'especies') + filaR('Dirigido a', esc(pubTxt()), 'publico') + filaR('Dónde', esc(dondeTxt()), 'donde') +
+    filaR('Servicio', '<strong>' + esc(S.nombre || '—') + '</strong>' + (S.desc ? '<br><span class="hint">' + esc(S.desc) + '</span>' : '') + (Object.keys(S.tec).filter(k => S.tec[k] && S.tec[k].length).length ? '<br><span class="hint">' + Object.keys(S.tec).filter(k => S.tec[k] && S.tec[k].length).length + ' datos de ' + esc(nombreTipo(S.tipo).toLowerCase()) + '</span>' : ''), 'detalles') +
+    filaR('Plazo y precio', esc('Respuesta en ' + S.plazo + ' · ' + precioTxt()), 'condiciones') + '</div>' +
+    '<div class="note"><span>En el plan Gratis tienes <strong>2 servicios publicados</strong>; con Experto Pro, ilimitados.</span></div>'; };
+// ---------- vista previa y casos ----------
+function casos() {
+  const sev = S.pres && S.presZ.some(z => z === 'España' || z === 'España › Andalucía' || z === 'Todo el mundo' || z === 'Europa') ? 'Lo ve con la visita presencial.' : S.dist && (!S.distZ.length || S.distZ.some(z => ['España', 'Europa', 'Todo el mundo'].indexOf(z) > -1)) ? 'No ve la visita presencial; ve «Disponible a distancia».' : 'No lo ve: Sevilla está fuera de tus zonas.';
+  const esp = Object.keys(S.esp); const por = !esp.length || esp.indexOf('Porcino') > -1 ? 'Lo ve en su búsqueda.' : 'El servicio no aparece en su búsqueda.';
+  return '<div class="caso"><strong>Comprador en Sevilla:</strong> ' + sev + '</div><div class="caso"><strong>Comprador de porcino:</strong> ' + por + '</div>';
+}
+function lado() {
+  const p = PASOS.find(x => x[0] === S.paso) || PASOS[0];
+  const tags = Object.keys(S.esp).length ? Object.keys(S.esp).flatMap(sp => S.esp[sp].length ? S.esp[sp] : [sp]) : ['Todas las especies'];
+  document.getElementById('side').innerHTML =
+    '<div class="card"><strong style="font-size:15px">' + esc(p[1]) + '</strong><p class="hint" style="margin:6px 0 0;font-size:13px">' + esc(p[3]) + '</p></div>' +
+    '<div class="card prevbox"><span class="eb">Así se verá tu servicio</span><div class="prev" style="margin-top:10px"><span class="nm">' + esc(S.nombre || 'Nombre del servicio') + '</span>' +
+    '<span class="who"><span class="av">LG</span>Laura Gil · Veterinaria</span>' + (S.desc ? '<span style="font-size:13px">' + esc(S.desc) + '</span>' : '') +
+    '<div class="tags">' + tags.slice(0, 4).map(t => '<span class="tag">' + esc(t) + '</span>').join('') + '</div>' +
+    '<span class="zona">' + (S.pres && S.dist ? 'Presencial y a distancia' : S.pres ? 'Presencial' : S.dist ? 'A distancia' : 'Sin zona') + '</span>' +
+    '<span class="hint"><strong style="color:var(--fg)">Para:</strong> ' + esc(pubTxt()) + '</span>' +
+    '<span class="hint">Respuesta en ' + esc(S.plazo) + ' · <strong style="color:var(--fg)">' + esc(precioTxt()) + '</strong></span><span class="pcta">Solicitar</span></div></div>' + casos();
+}
+// ---------- Mis servicios ----------
+function vistaLista() {
+  return '<div style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap"><div style="flex:1"><span class="eb">Mi espacio · experta</span><h1>Mis servicios</h1><p class="sub">Lo que ofreces a las explotaciones. Cada comprador ve solo lo que puede contratar por especie, público y zona.</p></div><button type="button" class="btnp" data-act="nuevo">+ Nuevo servicio</button></div>' +
+    (LISTA.filter(x => !x.archivado).length ? '<div class="list">' + LISTA.filter(x => !x.archivado).map(x => '<div class="srow"><span><span class="t">' + esc(x.nombre || 'Sin nombre') + '</span> <span class="st ' + (x.estado === 'Publicado' ? 'ok' : x.estado === 'Pausado' ? 'w' : 'g') + '">' + esc(x.estado) + '</span><br><span class="hint">' + esc((x.tipo === 'otro' ? 'Otro' : nombreTipo(x.tipo)) + ' · ' + (Object.keys(x.esp).join(', ') || 'todas las especies')) + '</span></span>' +
+      '<span style="display:flex;gap:8px"><button type="button" class="btn" data-act="editar|' + x.id + '">Editar</button><button type="button" class="ico" aria-label="Más acciones" data-act="menu|' + x.id + '">⋯</button></span>' +
+      (UI.menu === x.id ? '<div class="menu"><button type="button" data-act="duplicar|' + x.id + '">Duplicar<small>Un borrador igual, por ejemplo para otra especie</small></button><button type="button" data-act="pausar|' + x.id + '">' + (x.estado === 'Pausado' ? 'Reanudar<small>Vuelve a salir en las búsquedas</small>' : 'Pausar<small>No entran solicitudes nuevas; las conversaciones siguen</small>') + '</button><button type="button" data-act="archivar|' + x.id + '">Archivar<small>Lo quita de tu lista; se puede recuperar</small></button></div>' : '') + '</div>').join('') + '</div>'
+      : '<div class="note"><span><strong>Aún no tienes servicios.</strong> Crea el primero: en 2 minutos estás en las búsquedas de quienes lo necesitan.</span></div>') +
+    (LISTA.some(x => x.archivado) ? '<span class="hint">' + LISTA.filter(x => x.archivado).length + ' archivado(s) · <button type="button" class="link" data-act="recuperar">Recuperar</button></span>' : '');
+}
+// ---------- render ----------
+function render() {
+  document.getElementById('crumb').innerHTML = 'Mi espacio › Mis servicios' + (UI.vista === 'asistente' ? ' › <strong>' + esc(S.nombre || 'Nuevo servicio') + '</strong>' : '');
+  if (UI.vista === 'lista') { document.getElementById('main').innerHTML = vistaLista(); document.getElementById('side').innerHTML = '<div class="card"><strong style="font-size:15px">Tus servicios</strong><p class="hint" style="margin:6px 0 0;font-size:13px">Publicado: lo ven los compradores. Pausado: no entran solicitudes nuevas. Borrador: lo terminas cuando quieras.</p></div>'; return; }
+  const i = PASOS.findIndex(p => p[0] === S.paso), p = PASOS[i], fin = S.paso === 'revision';
+  document.getElementById('main').innerHTML =
+    '<div class="steps" style="--n:' + PASOS.length + '">' + PASOS.map((x, j) => '<span class="' + (j <= i ? 'on' : '') + '"></span>').join('') + '</div>' +
+    (UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión. Al guardar vuelves a ella.</span></div>' : '') +
+    '<div><span class="eb">Paso ' + (i + 1) + ' de ' + PASOS.length + ' · ' + esc(p[1]) + '</span><h1>' + esc(p[2]) + '</h1><p class="sub">' + esc(p[3]) + '</p></div>' + V[S.paso]() +
+    '<div class="nav">' + (i > 0 && !UI.desdeRev ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
+    (fin ? '<button type="button" class="btn" data-act="borrador">Guardar como borrador</button><button type="button" class="btnp" data-act="publicar"' + (!S.nombre.trim() || !S.tipo || (!S.pres && !S.dist) ? ' disabled' : '') + '>Publicar servicio</button>'
+      : UI.desdeRev ? '<button type="button" class="btnp" data-act="ir|revision">Guardar y volver a la revisión</button>'
+      : '<button type="button" class="btnp" data-act="seguir"' + (S.paso === 'tipo' && !S.tipo ? ' disabled' : '') + '>Continuar</button>') + '</div>';
+  lado();
+}
+function ir(p) { S.paso = p; if (p === 'revision') UI.desdeRev = false; render(); scrollTo({ top: 0 }); }
+function alLista(estado) { if (!S.id) S.id = 's' + Date.now(); S.estado = estado; const i = LISTA.findIndex(x => x.id === S.id); if (i > -1) LISTA[i] = JSON.parse(JSON.stringify(S)); else LISTA.unshift(JSON.parse(JSON.stringify(S))); guardaLista(); }
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-act]'); if (!b) { if (UI.menu) { UI.menu = null; render(); } return; }
+  const [act, x, y] = b.getAttribute('data-act').split('|'), i = PASOS.findIndex(p => p[0] === S.paso);
+  switch (act) {
+    case 'ir': ir(x); return;
+    case 'seguir': ir(PASOS[i + 1][0]); return;
+    case 'atras': ir(PASOS[i - 1][0]); return;
+    case 'desderev': UI.desdeRev = true; ir(x); return;
+    case 'tipo': S.tipo = x; S.tec = {}; break;
+    case 'esptodas': S.esp = {}; break;
+    case 'esp': if (S.esp[x]) delete S.esp[x]; else S.esp[x] = []; break;
+    case 'prod': toggle(S.esp[x], y); break;
+    case 'rama': { const on = S.ramas.some(r => r === x || r.indexOf(x + ' › ') === 0); S.ramas = S.ramas.filter(r => r !== x && r.indexOf(x + ' › ') !== 0); if (!on) S.ramas.push(x); break; }
+    case 'subrama': { S.ramas = S.ramas.filter(r => r !== x); toggle(S.ramas, x + ' › ' + y); if (!S.ramas.some(r => r.indexOf(x + ' › ') === 0)) S.ramas.push(x); break; }
+    case 'cargo': toggle(S.cargos, x); break;
+    case 'pza': if (S.presZ.indexOf(x) < 0) S.presZ.push(x); UI.zq = ''; break;
+    case 'pzq': S.presZ = S.presZ.filter(z => z !== x); break;
+    case 'dza': if (S.distZ.indexOf(x) < 0) S.distZ.push(x); UI.zq = ''; break;
+    case 'dzq': S.distZ = S.distZ.filter(z => z !== x); break;
+    case 'idio': toggle(S.idiomas, x); break;
+    case 'pub': toggle(S.publica, x); break;
+    case 'tenum': S.tec[x] = S.tec[x] === y ? '' : y; break;
+    case 'tmulti': if (!Array.isArray(S.tec[x])) S.tec[x] = []; toggle(S.tec[x], y); break;
+    case 'plazo': S.plazo = x; break;
+    case 'precio': S.precio = x; break;
+    case 'borrador': alLista('Borrador'); UI.vista = 'lista'; toast('Guardado como borrador.'); break;
+    case 'publicar': alLista('Publicado'); UI.vista = 'lista'; toast('Publicado. Ya sale en las búsquedas que encajan.'); break;
+    case 'salir': if (S.nombre || S.tipo) alLista(S.estado === 'Publicado' ? 'Publicado' : 'Borrador'); UI.vista = 'lista'; break;
+    case 'nuevo': S = nuevo(); UI.vista = 'asistente'; UI.desdeRev = false; break;
+    case 'editar': { S = JSON.parse(JSON.stringify(LISTA.find(z => z.id === x))); S.paso = 'revision'; UI.vista = 'asistente'; UI.menu = null; break; }
+    case 'menu': UI.menu = UI.menu === x ? null : x; break;
+    case 'duplicar': { const c = JSON.parse(JSON.stringify(LISTA.find(z => z.id === x))); c.id = 's' + Date.now(); c.nombre += ' (copia)'; c.estado = 'Borrador'; LISTA.unshift(c); guardaLista(); UI.menu = null; toast('Borrador creado: «' + c.nombre + '».'); break; }
+    case 'pausar': { const c = LISTA.find(z => z.id === x); c.estado = c.estado === 'Pausado' ? 'Publicado' : 'Pausado'; guardaLista(); UI.menu = null; toast(c.estado === 'Pausado' ? 'Pausado: no entran solicitudes nuevas.' : 'Reanudado.'); break; }
+    case 'archivar': { const c = LISTA.find(z => z.id === x); c.archivado = true; guardaLista(); UI.menu = null; toast('Archivado.'); break; }
+    case 'recuperar': LISTA.forEach(z => z.archivado = false); guardaLista(); break;
+  }
+  render();
+});
+document.addEventListener('input', ev => {
+  const el = ev.target, d = el.dataset;
+  if (d.f) { S[d.f] = el.value; if (d.f === 'desc') { const h = el.closest('.field').querySelector('.hint'); if (h) h.textContent = '· ' + el.value.length + ' / 300 · qué incluye y cómo trabajas'; } lado(); document.getElementById('crumb').innerHTML = 'Mi espacio › Mis servicios › <strong>' + esc(S.nombre || 'Nuevo servicio') + '</strong>'; return; }
+  if (d.t) { S.tec[d.t] = el.value; return; }
+  if (d.zq) { UI.zq = el.value; UI.zqAct = d.zq; const pos = el.selectionStart; render(); const n = document.querySelector('[data-zq="' + d.zq + '"]'); if (n) { n.focus(); n.setSelectionRange(pos, pos); } }
+});
+document.addEventListener('change', ev => { const d = ev.target.dataset; if (d.sw) { S[d.sw] = ev.target.checked; render(); } });
+if (/[?&]captura/.test(location.search)) window.__t = code => eval(code);
+render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+const wait=ms=>new Promise(r=>setTimeout(r,ms)); await wait(400);
+const q=s=>{const e=document.querySelector(s); if(!e) throw new Error('no '+s); return e;};
+const click=a=>q(`[data-act="${a}"]`).click();
+const type=(sel,val)=>{const e=q(sel); e.value=val; e.dispatchEvent(new Event('input',{bubbles:true}));};
+const css=document.querySelector('style').textContent;
+async function snap(name,title){ await wait(150); document.querySelectorAll('.toast').forEach(t=>t.remove()); scrollTo(0,0);
+  const h=Math.max(900, Math.ceil(document.documentElement.scrollHeight/10)*10);
+  const body=document.querySelector('header.top').outerHTML+document.querySelector('.wrap').outerHTML;
+  await fetch('/save?name='+name,{method:'POST',body:JSON.stringify({title,h,css,body})}); return name+':'+h; }
+const out=[];
+localStorage.removeItem('agroolink-servicios-experto-v1'); window.__t("S = nuevo(); LISTA = []; UI.vista = 'asistente'; render()");
+click('tipo|C11-01'); out.push(await snap('V1','Tipo'));
+click('seguir'); click('esp|Avicultura'); click('prod|Avicultura|Pollos de engorde'); click('prod|Avicultura|Gallinas ponedoras'); out.push(await snap('V2','Especies'));
+click('seguir'); click('rama|Granja'); click('subrama|Granja|Industrial'); click('rama|Integradora Cooperativa'); click('cargo|Granjero'); click('cargo|Director Técnico'); out.push(await snap('V3','Dirigido a'));
+click('seguir'); type('[data-zq="pz"]','Catal'); click('pza|España › Cataluña'); type('[data-zq="pz"]','Arag'); click('pza|España › Aragón');
+const c=q('[data-sw="dist"]'); c.checked=true; c.dispatchEvent(new Event('change',{bubbles:true})); type('[data-zq="dz"]','Espa'); click('dza|España'); type('[data-zq="dz"]','Portu'); click('dza|Portugal'); click('idio|Portugués'); out.push(await snap('V4','Dónde'));
+click('seguir'); type('[data-f="nombre"]','Auditoría nutricional de lotes de broilers'); type('[data-f="desc"]','Visita a granja, revisión de pienso y consumos, e informe con recomendaciones por fase.'); type('[data-t="entregables"]','Informe con recomendaciones por fase'); out.push(await snap('V5','Detalles'));
+click('seguir'); click('plazo|48 horas'); out.push(await snap('V6','Plazo y precio'));
+click('seguir'); out.push(await snap('V7','Revisión'));
+click('publicar'); window.__t("const c = JSON.parse(JSON.stringify(LISTA[0])); c.id='s2'; c.nombre='Diagnóstico de coccidiosis en granja'; c.estado='Pausado'; LISTA.push(c); UI.menu = LISTA[0].id; render()"); out.push(await snap('V8','Mis servicios'));
+window.__t("localStorage.removeItem('agroolink-servicios-experto-v1'); S = nuevo(); LISTA = []; UI.vista='asistente'; UI.menu=null; render()");
+return out.join(' ');
