@@ -23,7 +23,7 @@ body{margin:0}
   <div style="display: flex; align-items: center; gap: 14px; padding: 2px 2px 14px;">
     <span style="width: 52px; height: 52px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ iniciales }}</span>
     <span style="display: flex; flex-direction: column; flex: 1; min-width: 0;"><span style="font-size: 17px; font-weight: 600;">Hola, {{ persona }}</span><span style="font-size: 12.5px; color: #56615B;">{{ email }}</span></span>
-    <a href="#" style="height: 34px; padding: 0 12px; border-radius: 9px; border: 1px solid #0E5A3A; color: #0E5A3A; font-size: 12.5px; font-weight: 500; text-decoration: none; display: flex; align-items: center; white-space: nowrap;">{{ irA }}</a>
+    <a href="#" style="height: 34px; padding: 0 12px; border-radius: 9px; border: 1px solid {{ acento }}; color: {{ acento }}; font-size: 12.5px; font-weight: 500; text-decoration: none; display: flex; align-items: center; white-space: nowrap;">{{ irA }}</a>
   </div>
 
   <div style="border: 1px solid #E3E8E4; border-radius: 14px; padding: 4px 12px;">
@@ -54,10 +54,10 @@ body{margin:0}
     </div>
   </sc-for>
 
-  <div style="display: flex; align-items: center; gap: 10px; padding: 12px 10px; margin-top: 8px; border-radius: 12px; background: #F2F7F3;">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 12px 10px; margin-top: 8px; border-radius: 12px; background: {{ planFondo }};">
     <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5z" fill="#F2B530" stroke="#D99A12" stroke-width="1" stroke-linejoin="round"></path></svg>
     <span style="flex: 1; font-size: 13px;">{{ planEtiqueta }}: <strong>{{ plan }}</strong></span>
-    <a href="#" style="font-size: 12.5px; font-weight: 500; color: #0E5A3A; text-decoration: none;">{{ planBoton }} →</a>
+    <a href="#" style="font-size: 12.5px; font-weight: 500; color: {{ acento }}; text-decoration: none;">{{ planBoton }} →</a>
   </div>
 
   <a href="#" class="ni" style="margin-top: 6px; color: #56615B;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#56615B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"></path></svg>Cerrar sesión</a>
@@ -87,37 +87,52 @@ class Component extends DCLogic {
       dash: 'M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z',
       inbox: 'M4 13h4l2 3h4l2-3h4M5 5h14l2 8v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z',
       layers: 'm12 3 9 5-9 5-9-5zM3 13l9 5 9-5',
-      pkg: 'M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8'
+      pkg: 'M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8',
+      card: 'M3 6h18v12H3zM3 10h18M7 15h4',
+      target: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zM12 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2z',
+      bldg: 'M5 3h14v18H5zM9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2',
+      chart: 'M4 19V9M10 19V5M16 19v-7M22 19H2',
+      users: 'M9 4.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a7 7 0 0 1 4 6',
+      grad: 'M22 9 12 4 2 9l10 5zM6 11v5c3 2 9 2 12 0v-5'
     };
     const it = (label, d, extra) => Object.assign({ label: label, d: d, badge: '', meta: '', badgeFondo: '#E5484D', badgeTinta: '#FFFFFF', trazo: '#4A5650' }, extra || {});
     const yo = { ini: ini, radio: '50%', fondo: color, tinta: '#FFFFFF' };
     const crearExp = { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', sub: 'Ofrece tus servicios profesionales', accion: '+' };
-    const crearEmp = { ini: '+', radio: '10px', fondo: '#EEF6EE', tinta: '#0E5A3A', titulo: 'Crear o vincular empresa', chip: 'Gratis', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', sub: 'Publica productos y conecta con clientes', accion: '+' };
+    const crearEmp = { ini: '+', radio: '10px', fondo: '#E9F0F9', tinta: '#1D4E89', titulo: 'Crear o vincular empresa', chip: 'Gratis', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', sub: 'Publica productos y conecta con clientes', accion: '+' };
     const activo = { chip: 'Activo', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', accion: '✓' };
-    const ae = { ini: 'AE', radio: '10px', fondo: '#1F3A5F', tinta: '#FFFFFF', titulo: 'AgroExport SRL' };
+    const ae = { ini: 'AE', radio: '10px', fondo: '#1D4E89', tinta: '#FFFFFF', titulo: 'AgroExport SRL' };
 
-    const miEspacio = (corto) => ({ titulo: 'MI ESPACIO', chip: '', items: (corto
-      ? [it('Mi espacio', I.home), it('Mis tableros', I.grid, { meta: '3' }), it('Mis proyectos', I.file), it('Mensajes', I.msg, { badge: '3' })]
-      : [it('Mi espacio', I.home), it('Mis proyectos', I.file), it('Mis tableros', I.grid, { meta: '3' }), it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })]) });
-    const miCuenta = { titulo: 'MI CUENTA', chip: '', items: [it('Mi perfil', I.user), it('Configuración', I.gear), it('Idioma y zona', I.globe, { meta: 'Español · ES' }), it('Ayuda y contacto', I.help)] };
+    // Mismas secciones y textos que el menú lateral (IntSidebar) de cada modo.
+    const nuevo = { badge: 'Nuevo', badgeFondo: '#B5D334', badgeTinta: '#17231D' };
+    const miEspacio = (modo) => ({ titulo: 'MI ESPACIO', chip: '', items: (modo === 'experto'
+      ? [it('Mi espacio', I.home), it('Mis tableros', I.grid), it('Mensajes', I.msg, { badge: '3' })]
+      : (modo === 'corto'
+        ? [it('Mi espacio', I.home), it('Mis proyectos', I.file, nuevo), it('Mis tableros', I.grid), it('Mensajes', I.msg, { badge: '3' })]
+        : [it('Mi espacio', I.home), it('Mis proyectos', I.file, nuevo), it('Mis tableros', I.grid), it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })])) });
+    const miCuenta = { titulo: 'MI CUENTA', chip: 'Global', chipFondo: '#EEF0F3', chipTinta: '#4A5560', items: [it('Mi perfil', I.user), it('Facturación', I.card), it('Idioma y zona', I.globe, { meta: 'Español · ES' }), it('Ayuda y contacto', I.help)] };
+    const L = { trazo: '#4B3BA6' };
     const comoExperto = { titulo: 'COMO EXPERTO', chip: 'Público', chipFondo: '#F1EEFB', chipTinta: '#4B3BA6', items: [
-      it('Panel de experto', I.dash, { trazo: '#4B3BA6' }), it('Consultas recibidas', I.inbox, { trazo: '#4B3BA6', badge: '1', badgeFondo: '#4B3BA6' }), it('Mis servicios', I.layers, { trazo: '#4B3BA6', meta: '1 de 2' })] };
-    const empresa = { titulo: 'AGROEXPORT SRL', chip: 'Empresa', chipFondo: '#EEF6EE', chipTinta: '#0E5A3A', items: [
-      it('Panel', I.dash), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Productos', I.pkg, { meta: '1 de 15' }), it('Mensajes', I.msg)] };
+      it('Panel de experto', I.dash, L), it('Oportunidades', I.target, Object.assign({ badge: '3', badgeFondo: '#4B3BA6' }, L)), it('Consultas recibidas', I.inbox, Object.assign({ badge: '1', badgeFondo: '#4B3BA6' }, L)),
+      it('Mis servicios', I.layers, Object.assign({ meta: '1 de 2' }, L)), it('Perfil de experto', I.grad, L)] };
+    const A = { trazo: '#1D4E89' };
+    const lima = { badgeFondo: '#B5D334', badgeTinta: '#17231D' };
+    const empresa = { titulo: 'AGROEXPORT SRL', chip: 'Empresa', chipFondo: '#E9F0F9', chipTinta: '#1D4E89', items: [
+      it('Panel', I.dash, A), it('Oportunidades', I.target, Object.assign({ badge: '6' }, lima, A)), it('Solicitudes', I.inbox, Object.assign({ badge: '4' }, lima, A)), it('Mensajes', I.msg, A),
+      it('Productos', I.pkg, Object.assign({ meta: '1 de 15' }, A)), it('Perfil de empresa', I.bldg, A), it('Estadísticas', I.chart, A), it('Equipo', I.users, Object.assign({ meta: '1 de 2' }, A))] };
 
     const base = { persona: this.props.persona ?? 'Santiago E.', iniciales: ini, color: color, email: 'santiago@correo.com', irA: 'Ir a Mi espacio',
-      planEtiqueta: 'Plan actual', plan: 'Gratis', planBoton: 'Cambiar de plan' };
+      planEtiqueta: 'Plan actual', plan: 'Gratis', planBoton: 'Cambiar de plan', acento: '#0E5A3A', planFondo: '#F2F7F3' };
     const V = {
       personal: { espacios: [Object.assign({}, yo, activo, { titulo: 'Personal', sub: 'Buscar, comparar y gestionar proyectos' }), crearExp, crearEmp],
-        secciones: [miEspacio(false), miCuenta] },
+        secciones: [miEspacio('completo'), miCuenta] },
       experto: { espacios: [Object.assign({}, yo, activo, { titulo: 'Personal', sub: 'Incluye tu perfil de experto (público)' }), crearEmp],
-        secciones: [miEspacio(true), comoExperto, miCuenta], plan: 'Experto Gratis' },
+        secciones: [miEspacio('experto'), comoExperto, miCuenta], plan: 'Experto Gratis', acento: '#4B3BA6', planFondo: '#F6F4FC' },
       conEmpresa: { espacios: [Object.assign({}, yo, activo, { titulo: 'Personal', sub: 'Buscar, comparar y gestionar proyectos' }),
           Object.assign({}, ae, { chip: '4 nuevas', chipFondo: '#B5D334', chipTinta: '#17231D', sub: 'Empresa · Administrador', accion: '→' }), crearExp],
-        secciones: [miEspacio(true), miCuenta] },
+        secciones: [miEspacio('corto'), miCuenta] },
       empresa: { espacios: [Object.assign({}, ae, activo, { sub: 'Empresa · Administrador' }),
           Object.assign({}, yo, { titulo: 'Personal', chip: '', sub: 'Volver a tu cuenta personal', accion: '→' }), crearExp],
-        secciones: [empresa, miCuenta], irA: 'Ir al panel', planEtiqueta: 'Plan de empresa', planBoton: 'Ver planes' }
+        secciones: [empresa, miCuenta], irA: 'Ir al panel', planEtiqueta: 'Plan de empresa', planBoton: 'Ver planes de empresa', acento: '#1D4E89', planFondo: '#F1F5FB' }
     };
     return Object.assign({}, base, V[v] || V.personal);
   }
