@@ -176,6 +176,10 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .ico{width:30px;height:30px;border:0;background:none;border-radius:8px;cursor:pointer;color:var(--muted);font-size:15px}
 .ico:hover{background:var(--soft)}
 .mbody{border:1px solid var(--soft2);border-top:0;border-radius:0 0 12px 12px;padding:12px 14px;margin-top:-8px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.chip.na{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.fam.na{opacity:.45;cursor:not-allowed}
+.aplcard{border:1.5px solid var(--soft2);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.aplh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -190,10 +194,11 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
   <label class="demo" for="demoSel">Ejemplo
     <select id="demoSel">
       <option value="">Elegir…</option>
-      <option value="vitamina">Hy-D® · vitamina (DSM-Firmenich)</option>
-      <option value="ventilador">Ventilador de túnel (Big Dutchman)</option>
-      <option value="vacuna">Vacuna Newcastle (sanidad)</option>
-      <option value="laboratorio">Análisis de micotoxinas (servicio)</option>
+      <option value="probiotico">Probiótico · lechones y pollos de engorde</option>
+      <option value="ordeno">Sistema de ordeño · vacuno de leche</option>
+      <option value="vacuna">Vacuna · gallinas ponedoras</option>
+      <option value="pienso">Pienso completo · gallinas ponedoras</option>
+      <option value="molino">Molino · sin especie</option>
       <option value="cero">Empezar de cero</option>
     </select>
   </label>
@@ -209,7 +214,7 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 <script>
 (function(){
 const M = JSON.parse(document.getElementById('modelo').textContent);
-const KEY = 'agroolink-alta-producto-v3';
+const KEY = 'agroolink-alta-producto-v4';
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const num = s => { const n = parseFloat(String(s).replace(/\s/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.')); return isNaN(n) ? null : n; };
 
@@ -218,9 +223,9 @@ const NOD = {}, HOJAS = [];
 M.categorias.forEach(f => {
   NOD[f.id] = { id: f.id, label: f.label };
   f.grupos.forEach(g => {
-    NOD[g.id] = { id: g.id, label: g.label };
+    NOD[g.id] = { id: g.id, label: g.label, corto: g.corto };
     if (!g.tipos || !g.tipos.length) HOJAS.push(g.id);
-    (g.tipos || []).forEach(t => { NOD[t.id] = { id: t.id, label: t.label }; HOJAS.push(t.id); });
+    (g.tipos || []).forEach(t => { NOD[t.id] = { id: t.id, label: t.label, corto: t.corto }; HOJAS.push(t.id); });
     if (g.tipos && g.tipos.length) NOD[g.id + '-OTRO'] = { id: g.id + '-OTRO', label: 'Otro' };
   });
   NOD[f.id + '-OTRO'] = { id: f.id + '-OTRO', label: 'Otro' };
@@ -246,42 +251,68 @@ const enfObl = () => regla('enfermedad_obligatoria');
 const enfVis = () => enfObl() || regla('enfermedad_opcional');
 const conRegistro = () => regla('registro_por_pais');
 
+const cortoCat = id => NOD[id] ? (NOD[id].corto || NOD[id].label) : '';
+const esTransversal = id => !!id && M.transversales.some(p => id === p || id.indexOf(p + '-') === 0);
+const conAplicacion = id => !!id && M.aplicacion_familias.indexOf(id.slice(0, 3)) > -1;
+function selSegs(sp) {
+  const v = S.especies[sp], e = M.especies.find(x => x.label === sp); if (!v || !e) return [];
+  const all = e.producciones.map(p => p.label);
+  if (v.modo === 'todas') return all;
+  if (v.modo === 'excluir') return all.filter(p => v.sel.indexOf(p) < 0);
+  return all.filter(p => v.sel.some(x => x === p || x.indexOf(p + ' › ') === 0));
+}
+function pertinente(id) {
+  let req = null; for (const k of up(id)) if (M.pertinencia[k]) { req = M.pertinencia[k]; break; }
+  if (!req) return true;
+  if (!Object.keys(S.especies).length && !S.sinEspecie) return true;
+  return req.some(r => { const [sp, seg] = r.split(' › '); return !!S.especies[sp] && (!seg || selSegs(sp).indexOf(seg) > -1); });
+}
+function visibleAttr(a) {
+  const w = a.visible_when; if (!w) return true;
+  if (w.especies) return w.especies.some(sp => S.especies[sp]);
+  if (w.segmentos) return Object.keys(S.especies).some(sp => selSegs(sp).some(x => w.segmentos.indexOf(x) > -1));
+  return true;
+}
+const attrsTec = t => t ? t.atributos.filter(a => !(a.por_especie && conAplicacion(S.cat)) && visibleAttr(a)) : [];
+const attrsApl = t => t && conAplicacion(S.cat) ? t.atributos.filter(a => a.por_especie) : [];
+function ocultos() {   // datos guardados que ya no aplican: se conservan pero no se publican
+  const vis = attrsTec(tpl(S.cat)).concat(attrsApl(tpl(S.cat))).map(a => a.id);
+  return Object.keys(S.tec).filter(k => lleno(S.tec[k]) && vis.indexOf(k) < 0);
+}
+function destinos() {   // una tarjeta de aplicación por especie o por segmento elegido
+  const out = [];
+  Object.keys(S.especies).forEach(sp => {
+    const v = S.especies[sp];
+    if (sp === 'Otra especie') { out.push({ key: sp, sp: sp, seg: null, label: 'Otra especie: ' + ((v.texto || '').trim() || '…') }); return; }
+    if (v.modo === 'solo' && v.sel.length) {
+      const segs = []; v.sel.forEach(x => { const sg = x.split(' › ')[0]; if (segs.indexOf(sg) < 0) segs.push(sg); });
+      segs.forEach(sg => out.push({ key: sp + ' › ' + sg, sp: sp, seg: sg, label: sp + ' › ' + sg }));
+    } else out.push({ key: sp, sp: sp, seg: null, label: sp + (v.modo === 'excluir' && v.sel.length ? ' (excepto ' + v.sel.map(x => x.split(' › ').pop()).join(', ') + ')' : ' · todas las producciones') });
+  });
+  return out;
+}
 // ---------- estado ----------
 function nuevo() {
   return { paso: 'especies', cat: null, especies: {}, mercados: { entradas: [] }, registros: {},
-    ident: { nombre: '', marca: '', fabricante: 'Tu empresa', sku: '', corta: '', larga: '', objetivos: [], idiomas: ['Español'] },
-    tec: {}, propios: [], enf: [], enfOtra: '', catOtro: '', variantes: [{}], docs: {}, imgs: 0, estado: 'Borrador', visto: {}, guardado: null };
+    ident: { nombre: '', marca: '', fabricante: 'Tu empresa', sku: '', web: '', corta: '', larga: '', objetivos: [], idiomas: ['Español'] },
+    tec: {}, apl: {}, sinEspecie: false, propios: [], enf: [], enfOtra: '', catOtro: '', variantes: [{}], docs: {}, imgs: 0, estado: 'Borrador', visto: {}, guardado: null };
 }
 const UI = { fam: null, q: '', paisq: '', enfq: '', pend: null, intento: {}, foco: null };
 let S = null;
 try { S = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { S = null; }
 const enfId = n => { const e = M.enfermedades.find(x => x.nombre === n); return e ? e.id : null; };
+// Ejemplos de prueba del documento del árbol condicional. Sin datos inventados: solo las selecciones y un nombre de ejemplo.
+const ej = (o) => { const n = nuevo(); const id = Object.assign(n.ident, o.ident || {}); Object.assign(n, o); n.ident = id; return n; };
 const DEMOS = {
-  vitamina: () => Object.assign(nuevo(), { paso: 'especies', cat: 'C06-03-02', especies: { Avicultura: { modo: 'excluir', sel: ['Perdices', 'Aves ornamentales'] }, Porcino: { modo: 'todas', sel: [] } },
-    mercados: { entradas: [{ id: 'Europa', modo: 'excluir', sel: ['Rusia'] }, { id: 'México', modo: 'toda', sel: [] }], abierta: 'Europa' }, registros: { 'España': { n: 'ES-AD-0000 (ejemplo)', e: 'Registrado' }, 'Portugal': { n: 'PT-AD-0000 (ejemplo)', e: 'Registrado' }, 'México': { n: '', e: 'En trámite' } },
-    ident: { nombre: 'Hy-D®', marca: 'Hy-D', fabricante: 'DSM-Firmenich', sku: 'HYD-25', corta: 'Fuente de 25-OH-D3 que se absorbe mejor que la vitamina D3 convencional. Refuerza el hueso, la cáscara y el rendimiento en aves y porcino.', larga: '', objetivos: ['Rendimiento', 'Bienestar animal'], idiomas: ['Español', 'Inglés', 'Portugués'] },
-    tec: { vitamina: '25-OH-D3', concentracion: { v: '12500', u: 'mg/kg' }, estabilidad: 'Estable en granulación (ejemplo)', dosis: { v: '200', u: 'g/t' } },
-    variantes: [{ c0: 'Saco', c1: '25 kg', c2: '40' }, { c0: 'Big bag', c1: '500 kg', c2: '2' }], docs: { ficha_tecnica: { n: 'HyD_ficha_tecnica_ES.pdf', i: 'Español', v: 'Público' }, sds: { n: 'HyD_SDS_ES.pdf', i: 'Español', v: 'Usuarios registrados' } }, imgs: 2,
-    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
-  ventilador: () => Object.assign(nuevo(), { paso: 'tecnicos', cat: 'C02-03-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Reproductoras'] }, Porcino: { modo: 'solo', sel: ['Cebo / Engorde'] } },
-    mercados: { entradas: [{ id: 'Todo el mundo', modo: 'excluir', sel: ['Asia-Pacífico', 'África', 'Rusia', 'Irán'] }], abierta: 'Todo el mundo' },
-    ident: { nombre: 'Ventilador de túnel 50"', marca: 'Big Dutchman', fabricante: 'Big Dutchman', sku: 'BD-VT50', corta: 'Ventilador de alto caudal para ventilación de túnel en naves de broilers y cerdos, con persiana automática.', larga: '', objetivos: ['Bienestar animal', 'Eficiencia operativa'], idiomas: ['Español', 'Inglés', 'Alemán'] },
-    tec: { caudal_aire: { v: '38000', u: 'm³/h' }, potencia: { v: '1,1', u: 'kW' }, consumo: { v: '0,9', u: 'kWh' }, temperatura: { min: '-10', max: '45' }, ruido: { v: '68', u: 'dB' } },
-    variantes: [{ c0: '50" · 1,1 kW', c1: '38.000 m³/h', c2: 'Con persiana' }, { c0: '54" · 1,5 kW', c1: '44.000 m³/h', c2: 'Con persiana' }], docs: { manual: { n: 'Manual_VT50_ES.pdf', i: 'Español', v: 'Público' } }, imgs: 1,
-    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1 } }),
-  vacuna: () => Object.assign(nuevo(), { paso: 'enfermedad', cat: 'C08-01', especies: { Avicultura: { modo: 'solo', sel: ['Pollos de engorde', 'Gallinas ponedoras', 'Reproductoras'] } },
-    mercados: { entradas: [{ id: 'España', modo: 'toda', sel: [] }, { id: 'Portugal', modo: 'toda', sel: [] }] }, registros: { 'España': { n: '0000 ESP (ejemplo)', e: 'Registrado' }, 'Portugal': { n: '', e: 'En trámite' } },
-    ident: { nombre: 'AviVac ND (ejemplo)', marca: 'AviVac', fabricante: 'Laboratorio de ejemplo', sku: 'AVND-1000', corta: 'Vacuna viva frente a la enfermedad de Newcastle para pollitos de un día y refuerzos.', larga: '', objetivos: ['Reducción antibióticos'], idiomas: ['Español', 'Portugués'] },
-    tec: { antigenos: 'Virus de la enfermedad de Newcastle', cepa: 'La Sota', tecnologia: 'Viva atenuada', edad: 'Día 1 · refuerzo día 21', dosis: '1 dosis por ave', via: ['Spray', 'Agua de bebida', 'Ocular'], conservacion_temp: { min: '2', max: '8' } },
-    enf: [enfId('Newcastle')].filter(Boolean), variantes: [{ c0: 'Vial', c1: '1.000 dosis', c2: '' }, { c0: 'Vial', c1: '2.500 dosis', c2: '' }], imgs: 1,
-    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1, tecnicos: 1 } }),
-  laboratorio: () => Object.assign(nuevo(), { paso: 'revision', cat: 'C11-03-01', especies: { Avicultura: { modo: 'todas', sel: [] }, Porcino: { modo: 'todas', sel: [] }, Bovino: { modo: 'todas', sel: [] } }, mercados: { entradas: [{ id: 'España', modo: 'toda', sel: [] }, { id: 'Portugal', modo: 'toda', sel: [] }, { id: 'Francia', modo: 'toda', sel: [] }] },
-    ident: { nombre: 'Análisis de micotoxinas en pienso', marca: '', fabricante: 'DSM-Firmenich', sku: 'LAB-MYC', corta: 'Analizamos pienso y materias primas frente a las principales micotoxinas y te enviamos el informe con recomendaciones.', larga: '', objetivos: ['Seguridad alimentaria', 'Salud intestinal'], idiomas: ['Español', 'Inglés'] },
-    tec: { tipo_analisis: 'Micotoxinas (multitoxina)', matriz: ['Pienso', 'Materias primas'], metodo: 'LC-MS/MS', acreditacion: true, plazo: { v: '5', u: 'días' } }, imgs: 1,
-    docs: { ficha_tecnica: { n: 'Analisis_micotoxinas.pdf', i: 'Español', v: 'Público' } },
-    visto: { especies: 1, categoria: 1, mercados: 1, identidad: 1, tecnicos: 1, documentos: 1 } })
+  probiotico: () => ej({ paso: 'aplicaciones', cat: 'C06-01-01', especies: { Porcino: { modo: 'solo', sel: ['Lechones'] }, Avicultura: { modo: 'solo', sel: ['Pollos de engorde'] } }, ident: { nombre: 'Probiótico (ejemplo)' }, visto: { especies: 1, categoria: 1 } }),
+  ordeno: () => ej({ paso: 'tecnicos', cat: 'C02-05-01', especies: { Bovino: { modo: 'solo', sel: ['Vacuno de leche'] } }, ident: { nombre: 'Sistema de ordeño (ejemplo)' }, visto: { especies: 1, categoria: 1 } }),
+  vacuna: () => ej({ paso: 'enfermedad', cat: 'C08-01', especies: { Avicultura: { modo: 'solo', sel: ['Gallinas ponedoras'] } }, ident: { nombre: 'Vacuna aviar (ejemplo)' }, visto: { especies: 1, categoria: 1 } }),
+  pienso: () => ej({ paso: 'tecnicos', cat: 'C10-01', especies: { Avicultura: { modo: 'solo', sel: ['Gallinas ponedoras'] } }, ident: { nombre: 'Pienso de puesta (ejemplo)' }, visto: { especies: 1, categoria: 1 } }),
+  molino: () => ej({ paso: 'tecnicos', cat: 'C03-03', sinEspecie: true, ident: { nombre: 'Molino (ejemplo)' }, visto: { especies: 1, categoria: 1 } })
 };
-if (!S) S = DEMOS.vitamina();
+if (!S) S = DEMOS.probiotico();
+if (!S.apl) S.apl = {};
+if (S.ident && S.ident.web === undefined) S.ident.web = '';
 // especies: { Avicultura: { modo: 'todas' | 'excluir' | 'solo', sel: [...] } } (los borradores antiguos guardaban una lista)
 if (!S.mercados) S.mercados = { entradas: (S.paises || []).map(p => ({ id: p, modo: 'toda', sel: [] })) };
 if (!S.mercados.entradas) { const m = S.mercados; S.mercados = { entradas: m.modo === 'solo' ? m.sel.map(x => ({ id: x, modo: 'toda', sel: [] })) : [{ id: 'Todo el mundo', modo: m.modo === 'excluir' ? 'excluir' : 'toda', sel: m.modo === 'excluir' ? m.sel : [] }] }; }
@@ -332,7 +363,7 @@ function entradaTxt(e) {
 }
 const mercTxt = () => S.mercados.entradas.length ? S.mercados.entradas.map(entradaTxt).join(' · ') : 'Sin elegir';
 // ---------- pasos ----------
-const pasos = () => M.pasos.filter(p => p.id === 'enfermedad' ? (S.cat && enfVis()) : p.id === 'variantes' ? !(S.cat && arqKey(S.cat) === 'servicio') : true);
+const pasos = () => M.pasos.filter(p => p.id === 'enfermedad' ? (S.cat && enfVis()) : p.id === 'variantes' ? !(S.cat && arqKey(S.cat) === 'servicio') : p.id === 'aplicaciones' ? (conAplicacion(S.cat) && Object.keys(S.especies).length > 0) : true);
 const pasoActual = () => pasos().find(p => p.id === S.paso) || pasos()[0];
 function ir(id) { S.visto[S.paso] = 1; S.paso = id; UI.pend = null; guardar(); render(); window.scrollTo({ top: 0 }); }
 
@@ -357,7 +388,9 @@ function faltas() {
   if (!S.cat) f.push({ p: 'categoria', t: 'Elige la categoría' });
   if (esOtro(S.cat) && !(S.catOtro || '').trim()) f.push({ p: 'categoria', t: 'Escribe qué tipo de producto es' });
   if (S.especies['Otra especie'] && !(S.especies['Otra especie'].texto || '').trim()) f.push({ p: 'especies', t: 'Escribe qué otra especie es' });
-  if (!Object.keys(S.especies).length) f.push({ p: 'especies', t: 'Elige al menos una especie' });
+  if (!Object.keys(S.especies).length && !S.sinEspecie) f.push({ p: 'especies', t: 'Elige al menos una especie' });
+  if (S.sinEspecie && S.cat && !esTransversal(S.cat)) f.push({ p: 'especies', t: 'Esta categoría necesita especies de destino' });
+  if (S.cat && !pertinente(S.cat)) f.push({ p: 'categoria', t: 'Esta categoría no aplica a las especies elegidas' });
   Object.keys(S.especies).forEach(k => { const v = S.especies[k]; if (v.modo === 'solo' && !v.sel.length) f.push({ p: 'especies', t: k + ': marca qué incluye o elige «Todas»' }); });
   if (!paisesSel().length) f.push({ p: 'mercados', t: 'Elige al menos un país o región' });
   S.mercados.entradas.forEach(e => { if (e.modo === 'solo' && !e.sel.length) f.push({ p: 'mercados', t: e.id + ': marca qué incluye o elige «Toda»' }); });
@@ -365,11 +398,16 @@ function faltas() {
   if (!S.ident.sku.trim()) f.push({ p: 'identidad', t: 'Falta la referencia' });
   if (!S.ident.corta.trim()) f.push({ p: 'identidad', t: 'Falta la descripción corta' });
   const t = tpl(S.cat);
-  if (t) t.atributos.forEach(a => {
+  attrsTec(t).forEach(a => {
     const v = S.tec[a.id];
     if (a.required && (!lleno(v) || marca(v) === 'ni')) f.push({ p: 'tecnicos', t: 'Falta «' + a.label + '»' });
     const e = errorCampo(a, v); if (e) f.push({ p: 'tecnicos', t: a.label + ': ' + e });
   });
+  if (conAplicacion(S.cat)) destinos().forEach(d => attrsApl(t).forEach(a => {
+    const v = ((S.apl[d.key] || {}).vals || {})[a.id];
+    if (a.required && !lleno(v)) f.push({ p: 'aplicaciones', t: d.label + ': falta «' + a.label + '»' });
+    const e = errorCampo(a, v); if (e) f.push({ p: 'aplicaciones', t: d.label + ' · ' + a.label + ': ' + e });
+  }));
   if (S.cat && enfObl() && !S.enf.length && !(S.enfOtra || '').trim()) f.push({ p: 'enfermedad', t: 'Una vacuna necesita al menos una enfermedad diana' });
   if (!S.imgs) f.push({ p: 'documentos', t: 'Añade al menos una imagen' });
   return f;
@@ -377,6 +415,8 @@ function faltas() {
 const faltasDe = p => faltas().filter(x => x.p === p);
 
 // ---------- piezas de formulario ----------
+const chipCat = (id, on, txt) => { const ok = pertinente(id);
+  return '<button type="button" class="chip sm' + (on ? ' on' : '') + (ok ? '' : ' na') + '" aria-pressed="' + on + '"' + (ok ? '' : ' disabled') + ' title="' + esc(ok ? (NOD[id] ? NOD[id].label : '') : 'No aplica a las especies elegidas') + '" data-act="cat|' + id + '">' + (on ? '✓ ' : '') + esc(txt || cortoCat(id)) + '</button>'; };
 const chip = (t, on, act, cls) => '<button type="button" class="chip ' + (cls || '') + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '" data-act="' + esc(act) + '">' + (on && !(cls || '').includes('soft') ? '✓ ' : '') + esc(t) + '</button>';
 const unidades = u => (u || '').split('|').map(x => x.trim()).filter(Boolean);
 function campo(a) {
@@ -412,15 +452,16 @@ V.categoria = () => {
   let h = '<div class="field"><label for="q">Busca la categoría</label><input class="inp" id="q" type="search" placeholder="Por ejemplo: enzimas, ventiladores, vacunas, silos…" value="' + esc(UI.q) + '" autocomplete="off"></div>';
   if (q) {
     const res = HOJAS.filter(id => ruta(id).join(' ').toLowerCase().indexOf(q) > -1).slice(0, 12);
-    h += res.length ? '<div class="results">' + res.map(id => '<button type="button" data-act="cat|' + id + '"><span>' + esc(NOD[id].label) + '</span><span class="p">' + esc(ruta(id).slice(0, -1).join(' › ')) + '</span></button>').join('') + '</div>'
+    h += res.length ? '<div class="results">' + res.filter(pertinente).map(id => '<button type="button" data-act="cat|' + id + '"><span>' + esc(NOD[id].label) + '</span><span class="p">' + esc(ruta(id).slice(0, -1).join(' › ')) + '</span></button>').join('') + '</div>'
       : '<div class="note">No hay ninguna categoría con «' + esc(UI.q) + '». Prueba con otra palabra o elige <button type="button" class="link" data-act="cat|C12-01">Otros productos</button> y Agroolink lo clasificará.</div>';
   } else {
     h += '<div class="fams">' + M.categorias.map(f => { const n = HOJAS.filter(x => x.indexOf(f.id) === 0).length;
+      if (!pertinente(f.id)) return '<button type="button" class="fam na" disabled title="No aplica a las especies elegidas"><span class="c">no aplica a tus especies</span><span class="l">' + esc(f.label) + '</span></button>';
       return '<button type="button" class="fam' + (UI.fam === f.id || (!UI.fam && S.cat && S.cat.indexOf(f.id) === 0) ? ' on' : '') + '" data-act="fam|' + f.id + '"><span class="c">' + n + ' tipos</span><span class="l">' + esc(f.label) + '</span></button>'; }).join('') + '</div>';
     const fid = UI.fam || (S.cat && S.cat.slice(0, 3));
     const f = M.categorias.find(x => x.id === fid);
-    if (f) h += '<div class="groups">' + f.grupos.map(g => '<div class="group"><span class="gl">' + esc(g.label) + '</span><div class="chips">' +
-      ((g.tipos && g.tipos.length) ? g.tipos.map(t => chip(t.label, S.cat === t.id, 'cat|' + t.id, 'sm')).join('') + chip('Otro…', S.cat === g.id + '-OTRO', 'cat|' + g.id + '-OTRO', 'sm') : chip('Elegir «' + g.label + '»', S.cat === g.id, 'cat|' + g.id, 'sm')) + '</div></div>').join('') +
+    if (f) h += '<div class="groups">' + f.grupos.map(g => '<div class="group"><span class="gl" title="' + esc(g.label) + '">' + esc(g.corto || g.label) + '</span><div class="chips">' +
+      ((g.tipos && g.tipos.length) ? g.tipos.map(t => chipCat(t.id, S.cat === t.id)).join('') + chipCat(g.id + '-OTRO', S.cat === g.id + '-OTRO', 'Otro…') : chipCat(g.id, S.cat === g.id, 'Elegir «' + (g.corto || g.label) + '»')) + '</div></div>').join('') +
       (f.id !== 'C12' ? '<div class="group"><span class="gl">¿No está en ' + esc(f.label) + '?</span><div class="chips">' + chip('Otro tipo de ' + f.label.toLowerCase() + '…', S.cat === f.id + '-OTRO', 'cat|' + f.id + '-OTRO', 'sm') + '</div></div>' : '') + '</div>';
   }
   if (UI.pend) {
@@ -435,9 +476,11 @@ V.categoria = () => {
     if (enfObl()) tags.push('<span class="tag w">Enfermedad diana obligatoria</span>'); else if (enfVis()) tags.push('<span class="tag">Enfermedad diana opcional</span>');
     if (conRegistro()) tags.push('<span class="tag">Registro por país</span>');
     if (regla('receta')) tags.push('<span class="tag w">Puede requerir receta · revisión de Agroolink</span>');
-    h += '<div class="picked"><span class="path">' + esc(ruta(S.cat).slice(0, -1).join(' › ')) + '</span><span class="name">' + esc(esOtro(S.cat) ? 'Otro tipo de producto' : NOD[S.cat].label) + '</span>' +
+    if (conAplicacion(S.cat)) tags.push('<span class="tag">Una tarjeta de aplicación por especie</span>');
+    if (esTransversal(S.cat)) tags.push('<span class="tag">Admite «no depende de especie»</span>');
+    h += '<div class="picked"><span class="path">' + esc(ruta(S.cat).slice(0, -1).join(' › ')) + '</span><span class="name">' + esc(esOtro(S.cat) ? 'Otro tipo de producto' : NOD[S.cat].label) + '</span>' + (!pertinente(S.cat) ? '<span class="note w">No aplica a las especies elegidas. Cambia la categoría o las especies.</span>' : '') + (S.sinEspecie && !esTransversal(S.cat) ? '<span class="note w">Esta categoría necesita especies de destino: vuelve a «Especies».</span>' : '') +
       (esOtro(S.cat) ? '<div class="field"><span class="flabel"><label for="catotro">¿Qué tipo de producto es?</label><span class="req">*</span></span><input class="inp" id="catotro" data-catotro="1" value="' + esc(S.catOtro) + '" placeholder="Por ejemplo: bacteriófagos, drones para naves…"><span class="ex">Agroolink lo revisa: puede crear la categoría o moverlo a una que ya existe.' + (tplKey(S.cat) === 'otros' ? ' Mientras, te pedimos datos técnicos generales.' : ' Mientras, usa los datos técnicos del grupo.') + '</span></div>' : '') +
-      '<span class="hint">Plantilla <strong>' + esc(t.label) + '</strong> · ' + t.atributos.length + ' datos técnicos · ' + esc(a.label) + (a.variantes ? ' · variantes por ' + esc(a.variantes.eje.toLowerCase()) : ' · sin variantes') + ' · botón «' + esc(a.cta) + '»</span>' +
+      '<span class="hint">Plantilla <strong>' + esc(t.label) + '</strong> · ' + attrsTec(t).length + ' datos técnicos' + (attrsApl(t).length ? ' + ' + attrsApl(t).length + ' por especie' : '') + ' · ' + esc(a.label) + (a.variantes ? ' · variantes por ' + esc(a.variantes.eje.toLowerCase()) : ' · sin variantes') + ' · botón «' + esc(a.cta) + '»</span>' +
       (tags.length ? '<div class="tags">' + tags.join('') + '</div>' : '') + (t.nota && !esOtro(S.cat) ? '<span class="hint">' + esc(t.nota) + '</span>' : '') + '</div>';
   }
   return h;
@@ -479,7 +522,8 @@ function espTxt0(sp, v) {
 V.especies = () => {
   const sel = Object.keys(S.especies);
   if (!UI.foco || !S.especies[UI.foco]) UI.foco = sel[0] || null;
-  let h = '<div class="espgrid"><div class="esplist" role="list">' + M.especies.concat([{ label: 'Otra especie', producciones: [] }]).map(e => {
+  const sinEsp = '<div class="esprow' + (S.sinEspecie ? ' foco' : '') + '" role="listitem"><button type="button" class="ck' + (S.sinEspecie ? ' on' : '') + '" aria-pressed="' + S.sinEspecie + '" aria-label="No depende de especie" data-act="sinesp">' + (S.sinEspecie ? '✓' : '') + '</button><button type="button" class="nm" data-act="sinesp">No depende de especie<small>multiespecie · fábricas, bioseguridad, servicios…</small></button></div>';
+  let h = '<div class="espgrid"><div class="esplist" role="list">' + sinEsp + M.especies.concat([{ label: 'Otra especie', producciones: [] }]).map(e => {
     const on = !!S.especies[e.label], foco = UI.foco === e.label;
     return '<div class="esprow' + (foco ? ' foco' : '') + '" role="listitem"><button type="button" class="ck' + (on ? ' on' : '') + '" aria-pressed="' + on + '" aria-label="' + (on ? 'Quitar ' : 'Añadir ') + esc(e.label) + '" data-act="esp|' + esc(e.label) + '">' + (on ? '✓' : '') + '</button>' +
       '<button type="button" class="nm" data-act="espfoco|' + esc(e.label) + '"' + (on ? '' : ' disabled') + '>' + esc(e.label) + (on ? '<small>' + esc(resumenEsp(e.label)) + ' ›</small>' : '') + '</button></div>';
@@ -502,9 +546,10 @@ V.especies = () => {
       '<span class="hint">' + (v.modo === 'todas' ? '<strong>Todas:</strong> el producto sirve para todas las producciones de ' + esc(sp) + ', también las que se añadan. Un clic en una producción pasa a «Excluir».'
         : v.modo === 'excluir' ? '<strong>Excluir:</strong> todo viene marcado. Un clic deja la producción excluida (en rojo); otro clic la vuelve a incluir. Las producciones nuevas entran solas.'
         : '<strong>Solo algunas:</strong> todo viene vacío. Un clic marca lo que sí; marcar un subtipo deja su producción a medias. Las producciones nuevas no se añaden solas.') + '</span></div>';
-  } else h += '<div class="note">Marca al menos una especie a la izquierda.</div>';
+  } else h += S.sinEspecie ? '<div class="note"><span><strong>No depende de especie.</strong> Para equipos o servicios transversales (fábricas de alimentos, bioseguridad de instalaciones, servicios…). Si la categoría que elijas necesita especies, te lo pediremos.</span></div>' : '<div class="note">Marca al menos una especie a la izquierda.</div>';
   h += '</div>';
   if (sel.length) h += '<div class="queda"><strong>Quedará:</strong> ' + sel.map(sp => esc(espTxt(sp))).join(' · ') + '</div>';
+  else if (S.sinEspecie) h += '<div class="queda"><strong>Quedará:</strong> no depende de especie</div>';
   return h;
 };
 V.mercados = () => {
@@ -554,6 +599,7 @@ V.identidad = () => {
     '<div class="field"><span class="flabel"><label for="i-nombre">Nombre comercial</label><span class="req">*</span></span><input class="inp" id="i-nombre" data-i="nombre" value="' + esc(I.nombre) + '"></div>' +
     '<div class="field"><span class="flabel"><label for="i-sku">Referencia (SKU)</label><span class="req">*</span></span><input class="inp" id="i-sku" data-i="sku" value="' + esc(I.sku) + '"></div>' +
     '<div class="field"><label for="i-marca">Marca</label><input class="inp" id="i-marca" data-i="marca" value="' + esc(I.marca) + '" placeholder="La de tu empresa"></div>' +
+    '<div class="field"><label for="i-web">Web o contacto</label><input class="inp" id="i-web" data-i="web" value="' + esc(S.ident.web || '') + '" placeholder="Página del producto o email de contacto"></div>' +
     '<div class="field"><label for="i-fab">Fabricante</label><input class="inp" id="i-fab" value="' + esc(I.fabricante) + '" disabled><span class="ex">Tu empresa. Lo fija tu cuenta.</span></div>' +
     '<div class="field full"><span class="flabel"><label for="i-corta">Descripción corta</label><span class="req">*</span><span class="hint">· sale junto a las fotos · ' + n + ' / 300</span></span><textarea class="ta" id="i-corta" rows="2" maxlength="300" data-i="corta">' + esc(I.corta) + '</textarea></div>' +
     '<div class="field full"><label for="i-larga">Descripción completa <span class="hint">· opcional, pestaña «Información»</span></label><textarea class="ta" id="i-larga" rows="4" data-i="larga">' + esc(I.larga) + '</textarea></div>' +
@@ -564,17 +610,44 @@ V.tecnicos = () => {
   const t = tpl(S.cat);
   if (!t) return '<div class="note w">Primero elige la categoría. <button type="button" class="link" data-act="ir|categoria">Elegir categoría</button></div>';
   let h = '<div class="note"><span>Plantilla <strong>' + esc(t.label) + '</strong> · <span class="star">★</span> sale primero en el comparador · <span class="badge">Filtro</span> el comprador puede filtrar por ello. Lo que dejes vacío no se publica; usa «No aplica» o «No lo sé» para que quede claro.' + (t.nota ? '<br>' + esc(t.nota) : '') + '</span></div>';
-  h += '<div class="grid2">' + t.atributos.map(campo).join('') + '</div>';
+  const oc = ocultos();
+  if (oc.length) h += '<div class="note w"><span><strong>' + oc.length + (oc.length === 1 ? ' dato guardado ya no aplica' : ' datos guardados ya no aplican') + '</strong> a esta categoría o a estas especies. Se conservan por si vuelves atrás, pero no se publicarán. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div>';
+  h += '<div class="grid2">' + attrsTec(t).map(campo).join('') + '</div>';
+  if (attrsApl(t).length) h += '<div class="note"><span>' + esc(attrsApl(t).map(a => a.label).join(', ')) + ' se indican <strong>por especie</strong> en el paso siguiente.</span></div>';
   h += '<section class="sec"><h2>Datos propios <span class="hint">· lo que no está en la plantilla; solo los numéricos con unidad se pueden comparar</span></h2>';
   if (S.propios.length) h += '<div class="tblwrap"><table class="tbl"><thead><tr><th>Dato</th><th>Valor</th><th>Unidad</th><th></th></tr></thead><tbody>' + S.propios.map((p, i) =>
     '<tr><td><input class="inp" aria-label="Nombre del dato" data-pp="' + i + '|n" value="' + esc(p.n) + '"></td><td><input class="inp" aria-label="Valor" data-pp="' + i + '|v" value="' + esc(p.v) + '"></td><td><input class="inp" aria-label="Unidad" data-pp="' + i + '|u" value="' + esc(p.u) + '"></td><td><button type="button" class="link" data-act="ppdel|' + i + '">Quitar</button></td></tr>').join('') + '</tbody></table></div>';
   h += '<div><button type="button" class="btn" data-act="ppadd">+ Añadir un dato propio</button></div></section>';
   return h;
 };
+function campoApl(d, a) {
+  const st = S.apl[d.key] || {}, v = (st.vals || {})[a.id], val = v && typeof v === 'object' ? v : {}, us = unidades(a.unit), k = esc(d.key) + '|' + a.id;
+  const usel = cur => us.length > 1 ? '<select data-au="' + k + '" aria-label="Unidad">' + us.map(u => '<option' + (u === cur ? ' selected' : '') + '>' + esc(u) + '</option>').join('') + '</select>' : (us.length ? '<span class="u">' + esc(us[0]) + '</span>' : '');
+  let ctl;
+  if (a.type === 'textarea') ctl = '<textarea class="ta" rows="2" data-at="' + k + '" aria-label="' + esc(a.label) + '">' + esc(typeof v === 'string' ? v : '') + '</textarea>';
+  else if (a.type === 'integer' || a.type === 'decimal') ctl = '<div class="unit"><input class="inp" inputmode="decimal" data-av="' + k + '" aria-label="' + esc(a.label) + '" value="' + esc(val.v || '') + '">' + usel(val.u || us[0]) + '</div>';
+  else if (a.type === 'object') ctl = '<div class="unit"><input class="inp" data-av="' + k + '" aria-label="' + esc(a.label) + '" placeholder="Valor" value="' + esc(val.v || '') + '">' + usel(val.u || us[0]) + '</div><input class="inp" data-am="' + k + '" aria-label="Detalle" placeholder="' + (a.id === 'espera' ? 'Carne, leche, huevos…' : 'Detalle') + '" value="' + esc(val.m || '') + '">';
+  else ctl = '<input class="inp" data-at="' + k + '" aria-label="' + esc(a.label) + '" value="' + esc(typeof v === 'string' ? v : '') + '">';
+  const err = errorCampo(a, v);
+  return '<div class="field' + (err ? ' bad' : '') + '"><span class="flabel">' + esc(a.label) + (a.required ? '<span class="req">*</span>' : '') + '</span>' + ctl + (a.help ? '<span class="ex">' + esc(a.help) + '</span>' : '') + (err ? '<span class="errtxt">' + esc(err) + '</span>' : '') + '</div>';
+}
+V.aplicaciones = () => {
+  const t = tpl(S.cat), as = attrsApl(t), ds = destinos();
+  let h = '<div class="note"><span>Una sola ficha comercial y <strong>una tarjeta por especie o segmento</strong>, con sus fases, ' + esc(as.map(a => a.label.toLowerCase()).join(', ')) + ' y documentos propios. Indica solo lo que figure en tu documentación oficial: elegir una especie no equivale a una autorización.</span></div>';
+  h += ds.map(d => {
+    const st = S.apl[d.key] || {}, fases = d.seg && M.fases[d.sp] ? (M.fases[d.sp][d.seg] || []) : [];
+    return '<section class="aplcard"><div class="aplh"><strong>' + esc(d.label) + '</strong>' + (st.doc ? '<span class="file">📄 ' + esc(st.doc) + '</span>' : '') + '</div>' +
+      (fases.length ? '<div class="field"><span class="flabel">Fases <span class="hint">· opcional</span></span><div class="chips">' + fases.map(fz => chip(fz, (st.fases || []).indexOf(fz) > -1, 'afase|' + d.key + '|' + fz, 'sm soft')).join('') + '</div></div>' : (d.seg ? '' : '<span class="hint">Para indicar fases, afina los segmentos en «Especies».</span>')) +
+      (d.seg && M.con_raza.indexOf(d.seg) > -1 ? '<div class="field"><span class="flabel">Raza y orientación productiva</span><input class="inp" data-araza="' + esc(d.key) + '" value="' + esc(st.raza || '') + '" placeholder="Raza concreta"></div>' : '') +
+      '<div class="grid2">' + as.map(a => campoApl(d, a)).join('') + '</div>' +
+      '<div class="chips">' + (st.doc ? '<button type="button" class="link" data-act="adocdel|' + esc(d.key) + '">Quitar documento</button>' : '<button type="button" class="btn" data-act="adoc|' + esc(d.key) + '">+ Documento de esta especie</button>') + '</div></section>';
+  }).join('');
+  return h;
+};
 V.enfermedad = () => {
   const esp = Object.keys(S.especies);
   const q = UI.enfq.trim().toLowerCase();
-  const lista = M.enfermedades.filter(e => (!esp.length || e.especies.some(s => esp.indexOf(s) > -1)) && (!q || e.nombre.toLowerCase().indexOf(q) > -1));
+  const lista = M.enfermedades.filter(e => (!esp.length || e.especies.some(sp => esp.indexOf(sp) > -1)) && (!q || e.nombre.toLowerCase().indexOf(q) > -1));
   let h = (enfObl() ? '<div class="note w"><span><strong>Obligatorio para vacunas.</strong> Indica al menos una enfermedad diana autorizada.</span></div>' : '<div class="note">Opcional. Sirve para que te encuentren al filtrar por enfermedad. No publiques indicaciones que no tengas autorizadas.</div>');
   h += '<div class="chips">' + S.enf.map(id => { const e = M.enfermedades.find(x => x.id === id); return e ? '<button type="button" class="chip sm on" data-act="enf|' + id + '">' + esc(e.nombre) + ' <span class="x">×</span></button>' : ''; }).join('') + '</div>';
   h += '<div class="field"><label for="enfq">Buscar enfermedad <span class="hint">· solo de las especies elegidas: ' + esc(esp.join(', ') || 'todas') + '</span></label><input class="inp" id="enfq" type="search" value="' + esc(UI.enfq) + '" placeholder="Newcastle, PRRS, mastitis…" autocomplete="off"></div>';
@@ -620,18 +693,22 @@ V.revision = () => {
   const total = ps.length, ok = ps.filter(p => !faltasDe(p.id).length).length;
   const fila = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="ir|' + p + '">Editar</button></div>';
   const miss = p => faltasDe(p).length ? ' <span class="miss">· ' + esc(faltasDe(p).map(x => x.t).join(' · ')) + '</span>' : '';
-  const tecs = t ? t.atributos.filter(x => lleno(S.tec[x.id])).length : 0;
+  const tecs = attrsTec(t).filter(x => lleno(S.tec[x.id])).length;
   let h = '<div class="note' + (f.length ? ' w' : '') + '"><span><strong>' + (f.length ? 'Faltan ' + f.length + ' datos para enviarlo a revisión.' : 'Todo listo para enviarlo a revisión.') + '</strong> ' + (f.length ? 'Puedes guardarlo como borrador y terminarlo después.' : 'Crear el producto no lo publica: ' + (regla('receta') || (S.cat && S.cat.indexOf('C09') === 0) ? 'Agroolink revisa las fichas de fármacos, vacunas y biocidas antes de publicarlas.' : 'lo publicas cuando quieras desde el catálogo.')) + '</span></div>';
   h += '<div>' +
     fila('Categoría', S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>', 'categoria') +
-    fila('Especies de destino', esc(Object.keys(S.especies).map(espTxt).join(' · ')) + miss('especies'), 'especies') +
+    fila('Especies de destino', (S.sinEspecie ? 'No depende de especie' : esc(Object.keys(S.especies).map(espTxt).join(' · '))) + miss('especies'), 'especies') +
     fila('Mercados', esc(mercTxt()) + ' <span class="hint">· ' + paisesSel().length + ' países</span>' + (conRegistro() ? ' <span class="hint">· registro: ' + paisesSel().filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + paisesSel().length + '</span>' : '') + miss('mercados'), 'mercados') +
     fila('Identidad', '<strong>' + esc(S.ident.nombre || '—') + '</strong> · ' + esc(S.ident.sku || '—') + '<br><span class="hint">' + esc(S.ident.corta) + '</span>' + miss('identidad'), 'identidad') +
-    fila('Datos técnicos', t ? tecs + ' de ' + t.atributos.length + (tecs ? ' · ' : '') + t.atributos.filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—', 'tecnicos') +
+    fila('Datos técnicos', t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—', 'tecnicos') +
+    (conAplicacion(S.cat) && destinos().length ? fila('Aplicación por especie', destinos().map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {}; const n = attrsApl(t).filter(a => lleno(vals[a.id])).length; return esc(d.label) + ' <span class="hint">· ' + n + ' de ' + attrsApl(t).length + ' datos' + ((st.fases || []).length ? ' · ' + esc(st.fases.join(', ')) : '') + '</span>'; }).join('<br>') + miss('aplicaciones'), 'aplicaciones') : '') +
     (enfVis() ? fila('Enfermedad diana', esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).concat((S.enfOtra || '').trim() ? ['Otra: ' + S.enfOtra.trim()] : []).join(', ') || 'Ninguna') + miss('enfermedad'), 'enfermedad') : '') +
     (a && a.variantes ? fila('Variantes', S.variantes.filter(v => Object.values(v).some(Boolean)).map(v => esc(Object.values(v).filter(Boolean).join(' · '))).join('<br>') || '—', 'variantes') : '') +
     fila('Imágenes y documentos', S.imgs + (S.imgs === 1 ? ' imagen · ' : ' imágenes · ') + Object.keys(S.docs).map(k => esc(M.documentos[k] || k)).join(', ') + miss('documentos'), 'documentos') + '</div>';
-  h += '<div class="chips"><button type="button" class="btn" data-act="json">Ver JSON</button><button type="button" class="btn" data-act="jsonin">Importar JSON</button></div>';
+  const oc = ocultos();
+  if (oc.length) h += '<div class="note w"><span><strong>No se publicarán ' + oc.length + ' datos</strong> guardados de otra categoría o de especies que ya no están elegidas. <button type="button" class="link" data-act="descartar">Descartarlos</button></span></div>';
+  h += '<div class="sumrow"><span class="k">Estado</span><span class="v"><span class="tg ' + (S.estado === 'En revisión' ? 'b' : 'g') + '">' + esc(S.estado) + '</span> <span class="hint">· se publica cuando Agroolink lo valida</span></span><span></span></div>';
+  h += '<div class="chips"><button type="button" class="btn" data-act="publica">Ver ficha pública</button><button type="button" class="btn" data-act="comparar">Ver en el comparador</button><button type="button" class="btn" data-act="json">Ver JSON</button><button type="button" class="btn" data-act="jsonin">Importar JSON</button></div>';
   return h;
 };
 const TIT = {
@@ -640,6 +717,7 @@ const TIT = {
   mercados: ['¿Dónde lo vendes?', 'Países donde se vende. Si tu categoría lo pide, indica el registro en cada uno.'],
   identidad: ['¿Cómo se llama y cómo lo describes?', 'Lo que ve el comprador en la cabecera de la ficha.'],
   tecnicos: [null, 'Solo los datos de tu categoría. Las unidades están normalizadas para poder comparar.'],
+  aplicaciones: ['¿Cómo se usa en cada especie?', 'Fases, dosis e indicación por especie o segmento. La ficha comercial es una sola.'],
   enfermedad: ['¿Frente a qué enfermedades?', 'Es un filtro aparte de la categoría.'],
   variantes: [null, 'Las presentaciones o configuraciones que vendes.'],
   documentos: ['Imágenes y documentos', 'Con idioma y quién puede verlos.'],
@@ -667,7 +745,7 @@ function pintaLado() {
   const pct = Math.round(hechos * 100 / (ps.length - 1));
   const lista = '<ol class="steps">' + ps.map((x, j) => { const cur = x.id === p.id, miss = S.visto[x.id] && faltasDe(x.id).length, ok = S.visto[x.id] && !miss && x.id !== 'revision';
     return '<li><button type="button" data-act="ir|' + x.id + '"' + (cur ? ' aria-current="step"' : '') + '><span class="dot' + (ok ? ' ok' : cur ? ' cur' : miss ? ' miss' : '') + '">' + (ok ? '✓' : j + 1) + '</span><span class="lbl2">' + esc(x.label) + (miss ? ' · falta' : '') + '</span></button></li>'; }).join('') + '</ol>';
-  const keys = t ? t.atributos.filter(x => x.decisivo && lleno(S.tec[x.id]) && !marca(S.tec[x.id])).slice(0, 3) : [];
+  const keys = attrsTec(t).filter(x => x.decisivo && lleno(S.tec[x.id]) && !marca(S.tec[x.id])).slice(0, 3);
   const esp = Object.keys(S.especies);
   document.getElementById('side').innerHTML =
     '<div class="card"><strong style="font-size:13px">Tu producto · ' + pct + ' %</strong><div class="prog"><span style="width:' + pct + '%"></span></div><div style="margin-top:10px">' + lista + '</div></div>' +
@@ -684,31 +762,50 @@ function pintaLado() {
 }
 
 // ---------- acciones ----------
-function setCat(id) {
-  if (S.cat && S.cat !== id) {
-    const t2 = tpl(id), ids = t2 ? t2.atributos.map(a => a.id) : [];
-    const pierde = Object.keys(S.tec).filter(k => lleno(S.tec[k]) && ids.indexOf(k) < 0);
-    if (pierde.length) { UI.pend = id; render(); return; }
-  }
-  aplicaCat(id);
-}
-function aplicaCat(id) {
-  const t2 = tpl(id), ids = t2 ? t2.atributos.map(a => a.id) : [];
-  Object.keys(S.tec).forEach(k => { if (ids.indexOf(k) < 0) delete S.tec[k]; });
+function setCat(id) { aplicaCat(id); }
+function aplicaCat(id) {   // no se borra nada: lo que deja de aplicar se oculta y no se publica
   S.cat = id; UI.pend = null; UI.q = '';
-  if (!enfVis()) S.enf = [];
   guardar(); render();
 }
 const toggle = (arr, x) => { const i = arr.indexOf(x); i > -1 ? arr.splice(i, 1) : arr.push(x); };
 const FICT = { ficha_tecnica: 'ficha_tecnica', sds: 'SDS', etiqueta: 'etiqueta', prospecto: 'prospecto', registro: 'registro', manual: 'manual', declaracion_ce: 'declaracion_CE', planos: 'planos', certificaciones: 'certificado', ensayos: 'ensayo', certificado_sanitario: 'cert_sanitario', catalogo_indices: 'indices', documentacion_api: 'API', rgpd: 'RGPD' };
 function exportJSON() {
   const t = tplKey(S.cat), attrs = {};
-  Object.keys(S.tec).forEach(k => { if (lleno(S.tec[k])) attrs['attr.' + t + '.' + k] = S.tec[k]; });
-  return { category_id: S.cat, category_other: esOtro(S.cat) ? S.catOtro : undefined, template: t, archetype: arqKey(S.cat), name: S.ident.nombre, brand: S.ident.marca, sku: S.ident.sku, manufacturer: S.ident.fabricante,
+  attrsTec(tpl(S.cat)).forEach(a => { if (lleno(S.tec[a.id])) attrs['attr.' + t + '.' + a.id] = S.tec[a.id]; });
+  const apps = conAplicacion(S.cat) ? destinos().map(d => { const st = S.apl[d.key] || {}; return { target: d.key, phases: st.fases || [], breed: st.raza || undefined, values: st.vals || {}, document: st.doc || undefined }; }) : [];
+  return { category_id: S.cat, category_other: esOtro(S.cat) ? S.catOtro : undefined, template: t, archetype: arqKey(S.cat), name: S.ident.nombre, brand: S.ident.marca, web: S.ident.web || undefined, sku: S.ident.sku, manufacturer: S.ident.fabricante,
     short_description: S.ident.corta, description: S.ident.larga, objectives: S.ident.objetivos, languages: S.ident.idiomas,
-    species: Object.keys(S.especies).map(k => k === 'Otra especie' ? { species: 'other', text: S.especies[k].texto } : ({ species: k, mode: S.especies[k].modo, items: S.especies[k].sel, other_production: S.especies[k].otra })), markets_rule: S.mercados.entradas, markets: paisesSel().map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
+    species_independent: S.sinEspecie || undefined, applications: apps, species: Object.keys(S.especies).map(k => k === 'Otra especie' ? { species: 'other', text: S.especies[k].texto } : ({ species: k, mode: S.especies[k].modo, items: S.especies[k].sel, other_production: S.especies[k].otra })), markets_rule: S.mercados.entradas, markets: paisesSel().map(p => Object.assign({ country: p }, conRegistro() ? { registration: (S.registros[p] || {}).n || null, registration_status: (S.registros[p] || {}).e || 'En trámite' } : {})),
     attributes: attrs, custom_attributes: S.propios.filter(p => p.n), target_diseases: S.enf, target_disease_other: S.enfOtra || undefined, variants: S.variantes.filter(v => Object.values(v).some(Boolean)),
     images: S.imgs, documents: Object.keys(S.docs).map(k => Object.assign({ type: k }, S.docs[k])), status: S.estado === 'En revisión' ? 'in_review' : 'draft' };
+}
+function fichaPublica() {
+  const t = tpl(S.cat), a = arq(S.cat), I = S.ident;
+  const datos = attrsTec(t).filter(x => lleno(S.tec[x.id]) && !marca(S.tec[x.id]));
+  const ds = conAplicacion(S.cat) ? destinos() : [];
+  return '<div style="display:flex;align-items:center;gap:10px"><strong style="flex:1">Ficha pública · vista previa</strong><button type="button" class="ico" data-act="cerrar" aria-label="Cerrar">×</button></div>' +
+    '<div style="overflow:auto;display:flex;flex-direction:column;gap:12px">' +
+    '<div style="display:flex;gap:14px;align-items:center"><div class="pimg" style="width:120px;aspect-ratio:4/3;font-size:18px">' + esc((I.nombre || 'Producto').replace(/[^A-Za-zÀ-ÿ0-9]/g, '').slice(0, 3).toUpperCase()) + '</div>' +
+    '<div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span class="ppath">' + esc(S.cat ? ruta(S.cat).join(' › ') : '') + '</span><strong style="font-size:20px">' + esc(I.nombre || 'Nombre del producto') + '</strong><span class="hint">' + esc([I.marca, I.fabricante].filter(Boolean).join(' · ')) + '</span>' +
+    '<div class="tags">' + (S.sinEspecie ? '<span class="tag">Multiespecie</span>' : Object.keys(S.especies).map(e => '<span class="tag">' + esc(e) + '</span>').join('')) + '</div></div></div>' +
+    (I.corta ? '<p style="margin:0">' + esc(I.corta) + '</p>' : '') +
+    (datos.length ? '<div><strong style="font-size:13px">Datos técnicos</strong>' + datos.map(x => '<div class="kv"><span>' + esc(x.label) + '</span><span>' + esc(valorTxt(x, S.tec[x.id])) + '</span></div>').join('') + '</div>' : '') +
+    (ds.length ? '<div class="tblwrap"><table class="tbl"><thead><tr><th>Especie</th><th>Fases</th>' + attrsApl(t).map(x => '<th>' + esc(x.label) + '</th>').join('') + '</tr></thead><tbody>' + ds.map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {};
+      return '<tr><td>' + esc(d.label) + '</td><td>' + esc((st.fases || []).join(', ') || '—') + '</td>' + attrsApl(t).map(x => '<td>' + esc(lleno(vals[x.id]) ? valorTxt(x, vals[x.id]) : '—') + '</td>').join('') + '</tr>'; }).join('') + '</tbody></table></div>' : '') +
+    '<div class="kv"><span>Disponible en</span><span>' + paisesSel().length + ' países</span></div>' +
+    '<span class="pcta">' + esc(a ? a.cta : 'Solicitar información') + ' →</span>' +
+    '<span class="hint">Solo se muestra lo que has rellenado y aplica a la categoría y especies elegidas.</span></div>';
+}
+function comparador() {
+  const t = tpl(S.cat);
+  const comp = attrsTec(t).filter(x => x.comparable || x.decisivo);
+  const orden = comp.filter(x => x.decisivo).slice(0, 5).concat(comp.filter(x => !x.decisivo));
+  return '<div style="display:flex;align-items:center;gap:10px"><strong style="flex:1">Así entra en el comparador</strong><button type="button" class="ico" data-act="cerrar" aria-label="Cerrar">×</button></div>' +
+    '<span class="hint">Solo se compara con productos de la misma plantilla (' + esc(t ? t.label : '—') + ') y para la misma especie. Un dato sin la misma unidad o método no se compara; uno vacío sale como «No informado».</span>' +
+    '<div class="tblwrap" style="overflow:auto"><table class="tbl"><thead><tr><th>Dato</th><th>' + esc(S.ident.nombre || 'Tu producto') + '</th><th>Otro producto</th><th>Otro producto</th></tr></thead><tbody>' +
+    '<tr><td>Especies</td><td>' + esc(S.sinEspecie ? 'Multiespecie' : Object.keys(S.especies).join(', ')) + '</td><td>—</td><td>—</td></tr>' +
+    orden.map(x => { const v = S.tec[x.id]; return '<tr><td>' + esc(x.label) + (x.decisivo ? ' <span class="star">★</span>' : '') + '</td><td>' + esc(lleno(v) ? valorTxt(x, v) : 'No informado') + '</td><td>—</td><td>—</td></tr>'; }).join('') +
+    '</tbody></table></div>';
 }
 function modal(html) { document.getElementById('layer').innerHTML = '<div class="modal" role="dialog" aria-modal="true"><div class="box">' + html + '</div></div>'; }
 document.addEventListener('click', ev => {
@@ -723,9 +820,16 @@ document.addEventListener('click', ev => {
     case 'cat': setCat(x); return;
     case 'pendok': aplicaCat(UI.pend); return;
     case 'pendno': UI.pend = null; render(); return;
-    case 'esp': if (S.especies[x]) { delete S.especies[x]; if (UI.foco === x) UI.foco = null; } else { S.especies[x] = { modo: 'todas', sel: [] }; UI.foco = x; }
+    case 'esp': S.sinEspecie = false; if (S.especies[x]) { delete S.especies[x]; if (UI.foco === x) UI.foco = null; } else { S.especies[x] = { modo: 'todas', sel: [] }; UI.foco = x; }
       S.enf = S.enf.filter(id => { const e = M.enfermedades.find(q => q.id === id); return e && e.especies.some(sp => S.especies[sp]); }); break;
     case 'espfoco': UI.foco = x; render(); return;
+    case 'sinesp': S.sinEspecie = !S.sinEspecie; if (S.sinEspecie) { S.especies = {}; UI.foco = null; } break;
+    case 'descartar': ocultos().forEach(k => delete S.tec[k]); toast('Datos descartados.'); break;
+    case 'afase': { const st = S.apl[x] = S.apl[x] || {}; st.fases = st.fases || []; toggle(st.fases, y); break; }
+    case 'adoc': { const st = S.apl[x] = S.apl[x] || {}; st.doc = 'Documento_' + x.replace(/[^A-Za-zÀ-ÿ]+/g, '_') + '.pdf'; break; }
+    case 'adocdel': if (S.apl[x]) delete S.apl[x].doc; break;
+    case 'publica': modal(fichaPublica()); return;
+    case 'comparar': modal(comparador()); return;
     case 'espotraprod': S.especies[x].otra = ''; break;
     case 'espotraquitar': delete S.especies[x].otra; break;
     case 'espmodo': S.especies[x] = { modo: y, sel: [] }; break;
@@ -778,6 +882,9 @@ document.addEventListener('input', ev => {
   else if (d.espotra) { S.especies['Otra especie'].texto = el.value; queda(); }
   else if (d.espotraprod) { S.especies[d.espotraprod].otra = el.value; queda(); }
   else if (d.enfotra) { S.enfOtra = el.value; }
+  else if (d.at || d.av || d.am) { const [key, id] = (d.at || d.av || d.am).split('|'); const st = S.apl[key] = S.apl[key] || {}; st.vals = st.vals || {};
+    if (d.at) st.vals[id] = el.value; else { const o = st.vals[id] && typeof st.vals[id] === 'object' ? st.vals[id] : {}; o[d.av ? 'v' : 'm'] = el.value; st.vals[id] = o; } }
+  else if (d.araza) { const st = S.apl[d.araza] = S.apl[d.araza] || {}; st.raza = el.value; }
   else if (d.i) { S.ident[d.i] = el.value; if (d.i === 'corta') { const h = el.closest('.field').querySelector('.hint'); if (h) h.textContent = '· sale junto a las fotos · ' + el.value.length + ' / 300'; } }
   else if (d.t) S.tec[d.t] = el.value;
   else if (d.tv) { const o = S.tec[d.tv] && typeof S.tec[d.tv] === 'object' ? S.tec[d.tv] : {}; o.v = el.value; S.tec[d.tv] = o; }
@@ -791,7 +898,8 @@ document.addEventListener('input', ev => {
 });
 document.addEventListener('change', ev => {
   const el = ev.target, d = el.dataset;
-  if (d.tu) { const o = S.tec[d.tu] && typeof S.tec[d.tu] === 'object' ? S.tec[d.tu] : {}; o.u = el.value; S.tec[d.tu] = o; }
+  if (d.au) { const [key, id] = d.au.split('|'); const st = S.apl[key] = S.apl[key] || {}; st.vals = st.vals || {}; const o = st.vals[id] && typeof st.vals[id] === 'object' ? st.vals[id] : {}; o.u = el.value; st.vals[id] = o; }
+  else if (d.tu) { const o = S.tec[d.tu] && typeof S.tec[d.tu] === 'object' ? S.tec[d.tu] : {}; o.u = el.value; S.tec[d.tu] = o; }
   else if (d.rege) S.registros[d.rege] = Object.assign({ n: '' }, S.registros[d.rege], { e: el.value });
   else if (d.doci) S.docs[d.doci].i = el.value;
   else if (d.docv) S.docs[d.docv].v = el.value;

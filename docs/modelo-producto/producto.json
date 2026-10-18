@@ -5,6 +5,7 @@
  "prototipo": "design/prototipos/crear-producto.html",
  "fuentes": [
   "AGROOLINK_Especificacion_Generador_Productos_Claude.docx",
+  "AGROOLINK_arbol_condicional_para_Claude.txt",
   "003productos.txt (categorias_v2.json)",
   "ESPECIES.txt (especies_v2.json)",
   "enfermedades.json"
@@ -35,6 +36,14 @@
    "id": "tecnicos",
    "label": "Datos técnicos",
    "ayuda": "Campos de la plantilla de tu categoría. Los marcados ★ salen primero en el comparador."
+  },
+  {
+   "id": "aplicaciones",
+   "label": "Aplicación por especie",
+   "ayuda": "Una tarjeta por especie o segmento: fases, dosis, indicación y documentos propios. La ficha comercial es una sola.",
+   "condicional": [
+    "aplicacion_por_especie"
+   ]
   },
   {
    "id": "enfermedad",
@@ -71,6 +80,11 @@
     "label": "Nombre comercial",
     "type": "text",
     "required": true
+   },
+   {
+    "id": "web",
+    "label": "Web o contacto",
+    "type": "text"
    },
    {
     "id": "marca",
@@ -409,14 +423,6 @@
      "ejemplo": "112 · escala base 100"
     },
     {
-     "id": "prolificidad",
-     "label": "Prolificidad",
-     "type": "decimal",
-     "unit": "crías/parto",
-     "comparable": true,
-     "decisivo": true
-    },
-    {
      "id": "ganancia_diaria",
      "label": "Ganancia media diaria",
      "type": "integer",
@@ -435,16 +441,120 @@
      "decisivo": true
     },
     {
-     "id": "produccion",
-     "label": "Producción de leche o huevos",
-     "type": "decimal",
-     "unit": "L/lactación | huevos/ave",
-     "comparable": true
-    },
-    {
      "id": "genealogia",
      "label": "Genealogía",
      "type": "file"
+    },
+    {
+     "id": "puesta",
+     "label": "Producción de huevos",
+     "type": "decimal",
+     "unit": "huevos/ave alojada",
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "especies": [
+       "Avicultura"
+      ]
+     }
+    },
+    {
+     "id": "viabilidad",
+     "label": "Viabilidad",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "especies": [
+       "Avicultura"
+      ]
+     }
+    },
+    {
+     "id": "edad_objetivo",
+     "label": "Edad objetivo",
+     "type": "integer",
+     "unit": "días",
+     "comparable": true,
+     "visible_when": {
+      "especies": [
+       "Avicultura"
+      ]
+     }
+    },
+    {
+     "id": "prolificidad",
+     "label": "Prolificidad",
+     "type": "decimal",
+     "unit": "crías/parto",
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "especies": [
+       "Porcino",
+       "Ovino",
+       "Caprino",
+       "Cunicultura"
+      ]
+     }
+    },
+    {
+     "id": "nacidos_vivos",
+     "label": "Nacidos vivos",
+     "type": "decimal",
+     "unit": "lechones/parto",
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "especies": [
+       "Porcino"
+      ]
+     }
+    },
+    {
+     "id": "canal",
+     "label": "Características de la canal",
+     "type": "text",
+     "visible_when": {
+      "especies": [
+       "Porcino",
+       "Bovino",
+       "Ovino",
+       "Caprino"
+      ]
+     }
+    },
+    {
+     "id": "indice_leche",
+     "label": "Índice de leche",
+     "type": "text",
+     "decisivo": true,
+     "visible_when": {
+      "especies": [
+       "Bovino",
+       "Ovino",
+       "Caprino"
+      ]
+     }
+    },
+    {
+     "id": "fertilidad",
+     "label": "Fertilidad",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "visible_when": {
+      "especies": [
+       "Bovino",
+       "Ovino",
+       "Caprino"
+      ]
+     }
     }
    ]
   },
@@ -1007,6 +1117,21 @@
      "type": "boolean",
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "descarga",
+     "label": "Descarga",
+     "type": "enum",
+     "options": [
+      "Cono",
+      "Fondo plano con barredor",
+      "Neumática"
+     ]
+    },
+    {
+     "id": "seguridad",
+     "label": "Seguridad",
+     "type": "text"
     }
    ]
   },
@@ -1040,6 +1165,26 @@
      "type": "decimal",
      "unit": "kW",
      "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "consumo",
+     "label": "Consumo",
+     "type": "decimal",
+     "unit": "kWh/t",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "tipo_molienda",
+     "label": "Tipo de molienda",
+     "type": "enum",
+     "options": [
+      "Martillos",
+      "Rodillos",
+      "Discos"
+     ],
+     "filterable": true,
      "decisivo": true
     }
    ]
@@ -1809,7 +1954,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "viabilidad",
@@ -1859,7 +2005,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "fermentabilidad",
@@ -1895,7 +2042,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "estabilidad",
@@ -1954,7 +2102,8 @@
      "comparable": true,
      "decisivo": true,
      "required": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "ph",
@@ -2020,7 +2169,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2062,7 +2212,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "selectividad",
@@ -2113,7 +2264,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2143,7 +2295,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2197,7 +2350,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2251,7 +2405,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2381,7 +2536,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2416,7 +2572,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "matriz",
@@ -2468,7 +2625,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     }
    ]
   },
@@ -2493,7 +2651,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "aplicacion",
@@ -2540,7 +2699,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "compatibilidad",
@@ -2578,7 +2738,8 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "ejemplo": "100 g/t"
+     "ejemplo": "100 g/t",
+     "por_especie": true
     },
     {
      "id": "evidencia",
@@ -2603,6 +2764,40 @@
      "required": true
     },
     {
+     "id": "familia_farm",
+     "label": "Familia farmacológica",
+     "type": "enum",
+     "options": [
+      "Betalactámicos",
+      "Tetraciclinas",
+      "Macrólidos",
+      "Pleuromutilinas",
+      "Fluoroquinolonas",
+      "Sulfamidas",
+      "Aminoglucósidos",
+      "Otra"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "concentracion",
      "label": "Concentración",
      "type": "decimal",
@@ -2614,13 +2809,15 @@
      "id": "indicacion",
      "label": "Indicación autorizada",
      "type": "textarea",
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "via",
@@ -2647,7 +2844,8 @@
      "unit": "días",
      "comparable": true,
      "decisivo": true,
-     "help": "Por producto: carne, leche, huevos"
+     "help": "Por producto: carne, leche, huevos",
+     "por_especie": true
     },
     {
      "id": "receta",
@@ -2655,6 +2853,11 @@
      "type": "boolean",
      "filterable": true,
      "required": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2674,6 +2877,23 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "parasitos",
      "label": "Parásitos diana",
      "type": "textarea",
@@ -2684,7 +2904,8 @@
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "via",
@@ -2711,7 +2932,13 @@
      "unit": "días",
      "comparable": true,
      "decisivo": true,
-     "help": "Por producto: carne, leche, huevos"
+     "help": "Por producto: carne, leche, huevos",
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2730,6 +2957,23 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "concentracion",
      "label": "Concentración",
      "type": "decimal",
@@ -2741,13 +2985,15 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "espera",
@@ -2756,7 +3002,13 @@
      "unit": "días",
      "comparable": true,
      "decisivo": true,
-     "help": "Por producto: carne, leche, huevos"
+     "help": "Por producto: carne, leche, huevos",
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2776,16 +3028,35 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "posologia",
      "label": "Posología",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "via",
@@ -2804,6 +3075,11 @@
      ],
      "filterable": true,
      "decisivo": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2822,22 +3098,47 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "momento",
      "label": "Momento de aplicación",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2857,6 +3158,23 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "aplicacion",
      "label": "Aplicación",
      "type": "text",
@@ -2866,7 +3184,13 @@
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2885,10 +3209,28 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "via",
@@ -2913,6 +3255,11 @@
      "label": "Advertencias",
      "type": "textarea",
      "decisivo": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2928,6 +3275,23 @@
      "type": "textarea",
      "decisivo": true,
      "required": true
+    },
+    {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
     },
     {
      "id": "osmolaridad",
@@ -2959,7 +3323,13 @@
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -2979,16 +3349,35 @@
      "required": true
     },
     {
+     "id": "forma",
+     "label": "Forma farmacéutica",
+     "type": "enum",
+     "options": [
+      "Comprimido",
+      "Polvo oral",
+      "Solución oral",
+      "Inyectable",
+      "Premezcla medicamentosa",
+      "Pour-on",
+      "Pomada",
+      "Bolo"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "retirada",
@@ -2996,7 +3385,13 @@
      "type": "integer",
      "unit": "días",
      "comparable": true,
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
+    },
+    {
+     "id": "contraindicaciones",
+     "label": "Contraindicaciones y advertencias",
+     "type": "textarea"
     }
    ]
   },
@@ -3041,14 +3436,16 @@
      "label": "Edad de aplicación",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "Día 1 · semana 3"
+     "ejemplo": "Día 1 · semana 3",
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "0,5 ml"
+     "ejemplo": "0,5 ml",
+     "por_especie": true
     },
     {
      "id": "via",
@@ -3068,11 +3465,6 @@
      "required": true
     },
     {
-     "id": "pauta",
-     "label": "Pauta",
-     "type": "text"
-    },
-    {
      "id": "inmunidad",
      "label": "Inicio y duración de la inmunidad",
      "type": "object",
@@ -3085,6 +3477,24 @@
      "type": "range",
      "unit": "°C",
      "ejemplo": "2–8 °C"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "text",
+     "ejemplo": "Vial de 1.000 dosis"
+    },
+    {
+     "id": "primovacunacion",
+     "label": "Primovacunación",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "revacunacion",
+     "label": "Revacunación",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3129,14 +3539,16 @@
      "label": "Edad de aplicación",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "Día 1 · semana 3"
+     "ejemplo": "Día 1 · semana 3",
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "0,5 ml"
+     "ejemplo": "0,5 ml",
+     "por_especie": true
     },
     {
      "id": "via",
@@ -3154,11 +3566,6 @@
      "filterable": true,
      "decisivo": true,
      "required": true
-    },
-    {
-     "id": "pauta",
-     "label": "Pauta",
-     "type": "text"
     },
     {
      "id": "inmunidad",
@@ -3195,6 +3602,24 @@
      "id": "lote",
      "label": "Lote",
      "type": "text"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "text",
+     "ejemplo": "Vial de 1.000 dosis"
+    },
+    {
+     "id": "primovacunacion",
+     "label": "Primovacunación",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "revacunacion",
+     "label": "Revacunación",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3239,14 +3664,16 @@
      "label": "Edad de aplicación",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "Día 1 · semana 3"
+     "ejemplo": "Día 1 · semana 3",
+     "por_especie": true
     },
     {
      "id": "dosis",
      "label": "Dosis",
      "type": "text",
      "decisivo": true,
-     "ejemplo": "0,5 ml"
+     "ejemplo": "0,5 ml",
+     "por_especie": true
     },
     {
      "id": "via",
@@ -3266,11 +3693,6 @@
      "required": true
     },
     {
-     "id": "pauta",
-     "label": "Pauta",
-     "type": "text"
-    },
-    {
      "id": "inmunidad",
      "label": "Inicio y duración de la inmunidad",
      "type": "object",
@@ -3288,6 +3710,24 @@
      "id": "compatibilidades",
      "label": "Compatibilidades",
      "type": "textarea"
+    },
+    {
+     "id": "presentacion",
+     "label": "Presentación",
+     "type": "text",
+     "ejemplo": "Vial de 1.000 dosis"
+    },
+    {
+     "id": "primovacunacion",
+     "label": "Primovacunación",
+     "type": "text",
+     "por_especie": true
+    },
+    {
+     "id": "revacunacion",
+     "label": "Revacunación",
+     "type": "text",
+     "por_especie": true
     }
    ]
   },
@@ -3315,7 +3755,8 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "decisivo": true
+     "decisivo": true,
+     "por_especie": true
     },
     {
      "id": "conservacion_temp",
@@ -3399,6 +3840,17 @@
       "Ambiente"
      ],
      "filterable": true
+    },
+    {
+     "id": "eficacia",
+     "label": "Eficacia declarada",
+     "type": "text",
+     "help": "Norma de ensayo (p. ej. EN 1656) y condiciones"
+    },
+    {
+     "id": "seguridad",
+     "label": "Seguridad de uso",
+     "type": "textarea"
     }
    ]
   },
@@ -3630,6 +4082,20 @@
    ],
    "atributos": [
     {
+     "id": "forma_fisica",
+     "label": "Forma física",
+     "type": "enum",
+     "options": [
+      "Harina",
+      "Gránulo",
+      "Migaja",
+      "Líquido",
+      "Bloque"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
      "id": "proteina",
      "label": "Proteína bruta",
      "type": "decimal",
@@ -3690,7 +4156,88 @@
     {
      "id": "instrucciones",
      "label": "Instrucciones de uso",
-     "type": "textarea"
+     "type": "textarea",
+     "por_especie": true
+    },
+    {
+     "id": "calcio",
+     "label": "Calcio",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "segmentos": [
+       "Gallinas ponedoras",
+       "Reproductoras"
+      ]
+     }
+    },
+    {
+     "id": "fosforo",
+     "label": "Fósforo disponible",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "segmentos": [
+       "Gallinas ponedoras",
+       "Reproductoras"
+      ]
+     }
+    },
+    {
+     "id": "lisina_dig",
+     "label": "Lisina digestible",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true,
+     "visible_when": {
+      "segmentos": [
+       "Lechones"
+      ]
+     }
+    },
+    {
+     "id": "digestibilidad",
+     "label": "Digestibilidad",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "visible_when": {
+      "segmentos": [
+       "Lechones"
+      ]
+     }
+    },
+    {
+     "id": "sistema_energia",
+     "label": "Sistema energético",
+     "type": "enum",
+     "options": [
+      "EM",
+      "EN",
+      "UFL / UFC",
+      "ED"
+     ],
+     "filterable": true,
+     "visible_when": {
+      "especies": [
+       "Bovino",
+       "Ovino",
+       "Caprino"
+      ]
+     }
     }
    ],
    "nota": "Regla: alimentos completos llevan perfil nutricional."
@@ -3723,7 +4270,8 @@
      "unit": "kg/t",
      "comparable": true,
      "decisivo": true,
-     "required": true
+     "required": true,
+     "por_especie": true
     },
     {
      "id": "estabilidad",
@@ -4150,6 +4698,332 @@
     }
    ],
    "nota": "Lo revisa Agroolink: puede crear una categoría nueva o reclasificarlo."
+  },
+  "eq_comederos": {
+   "label": "Comederos y tolvas",
+   "nodos": [
+    "C02-02-01"
+   ],
+   "atributos": [
+    {
+     "id": "capacidad",
+     "label": "Capacidad",
+     "type": "decimal",
+     "unit": "kg",
+     "filterable": true,
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "animales_unidad",
+     "label": "Animales por unidad",
+     "type": "integer",
+     "unit": "animales",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "material",
+     "label": "Material",
+     "type": "enum",
+     "options": [
+      "Plástico",
+      "Acero galvanizado",
+      "Acero inoxidable",
+      "Mixto"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "ajuste",
+     "label": "Ajuste y regulación",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "limpieza",
+     "label": "Limpieza",
+     "type": "text"
+    }
+   ]
+  },
+  "eq_bebederos": {
+   "label": "Bebederos y líneas de bebida",
+   "nodos": [
+    "C02-02-05"
+   ],
+   "atributos": [
+    {
+     "id": "caudal",
+     "label": "Caudal",
+     "type": "decimal",
+     "unit": "ml/min",
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "presion",
+     "label": "Presión de trabajo",
+     "type": "range",
+     "unit": "bar",
+     "decisivo": true
+    },
+    {
+     "id": "animales_punto",
+     "label": "Animales por punto",
+     "type": "integer",
+     "unit": "animales",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "material",
+     "label": "Material",
+     "type": "enum",
+     "options": [
+      "Plástico",
+      "Acero inoxidable",
+      "Mixto"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "limpieza",
+     "label": "Sistema de limpieza",
+     "type": "text"
+    }
+   ]
+  },
+  "eq_alim_auto": {
+   "label": "Sistemas automáticos de alimentación",
+   "nodos": [
+    "C02-02-02"
+   ],
+   "atributos": [
+    {
+     "id": "capacidad",
+     "label": "Capacidad",
+     "type": "decimal",
+     "unit": "kg/h",
+     "filterable": true,
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "precision",
+     "label": "Precisión de dosificación",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "tipo_alim",
+     "label": "Alimentación",
+     "type": "enum",
+     "options": [
+      "Seca",
+      "Líquida",
+      "Seca y líquida"
+     ],
+     "filterable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "sensores",
+     "label": "Sensores",
+     "type": "boolean",
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "conectividad",
+     "label": "Conectividad",
+     "type": "multiselect",
+     "options": [
+      "WiFi",
+      "Ethernet",
+      "4G/5G",
+      "LoRa",
+      "Modbus"
+     ],
+     "filterable": true
+    }
+   ]
+  },
+  "eq_parideras": {
+   "label": "Parideras y maternidad",
+   "nodos": [
+    "C02-01-07"
+   ],
+   "atributos": [
+    {
+     "id": "plazas",
+     "label": "Plazas",
+     "type": "integer",
+     "unit": "plazas",
+     "filterable": true,
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "dimensiones",
+     "label": "Dimensiones",
+     "type": "object",
+     "unit": "m"
+    },
+    {
+     "id": "regulacion",
+     "label": "Regulación",
+     "type": "text",
+     "decisivo": true
+    },
+    {
+     "id": "calefaccion",
+     "label": "Calefacción del nido",
+     "type": "enum",
+     "options": [
+      "Placa",
+      "Lámpara",
+      "Suelo radiante",
+      "Sin calefacción"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "bienestar",
+     "label": "Bienestar animal",
+     "type": "textarea",
+     "decisivo": true
+    }
+   ]
+  },
+  "eq_ordeno": {
+   "label": "Ordeño y almacenamiento de leche",
+   "nodos": [
+    "C02-05-01",
+    "C02-05-02"
+   ],
+   "atributos": [
+    {
+     "id": "capacidad_h",
+     "label": "Capacidad",
+     "type": "integer",
+     "unit": "animales/h",
+     "filterable": true,
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "rendimiento",
+     "label": "Rendimiento",
+     "type": "decimal",
+     "unit": "l/h",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "puntos",
+     "label": "Puntos de ordeño",
+     "type": "integer",
+     "unit": "puntos",
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "pulsacion",
+     "label": "Pulsación",
+     "type": "text",
+     "ejemplo": "60 pulsaciones/min · relación 60:40"
+    },
+    {
+     "id": "limpieza",
+     "label": "Limpieza",
+     "type": "enum",
+     "options": [
+      "Automática (CIP)",
+      "Semiautomática",
+      "Manual"
+     ],
+     "filterable": true,
+     "decisivo": true
+    },
+    {
+     "id": "frio",
+     "label": "Frío y almacenamiento",
+     "type": "text",
+     "ejemplo": "Tanque de 3.000 l · 4 °C"
+    },
+    {
+     "id": "conectividad",
+     "label": "Conectividad",
+     "type": "multiselect",
+     "options": [
+      "App",
+      "Software de rebaño",
+      "Collares",
+      "Podómetros"
+     ],
+     "filterable": true
+    }
+   ]
+  },
+  "eq_huevos": {
+   "label": "Recogida y clasificación de huevos",
+   "nodos": [
+    "C02-05-03",
+    "C02-05-04"
+   ],
+   "atributos": [
+    {
+     "id": "huevos_h",
+     "label": "Rendimiento",
+     "type": "integer",
+     "unit": "huevos/h",
+     "filterable": true,
+     "comparable": true,
+     "decisivo": true,
+     "required": true
+    },
+    {
+     "id": "precision",
+     "label": "Precisión",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "rotura",
+     "label": "Roturas",
+     "type": "decimal",
+     "unit": "%",
+     "min": 0,
+     "max": 100,
+     "comparable": true,
+     "decisivo": true
+    },
+    {
+     "id": "trazabilidad",
+     "label": "Trazabilidad",
+     "type": "boolean",
+     "filterable": true,
+     "decisivo": true
+    }
+   ]
   }
  },
  "reglas": [
@@ -4250,7 +5124,46 @@
    "cuando": {
     "siempre": true
    },
-   "efecto": "Al cambiar de categoría se conservan los datos compatibles (mismo id de atributo) y se avisa antes de descartar el resto"
+   "efecto": "Al cambiar una selección (categoría, especie) se ocultan los datos que ya no aplican, sin borrarlos; no se publican mientras no apliquen y se pueden descartar desde la revisión"
+  },
+  {
+   "id": "aplicacion_por_especie",
+   "cuando": {
+    "nodo_empieza": [
+     "C06",
+     "C07",
+     "C08",
+     "C10"
+    ]
+   },
+   "efecto": "Una tarjeta de aplicación por especie o segmento con fases, dosis, indicación, tiempo de espera y documentos propios; una sola ficha comercial"
+  },
+  {
+   "id": "no_depende_especie",
+   "cuando": {
+    "nodo_empieza": [
+     "C03",
+     "C09",
+     "C11",
+     "C02-03",
+     "C02-04"
+    ]
+   },
+   "efecto": "Se admite «No depende de especie» (multiespecie)"
+  },
+  {
+   "id": "pertinencia",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "Las categorías que solo tienen sentido para algunas especies (incubación, aviarios, parideras, ordeño, desplumado…) no se ofrecen si no se eligió esa especie"
+  },
+  {
+   "id": "no_inventar",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "No se sugieren dosis, indicaciones, registros ni eficacias: los aporta la empresa y se validan. Elegir una especie o país no equivale a autorización"
   },
   {
    "id": "otro_rellenable",
@@ -4267,6 +5180,169 @@
    "efecto": "Se distinguen 0, «No informado» y «No aplica»; lo vacío no se publica"
   }
  ],
+ "fases": {
+  "Avicultura": {
+   "Pollos de engorde": [
+    "Inicio",
+    "Crecimiento",
+    "Finalización"
+   ],
+   "Gallinas ponedoras": [
+    "Recría",
+    "Prepuesta",
+    "Puesta"
+   ],
+   "Reproductoras": [
+    "Recría",
+    "Reproducción"
+   ]
+  },
+  "Porcino": {
+   "Hembras reproductoras": [
+    "Nulíparas",
+    "Gestación",
+    "Lactación"
+   ],
+   "Machos reproductores": [
+    "Reproducción"
+   ],
+   "Lechones": [
+    "Lactancia",
+    "Transición",
+    "Posdestete"
+   ],
+   "Cebo / Engorde": [
+    "Crecimiento",
+    "Acabado"
+   ]
+  },
+  "Bovino": {
+   "Vacuno de leche": [
+    "Terneras",
+    "Recría",
+    "Lactación",
+    "Secado"
+   ],
+   "Vacuno de carne": [
+    "Cría",
+    "Recría",
+    "Engorde"
+   ]
+  },
+  "Ovino": {
+   "Ovino de leche": [
+    "Recría",
+    "Reproducción",
+    "Lactación"
+   ],
+   "Ovino de carne": [
+    "Recría",
+    "Engorde"
+   ]
+  },
+  "Caprino": {
+   "Caprino de leche": [
+    "Recría",
+    "Reproducción",
+    "Lactación"
+   ],
+   "Caprino de carne": [
+    "Recría",
+    "Engorde"
+   ]
+  },
+  "Acuicultura": {
+   "Tilapias": [
+    "Alevín",
+    "Juvenil",
+    "Engorde"
+   ],
+   "Camarones": [
+    "Larvaria",
+    "Juvenil",
+    "Engorde"
+   ],
+   "Salmón": [
+    "Alevín",
+    "Juvenil",
+    "Engorde"
+   ]
+  },
+  "Cunicultura": {
+   "Conejos para carne": [
+    "Reproducción",
+    "Crecimiento",
+    "Engorde"
+   ],
+   "Conejos para piel": [
+    "Reproducción",
+    "Crecimiento"
+   ]
+  }
+ },
+ "con_raza": [
+  "Razas autóctonas"
+ ],
+ "pertinencia": {
+  "C01-02-03": [
+   "Avicultura"
+  ],
+  "C01-02-04": [
+   "Acuicultura"
+  ],
+  "C02-01-03": [
+   "Avicultura"
+  ],
+  "C02-01-05": [
+   "Avicultura › Gallinas ponedoras",
+   "Avicultura › Reproductoras"
+  ],
+  "C02-01-06": [
+   "Avicultura"
+  ],
+  "C02-01-07": [
+   "Porcino"
+  ],
+  "C02-05-01": [
+   "Bovino › Vacuno de leche",
+   "Ovino › Ovino de leche",
+   "Caprino › Caprino de leche"
+  ],
+  "C02-05-02": [
+   "Bovino › Vacuno de leche",
+   "Ovino › Ovino de leche",
+   "Caprino › Caprino de leche"
+  ],
+  "C02-05-03": [
+   "Avicultura"
+  ],
+  "C02-05-04": [
+   "Avicultura"
+  ],
+  "C02-05-06": [
+   "Avicultura › Patos",
+   "Avicultura › Ocas"
+  ],
+  "C04": [
+   "Avicultura"
+  ],
+  "C05-03": [
+   "Avicultura"
+  ]
+ },
+ "transversales": [
+  "C03",
+  "C09",
+  "C11",
+  "C02-03",
+  "C02-04"
+ ],
+ "aplicacion_familias": [
+  "C06",
+  "C07",
+  "C08",
+  "C10"
+ ],
  "categorias": [
   {
    "id": "C01",
@@ -4278,7 +5354,8 @@
      "tipos": [
       {
        "id": "C01-01-01",
-       "label": "Líneas puras y núcleos de selección"
+       "label": "Líneas puras y núcleos de selección",
+       "corto": "Líneas puras"
       },
       {
        "id": "C01-01-02",
@@ -4294,7 +5371,8 @@
       },
       {
        "id": "C01-01-05",
-       "label": "Razas autóctonas y conservación"
+       "label": "Razas autóctonas y conservación",
+       "corto": "Razas autóctonas"
       }
      ]
     },
@@ -4371,7 +5449,8 @@
       },
       {
        "id": "C02-01-04",
-       "label": "Jaulas, baterías y módulos de alojamiento"
+       "label": "Jaulas, baterías y módulos de alojamiento",
+       "corto": "Jaulas y baterías"
       },
       {
        "id": "C02-01-05",
@@ -4383,11 +5462,13 @@
       },
       {
        "id": "C02-01-07",
-       "label": "Parideras, maternidad y alojamientos de transición"
+       "label": "Parideras, maternidad y alojamientos de transición",
+       "corto": "Parideras y maternidad"
       },
       {
        "id": "C02-01-08",
-       "label": "Corrales, boxes, cubículos y separadores"
+       "label": "Corrales, boxes, cubículos y separadores",
+       "corto": "Corrales y boxes"
       },
       {
        "id": "C02-01-09",
@@ -4395,7 +5476,8 @@
       },
       {
        "id": "C02-01-10",
-       "label": "Paneles, aislamientos, puertas y ventanas"
+       "label": "Paneles, aislamientos, puertas y ventanas",
+       "corto": "Paneles y aislamientos"
       },
       {
        "id": "C02-01-11",
@@ -4447,7 +5529,8 @@
       },
       {
        "id": "C02-03-02",
-       "label": "Refrigeración y enfriamiento evaporativo"
+       "label": "Refrigeración y enfriamiento evaporativo",
+       "corto": "Refrigeración"
       },
       {
        "id": "C02-03-03",
@@ -4455,11 +5538,13 @@
       },
       {
        "id": "C02-03-04",
-       "label": "Intercambiadores y recuperación de calor"
+       "label": "Intercambiadores y recuperación de calor",
+       "corto": "Recuperación de calor"
       },
       {
        "id": "C02-03-05",
-       "label": "Iluminación y control fotoperiódico"
+       "label": "Iluminación y control fotoperiódico",
+       "corto": "Iluminación"
       },
       {
        "id": "C02-03-06",
@@ -4467,7 +5552,8 @@
       },
       {
        "id": "C02-03-07",
-       "label": "Eficiencia energética y energías renovables"
+       "label": "Eficiencia energética y energías renovables",
+       "corto": "Energías renovables"
       }
      ]
     },
@@ -4489,7 +5575,8 @@
       },
       {
        "id": "C02-04-04",
-       "label": "Identificación y trazabilidad animal"
+       "label": "Identificación y trazabilidad animal",
+       "corto": "Identificación animal"
       },
       {
        "id": "C02-04-05",
@@ -4523,15 +5610,18 @@
       },
       {
        "id": "C02-05-04",
-       "label": "Clasificación y control de calidad de huevos en granja"
+       "label": "Clasificación y control de calidad de huevos en granja",
+       "corto": "Clasificación de huevos"
       },
       {
        "id": "C02-05-05",
-       "label": "Manipulación, carga y transporte de animales"
+       "label": "Manipulación, carga y transporte de animales",
+       "corto": "Carga de animales"
       },
       {
        "id": "C02-05-06",
-       "label": "Instalaciones de alimentación forzada / embuchado"
+       "label": "Instalaciones de alimentación forzada / embuchado",
+       "corto": "Embuchado"
       },
       {
        "id": "C02-05-07",
@@ -4796,7 +5886,8 @@
       },
       {
        "id": "C06-01-05",
-       "label": "Acidificantes / ácidos orgánicos"
+       "label": "Acidificantes / ácidos orgánicos",
+       "corto": "Acidificantes"
       }
      ]
     },
@@ -4810,7 +5901,8 @@
       },
       {
        "id": "C06-02-02",
-       "label": "Biotransformadores / desactivadores"
+       "label": "Biotransformadores / desactivadores",
+       "corto": "Biotransformadores"
       },
       {
        "id": "C06-02-03",
@@ -4828,23 +5920,28 @@
       },
       {
        "id": "C06-03-02",
-       "label": "Vitaminas y metabolitos vitamínicos"
+       "label": "Vitaminas y metabolitos vitamínicos",
+       "corto": "Vitaminas"
       },
       {
        "id": "C06-03-03",
-       "label": "Macrominerales y microminerales"
+       "label": "Macrominerales y microminerales",
+       "corto": "Minerales"
       },
       {
        "id": "C06-03-04",
-       "label": "Ácidos grasos y fuentes lipídicas funcionales"
+       "label": "Ácidos grasos y fuentes lipídicas funcionales",
+       "corto": "Ácidos grasos"
       },
       {
        "id": "C06-03-05",
-       "label": "Emulsionantes y mejoradores de digestibilidad"
+       "label": "Emulsionantes y mejoradores de digestibilidad",
+       "corto": "Emulsionantes"
       },
       {
        "id": "C06-03-06",
-       "label": "Nucleótidos y otros nutrientes funcionales"
+       "label": "Nucleótidos y otros nutrientes funcionales",
+       "corto": "Nucleótidos"
       }
      ]
     },
@@ -4938,12 +6035,14 @@
     {
      "id": "C07-06",
      "label": "Tratamientos digestivos y antidiarreicos",
-     "tipos": []
+     "tipos": [],
+     "corto": "Tratamientos digestivos"
     },
     {
      "id": "C07-07",
      "label": "Tratamientos reproductivos y hormonales",
-     "tipos": []
+     "tipos": [],
+     "corto": "Reproductivos y hormonales"
     },
     {
      "id": "C07-08",
@@ -4958,17 +6057,20 @@
     {
      "id": "C07-10",
      "label": "Sedantes, anestésicos y tranquilizantes",
-     "tipos": []
+     "tipos": [],
+     "corto": "Sedantes y anestésicos"
     },
     {
      "id": "C07-11",
      "label": "Terapias de soporte y rehidratación",
-     "tipos": []
+     "tipos": [],
+     "corto": "Soporte y rehidratación"
     },
     {
      "id": "C07-12",
      "label": "Coccidiostatos y anticoccidiales medicinales",
-     "tipos": []
+     "tipos": [],
+     "corto": "Coccidiostatos"
     },
     {
      "id": "C07-13",
@@ -5025,11 +6127,13 @@
       },
       {
        "id": "C09-01-04",
-       "label": "Desinfectantes pediluvios y rodiluvios"
+       "label": "Desinfectantes pediluvios y rodiluvios",
+       "corto": "Desinfectantes de pediluvios"
       },
       {
        "id": "C09-01-05",
-       "label": "Equipos de limpieza, pulverización y nebulización"
+       "label": "Equipos de limpieza, pulverización y nebulización",
+       "corto": "Equipos de limpieza"
       }
      ]
     },
@@ -5091,7 +6195,8 @@
      "tipos": [
       {
        "id": "C09-04-01",
-       "label": "Pediluvios, rodiluvios y arcos sanitarios"
+       "label": "Pediluvios, rodiluvios y arcos sanitarios",
+       "corto": "Pediluvios y arcos"
       },
       {
        "id": "C09-04-02",
@@ -5107,7 +6212,8 @@
       },
       {
        "id": "C09-04-05",
-       "label": "Material de muestreo y vigilancia sanitaria"
+       "label": "Material de muestreo y vigilancia sanitaria",
+       "corto": "Muestreo y vigilancia"
       }
      ]
     },
@@ -5162,11 +6268,13 @@
       },
       {
        "id": "C10-07-02",
-       "label": "Harinas y fuentes proteicas vegetales"
+       "label": "Harinas y fuentes proteicas vegetales",
+       "corto": "Proteínas vegetales"
       },
       {
        "id": "C10-07-03",
-       "label": "Proteínas de origen animal autorizadas"
+       "label": "Proteínas de origen animal autorizadas",
+       "corto": "Proteínas animales"
       },
       {
        "id": "C10-07-04",
@@ -5174,7 +6282,8 @@
       },
       {
        "id": "C10-07-05",
-       "label": "Forrajes, fibras y coproductos fibrosos"
+       "label": "Forrajes, fibras y coproductos fibrosos",
+       "corto": "Forrajes y fibras"
       },
       {
        "id": "C10-07-06",

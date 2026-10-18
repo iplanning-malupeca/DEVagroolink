@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Alta de producto · Variantes: el eje depende del tipo (aquí: embalaje)</title>
+<title>Alta de producto · Variantes según el tipo (aquí: embalaje)</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -177,6 +177,10 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 .ico{width:30px;height:30px;border:0;background:none;border-radius:8px;cursor:pointer;color:var(--muted);font-size:15px}
 .ico:hover{background:var(--soft)}
 .mbody{border:1px solid var(--soft2);border-top:0;border-radius:0 0 12px 12px;padding:12px 14px;margin-top:-8px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.chip.na{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.fam.na{opacity:.45;cursor:not-allowed}
+.aplcard{border:1.5px solid var(--soft2);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.aplh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -185,27 +189,28 @@ h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap
 
 </style>
 </helmet>
-<div style="width: 1280px; height: 1230px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
+<div style="width: 1280px; height: 1130px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
   <span class="logo">agroo<b>link</b></span>
-  <span class="crumb">Productos › <strong id="crumbName">Hy-D®</strong></span>
-  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 21:26</span>
+  <span class="crumb">Productos › <strong id="crumbName">Probiótico (ejemplo)</strong></span>
+  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 21:37</span>
   <label class="demo" for="demoSel">Ejemplo
     <select id="demoSel">
       <option value="">Elegir…</option>
-      <option value="vitamina">Hy-D® · vitamina (DSM-Firmenich)</option>
-      <option value="ventilador">Ventilador de túnel (Big Dutchman)</option>
-      <option value="vacuna">Vacuna Newcastle (sanidad)</option>
-      <option value="laboratorio">Análisis de micotoxinas (servicio)</option>
+      <option value="probiotico">Probiótico · lechones y pollos de engorde</option>
+      <option value="ordeno">Sistema de ordeño · vacuno de leche</option>
+      <option value="vacuna">Vacuna · gallinas ponedoras</option>
+      <option value="pienso">Pienso completo · gallinas ponedoras</option>
+      <option value="molino">Molino · sin especie</option>
       <option value="cero">Empezar de cero</option>
     </select>
   </label>
   <button class="btn" type="button" id="salir">Guardar y salir</button>
 </header><div class="wrap">
-  <main class="main" id="main"><div><span class="eb">Paso 6 de 8 · Variantes</span><h1>¿En qué embalajees lo vendes?</h1><p class="sub">Las presentaciones o configuraciones que vendes.</p></div><div class="note">Cada fila es una embalaje que el comprador puede pedir. Si solo hay una, deja una fila.</div><div class="tblwrap"><table class="tbl"><thead><tr><th>Envase</th><th>Peso o volumen neto</th><th>Unidades por palé</th><th></th></tr></thead><tbody><tr><td><input class="inp" aria-label="Envase 1" data-var="0|c0" value="Saco"></td><td><input class="inp" aria-label="Peso o volumen neto 1" data-var="0|c1" value="25 kg"></td><td><input class="inp" aria-label="Unidades por palé 1" data-var="0|c2" value="40"></td><td><button type="button" class="link" data-act="vardel|0">Quitar</button></td></tr><tr><td><input class="inp" aria-label="Envase 2" data-var="1|c0" value="Big bag"></td><td><input class="inp" aria-label="Peso o volumen neto 2" data-var="1|c1" value="500 kg"></td><td><input class="inp" aria-label="Unidades por palé 2" data-var="1|c2" value="2"></td><td><button type="button" class="link" data-act="vardel|1">Quitar</button></td></tr></tbody></table></div><div><button type="button" class="btn" data-act="varadd">+ Añadir embalaje</button></div><div class="nav"><button type="button" class="btn" data-act="atras">Atrás</button><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
-  <aside class="side" id="side"><div class="card"><strong style="font-size:13px">Tu producto · 71 %</strong><div class="prog"><span style="width:71%"></span></div><div style="margin-top:10px"><ol class="steps"><li><button type="button" data-act="ir|especies"><span class="dot ok">✓</span><span class="lbl2">Especies de destino</span></button></li><li><button type="button" data-act="ir|categoria"><span class="dot ok">✓</span><span class="lbl2">Categoría</span></button></li><li><button type="button" data-act="ir|mercados"><span class="dot ok">✓</span><span class="lbl2">Mercados</span></button></li><li><button type="button" data-act="ir|identidad"><span class="dot ok">✓</span><span class="lbl2">Identidad</span></button></li><li><button type="button" data-act="ir|tecnicos"><span class="dot ok">✓</span><span class="lbl2">Datos técnicos</span></button></li><li><button type="button" data-act="ir|variantes" aria-current="step"><span class="dot cur">6</span><span class="lbl2">Variantes</span></button></li><li><button type="button" data-act="ir|documentos"><span class="dot">7</span><span class="lbl2">Imágenes y documentos</span></button></li><li><button type="button" data-act="ir|revision"><span class="dot">8</span><span class="lbl2">Revisión</span></button></li></ol></div></div><div class="card help"><strong style="font-size:13px">Variantes</strong><p>Presentaciones o configuraciones que vendes. El eje depende del tipo de producto.</p></div><div class="card prevbox"><strong style="font-size:13px">Vista previa</strong><div class="prev" style="margin-top:10px"><div class="pimg">HYD</div><span class="ppath">Aditivos nutricionales › Vitaminas y metabolitos vitamínicos</span><span class="pname">Hy-D®</span><span class="hint">Fuente de 25-OH-D3 que se absorbe mejor que la vitamina D3 convencional. Refuerza el hueso, la cáscara y el rendimiento …</span><div class="tags"><span class="tag">Avicultura</span><span class="tag">Porcino</span></div><div class="kv"><span>Vitamina</span><span>25-OH-D3</span></div><div class="kv"><span>Concentración</span><span>12500 mg/kg</span></div><div class="kv"><span>Estabilidad</span><span>Estable en granulación (ejemplo)</span></div><div class="kv"><span>Mercados</span><span>11 países</span></div><span class="pcta">Solicitar información →</span></div></div></aside>
+  <main class="main" id="main"><div><span class="eb">Paso 8 de 10 · Variantes</span><h1>¿En qué embalajees lo vendes?</h1><p class="sub">Las presentaciones o configuraciones que vendes.</p></div><div class="note">Cada fila es una embalaje que el comprador puede pedir. Si solo hay una, deja una fila.</div><div class="tblwrap"><table class="tbl"><thead><tr><th>Envase</th><th>Peso o volumen neto</th><th>Unidades por palé</th><th></th></tr></thead><tbody><tr><td><input class="inp" aria-label="Envase 1" data-var="0|c0" value=""></td><td><input class="inp" aria-label="Peso o volumen neto 1" data-var="0|c1" value=""></td><td><input class="inp" aria-label="Unidades por palé 1" data-var="0|c2" value=""></td><td></td></tr></tbody></table></div><div><button type="button" class="btn" data-act="varadd">+ Añadir embalaje</button></div><div class="nav"><button type="button" class="btn" data-act="atras">Atrás</button><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
+  <aside class="side" id="side"><div class="card"><strong style="font-size:13px">Tu producto · 56 %</strong><div class="prog"><span style="width:56%"></span></div><div style="margin-top:10px"><ol class="steps"><li><button type="button" data-act="ir|especies"><span class="dot ok">✓</span><span class="lbl2">Especies de destino</span></button></li><li><button type="button" data-act="ir|categoria"><span class="dot ok">✓</span><span class="lbl2">Categoría</span></button></li><li><button type="button" data-act="ir|mercados"><span class="dot ok">✓</span><span class="lbl2">Mercados</span></button></li><li><button type="button" data-act="ir|identidad"><span class="dot miss">4</span><span class="lbl2">Identidad · falta</span></button></li><li><button type="button" data-act="ir|tecnicos"><span class="dot miss">5</span><span class="lbl2">Datos técnicos · falta</span></button></li><li><button type="button" data-act="ir|aplicaciones"><span class="dot ok">✓</span><span class="lbl2">Aplicación por especie</span></button></li><li><button type="button" data-act="ir|enfermedad"><span class="dot ok">✓</span><span class="lbl2">Enfermedad diana</span></button></li><li><button type="button" data-act="ir|variantes" aria-current="step"><span class="dot cur">8</span><span class="lbl2">Variantes</span></button></li><li><button type="button" data-act="ir|documentos"><span class="dot">9</span><span class="lbl2">Imágenes y documentos</span></button></li><li><button type="button" data-act="ir|revision"><span class="dot">10</span><span class="lbl2">Revisión</span></button></li></ol></div></div><div class="card help"><strong style="font-size:13px">Variantes</strong><p>Presentaciones o configuraciones que vendes. El eje depende del tipo de producto.</p></div><div class="card prevbox"><strong style="font-size:13px">Vista previa</strong><div class="prev" style="margin-top:10px"><div class="pimg">PRO</div><span class="ppath">Salud digestiva › Probióticos</span><span class="pname">Probiótico (ejemplo)</span><div class="tags"><span class="tag">Porcino</span><span class="tag">Avicultura</span></div><div class="kv"><span>Mercados</span><span>11 países</span></div><span class="pcta">Solicitar información →</span></div></div></aside>
 </div></div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1230}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1130}}'>
 class Component extends DCLogic {
   renderVals() { return {}; }
 }

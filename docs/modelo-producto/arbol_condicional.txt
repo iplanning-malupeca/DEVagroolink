@@ -1,0 +1,480 @@
+AGROOLINK — ÁRBOL CONDICIONAL DE PRODUCTOS Y ESPECIES
+DOCUMENTO DE ENTRADA PARA CLAUDE ARTIFACTS
+
+OBJETIVO
+Construir un generador de fichas de producto B2B que muestre únicamente los campos relevantes según tipo de producto, especies, segmentos y aplicaciones. No mostrar códigos internos ni referencias de documentación al usuario.
+
+REGLAS PRINCIPALES
+- Selección: familia de producto > subfamilia > tipo de producto; después especies y segmentos.
+- Un producto puede aplicarse a varias especies y segmentos sin duplicar su ficha comercial.
+- Conservar los nombres cortos en menús y mostrar los completos como ayuda contextual si se necesita.
+- Campos comunes siempre visibles: nombre comercial, fabricante/marca, descripción corta, descripción técnica, imágenes, documentación, web/contacto, países de disponibilidad, idiomas, estado de publicación.
+- Campos técnicos según tipo de producto, nunca un formulario idéntico para todos.
+- Las aplicaciones por especie guardan dosis, indicación, etapa, unidades y documentos específicos cuando corresponda.
+- Enfermedad diana es filtro independiente; no convertir enfermedades en subcategorías de productos.
+- No presuponer que un producto esté autorizado para una especie, indicación o país; los datos los aporta la empresa y se validan.
+- La disponibilidad de una combinación no equivale a aprobación regulatoria.
+- Permitir campos opcionales y «no aplica»; las unidades deben ser explícitas y comparables.
+- Al cambiar una selección, ocultar atributos incompatibles sin borrar datos previamente introducidos; impedir publicarlos si ya no aplican.
+- Este árbol procede de los materiales del proyecto; las reglas condicionales añadidas abajo son propuestas para el prototipo y deben revisarse técnicamente.
+
+ÁRBOL DE ESPECIES Y SEGMENTOS
+ESPECIES
+│
+├── AVICULTURA
+│   │
+│   ├── Pollos de engorde
+│   │   ├── Broilers
+│   │   └── Pollos de crecimiento lento
+│   │
+│   ├── Gallinas ponedoras
+│   │
+│   ├── Reproductoras
+│   │
+│   ├── Pavos
+│   │
+│   ├── Patos
+│   │
+│   ├── Ocas
+│   │
+│   ├── Perdices
+│   │
+│   └── Aves ornamentales
+│
+│
+├── PORCINO
+│   │
+│   ├── Hembras reproductoras
+│   │
+│   ├── Machos reproductores
+│   │
+│   ├── Lechones
+│   │
+│   ├── Cebo / Engorde
+│   │
+│   └── Razas autóctonas
+│
+│
+├── BOVINO
+│   │
+│   ├── Vacuno de leche
+│   │
+│   ├── Vacuno de carne
+│   │
+│   └── Razas autóctonas
+│
+│
+├── OVINO
+│   │
+│   ├── Ovino de leche
+│   │
+│   │
+│   ├── Ovino de carne
+│   │
+│   └── Razas autóctonas
+│
+│
+├── CAPRINO
+│   │
+│   ├── Caprino de leche
+│   │
+│   ├── Caprino de carne
+│   │
+│   └── Razas autóctonas
+│
+│
+├── ACUICULTURA
+│   │
+│   ├── Tilapias
+│   │
+│   ├── Camarones
+│   │
+│   └── Salmón
+│
+│
+└── CUNICULTURA
+    │
+    ├── Conejos para carne
+    │
+    └── Conejos para piel
+
+ÁRBOL DE PRODUCTOS (SIN CÓDIGOS)
+Genética
+    └── Animales y líneas genéticas
+        └── Líneas puras y núcleos de selección
+        └── Líneas comerciales e híbridos
+        └── Reproductores y reproductoras
+        └── Animales de reposición
+        └── Razas autóctonas y conservación
+    └── Material reproductivo
+        └── Semen y dosis seminales
+        └── Embriones y ovocitos
+        └── Huevos fértiles
+        └── Material genético acuícola
+    └── Tecnologías reproductivas
+        └── Inseminación artificial
+        └── Transferencia embrionaria
+        └── Diagnóstico reproductivo
+        └── Sexado y selección genética
+    └── Servicios de mejora genética
+
+Equipamiento
+    └── Construcción e instalaciones
+        └── Naves, galpones y establos
+        └── Proyectos llave en mano
+        └── Aviarios y sistemas alternativos
+        └── Jaulas, baterías y módulos de alojamiento
+        └── Nidales y sistemas de puesta
+        └── Gallineros y alojamientos móviles
+        └── Parideras, maternidad y alojamientos de transición
+        └── Corrales, boxes, cubículos y separadores
+        └── Slats, suelos y pavimentos
+        └── Paneles, aislamientos, puertas y ventanas
+        └── Camas, yacijas y aseladeros
+    └── Alimentación y agua
+        └── Comederos y tolvas
+        └── Sistemas automáticos de alimentación
+        └── Silos y almacenamiento de alimento
+        └── Transporte y distribución de alimento
+        └── Bebederos y líneas de bebida
+        └── Dosificadores de agua y líquidos
+        └── Tratamiento y filtración de agua
+    └── Climatización y energía
+        └── Ventilación y extracción
+        └── Refrigeración y enfriamiento evaporativo
+        └── Calefacción
+        └── Intercambiadores y recuperación de calor
+        └── Iluminación y control fotoperiódico
+        └── Sensores ambientales
+        └── Eficiencia energética y energías renovables
+    └── Automatización y control
+        └── Ordenadores y controladores de granja
+        └── Sensores y monitorización
+        └── Básculas y sistemas de pesaje
+        └── Identificación y trazabilidad animal
+        └── Cámaras y visión artificial
+        └── Robótica y automatización
+        └── Software de gestión de granja
+    └── Producción y manejo
+        └── Sistemas de ordeño y robots de ordeño
+        └── Enfriamiento y almacenamiento de leche
+        └── Recogida y transporte de huevos
+        └── Clasificación y control de calidad de huevos en granja
+        └── Manipulación, carga y transporte de animales
+        └── Instalaciones de alimentación forzada / embuchado
+        └── Equipos de manejo y bienestar animal
+    └── Residuos y purines
+        └── Recogida y retirada de estiércol
+        └── Gestión y tratamiento de purines
+        └── Secado, separación y valorización
+        └── Gestión de cadáveres
+        └── Almacenamiento y contenedores
+    └── Accesorios y repuestos
+
+Fábricas de alimentos
+    └── Recepción de materias primas
+    └── Silos y almacenamiento
+    └── Molinos
+    └── Mezcladoras
+    └── Dosificadoras
+    └── Granulación y extrusión
+    └── Enfriado y secado
+    └── Transporte interno
+    └── Envasado y paletización
+    └── Aspiración y filtración
+    └── Control de calidad
+    └── Automatización y software
+    └── Repuestos y mantenimiento
+
+Incubación
+    └── Incubadoras
+    └── Nacedoras
+    └── Clasificación de huevos
+    └── Transferencia de huevos
+    └── Vacunación in-ovo
+    └── Sexado
+    └── Manejo de pollitos
+    └── Transporte de pollitos
+    └── Limpieza y desinfección
+    └── Climatización y automatización
+    └── Proyectos llave en mano
+
+Procesamiento
+    └── Recepción y manejo
+    └── Aturdimiento y sacrificio
+    └── Escaldado y desplumado
+    └── Evisceración y lavado
+    └── Refrigeración
+    └── Clasificación y pesaje
+    └── Corte y despiece
+    └── Elaboración de productos
+    └── Envasado y etiquetado
+    └── Cadena de frío y almacenamiento
+    └── Higiene y subproductos
+    └── Automatización y software
+
+Nutrición
+    └── Salud digestiva
+        └── Probióticos
+        └── Prebióticos
+        └── Postbióticos y simbióticos
+        └── Enzimas
+        └── Acidificantes / ácidos orgánicos
+    └── Micotoxinas y endotoxinas
+        └── Adsorbentes de micotoxinas
+        └── Biotransformadores / desactivadores
+        └── Soluciones frente a endotoxinas
+    └── Aditivos nutricionales
+        └── Aminoácidos
+        └── Vitaminas y metabolitos vitamínicos
+        └── Macrominerales y microminerales
+        └── Ácidos grasos y fuentes lipídicas funcionales
+        └── Emulsionantes y mejoradores de digestibilidad
+        └── Nucleótidos y otros nutrientes funcionales
+    └── Fitogénicos
+    └── Antioxidantes
+    └── Pigmentantes
+    └── Aromatizantes y palatabilizantes
+    └── Aditivos tecnológicos
+        └── Conservantes y antifúngicos
+        └── Antiaglomerantes y fluidificantes
+        └── Aglutinantes y estabilizantes
+        └── Emulsionantes tecnológicos
+        └── Otros aditivos tecnológicos
+    └── Nutracéuticos
+    └── Otros aditivos
+
+Fármacos
+    └── Antibióticos
+    └── Antiparasitarios internos
+    └── Antiparasitarios externos
+    └── Antiinflamatorios y analgésicos
+    └── Tratamientos respiratorios
+    └── Tratamientos digestivos y antidiarreicos
+    └── Tratamientos reproductivos y hormonales
+    └── Antifúngicos terapéuticos
+    └── Antisépticos y tratamientos tópicos
+    └── Sedantes, anestésicos y tranquilizantes
+    └── Terapias de soporte y rehidratación
+    └── Coccidiostatos y anticoccidiales medicinales
+    └── Otros fármacos
+
+Vacunas
+    └── Vacunas por enfermedad
+    └── Autovacunas
+    └── Vacunas multivalentes
+    └── Otros biológicos
+
+Bioseguridad
+    └── Limpieza y desinfección
+        └── Detergentes
+        └── Desinfectantes de superficies
+        └── Desinfectantes de vehículos y equipos
+        └── Desinfectantes pediluvios y rodiluvios
+        └── Equipos de limpieza, pulverización y nebulización
+    └── Control de plagas
+        └── Rodenticidas / raticidas
+        └── Insecticidas
+        └── Acaricidas
+        └── Larvicidas
+        └── Repelentes
+        └── Trampas y sistemas de captura
+        └── Monitorización de plagas
+    └── Tratamiento del agua
+        └── Productos para desinfección del agua
+        └── Productos para limpieza de circuitos
+        └── Equipos de dosificación y tratamiento
+    └── Barreras sanitarias
+        └── Pediluvios, rodiluvios y arcos sanitarios
+        └── Duchas y vestuarios sanitarios
+        └── Equipos de protección individual
+        └── Control de accesos y zonificación
+        └── Material de muestreo y vigilancia sanitaria
+    └── Otros productos de bioseguridad
+
+Alimentos
+    └── Alimentos completos
+    └── Alimentos complementarios
+    └── Alimentos dietéticos
+    └── Concentrados
+    └── Premezclas
+    └── Correctores vitamínico-minerales
+    └── Materias primas
+        └── Cereales y derivados
+        └── Harinas y fuentes proteicas vegetales
+        └── Proteínas de origen animal autorizadas
+        └── Aceites y grasas
+        └── Forrajes, fibras y coproductos fibrosos
+        └── Subproductos agroindustriales
+        └── Minerales, sales y fosfatos
+        └── Otras materias primas
+    └── Otros alimentos
+
+Servicios
+    └── Consultoría técnica
+    └── Servicios veterinarios
+    └── Laboratorios y análisis
+        └── Análisis de alimentos y materias primas
+        └── Análisis de agua
+        └── Diagnóstico microbiológico y molecular
+        └── Analítica NIR
+        └── Otros análisis
+    └── Ingeniería y proyectos
+    └── Instalación y montaje
+    └── Mantenimiento
+    └── Servicios de reproducción y genética
+    └── Formación
+    └── Certificación y auditoría
+    └── Logística especializada
+    └── Gestión ambiental
+    └── Otros servicios
+
+Otros
+    └── Otros productos
+
+REGLAS CONDICIONALES DE ESPECIES
+- Avicultura > Pollos de engorde: habilitar Broilers y Pollos de crecimiento lento. Fases opcionales: inicio, crecimiento, finalización.
+- Avicultura > Gallinas ponedoras: habilitar recría, prepuesta y puesta cuando sean pertinentes.
+- Avicultura > Reproductoras: habilitar recría y reproducción.
+- Avicultura > Pavos, Patos, Ocas, Perdices, Aves ornamentales: mostrar el segmento elegido sin imponer fases propias de broilers.
+- Porcino > Hembras reproductoras: habilitar nulíparas, gestación, lactación cuando corresponda.
+- Porcino > Machos reproductores: habilitar reproducción.
+- Porcino > Lechones: habilitar lactancia, transición y posdestete cuando corresponda.
+- Porcino > Cebo / Engorde: habilitar crecimiento y acabado.
+- Porcino > Razas autóctonas: permitir raza específica y orientación productiva.
+- Bovino > Vacuno de leche: habilitar terneras, recría, lactación, secado según producto.
+- Bovino > Vacuno de carne: habilitar cría, recría, engorde según producto.
+- Ovino y Caprino: distinguir leche, carne y razas autóctonas; habilitar recría, reproducción, lactación o engorde según corresponda.
+- Acuicultura: Tilapias, Camarones, Salmón; habilitar etapa larvaria/alevín/juvenil/engorde únicamente cuando corresponda a la especie.
+- Cunicultura: Conejos para carne y Conejos para piel; habilitar reproducción, crecimiento o engorde si procede.
+- Los segmentos y fases adicionales son sugerencias para formularios, no nuevas categorías obligatorias del árbol original.
+
+REGLAS CONDICIONALES POR FAMILIA Y TIPO
+
+GENÉTICA
+- Animales y líneas genéticas: especie, orientación productiva, línea/raza, sexo, edad, índice genético, parámetros de rendimiento y sanidad declarada.
+- Avicultura: según línea, rendimiento de puesta, conversión alimenticia, ganancia diaria, viabilidad, edad objetivo; no imponer todos a todas las aves.
+- Porcino: prolificidad, nacidos vivos, crecimiento, conversión, características de canal según línea y segmento.
+- Bovino/Ovino/Caprino: índices de leche o carne, fertilidad, genealogía y evaluaciones genéticas disponibles.
+- Semen: especie, raza/línea, tipo de dosis, concentración, conservación, fertilidad declarada.
+- Embriones y ovocitos: especie, estadio, método de conservación, trazabilidad.
+- Huevos fértiles: especie avícola, línea, edad del lote, condiciones de conservación, incubabilidad declarada.
+- Material genético acuícola: especie, origen, estadio, rendimiento y controles sanitarios.
+- Tecnologías reproductivas: método, compatibilidad por especie, consumibles, precisión y requisitos de instalación.
+
+EQUIPAMIENTO
+- Construcción e instalaciones: especie, tipo de alojamiento, capacidad de animales, dimensiones, materiales, superficie, necesidades de instalación.
+- Aviarios, nidales y gallineros móviles: ofrecer principalmente en avicultura; nidales especialmente ponedoras/reproductoras.
+- Parideras y maternidad: ofrecer principalmente en porcino; dimensiones, plazas, regulación, calefacción y bienestar.
+- Corrales, boxes y cubículos: ofrecer en especies pertinentes; plazas, dimensiones, materiales.
+- Comederos: capacidad, animales por unidad, material, distribución, ajuste y limpieza; adaptar opciones a especie.
+- Bebederos: caudal, presión, número de animales, material y sistema de limpieza.
+- Sistemas automáticos de alimentación: capacidad, precisión de dosificación, alimentación seca/líquida, sensores y conectividad.
+- Ventilación: caudal, presión, potencia, eficiencia, dimensiones y control; no depender exclusivamente de especie.
+- Calefacción/refrigeración: potencia, consumo, superficie/capacidad atendida, control y rango térmico.
+- Sensores y software: parámetros medidos, precisión, integración, conectividad, licencias y alertas.
+- Ordeño y almacenamiento de leche: mostrar principalmente para bovino, ovino y caprino de leche; capacidad, rendimiento, pulsación, limpieza, frío y conectividad.
+- Recogida/clasificación de huevos: mostrar en avicultura, especialmente ponedoras; huevos/hora, precisión, roturas, trazabilidad.
+- Residuos y purines: capacidad, rendimiento, consumo, tecnología, requisitos ambientales.
+
+FÁBRICAS DE ALIMENTOS
+- No obligar a seleccionar una especie si el equipo es transversal; permitir «multiespecie / no depende de especie».
+- Molinos: rendimiento (t/h), granulometría, potencia, consumo, tipo de molienda.
+- Mezcladoras: capacidad, homogeneidad, tiempo de mezcla, potencia.
+- Dosificadoras: precisión, rango de dosificación, caudal, compatibilidad de ingredientes.
+- Granulación y extrusión: capacidad, diámetro de pellet, temperatura, potencia, proceso.
+- Silos: volumen, materiales, descarga, sensores y seguridad.
+- Control de calidad/software: métodos, parámetros, conectividad, automatización.
+
+INCUBACIÓN
+- Aplicable a aves; seleccionar tipo de ave y, si procede, línea y tamaño de huevo.
+- Incubadoras/nacedoras: capacidad, especie/huevo, rango térmico, humedad, ventilación, volteo, consumo, automatización.
+- Sexado: tecnología, momento de sexado, precisión declarada, capacidad/hora, especie compatible.
+- Vacunación in-ovo: especies compatibles, capacidad/hora, rango de huevos, requisitos de vacuna y bioseguridad.
+- Manejo/transporte de pollitos: capacidad, temperatura, ventilación, dimensiones, materiales.
+
+PROCESAMIENTO
+- Especie y producto procesado condicionan equipos; no ofrecer desplumado para porcino o bovino.
+- Recepción/aturdimiento: especie, animales/hora, capacidad, sistema, parámetros de bienestar y seguridad.
+- Escaldado y desplumado: principalmente avicultura; aves/hora, temperatura, consumo, especie/tamaño.
+- Evisceración, corte y despiece: especie, rendimiento/hora, precisión, formato de salida, automatización.
+- Refrigeración/cadena de frío: capacidad, rango de temperatura, consumo, tiempo de enfriamiento.
+- Envasado: formatos, materiales, velocidad, atmósfera, etiquetado y trazabilidad.
+
+NUTRICIÓN
+- Campos generales: especie/segmento, composición, presentación, forma de incorporación, dosis, objetivos funcionales, estabilidad, documentación y países.
+- Probióticos: cepa(s), identificación, UFC por unidad, forma, dosis por especie, estabilidad, evidencia.
+- Prebióticos: ingrediente activo, pureza/concentración, mecanismo, dosis, evidencia.
+- Postbióticos y simbióticos: componentes, proceso, concentración, dosis, evidencia.
+- Enzimas: clase de enzima, sustrato, actividad y unidad normalizada, dosis, estabilidad térmica, pH.
+- Acidificantes: ácidos activos, concentración, forma, dosis, capacidad acidificante si se declara.
+- Adsorbentes/biotransformadores: micotoxinas objetivo, mecanismo, capacidad/eficacia según ensayo, dosis, evidencia.
+- Aminoácidos: identidad, concentración/pureza, forma química, digestibilidad declarada, inclusión.
+- Vitaminas/minerales: compuesto, concentración, forma, biodisponibilidad declarada, dosis.
+- Fitogénicos: extractos/compuestos, estandarización, concentración, presentación, dosis.
+- Antioxidantes: principio(s) activo(s), concentración, matriz objetivo, dosis y estabilidad.
+- Pigmentantes: pigmento, concentración, escala de color si procede, dosis, estabilidad.
+- Aditivos tecnológicos: función tecnológica, matriz, concentración, dosis y parámetros de eficacia.
+- Objetivo funcional NO equivale automáticamente a indicación terapéutica ni enfermedad diana.
+
+FÁRMACOS
+- Principio activo, concentración, forma farmacéutica, especie autorizada, indicación, vía, posología, duración, contraindicaciones, tiempo de espera por especie/producto, país, registro y documentación.
+- Enfermedad diana: mostrar cuando proceda como campo vinculado a especie, sin reemplazar indicación autorizada.
+- Antibióticos: familia farmacológica, espectro/indicaciones aprobadas, prescripción y advertencias.
+- Antiparasitarios: parásito objetivo, interno/externo, vía, pauta y tiempo de espera.
+- Antiinflamatorios: clase, indicación, vía, dosis, precauciones.
+- Reproductivos/hormonales: finalidad, especie, pauta, restricciones.
+- No sugerir dosis ni indicaciones no suministradas por la ficha oficial.
+
+VACUNAS
+- Tipo de vacuna, antígenos/cepas, especie autorizada, enfermedad diana, vía, edad de aplicación, primovacunación, revacunación, inicio/duración de inmunidad, conservación, presentación, país y registro.
+- Autovacunas: especie, patógeno objetivo, alcance específico y condiciones de disponibilidad.
+- Multivalentes: permitir varias enfermedades/antígenos en una misma ficha.
+- Mostrar enfermedades filtradas por especie; evitar listas de enfermedades porcinas en rumiantes.
+- No tratar las enfermedades como ramas fijas del árbol de productos.
+
+BIOSEGURIDAD
+- Productos químicos: sustancia(s) activa(s), concentración, objetivo de uso, dilución, tiempo de contacto, superficie/matriz, eficacia declarada, seguridad, ficha de datos y autorizaciones por país.
+- Control de plagas: organismo objetivo, método, principio activo cuando aplique, presentación, aplicación, seguridad.
+- Tratamiento de agua: finalidad, caudal, dosis o capacidad, parámetros de agua y compatibilidad.
+- Barreras sanitarias: capacidad, dimensiones, materiales, consumibles y modo de operación.
+- Especie opcional si el producto se aplica a instalaciones y no directamente al animal.
+
+ALIMENTOS
+- Tipo de alimento, especie/segmento, forma física, ingredientes, composición analítica, energía con sistema/unidad, proteína, fibra, grasa, humedad, minerales, vitaminas, dosis/ración y presentación.
+- Alimentos completos: nutrientes y fase productiva específicos; ponedoras: calcio/fósforo; lechones: digestibilidad y perfil aminoacídico si disponibles; rumiantes: fibra y sistema energético apropiado.
+- Complementarios, dietéticos y concentrados: finalidad, proporción de inclusión, modo de empleo y restricciones declaradas.
+- Premezclas/correctores: componentes activos, concentración, dosis de inclusión, compatibilidades.
+- Materias primas: origen, composición, humedad, proteína, fibra, granulometría y trazabilidad según materia.
+- No mezclar aditivos de nutrición con alimentos completos: categorías distintas.
+
+SERVICIOS
+- No exigir ficha físico-química; campos: servicio prestado, especies atendidas, ámbito geográfico, modalidad presencial/remota, entregables, plazos, certificaciones, metodología y contacto.
+- Laboratorios: tipo de análisis, matriz, método, acreditación, plazo de entrega, formato de resultados.
+- Ingeniería: tipo de instalación, especies, alcance, capacidad, fases del proyecto.
+- Servicios veterinarios: especialidad, especies, alcance, cobertura, requisitos regulatorios.
+- Formación: modalidad, temario, duración, idiomas, acreditación.
+
+OTROS
+- Mostrar ficha básica y un módulo de atributos configurables administrado; no forzar atributos inventados.
+
+COMPORTAMIENTO DEL PROTOTIPO
+1. Seleccionar tipo de producto mediante árbol desplegable con búsqueda; mostrar nombres cortos.
+2. Seleccionar una o varias especies y, para cada una, sus segmentos; no preseleccionar segmentos automáticamente.
+3. Si la categoría es transversal (fábricas, bioseguridad, servicios), permitir «no depende de especie».
+4. Mostrar bloque común, bloque técnico del tipo y tarjetas/pestañas de aplicación por especie.
+5. Mostrar enfermedad diana solo si es relevante; filtrar por especie y permitir varias enfermedades.
+6. Permitir previsualización de ficha pública y vista de comparación de atributos homogéneos.
+7. Validar números, unidades, rangos, obligatoriedad condicional y documentos.
+8. Conservar los datos al cambiar temporalmente de selección, pero no incluir los incompatibles en la publicación.
+9. Separar «nombre corto de navegación» de «nombre técnico completo»; no mostrar códigos al usuario.
+10. No inventar productos comerciales, registros, eficacias, indicaciones ni dosis.
+
+EJEMPLOS DE PRUEBA
+- Nutrición > Salud digestiva > Probióticos + Porcino > Lechones + Avicultura > Pollos de engorde: una ficha, dos aplicaciones, dosis separadas.
+- Equipamiento > Producción y manejo > Sistemas de ordeño + Bovino > Vacuno de leche: mostrar capacidad, rendimiento y conectividad; no campos de vacunas.
+- Vacunas > Vacunas por enfermedad + Avicultura > Gallinas ponedoras: enfermedades aviares y pauta; no enfermedades porcinas.
+- Alimentos > Alimentos completos + Avicultura > Gallinas ponedoras: composición y calcio/fósforo.
+- Fábricas de alimentos > Molinos: permitir sin especie; mostrar rendimiento, granulometría y potencia.
+
+FIN DEL DOCUMENTO

@@ -13,6 +13,20 @@
 - **Enfermedades:** filtro independiente (`enfermedades`), filtrado por las especies elegidas.
 - **Aviso:** los atributos técnicos son una propuesta funcional pendiente de validación técnica y regulatoria; deben poder editarse desde administración.
 
+## Árbol condicional (18/10/2026)
+
+Fuente: `arbol_condicional.txt` (documento de entrada). Lo aplicado en `producto.json` y en el prototipo:
+- **Orden:** primero las especies de destino (decisión del producto, aunque el documento proponía primero el tipo) → tipo de producto → mercados → identidad → datos técnicos → aplicación por especie → enfermedad diana → variantes → documentos → revisión.
+- **«No depende de especie»** (`transversales`): fábricas de alimentos, bioseguridad, servicios, climatización y automatización. Si el tipo elegido no es transversal, se piden especies.
+- **Pertinencia** (`pertinencia`): las categorías que solo tienen sentido para algunas especies o segmentos (incubación y desplumado → aves; aviarios y gallineros → avicultura; nidales → ponedoras y reproductoras; parideras → porcino; ordeño → vacuno, ovino y caprino de leche; embuchado → patos y ocas) no se ofrecen si no se eligió esa especie.
+- **Aplicación por especie** (`aplicacion_familias`, atributos `por_especie`): en nutrición, fármacos, vacunas y alimentos hay una ficha comercial y una tarjeta por especie o segmento con fases (`fases`), dosis, indicación, tiempo de espera, edad o pauta, y un documento propio. Los segmentos «Razas autóctonas» piden raza y orientación productiva.
+- **Datos según especie** (`visible_when`): por ejemplo, en el pienso completo calcio y fósforo solo con ponedoras o reproductoras, lisina digestible con lechones y sistema energético con rumiantes. En genética, los parámetros cambian por especie.
+- **Plantillas nuevas:** comederos, bebederos, alimentación automática, parideras, ordeño y huevos. Además, forma farmacéutica y contraindicaciones en fármacos, y presentación, primovacunación y revacunación en vacunas.
+- **Cambiar una selección no borra datos:** lo que deja de aplicar se oculta, no se publica ni se exporta, y se puede descartar.
+- **Nombres cortos** en los menús (`corto` en `categorias`), con el nombre completo como ayuda. Nunca se muestran códigos.
+- **Ficha pública y comparador:** la vista previa solo muestra lo rellenado que aplica. El comparador usa la misma plantilla y la misma especie, y pone «No informado» cuando falta un dato.
+- **No inventar:** los ejemplos del prototipo son los 5 casos de prueba del documento, solo con selecciones y nombres «(ejemplo)», sin dosis, registros, eficacias ni indicaciones.
+
 ---
 
 # Modelo de producto por familia
