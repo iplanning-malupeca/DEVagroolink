@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta de producto · Enfermedad diana: obligatoria en vacunas, filtrada por especie</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+/* Layout: barra superior fija · formulario 70 % + lateral 30 % (progreso, ayuda y vista previa) · una columna en móvil */
+:root{
+  --bg:#F4F6F9; --surface:#FFFFFF; --surface2:#F7F9FC; --fg:#17231D; --muted:#56615B; --line:#E1E6EC; --line2:#D2DAE3;
+  --accent:#1D4E89; --accent-ink:#FFFFFF; --soft:#E9F0F9; --soft2:#C8D8EE; --lila:#4B3BA6; --lime:#B5D334;
+  --ok:#0E5A3A; --ok-bg:#EEF6EE; --warn:#7A4B00; --warn-bg:#FFF4E0; --err:#A3271B; --err-bg:#FDECEA;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+
+
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.4}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{z-index:10;background:var(--surface);border-bottom:1px solid var(--line);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:18px;letter-spacing:-.01em}.logo b{color:var(--accent)}
+.crumb{color:var(--muted);font-size:13px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb strong{color:var(--fg);font-weight:500}
+.saved{font-size:12px;color:var(--ok);display:flex;align-items:center;gap:5px;white-space:nowrap}
+.demo{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.demo select{height:32px;border:1px solid var(--line2);border-radius:8px;background:var(--surface);padding:0 8px;font-size:12.5px}
+.wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:22px;max-width:1320px;margin:0 auto;padding-block:22px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}.side{order:-1}.side .help,.side .prevbox{display:none}.steps{flex-direction:row!important;overflow-x:auto;gap:6px!important}.steps button{white-space:nowrap}.steps .lbl2{display:none}}
+.main{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:600px){.main{padding:18px 16px}}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}
+h1{margin:4px 0 0;font-size:26px;font-weight:700;letter-spacing:-.01em;text-wrap:balance;line-height:1.2}
+.sub{margin:6px 0 0;color:var(--muted);font-size:13.5px;max-width:68ch}
+.sec{display:flex;flex-direction:column;gap:10px}
+.sec>h2{margin:0;font-size:15px;font-weight:600;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--muted);font-weight:400}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field>label,.flabel{font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.req{color:var(--err)}
+.star{color:#C98A12;font-size:12px}
+.badge{font-size:10.5px;font-weight:600;border-radius:999px;padding:1px 7px;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.inp,.ta,.sel{height:38px;border:1px solid var(--line2);border-radius:10px;padding:0 11px;background:var(--surface);width:100%;min-width:0}
+.ta{height:auto;padding:9px 11px;resize:vertical;line-height:1.4}
+.inp:disabled{background:var(--surface2);color:var(--muted)}
+.unit{display:flex;gap:6px;align-items:center}.unit .inp{flex:1}
+.unit .u{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.unit select{height:38px;border:1px solid var(--line2);border-radius:10px;background:var(--surface);padding:0 6px;max-width:130px}
+.fx{display:flex;gap:10px;font-size:11.5px;color:var(--muted)}
+.fx button{border:0;background:none;padding:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:11.5px}
+.fx button.on{color:var(--accent);font-weight:600;text-decoration:none}
+.ex{font-size:11.5px;color:var(--muted)}
+.errtxt{font-size:12px;color:var(--err)}
+.field.bad .inp,.field.bad .ta{border-color:var(--err)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-size:12.5px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sm{height:28px;font-size:12px;padding:0 10px}
+.chip.soft.on{background:var(--soft);color:var(--accent);border-color:var(--soft2)}
+.chip .x{opacity:.7}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:var(--surface);height:36px;padding:0 16px;cursor:pointer}
+.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:500}
+.fams{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px}
+.fam{border:1px solid var(--line2);border-radius:14px;background:var(--surface);padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;min-height:64px}
+.fam:hover{border-color:var(--accent)}
+.fam.on{border:1.5px solid var(--accent);background:var(--soft)}
+.fam .c{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.fam .l{font-size:13.5px;font-weight:600}
+.groups{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface2)}
+.group{display:flex;flex-direction:column;gap:6px}
+.group .gl{font-size:12.5px;font-weight:600;color:var(--muted)}
+.results{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.results button{border:0;border-top:1px solid var(--line);background:var(--surface);text-align:left;padding:9px 12px;cursor:pointer;display:flex;flex-direction:column;gap:1px}
+.results button:first-child{border-top:0}
+.results button:hover{background:var(--soft)}
+.results .p{font-size:11.5px;color:var(--muted)}
+.picked{border:1.5px solid var(--accent);background:var(--soft);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.picked .path{font-size:12px;color:var(--muted)}
+.picked .name{font-size:17px;font-weight:600}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;font-weight:500;border-radius:999px;padding:3px 10px;background:var(--surface);border:1px solid var(--soft2);color:var(--accent)}
+.tag.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
+.note{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.4}
+.note.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
+.note.e{background:var(--err-bg);border-color:transparent;color:var(--err)}
+.note strong{color:var(--fg)}
+.note.w strong,.note.e strong{color:inherit}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line)}
+.tbl td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;padding:4px 8px}
+.btn{height:40px;padding:0 16px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);cursor:pointer;font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btn:hover{border-color:var(--accent)}
+.btnp{height:42px;padding:0 20px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp:disabled{opacity:.45;cursor:not-allowed}
+.link{border:0;background:none;color:var(--accent);cursor:pointer;padding:0;font-weight:500}
+.nav{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:16px;margin-top:4px;flex-wrap:wrap}
+.nav .sp{flex:1}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.steps button{width:100%;border:0;background:none;text-align:left;padding:7px 8px;border-radius:9px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px}
+.steps button:hover{background:var(--surface2)}
+.steps button[aria-current="step"]{background:var(--soft);color:var(--accent);font-weight:600}
+.dot{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex:none;color:var(--muted)}
+.dot.ok{background:var(--ok);border-color:var(--ok);color:var(--surface)}
+.dot.cur{border-color:var(--accent);color:var(--accent)}
+.dot.miss{border-color:#C98A12;color:#C98A12}
+.prog{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:10px}.prog span{display:block;height:100%;background:var(--accent)}
+.help p{margin:6px 0 0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.prev{display:flex;flex-direction:column;gap:10px}
+.pimg{aspect-ratio:16/9;max-width:100%;border-radius:12px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:22px}
+.pname{font-size:16px;font-weight:600;line-height:1.25}
+.ppath{font-size:11.5px;color:var(--muted)}
+.kv{display:flex;justify-content:space-between;gap:10px;font-size:12px;border-top:1px solid var(--line);padding-top:6px}
+.kv span:first-child{color:var(--muted)}
+.kv span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.pcta{height:36px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.sumrow{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:12px;align-items:start;padding:10px 0;border-top:1px solid var(--line);font-size:13px}
+@media (max-width:600px){.sumrow{grid-template-columns:minmax(0,1fr) auto}.sumrow .v{grid-column:1/-1;grid-row:2}}
+.sumrow .k{color:var(--muted)}
+.sumrow .v{min-width:0}
+.miss{color:var(--warn);font-weight:500}
+.file{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:8px;background:var(--surface2);border:1px solid var(--line);font-size:12px}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap}
+.thumb{width:92px;height:70px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--accent);font-weight:600;position:relative}
+.thumb .main{position:absolute;left:6px;top:6px;font-size:9.5px;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 6px;font-weight:600;border:0}
+.addimg{width:92px;height:70px;border-radius:10px;border:1.5px dashed var(--line2);background:var(--surface);cursor:pointer;color:var(--muted);font-size:12px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:30;max-width:calc(100% - 32px)}
+.modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
+.modal pre,.modal textarea{margin:0;flex:1;min-height:240px;overflow:auto;font-size:11.5px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px;white-space:pre;font-family:ui-monospace,Menlo,monospace}
+@media (prefers-reduced-motion:no-preference){.chip,.btn,.fam{transition:border-color .12s,background .12s}}
+
+</style>
+</helmet>
+<div style="width: 1280px; height: 1200px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
+  <span class="logo">agroo<b>link</b></span>
+  <span class="crumb">Productos › <strong id="crumbName">AviVac ND (ejemplo)</strong></span>
+  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 19:45</span>
+  <label class="demo" for="demoSel">Ejemplo
+    <select id="demoSel">
+      <option value="">Elegir…</option>
+      <option value="vitamina">Hy-D® · vitamina (DSM-Firmenich)</option>
+      <option value="ventilador">Ventilador de túnel (Big Dutchman)</option>
+      <option value="vacuna">Vacuna Newcastle (sanidad)</option>
+      <option value="laboratorio">Análisis de micotoxinas (servicio)</option>
+      <option value="cero">Empezar de cero</option>
+    </select>
+  </label>
+  <button class="btn" type="button" id="salir">Guardar y salir</button>
+</header><div class="wrap">
+  <main class="main" id="main"><div><span class="eb">Paso 5 de 8 · Enfermedad diana</span><h1>¿Frente a qué enfermedades?</h1><p class="sub">Es un filtro aparte de la categoría.</p></div><div class="note w"><span><strong>Obligatorio para vacunas.</strong> Indica al menos una enfermedad diana autorizada.</span></div><div class="chips"><button type="button" class="chip sm on" data-act="enf|ENF-034">Newcastle <span class="x">×</span></button></div><div class="field"><label for="enfq">Buscar enfermedad <span class="hint">· solo de las especies elegidas: Avicultura</span></label><input class="inp" id="enfq" type="search" value="" placeholder="Newcastle, PRRS, mastitis…" autocomplete="off"></div><div class="field"><span class="flabel">Digestivas</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-010">Colibacilosis</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-039">Salmonelosis</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-009">Coccidiosis</button></div></div><div class="field"><span class="flabel">Parasitarias</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-009">Coccidiosis</button></div></div><div class="field"><span class="flabel">Respiratorias</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-005">Bronquitis infecciosa aviar</button><button type="button" class="chip sm soft on" aria-pressed="true" data-act="enf|ENF-034">Newcastle</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-023">Influenza aviar</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-012">Coriza aviar</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-025">Laringotraqueítis infecciosa</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-031">Micoplasmosis</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-030">Metapneumovirus aviar</button></div></div><div class="field"><span class="flabel">Reproductivas</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-040">Síndrome de caída de puesta (EDS)</button></div></div><div class="field"><span class="flabel">Nerviosas</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-016">Enfermedad de Marek</button><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-014">Encefalomielitis aviar</button></div></div><div class="field"><span class="flabel">Inmunitarias</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-019">Gumboro</button></div></div><div class="field"><span class="flabel">Cutáneas</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-043">Viruela aviar</button></div></div><div class="field"><span class="flabel">Musculoesqueléticas</span><div class="chips"><button type="button" class="chip sm soft" aria-pressed="false" data-act="enf|ENF-003">Artritis vírica por reovirus</button></div></div><div class="nav"><button type="button" class="btn" data-act="atras">Atrás</button><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
+  <aside class="side" id="side"><div class="card"><strong style="font-size:13px">Tu producto · 71 %</strong><div class="prog"><span style="width:71%"></span></div><div style="margin-top:10px"><ol class="steps"><li><button type="button" data-act="ir|categoria"><span class="dot ok">✓</span><span class="lbl2">Categoría</span></button></li><li><button type="button" data-act="ir|aplicacion"><span class="dot ok">✓</span><span class="lbl2">Especies y mercados</span></button></li><li><button type="button" data-act="ir|identidad"><span class="dot ok">✓</span><span class="lbl2">Identidad</span></button></li><li><button type="button" data-act="ir|tecnicos"><span class="dot ok">✓</span><span class="lbl2">Datos técnicos</span></button></li><li><button type="button" data-act="ir|enfermedad" aria-current="step"><span class="dot ok">✓</span><span class="lbl2">Enfermedad diana</span></button></li><li><button type="button" data-act="ir|variantes"><span class="dot">6</span><span class="lbl2">Variantes</span></button></li><li><button type="button" data-act="ir|documentos"><span class="dot">7</span><span class="lbl2">Imágenes y documentos</span></button></li><li><button type="button" data-act="ir|revision"><span class="dot">8</span><span class="lbl2">Revisión</span></button></li></ol></div></div><div class="card help"><strong style="font-size:13px">Enfermedad diana</strong><p>Solo si aplica: vacunas (obligatorio), fármacos, bioseguridad y algunos aditivos.</p></div><div class="card prevbox"><strong style="font-size:13px">Vista previa</strong><div class="prev" style="margin-top:10px"><div class="pimg">AVI</div><span class="ppath">Vacunas por enfermedad</span><span class="pname">AviVac ND (ejemplo)</span><span class="hint">Vacuna viva frente a la enfermedad de Newcastle para pollitos de un día y refuerzos.</span><div class="tags"><span class="tag">Avicultura</span></div><div class="kv"><span>Antígenos</span><span>Virus de la enfermedad de Newcastle</span></div><div class="kv"><span>Cepa</span><span>La Sota</span></div><div class="kv"><span>Tecnología</span><span>Viva atenuada</span></div><div class="kv"><span>Mercados</span><span>2 países</span></div><span class="pcta">Solicitar información →</span></div></div></aside>
+</div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
