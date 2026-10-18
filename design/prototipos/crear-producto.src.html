@@ -207,17 +207,6 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
   <span class="logo">agroo<b>link</b></span>
   <span class="crumb">Productos › <strong id="crumbName">Nuevo producto</strong></span>
   <span class="saved" id="saved" aria-live="polite"></span>
-  <label class="demo" for="demoSel">Ejemplo
-    <select id="demoSel">
-      <option value="">Elegir…</option>
-      <option value="probiotico">Probiótico · lechones y pollos de engorde</option>
-      <option value="ordeno">Sistema de ordeño · vacuno de leche</option>
-      <option value="vacuna">Vacuna · gallinas ponedoras</option>
-      <option value="pienso">Pienso completo · gallinas ponedoras</option>
-      <option value="molino">Molino · sin especie</option>
-      <option value="cero">Empezar de cero</option>
-    </select>
-  </label>
   <button class="btn" type="button" id="salir">Guardar y salir</button>
 </header>
 <div class="wrap">
@@ -230,7 +219,7 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
 <script>
 (function(){
 const M = JSON.parse(document.getElementById('modelo').textContent);
-const KEY = 'agroolink-alta-producto-v4';
+const KEY = 'agroolink-alta-producto-v5';
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const num = s => { const n = parseFloat(String(s).replace(/\s/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.')); return isNaN(n) ? null : n; };
 
@@ -326,7 +315,10 @@ const DEMOS = {
   pienso: () => ej({ paso: 'tecnicos', cat: 'C10-01', especies: { Avicultura: { modo: 'solo', sel: ['Gallinas ponedoras'] } }, ident: { nombre: 'Pienso de puesta (ejemplo)' }, visto: { especies: 1, categoria: 1 } }),
   molino: () => ej({ paso: 'tecnicos', cat: 'C03-03', sinEspecie: true, ident: { nombre: 'Molino (ejemplo)' }, visto: { especies: 1, categoria: 1 } })
 };
-if (!S) S = DEMOS.probiotico();
+// Sin ejemplos: arranca vacío. (Solo para capturas locales: ?ejemplo=probiotico|ordeno|vacuna|pienso|molino)
+const qEj = (location.search.match(/[?&]ejemplo=(\w+)/) || [])[1];
+if (qEj && DEMOS[qEj]) S = DEMOS[qEj]();
+if (!S) S = nuevo();
 if (!S.apl) S.apl = {};
 if (!S.fotos) S.fotos = Array.from({ length: S.imgs || 0 }, (_, i) => ({ src: null, nombre: 'Foto ' + (i + 1) }));
 if (!S.videos) S.videos = [];
