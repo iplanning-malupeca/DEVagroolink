@@ -447,7 +447,7 @@
    "page": "comerciales",
    "title": "K1 · Tipo de empresa: equipo comercial propio",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "ComZonas.dc.html": {
@@ -903,7 +903,7 @@
    "page": "fabdist",
    "title": "D1 · Tipo de empresa",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "FabTipoEspecies.dc.html": {
@@ -911,7 +911,7 @@
    "page": "fabdist",
    "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "FabTipoEspeciesSolo.dc.html": {
@@ -919,7 +919,7 @@
    "page": "fabdist",
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "FabTipoEspeciesTodas.dc.html": {
@@ -927,7 +927,7 @@
    "page": "fabdist",
    "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "FabTipoMercados.dc.html": {
@@ -935,7 +935,7 @@
    "page": "fabdist",
    "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»",
    "w": 1280,
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "FabTipoRama.dc.html": {
@@ -943,7 +943,7 @@
    "page": "fabdist",
    "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
    "w": 1280,
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "FabTipoVacio.dc.html": {
@@ -951,7 +951,7 @@
    "page": "fabdist",
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2458,7 +2458,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1a · Tipo de empresa: aún sin especies, rama ni mercados",
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "ComTipoEspeciesTodas.dc.html": {
@@ -2466,7 +2466,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1b-1 · Especies · modo «Todas» (por defecto)",
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "ComTipoEspecies.dc.html": {
@@ -2474,7 +2474,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1b · Especies · modo «Excluir»: desmarcar = excluida",
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "ComTipoEspeciesSolo.dc.html": {
@@ -2482,7 +2482,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1b-3 · Especies · modo «Solo algunas»: ponedoras y reproductoras",
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "ComTipoRama.dc.html": {
@@ -2490,7 +2490,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "ComTipoMercados.dc.html": {
@@ -2498,7 +2498,7 @@
    "h": 940,
    "page": "comerciales",
    "title": "K1d · Editar mercados: inclusiones y «Excluir» (Francia sin Córcega)",
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "ComCabecera.dc.html": {
@@ -2524,6 +2524,22 @@
    "title": "KC-s · Cabecera vista por el superadmin: datos del CRM editables",
    "x": 2720,
    "y": 1340
+  },
+  "ComVerifica.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "title": "K0b · Confirma tu email de empresa (código de 6 cifras)",
+   "x": 1360,
+   "y": 0
+  },
+  "FabVerifica.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "title": "D0b · Confirma tu email de empresa (código de 6 cifras)",
+   "x": 1360,
+   "y": 0
   }
  },
  "createdOnFiles": {
@@ -2657,7 +2673,7 @@
    "kind": "title1",
    "maxW": 10800,
    "page": "comerciales",
-   "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a datos del CRM · K1a/K1 tipo · a su derecha, los editores de especies, rama y mercados",
+   "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a datos del CRM · K0b verificar email · K1a/K1 tipo · a su derecha, los editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -2747,7 +2763,7 @@
    "kind": "title1",
    "maxW": 8000,
    "page": "fabdist",
-   "text": "1 · Empresa y tipo — D0a empresa del CRM · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
+   "text": "1 · Empresa y tipo — D0a empresa del CRM · D0b verificar email · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3196,6 +3212,7 @@
   "CfgFichaLocal.dc.html",
   "CfgDondeComprar.dc.html",
   "FabCRMVarias.dc.html",
+  "FabVerifica.dc.html",
   "FabTipoVacio.dc.html",
   "FabTipo.dc.html",
   "FabTipoEspeciesTodas.dc.html",
@@ -3235,6 +3252,7 @@
   "CompOtroTipo.dc.html",
   "CompSolicitar.dc.html",
   "ComCRM.dc.html",
+  "ComVerifica.dc.html",
   "ComTipoVacio.dc.html",
   "ComTipo.dc.html",
   "ComTipoEspeciesTodas.dc.html",
