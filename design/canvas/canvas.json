@@ -2019,7 +2019,7 @@
    "page": "prodfab",
    "x": 2720,
    "y": 0,
-   "title": "PA3 · Si eliges importar: Excel con muchos productos a la vez"
+   "title": "PA3 · Importaciones (solo superadmin): carga masiva del catálogo por Excel; actualiza por referencia interna"
   },
   "ProyArchivados.dc.html": {
    "h": 900,
@@ -2579,7 +2579,7 @@
    "page": "prodfab",
    "x": 1360,
    "y": 0,
-   "title": "PA2 · «Nuevo producto»: crear la ficha, importar o duplicar"
+   "title": "PA2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar"
   },
   "PrdFabMercados.dc.html": {
    "w": 1280,
@@ -2619,7 +2619,7 @@
    "page": "prodcom",
    "x": 1360,
    "y": 0,
-   "title": "PC2 · «Nuevo producto»: crear la ficha, importar o duplicar"
+   "title": "PC2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar"
   },
   "PrdComMercados.dc.html": {
    "w": 1280,
@@ -3031,7 +3031,7 @@
   },
   "ProdEdBloques.dc.html": {
    "w": 1280,
-   "h": 1690,
+   "h": 1790,
    "page": "productos",
    "x": 2720,
    "y": 4460,
@@ -3039,7 +3039,7 @@
   },
   "ProdEdGuardar.dc.html": {
    "w": 1280,
-   "h": 1690,
+   "h": 1790,
    "page": "productos",
    "x": 4080,
    "y": 4460,
@@ -3079,7 +3079,7 @@
   },
   "ProdEdDesdeRevision.dc.html": {
    "w": 1280,
-   "h": 1110,
+   "h": 1160,
    "page": "productos",
    "x": 10880,
    "y": 4460,
@@ -3659,7 +3659,7 @@
    "kind": "title1",
    "maxW": 6800,
    "page": "prodfab",
-   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importar (o crear la ficha en «011_Alta de producto») → 4 Mercados → 5 Acuerdos de distribución",
+   "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importaciones (solo superadmin: carga masiva por Excel) o crear la ficha en «011_Alta de producto» → 4 Mercados → 5 Acuerdos de distribución",
    "w": 240,
    "x": 0,
    "y": -300

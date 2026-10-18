@@ -106,9 +106,9 @@
    },
    {
     "id": "sku",
-    "label": "Código de producto de la empresa (opcional)",
+    "label": "Referencia interna",
     "type": "text",
-    "help": "Código del producto en el catálogo o ERP de la empresa (SKU). No lo ve el comprador; sirve para actualizar por Excel."
+    "help": "Código del producto en el catálogo o ERP de la empresa (SKU). Opcional. No lo ve el comprador; sirve para buscarlo y para la carga masiva por Excel (Importaciones, solo superadmin), que actualiza por esta referencia."
    },
    {
     "id": "descripcion_corta",

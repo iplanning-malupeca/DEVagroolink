@@ -198,6 +198,26 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
 .caps{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 .cap{display:flex;gap:6px;align-items:center;width:100%}
 .vadd{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.vadd .inp{flex:1;min-width:220px}
+.cat{display:flex;flex-direction:column;gap:10px}
+.prow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface);position:relative}
+.prow .pth{width:64px;height:64px;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--soft2));display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:13px;overflow:hidden}
+.prow .pth img{width:100%;height:100%;object-fit:cover}
+.prow .pn{font-size:16px;font-weight:600}
+.prow .pm{font-size:13px;color:var(--muted)}
+.pacts{display:flex;gap:8px;align-items:center}
+.menu{position:absolute;right:14px;top:58px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(10,20,30,.16);padding:6px;display:flex;flex-direction:column;min-width:300px}
+.menu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;gap:1px;font-weight:500}
+.menu button:hover{background:var(--soft)}
+.menu button small{font-size:12px;color:var(--muted);font-weight:400}
+.blk{border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.blk.open{border:1.5px solid var(--accent)}
+.blkh{display:grid;grid-template-columns:190px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 14px}
+@media (max-width:600px){.blkh{grid-template-columns:minmax(0,1fr) auto}.blkh .v{grid-column:1/-1;grid-row:2}}
+.blkh .k{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.blkb{border-top:1px solid var(--line);padding:14px;display:flex;flex-direction:column;gap:14px}
+.savebar{position:sticky;bottom:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--surface);border-top:1px solid var(--line);padding:12px 0 2px}
+.diffl{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.diffl .old{color:var(--muted);text-decoration:line-through}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:15px;z-index:30;max-width:calc(100% - 32px)}
 .modal{position:fixed;inset:0;background:rgba(10,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .box{background:var(--surface);border-radius:16px;max-width:720px;width:100%;max-height:90%;display:flex;flex-direction:column;gap:12px;padding:18px}
@@ -208,8 +228,8 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;text-wrap
 </helmet>
 <div style="width: 1280px; height: 1050px; position: relative; overflow: hidden; background: #F4F6F9;"><header class="top">
   <span class="logo">agroo<b>link</b></span>
-  <span class="crumb">Productos › <strong id="crumbName">Molino (ejemplo)</strong></span>
-  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 23:04</span>
+  <span class="crumb"><button type="button" class="link" data-act="vista|catalogo">Productos</button> › <strong id="crumbName">Molino (ejemplo)</strong></span>
+  <span class="saved" id="saved" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Guardado 23:40</span>
   <button class="btn" type="button" id="salir">Guardar y salir</button>
 </header><div class="wrap">
   <main class="main" id="main"><div><span class="eb">Paso 1 de 9 · Especies de destino</span><h1>¿Para qué especies es?</h1><p class="sub">Todo producto va ligado a especies. Elige la especie y afina sus producciones si no sirve para todas.</p></div><div class="espgrid"><div class="esplist" role="list"><div class="esprow foco" role="listitem"><button type="button" class="ck on" aria-pressed="true" aria-label="No depende de especie" data-act="sinesp">✓</button><button type="button" class="nm" data-act="sinesp">No depende de especie<small>multiespecie · fábricas, bioseguridad, servicios…</small></button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Avicultura" data-act="esp|Avicultura"></button><button type="button" class="nm" data-act="espfoco|Avicultura" disabled="">Avicultura</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Porcino" data-act="esp|Porcino"></button><button type="button" class="nm" data-act="espfoco|Porcino" disabled="">Porcino</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Bovino" data-act="esp|Bovino"></button><button type="button" class="nm" data-act="espfoco|Bovino" disabled="">Bovino</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Ovino" data-act="esp|Ovino"></button><button type="button" class="nm" data-act="espfoco|Ovino" disabled="">Ovino</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Caprino" data-act="esp|Caprino"></button><button type="button" class="nm" data-act="espfoco|Caprino" disabled="">Caprino</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Acuicultura" data-act="esp|Acuicultura"></button><button type="button" class="nm" data-act="espfoco|Acuicultura" disabled="">Acuicultura</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Cunicultura" data-act="esp|Cunicultura"></button><button type="button" class="nm" data-act="espfoco|Cunicultura" disabled="">Cunicultura</button></div><div class="esprow" role="listitem"><button type="button" class="ck" aria-pressed="false" aria-label="Añadir Otra especie" data-act="esp|Otra especie"></button><button type="button" class="nm" data-act="espfoco|Otra especie" disabled="">Otra especie</button></div><span class="hint" style="padding:6px 8px">Marcar la especie incluye todas sus producciones. Pulsa una especie marcada para afinar.</span></div><div class="note"><span><strong>No depende de especie.</strong> Para equipos o servicios transversales (fábricas de alimentos, bioseguridad de instalaciones, servicios…). Si la categoría que elijas necesita especies, te lo pediremos.</span></div></div><div class="queda"><strong>Quedará:</strong> no depende de especie</div><div class="nav"><span class="sp"></span><button type="button" class="btnp" data-act="seguir">Continuar</button></div></main>
