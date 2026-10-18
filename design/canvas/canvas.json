@@ -517,7 +517,7 @@
   "ComTipo.dc.html": {
    "h": 940,
    "page": "comerciales",
-   "title": "K1 · Tipo de empresa: equipo comercial propio",
+   "title": "K1 · Tipo de empresa: equipo comercial propio · con estatuto",
    "w": 1280,
    "x": 6800,
    "y": 0
@@ -781,7 +781,7 @@
   "DisTipo.dc.html": {
    "h": 940,
    "page": "distmulti",
-   "title": "X1 · Tipo de empresa: distribuidor con marcas propias",
+   "title": "X1 · Tipo de empresa: distribuidor con marcas propias · con estatuto",
    "w": 1280,
    "x": 6800,
    "y": 0
@@ -1069,7 +1069,7 @@
   "FabTipo.dc.html": {
    "h": 940,
    "page": "fabdist",
-   "title": "D1 · Tipo de empresa",
+   "title": "D1 · Tipo de empresa · con estatuto",
    "w": 1280,
    "x": 6800,
    "y": 0
@@ -2432,7 +2432,7 @@
   "SucPagina.dc.html": {
    "h": 940,
    "page": "sucursales",
-   "title": "S5 · Página de la sucursal (lado de Zucami LATAM)",
+   "title": "S5 · Página de la sucursal (lado de Big Dutchman LATAM)",
    "w": 1280,
    "x": 10880,
    "y": 1340
@@ -2472,7 +2472,7 @@
   "SucTipo.dc.html": {
    "h": 940,
    "page": "sucursales",
-   "title": "S1 · Tipo de empresa: sucursales o filiales",
+   "title": "S1 · Tipo de empresa: sucursales o filiales · con estatuto",
    "w": 1280,
    "x": 4080,
    "y": 0
@@ -2820,6 +2820,22 @@
    "title": "XC-s · Cabecera vista por el superadmin",
    "x": 2720,
    "y": 1340
+  },
+  "SucEsSucursal.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 0,
+   "y": 2680,
+   "title": "S3 · Tipo de empresa cuando eres sucursal: Aviagen Ibérica SL (hereda de la Sede)"
+  },
+  "EmpConsultor.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "altaempresa",
+   "x": 1200,
+   "y": 2400,
+   "title": "E5b · Tipo de empresa de un consultor: Asvet Veterinaris (servicios + expertos)"
   }
  },
  "createdOnFiles": {
@@ -2971,7 +2987,7 @@
    "kind": "title1",
    "maxW": 14800,
    "page": "distmulti",
-   "text": "Alta · Distribuidor multimarca (AgroNova) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X1b/X1c avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X1b/X1c avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3386,7 +3402,7 @@
    "kind": "title1",
    "maxW": 12160,
    "page": "sucursales",
-   "text": "Alta · Fabricante con sucursales (Zucami, Sede global) — 1 · Empresa y tipo: S0a datos del CRM · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Fabricante con sucursales (Big Dutchman, Sede global) — 1 · Empresa y tipo: S0a datos del CRM · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3426,6 +3442,24 @@
    "w": 240,
    "x": 0,
    "y": -300
+  },
+  "sucT3": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "sucursales",
+   "text": "3 · Si tu empresa es la sucursal — Aviagen Ibérica SL, sucursal de Aviagen",
+   "w": 240,
+   "x": 0,
+   "y": 2380
+  },
+  "empConsultor": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "altaempresa",
+   "text": "Otro ejemplo · consultoría: Asvet Veterinaris",
+   "w": 240,
+   "x": 1200,
+   "y": 2100
   }
  },
  "order": [
@@ -3780,7 +3814,9 @@
   "BusXEnfermedad.dc.html",
   "BusXResultados.dc.html",
   "BusIntranetBuscar.dc.html",
-  "SelTelefono.dc.html"
+  "SelTelefono.dc.html",
+  "SucEsSucursal.dc.html",
+  "EmpConsultor.dc.html"
  ],
  "pages": [
   {

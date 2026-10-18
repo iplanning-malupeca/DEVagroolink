@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Proyectos · Crear proyecto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 16px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px;min-width:0}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:38px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.ta{border:1px solid #D5DED8;border-radius:10px;padding:9px 12px;font:400 13px 'Poppins',sans-serif;color:#17231D;resize:none;line-height:1.45;width:100%;box-sizing:border-box}
+.on{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#0E5A3A;color:#FFFFFF;font-size:12px;font-weight:500;white-space:nowrap}
+.off{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.tok{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 10px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;border:1px solid #CFE0D5;font-size:12px;font-weight:500;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}.lila{background:#F1EEFB;color:#4B3BA6}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#0E5A3A;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#0E5A3A;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.sel{border:1.5px solid #0E5A3A;background:#F5FAF6}
+.opt input{accent-color:#0E5A3A;margin:2px 0 0}
+.tabs{display:flex;gap:22px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:9px}
+.tabs .t-on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.why{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#0E5A3A;background:#EEF6EE;border-radius:6px;padding:2px 7px;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 1280px; height: 900px; position: relative; overflow: hidden; background: #F6F8F6;">
+  <main style="position: absolute; top: 68px; left: 256px; right: 0; bottom: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: flex-end; gap: 14px;"><div style="flex: 1; min-width: 0;"><span class="eb">MIS PROYECTOS · NUEVO</span><h1 style="margin: 4px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em;">Cuéntanos tu proyecto</h1><p style="margin: 3px 0 0; font-size: 13px; color: #4A5650;">Lo enviamos a empresas y expertos que encajan. Gratis y sin compromiso.</p></div></div>
+    <div style="display: flex; gap: 20px; flex: 1; min-height: 0;">
+      <div style="width: 210px; flex: none; display: flex; flex-direction: column; gap: 4px;"><div style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; background: #EEF6EE; color: #0E5A3A; font-weight: 600;"><span style="width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; box-sizing: border-box; border: 2px solid #0E5A3A; color: #0E5A3A;">1</span>Qué necesitas</div><div style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; color: #56615B;"><span style="width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; box-sizing: border-box; border: 1.5px solid #CFD8D2; color: #8A948F;">2</span>Para qué animales y dónde</div><div style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; color: #56615B;"><span style="width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; box-sizing: border-box; border: 1.5px solid #CFD8D2; color: #8A948F;">3</span>Detalles</div><div style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; color: #56615B;"><span style="width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; box-sizing: border-box; border: 1.5px solid #CFD8D2; color: #8A948F;">4</span>A quién se lo enviamos</div><div style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; color: #56615B;"><span style="width: 24px; height: 24px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; box-sizing: border-box; border: 1.5px solid #CFD8D2; color: #8A948F;">5</span>Revisar y publicar</div></div>
+      <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+        <section class="card" style="gap: 8px;">
+          <p class="h">¿Qué necesitas?</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <label class="opt sel"><input type="radio" name="tipo" defaultChecked="{{ yes }}"><span><strong style="font-size: 13px; font-weight: 600;">Productos o equipos</strong><br><span style="color: #4A5650;">Comprar o renovar</span></span></label>
+            <label class="opt"><input type="radio" name="tipo"><span><strong style="font-size: 13px; font-weight: 600;">Un servicio</strong><br><span style="color: #4A5650;">Asesoría, análisis, formación…</span></span></label>
+            <label class="opt"><input type="radio" name="tipo"><span><strong style="font-size: 13px; font-weight: 600;">Un proyecto completo</strong><br><span style="color: #4A5650;">Nave nueva o reforma llave en mano</span></span></label>
+            <label class="opt"><input type="radio" name="tipo"><span><strong style="font-size: 13px; font-weight: 600;">No lo sé</strong><br><span style="color: #4A5650;">Te ayuda un experto a definirlo</span></span></label>
+          </div>
+        </section>
+        <section class="card" style="gap: 10px;">
+          <label class="lbl">Categoría <span class="hint" style="margin-top: -3px;">Usamos el mismo catálogo de productos y servicios de Agroolink</span><select class="inp"><option>Equipamiento e instalaciones › Sistemas de alimentación automática</option></select></label>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;"><span class="hint">Otras que suelen ir juntas:</span><span class="off">+ Bebederos</span><span class="off">+ Sistemas de ventilación</span><span class="off">+ Montaje</span></div>
+          <label class="lbl">Título<input class="inp" type="text" value="Sistema de alimentación para nave nueva de broilers"></label>
+          <label class="lbl">Descripción<textarea class="ta" rows="4">Construimos una segunda nave de 40.000 broilers en Lleida. Buscamos un sistema de alimentación completo (silos, transporte y líneas de comederos) con montaje y buen servicio técnico en la zona.</textarea></label>
+        </section>
+      </form>
+      <aside style="width: 290px; flex: none; display: flex; flex-direction: column; gap: 12px;">
+        <section class="card" style="gap: 8px; background: #F2F7F3; border-color: #DCE9DF;">
+          <span style="display: flex; align-items: center; gap: 8px; color: #0E5A3A;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><strong style="font-size: 13.5px; color: #17231D;">Ya encajan</strong></span>
+          <strong style="font-size: 30px; font-weight: 700; color: #0E5A3A; line-height: 1;">27 <span style="font-size: 13px; font-weight: 500; color: #2F3D36;">empresas</span></strong>
+          <span style="font-size: 12px; color: #4A5650; line-height: 1.45;">tienen sistemas de alimentación en su catálogo. Lo afinamos en los pasos siguientes con especie y zona.</span>
+        </section>
+        <section class="card" style="gap: 6px;"><p class="h" style="font-size: 13.5px;">Consejos</p><ul style="margin: 0; padding-left: 18px; font-size: 12px; color: #2F3D36; line-height: 1.55;"><li>Di el tamaño y el plazo: recibirás propuestas más concretas.</li><li>Puedes adjuntar planos o fotos en «Detalles».</li><li>Tus datos de contacto no se muestran hasta que respondas a una propuesta.</li></ul></section>
+      </aside>
+    </div>
+    <div style="display: flex; justify-content: flex-end; gap: 10px;"><button type="button" class="btn" style="height: 42px;">Guardar borrador</button><button type="button" class="btnp" style="height: 42px;">Siguiente →</button></div>
+  </main>
+  <div style="position: absolute; top: 68px; left: 0;"><dc-import name="IntSidebar" modo="personal" activo="Mis proyectos" sub="" alto="832" hint-size="256px,832px"></dc-import></div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px; z-index: 2;"><dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>
