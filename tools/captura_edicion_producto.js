@@ -10,7 +10,7 @@ async function snap(name,title,conLayer,extra){ await wait(150); if(!extra) docu
 const out=[];
 window.__cat(); out.push(await snap('K1','Mis productos'));
 click('menu|demo1'); out.push(await snap('K2','Menú de acciones'));
-document.body.click(); click('editar|demo1'); click('babrir|tecnicos'); type('[data-tv="proteina"]','17,5'); click('baplicar'); click('babrir|identidad'); out.push(await snap('K3','Editar por bloques'));
+document.body.click(); click('editar|demo1'); click('babrir|tecnicos'); type('[data-tv="proteina"]','17,5'); type('[data-pp="0|v"]','3,5'); click('ppadd'); type('[data-pp="2|n"]','Dureza del gránulo'); type('[data-pp="2|v"]','8'); type('[data-pp="2|u"]','kg'); out.push(await snap('K3','Editar por bloques'));
 click('bguardar'); out.push(await snap('K4','Guardar y avisar',true)); click('bconfirmar|si'); click('vista|catalogo'); out.push(await snap('K5','Tras guardar'));
 click('editar|demo0'); click('babrir|enfermedad'); const b=[...document.querySelectorAll('[data-act^="enf|"]')].find(x=>x.getAttribute('aria-pressed')!=='true'); if(b) b.click(); click('baplicar'); click('bguardar'); out.push(await snap('K6','Vacuna: vuelve a revisión',true)); click('cerrar'); click('bdescartar');
 click('volvercat'); click('menu|demo2'); click('archivar|demo2'); out.push(await snap('K7','Tras archivar',false,true));

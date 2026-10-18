@@ -369,7 +369,7 @@ if (qEj && DEMOS[qEj]) S = DEMOS[qEj]();
 if (!S) S = nuevo();
 if (/[?&]captura/.test(location.search)) window.__demo = v => { S = DEMOS[v] ? DEMOS[v]() : nuevo(); UI.vista = 'asistente'; UI.desdeRev = false; UI.fam = null; UI.q = ''; UI.intento = {}; UI.foco = null; guardar(); render(); };
 if (/[?&]captura/.test(location.search)) window.__t = code => eval(code);
-if (/[?&]captura/.test(location.search)) window.__cat = () => { CAT = []; ['vacuna', 'pienso', 'probiotico'].forEach((v, i) => { const d = DEMOS[v](); d.id = 'demo' + i; d.ident.corta = 'Descripción corta de ejemplo.'; d.mercados = { entradas: [{ id: 'Europa', modo: 'toda', sel: [] }] }; if (v === 'vacuna') { const e = M.enfermedades.find(x => JSON.stringify(x).indexOf('Avicultura') > -1); if (e) d.enf = [e.id]; } CAT.push({ id: d.id, data: d, estado: ['Publicado', 'Publicado', 'Borrador'][i], creado: '2 oct', actualizado: ['14 oct', '9 oct', '18 oct'][i] }); }); guardarCat(); UI.vista = 'catalogo'; UI.menu = null; render(); };
+if (/[?&]captura/.test(location.search)) window.__cat = () => { CAT = []; ['vacuna', 'pienso', 'probiotico'].forEach((v, i) => { const d = DEMOS[v](); d.id = 'demo' + i; d.ident.corta = 'Descripción corta de ejemplo.'; d.mercados = { entradas: [{ id: 'Europa', modo: 'toda', sel: [] }] }; if (v === 'pienso') d.propios = [{ n: 'Diámetro del gránulo', v: '3', u: 'mm' }, { n: 'Origen del cereal', v: 'UE', u: '' }]; if (v === 'vacuna') { const e = M.enfermedades.find(x => JSON.stringify(x).indexOf('Avicultura') > -1); if (e) d.enf = [e.id]; } CAT.push({ id: d.id, data: d, estado: ['Publicado', 'Publicado', 'Borrador'][i], creado: '2 oct', actualizado: ['14 oct', '9 oct', '18 oct'][i] }); }); guardarCat(); UI.vista = 'catalogo'; UI.menu = null; render(); };
 if (!S.apl) S.apl = {};
 if (!S.fotos) S.fotos = Array.from({ length: S.imgs || 0 }, (_, i) => ({ src: null, nombre: 'Foto ' + (i + 1) }));
 if (!S.videos) S.videos = [];
@@ -790,6 +790,8 @@ function valorTxt(a, v) {
     return (v.v || '') + (v.v ? ' ' + (v.u || unidades(a.unit)[0] || '') : '') + (v.m ? ' · ' + v.m : ''); }
   return v || '';
 }
+const propiosOk = () => S.propios.filter(p => (p.n || '').trim());
+const propioTxt = p => p.n.trim() + ': ' + (p.v || '—') + (p.u ? ' ' + p.u : '');
 function bloques() {
   const t = tpl(S.cat), a = arq(S.cat);
   const miss = p => faltasDe(p).length ? ' <span class="miss">· ' + esc(faltasDe(p).map(x => x.t).join(' · ')) + '</span>' : '';
@@ -799,7 +801,7 @@ function bloques() {
     categoria: S.cat ? esc(ruta(S.cat).join(' › ')) : '<span class="miss">Sin elegir</span>',
     mercados: esc(mercTxt()) + ' <span class="hint">· ' + paisesSel().length + ' países</span>' + (conRegistro() ? ' <span class="hint">· registro: ' + paisesSel().filter(p => (S.registros[p] || {}).e === 'Registrado').length + ' de ' + paisesSel().length + '</span>' : '') + miss('mercados'),
     identidad: '<strong>' + esc(S.ident.nombre || '—') + '</strong>' + (S.ident.sku ? ' · ' + esc(S.ident.sku) : '') + (S.ident.corta ? '<br><span class="hint">' + esc(S.ident.corta) + '</span>' : '') + miss('identidad'),
-    tecnicos: t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (S.propios.length ? ' · ' + S.propios.length + ' propios' : '') + miss('tecnicos') : '—',
+    tecnicos: t ? tecs + ' de ' + attrsTec(t).length + (tecs ? ' · ' : '') + attrsTec(t).filter(x => lleno(S.tec[x.id])).slice(0, 4).map(x => esc(x.label) + ': ' + esc(valorTxt(x, S.tec[x.id]))).join(' · ') + (propiosOk().length ? '<br><span class="hint">Datos propios:</span> ' + esc(propiosOk().map(propioTxt).join(' · ')) : '') + miss('tecnicos') : '—',
     aplicaciones: destinos().map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {}; const n = attrsApl(t).filter(x => lleno(vals[x.id])).length; return esc(d.label) + ' <span class="hint">· ' + n + ' de ' + attrsApl(t).length + ' datos' + ((st.fases || []).length ? ' · ' + esc(st.fases.join(', ')) : '') + '</span>'; }).join('<br>') + miss('aplicaciones'),
     enfermedad: esc(S.enf.map(id => (M.enfermedades.find(e => e.id === id) || {}).nombre).concat((S.enfOtra || '').trim() ? ['Otra: ' + S.enfOtra.trim()] : []).join(', ') || 'Ninguna') + miss('enfermedad'),
     variantes: a && a.variantes ? S.variantes.filter(v => Object.values(v).some(Boolean)).map(v => esc(Object.values(v).filter(Boolean).join(' · '))).join('<br>') || '—' : '—',
@@ -890,10 +892,18 @@ function vistaEditar() {
   return h;
 }
 const AFECTA = ['tecnicos', 'aplicaciones', 'enfermedad', 'variantes', 'mercados', 'documentos', 'certificaciones', 'especies', 'categoria'];
+function detalleTec() {   // datos técnicos y propios que cambian, uno a uno
+  const t = tpl(S.cat), B = UI.base, out = [];
+  attrsTec(t).forEach(x => { const a0 = lleno(B.tec[x.id]) ? valorTxt(x, B.tec[x.id]) : '—', a1 = lleno(S.tec[x.id]) ? valorTxt(x, S.tec[x.id]) : '—'; if (a0 !== a1) out.push([x.label, a0, a1]); });
+  const pr = o => { const m = {}; (o.propios || []).filter(p => (p.n || '').trim()).forEach(p => m[p.n.trim()] = (p.v || '—') + (p.u ? ' ' + p.u : '')); return m; };
+  const p0 = pr(B), p1 = pr(S);
+  Object.keys(Object.assign({}, p0, p1)).forEach(n => { if (p0[n] !== p1[n]) out.push([n + ' (dato propio)', p0[n] || 'No estaba', p1[n] || 'Quitado']); });
+  return out;
+}
 function dialogoGuardar() {
   const ch = cambios(), afecta = ch.filter(c => AFECTA.indexOf(c.id) > -1), rev = regulado() && afecta.length;
   let h = '<strong style="font-size:18px">Guardar cambios en «' + esc(S.ident.nombre || 'producto') + '»</strong>' +
-    '<div class="diffl">' + ch.map(c => '<span><strong>' + esc(c.k) + ':</strong> <span class="old">' + esc(c.antes.slice(0, 90)) + '</span> → ' + esc(c.ahora.slice(0, 90)) + '</span>').join('') + '</div>';
+    '<div class="diffl">' + ch.map(c => c.id === 'tecnicos' && detalleTec().length ? detalleTec().map(d => '<span><strong>' + esc(d[0]) + ':</strong> <span class="old">' + esc(d[1]) + '</span> → ' + esc(d[2]) + '</span>').join('') : '<span><strong>' + esc(c.k) + ':</strong> <span class="old">' + esc(c.antes.slice(0, 90)) + '</span> → ' + esc(c.ahora.slice(0, 90)) + '</span>').join('') + '</div>';
   if (rev) h += '<div class="note"><span><strong>Vuelve a revisión de Agroolink.</strong> Hasta que se apruebe, el comprador sigue viendo la versión publicada.</span></div>';
   if (afecta.length) h += '<div class="note w"><span><strong>¿Avisar a quien lo vende o lo ha pedido?</strong> Has cambiado datos que pueden afectar a los distribuidores y sucursales con versión local y a los compradores con una solicitud abierta. Les llega un aviso en Agroolink y las versiones locales se marcan «Revisar cambios del fabricante».</span></div>' +
     '<div class="chips" style="justify-content:flex-end"><button type="button" class="btn" data-act="cerrar">Seguir editando</button><button type="button" class="btn" data-act="bconfirmar|no">Guardar sin avisar</button><button type="button" class="btnp" data-act="bconfirmar|si">Guardar y avisar</button></div>';
@@ -977,7 +987,7 @@ function fichaPublica() {
     '<div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span class="ppath">' + esc(S.cat ? ruta(S.cat).join(' › ') : '') + '</span><strong style="font-size:22px">' + esc(I.nombre || 'Nombre del producto') + '</strong><span class="hint">' + esc([I.marca, I.fabricante].filter(Boolean).join(' · ')) + '</span>' +
     '<div class="tags">' + (S.sinEspecie ? '<span class="tag">Multiespecie</span>' : Object.keys(S.especies).map(e => '<span class="tag">' + esc(e) + '</span>').join('')) + '</div></div></div>' +
     (I.corta ? '<p style="margin:0">' + esc(I.corta) + '</p>' : '') +
-    (datos.length ? '<div><strong style="font-size:15px">Datos técnicos</strong>' + datos.map(x => '<div class="kv"><span>' + esc(x.label) + '</span><span>' + esc(valorTxt(x, S.tec[x.id])) + '</span></div>').join('') + '</div>' : '') +
+    (datos.length || propiosOk().length ? '<div><strong style="font-size:15px">Datos técnicos</strong>' + datos.map(x => '<div class="kv"><span>' + esc(x.label) + '</span><span>' + esc(valorTxt(x, S.tec[x.id])) + '</span></div>').join('') + propiosOk().map(p => '<div class="kv"><span>' + esc(p.n.trim()) + ' <span class="hint">· dato del fabricante</span></span><span>' + esc((p.v || '—') + (p.u ? ' ' + p.u : '')) + '</span></div>').join('') + '</div>' : '') +
     (ds.length ? '<div class="tblwrap"><table class="tbl"><thead><tr><th>Especie</th><th>Fases</th>' + attrsApl(t).map(x => '<th>' + esc(x.label) + '</th>').join('') + '</tr></thead><tbody>' + ds.map(d => { const st = S.apl[d.key] || {}, vals = st.vals || {};
       return '<tr><td>' + esc(d.label) + '</td><td>' + esc((st.fases || []).join(', ') || '—') + '</td>' + attrsApl(t).map(x => '<td>' + esc(lleno(vals[x.id]) ? valorTxt(x, vals[x.id]) : '—') + '</td>').join('') + '</tr>'; }).join('') + '</tbody></table></div>' : '') +
     (S.fotos.length > 1 ? '<div class="thumbs">' + S.fotos.slice(1, 6).map(f => f.src ? '<img src="' + f.src + '" alt="' + esc(f.nombre) + '" style="width:72px;height:54px;object-fit:cover;border-radius:8px">' : '').join('') + '</div>' : '') +
@@ -997,6 +1007,7 @@ function comparador() {
     '<div class="tblwrap" style="overflow:auto"><table class="tbl"><thead><tr><th>Dato</th><th>' + esc(S.ident.nombre || 'Tu producto') + '</th><th>Otro producto</th><th>Otro producto</th></tr></thead><tbody>' +
     '<tr><td>Especies</td><td>' + esc(S.sinEspecie ? 'Multiespecie' : Object.keys(S.especies).join(', ')) + '</td><td>—</td><td>—</td></tr>' +
     orden.map(x => { const v = S.tec[x.id]; return '<tr><td>' + esc(x.label) + (x.decisivo ? ' <span class="star">★</span>' : '') + '</td><td>' + esc(lleno(v) ? valorTxt(x, v) : 'No informado') + '</td><td>—</td><td>—</td></tr>'; }).join('') +
+    propiosOk().filter(p => num(p.v) !== null && (p.u || '').trim()).map(p => '<tr><td>' + esc(p.n.trim()) + ' <span class="hint">· propio: solo con el mismo nombre y unidad</span></td><td>' + esc(p.v + ' ' + p.u) + '</td><td>—</td><td>—</td></tr>').join('') +
     '</tbody></table></div>';
 }
 function modal(html) { document.getElementById('layer').innerHTML = '<div class="modal" role="dialog" aria-modal="true"><div class="box">' + html + '</div></div>'; }
