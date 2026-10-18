@@ -2332,6 +2332,38 @@
    "h": 844,
    "page": "busqueda",
    "title": "Cabecera móvil · la búsqueda combinada resumida en una pastilla"
+  },
+  "BusXEspecie.dc.html": {
+   "x": 0,
+   "y": 8500,
+   "w": 1920,
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X1 · Dos especies a distinta profundidad: Broilers (3 niveles) + Lechones (2 niveles)"
+  },
+  "BusXCategoria.dc.html": {
+   "x": 2000,
+   "y": 8500,
+   "w": 1920,
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X2 · Cinco categorías en los 3 niveles (familia, grupo y tipos sueltos)"
+  },
+  "BusXEnfermedad.dc.html": {
+   "x": 4000,
+   "y": 8500,
+   "w": 1920,
+   "h": 1080,
+   "page": "busqueda",
+   "title": "X3 · Enfermedades de las dos especies, agrupadas por tipo clínico; las compartidas cuentan una vez"
+  },
+  "BusXResultados.dc.html": {
+   "x": 6000,
+   "y": 8500,
+   "w": 1920,
+   "h": 1150,
+   "page": "busqueda",
+   "title": "X4 · Resultado: filtros activos por dimensión, «Y además» entre ellas y «Coincide con» en cada tarjeta"
   }
  },
  "createdOnFiles": {
@@ -2907,6 +2939,14 @@
    "maxW": 6700,
    "page": "busqueda",
    "text": "Cabecera con búsqueda combinada según el tamaño de pantalla (propuesta: sin Categorías / Especies junto al logo)"
+  },
+  "busT6": {
+   "kind": "title1",
+   "x": 0,
+   "y": 8380,
+   "maxW": 7920,
+   "page": "busqueda",
+   "text": "Caso complejo: veterinario con broilers y lechones · 2 especies × 5 categorías en 3 niveles × 2 enfermedades compartidas"
   }
  },
  "order": [
@@ -3200,7 +3240,11 @@
   "HeaderHd1440.dc.html",
   "HeaderHd1280.dc.html",
   "HeaderHd1280Abierta.dc.html",
-  "HeaderHdMovil.dc.html"
+  "HeaderHdMovil.dc.html",
+  "BusXEspecie.dc.html",
+  "BusXCategoria.dc.html",
+  "BusXEnfermedad.dc.html",
+  "BusXResultados.dc.html"
  ],
  "pages": [
   {
