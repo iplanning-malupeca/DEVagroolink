@@ -4253,6 +4253,13 @@
    "efecto": "Al cambiar de categoría se conservan los datos compatibles (mismo id de atributo) y se avisa antes de descartar el resto"
   },
   {
+   "id": "otro_rellenable",
+   "cuando": {
+    "siempre": true
+   },
+   "efecto": "En cada nivel hay «Otro» con texto libre: en cada grupo y cada familia de categorías, «Otra especie», «Otra producción» en cada especie y «Otra enfermedad». Agroolink lo revisa y puede crear el nodo o reclasificarlo. Un «Otro» de categoría usa la plantilla de su grupo si existe; si no, la plantilla general «otros». Ids: <grupo>-OTRO, <familia>-OTRO."
+  },
+  {
    "id": "valores_vacios",
    "cuando": {
     "siempre": true
