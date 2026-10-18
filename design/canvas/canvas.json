@@ -543,71 +543,71 @@
    "page": "fabdist",
    "title": "D2 · Cabecera: marca (lo que ve el comprador) y sociedades del CRM",
    "w": 1280,
-   "x": 1360,
-   "y": 0
+   "x": 0,
+   "y": 1340
   },
   "FabContacto.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D7 · Contacto: «Solicitar información» y destinos",
    "w": 1280,
-   "x": 2720,
-   "y": 1240
+   "x": 9520,
+   "y": 1340
   },
   "FabContenidos.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D6 · Contenidos (Agrinews y propuesta editorial)",
    "w": 1280,
-   "x": 1360,
-   "y": 1240
+   "x": 8160,
+   "y": 1340
   },
   "FabDistribuidores.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D4 · Distribuidores y «Quiero ser distribuidor»",
    "w": 1280,
-   "x": 4080,
-   "y": 0
+   "x": 5440,
+   "y": 1340
   },
   "FabExpertos.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D5 · Expertos recomendados",
    "w": 1280,
-   "x": 0,
-   "y": 1240
+   "x": 6800,
+   "y": 1340
   },
   "FabPublicar.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D8 · Revisar y publicar",
    "w": 1280,
-   "x": 4080,
-   "y": 1240
+   "x": 10880,
+   "y": 1340
   },
   "FabShell.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "Componente · Constructor de ficha (barra y secciones)",
    "w": 1280,
-   "x": 5440,
-   "y": 0
+   "x": 0,
+   "y": 2680
   },
   "FabSobre.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D3 · Sobre la empresa",
    "w": 1280,
-   "x": 2720,
-   "y": 0
+   "x": 4080,
+   "y": 1340
   },
   "FabTipo.dc.html": {
    "h": 940,
    "page": "fabdist",
    "title": "D1 · Tipo de empresa",
    "w": 1280,
-   "x": 0,
+   "x": 4080,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2374,47 +2374,47 @@
    "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía"
   },
   "FabTipoEspecies.dc.html": {
-   "x": 1360,
-   "y": 3720,
+   "x": 6800,
+   "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D1b · Especies · modo «Excluir»: todo marcado, desmarcar = excluida"
   },
   "FabTipoRama.dc.html": {
-   "x": 0,
-   "y": 2480,
+   "x": 9520,
+   "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal"
   },
   "FabTipoMercados.dc.html": {
-   "x": 1360,
-   "y": 2480,
+   "x": 10880,
+   "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»"
   },
   "FabTipoEspeciesTodas.dc.html": {
-   "x": 0,
-   "y": 3720,
+   "x": 5440,
+   "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada"
   },
   "FabTipoEspeciesSolo.dc.html": {
-   "x": 2720,
-   "y": 3720,
+   "x": 8160,
+   "y": 0,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir"
   },
   "FabTipoVacio.dc.html": {
-   "x": -1360,
+   "x": 2720,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2422,7 +2422,7 @@
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados"
   },
   "FabCRM.dc.html": {
-   "x": -2720,
+   "x": 1360,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2431,14 +2431,14 @@
   },
   "FabCabeceraAdmin.dc.html": {
    "x": 2720,
-   "y": 2480,
+   "y": 1340,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
    "title": "D2s · Cabecera vista por el superadmin: datos del CRM editables"
   },
   "FabCRMVarias.dc.html": {
-   "x": -4080,
+   "x": 0,
    "y": 0,
    "w": 1280,
    "h": 940,
@@ -2446,8 +2446,8 @@
    "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya"
   },
   "FabCabeceraObjetivos.dc.html": {
-   "x": 4080,
-   "y": 2480,
+   "x": 1360,
+   "y": 1340,
    "w": 1280,
    "h": 940,
    "page": "fabdist",
@@ -2601,21 +2601,21 @@
   },
   "fabT1": {
    "kind": "title1",
-   "maxW": 5360,
+   "maxW": 12160,
    "page": "fabdist",
-   "text": "Alta · Fabricante con red de distribuidores (DSM-Firmenich)",
+   "text": "1 · Empresa y tipo — D0a/D0 datos del CRM · D1a/D1 tipo de empresa · a su derecha, los editores que abre D1: especies (Todas · Excluir · Solo algunas), rama de negocio y mercados",
    "w": 240,
    "x": 0,
    "y": -300
   },
   "fabT2": {
    "kind": "title1",
-   "maxW": 5360,
+   "maxW": 12160,
    "page": "fabdist",
-   "text": "Expertos, contenidos, contacto y publicación",
+   "text": "2 · La ficha — D2 cabecera · a su derecha, el modal de objetivos (D2b) y la vista superadmin (D2s) · luego D3 a D8",
    "w": 240,
    "x": 0,
-   "y": 940
+   "y": 1040
   },
   "figT0": {
    "kind": "title1",
@@ -3044,13 +3044,13 @@
    "page": "busqueda",
    "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa"
   },
-  "fabEsp": {
+  "fabT3": {
    "kind": "title1",
    "x": 0,
-   "y": 3600,
-   "maxW": 4000,
+   "y": 2380,
+   "maxW": 5000,
    "page": "fabdist",
-   "text": "Especies · los tres modos: Todas · Excluir · Solo algunas (un clic marca o desmarca)"
+   "text": "Componente · constructor de ficha (barra y secciones)"
   }
  },
  "order": [
@@ -3116,14 +3116,25 @@
   "WizTop.dc.html",
   "CfgFichaLocal.dc.html",
   "CfgDondeComprar.dc.html",
+  "FabCRMVarias.dc.html",
+  "FabCRM.dc.html",
+  "FabTipoVacio.dc.html",
   "FabTipo.dc.html",
+  "FabTipoEspeciesTodas.dc.html",
+  "FabTipoEspecies.dc.html",
+  "FabTipoEspeciesSolo.dc.html",
+  "FabTipoRama.dc.html",
+  "FabTipoMercados.dc.html",
   "FabCabecera.dc.html",
+  "FabCabeceraObjetivos.dc.html",
+  "FabCabeceraAdmin.dc.html",
   "FabSobre.dc.html",
   "FabDistribuidores.dc.html",
   "FabExpertos.dc.html",
   "FabContenidos.dc.html",
   "FabContacto.dc.html",
   "FabPublicar.dc.html",
+  "FabShell.dc.html",
   "ProdCatalogo.dc.html",
   "ProdImportar.dc.html",
   "ProdAcuerdos.dc.html",
@@ -3170,7 +3181,6 @@
   "ServEditor.dc.html",
   "SelRamasCargos.dc.html",
   "SelIntereses.dc.html",
-  "FabShell.dc.html",
   "Fig01.dc.html",
   "Fig02.dc.html",
   "Fig03.dc.html",
@@ -3349,17 +3359,7 @@
   "BusXCategoria.dc.html",
   "BusXEnfermedad.dc.html",
   "BusXResultados.dc.html",
-  "BusIntranetBuscar.dc.html",
-  "FabTipoEspecies.dc.html",
-  "FabTipoRama.dc.html",
-  "FabTipoMercados.dc.html",
-  "FabTipoEspeciesTodas.dc.html",
-  "FabTipoEspeciesSolo.dc.html",
-  "FabTipoVacio.dc.html",
-  "FabCRM.dc.html",
-  "FabCabeceraAdmin.dc.html",
-  "FabCRMVarias.dc.html",
-  "FabCabeceraObjetivos.dc.html"
+  "BusIntranetBuscar.dc.html"
  ],
  "pages": [
   {
