@@ -335,7 +335,7 @@
    "page": "comerciales",
    "title": "K0d · Superadmin: altas en organizaciones",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "ComAvisoEmpresa.dc.html": {
@@ -343,7 +343,7 @@
    "page": "comerciales",
    "title": "K0c · Aviso a los administradores de la empresa (copia al superadmin)",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "ComBandeja.dc.html": {
@@ -357,7 +357,7 @@
   "ComCRM.dc.html": {
    "h": 940,
    "page": "comerciales",
-   "title": "K0a · ¿Cuál es tu empresa? Datos del CRM",
+   "title": "K0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -431,7 +431,7 @@
    "page": "comerciales",
    "title": "K1 · Tipo de empresa: equipo comercial propio · con estatuto",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "ComTipoEspecies.dc.html": {
@@ -439,7 +439,7 @@
    "page": "comerciales",
    "title": "K1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "ComTipoEspeciesSolo.dc.html": {
@@ -447,7 +447,7 @@
    "page": "comerciales",
    "title": "K1b-3 · Especies · modo «Solo algunas»: ponedoras y reproductoras",
    "w": 1280,
-   "x": 10880,
+   "x": 12240,
    "y": 0
   },
   "ComTipoEspeciesTodas.dc.html": {
@@ -455,7 +455,7 @@
    "page": "comerciales",
    "title": "K1b-1 · Especies · modo «Todas» (por defecto)",
    "w": 1280,
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "ComTipoMercados.dc.html": {
@@ -463,7 +463,7 @@
    "page": "comerciales",
    "title": "K1d · Editar mercados: inclusiones y «Excluir» (Francia sin Córcega)",
    "w": 1280,
-   "x": 13600,
+   "x": 14960,
    "y": 0
   },
   "ComTipoRama.dc.html": {
@@ -471,7 +471,7 @@
    "page": "comerciales",
    "title": "K1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
    "w": 1280,
-   "x": 12240,
+   "x": 13600,
    "y": 0
   },
   "ComTipoVacio.dc.html": {
@@ -479,7 +479,7 @@
    "page": "comerciales",
    "title": "K1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "ComVerifica.dc.html": {
@@ -487,7 +487,7 @@
    "page": "comerciales",
    "title": "K0b · Confirma tu email de empresa (código de 6 cifras)",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "ComZonas.dc.html": {
@@ -639,7 +639,7 @@
    "page": "distmulti",
    "title": "X0d · Superadmin: altas en organizaciones",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "DisAvisoEmpresa.dc.html": {
@@ -647,13 +647,13 @@
    "page": "distmulti",
    "title": "X0c · Aviso a los administradores de la empresa (copia al superadmin)",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "DisCRM.dc.html": {
    "h": 940,
    "page": "distmulti",
-   "title": "X0a · ¿Cuál es tu empresa? Datos del CRM",
+   "title": "X0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -727,7 +727,7 @@
    "page": "distmulti",
    "title": "X1 · Tipo de empresa: distribuidor con marcas propias · con estatuto",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "DisTipoEspecies.dc.html": {
@@ -735,7 +735,7 @@
    "page": "distmulti",
    "title": "X1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "DisTipoEspeciesSolo.dc.html": {
@@ -743,7 +743,7 @@
    "page": "distmulti",
    "title": "X1b-3 · Especies · modo «Solo algunas»",
    "w": 1280,
-   "x": 10880,
+   "x": 12240,
    "y": 0
   },
   "DisTipoEspeciesTodas.dc.html": {
@@ -751,7 +751,7 @@
    "page": "distmulti",
    "title": "X1b-1 · Especies · modo «Todas» (por defecto)",
    "w": 1280,
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "DisTipoMercados.dc.html": {
@@ -759,7 +759,7 @@
    "page": "distmulti",
    "title": "X1d · Editar mercados: inclusiones y «Excluir»",
    "w": 1280,
-   "x": 13600,
+   "x": 14960,
    "y": 0
   },
   "DisTipoRama.dc.html": {
@@ -767,7 +767,7 @@
    "page": "distmulti",
    "title": "X1c · Editar rama de negocio",
    "w": 1280,
-   "x": 12240,
+   "x": 13600,
    "y": 0
   },
   "DisTipoVacio.dc.html": {
@@ -775,7 +775,7 @@
    "page": "distmulti",
    "title": "X1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "DisVerifica.dc.html": {
@@ -783,7 +783,7 @@
    "page": "distmulti",
    "title": "X0b · Confirma tu email de empresa (código de 6 cifras)",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "EmpConsultor.dc.html": {
@@ -911,7 +911,7 @@
    "page": "fabdist",
    "title": "D0d · Superadmin: altas en organizaciones",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "FabAvisoEmpresa.dc.html": {
@@ -919,13 +919,13 @@
    "page": "fabdist",
    "title": "D0c · Aviso a los administradores de la empresa (copia al superadmin)",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "FabCRMVarias.dc.html": {
    "h": 940,
    "page": "fabdist",
-   "title": "D0a · Varias empresas coinciden en el CRM: elegir la tuya",
+   "title": "D0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -1015,7 +1015,7 @@
    "page": "fabdist",
    "title": "D1 · Tipo de empresa · con estatuto",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "FabTipoEspecies.dc.html": {
@@ -1023,7 +1023,7 @@
    "page": "fabdist",
    "title": "D1b-2 · Especies · modo «Excluir»: todo marcado, desmarcar = excluida",
    "w": 1280,
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "FabTipoEspeciesSolo.dc.html": {
@@ -1031,7 +1031,7 @@
    "page": "fabdist",
    "title": "D1b-3 · Especies · modo «Solo algunas»: todo vacío, marcar = incluir",
    "w": 1280,
-   "x": 10880,
+   "x": 12240,
    "y": 0
   },
   "FabTipoEspeciesTodas.dc.html": {
@@ -1039,7 +1039,7 @@
    "page": "fabdist",
    "title": "D1b-1 · Especies · modo «Todas» (por defecto): no se toca nada",
    "w": 1280,
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "FabTipoMercados.dc.html": {
@@ -1047,7 +1047,7 @@
    "page": "fabdist",
    "title": "D1d · Editar mercados: inclusiones por nivel y «Excluir»",
    "w": 1280,
-   "x": 13600,
+   "x": 14960,
    "y": 0
   },
   "FabTipoRama.dc.html": {
@@ -1055,7 +1055,7 @@
    "page": "fabdist",
    "title": "D1c · Editar rama de negocio: lista del CRM, subnivel y rama principal",
    "w": 1280,
-   "x": 12240,
+   "x": 13600,
    "y": 0
   },
   "FabTipoVacio.dc.html": {
@@ -1063,7 +1063,7 @@
    "page": "fabdist",
    "title": "D1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "FabVerifica.dc.html": {
@@ -1071,7 +1071,7 @@
    "page": "fabdist",
    "title": "D0b · Confirma tu email de empresa (código de 6 cifras)",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "Fig01.dc.html": {
@@ -2280,7 +2280,7 @@
   "SucAltaCRM.dc.html": {
    "h": 940,
    "page": "sucursal",
-   "title": "U0a · ¿Cuál es tu empresa? El CRM la reconoce como sucursal de Aviagen",
+   "title": "U0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -2290,7 +2290,7 @@
    "page": "sucursal",
    "title": "U0c · Aviso a la Sede y al superadmin: la sucursal entra directamente",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "SucAltaVerifica.dc.html": {
@@ -2298,7 +2298,7 @@
    "page": "sucursal",
    "title": "U0b · Confirma tu email de empresa",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "SucAvisoAdmin.dc.html": {
@@ -2320,7 +2320,7 @@
   "SucCRM.dc.html": {
    "h": 940,
    "page": "sucursales",
-   "title": "S0a · ¿Cuál es tu empresa? Datos del CRM",
+   "title": "S0a · ¿Cuál es tu empresa? Escribes el nombre y eliges entre las del CRM",
    "w": 1280,
    "x": 0,
    "y": 0
@@ -2354,7 +2354,7 @@
    "page": "sucursal",
    "title": "U1 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "SucPagina.dc.html": {
@@ -2402,7 +2402,7 @@
    "page": "sucursales",
    "title": "S1 · Tipo de empresa: sucursales o filiales · con estatuto",
    "w": 1280,
-   "x": 4080,
+   "x": 5440,
    "y": 0
   },
   "SucTipoEspecies.dc.html": {
@@ -2410,7 +2410,7 @@
    "page": "sucursales",
    "title": "S1b-2 · Especies · modo «Excluir»: desmarcar = excluida",
    "w": 1280,
-   "x": 6800,
+   "x": 8160,
    "y": 0
   },
   "SucTipoEspeciesSolo.dc.html": {
@@ -2418,7 +2418,7 @@
    "page": "sucursales",
    "title": "S1b-3 · Especies · modo «Solo algunas»",
    "w": 1280,
-   "x": 8160,
+   "x": 9520,
    "y": 0
   },
   "SucTipoEspeciesTodas.dc.html": {
@@ -2426,7 +2426,7 @@
    "page": "sucursales",
    "title": "S1b-1 · Especies · modo «Todas» (por defecto)",
    "w": 1280,
-   "x": 5440,
+   "x": 6800,
    "y": 0
   },
   "SucTipoMercados.dc.html": {
@@ -2434,7 +2434,7 @@
    "page": "sucursales",
    "title": "S1d · Editar mercados: inclusiones y «Excluir»",
    "w": 1280,
-   "x": 10880,
+   "x": 12240,
    "y": 0
   },
   "SucTipoRama.dc.html": {
@@ -2442,7 +2442,7 @@
    "page": "sucursales",
    "title": "S1c · Editar rama de negocio",
    "w": 1280,
-   "x": 9520,
+   "x": 10880,
    "y": 0
   },
   "SucTipoVacio.dc.html": {
@@ -2450,7 +2450,7 @@
    "page": "sucursales",
    "title": "S1a · Tipo de empresa: aún sin especies, rama ni mercados",
    "w": 1280,
-   "x": 2720,
+   "x": 4080,
    "y": 0
   },
   "SucVerifica.dc.html": {
@@ -2458,7 +2458,7 @@
    "page": "sucursales",
    "title": "S0b · Confirma tu email de empresa (código de 6 cifras)",
    "w": 1280,
-   "x": 1360,
+   "x": 2720,
    "y": 0
   },
   "TabCompartir.dc.html": {
@@ -3004,6 +3004,46 @@
    "x": 12240,
    "y": 0,
    "title": "G10 · Certificaciones y sellos: alcance, entidad, fechas y documento; sin documento no hay sello"
+  },
+  "FabCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "fabdist",
+   "x": 1360,
+   "y": 0,
+   "title": "D0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
+  },
+  "ComCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "comerciales",
+   "x": 1360,
+   "y": 0,
+   "title": "K0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
+  },
+  "SucCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursales",
+   "x": 1360,
+   "y": 0,
+   "title": "S0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
+  },
+  "SucAltaCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "sucursal",
+   "x": 1360,
+   "y": 0,
+   "title": "U0a-2 · Ninguna es la mía: crear la sucursal (basta con el nombre)"
+  },
+  "DisCrear.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "distmulti",
+   "x": 1360,
+   "y": 0,
+   "title": "X0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
   }
  },
  "createdOnFiles": {
@@ -3117,9 +3157,9 @@
   },
   "comT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 16000,
    "page": "comerciales",
-   "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a datos del CRM · K0b verificar email · K0c/K0d avisos al unirse · K1a/K1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Fabricante con equipo comercial propio (Zucami) — 1 · Empresa y tipo: K0a nombre y empresa del CRM · K0a-2 crear si no está · K0b verificar email · K0c/K0d avisos al unirse · K1a/K1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3135,9 +3175,9 @@
   },
   "disT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 16000,
    "page": "distmulti",
-   "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a datos del CRM · X0b verificar email · X0c/X0d avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Distribuidor multimarca (NewFarms) — 1 · Empresa y tipo: X0a nombre y empresa del CRM · X0a-2 crear si no está · X0b verificar email · X0c/X0d avisos al unirse · X1a/X1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3180,9 +3220,9 @@
   },
   "fabT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 16000,
    "page": "fabdist",
-   "text": "1 · Empresa y tipo — D0a empresa del CRM · D0b verificar email · D0c/D0d avisos al unirse · D1a/D1 tipo de empresa · editores de especies, rama y mercados",
+   "text": "1 · Empresa y tipo — D0a nombre y empresa del CRM · D0a-2 crear si no está · D0b verificar email · D0c/D0d avisos al unirse · D1a/D1 tipo de empresa · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3505,9 +3545,9 @@
   },
   "sucT1": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 16000,
    "page": "sucursales",
-   "text": "Alta · Fabricante con sucursales (Big Dutchman, Sede global) — 1 · Empresa y tipo: S0a datos del CRM · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
+   "text": "Alta · Fabricante con sucursales (Big Dutchman, Sede global) — 1 · Empresa y tipo: S0a nombre y empresa del CRM · S0a-2 crear si no está · S0b verificar email · S1a/S1 tipo · editores de especies, rama y mercados",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3523,9 +3563,9 @@
   },
   "sucT3": {
    "kind": "title1",
-   "maxW": 5400,
+   "maxW": 16000,
    "page": "sucursal",
-   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): U0a empresa del CRM · U0b verificar email · U0c aviso a la Sede y al superadmin · U1 tipo de empresa",
+   "text": "3 · Alta de una sucursal — Aviagen Ibérica SL (sucursal de Aviagen): U0a nombre y empresa del CRM · U0a-2 crear si no está · U0b verificar email · U0c aviso a la Sede y al superadmin · U1 tipo de empresa",
    "w": 240,
    "x": 0,
    "y": -300
@@ -3712,6 +3752,7 @@
   "PreciosComprador.dc.html",
   "Checkout.dc.html",
   "FabCRMVarias.dc.html",
+  "FabCrear.dc.html",
   "FabVerifica.dc.html",
   "FabAvisoEmpresa.dc.html",
   "FabAvisoAdmin.dc.html",
@@ -3744,6 +3785,7 @@
   "CompOtroTipo.dc.html",
   "CompSolicitar.dc.html",
   "ComCRM.dc.html",
+  "ComCrear.dc.html",
   "ComVerifica.dc.html",
   "ComAvisoEmpresa.dc.html",
   "ComAvisoAdmin.dc.html",
@@ -3766,6 +3808,7 @@
   "ComPublicar.dc.html",
   "ComBandeja.dc.html",
   "SucCRM.dc.html",
+  "SucCrear.dc.html",
   "SucVerifica.dc.html",
   "SucTipoVacio.dc.html",
   "SucTipo.dc.html",
@@ -3785,6 +3828,7 @@
   "SucPagina.dc.html",
   "SucPublicar.dc.html",
   "DisCRM.dc.html",
+  "DisCrear.dc.html",
   "DisVerifica.dc.html",
   "DisAvisoEmpresa.dc.html",
   "DisAvisoAdmin.dc.html",
@@ -3991,6 +4035,7 @@
   "BusIntranetBuscar.dc.html",
   "SelTelefono.dc.html",
   "SucAltaCRM.dc.html",
+  "SucAltaCrear.dc.html",
   "SucAltaVerifica.dc.html",
   "SucAltaSede.dc.html",
   "SucEsSucursal.dc.html",
