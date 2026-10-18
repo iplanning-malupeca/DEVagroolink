@@ -2996,6 +2996,22 @@
    "x": 1360,
    "y": 0,
    "title": "X0a-2 · Ninguna es la mía: crear la organización (basta con el nombre)"
+  },
+  "Login4Empresa.dc.html": {
+   "w": 960,
+   "h": 760,
+   "page": "alta",
+   "x": 3120,
+   "y": 1300,
+   "title": "5b · L4 · ¿Cómo quieres empezar? · «Represento una empresa» elegida"
+  },
+  "Login5Empresa.dc.html": {
+   "w": 960,
+   "h": 760,
+   "page": "alta",
+   "x": 4160,
+   "y": 1300,
+   "title": "6b · L5 · Cuenta lista → seguir con la empresa (006–010)"
   }
  },
  "createdOnFiles": {
@@ -3630,6 +3646,15 @@
    "x": 0,
    "y": 2000,
    "text": "Casos de prueba del documento del árbol condicional y reglas · ordeño, vacuna, pienso de ponedoras, molino sin especie, categorías que no aplican, mercados, «Otro…», datos que no se publican, ficha pública y comparador"
+  },
+  "altaEmpresa": {
+   "kind": "title1",
+   "maxW": 2000,
+   "page": "alta",
+   "text": "Represento una empresa: 5b → 6b → sigue en 006–010, empezando por el nombre de tu organización",
+   "w": 240,
+   "x": 3120,
+   "y": 1000
   }
  },
  "order": [
@@ -3645,6 +3670,8 @@
   "Login3Crear.dc.html",
   "Login4Empezar.dc.html",
   "Login5Creada.dc.html",
+  "Login4Empresa.dc.html",
+  "Login5Empresa.dc.html",
   "Alta4MiEspacio.dc.html",
   "AltaMiEspacioIntereses.dc.html",
   "AltaExperto.dc.html",
