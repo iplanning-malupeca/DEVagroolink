@@ -385,7 +385,6 @@
      "type": "text",
      "filterable": true,
      "decisivo": true,
-     "required": true,
      "ejemplo": "Ross 308"
     },
     {
@@ -574,8 +573,7 @@
       "Material genético acuícola"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "origen",
@@ -643,8 +641,7 @@
      "label": "Técnica",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "eficacia",
@@ -692,8 +689,7 @@
      "unit": "animales",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "superficie",
@@ -765,8 +761,7 @@
      "unit": "kg | L",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "caudal",
@@ -820,8 +815,7 @@
      "unit": "m³/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "potencia",
@@ -886,8 +880,7 @@
       "Presión"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision_txt",
@@ -957,8 +950,7 @@
      "unit": "unidades/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "rendimiento",
@@ -1004,8 +996,7 @@
      "unit": "m³/día",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "tecnologia",
@@ -1051,8 +1042,7 @@
      "label": "Referencias compatibles",
      "type": "textarea",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "medidas",
@@ -1091,8 +1081,7 @@
      "unit": "t",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "volumen",
@@ -1146,8 +1135,7 @@
      "unit": "t/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "granulometria",
@@ -1200,8 +1188,7 @@
      "unit": "kg",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "tiempo",
@@ -1236,8 +1223,7 @@
      "type": "range",
      "unit": "kg/h",
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision",
@@ -1272,8 +1258,7 @@
      "unit": "t/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "diametro",
@@ -1313,8 +1298,7 @@
      "unit": "t/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "humedad_final",
@@ -1350,8 +1334,7 @@
      "unit": "t/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "longitud",
@@ -1447,8 +1430,7 @@
      "unit": "huevos",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "temperatura",
@@ -1508,8 +1490,7 @@
      "unit": "huevos/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision",
@@ -1546,8 +1527,7 @@
      "unit": "huevos/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "dia",
@@ -1591,8 +1571,7 @@
       "Otro"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "dia",
@@ -1685,8 +1664,7 @@
      "unit": "animales/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "tecnologia",
@@ -1717,8 +1695,7 @@
      "unit": "canales/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "temperatura",
@@ -1750,8 +1727,7 @@
      "unit": "t/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "temp_final",
@@ -1784,8 +1760,7 @@
      "unit": "unidades/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision_g",
@@ -1818,8 +1793,7 @@
      "unit": "kg/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "tipo_corte",
@@ -1854,8 +1828,7 @@
      "unit": "envases/min",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "formatos",
@@ -1932,7 +1905,6 @@
      "type": "text",
      "filterable": true,
      "decisivo": true,
-     "required": true,
      "ejemplo": "Bacillus subtilis DSM 32315"
     },
     {
@@ -1942,7 +1914,6 @@
      "unit": "UFC/g",
      "comparable": true,
      "decisivo": true,
-     "required": true,
      "ejemplo": "1 × 10⁹"
     },
     {
@@ -1983,8 +1954,7 @@
      "label": "Ingrediente",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "pureza",
@@ -2024,8 +1994,7 @@
      "id": "componentes",
      "label": "Componentes",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "metodo",
@@ -2071,8 +2040,7 @@
       "Multienzima"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "sustrato",
@@ -2088,7 +2056,6 @@
      "unit": "U/g",
      "comparable": true,
      "decisivo": true,
-     "required": true,
      "help": "Valor, unidad y método de ensayo van juntos: no se comparan actividades con métodos distintos",
      "ejemplo": "5.000 FTU/g · método ISO 30024"
     },
@@ -2099,7 +2066,6 @@
      "unit": "g/t | kg/t | ml/l",
      "comparable": true,
      "decisivo": true,
-     "required": true,
      "ejemplo": "100 g/t",
      "por_especie": true
     },
@@ -2142,8 +2108,7 @@
       "Sórbico"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -2191,8 +2156,7 @@
       "T-2/HT-2"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "adsorcion",
@@ -2240,8 +2204,7 @@
       "T-2/HT-2"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "mecanismo",
@@ -2277,8 +2240,7 @@
      "id": "mecanismo",
      "label": "Mecanismo",
      "type": "text",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "evidencia",
@@ -2318,8 +2280,7 @@
       "L-Isoleucina"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "pureza",
@@ -2378,8 +2339,7 @@
       "Niacina"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -2387,8 +2347,7 @@
      "type": "decimal",
      "unit": "UI/g | mg/kg",
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "estabilidad",
@@ -2430,8 +2389,7 @@
       "Magnesio"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -2512,8 +2470,7 @@
      "label": "Extractos",
      "type": "textarea",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "marcadores",
@@ -2550,8 +2507,7 @@
      "label": "Activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -2599,8 +2555,7 @@
      "label": "Pigmento",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -2639,8 +2594,7 @@
      "label": "Perfil",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "dosis",
@@ -2681,8 +2635,7 @@
       "Otra"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "ingrediente",
@@ -2719,8 +2672,7 @@
      "id": "ingredientes",
      "label": "Ingredientes",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "objetivo",
@@ -2758,8 +2710,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "familia_farm",
@@ -2807,7 +2758,6 @@
      "id": "indicacion",
      "label": "Indicación autorizada",
      "type": "textarea",
-     "required": true,
      "por_especie": true
     },
     {
@@ -2849,8 +2799,7 @@
      "id": "receta",
      "label": "Requiere receta veterinaria",
      "type": "boolean",
-     "filterable": true,
-     "required": true
+     "filterable": true
     },
     {
      "id": "contraindicaciones",
@@ -2871,8 +2820,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -2951,8 +2899,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -2983,7 +2930,6 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true,
      "por_especie": true
     },
     {
@@ -3022,8 +2968,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3046,7 +2991,6 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true,
      "por_especie": true
     },
     {
@@ -3092,8 +3036,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3116,7 +3059,6 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true,
      "por_especie": true
     },
     {
@@ -3152,8 +3094,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3203,8 +3144,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3271,8 +3211,7 @@
      "id": "composicion",
      "label": "Composición",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3343,8 +3282,7 @@
      "label": "Principio activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "forma",
@@ -3367,7 +3305,6 @@
      "id": "indicacion",
      "label": "Indicación",
      "type": "textarea",
-     "required": true,
      "por_especie": true
     },
     {
@@ -3403,8 +3340,7 @@
      "id": "antigenos",
      "label": "Antígenos",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "cepa",
@@ -3426,8 +3362,7 @@
       "ARN"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "edad",
@@ -3459,8 +3394,7 @@
       "Escarificación"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "inmunidad",
@@ -3506,8 +3440,7 @@
      "id": "antigenos",
      "label": "Antígenos",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "cepa",
@@ -3529,8 +3462,7 @@
       "ARN"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "edad",
@@ -3562,8 +3494,7 @@
       "Escarificación"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "inmunidad",
@@ -3582,8 +3513,7 @@
     {
      "id": "aislamiento",
      "label": "Aislamiento",
-     "type": "text",
-     "required": true
+     "type": "text"
     },
     {
      "id": "origen_aislamiento",
@@ -3593,8 +3523,7 @@
     {
      "id": "ambito",
      "label": "Ámbito autorizado",
-     "type": "textarea",
-     "required": true
+     "type": "textarea"
     },
     {
      "id": "lote",
@@ -3631,8 +3560,7 @@
      "id": "antigenos",
      "label": "Antígenos",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "cepa",
@@ -3654,8 +3582,7 @@
       "ARN"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "edad",
@@ -3687,8 +3614,7 @@
       "Escarificación"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "inmunidad",
@@ -3740,8 +3666,7 @@
      "label": "Tipo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "mecanismo",
@@ -3780,8 +3705,7 @@
      "label": "Activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -3864,8 +3788,7 @@
      "type": "decimal",
      "unit": "bar",
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "caudal",
@@ -3912,8 +3835,7 @@
       "Mosquitos"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "activo",
@@ -3963,8 +3885,7 @@
      "label": "Activo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "dosis_mgl",
@@ -4010,8 +3931,7 @@
      "type": "decimal",
      "unit": "l/min",
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision",
@@ -4045,8 +3965,7 @@
      "label": "Tipo",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "material",
@@ -4102,8 +4021,7 @@
      "max": 100,
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "grasa",
@@ -4252,8 +4170,7 @@
      "id": "composicion",
      "label": "Composición",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "concentracion",
@@ -4268,7 +4185,6 @@
      "unit": "kg/t",
      "comparable": true,
      "decisivo": true,
-     "required": true,
      "por_especie": true
     },
     {
@@ -4304,8 +4220,7 @@
      "max": 100,
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "humedad",
@@ -4346,8 +4261,7 @@
      "id": "perfil",
      "label": "Perfil lipídico",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "energia",
@@ -4381,8 +4295,7 @@
      "label": "Materia prima",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "ms",
@@ -4426,8 +4339,7 @@
      "id": "ambito",
      "label": "Ámbito",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "modalidad",
@@ -4439,8 +4351,7 @@
       "Mixta"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "entregables",
@@ -4474,8 +4385,7 @@
      "label": "Tipo de análisis",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "matriz",
@@ -4533,8 +4443,7 @@
      "id": "alcance",
      "label": "Alcance",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "capacidad",
@@ -4569,8 +4478,7 @@
      "label": "Técnica",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "indicadores",
@@ -4597,8 +4505,7 @@
      "id": "temario",
      "label": "Temario o norma",
      "type": "textarea",
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "duracion",
@@ -4641,8 +4548,7 @@
      "label": "Territorio",
      "type": "text",
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "capacidad",
@@ -4674,14 +4580,12 @@
     {
      "id": "tipo_propuesto",
      "label": "Tipo que propones",
-     "type": "text",
-     "required": true
+     "type": "text"
     },
     {
      "id": "justificacion",
      "label": "Por qué no encaja en otra categoría",
-     "type": "textarea",
-     "required": true
+     "type": "textarea"
     },
     {
      "id": "categoria_sugerida",
@@ -4710,8 +4614,7 @@
      "unit": "kg",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "animales_unidad",
@@ -4759,8 +4662,7 @@
      "type": "decimal",
      "unit": "ml/min",
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "presion",
@@ -4809,8 +4711,7 @@
      "unit": "kg/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision",
@@ -4832,8 +4733,7 @@
       "Seca y líquida"
      ],
      "filterable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "sensores",
@@ -4870,8 +4770,7 @@
      "unit": "plazas",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "dimensiones",
@@ -4920,8 +4819,7 @@
      "unit": "animales/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "rendimiento",
@@ -4991,8 +4889,7 @@
      "unit": "huevos/h",
      "filterable": true,
      "comparable": true,
-     "decisivo": true,
-     "required": true
+     "decisivo": true
     },
     {
      "id": "precision",
