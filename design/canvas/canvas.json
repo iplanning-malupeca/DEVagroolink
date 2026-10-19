@@ -3428,6 +3428,14 @@
    "w": 1280,
    "x": 4080,
    "y": 0
+  },
+  "ProyPropuestaMensajes.dc.html": {
+   "w": 1280,
+   "h": 940,
+   "page": "proyempresas",
+   "x": 1360,
+   "y": 1300,
+   "title": "J6b · La propuesta en Mensajes: dudas del ganadero y nueva versión en el mismo hilo"
   }
  },
  "createdOnFiles": {
@@ -4658,7 +4666,8 @@
   "MB_PlanLogin.dc.html",
   "MB_PlanLimite.dc.html",
   "MB_PlanPago.dc.html",
-  "MB_PlanFiltro.dc.html"
+  "MB_PlanFiltro.dc.html",
+  "ProyPropuestaMensajes.dc.html"
  ],
  "pages": [
   {
