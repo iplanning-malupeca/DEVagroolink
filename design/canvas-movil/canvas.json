@@ -614,38 +614,6 @@
    "y": 0,
    "title": "Sucursal: tu Sede"
   },
-  "MB_EmpTiraFabCom.dc.html": {
-   "w": 2970,
-   "h": 1044,
-   "page": "mb3",
-   "x": 0,
-   "y": 2290,
-   "title": "Crear perfil sin cuenta · email · alta del comercial · zona · bandeja · Mensajes"
-  },
-  "MB_EmpTiraFabSuc.dc.html": {
-   "w": 3400,
-   "h": 1404,
-   "page": "mb3",
-   "x": 0,
-   "y": 4034,
-   "title": "Tipo · red · aviso · países · permisos · contacto · página · Mensajes"
-  },
-  "MB_EmpTiraSucursal.dc.html": {
-   "w": 820,
-   "h": 1184,
-   "page": "mb3",
-   "x": 0,
-   "y": 6138,
-   "title": "Tipo de empresa heredado de la Sede · Mensajes con la Sede"
-  },
-  "MB_EmpTiraDistribuidor.dc.html": {
-   "w": 3830,
-   "h": 1244,
-   "page": "mb3",
-   "x": 0,
-   "y": 8022,
-   "title": "Tipo · marcas · añadir · subir · validación · contacto · delegaciones · Mensajes"
-  },
   "MB_MJ1.dc.html": {
    "w": 390,
    "h": 860,
@@ -966,54 +934,6 @@
    "y": 1960,
    "title": "P2 · «Ofrecer mis servicios»: qué cambia (luego X3–X5)"
   },
-  "MB_UsrTiraEspacio.dc.html": {
-   "w": 1250,
-   "h": 1184,
-   "page": "mb7",
-   "x": 0,
-   "y": 0,
-   "title": "Mi espacio · Mensajes · conversación"
-  },
-  "MB_UsrTiraTableros.dc.html": {
-   "w": 1250,
-   "h": 1034,
-   "page": "mb7",
-   "x": 1330,
-   "y": 0,
-   "title": "Mis tableros · comparaciones · historial"
-  },
-  "MB_UsrTiraCuenta.dc.html": {
-   "w": 1250,
-   "h": 1894,
-   "page": "mb7",
-   "x": 2660,
-   "y": 0,
-   "title": "Mi perfil · Idioma y zona · Ayuda"
-  },
-  "MB_UsrTiraFacturacion.dc.html": {
-   "w": 2970,
-   "h": 1384,
-   "page": "mb7",
-   "x": 3990,
-   "y": 0,
-   "title": "Facturación: resumen · planes · pedidos · detalle · facturas · pagos · direcciones"
-  },
-  "MB_ExpTiraPanel.dc.html": {
-   "w": 1250,
-   "h": 1444,
-   "page": "mb7",
-   "x": 0,
-   "y": 2594,
-   "title": "Panel · Consultas recibidas · una consulta"
-  },
-  "MB_ExpTiraPerfil.dc.html": {
-   "w": 820,
-   "h": 1034,
-   "page": "mb7",
-   "x": 1330,
-   "y": 2594,
-   "title": "Perfil de experta · vista pública"
-  },
   "MB_EmpPanel.dc.html": {
    "w": 390,
    "h": 920,
@@ -1094,13 +1014,429 @@
    "y": 0,
    "title": "D0d · Altas de miembros (superadmin)"
   },
-  "MB_EmpTiraFabDist.dc.html": {
-   "w": 2540,
-   "h": 1504,
+  "MB_UsrEspacio.dc.html": {
+   "w": 390,
+   "h": 1140,
+   "page": "mb7",
+   "x": 0,
+   "y": 0,
+   "title": "Mi espacio"
+  },
+  "MB_UsrMensajes.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 470,
+   "y": 0,
+   "title": "Mensajes"
+  },
+  "MB_UsrConversacion.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 940,
+   "y": 0,
+   "title": "Conversación"
+  },
+  "MB_UsrTableros.dc.html": {
+   "w": 390,
+   "h": 970,
+   "page": "mb7",
+   "x": 1330,
+   "y": 0,
+   "title": "Mis tableros"
+  },
+  "MB_UsrComparaciones.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb7",
+   "x": 1800,
+   "y": 0,
+   "title": "Mis comparaciones"
+  },
+  "MB_UsrHistorial.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb7",
+   "x": 2270,
+   "y": 0,
+   "title": "Historial"
+  },
+  "MB_UsrPerfil.dc.html": {
+   "w": 390,
+   "h": 1850,
+   "page": "mb7",
+   "x": 2660,
+   "y": 0,
+   "title": "Mi perfil"
+  },
+  "MB_UsrIdioma.dc.html": {
+   "w": 390,
+   "h": 1210,
+   "page": "mb7",
+   "x": 3130,
+   "y": 0,
+   "title": "Idioma y zona"
+  },
+  "MB_UsrAyuda.dc.html": {
+   "w": 390,
+   "h": 1150,
+   "page": "mb7",
+   "x": 3600,
+   "y": 0,
+   "title": "Ayuda y contacto"
+  },
+  "MB_UsrFacturacion.dc.html": {
+   "w": 390,
+   "h": 1340,
+   "page": "mb7",
+   "x": 3990,
+   "y": 0,
+   "title": "Facturación"
+  },
+  "MB_UsrFactPlanes.dc.html": {
+   "w": 390,
+   "h": 1160,
+   "page": "mb7",
+   "x": 4460,
+   "y": 0,
+   "title": "Planes y suscripciones"
+  },
+  "MB_UsrFactPedidos.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 4930,
+   "y": 0,
+   "title": "Pedidos"
+  },
+  "MB_UsrFactPedido.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 5400,
+   "y": 0,
+   "title": "Detalle de pedido"
+  },
+  "MB_UsrFactFacturas.dc.html": {
+   "w": 390,
+   "h": 1150,
+   "page": "mb7",
+   "x": 5870,
+   "y": 0,
+   "title": "Facturas"
+  },
+  "MB_UsrFactPagos.dc.html": {
+   "w": 390,
+   "h": 980,
+   "page": "mb7",
+   "x": 6340,
+   "y": 0,
+   "title": "Métodos de pago"
+  },
+  "MB_UsrFactDirecciones.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "mb7",
+   "x": 6810,
+   "y": 0,
+   "title": "Direcciones"
+  },
+  "MB_ExpPanel.dc.html": {
+   "w": 390,
+   "h": 1400,
+   "page": "mb7",
+   "x": 0,
+   "y": 2594,
+   "title": "Panel de experta"
+  },
+  "MB_ExpConsultas.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 470,
+   "y": 2594,
+   "title": "Consultas recibidas"
+  },
+  "MB_ExpConsulta.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 940,
+   "y": 2594,
+   "title": "Una consulta"
+  },
+  "MB_ExpPerfil.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb7",
+   "x": 1330,
+   "y": 2594,
+   "title": "Perfil de experta"
+  },
+  "MB_ExpPublico.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 1800,
+   "y": 2594,
+   "title": "Vista pública"
+  },
+  "MB_FabDist_D1.dc.html": {
+   "w": 390,
+   "h": 1330,
    "page": "mb8",
    "x": 2820,
    "y": 0,
-   "title": "Lo que faltaba: tipo, especies «Excluir», red, contacto, cabecera del superadmin y Mensajes"
+   "title": "D1 · Tipo de empresa · con distribuidores"
+  },
+  "MB_FabDist_D1b-2.dc.html": {
+   "w": 390,
+   "h": 1460,
+   "page": "mb8",
+   "x": 3290,
+   "y": 0,
+   "title": "D1b-2 · Especies · modo «Excluir»"
+  },
+  "MB_FabDist_D4.dc.html": {
+   "w": 390,
+   "h": 1100,
+   "page": "mb8",
+   "x": 3760,
+   "y": 0,
+   "title": "D4 · Red: distribuidores"
+  },
+  "MB_FabDist_D7.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb8",
+   "x": 4230,
+   "y": 0,
+   "title": "D7 · Contacto: al distribuidor de la zona"
+  },
+  "MB_FabDist_D2s.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb8",
+   "x": 4700,
+   "y": 0,
+   "title": "D2s · Cabecera vista por el superadmin"
+  },
+  "MB_FabDist_DM1.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 5170,
+   "y": 0,
+   "title": "DM1 · Hilo fabricante ↔ distribuidor"
+  },
+  "MB_FabCom_K2b.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 0,
+   "y": 2290,
+   "title": "K2b · Crear perfil de comercial sin cuenta"
+  },
+  "MB_FabCom_K2c.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 470,
+   "y": 2290,
+   "title": "K2c · Email al comercial: tiene una solicitud"
+  },
+  "MB_FabCom_K2d.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 940,
+   "y": 2290,
+   "title": "K2d · El comercial se da de alta"
+  },
+  "MB_FabCom_K3.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb3",
+   "x": 1410,
+   "y": 2290,
+   "title": "K3 · Detalle del comercial y su zona"
+  },
+  "MB_FabCom_K6.dc.html": {
+   "w": 390,
+   "h": 1000,
+   "page": "mb3",
+   "x": 1880,
+   "y": 2290,
+   "title": "K6 · Bandeja de la comercial"
+  },
+  "MB_FabCom_KM1.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 2350,
+   "y": 2290,
+   "title": "KM1 · Mensajes: solicitud de un comprador"
+  },
+  "MB_FabCom_KM2.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 2820,
+   "y": 2290,
+   "title": "KM2 · Hilo interno con la Dirección comercial"
+  },
+  "MB_FabSuc_S1.dc.html": {
+   "w": 390,
+   "h": 1360,
+   "page": "mb3",
+   "x": 0,
+   "y": 4034,
+   "title": "S1 · Tipo de empresa · Sede con sucursales"
+  },
+  "MB_FabSuc_S2.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb3",
+   "x": 470,
+   "y": 4034,
+   "title": "S2 · Red de sucursales"
+  },
+  "MB_FabSuc_S2b.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 940,
+   "y": 4034,
+   "title": "S2b · Aviso a la Sede y a la sucursal"
+  },
+  "MB_FabSuc_S3.dc.html": {
+   "w": 390,
+   "h": 1030,
+   "page": "mb3",
+   "x": 1410,
+   "y": 4034,
+   "title": "S3 · Países de cada sucursal"
+  },
+  "MB_FabSuc_S4.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb3",
+   "x": 1880,
+   "y": 4034,
+   "title": "S4 · Qué decide la Sede y qué cada sucursal"
+  },
+  "MB_FabSuc_S.dc.html": {
+   "w": 390,
+   "h": 1030,
+   "page": "mb3",
+   "x": 2350,
+   "y": 4034,
+   "title": "S · Contacto: a la sucursal del país"
+  },
+  "MB_FabSuc_S5.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "mb3",
+   "x": 2820,
+   "y": 4034,
+   "title": "S5 · Página de la sucursal"
+  },
+  "MB_FabSuc_SM1.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 3290,
+   "y": 4034,
+   "title": "SM1 · Hilo Sede ↔ sucursal"
+  },
+  "MB_Sucursal_U1.dc.html": {
+   "w": 390,
+   "h": 1140,
+   "page": "mb3",
+   "x": 0,
+   "y": 6138,
+   "title": "U1 · Tipo de empresa cuando eres sucursal"
+  },
+  "MB_Sucursal_U2.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 470,
+   "y": 6138,
+   "title": "U2 · Mensajes con la Sede"
+  },
+  "MB_Distribuidor_X1.dc.html": {
+   "w": 390,
+   "h": 1200,
+   "page": "mb3",
+   "x": 0,
+   "y": 8022,
+   "title": "X1 · Tipo de empresa · distribuidor multimarca"
+  },
+  "MB_Distribuidor_X2.dc.html": {
+   "w": 390,
+   "h": 950,
+   "page": "mb3",
+   "x": 470,
+   "y": 8022,
+   "title": "X2 · Marcas que vendes"
+  },
+  "MB_Distribuidor_X3.dc.html": {
+   "w": 390,
+   "h": 950,
+   "page": "mb3",
+   "x": 940,
+   "y": 8022,
+   "title": "X3 · Añadir productos que ya existen"
+  },
+  "MB_Distribuidor_X4.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb3",
+   "x": 1410,
+   "y": 8022,
+   "title": "X4 · Subir un producto nuevo"
+  },
+  "MB_Distribuidor_X5.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb3",
+   "x": 1880,
+   "y": 8022,
+   "title": "X5 · Validación de la marca"
+  },
+  "MB_Distribuidor_X.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb3",
+   "x": 2350,
+   "y": 8022,
+   "title": "X · Contacto: a la delegación más cercana"
+  },
+  "MB_Distribuidor_X6.dc.html": {
+   "w": 390,
+   "h": 1190,
+   "page": "mb3",
+   "x": 2820,
+   "y": 8022,
+   "title": "X6 · Contacto: delegaciones"
+  },
+  "MB_Distribuidor_XM1.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 3290,
+   "y": 8022,
+   "title": "XM1 · Hilo con el fabricante"
+  },
+  "MB_Distribuidor_XM2.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb3",
+   "x": 3760,
+   "y": 8022,
+   "title": "XM2 · Solicitud atendida por una delegación"
   }
  },
  "order": [
@@ -1173,10 +1509,32 @@
   "MB_MA13.dc.html",
   "MB_MA14.dc.html",
   "MB_MA15.dc.html",
-  "MB_EmpTiraFabCom.dc.html",
-  "MB_EmpTiraFabSuc.dc.html",
-  "MB_EmpTiraSucursal.dc.html",
-  "MB_EmpTiraDistribuidor.dc.html",
+  "MB_FabCom_K2b.dc.html",
+  "MB_FabCom_K2c.dc.html",
+  "MB_FabCom_K2d.dc.html",
+  "MB_FabCom_K3.dc.html",
+  "MB_FabCom_K6.dc.html",
+  "MB_FabCom_KM1.dc.html",
+  "MB_FabCom_KM2.dc.html",
+  "MB_FabSuc_S1.dc.html",
+  "MB_FabSuc_S2.dc.html",
+  "MB_FabSuc_S2b.dc.html",
+  "MB_FabSuc_S3.dc.html",
+  "MB_FabSuc_S4.dc.html",
+  "MB_FabSuc_S.dc.html",
+  "MB_FabSuc_S5.dc.html",
+  "MB_FabSuc_SM1.dc.html",
+  "MB_Sucursal_U1.dc.html",
+  "MB_Sucursal_U2.dc.html",
+  "MB_Distribuidor_X1.dc.html",
+  "MB_Distribuidor_X2.dc.html",
+  "MB_Distribuidor_X3.dc.html",
+  "MB_Distribuidor_X4.dc.html",
+  "MB_Distribuidor_X5.dc.html",
+  "MB_Distribuidor_X.dc.html",
+  "MB_Distribuidor_X6.dc.html",
+  "MB_Distribuidor_XM1.dc.html",
+  "MB_Distribuidor_XM2.dc.html",
   "MB_MJ1.dc.html",
   "MB_MJ2.dc.html",
   "MB_MJ3.dc.html",
@@ -1217,12 +1575,27 @@
   "MB_Exp7_Semana.dc.html",
   "MB_ExpP1_Aviso.dc.html",
   "MB_ExpP2_Intro.dc.html",
-  "MB_UsrTiraEspacio.dc.html",
-  "MB_UsrTiraTableros.dc.html",
-  "MB_UsrTiraCuenta.dc.html",
-  "MB_UsrTiraFacturacion.dc.html",
-  "MB_ExpTiraPanel.dc.html",
-  "MB_ExpTiraPerfil.dc.html",
+  "MB_UsrEspacio.dc.html",
+  "MB_UsrMensajes.dc.html",
+  "MB_UsrConversacion.dc.html",
+  "MB_UsrTableros.dc.html",
+  "MB_UsrComparaciones.dc.html",
+  "MB_UsrHistorial.dc.html",
+  "MB_UsrPerfil.dc.html",
+  "MB_UsrIdioma.dc.html",
+  "MB_UsrAyuda.dc.html",
+  "MB_UsrFacturacion.dc.html",
+  "MB_UsrFactPlanes.dc.html",
+  "MB_UsrFactPedidos.dc.html",
+  "MB_UsrFactPedido.dc.html",
+  "MB_UsrFactFacturas.dc.html",
+  "MB_UsrFactPagos.dc.html",
+  "MB_UsrFactDirecciones.dc.html",
+  "MB_ExpPanel.dc.html",
+  "MB_ExpConsultas.dc.html",
+  "MB_ExpConsulta.dc.html",
+  "MB_ExpPerfil.dc.html",
+  "MB_ExpPublico.dc.html",
   "MB_EmpPanel.dc.html",
   "MB_EEM1.dc.html",
   "MB_EEM2.dc.html",
@@ -1233,7 +1606,12 @@
   "MB_FD_Contenidos.dc.html",
   "MB_FD_AvisoEmpresa.dc.html",
   "MB_FD_AvisoAdmin.dc.html",
-  "MB_EmpTiraFabDist.dc.html"
+  "MB_FabDist_D1.dc.html",
+  "MB_FabDist_D1b-2.dc.html",
+  "MB_FabDist_D4.dc.html",
+  "MB_FabDist_D7.dc.html",
+  "MB_FabDist_D2s.dc.html",
+  "MB_FabDist_DM1.dc.html"
  ],
  "notes": {
   "busT2": {
