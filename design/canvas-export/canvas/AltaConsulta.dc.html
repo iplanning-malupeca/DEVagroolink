@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta · Primera consulta</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-decoration:underline}
+.lbl{font-size:13px;font-weight:500;display:flex;flex-direction:column;gap:6px;min-width:0}
+.inp{height:40px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.opt{font-weight:400;color:#56615B;font-size:12px}
+.skel{background:#E9EDEA;border-radius:12px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 820px; position: relative; overflow: hidden; background: #FFFFFF;">
+
+  <div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column;">
+    <div style="height: 64px; border-bottom: 1px solid #E3E8E4; display: flex; align-items: center; padding: 0 24px; gap: 16px;"><span style="width: 40px; height: 40px; border-radius: 10px; background: #0E5A3A;"></span><span class="skel" style="width: 420px; height: 40px; border-radius: 999px; margin-left: 220px;"></span><span style="flex: 1;"></span><span class="skel" style="width: 140px; height: 38px; border-radius: 999px;"></span></div>
+    <div style="padding: 32px 24px; display: flex; gap: 32px;">
+      <div class="skel" style="width: 560px; height: 440px;"></div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 14px;"><div class="skel" style="width: 60%; height: 28px;"></div><div class="skel" style="width: 40%; height: 18px;"></div><div class="skel" style="height: 120px;"></div><div class="skel" style="width: 220px; height: 46px; background: #0E5A3A;"></div></div>
+    </div>
+  </div>
+  <div style="position: absolute; inset: 0; background: rgba(15, 30, 22, 0.45);"></div>
+
+  <form role="dialog" aria-modal="true" aria-labelledby="dlg-t" style="position: absolute; left: 50%; top: 40px; transform: translateX(-50%); width: 560px; box-sizing: border-box; background: #FFFFFF; border-radius: 18px; box-shadow: 0 24px 60px rgba(10, 30, 20, 0.25); padding: 26px 28px; display: flex; flex-direction: column; gap: 14px;">
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+      <span style="width: 42px; height: 42px; border-radius: 10px; background: #1F3A5F; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">AE</span>
+      <span style="display: flex; flex-direction: column; flex: 1;"><span id="dlg-t" style="font-size: 18px; font-weight: 600;">Consulta a AgroExport SRL</span><span style="font-size: 12.5px; color: #56615B;">Sobre: [Nombre de producto]</span></span>
+      <button type="button" aria-label="Cerrar" style="width: 34px; height: 34px; border: 0; background: none; color: #56615B; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <label class="lbl">Tu mensaje
+      <textarea rows="3" style="border: 1px solid #D5DED8; border-radius: 10px; padding: 10px 12px; font: 400 13.5px 'Poppins', sans-serif; color: #17231D; resize: none; line-height: 1.35;">Hola, me interesa este producto para una granja de broilers. ¿Podéis enviarme precio y disponibilidad?</textarea>
+    </label>
+    <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #F6F8F6;">
+      <span style="font-size: 12.5px; color: #2F3D36; line-height: 1.32;"><strong>Solo esta vez:</strong> AgroExport ya verá tu nombre, Granja Los Olmos y tu cargo. Para responderte mejor, añade:</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <label class="lbl"><span>Provincia de la explotación</span><select class="inp"><option>Selecciona</option><option>Lleida</option><option>Huesca</option><option>Segovia</option></select></label>
+        <label class="lbl"><span>Tamaño <span class="opt">(opcional)</span></span><select class="inp"><option>Selecciona</option><option>Menos de 20.000 aves</option><option>20.000 – 100.000 aves</option><option>Más de 100.000 aves</option></select></label>
+      </div>
+    </div>
+    <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; color: #2F3D36; line-height: 1.32; cursor: pointer;">
+      <input type="checkbox" defaultChecked="{{ yes }}" style="accent-color: #0E5A3A; width: 17px; height: 17px; margin: 1px 0 0; flex: none;">
+      <span>AgroExport SRL verá tu nombre, tu empresa, tu cargo y estos datos. Nunca tu teléfono ni tu email: te responde por Mensajes. <a href="#">Más información</a></span>
+    </label>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #56615B;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Email verificado</span>
+      <button type="submit" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #0E5A3A; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif; cursor: pointer;">Enviar consulta</button>
+    </div>
+  </form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true }; }
+}
+</script>
+</body>
+</html>

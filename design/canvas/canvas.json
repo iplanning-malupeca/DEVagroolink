@@ -2989,6 +2989,46 @@
    "y": 5180,
    "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)"
   },
+  "PlanBloqueos.dc.html": {
+   "w": 1280,
+   "h": 2440,
+   "page": "planesbloq",
+   "x": 0,
+   "y": 0,
+   "title": "BL1 · Matriz: qué se bloquea por cuenta y nivel"
+  },
+  "PlanLogin.dc.html": {
+   "w": 1280,
+   "h": 800,
+   "page": "planesbloq",
+   "x": 1400,
+   "y": 0,
+   "title": "BL2 · Ventana «Login» · sin cuenta, al pulsar Guardar"
+  },
+  "PlanLimite.dc.html": {
+   "w": 1280,
+   "h": 800,
+   "page": "planesbloq",
+   "x": 1400,
+   "y": 900,
+   "title": "BL3 · Ventana «Límite» · empresa Gratis, producto 16"
+  },
+  "PlanPago.dc.html": {
+   "w": 1280,
+   "h": 800,
+   "page": "planesbloq",
+   "x": 1400,
+   "y": 1800,
+   "title": "BL4 · Ventana «Plan de pago» · experto Gratis, al pulsar Publicar contenido"
+  },
+  "PlanFiltro.dc.html": {
+   "w": 1280,
+   "h": 800,
+   "page": "planesbloq",
+   "x": 1400,
+   "y": 2700,
+   "title": "BL5 · Ventana «Contacto ocultado» · al enviar un mensaje con teléfono y email"
+  },
   "MB_MobHeaderSinSesion.dc.html": {
    "w": 390,
    "h": 844,
@@ -3380,6 +3420,38 @@
    "x": 1410,
    "y": 0,
    "title": "Editar desde el resumen"
+  },
+  "MB_PlanLogin.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 0,
+   "y": 0,
+   "title": "Login al pulsar Guardar"
+  },
+  "MB_PlanLimite.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 470,
+   "y": 0,
+   "title": "Límite: 2.º proyecto del comprador"
+  },
+  "MB_PlanPago.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 940,
+   "y": 0,
+   "title": "Plan de pago: exportar informes"
+  },
+  "MB_PlanFiltro.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 1410,
+   "y": 0,
+   "title": "Contacto ocultado"
   }
  },
  "createdOnFiles": {
@@ -4071,6 +4143,25 @@
    "y": 4840,
    "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu"
   },
+  "blt": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "planesbloq",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Planes · qué se bloquea por login, límite o plan de pago"
+  },
+  "bldev": {
+   "fill": "orange",
+   "maxH": 360,
+   "page": "planesbloq",
+   "size": 24,
+   "w": 1280,
+   "x": 2800,
+   "y": 0,
+   "text": "PARA DESARROLLO · Bloqueos\n\nFuente única: docs/modelo-producto/planes.json (cuentas → acciones → valor por nivel + tipo de bloqueo; ventanas con cuándo salen y textos).\n\nTipos: login · límite · plan de pago · a medida · nunca.\n\nDecisiones 19/10/2026: contactos fuera de Agroolink prohibidos y filtrados (teléfono, email, web, WhatsApp, redes, QR); Empresa Gratis ve consultas de 3 compradores; Experto con consultas ilimitadas; comprador Gratis publica 1 proyecto; sucursales con alta gratis y plan de grupo a medida; traducción en todos los planes. Las versiones móviles están en MB_08 Planes."
+  },
   "mbt0": {
    "kind": "title1",
    "maxW": 8000,
@@ -4133,6 +4224,15 @@
    "x": 0,
    "y": -300,
    "text": "Proyectos (prototipo crear-proyecto)"
+  },
+  "mbt7": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb8",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py"
   },
   "mbdev": {
    "fill": "orange",
@@ -4519,6 +4619,11 @@
   "ServExpCondiciones.dc.html",
   "ServExpRevision.dc.html",
   "ServExpLista.dc.html",
+  "PlanBloqueos.dc.html",
+  "PlanLogin.dc.html",
+  "PlanLimite.dc.html",
+  "PlanPago.dc.html",
+  "PlanFiltro.dc.html",
   "MB_MobHeaderSinSesion.dc.html",
   "MB_MobHeaderSesion.dc.html",
   "MB_MobHeaderTu.dc.html",
@@ -4567,7 +4672,11 @@
   "MB_MJ1.dc.html",
   "MB_MJ2.dc.html",
   "MB_MJ3.dc.html",
-  "MB_MJ4.dc.html"
+  "MB_MJ4.dc.html",
+  "MB_PlanLogin.dc.html",
+  "MB_PlanLimite.dc.html",
+  "MB_PlanPago.dc.html",
+  "MB_PlanFiltro.dc.html"
  ],
  "pages": [
   {
@@ -4613,6 +4722,10 @@
   {
    "id": "planes",
    "name": "Planes"
+  },
+  {
+   "id": "planesbloq",
+   "name": "Planes · qué se bloquea"
   },
   {
    "id": "fabdist",
@@ -4689,6 +4802,10 @@
   {
    "id": "mb7",
    "name": "MB_07 Proyectos"
+  },
+  {
+   "id": "mb8",
+   "name": "MB_08 Planes"
   },
   {
    "id": "servicios",

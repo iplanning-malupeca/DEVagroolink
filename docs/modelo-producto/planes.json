@@ -1,0 +1,475 @@
+{
+ "version": 1,
+ "fecha": "2026-10-19",
+ "reglas": [
+  "Preguntar nunca se bloquea para el comprador. Los expertos reciben y responden sin límite; la empresa Gratis ve las consultas de 3 compradores y las siguientes se guardan hasta que pasa a Pro (nunca se pierden).",
+  "Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR; todo se habla en Mensajes y queda registrado.",
+  "Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio, proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y se avisa al autor. Si se repite, el superadmin revisa la cuenta.",
+  "Sin cuenta se puede ver todo; el login gratuito se pide al pulsar una acción, nunca al entrar.",
+  "Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.",
+  "Al bajar de plan nada se borra: lo que sobra pasa a solo lectura o se despublica (el usuario elige qué mantiene).",
+  "Traducción automática (ES · EN · PT · FR) en todos los planes.",
+  "Verificado no se compra."
+ ],
+ "bloqueos": {
+  "libre": "Sin bloqueo",
+  "login": "Pide login gratuito",
+  "limite": "Funciona hasta un número del plan",
+  "plan": "Solo en un plan de pago",
+  "medida": "Precio a medida",
+  "nunca": "No existe en ningún plan"
+ },
+ "cuentas": {
+  "todos": {
+   "label": "Todas las cuentas",
+   "niveles": [
+    "Sin cuenta",
+    "Con cuenta gratis"
+   ],
+   "acciones": [
+    {
+     "id": "buscar",
+     "accion": "Buscar y filtrar productos, empresas y expertos",
+     "valores": {
+      "Sin cuenta": "Sí",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "ver_fichas",
+     "accion": "Ver fichas completas",
+     "valores": {
+      "Sin cuenta": "Sí",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "traduccion",
+     "accion": "Ver fichas en su idioma (traducción automática)",
+     "valores": {
+      "Sin cuenta": "Sí",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "solicitud",
+     "accion": "Enviar una solicitud o consulta",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Ilimitadas · la 1.ª pide email verificado"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "mensajes",
+     "accion": "Mensajes",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "guardar",
+     "accion": "Guardar en un tablero",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "comparar",
+     "accion": "Comparar productos",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "documentos",
+     "accion": "Descargar documentos técnicos",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "seguir",
+     "accion": "Seguir empresas y crear alertas",
+     "valores": {
+      "Sin cuenta": "Login",
+      "Con cuenta gratis": "Sí"
+     },
+     "bloqueo": "login"
+    },
+    {
+     "id": "contacto",
+     "accion": "Ver teléfono, email, web, WhatsApp o redes de otro usuario",
+     "valores": {
+      "Sin cuenta": "Nunca",
+      "Con cuenta gratis": "Nunca"
+     },
+     "bloqueo": "nunca"
+    },
+    {
+     "id": "escribir_contacto",
+     "accion": "Escribir contactos en mensajes, fichas o documentos",
+     "valores": {
+      "Sin cuenta": "Nunca",
+      "Con cuenta gratis": "Se ocultan siempre"
+     },
+     "bloqueo": "nunca"
+    }
+   ]
+  },
+  "comprador": {
+   "label": "Comprador",
+   "niveles": [
+    "Gratis",
+    "Pro · 9,90 € (próximamente)"
+   ],
+   "acciones": [
+    {
+     "id": "proyectos",
+     "accion": "Publicar proyectos / RFQ",
+     "valores": {
+      "Gratis": "1",
+      "Pro · 9,90 € (próximamente)": "Ilimitados"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "tableros",
+     "accion": "Tableros",
+     "valores": {
+      "Gratis": "5",
+      "Pro · 9,90 € (próximamente)": "Ilimitados"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "comparar_max",
+     "accion": "Productos por comparación",
+     "valores": {
+      "Gratis": "Hasta 4",
+      "Pro · 9,90 € (próximamente)": "Hasta 10 y guardar"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "compartir",
+     "accion": "Compartir tableros",
+     "valores": {
+      "Gratis": "1 colaborador",
+      "Pro · 9,90 € (próximamente)": "Con todo el equipo"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "alertas",
+     "accion": "Alertas de productos y proveedores",
+     "valores": {
+      "Gratis": "5",
+      "Pro · 9,90 € (próximamente)": "Ilimitadas"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "alertas_cambios",
+     "accion": "Alertas de precio, stock y ficha",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 9,90 € (próximamente)": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "pdf",
+     "accion": "Exportar a PDF",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 9,90 € (próximamente)": "Sí"
+     },
+     "bloqueo": "plan"
+    }
+   ]
+  },
+  "experto": {
+   "label": "Experto",
+   "niveles": [
+    "Gratis",
+    "Pro · 19,90 €"
+   ],
+   "acciones": [
+    {
+     "id": "consultas",
+     "accion": "Recibir y responder consultas",
+     "valores": {
+      "Gratis": "Ilimitadas",
+      "Pro · 19,90 €": "Ilimitadas"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "servicios",
+     "accion": "Servicios publicados",
+     "valores": {
+      "Gratis": "1",
+      "Pro · 19,90 €": "Ilimitados"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "candidaturas",
+     "accion": "Candidaturas a proyectos",
+     "valores": {
+      "Gratis": "Solo ver proyectos abiertos",
+      "Pro · 19,90 €": "Ilimitadas"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "portfolio",
+     "accion": "Portfolio / casos",
+     "valores": {
+      "Gratis": "1",
+      "Pro · 19,90 €": "Ilimitado"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "organizar",
+     "accion": "Consultas organizadas (estados y notas)",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 19,90 €": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "contenido",
+     "accion": "Publicar contenido",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 19,90 €": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "recomendado",
+     "accion": "Recomendado en búsquedas",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 19,90 €": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "estadisticas",
+     "accion": "Estadísticas",
+     "valores": {
+      "Gratis": "Básicas",
+      "Pro · 19,90 €": "Avanzadas"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "comprador_pro",
+     "accion": "Ventajas de Comprador Pro",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 19,90 €": "Incluidas"
+     },
+     "bloqueo": "plan"
+    }
+   ]
+  },
+  "empresa": {
+   "label": "Empresa",
+   "niveles": [
+    "Gratis",
+    "Pro · 79 €",
+    "Premium · 199 €"
+   ],
+   "acciones": [
+    {
+     "id": "consultas",
+     "accion": "Recibir y responder consultas y solicitudes",
+     "valores": {
+      "Gratis": "De 3 compradores · el resto con Pro",
+      "Pro · 79 €": "Ilimitadas",
+      "Premium · 199 €": "Ilimitadas"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "distribucion",
+     "accion": "Solicitudes de distribución",
+     "valores": {
+      "Gratis": "Sí",
+      "Pro · 79 €": "Sí",
+      "Premium · 199 €": "Sí"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "productos",
+     "accion": "Productos publicados",
+     "valores": {
+      "Gratis": "15",
+      "Pro · 79 €": "100",
+      "Premium · 199 €": "Ilimitados"
+     },
+     "bloqueo": "limite"
+    },
+    {
+     "id": "miembros",
+     "accion": "Miembros del equipo",
+     "valores": {
+      "Gratis": "Ilimitados",
+      "Pro · 79 €": "Ilimitados",
+      "Premium · 199 €": "Ilimitados"
+     },
+     "bloqueo": "libre"
+    },
+    {
+     "id": "sucursales",
+     "accion": "Sucursales y filiales",
+     "valores": {
+      "Gratis": "Alta gratis",
+      "Pro · 79 €": "Alta gratis",
+      "Premium · 199 €": "Plan de grupo a medida"
+     },
+     "bloqueo": "medida"
+    },
+    {
+     "id": "leads",
+     "accion": "Leads organizados (estados, asignación, notas)",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 79 €": "Sí",
+      "Premium · 199 €": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "contenido",
+     "accion": "Contenido vinculado",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 79 €": "5 al mes",
+      "Premium · 199 €": "Ilimitado"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "destacar",
+     "accion": "Destacar productos",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 79 €": "Extra de pago",
+      "Premium · 199 €": "4 al mes"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "oportunidades",
+     "accion": "Oportunidades (proyectos / RFQ del mercado)",
+     "valores": {
+      "Gratis": "Solo el número",
+      "Pro · 79 €": "2 al mes",
+      "Premium · 199 €": "Ilimitadas + matching"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "estadisticas",
+     "accion": "Estadísticas",
+     "valores": {
+      "Gratis": "Básicas",
+      "Pro · 79 €": "Avanzadas",
+      "Premium · 199 €": "Avanzadas + benchmark"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "exportar",
+     "accion": "Exportar informes de solicitudes (sin contactos)",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 79 €": "—",
+      "Premium · 199 €": "Sí"
+     },
+     "bloqueo": "plan"
+    },
+    {
+     "id": "gestor",
+     "accion": "Gestor de cuenta",
+     "valores": {
+      "Gratis": "—",
+      "Pro · 79 €": "—",
+      "Premium · 199 €": "Sí"
+     },
+     "bloqueo": "plan"
+    }
+   ]
+  }
+ },
+ "ventanas": {
+  "login": {
+   "cuando": "Sin cuenta, al pulsar guardar, comparar, enviar una solicitud, crear un proyecto, descargar, seguir o Mensajes.",
+   "titulo": "Entra para {accion}",
+   "texto": "Es gratis y sin contraseña: te enviamos un código a tu email.",
+   "botones": [
+    "Continuar",
+    "Ahora no"
+   ],
+   "despues": "Al entrar, la acción se completa sola (se guarda, se envía…)."
+  },
+  "limite": {
+   "cuando": "Al intentar superar un número del plan (16.º producto, 2.º proyecto del comprador, 3.er servicio del experto…).",
+   "titulo": "Has llegado a {n} {cosa}",
+   "texto": "Con {plan} tienes {mas}. Nada se borra: lo que ya tienes sigue publicado.",
+   "botones": [
+    "Probar {plan} 14 días",
+    "Ver planes",
+    "Ahora no"
+   ],
+   "despues": "Siempre con una alternativa gratuita (archivar, despublicar…). Máximo 1 aviso por sesión; 7 días de pausa tras «Ahora no»."
+  },
+  "plan": {
+   "cuando": "Al pulsar una función que el plan no incluye (exportar, publicar contenido, leads organizados…). El botón se ve siempre.",
+   "titulo": "{funcion} es de {plan}",
+   "texto": "Qué hace y un ejemplo con sus datos.",
+   "botones": [
+    "Pasar a {plan}",
+    "Ahora no"
+   ],
+   "despues": "Comprador Pro aún no existe: el botón es «Avísame cuando esté»."
+  },
+  "filtro": {
+   "cuando": "Al enviar o publicar un texto, archivo o imagen con un teléfono, email, web, @usuario, enlace de WhatsApp/Telegram o QR.",
+   "titulo": "Hemos ocultado un dato de contacto",
+   "texto": "En Agroolink todo se habla en Mensajes: así queda registrado y protegido. El resto del mensaje se envía igual.",
+   "botones": [
+    "Entendido"
+   ],
+   "despues": "El dato se sustituye por «•••» para todos. El superadmin ve los intentos repetidos."
+  },
+  "medida": {
+   "cuando": "Sede que quiere varias sucursales con plan completo.",
+   "titulo": "Plan de grupo",
+   "texto": "Cada sucursal se da de alta gratis; para tenerlas con plan completo, precio a medida.",
+   "botones": [
+    "Hablar con nosotros"
+   ],
+   "despues": "Lo atiende el equipo comercial de Agroolink."
+  }
+ }
+}

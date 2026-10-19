@@ -27,7 +27,7 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
 
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;">
       <h1 style="margin: 0; font-size: 38px; font-weight: 700; letter-spacing: -0.02em;">Planes de Agroolink</h1>
-      <p style="margin: 0; font-size: 16px; color: #4A5650; max-width: 620px; line-height: 1.35;">Empieza gratis. Preguntar y responder nunca se cobra: pagas solo por gestionar mejor y por nuevas oportunidades.</p>
+      <p style="margin: 0; font-size: 16px; color: #4A5650; max-width: 620px; line-height: 1.35;">Empieza gratis. Preguntar nunca se cobra y los contactos nunca se muestran: pagas por recibir más consultas, gestionar mejor y nuevas oportunidades.</p>
       <div role="tablist" aria-label="Tipo de plan" style="display: flex; gap: 4px; padding: 4px; background: #E7EEE9; border-radius: 999px; margin-top: 12px;">
         <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
           <button type="button" role="tab" aria-selected="{{ t.sel }}" class="seg" onClick="{{ t.pick }}" style="background: {{ t.fondo }}; color: {{ t.tinta }}; box-shadow: {{ t.sombra }};">{{ t.label }}</button>
@@ -83,11 +83,13 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
     </div>
     <sc-if value="{{ nota }}" hint-placeholder-val="{{ false }}"><p style="margin: -12px 0 0; font-size: 12px; color: #56615B; text-align: center;">{{ nota }}</p></sc-if>
 
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding: 20px 22px; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 20px 22px; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px;">
       <span style="grid-column: 1 / -1; font-size: 14px; font-weight: 600;">En todos los planes, también en Gratis</span>
-      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6"/></svg>Preguntar y responder consultas, sin límite</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6"/></svg>Preguntar a empresas y expertos, sin límite</span>
       <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Verificación de perfil: «verificado» no se compra</span>
       <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Si bajas de plan, nada se borra</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M10 5c0 3-2 6-6 8M13 21l4-9 4 9M14.5 18h5"/></svg>Traducción automática a español, inglés, portugués y francés</span>
+      <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 11h12v9H6zM8 11V8a4 4 0 0 1 8 0v3"/></svg>Nunca se muestran teléfonos, emails, webs, WhatsApp ni redes: todo va por Mensajes</span>
       <span class="feat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ acc }}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M18 6 6 18M6 6l12 12"/></svg>Sin permanencia: cancela cuando quieras</span>
     </div>
 
@@ -115,7 +117,7 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
     <section aria-label="Preguntas frecuentes" style="display: flex; flex-direction: column; gap: 12px;">
       <h2 style="margin: 0; font-size: 22px; font-weight: 600;">Preguntas frecuentes</h2>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;">
-        <div class="faq"><strong style="font-size: 14.5px;">¿Tengo que pagar para responder consultas?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">No. Empresas y expertos responden gratis dentro de Agroolink. Los planes de pago añaden gestión de leads, oportunidades y visibilidad.</span></div>
+        <div class="faq"><strong style="font-size: 14.5px;">¿Tengo que pagar para recibir consultas?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">Los expertos, no: reciben y responden consultas sin límite. Con Empresa Gratis ves las consultas de 3 compradores distintos; las siguientes se guardan y las ves al pasar a Pro. Preguntar siempre es gratis para el comprador.</span></div>
         <div class="faq"><strong style="font-size: 14.5px;">¿Qué pasa si bajo de plan?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">Nada se borra. Lo que supere el límite del nuevo plan queda en solo lectura hasta que vuelvas a subir o lo reduzcas.</span></div>
         <div class="faq"><strong style="font-size: 14.5px;">¿Cómo funciona la Oferta Empresa Fundadora?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">Para las 100 primeras empresas que contraten Pro o Premium en pago anual antes del 30/06/2027. El precio se mantiene 24 meses mientras sigas suscrito.</span></div>
         <div class="faq"><strong style="font-size: 14.5px;">Soy experto y también compro, ¿pago dos veces?</strong><span style="font-size: 13.5px; color: #4A5650; line-height: 1.35;">No. Experto Pro incluye todas las ventajas de Comprador Pro. El plan de tu empresa es aparte y lo paga la empresa.</span></div>
@@ -143,42 +145,42 @@ class Component extends DCLogic {
     const D = {
       empresa: {
         label: 'Para empresas', cols: ['Gratis', 'Pro', 'Premium'],
-        nota: '* Solo con el consentimiento del comprador (RGPD).',
+        nota: '¿Sede con varias sucursales? Cada sucursal se da de alta gratis; para tenerlas todas con plan completo te preparamos un precio de grupo a medida.',
         planes: [
           { nombre: 'Gratis', tagline: 'Para estar presente y responder', m: 0, a: 0, cta: 'Empezar gratis',
-            feats: ['Perfil básico de empresa', 'Hasta 15 productos', 'Recibe y responde consultas sin límite', 'Solicitudes de distribución', 'Empresa verificada (CIF)', '2 miembros del equipo'] },
+            feats: ['Perfil básico de empresa', 'Hasta 15 productos', '3 consultas de 3 compradores (las siguientes, con Pro)', 'Solicitudes de distribución', 'Empresa verificada (CIF)', 'Miembros del equipo ilimitados'] },
           { nombre: 'Pro', tagline: 'Para captar y gestionar leads', m: 79, a: 790, f: 490, destacado: 'Recomendado', cta: 'Probar 14 días gratis',
-            feats: ['Todo lo de Gratis', 'Hasta 100 productos', 'Datos de contacto del comprador*', 'Leads organizados: estados, asignación y notas', '2 proyectos / RFQ al mes', 'Estadísticas de productos', '5 miembros del equipo'] },
+            feats: ['Todo lo de Gratis', 'Hasta 100 productos', 'Consultas ilimitadas', 'Leads organizados: estados, asignación y notas', '5 contenidos vinculados al mes', '2 proyectos / RFQ al mes', 'Estadísticas de productos'] },
           { nombre: 'Premium', tagline: 'Para vender con oportunidades', m: 199, a: 1990, f: 1290, cta: 'Probar 14 días gratis',
-            feats: ['Todo lo de Pro', 'Productos ilimitados', 'Proyectos / RFQ ilimitados + matching', 'Exportar leads e integración CRM*', '4 productos destacados al mes', '15 miembros del equipo', 'Gestor de cuenta'] }
+            feats: ['Todo lo de Pro', 'Productos ilimitados', 'Proyectos / RFQ ilimitados + matching', 'Exportar informes de solicitudes', '4 productos destacados al mes', 'Gestor de cuenta'] }
         ],
         filas: [S('PRESENCIA'), F('Perfil de empresa', ['Básico', 'Completo', 'Completo + marca']), F('Productos publicados', ['15', '100', 'Ilimitados']), F('Contenido vinculado', ['—', '5/mes', 'Ilimitado']), F('Destacar productos', ['—', 'Extra de pago', '4/mes incluidos']),
-          S('CONSULTAS Y LEADS'), F('Recibir y responder consultas', ['Ilimitadas', 'Ilimitadas', 'Ilimitadas']), F('Datos de contacto del comprador', ['—', 'Sí', 'Sí']), F('Leads organizados', ['—', 'Sí', 'Sí']), F('Exportar leads / CRM', ['—', '—', 'Sí']),
+          S('CONSULTAS Y LEADS'), F('Recibir y responder consultas', ['3 (de 3 compradores)', 'Ilimitadas', 'Ilimitadas']), F('Contactos del comprador', ['Nunca visibles', 'Nunca visibles', 'Nunca visibles']), F('Leads organizados', ['—', 'Sí', 'Sí']), F('Exportar informes de solicitudes', ['—', '—', 'Sí']),
           S('OPORTUNIDADES'), F('Proyectos / RFQ de compradores', ['Nº en tu sector', '2 al mes', 'Ilimitados + matching']), F('Interés en tus productos', ['—', 'Agregado', 'Detalle con consentimiento']),
-          S('EQUIPO Y SERVICIO'), F('Miembros del equipo', ['2', '5', '15']), F('Estadísticas', ['Básicas', 'Avanzadas', 'Avanzadas + benchmark']), F('Gestor de cuenta', ['—', '—', 'Sí'])]
+          S('EQUIPO Y SERVICIO'), F('Miembros del equipo', ['Ilimitados', 'Ilimitados', 'Ilimitados']), F('Sucursales y filiales', ['Alta gratis', 'Alta gratis', 'Plan de grupo a medida']), F('Traducción automática (ES · EN · PT · FR)', ['Sí', 'Sí', 'Sí']), F('Estadísticas', ['Básicas', 'Avanzadas', 'Avanzadas + benchmark']), F('Gestor de cuenta', ['—', '—', 'Sí'])]
       },
       experto: {
         label: 'Para expertos', cols: ['Gratis', 'Pro'], nota: '',
         planes: [
           { nombre: 'Gratis', tagline: 'Para empezar a recibir clientes', m: 0, a: 0, cta: 'Crear perfil gratis',
-            feats: ['Perfil de experto básico', 'Apareces en el buscador', '2 servicios publicados', '3 consultas al mes', '1 candidatura a proyectos al mes', 'Verificación de colegiación'] },
+            feats: ['Perfil de experto básico', 'Apareces en el buscador', '1 servicio publicado', 'Consultas sin límite', 'Ves proyectos abiertos (sin candidatura)', 'Verificación de colegiación'] },
           { nombre: 'Pro', tagline: 'Para captar clientes sin límites', m: 19.9, a: 199, destacado: 'Incluye Comprador Pro', cta: 'Pasar a Pro',
-            feats: ['Todo lo de Gratis', 'Servicios y consultas ilimitados', 'Candidaturas a proyectos ilimitadas', 'Contacto directo visible (teléfono, web)', 'Recomendado en búsquedas', 'Publica contenido y casos de éxito', 'Todas las ventajas de Comprador Pro'] }
+            feats: ['Todo lo de Gratis', 'Servicios ilimitados', 'Candidaturas a proyectos ilimitadas', 'Consultas organizadas: estados y notas', 'Recomendado en búsquedas', 'Publica contenido y casos de éxito', 'Todas las ventajas de Comprador Pro'] }
         ],
-        filas: [S('PERFIL'), F('Perfil de experto', ['Básico', 'Completo']), F('Aparecer en el buscador', ['Sí', 'Sí + recomendado']), F('Verificación de colegiación', ['Sí', 'Sí']), F('Portfolio / casos', ['1', 'Ilimitado']), F('Servicios publicados', ['2', 'Ilimitados']), F('Publicar contenido', ['—', 'Ilimitado']),
-          S('CAPTACIÓN'), F('Consultas recibidas', ['3/mes', 'Ilimitadas']), F('Contacto directo visible', ['—', 'Sí']), F('Candidaturas a proyectos', ['1/mes', 'Ilimitadas']), F('Estadísticas', ['Básicas', 'Avanzadas']),
+        filas: [S('PERFIL'), F('Perfil de experto', ['Básico', 'Completo']), F('Aparecer en el buscador', ['Sí', 'Sí + recomendado']), F('Verificación de colegiación', ['Sí', 'Sí']), F('Portfolio / casos', ['1', 'Ilimitado']), F('Servicios publicados', ['1', 'Ilimitados']), F('Publicar contenido', ['—', 'Ilimitado']),
+          S('CAPTACIÓN'), F('Consultas recibidas', ['Ilimitadas', 'Ilimitadas']), F('Contactos visibles', ['Nunca', 'Nunca']), F('Consultas organizadas', ['—', 'Sí']), F('Candidaturas a proyectos', ['—', 'Ilimitadas']), F('Estadísticas', ['Básicas', 'Avanzadas']),
           S('INCLUYE'), F('Ventajas de Comprador Pro', ['—', 'Sí'])]
       },
       comprador: {
         label: 'Para compradores', cols: ['Gratis', 'Pro (próximamente)'], nota: 'Comprador Pro llegará en una segunda fase. Hoy todo lo esencial es gratis.',
         planes: [
           { nombre: 'Gratis', tagline: 'Todo lo que necesitas para comprar mejor', m: 0, a: 0, cta: 'Crear cuenta gratis', destacado: 'Lo que usa casi todo el mundo',
-            feats: ['Busca productos, empresas y expertos', 'Consultas a proveedores sin límite', '3 proyectos activos', '5 tableros y comparador (hasta 4)', '5 alertas de productos y proveedores', 'Historial de consultas completo'] },
+            feats: ['Busca productos, empresas y expertos', 'Consultas a proveedores sin límite', '1 proyecto activo', '5 tableros y comparador (hasta 4)', '5 alertas de productos y proveedores', 'Historial de consultas completo'] },
           { nombre: 'Pro', tagline: 'Para organizar compras en equipo', m: 9.9, a: 99, pronto: true, destacado: 'Próximamente', cta: 'Avísame cuando esté',
-            feats: ['Todo lo de Gratis', 'Tableros y proyectos ilimitados', 'Comparar hasta 10 y guardar comparaciones', 'Alertas de precio, stock y ficha', 'Compartir tableros con tu equipo', 'Exportar a PDF'] }
+            feats: ['Todo lo de Gratis', 'Proyectos y tableros ilimitados', 'Comparar hasta 10 y guardar comparaciones', 'Alertas de precio, stock y ficha', 'Compartir tableros con tu equipo', 'Exportar a PDF'] }
         ],
         filas: [S('BUSCAR'), F('Buscar y guardar', ['Sí', 'Sí']), F('Recomendaciones', ['Básicas', 'Avanzadas']),
-          S('CONTACTAR'), F('Consultas a empresas y expertos', ['Ilimitadas', 'Ilimitadas']), F('Proyectos / RFQ', ['3 activos', 'Ilimitados']), F('Seguimiento de proyectos', ['Básico', 'Completo']),
+          S('CONTACTAR'), F('Consultas a empresas y expertos', ['Ilimitadas', 'Ilimitadas']), F('Proyectos / RFQ', ['1 activo', 'Ilimitados']), F('Seguimiento de proyectos', ['Básico', 'Completo']),
           S('ORGANIZAR'), F('Tableros', ['5', 'Ilimitados']), F('Comparar productos', ['Hasta 4', 'Hasta 10']), F('Compartir tableros', ['1 colaborador', 'Ilimitado']), F('Exportar a PDF', ['—', 'Sí']),
           S('ALERTAS'), F('Alertas de productos y proveedores', ['Hasta 5', 'Ilimitadas']), F('Alertas de cambios', ['—', 'Sí'])]
       }
