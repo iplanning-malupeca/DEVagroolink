@@ -45,7 +45,7 @@
   "BusIntranetBuscar.dc.html": {
    "h": 900,
    "page": "busqueda",
-   "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía",
+   "title": "I1 · Primera búsqueda: siempre así (búsqueda nueva, vacía, con recientes y «O empieza por»)",
    "w": 1280,
    "x": 0,
    "y": 2620
@@ -3625,7 +3625,7 @@
    "maxH": 300,
    "page": "busqueda",
    "size": 24,
-   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
+   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nPrimera búsqueda: siempre la pantalla «Nueva búsqueda» (I1; en móvil, la hoja por pasos M2). Modificar una búsqueda desde resultados: la barra con sus desplegables (B2–B5).\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
    "w": 1280,
    "x": 0,
    "y": -529
@@ -3661,7 +3661,7 @@
    "kind": "title1",
    "maxW": 2400,
    "page": "busqueda",
-   "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa",
+   "text": "Primera búsqueda → siempre «Nueva búsqueda» (I1) · Modificar una búsqueda → barra con desplegables (B2–B5)",
    "w": 240,
    "x": 0,
    "y": 2320
