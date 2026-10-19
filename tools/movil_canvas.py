@@ -1,4 +1,6 @@
-"""Páginas MB_01…MB_07 (móvil, antes «013_Móvil») (19/10/2026): capturas a 390 px de los prototipos y, sin duplicar,
+"""Desde el 19/10/2026 el móvil vive en su propio canvas «Agroolink · Móvil» (https://claude.ai/artifact/9vAKKxSsnWctkbk2YirbP6, repo design/canvas-movil):
+ejecutar con su canvas.json (canvas-work/project-movil) y reescribir /_blob/ con tools/blobs_movil.json antes de publicar.
+Páginas MB_01…MB_07 (móvil, antes «013_Móvil») (19/10/2026): capturas a 390 px de los prototipos y, sin duplicar,
 las pantallas móviles que ya existían (cabecera, home y búsqueda) importadas tal cual."""
 import json, os, re, sys
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
