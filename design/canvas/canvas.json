@@ -1986,6 +1986,46 @@
    "x": 4080,
    "y": 8700,
    "title": "EM8 · Plan y facturación de la empresa: Gratis, Pro y Premium"
+  },
+  "SAPanel.dc.html": {
+   "w": 1280,
+   "h": 760,
+   "page": "superadmin",
+   "x": 0,
+   "y": 0,
+   "title": "SA1 · Panel del superadmin: lo que espera una decisión"
+  },
+  "SAModeracion.dc.html": {
+   "w": 1280,
+   "h": 820,
+   "page": "superadmin",
+   "x": 1360,
+   "y": 0,
+   "title": "SA2 · Moderación de contactos: lo bloqueado, enmascarado, con intentos y decisión"
+  },
+  "SAPausa.dc.html": {
+   "w": 1280,
+   "h": 840,
+   "page": "superadmin",
+   "x": 2720,
+   "y": 0,
+   "title": "SA3 · Cuenta en pausa: 3.er intento en 30 días y qué decidir"
+  },
+  "SAArchivos.dc.html": {
+   "w": 1280,
+   "h": 760,
+   "page": "superadmin",
+   "x": 4080,
+   "y": 0,
+   "title": "SA4 · Archivos revisados: texto, OCR, QR, enlaces y metadatos"
+  },
+  "SAAltas.dc.html": {
+   "w": 1280,
+   "h": 820,
+   "page": "superadmin",
+   "x": 5440,
+   "y": 0,
+   "title": "SA5 · Altas y CRM: altas, poderes, organizaciones nuevas, cambios del CRM y ramas"
   }
  },
  "createdOnFiles": {
@@ -2544,6 +2584,25 @@
    "x": 0,
    "y": 8400,
    "text": "COMO EMPRESA · el día a día: solicitudes de la empresa · equipo · estadísticas · plan y facturación"
+  },
+  "sa0": {
+   "kind": "title1",
+   "maxW": 6720,
+   "page": "superadmin",
+   "text": "SUPERADMIN · equipo de Agroolink · moderación de contactos, cuentas en pausa, archivos, altas y CRM",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "saDev": {
+   "fill": "orange",
+   "maxH": 360,
+   "page": "superadmin",
+   "size": 22,
+   "text": "PARA DESARROLLO · Superadmin\n\nReglas en docs/modelo-producto/planes.json. Un texto, archivo o imagen con contacto (también disimulado: «arroba», «punto com», números en letras) no se envía ni se publica; el autor ve el dato marcado. Cada intento se registra; el 3.º en 30 días pausa los envíos de la cuenta hasta la decisión del superadmin.\nArchivos: texto, OCR, QR, enlaces y metadatos; los metadatos se eliminan siempre. Un archivo rechazado cuenta como intento.\nEl superadmin ve los contactos enmascarados. Toda decisión queda en el historial (fecha y autor). Sin versión móvil: es back-office de escritorio.",
+   "w": 1280,
+   "x": 0,
+   "y": 1000
   }
  },
  "order": [
@@ -2794,7 +2853,12 @@
   "EmpSolicitudes.dc.html",
   "EmpEquipo.dc.html",
   "EmpEstadisticas.dc.html",
-  "EmpPlan.dc.html"
+  "EmpPlan.dc.html",
+  "SAPanel.dc.html",
+  "SAModeracion.dc.html",
+  "SAPausa.dc.html",
+  "SAArchivos.dc.html",
+  "SAAltas.dc.html"
  ],
  "pages": [
   {
@@ -2824,6 +2888,10 @@
   {
    "id": "intusuario",
    "name": "004_LP_Intranet · Usuario · Experto · Empresa"
+  },
+  {
+   "id": "superadmin",
+   "name": "006_LP_Superadmin"
   },
   {
    "id": "planes",
