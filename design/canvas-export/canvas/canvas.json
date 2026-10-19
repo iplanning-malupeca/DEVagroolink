@@ -1789,44 +1789,44 @@
    "y": 0
   },
   "PlanBloqueos.dc.html": {
-   "w": 1280,
    "h": 2580,
    "page": "planesbloq",
+   "title": "BL1 · Matriz: qué se bloquea por cuenta y nivel",
+   "w": 1280,
    "x": 0,
-   "y": 0,
-   "title": "BL1 · Matriz: qué se bloquea por cuenta y nivel"
+   "y": 0
   },
   "PlanFiltro.dc.html": {
-   "w": 1280,
    "h": 800,
    "page": "planesbloq",
+   "title": "BL5 · Ventana «Contacto bloqueado» · al enviar un mensaje con teléfono y email",
+   "w": 1280,
    "x": 1400,
-   "y": 2700,
-   "title": "BL5 · Ventana «Contacto bloqueado» · al enviar un mensaje con teléfono y email"
+   "y": 2700
   },
   "PlanLimite.dc.html": {
-   "w": 1280,
    "h": 800,
    "page": "planesbloq",
+   "title": "BL3 · Ventana «Límite» · empresa Gratis, producto 16",
+   "w": 1280,
    "x": 1400,
-   "y": 900,
-   "title": "BL3 · Ventana «Límite» · empresa Gratis, producto 16"
+   "y": 900
   },
   "PlanLogin.dc.html": {
-   "w": 1280,
    "h": 800,
    "page": "planesbloq",
+   "title": "BL2 · Ventana «Login» · sin cuenta, al pulsar Guardar",
+   "w": 1280,
    "x": 1400,
-   "y": 0,
-   "title": "BL2 · Ventana «Login» · sin cuenta, al pulsar Guardar"
+   "y": 0
   },
   "PlanPago.dc.html": {
-   "w": 1280,
    "h": 800,
    "page": "planesbloq",
+   "title": "BL4 · Ventana «Plan de pago» · experto Gratis, al pulsar Publicar contenido",
+   "w": 1280,
    "x": 1400,
-   "y": 1800,
-   "title": "BL4 · Ventana «Plan de pago» · experto Gratis, al pulsar Publicar contenido"
+   "y": 1800
   },
   "PrdAviCatalogo.dc.html": {
    "h": 940,
@@ -2485,6 +2485,22 @@
    "x": 1360,
    "y": 200
   },
+  "ProyPropuestaContacto.dc.html": {
+   "h": 1000,
+   "page": "proyempresas",
+   "title": "J6c · Si intentan poner datos de contacto: no se envía, se marcan y queda registrado",
+   "w": 1280,
+   "x": 2720,
+   "y": 1300
+  },
+  "ProyPropuestaMensajes.dc.html": {
+   "h": 940,
+   "page": "proyempresas",
+   "title": "J6b · La propuesta en Mensajes: dudas del ganadero y nueva versión en el mismo hilo",
+   "w": 1280,
+   "x": 1360,
+   "y": 1300
+  },
   "ProyPropuestaVista.dc.html": {
    "h": 1140,
    "page": "proyectos",
@@ -3021,22 +3037,6 @@
    "x": 4080,
    "y": 0
   },
-  "ProyPropuestaMensajes.dc.html": {
-   "w": 1280,
-   "h": 940,
-   "page": "proyempresas",
-   "x": 1360,
-   "y": 1300,
-   "title": "J6b · La propuesta en Mensajes: dudas del ganadero y nueva versión en el mismo hilo"
-  },
-  "ProyPropuestaContacto.dc.html": {
-   "w": 1280,
-   "h": 1000,
-   "page": "proyempresas",
-   "x": 2720,
-   "y": 1300,
-   "title": "J6c · Si intentan poner datos de contacto: no se envía, se marcan y queda registrado"
-  },
   "MB_MobHome.dc.html": {
    "w": 390,
    "h": 2010,
@@ -3413,34 +3413,114 @@
    "y": 0,
    "title": "Editar desde el resumen"
   },
-  "MB_PropuestaMovil.dc.html": {
+  "MB_ProyU1_Mis.dc.html": {
    "w": 390,
    "h": 844,
    "page": "mb7",
    "x": 1880,
+   "y": 0,
+   "title": "Mis proyectos"
+  },
+  "MB_ProyU2_Acciones.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 2350,
+   "y": 0,
+   "title": "Menú ⋯: editar, duplicar, pausar, archivar"
+  },
+  "MB_ProyU3_Detalle.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb7",
+   "x": 2820,
+   "y": 0,
+   "title": "Proyecto y propuestas recibidas"
+  },
+  "MB_ProyU4_Propuesta.dc.html": {
+   "w": 390,
+   "h": 960,
+   "page": "mb7",
+   "x": 3290,
+   "y": 0,
+   "title": "Propuesta y conversación · adjudicar"
+  },
+  "MB_ProyU5_Editar.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb7",
+   "x": 3760,
+   "y": 0,
+   "title": "Editar proyecto por bloques"
+  },
+  "MB_ProyU6_Avisar.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb7",
+   "x": 4230,
+   "y": 0,
+   "title": "¿Avisar a las empresas del cambio?"
+  },
+  "MB_ProyU7_Archivar.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 4700,
+   "y": 0,
+   "title": "Archivado con «Deshacer»"
+  },
+  "MB_ProyU8_Archivados.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 5170,
+   "y": 0,
+   "title": "Proyectos archivados"
+  },
+  "MB_ProyE1_Oportunidades.dc.html": {
+   "w": 390,
+   "h": 890,
+   "page": "mb8",
+   "x": 0,
+   "y": 0,
+   "title": "Empresa · Oportunidades"
+  },
+  "MB_ProyE2_Experto.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 470,
+   "y": 0,
+   "title": "Experta · Proyectos para ti"
+  },
+  "MB_PropuestaMovil.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 940,
    "y": 0,
    "title": "Empresa · enviar una propuesta (J6)"
   },
   "MB_PropuestaMensajes.dc.html": {
    "w": 390,
    "h": 920,
-   "page": "mb7",
-   "x": 2350,
+   "page": "mb8",
+   "x": 1410,
    "y": 0,
    "title": "La propuesta en Mensajes: dudas y nueva versión (J6b)"
   },
   "MB_PropuestaBloqueada.dc.html": {
    "w": 390,
    "h": 1040,
-   "page": "mb7",
-   "x": 2820,
+   "page": "mb8",
+   "x": 1880,
    "y": 0,
    "title": "Si intentan poner contactos: no se envía (J6c)"
   },
   "MB_PlanLogin.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb9",
    "x": 0,
    "y": 0,
    "title": "Login al pulsar Guardar"
@@ -3448,7 +3528,7 @@
   "MB_PlanLimite.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb9",
    "x": 470,
    "y": 0,
    "title": "Límite: 2.º proyecto del comprador"
@@ -3456,7 +3536,7 @@
   "MB_PlanPago.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb9",
    "x": 940,
    "y": 0,
    "title": "Plan de pago: exportar informes"
@@ -3464,7 +3544,7 @@
   "MB_PlanFiltro.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb9",
    "x": 1410,
    "y": 0,
    "title": "Mensaje bloqueado por datos de contacto"
@@ -3566,19 +3646,19 @@
    "maxH": 360,
    "page": "planesbloq",
    "size": 24,
+   "text": "PARA DESARROLLO · Bloqueos\n\nFuente única: docs/modelo-producto/planes.json (cuentas → acciones → valor por nivel + tipo de bloqueo; ventanas con cuándo salen y textos).\n\nTipos: login · límite · plan de pago · a medida · nunca.\n\nDecisiones 19/10/2026: contactos fuera de Agroolink prohibidos y filtrados (teléfono, email, web, WhatsApp, redes, QR); Empresa Gratis ve consultas de 3 compradores; Experto con consultas ilimitadas; comprador Gratis publica 1 proyecto; sucursales con alta gratis y plan de grupo a medida; traducción en todos los planes. Las versiones móviles están en MB_08 Planes.",
    "w": 1280,
    "x": 2800,
-   "y": 0,
-   "text": "PARA DESARROLLO · Bloqueos\n\nFuente única: docs/modelo-producto/planes.json (cuentas → acciones → valor por nivel + tipo de bloqueo; ventanas con cuándo salen y textos).\n\nTipos: login · límite · plan de pago · a medida · nunca.\n\nDecisiones 19/10/2026: contactos fuera de Agroolink prohibidos y filtrados (teléfono, email, web, WhatsApp, redes, QR); Empresa Gratis ve consultas de 3 compradores; Experto con consultas ilimitadas; comprador Gratis publica 1 proyecto; sucursales con alta gratis y plan de grupo a medida; traducción en todos los planes. Las versiones móviles están en MB_08 Planes."
+   "y": 0
   },
   "blt": {
    "kind": "title1",
    "maxW": 4000,
    "page": "planesbloq",
+   "text": "Planes · qué se bloquea por login, límite o plan de pago",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Planes · qué se bloquea por login, límite o plan de pago"
+   "y": -300
   },
   "busDev": {
    "fill": "orange",
@@ -3588,7 +3668,7 @@
    "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
    "w": 1280,
    "x": 0,
-   "y": -340
+   "y": -529
   },
   "busFicha": {
    "kind": "title1",
@@ -4248,12 +4328,21 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Proyectos (prototipo crear-proyecto)"
+   "text": "Proyectos del usuario: asistente (prototipo crear-proyecto) y gestión (mis proyectos, propuestas, editar, archivar) · tools/proyectos_movil.py"
   },
   "mbt7": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb8",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Proyectos para empresas y expertos: oportunidades, propuesta, Mensajes y bloqueo de contactos · tools/proyectos_movil.py y propuesta_movil.py"
+  },
+  "mbt8": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb9",
    "w": 240,
    "x": 0,
    "y": -300,
@@ -4297,7 +4386,6 @@
   "ExpX6Publicado.dc.html",
   "ExpX7Semana.dc.html",
   "IntS3Empresa.dc.html",
-  "IntS4Ficha.dc.html",
   "IntP1Aviso.dc.html",
   "IntP2Intro.dc.html",
   "IntP3Asistente.dc.html",
@@ -4540,7 +4628,6 @@
   "MobHeaderEmpresaMenu.dc.html",
   "MobCambioEmpresa.dc.html",
   "MobSelectorEspacios.dc.html",
-  "BusIntranetBuscar.dc.html",
   "SelTelefono.dc.html",
   "SucAltaCRM.dc.html",
   "SucAltaCrear.dc.html",
@@ -4616,19 +4703,6 @@
   "MsgSucursalSede.dc.html",
   "MsgDisFabricante.dc.html",
   "MsgDisSolicitud.dc.html",
-  "BuscaResultados.dc.html",
-  "BuscaAutocompletar.dc.html",
-  "BuscaEspecie.dc.html",
-  "BuscaCategoria.dc.html",
-  "BuscaEnfermedad.dc.html",
-  "BuscaVarios.dc.html",
-  "BuscaTecnicos.dc.html",
-  "BuscaFiltros.dc.html",
-  "BuscaSinResultados.dc.html",
-  "BuscaMovResultados.dc.html",
-  "BuscaMovEspecie.dc.html",
-  "BuscaMovCategoria.dc.html",
-  "BuscaMovFiltros.dc.html",
   "ProdTradEdicion.dc.html",
   "ProdTradDesact.dc.html",
   "ProdTradFicha.dc.html",
@@ -4650,6 +4724,21 @@
   "PlanFiltro.dc.html",
   "ProyPropuestaMensajes.dc.html",
   "ProyPropuestaContacto.dc.html",
+  "IntS4Ficha.dc.html",
+  "BusIntranetBuscar.dc.html",
+  "BuscaResultados.dc.html",
+  "BuscaAutocompletar.dc.html",
+  "BuscaEspecie.dc.html",
+  "BuscaCategoria.dc.html",
+  "BuscaEnfermedad.dc.html",
+  "BuscaVarios.dc.html",
+  "BuscaTecnicos.dc.html",
+  "BuscaFiltros.dc.html",
+  "BuscaSinResultados.dc.html",
+  "BuscaMovResultados.dc.html",
+  "BuscaMovEspecie.dc.html",
+  "BuscaMovCategoria.dc.html",
+  "BuscaMovFiltros.dc.html",
   "MB_MobHome.dc.html",
   "MB_Nav_Filtros.dc.html",
   "MB_BuscaMovResultados.dc.html",
@@ -4697,6 +4786,16 @@
   "MB_MJ2.dc.html",
   "MB_MJ3.dc.html",
   "MB_MJ4.dc.html",
+  "MB_ProyU1_Mis.dc.html",
+  "MB_ProyU2_Acciones.dc.html",
+  "MB_ProyU3_Detalle.dc.html",
+  "MB_ProyU4_Propuesta.dc.html",
+  "MB_ProyU5_Editar.dc.html",
+  "MB_ProyU6_Avisar.dc.html",
+  "MB_ProyU7_Archivar.dc.html",
+  "MB_ProyU8_Archivados.dc.html",
+  "MB_ProyE1_Oportunidades.dc.html",
+  "MB_ProyE2_Experto.dc.html",
   "MB_PropuestaMovil.dc.html",
   "MB_PropuestaMensajes.dc.html",
   "MB_PropuestaBloqueada.dc.html",
@@ -4708,15 +4807,15 @@
  "pages": [
   {
    "id": "header",
-   "name": "000_Header"
+   "name": "000_LP_Header"
   },
   {
    "id": "proyectos",
-   "name": "003_Proyectos (módulo central)"
+   "name": "001_LP_Proyectos"
   },
   {
    "id": "proyempresas",
-   "name": "003b_Proyectos · Empresas y expertos"
+   "name": "001b_LP_Proyectos_Empresas"
   },
   {
    "id": "busqueda",
@@ -4832,10 +4931,14 @@
   },
   {
    "id": "mb7",
-   "name": "MB_07 Proyectos"
+   "name": "MB_07 Proyectos · Usuario"
   },
   {
    "id": "mb8",
+   "name": "MB_07b Proyectos · Empresas y expertos"
+  },
+  {
+   "id": "mb9",
    "name": "MB_08 Planes"
   },
   {
