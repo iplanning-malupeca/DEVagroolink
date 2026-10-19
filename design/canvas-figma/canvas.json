@@ -13,6 +13,10 @@
   {
    "id": "figma",
    "name": "Front · Figma (referencia escritorio)"
+  },
+  {
+   "id": "front",
+   "name": "Front · Piezas (desde Figma)"
   }
  ],
  "boards": {
@@ -559,6 +563,118 @@
    "w": 1280,
    "x": 8400,
    "y": 26263
+  },
+  "FrHome.dc.html": {
+   "w": 1440,
+   "h": 3440,
+   "page": "front",
+   "x": 0,
+   "y": 0,
+   "title": "Home con sesión · las piezas juntas"
+  },
+  "FrCabecera.dc.html": {
+   "w": 1440,
+   "h": 102,
+   "page": "front",
+   "x": 1600,
+   "y": 0,
+   "title": "P01 · Cabecera · 56 + 44 (con sesión)"
+  },
+  "FrMegaCategorias.dc.html": {
+   "w": 1440,
+   "h": 560,
+   "page": "front",
+   "x": 1600,
+   "y": 242,
+   "title": "P02 · Mega-menú de categorías (abierto)"
+  },
+  "FrMegaEspecies.dc.html": {
+   "w": 1440,
+   "h": 560,
+   "page": "front",
+   "x": 1600,
+   "y": 942,
+   "title": "P03 · Mega-menú de especies (abierto)"
+  },
+  "FrHero.dc.html": {
+   "w": 1440,
+   "h": 402,
+   "page": "front",
+   "x": 1600,
+   "y": 1642,
+   "title": "P04 · Hero «Hola Samuel» con buscador"
+  },
+  "FrEspecies.dc.html": {
+   "w": 1440,
+   "h": 268,
+   "page": "front",
+   "x": 1600,
+   "y": 2184,
+   "title": "P05 · Explora por especie"
+  },
+  "FrEspeciesAbierta.dc.html": {
+   "w": 1440,
+   "h": 430,
+   "page": "front",
+   "x": 1600,
+   "y": 2592,
+   "title": "P05b · Explora por especie · Aves abierta"
+  },
+  "FrCategorias.dc.html": {
+   "w": 1440,
+   "h": 249,
+   "page": "front",
+   "x": 1600,
+   "y": 3162,
+   "title": "P06 · Explora por categoría"
+  },
+  "FrCategoriaPanel.dc.html": {
+   "w": 1440,
+   "h": 618,
+   "page": "front",
+   "x": 3120,
+   "y": 0,
+   "title": "P07 · Explorar una categoría (Nutrición)"
+  },
+  "FrProyectos.dc.html": {
+   "w": 1440,
+   "h": 510,
+   "page": "front",
+   "x": 3120,
+   "y": 758,
+   "title": "P08 · Proyectos: de la idea a la realidad"
+  },
+  "FrProductos.dc.html": {
+   "w": 1440,
+   "h": 422,
+   "page": "front",
+   "x": 3120,
+   "y": 1408,
+   "title": "P09 · Productos destacados (tarjetas de 216)"
+  },
+  "FrComparador.dc.html": {
+   "w": 1440,
+   "h": 349,
+   "page": "front",
+   "x": 3120,
+   "y": 1970,
+   "title": "P10 · Comparador y proyectos"
+  },
+  "FrConfianza.dc.html": {
+   "w": 1440,
+   "h": 209,
+   "page": "front",
+   "x": 3120,
+   "y": 2459,
+   "title": "P11 · Confianza"
+  },
+  "FrPie.dc.html": {
+   "w": 1440,
+   "h": 311,
+   "page": "front",
+   "x": 3120,
+   "y": 2808,
+   "title": "P12 · Pie"
   }
  },
  "order": [
@@ -629,7 +745,21 @@
   "Fig67.dc.html",
   "Fig68.dc.html",
   "Fig61.dc.html",
-  "Fig63.dc.html"
+  "Fig63.dc.html",
+  "FrHome.dc.html",
+  "FrCabecera.dc.html",
+  "FrMegaCategorias.dc.html",
+  "FrMegaEspecies.dc.html",
+  "FrHero.dc.html",
+  "FrEspecies.dc.html",
+  "FrEspeciesAbierta.dc.html",
+  "FrCategorias.dc.html",
+  "FrCategoriaPanel.dc.html",
+  "FrProyectos.dc.html",
+  "FrProductos.dc.html",
+  "FrComparador.dc.html",
+  "FrConfianza.dc.html",
+  "FrPie.dc.html"
  ],
  "notes": {
   "figT0": {
@@ -730,6 +860,33 @@
    "page": "figma",
    "size": "m",
    "text": "Referencia del front en Figma (68 capturas). El diseño actual de Agroolink está en:\nEscritorio: https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t\nMóvil: https://claude.ai/artifact/9vAKKxSsnWctkbk2YirbP6"
+  },
+  "frT0": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Home · piezas juntas",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "frT1": {
+   "kind": "title1",
+   "maxW": 2960,
+   "page": "front",
+   "text": "Piezas del front · ancho tipo vevor (1440 / 1320)",
+   "w": 240,
+   "x": 1600,
+   "y": -300
+  },
+  "frInfo": {
+   "x": -700,
+   "y": 0,
+   "w": 520,
+   "fill": "green",
+   "page": "front",
+   "size": "m",
+   "text": "Rehecho desde la referencia de Figma (F01–F05), por piezas.\n\nAncho tipo vevor.es: tablero 1440 px, contenido 1320 px (márgenes de 60), cabecera 56 + 44, texto 15, títulos 22/700, botones 38, tarjetas de producto de 210–216 px (6 por fila).\n\nPoppins, verde #0E5A3A y logo oficial. Sin contactos: ni web, ni email, ni teléfono en ninguna pieza.\n\nLa home junta las piezas con dc-import: si cambias una pieza, cambia en la home."
   }
  },
  "designSystems": [],
