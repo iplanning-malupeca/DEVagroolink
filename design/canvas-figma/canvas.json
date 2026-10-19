@@ -769,6 +769,326 @@
    "x": 8000,
    "y": 3627,
    "title": "R03 · Producto · relacionados"
+  },
+  "FrModInfo.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 0,
+   "y": 4795,
+   "title": "M01 · Pedir información a la empresa (mensaje, sin teléfono ni email)"
+  },
+  "FrModAsesoramiento.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 1600,
+   "y": 4795,
+   "title": "M02 · Pedir asesoramiento a un experto"
+  },
+  "FrModGuardar.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 3200,
+   "y": 4795,
+   "title": "M03 · Guardar en un tablero"
+  },
+  "FrModGuardado.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 4800,
+   "y": 4795,
+   "title": "M04 · Guardado en el tablero"
+  },
+  "FrModFicha.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 6400,
+   "y": 4795,
+   "title": "M05 · Descargar la ficha técnica (una por idioma)"
+  },
+  "FrModDisponible.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 0,
+   "y": 5935,
+   "title": "M06 · Disponible en tu zona: distribuidor oficial (Escribir, Ver ficha)"
+  },
+  "FrModNoDisponible.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 1600,
+   "y": 5935,
+   "title": "M07 · No disponible en tu zona: qué puedes hacer"
+  },
+  "FrModZona.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 3200,
+   "y": 5935,
+   "title": "M08 · Cambiar zona"
+  },
+  "FrModDistribuidor.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 4800,
+   "y": 5935,
+   "title": "M09 · Quiero distribuir este producto"
+  },
+  "FrModComercial.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 6400,
+   "y": 5935,
+   "title": "M10 · Encuentra tu comercial / sede (Escribir)"
+  },
+  "FrModVideo.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 0,
+   "y": 7075,
+   "title": "M11 · Vídeo del producto con capítulos"
+  },
+  "FrModAcceso.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 1600,
+   "y": 7075,
+   "title": "M12 · Acceso · email"
+  },
+  "FrModCodigo.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 3200,
+   "y": 7075,
+   "title": "M13 · Acceso · código"
+  },
+  "FrModSinCuenta.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 4800,
+   "y": 7075,
+   "title": "M14 · Acceso · todavía no tienes cuenta"
+  },
+  "FrModCreada.dc.html": {
+   "w": 1440,
+   "h": 900,
+   "page": "front",
+   "x": 6400,
+   "y": 7075,
+   "title": "M15 · Acceso · cuenta creada"
+  },
+  "FrPagExpertos.dc.html": {
+   "w": 1440,
+   "h": 1555,
+   "page": "front",
+   "x": 0,
+   "y": 8675,
+   "title": "Página · Directorio de expertos"
+  },
+  "FrExpDirectorio.dc.html": {
+   "w": 1440,
+   "h": 290,
+   "page": "front",
+   "x": 0,
+   "y": 10630,
+   "title": "X01 · Expertos · cabecera y filtros (como los resultados)"
+  },
+  "FrExpListado.dc.html": {
+   "w": 1440,
+   "h": 886,
+   "page": "front",
+   "x": 0,
+   "y": 11060,
+   "title": "X02 · Expertos · tarjetas"
+  },
+  "FrPagExperto.dc.html": {
+   "w": 1440,
+   "h": 1215,
+   "page": "front",
+   "x": 1600,
+   "y": 8675,
+   "title": "Página · Perfil de experto"
+  },
+  "FrExpCabecera.dc.html": {
+   "w": 1440,
+   "h": 314,
+   "page": "front",
+   "x": 1600,
+   "y": 10290,
+   "title": "X03 · Perfil de experto · cabecera (Pedir asesoramiento · Enviar mensaje)"
+  },
+  "FrExpPerfil.dc.html": {
+   "w": 1440,
+   "h": 522,
+   "page": "front",
+   "x": 1600,
+   "y": 10744,
+   "title": "X04 · Perfil de experto · Perfil"
+  },
+  "FrExpServicios.dc.html": {
+   "w": 1440,
+   "h": 584,
+   "page": "front",
+   "x": 1600,
+   "y": 11406,
+   "title": "X05 · Perfil de experto · Servicios"
+  },
+  "FrPagEmpresa.dc.html": {
+   "w": 1440,
+   "h": 1472,
+   "page": "front",
+   "x": 3200,
+   "y": 8675,
+   "title": "Página · Ficha de empresa (DSM-Firmenich)"
+  },
+  "FrEmpCabecera.dc.html": {
+   "w": 1440,
+   "h": 396,
+   "page": "front",
+   "x": 3200,
+   "y": 10547,
+   "title": "F01 · Empresa fabricante · cabecera (sin web ni teléfonos)"
+  },
+  "FrEmpCatalogo.dc.html": {
+   "w": 1440,
+   "h": 697,
+   "page": "front",
+   "x": 3200,
+   "y": 11083,
+   "title": "F02 · Empresa · catálogo con filtros"
+  },
+  "FrEmpSobre.dc.html": {
+   "w": 1440,
+   "h": 518,
+   "page": "front",
+   "x": 3200,
+   "y": 11920,
+   "title": "F03 · Empresa · Sobre la empresa"
+  },
+  "FrEmpDistribuidores.dc.html": {
+   "w": 1440,
+   "h": 602,
+   "page": "front",
+   "x": 3200,
+   "y": 12578,
+   "title": "F04 · Empresa · Distribuidores (Ver ficha · Escribir)"
+  },
+  "FrEmpServicios.dc.html": {
+   "w": 1440,
+   "h": 678,
+   "page": "front",
+   "x": 3200,
+   "y": 13320,
+   "title": "F05 · Empresa · Servicios"
+  },
+  "FrEmpExpertos.dc.html": {
+   "w": 1440,
+   "h": 634,
+   "page": "front",
+   "x": 3200,
+   "y": 14138,
+   "title": "F06 · Empresa · Expertos"
+  },
+  "FrEmpContenidos.dc.html": {
+   "w": 1440,
+   "h": 520,
+   "page": "front",
+   "x": 3200,
+   "y": 14912,
+   "title": "F07 · Empresa · Contenidos"
+  },
+  "FrPagDistribuidor.dc.html": {
+   "w": 1440,
+   "h": 1029,
+   "page": "front",
+   "x": 4800,
+   "y": 8675,
+   "title": "Página · Ficha de distribuidor (AgroNova)"
+  },
+  "FrEmpDistCabecera.dc.html": {
+   "w": 1440,
+   "h": 250,
+   "page": "front",
+   "x": 4800,
+   "y": 10104,
+   "title": "F08 · Distribuidor · cabecera"
+  },
+  "FrEmpMarcas.dc.html": {
+   "w": 1440,
+   "h": 400,
+   "page": "front",
+   "x": 4800,
+   "y": 10494,
+   "title": "F09 · Distribuidor · Marcas"
+  },
+  "FrEmpSucursales.dc.html": {
+   "w": 1440,
+   "h": 610,
+   "page": "front",
+   "x": 6400,
+   "y": 8675,
+   "title": "F10 · Empresa con sucursales · Sucursales"
+  },
+  "FrEmpSucursal.dc.html": {
+   "w": 1440,
+   "h": 702,
+   "page": "front",
+   "x": 6400,
+   "y": 9425,
+   "title": "F11 · Página de una sucursal (Zucami LATAM)"
+  },
+  "FrPagDisProducto.dc.html": {
+   "w": 1440,
+   "h": 1855,
+   "page": "front",
+   "x": 8000,
+   "y": 8675,
+   "title": "Página · Producto en el catálogo de AgroNova"
+  },
+  "FrDisProducto.dc.html": {
+   "w": 1440,
+   "h": 480,
+   "page": "front",
+   "x": 8000,
+   "y": 10930,
+   "title": "F12 · Producto en el catálogo de un distribuidor"
+  },
+  "FrPagEventos.dc.html": {
+   "w": 1440,
+   "h": 1294,
+   "page": "front",
+   "x": 9600,
+   "y": 8675,
+   "title": "Página · Eventos"
+  },
+  "FrEveLista.dc.html": {
+   "w": 1440,
+   "h": 915,
+   "page": "front",
+   "x": 9600,
+   "y": 10369,
+   "title": "V01 · Calendario de eventos · lista"
+  },
+  "FrEveFicha.dc.html": {
+   "w": 1440,
+   "h": 722,
+   "page": "front",
+   "x": 9600,
+   "y": 11424,
+   "title": "V02 · Ficha de un evento"
   }
  },
  "createdOnFiles": {
@@ -960,6 +1280,96 @@
    "w": 240,
    "x": 8000,
    "y": 2047
+  },
+  "frTmod": {
+   "kind": "title1",
+   "maxW": 7840,
+   "page": "front",
+   "text": "Ventanas del front · pedir información, guardar, ficha, zona, distribuidor, comercial, vídeo y acceso",
+   "w": 240,
+   "x": 0,
+   "y": 4495
+  },
+  "frModInfo": {
+   "x": -700,
+   "y": 4795,
+   "w": 520,
+   "fill": "orange",
+   "page": "front",
+   "size": "m",
+   "text": "Reglas de las ventanas\n\n«Pedir información», «Pedir asesoramiento» y «Escribir» son mensajes de Agroolink: no se piden teléfono ni email (la cuenta ya sabe quién eres) y el filtro bloquea contactos en el texto.\n\nNo se hace «Visitar la web» (F52) ni «Visitar la tienda» del distribuidor. Las sedes y comerciales se muestran sin teléfonos ni emails.\n\nEl acceso sigue el alta (003): email → código → cuenta de Agrinews."
+  },
+  "frTFrPagExpertos": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Directorio de expertos",
+   "w": 240,
+   "x": 0,
+   "y": 8375
+  },
+  "frTFrPagExperto": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Perfil de experto",
+   "w": 240,
+   "x": 1600,
+   "y": 8375
+  },
+  "frTFrPagEmpresa": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Ficha de empresa (DSM-Firmenich)",
+   "w": 240,
+   "x": 3200,
+   "y": 8375
+  },
+  "frTFrPagDistribuidor": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Ficha de distribuidor (AgroNova)",
+   "w": 240,
+   "x": 4800,
+   "y": 8375
+  },
+  "frTsuc": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Empresa con sucursales (Zucami)",
+   "w": 240,
+   "x": 6400,
+   "y": 8375
+  },
+  "frTFrPagDisProducto": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Producto en el catálogo de AgroNova",
+   "w": 240,
+   "x": 8000,
+   "y": 8375
+  },
+  "frTFrPagEventos": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Eventos",
+   "w": 240,
+   "x": 9600,
+   "y": 8375
+  },
+  "frFichInfo": {
+   "x": -700,
+   "y": 8675,
+   "w": 520,
+   "fill": "orange",
+   "page": "front",
+   "size": "m",
+   "text": "Expertos, empresas y eventos\n\nSin teléfonos, emails ni webs: no hay pestaña «Contacto» con direcciones (F44) ni «Visitar web»; las sedes y distribuidores se ven por ciudad o zona, con «Ver ficha» y «Escribir».\n\nLos listados (expertos, catálogo de empresa, eventos) usan el patrón de filtros de los resultados: «Filtros» con contador, un botón por filtro y la frase de cómo se combinan.\n\nEl producto en el catálogo de un distribuidor reutiliza las pestañas y relacionados del producto."
   }
  },
  "order": [
@@ -1058,7 +1468,47 @@
   "FrPagProducto.dc.html",
   "FrProdCabecera.dc.html",
   "FrProdDetalle.dc.html",
-  "FrProdRelacionados.dc.html"
+  "FrProdRelacionados.dc.html",
+  "FrModInfo.dc.html",
+  "FrModAsesoramiento.dc.html",
+  "FrModGuardar.dc.html",
+  "FrModGuardado.dc.html",
+  "FrModFicha.dc.html",
+  "FrModDisponible.dc.html",
+  "FrModNoDisponible.dc.html",
+  "FrModZona.dc.html",
+  "FrModDistribuidor.dc.html",
+  "FrModComercial.dc.html",
+  "FrModVideo.dc.html",
+  "FrModAcceso.dc.html",
+  "FrModCodigo.dc.html",
+  "FrModSinCuenta.dc.html",
+  "FrModCreada.dc.html",
+  "FrPagExpertos.dc.html",
+  "FrExpDirectorio.dc.html",
+  "FrExpListado.dc.html",
+  "FrPagExperto.dc.html",
+  "FrExpCabecera.dc.html",
+  "FrExpPerfil.dc.html",
+  "FrExpServicios.dc.html",
+  "FrPagEmpresa.dc.html",
+  "FrEmpCabecera.dc.html",
+  "FrEmpCatalogo.dc.html",
+  "FrEmpSobre.dc.html",
+  "FrEmpDistribuidores.dc.html",
+  "FrEmpServicios.dc.html",
+  "FrEmpExpertos.dc.html",
+  "FrEmpContenidos.dc.html",
+  "FrPagDistribuidor.dc.html",
+  "FrEmpDistCabecera.dc.html",
+  "FrEmpMarcas.dc.html",
+  "FrEmpSucursales.dc.html",
+  "FrEmpSucursal.dc.html",
+  "FrPagDisProducto.dc.html",
+  "FrDisProducto.dc.html",
+  "FrPagEventos.dc.html",
+  "FrEveLista.dc.html",
+  "FrEveFicha.dc.html"
  ],
  "pages": [
   {
