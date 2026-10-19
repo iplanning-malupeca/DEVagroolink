@@ -3884,6 +3884,22 @@
    "x": 3990,
    "y": 0,
    "title": "Facturación: resumen · planes · pedidos · detalle · facturas · pagos · direcciones"
+  },
+  "MB_ExpTiraPanel.dc.html": {
+   "w": 1250,
+   "h": 1444,
+   "page": "mb14",
+   "x": 0,
+   "y": 0,
+   "title": "Panel · Consultas recibidas · una consulta"
+  },
+  "MB_ExpTiraPerfil.dc.html": {
+   "w": 820,
+   "h": 1034,
+   "page": "mb14",
+   "x": 1330,
+   "y": 0,
+   "title": "Perfil de experta · vista pública"
   }
  },
  "createdOnFiles": {
@@ -4734,6 +4750,15 @@
    "y": -300,
    "text": "Intranet de usuario en móvil (una tira por apartado) · el menú «Tú» es M4 (000_MB_Header) y Mis proyectos es 001_MB_Proyectos · tools/usuario_movil.py"
   },
+  "mbt13": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb14",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Intranet de experta en móvil (lila) · Oportunidades es MB_ProyE2 (001b_MB) y Mis servicios es MB_MS7–MS10 (MB_05) · tools/experto_movil.py"
+  },
   "mbdev": {
    "fill": "orange",
    "maxH": 320,
@@ -5230,7 +5255,9 @@
   "MB_UsrTiraEspacio.dc.html",
   "MB_UsrTiraTableros.dc.html",
   "MB_UsrTiraCuenta.dc.html",
-  "MB_UsrTiraFacturacion.dc.html"
+  "MB_UsrTiraFacturacion.dc.html",
+  "MB_ExpTiraPanel.dc.html",
+  "MB_ExpTiraPerfil.dc.html"
  ],
  "pages": [
   {
@@ -5396,6 +5423,10 @@
   {
    "id": "mb13",
    "name": "004_MB_Intranet · Usuario"
+  },
+  {
+   "id": "mb14",
+   "name": "004a_MB_Intranet · Experto"
   },
   {
    "id": "servicios",
