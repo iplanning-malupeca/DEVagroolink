@@ -51,108 +51,108 @@
    "y": 2620
   },
   "BuscaAutocompletar.dc.html": {
+   "w": 1280,
    "h": 1120,
    "page": "busqueda",
-   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa",
-   "w": 1280,
-   "x": 1360,
-   "y": 0
+   "x": 4080,
+   "y": 0,
+   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa"
   },
   "BuscaCategoria.dc.html": {
+   "w": 1280,
    "h": 1630,
    "page": "busqueda",
-   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie",
-   "w": 1280,
-   "x": 4080,
-   "y": 0
+   "x": 6800,
+   "y": 0,
+   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie"
   },
   "BuscaEnfermedad.dc.html": {
+   "w": 1280,
    "h": 2060,
    "page": "busqueda",
-   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez",
-   "w": 1280,
-   "x": 5440,
-   "y": 0
+   "x": 8160,
+   "y": 0,
+   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez"
   },
   "BuscaEspecie.dc.html": {
+   "w": 1280,
    "h": 1630,
    "page": "busqueda",
-   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)",
-   "w": 1280,
-   "x": 2720,
-   "y": 0
+   "x": 5440,
+   "y": 0,
+   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)"
   },
   "BuscaFiltros.dc.html": {
+   "w": 1280,
    "h": 2200,
    "page": "busqueda",
-   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»",
-   "w": 1280,
-   "x": 9520,
-   "y": 0
+   "x": 12240,
+   "y": 0,
+   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»"
   },
   "BuscaMovCategoria.dc.html": {
+   "w": 390,
    "h": 850,
    "page": "busmob",
-   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»",
-   "w": 390,
-   "x": 940,
-   "y": 0
+   "x": 1410,
+   "y": 0,
+   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»"
   },
   "BuscaMovEspecie.dc.html": {
+   "w": 390,
    "h": 860,
    "page": "busmob",
-   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)",
-   "w": 390,
-   "x": 470,
-   "y": 0
+   "x": 940,
+   "y": 0,
+   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)"
   },
   "BuscaMovFiltros.dc.html": {
+   "w": 390,
    "h": 2380,
    "page": "busmob",
-   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»",
-   "w": 390,
-   "x": 1410,
-   "y": 0
+   "x": 1880,
+   "y": 0,
+   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»"
   },
   "BuscaMovResultados.dc.html": {
+   "w": 390,
    "h": 1370,
    "page": "busmob",
-   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan",
-   "w": 390,
-   "x": 0,
-   "y": 0
+   "x": 470,
+   "y": 0,
+   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan"
   },
   "BuscaResultados.dc.html": {
+   "w": 1280,
    "h": 1120,
    "page": "busqueda",
-   "title": "B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se comb",
-   "w": 1280,
-   "x": 0,
-   "y": 0
+   "x": 2720,
+   "y": 0,
+   "title": "B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan"
   },
   "BuscaSinResultados.dc.html": {
+   "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto",
-   "w": 1280,
-   "x": 10880,
-   "y": 0
+   "x": 13600,
+   "y": 0,
+   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto"
   },
   "BuscaTecnicos.dc.html": {
+   "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)",
-   "w": 1280,
-   "x": 8160,
-   "y": 0
+   "x": 10880,
+   "y": 0,
+   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)"
   },
   "BuscaVarios.dc.html": {
+   "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta",
-   "w": 1280,
-   "x": 6800,
-   "y": 0
+   "x": 9520,
+   "y": 0,
+   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta"
   },
   "Checkout.dc.html": {
    "h": 900,
@@ -3508,6 +3508,30 @@
    "x": 1410,
    "y": 0,
    "title": "Mensaje bloqueado por datos de contacto"
+  },
+  "BuscaHome.dc.html": {
+   "w": 1280,
+   "h": 2010,
+   "page": "busqueda",
+   "x": 0,
+   "y": 0,
+   "title": "B0 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda"
+  },
+  "BuscaHomeInicio.dc.html": {
+   "w": 1280,
+   "h": 2010,
+   "page": "busqueda",
+   "x": 1360,
+   "y": 0,
+   "title": "B0b · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)"
+  },
+  "BuscaMovHome.dc.html": {
+   "w": 390,
+   "h": 3820,
+   "page": "busmob",
+   "x": 0,
+   "y": 0,
+   "title": "M0 · Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2)"
   }
  },
  "createdOnFiles": {
@@ -3616,43 +3640,6 @@
    "maxW": 4000,
    "page": "planesbloq",
    "text": "Planes · qué se bloquea por login, límite o plan de pago",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "busDev": {
-   "fill": "orange",
-   "maxH": 300,
-   "page": "busqueda",
-   "size": 24,
-   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nPrimera búsqueda: siempre la pantalla «Nueva búsqueda» (I1; en móvil, la hoja por pasos M2). Modificar una búsqueda desde resultados: la barra con sus desplegables (B2–B5).\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
-   "w": 1280,
-   "x": 0,
-   "y": -529
-  },
-  "busFicha": {
-   "kind": "title1",
-   "maxW": 1280,
-   "page": "busqueda",
-   "text": "Ficha de producto en exploración: sin barra lateral",
-   "w": 240,
-   "x": 0,
-   "y": 3640
-  },
-  "busT1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "busqueda",
-   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»",
-   "w": 240,
-   "x": 0,
-   "y": -640
-  },
-  "busT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "busmob",
-   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla",
    "w": 240,
    "x": 0,
    "y": -300
@@ -4308,6 +4295,34 @@
    "x": 1100,
    "y": -300,
    "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
+  },
+  "busT1": {
+   "kind": "title1",
+   "maxW": 12000,
+   "page": "busqueda",
+   "w": 240,
+   "x": 0,
+   "y": -640,
+   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»"
+  },
+  "busDev": {
+   "fill": "orange",
+   "maxH": 300,
+   "page": "busqueda",
+   "size": 24,
+   "w": 1280,
+   "x": 0,
+   "y": -340,
+   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nPrimera búsqueda: siempre la pantalla «Nueva búsqueda» (I1; en móvil, la hoja por pasos M2). Modificar una búsqueda desde resultados: la barra con sus desplegables (B2–B5).\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip."
+  },
+  "busT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "busmob",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla"
   }
  },
  "order": [
@@ -4748,7 +4763,10 @@
   "MB_PlanLogin.dc.html",
   "MB_PlanLimite.dc.html",
   "MB_PlanPago.dc.html",
-  "MB_PlanFiltro.dc.html"
+  "MB_PlanFiltro.dc.html",
+  "BuscaHome.dc.html",
+  "BuscaHomeInicio.dc.html",
+  "BuscaMovHome.dc.html"
  ],
  "pages": [
   {

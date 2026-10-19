@@ -24,7 +24,9 @@ def dc(cap, title):
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">\n'
             '<style>\n' + css + '\n</style>\n</helmet>\n<div style="width: ' + str(w) + 'px; height: ' + str(h) + 'px; position: relative; overflow: hidden; background: #F6F8F6;">' + body + '</div>\n</x-dc>\n'
             '<script type="text/x-dc" data-dc-script data-props=\'{"$preview":{"width":' + str(w) + ',"height":' + str(h) + '}}\'>\nclass Component extends DCLogic {\n  renderVals() { return {}; }\n}\n</script>\n</body>\n</html>\n'), w, h
-ESC = [('S1', 'BuscaResultados', 'B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan'),
+ESC = [('S0', 'BuscaHome', 'B0 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda'),
+       ('S0b', 'BuscaHomeInicio', 'B0b · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)'),
+       ('S1', 'BuscaResultados', 'B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan'),
        ('S2', 'BuscaAutocompletar', 'B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa'),
        ('S3', 'BuscaEspecie', 'B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)'),
        ('S4', 'BuscaCategoria', 'B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie'),
@@ -33,7 +35,8 @@ ESC = [('S1', 'BuscaResultados', 'B1 · Resultados: botón «Filtros» con conta
        ('S7', 'BuscaTecnicos', 'B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)'),
        ('S8', 'BuscaFiltros', 'B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»'),
        ('S9', 'BuscaSinResultados', 'B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto')]
-MOV = [('T1', 'BuscaMovResultados', 'M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan'),
+MOV = [('T0', 'BuscaMovHome', 'M0 · Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2)'),
+       ('T1', 'BuscaMovResultados', 'M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan'),
        ('T2', 'BuscaMovEspecie', 'M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)'),
        ('T3', 'BuscaMovCategoria', 'M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»'),
        ('T4', 'BuscaMovFiltros', 'M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»')]
