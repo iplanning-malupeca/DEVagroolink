@@ -316,27 +316,27 @@
   },
   "EmpEditarAvisar.dc.html": {
    "h": 1130,
-   "page": "intempresa",
+   "page": "intusuario",
    "title": "EM4 · Antes de guardar: si cambian tipo, especies, mercados o red, se avisa del efecto en las búsquedas y a la red en Me",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 6870
   },
   "EmpEditarBloque.dc.html": {
    "h": 900,
-   "page": "intempresa",
+   "page": "intusuario",
    "title": "EM3 · Cambiar un bloque: el mismo paso del alta y «Hecho · volver a Editar ficha»",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 6870
   },
   "EmpEditarFicha.dc.html": {
    "h": 1130,
-   "page": "intempresa",
+   "page": "intusuario",
    "title": "EM2 · Editar ficha de empresa: por bloques, con «Cambiar» y los bloques modificados marcados; sociedades del CRM solo la",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 6870
   },
   "Empresa.dc.html": {
    "h": 1060,
@@ -348,43 +348,43 @@
   },
   "ExpConsultas.dc.html": {
    "h": 1000,
-   "page": "intexperto",
+   "page": "intusuario",
    "title": "E3 · Consultas recibidas",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 4930
   },
   "ExpOportunidades.dc.html": {
    "h": 1000,
-   "page": "intexperto",
+   "page": "intusuario",
    "title": "E2 · Oportunidades (proyectos que encajan)",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 4930
   },
   "ExpPanel.dc.html": {
    "h": 1000,
-   "page": "intexperto",
+   "page": "intusuario",
    "title": "E1 · Panel de experta",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 4930
   },
   "ExpPerfil.dc.html": {
    "h": 1000,
-   "page": "intexperto",
+   "page": "intusuario",
    "title": "E5 · Perfil de experta (editor + vista pública)",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 4930
   },
   "ExpServicios.dc.html": {
    "h": 1000,
-   "page": "intexperto",
+   "page": "intusuario",
    "title": "E4 · Mis servicios",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 4930
   },
   "ExpX1Empezar.dc.html": {
    "h": 760,
@@ -1204,11 +1204,11 @@
   },
   "IntS3Empresa.dc.html": {
    "h": 900,
-   "page": "intempresa",
+   "page": "intusuario",
    "title": "EM1 · Carla · Panel de empresa (menú lateral de empresa, azul)",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 6870
   },
   "IntS4Ficha.dc.html": {
    "h": 820,
@@ -2776,30 +2776,30 @@
   "ie0": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "intexperto",
+   "page": "intusuario",
    "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 4630
   },
   "iem0": {
    "kind": "title1",
    "maxW": 1840,
-   "page": "intempresa",
+   "page": "intusuario",
    "text": "COMO EMPRESA · Carla · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 6570
   },
   "iemEdit": {
    "fill": "orange",
    "maxH": 260,
-   "page": "intempresa",
+   "page": "intusuario",
    "size": 22,
    "text": "PARA DESARROLLO · Editar ficha de empresa\n\nSe abre desde el panel («Editar ficha»). Cada bloque reutiliza su paso del alta (006–010 y prototipo alta-empresa). Los cambios no se publican hasta «Guardar cambios». Sociedades y datos fiscales: solo el superadmin (CRM).\nPrototipo: https://claude.ai/artifact/GD5V5oHeH2yCRwiVcMAs2N · móvil en 004b_MB_Intranet · Empresa.",
    "w": 1280,
    "x": 1360,
-   "y": -420
+   "y": 6450
   },
   "iu0": {
    "kind": "title1",
@@ -3484,15 +3484,7 @@
   },
   {
    "id": "intusuario",
-   "name": "004_LP_Intranet · Usuario"
-  },
-  {
-   "id": "intexperto",
-   "name": "004a_LP_Intranet · Experto"
-  },
-  {
-   "id": "intempresa",
-   "name": "004b_LP_Intranet · Empresa"
+   "name": "004_LP_Intranet · Usuario · Experto · Empresa"
   },
   {
    "id": "planes",
