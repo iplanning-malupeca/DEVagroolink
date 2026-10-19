@@ -38,7 +38,7 @@ FILAS = [
  ('MB_04 Mis productos', 'Mis productos, edición y traducciones', 'cap', [('ME1', 'Mis productos'), ('ME2', 'Menú ⋯'), ('ME3', 'Editar por bloques'), ('ME4', 'Guardar y avisar'), ('ME5', 'Traducciones'), ('ME6', 'Ficha en inglés')]),
  ('MB_05 Alta de servicios', 'Alta de servicios del experto (prototipo crear-servicio)', 'cap', [('MS1', 'Tipo de servicio'), ('MS2', 'Especies'), ('MS3', 'Dirigido a'), ('MS4', 'Dónde lo prestas'), ('MS5', 'Detalles'), ('MS6', 'Revisión'), ('MS7', 'Mis servicios')]),
  ('MB_06 Alta de empresa', 'Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal', 'cap', [('MA1', 'Tu organización (CRM)'), ('MA2', 'Confirmar email'), ('MA3', 'Tipo de empresa'), ('MA4', 'Especies'), ('MA5', 'Rama de negocio'), ('MA6', 'Mercados'), ('MA7', 'Cabecera'), ('MA8', 'Sobre la empresa'), ('MA9', 'Equipo comercial'), ('MA10', 'Contacto'), ('MA11', 'Revisar y publicar'), ('MA12', 'Publicada'), ('MA13', 'Crear organización nueva'), ('MA14', 'Sucursal: entra directa'), ('MA15', 'Sucursal: tu Sede')]),
- ('MB_07 Proyectos', 'Proyectos (prototipo crear-proyecto)', 'cap', [('MJ1', 'Bienvenida'), ('MJ2', 'Una pregunta por pantalla'), ('MJ3', 'Resumen'), ('MJ4', 'Editar desde el resumen')]),
+ ('MB_07 Proyectos', 'Proyectos (prototipo crear-proyecto)', 'cap', [('MJ1', 'Bienvenida'), ('MJ2', 'Una pregunta por pantalla'), ('MJ3', 'Resumen'), ('MJ4', 'Editar desde el resumen'), ('MB_PropuestaMovil', 'Empresa · enviar una propuesta (J6)', 'MB_PropuestaMovil', 'own'), ('MB_PropuestaMensajes', 'La propuesta en Mensajes: dudas y nueva versión (J6b)', 'MB_PropuestaMensajes', 'own'), ('MB_PropuestaBloqueada', 'Si intentan poner contactos: no se envía (J6c)', 'MB_PropuestaBloqueada', 'own')]),
  ('MB_08 Planes', 'Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py', 'own', [('MB_PlanLogin', 'Login al pulsar Guardar'), ('MB_PlanLimite', 'Límite: 2.º proyecto del comprador'), ('MB_PlanPago', 'Plan de pago: exportar informes'), ('MB_PlanFiltro', 'Mensaje bloqueado por datos de contacto')])]
 MBP = lambda pg: pg == 'movil2' or str(pg).startswith('mb')
 for k in [k for k, b in B.items() if MBP(b.get('page'))]: del B[k]
@@ -53,8 +53,8 @@ for r, (pag, tit, modo, items) in enumerate(FILAS):
     for i, it in enumerate(items):
         src, t = it[0], it[1]
         key = it[2] if len(it) > 2 else (src if modo == 'own' else 'MB_' + src)
-        if modo == 'own':
-            w, h = 390, 844
+        if modo == 'own' or (len(it) > 3 and it[3] == 'own'):
+            w = 390; m = re.search(r'"height":(\d+)', open(DEST + key + '.dc.html').read()); h = int(m.group(1)) if m else 844
             B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': i * 470, 'y': 0, 'title': t}; c['order'].append(key + '.dc.html'); continue
         if modo == 'imp':
             ob = B[src + '.dc.html']; w, h = ob['w'], ob['h']; html = importa(src, w, h, 'Móvil · ' + t)

@@ -3413,6 +3413,30 @@
    "y": 0,
    "title": "Editar desde el resumen"
   },
+  "MB_PropuestaMovil.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb7",
+   "x": 1880,
+   "y": 0,
+   "title": "Empresa · enviar una propuesta (J6)"
+  },
+  "MB_PropuestaMensajes.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb7",
+   "x": 2350,
+   "y": 0,
+   "title": "La propuesta en Mensajes: dudas y nueva versión (J6b)"
+  },
+  "MB_PropuestaBloqueada.dc.html": {
+   "w": 390,
+   "h": 1040,
+   "page": "mb7",
+   "x": 2820,
+   "y": 0,
+   "title": "Si intentan poner contactos: no se envía (J6c)"
+  },
   "MB_PlanLogin.dc.html": {
    "w": 390,
    "h": 844,
@@ -4673,6 +4697,9 @@
   "MB_MJ2.dc.html",
   "MB_MJ3.dc.html",
   "MB_MJ4.dc.html",
+  "MB_PropuestaMovil.dc.html",
+  "MB_PropuestaMensajes.dc.html",
+  "MB_PropuestaBloqueada.dc.html",
   "MB_PlanLogin.dc.html",
   "MB_PlanLimite.dc.html",
   "MB_PlanPago.dc.html",
