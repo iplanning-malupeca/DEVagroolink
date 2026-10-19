@@ -101,6 +101,12 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-heig
 @media (max-width:600px){.sumrow{grid-template-columns:minmax(0,1fr) auto}.sumrow .v{grid-column:1/-1;grid-row:2}}
 .sumrow .k{color:var(--muted)}
 .ok-big{width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.blq{border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:var(--surface)}
+.blq.mod{border:1.5px solid #E0A33B}
+.blq .bh{display:flex;align-items:center;gap:8px}.blq .bh .k{flex:1;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.edov{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
+.edsh{background:var(--surface);border-radius:20px;width:min(540px,100%);padding:20px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+@media (max-width:600px){.edov{align-items:flex-end;padding:0}.edsh{border-radius:20px 20px 0 0}}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:30;max-width:calc(100% - 32px)}
 </style>
 </head>
@@ -140,7 +146,13 @@ const OBJ = M.objetivos;
 function nuevo() { return { paso: 'empresa', q: '', crm: null, crear: false, nueva: { nombre: '', razon: '', cif: '', pais: 'España', web: '' }, email: 'marta@dsm-firmenich.com', codigo: '', ok: false,
   estatuto: 'independiente', actividad: 'fabricante', venta: 'distribuidores', esp: {}, espModo: {}, ramas: [], principal: null, merc: [], marca: '', objetivos: [], sobre: '', web: '', red: [], quieroDist: true, destino: '', botones: ['Solicitar información'], publicado: false }; }
 let S = nuevo();
-const UI = { desdeRev: false, rq: '', mq: '', oq: '', nuevaRed: '' };
+const UI = { desdeRev: false, rq: '', mq: '', oq: '', nuevaRed: '', vista: 'alta', edit: false, avisar: false, avisarRed: true };
+// Editar la ficha de empresa ya publicada: por bloques, como productos, proyectos y servicios
+let ORIG = null;
+const CAMPOS = { tipo: ['estatuto', 'actividad', 'venta'], especies: ['esp', 'espModo'], rama: ['ramas', 'principal'], mercados: ['merc'], cabecera: ['marca', 'objetivos'], sobre: ['sobre', 'web', 'logo'], red: ['red', 'quieroDist'], contacto: ['destino', 'botones'] };
+const cambiado = k => ORIG && CAMPOS[k] && CAMPOS[k].some(f => JSON.stringify(ORIG[f]) !== JSON.stringify(S[f]));
+const bloques = () => pasos().map(p => p[0]).filter(k => CAMPOS[k]);
+const nCambios = () => bloques().filter(cambiado).length;
 const chip = (t, on, act, cls) => '<button type="button" class="chip ' + (cls || '') + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '" data-act="' + esc(act) + '">' + (on && !(cls || '').includes('ex') ? '✓ ' : '') + esc(t) + '</button>';
 const toggle = (a, x) => { const i = a.indexOf(x); i > -1 ? a.splice(i, 1) : a.push(x); };
 function toast(t) { const d = document.createElement('div'); d.className = 'toast'; d.textContent = t; document.body.appendChild(d); setTimeout(() => d.remove(), 3400); }
@@ -242,7 +254,7 @@ V.contacto = () => {
 const filaR = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="desderev|' + p + '">Editar</button></div>';
 V.revision = () => {
   if (S.publicado) return '<div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:18px 0"><span class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><strong style="font-size:20px">Ficha de ' + esc(S.marca || nombreEmp()) + ' publicada</strong><span class="hint" style="font-size:14px">Ya te encuentran quienes trabajan con tus especies en tus mercados.</span></div>' +
-    '<div class="list"><div class="lrow"><span class="t"><strong>' + (S.actividad === 'servicios' ? 'Añade tus servicios' : 'Añade tus productos') + '</strong><span class="hint">Con el asistente, como en Proyectos</span></span><button type="button" class="btnp">Empezar</button></div>' + (modoRed() && modoRed() !== 'sucursal' ? '<div class="lrow"><span class="t"><strong>' + esc(RED[modoRed()]) + '</strong><span class="hint">Invita al resto cuando quieras</span></span><button type="button" class="btn">Abrir</button></div>' : '') + '<div class="lrow"><span class="t"><strong>Mensajes</strong><span class="hint">Las solicitudes llegan aquí</span></span><button type="button" class="btn">Abrir</button></div></div>';
+    '<div class="list"><div class="lrow"><span class="t"><strong>Editar ficha de empresa</strong><span class="hint">Desde tu panel, por bloques</span></span><button type="button" class="btn" data-act="editarficha">Editar</button></div><div class="lrow"><span class="t"><strong>' + (S.actividad === 'servicios' ? 'Añade tus servicios' : 'Añade tus productos') + '</strong><span class="hint">Con el asistente, como en Proyectos</span></span><button type="button" class="btnp">Empezar</button></div>' + (modoRed() && modoRed() !== 'sucursal' ? '<div class="lrow"><span class="t"><strong>' + esc(RED[modoRed()]) + '</strong><span class="hint">Invita al resto cuando quieras</span></span><button type="button" class="btn">Abrir</button></div>' : '') + '<div class="lrow"><span class="t"><strong>Mensajes</strong><span class="hint">Las solicitudes llegan aquí</span></span><button type="button" class="btn">Abrir</button></div></div>';
   const esp = Object.keys(S.esp).map(sp => S.esp[sp].length ? sp + ((S.espModo[sp] || '') === 'excluir' ? ' sin ' : ' · ') + S.esp[sp].join(', ') : sp).join(' · ');
   return '<div class="note"><span>Revisa y publica. Podrás cambiar cualquier apartado desde tu panel de empresa.</span></div><div>' +
     filaR('Organización', '<strong>' + esc(nombreEmp()) + '</strong>' + (S.crear ? ' <span class="tg w">Nueva · la revisa Agroolink</span>' : ' <span class="tg ok">Del CRM</span>'), 'empresa') +
@@ -251,6 +263,24 @@ V.revision = () => {
     filaR('Cabecera', esc((S.marca || nombreEmp()) + (S.objetivos.length ? ' · ' + S.objetivos.join(', ') : '')), 'cabecera') + filaR('Sobre la empresa', esc(S.sobre ? S.sobre.slice(0, 90) + (S.sobre.length > 90 ? '…' : '') : '—'), 'sobre') +
     (modoRed() ? filaR(RED[modoRed()], esc(modoRed() === 'sucursal' ? 'Sede: Aviagen' : redFilas().length + ' en la red'), 'red') : '') + filaR('Contacto', esc(S.destino + ' · ' + S.botones.join(', ')), 'contacto') + '</div>';
 };
+function resumenEmp(k) {
+  const esp = Object.keys(S.esp).map(sp => S.esp[sp].length ? sp + ((S.espModo[sp] || '') === 'excluir' ? ' sin ' : ' · ') + S.esp[sp].join(', ') : sp).join(' · ');
+  return { tipo: esc([(ESTATUTOS.find(e => e[0] === S.estatuto) || [])[1], esSucursal() ? '' : (ACTIVIDADES.find(a => a[0] === S.actividad) || [])[1], esSucursal() ? '' : ((VENTA[S.actividad].find(v => v[0] === S.venta) || [])[1] || '')].filter(Boolean).join(' · ')),
+    especies: esc(esp || '—'), rama: esc(S.ramas.join(', ') || '—'), mercados: esc(S.merc.join(', ') || '—'), cabecera: esc((S.marca || nombreEmp()) + (S.objetivos.length ? ' · ' + S.objetivos.join(', ') : '')),
+    sobre: esc(S.sobre ? S.sobre.slice(0, 120) + (S.sobre.length > 120 ? '…' : '') : '—'), red: esc(modoRed() === 'sucursal' ? 'Sede: Aviagen' : redFilas().length + ' en la red'), contacto: esc(S.destino + ' · ' + S.botones.join(', ')) }[k];
+}
+function vistaEditar() {
+  const n = nCambios(), P = pasos(), red = modoRed() && modoRed() !== 'sucursal' ? RED[modoRed()].toLowerCase() : '';
+  const afecta = ['tipo', 'especies', 'mercados', 'red'].filter(cambiado);
+  return '<div><span class="eb">Panel de empresa · Editar ficha</span><h1>Ficha de ' + esc(S.marca || nombreEmp()) + ' <span class="tg ok" style="vertical-align:middle">Publicada</span></h1><p class="sub">Cambia solo lo que necesites: cada bloque abre su paso del alta.</p></div>' +
+    '<div class="note"><span><strong>Sociedades y datos fiscales:</strong> vienen del CRM y solo los cambia el superadmin. <button type="button" class="link" data-act="aviso">Pedir un cambio</button></span></div>' +
+    bloques().map(k => '<div class="blq' + (cambiado(k) ? ' mod' : '') + '"><div class="bh"><span class="k">' + esc((P.find(p => p[0] === k) || [k, k])[1]) + '</span>' + (cambiado(k) ? '<span class="tg w">Modificado</span>' : '') + '<button type="button" class="link" data-act="edbloque|' + k + '">Cambiar</button></div><span style="font-size:14.5px">' + resumenEmp(k) + '</span></div>').join('') +
+    '<div class="nav"><span class="hint">' + (n ? n + ' cambio' + (n > 1 ? 's' : '') + ' sin guardar' : 'Sin cambios') + '</span><span class="sp"></span><button type="button" class="btn" data-act="eddescartar">' + (n ? 'Descartar' : 'Volver al panel') + '</button><button type="button" class="btnp" data-act="edguardar"' + (n ? '' : ' disabled') + '>Guardar cambios</button></div>' +
+    (UI.avisar ? '<div class="edov"><div class="edsh" role="dialog" aria-label="Antes de guardar"><strong style="font-size:17px">Antes de guardar</strong>' +
+      '<span style="font-size:14px">Has cambiado ' + afecta.map(k => (P.find(p => p[0] === k) || [k, k])[1].toLowerCase()).join(', ') + '. Tu ficha y tus productos pueden empezar a salir, o dejar de salir, en algunas búsquedas.</span>' +
+      (red ? '<label class="sw"><input type="checkbox" data-sw2="avisarRed"' + (UI.avisarRed ? ' checked' : '') + '> Avisar a tu ' + esc(red) + ' en Mensajes</label>' : '') +
+      '<span class="hint">Los compradores con conversaciones abiertas las siguen teniendo en Mensajes.</span><div class="nav" style="border:0;padding:0"><span class="sp"></span><button type="button" class="btn" data-act="avisarno">Volver</button><button type="button" class="btnp" data-act="edconfirmar">Guardar cambios</button></div></div></div>' : '');
+}
 // ---------- vista previa ----------
 function lado() {
   const p = pasos().find(x => x[0] === S.paso) || pasos()[0];
@@ -265,14 +295,15 @@ function lado() {
 const AYUDA = { empresa: 'Escribe el nombre y elige tu empresa entre las del CRM. Si no está, créala: basta con el nombre.', email: 'Un código a tu email de empresa. Así nadie se hace pasar por tu empresa.', tipo: 'Decide qué pasos verás: distribuidores, comerciales, sucursales, marcas o expertos.', especies: 'Todas, todas menos algunas o solo algunas producciones.', rama: 'La lista del CRM; la primera es la principal.', mercados: 'Inclusiones por país o región.', cabecera: 'Marca, sociedades (solo lectura) y hasta 5 objetivos.', sobre: 'Qué hacéis y para quién. Se traduce sola.', red: 'Quién vende o atiende en tu nombre.', contacto: 'A quién llega cada solicitud. Los contactos nunca se comparten.', revision: 'Revisa y publica.' };
 // ---------- render ----------
 function render() {
+  if (UI.vista === 'editar' && !UI.edit) { document.getElementById('crumb').innerHTML = 'Panel de empresa › <strong>Editar ficha</strong>'; document.getElementById('main').innerHTML = vistaEditar(); lado(); return; }
   const P = pasos(), i = Math.max(0, P.findIndex(p => p[0] === S.paso)), p = P[i], fin = S.paso === 'revision';
   document.getElementById('crumb').innerHTML = 'Alta de empresa › <strong>' + esc(nombreEmp()) + '</strong>';
   const puede = S.paso === 'empresa' ? (S.crm || (S.crear && (S.nueva.nombre || S.q).trim())) : S.paso === 'email' ? S.ok : true;
   document.getElementById('main').innerHTML =
     '<div class="steps" style="--n:' + P.length + '">' + P.map((x, j) => '<span class="' + (j <= i ? 'on' : '') + '"></span>').join('') + '</div>' +
-    (UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión.</span></div>' : '') +
-    (S.publicado ? '' : '<div><span class="eb">Paso ' + (i + 1) + ' de ' + P.length + ' · ' + esc(p[1]) + '</span><h1>' + esc(TIT[p[0]] || p[1]) + '</h1></div>') + V[S.paso]() +
-    (S.publicado ? '' : '<div class="nav">' + (i > 0 && !UI.desdeRev ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
+    (UI.edit ? '<div class="note"><span>Estás cambiando <strong>' + esc(p[1]) + '</strong> de tu ficha publicada. Al terminar vuelves a «Editar ficha».</span></div>' : UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión.</span></div>' : '') +
+    (S.publicado && !UI.edit ? '' : '<div><span class="eb">Paso ' + (i + 1) + ' de ' + P.length + ' · ' + esc(p[1]) + '</span><h1>' + esc(TIT[p[0]] || p[1]) + '</h1></div>') + V[S.paso]() +
+    (UI.edit ? '<div class="nav"><span class="sp"></span><button type="button" class="btnp" data-act="edvolver">Hecho · volver a Editar ficha</button></div>' : S.publicado ? '' : '<div class="nav">' + (i > 0 && !UI.desdeRev ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
       (fin ? '<button type="button" class="btnp" data-act="publicar">Publicar ficha</button>' : UI.desdeRev ? '<button type="button" class="btnp" data-act="ir|revision">Guardar y volver a la revisión</button>' :
         '<button type="button" class="btnp" data-act="seguir"' + (puede ? '' : ' disabled') + '>' + (S.paso === 'empresa' && S.crear ? 'Crear y continuar' : S.paso === 'empresa' && S.crm ? 'Continuar con ' + esc(S.crm.nombre) : 'Continuar') + '</button>') + '</div>');
   lado();
@@ -310,6 +341,13 @@ document.addEventListener('click', ev => {
     case 'destino': S.destino = x; break;
     case 'boton': toggle(S.botones, x); break;
     case 'publicar': S.publicado = true; toast('Ficha publicada.'); break;
+    case 'editarficha': ORIG = JSON.parse(JSON.stringify(S)); UI.vista = 'editar'; UI.edit = false; UI.avisar = false; break;
+    case 'edbloque': UI.edit = true; ir(x); return;
+    case 'edvolver': UI.edit = false; S.paso = 'revision'; break;
+    case 'eddescartar': if (ORIG) S = JSON.parse(JSON.stringify(ORIG)); ORIG = null; UI.vista = 'alta'; S.paso = 'revision'; break;
+    case 'edguardar': if (['tipo', 'especies', 'mercados', 'red'].some(cambiado)) { UI.avisar = true; UI.avisarRed = true; break; } ORIG = JSON.parse(JSON.stringify(S)); toast('Cambios guardados.'); break;
+    case 'avisarno': UI.avisar = false; break;
+    case 'edconfirmar': ORIG = JSON.parse(JSON.stringify(S)); UI.avisar = false; toast(UI.avisarRed && modoRed() && modoRed() !== 'sucursal' ? 'Guardado. Hemos avisado a tu red en Mensajes.' : 'Cambios guardados.'); break;
     case 'salir': toast('Guardado. Puedes seguir desde tu panel de empresa.'); return;
   }
   render();
@@ -323,7 +361,7 @@ document.addEventListener('input', ev => {
   if (d.q) { UI[d.q] = el.value; refocus('[data-q="' + d.q + '"]'); return; }
   if (d.cd) { const a = S.codigo.split(''); while (a.length < 6) a.push(''); a[+d.cd] = el.value.slice(-1); S.codigo = a.join(''); const nx = document.querySelector('[data-cd="' + (+d.cd + 1) + '"]'); if (S.codigo.replace(/\s/g, '').length === 6 && !S.ok) { S.ok = true; render(); return; } if (nx && el.value) nx.focus(); }
 });
-document.addEventListener('change', ev => { const d = ev.target.dataset; if (d.sw) { S[d.sw] = ev.target.checked; lado(); } });
+document.addEventListener('change', ev => { const d = ev.target.dataset; if (d.sw) { S[d.sw] = ev.target.checked; lado(); } if (d.sw2) UI[d.sw2] = ev.target.checked; });
 if (/[?&]captura/.test(location.search)) { window.__t = code => eval(code); }
 render();
 })();

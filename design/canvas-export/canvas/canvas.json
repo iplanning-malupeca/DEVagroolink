@@ -3033,6 +3033,30 @@
    "x": 4080,
    "y": 0
   },
+  "EmpEditarFicha.dc.html": {
+   "w": 1280,
+   "h": 1130,
+   "page": "intempresa",
+   "x": 1360,
+   "y": 0,
+   "title": "EM2 · Editar ficha de empresa: por bloques, con «Cambiar» y los bloques modificados marcados; sociedades del CRM solo las cambia el superadmin"
+  },
+  "EmpEditarBloque.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "intempresa",
+   "x": 2720,
+   "y": 0,
+   "title": "EM3 · Cambiar un bloque: el mismo paso del alta y «Hecho · volver a Editar ficha»"
+  },
+  "EmpEditarAvisar.dc.html": {
+   "w": 1280,
+   "h": 1130,
+   "page": "intempresa",
+   "x": 4080,
+   "y": 0,
+   "title": "EM4 · Antes de guardar: si cambian tipo, especies, mercados o red, se avisa del efecto en las búsquedas y a la red en Mensajes"
+  },
   "MB_MobHome.dc.html": {
    "w": 390,
    "h": 2010,
@@ -3680,6 +3704,30 @@
    "x": 3760,
    "y": 0,
    "title": "P2 · «Ofrecer mis servicios»: qué cambia (luego X3–X5)"
+  },
+  "MB_EEM1.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb11",
+   "x": 0,
+   "y": 0,
+   "title": "Editar ficha de empresa por bloques"
+  },
+  "MB_EEM2.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb11",
+   "x": 470,
+   "y": 0,
+   "title": "Cambiar un bloque"
+  },
+  "MB_EEM3.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb11",
+   "x": 940,
+   "y": 0,
+   "title": "Antes de guardar: aviso"
   }
  },
  "createdOnFiles": {
@@ -4408,6 +4456,16 @@
    "x": 0,
    "y": -300
   },
+  "iemEdit": {
+   "fill": "orange",
+   "maxH": 260,
+   "page": "intempresa",
+   "size": 22,
+   "w": 1280,
+   "x": 1360,
+   "y": -420,
+   "text": "PARA DESARROLLO · Editar ficha de empresa\n\nSe abre desde el panel («Editar ficha»). Cada bloque reutiliza su paso del alta (006–010 y prototipo alta-empresa). Los cambios no se publican hasta «Guardar cambios». Sociedades y datos fiscales: solo el superadmin (CRM).\nPrototipo: https://claude.ai/artifact/GD5V5oHeH2yCRwiVcMAs2N · móvil en 004b_MB_Intranet · Empresa."
+  },
   "mbt0": {
    "kind": "title1",
    "maxW": 8000,
@@ -4497,6 +4555,15 @@
    "x": 0,
    "y": -300,
    "text": "Alta de experto en móvil (versión de 003a_LP_Alta_Experto) · tools/alta_experto_movil.py"
+  },
+  "mbt10": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb11",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Intranet de empresa en móvil · Editar ficha de empresa (prototipo alta-empresa) · tools/captura_empresa_editar.js"
   },
   "mbdev": {
    "fill": "orange",
@@ -4897,6 +4964,9 @@
   "ServExpEditarBloque.dc.html",
   "ServExpAvisar.dc.html",
   "ServExpArchivados.dc.html",
+  "EmpEditarFicha.dc.html",
+  "EmpEditarBloque.dc.html",
+  "EmpEditarAvisar.dc.html",
   "MB_MobHome.dc.html",
   "MB_MP1.dc.html",
   "MB_MP2.dc.html",
@@ -4977,7 +5047,10 @@
   "MB_Exp6_Publicado.dc.html",
   "MB_Exp7_Semana.dc.html",
   "MB_ExpP1_Aviso.dc.html",
-  "MB_ExpP2_Intro.dc.html"
+  "MB_ExpP2_Intro.dc.html",
+  "MB_EEM1.dc.html",
+  "MB_EEM2.dc.html",
+  "MB_EEM3.dc.html"
  ],
  "pages": [
   {
@@ -5022,7 +5095,7 @@
   },
   {
    "id": "intempresa",
-   "name": "002c_Intranet · Empresa (consolidada)"
+   "name": "004b_LP_Intranet · Empresa"
   },
   {
    "id": "planes",
@@ -5131,6 +5204,10 @@
   {
    "id": "mb10",
    "name": "003a_MB_Alta_Experto"
+  },
+  {
+   "id": "mb11",
+   "name": "004b_MB_Intranet · Empresa"
   },
   {
    "id": "servicios",
