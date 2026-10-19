@@ -3229,12 +3229,132 @@
    "y": 12630,
    "title": "Mis servicios"
   },
+  "MvMA1.dc.html": {
+   "w": 390,
+   "h": 1170,
+   "page": "movil2",
+   "x": 0,
+   "y": 15670,
+   "title": "Tu organización (CRM)"
+  },
+  "MvMA2.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "movil2",
+   "x": 470,
+   "y": 15670,
+   "title": "Confirmar email"
+  },
+  "MvMA3.dc.html": {
+   "w": 390,
+   "h": 1300,
+   "page": "movil2",
+   "x": 940,
+   "y": 15670,
+   "title": "Tipo de empresa"
+  },
+  "MvMA4.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "movil2",
+   "x": 1410,
+   "y": 15670,
+   "title": "Especies"
+  },
+  "MvMA5.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "movil2",
+   "x": 1880,
+   "y": 15670,
+   "title": "Rama de negocio"
+  },
+  "MvMA6.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "movil2",
+   "x": 2350,
+   "y": 15670,
+   "title": "Mercados"
+  },
+  "MvMA7.dc.html": {
+   "w": 390,
+   "h": 1190,
+   "page": "movil2",
+   "x": 2820,
+   "y": 15670,
+   "title": "Cabecera"
+  },
+  "MvMA8.dc.html": {
+   "w": 390,
+   "h": 1090,
+   "page": "movil2",
+   "x": 3290,
+   "y": 15670,
+   "title": "Sobre la empresa"
+  },
+  "MvMA9.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "movil2",
+   "x": 3760,
+   "y": 15670,
+   "title": "Equipo comercial"
+  },
+  "MvMA10.dc.html": {
+   "w": 390,
+   "h": 1100,
+   "page": "movil2",
+   "x": 4230,
+   "y": 15670,
+   "title": "Contacto"
+  },
+  "MvMA11.dc.html": {
+   "w": 390,
+   "h": 1590,
+   "page": "movil2",
+   "x": 4700,
+   "y": 15670,
+   "title": "Revisar y publicar"
+  },
+  "MvMA12.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "movil2",
+   "x": 5170,
+   "y": 15670,
+   "title": "Publicada"
+  },
+  "MvMA13.dc.html": {
+   "w": 390,
+   "h": 1250,
+   "page": "movil2",
+   "x": 5640,
+   "y": 15670,
+   "title": "Crear organización nueva"
+  },
+  "MvMA14.dc.html": {
+   "w": 390,
+   "h": 970,
+   "page": "movil2",
+   "x": 6110,
+   "y": 15670,
+   "title": "Sucursal: entra directa"
+  },
+  "MvMA15.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "movil2",
+   "x": 6580,
+   "y": 15670,
+   "title": "Sucursal: tu Sede"
+  },
   "MvMJ1.dc.html": {
    "w": 390,
    "h": 860,
    "page": "movil2",
    "x": 0,
-   "y": 15670,
+   "y": 17680,
    "title": "Bienvenida"
   },
   "MvMJ2.dc.html": {
@@ -3242,7 +3362,7 @@
    "h": 1470,
    "page": "movil2",
    "x": 470,
-   "y": 15670,
+   "y": 17680,
    "title": "Una pregunta por pantalla"
   },
   "MvMJ3.dc.html": {
@@ -3250,7 +3370,7 @@
    "h": 1860,
    "page": "movil2",
    "x": 940,
-   "y": 15670,
+   "y": 17680,
    "title": "Resumen"
   },
   "MvMJ4.dc.html": {
@@ -3258,7 +3378,7 @@
    "h": 860,
    "page": "movil2",
    "x": 1410,
-   "y": 15670,
+   "y": 17680,
    "title": "Editar desde el resumen"
   }
  },
@@ -4003,6 +4123,15 @@
    "w": 240,
    "x": 0,
    "y": 15370,
+   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
+  },
+  "m2t6": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "movil2",
+   "w": 240,
+   "x": 0,
+   "y": 17380,
    "text": "Proyectos (prototipo crear-proyecto)"
   },
   "m2dev": {
@@ -4013,7 +4142,7 @@
    "w": 1280,
    "x": 4400,
    "y": -300,
-   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nPendiente de pasar a móvil: alta de empresa (006–010), catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
+   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   }
  },
  "order": [
@@ -4420,6 +4549,21 @@
   "MvMS5.dc.html",
   "MvMS6.dc.html",
   "MvMS7.dc.html",
+  "MvMA1.dc.html",
+  "MvMA2.dc.html",
+  "MvMA3.dc.html",
+  "MvMA4.dc.html",
+  "MvMA5.dc.html",
+  "MvMA6.dc.html",
+  "MvMA7.dc.html",
+  "MvMA8.dc.html",
+  "MvMA9.dc.html",
+  "MvMA10.dc.html",
+  "MvMA11.dc.html",
+  "MvMA12.dc.html",
+  "MvMA13.dc.html",
+  "MvMA14.dc.html",
+  "MvMA15.dc.html",
   "MvMJ1.dc.html",
   "MvMJ2.dc.html",
   "MvMJ3.dc.html",

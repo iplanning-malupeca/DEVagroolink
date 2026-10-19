@@ -1,0 +1,30 @@
+// Capturas a 390 px de los prototipos (alta de empresa) para la página «013_Móvil».
+const wait=ms=>new Promise(r=>setTimeout(r,ms)); await wait(500);
+const q=s=>{const e=document.querySelector(s); if(!e) throw new Error('no '+s); return e;};
+const click=a=>q(`[data-act="${a}"]`).click();
+const type=(sel,val)=>{const e=q(sel); e.value=val; e.dispatchEvent(new Event('input',{bubbles:true})); e.dispatchEvent(new Event('change',{bubbles:true}));};
+async function snap(name,title){ await wait(200); document.querySelectorAll('.toast').forEach(t=>t.remove()); scrollTo(0,0);
+  const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');
+  const c=document.body.cloneNode(true); c.querySelectorAll('script,template').forEach(x=>x.remove());
+  const h=Math.max(844, Math.ceil(document.documentElement.scrollHeight/10)*10);
+  await fetch('/save?name='+name,{method:'POST',body:JSON.stringify({title,h,css,body:c.innerHTML,w:390})}); return name+':'+h; }
+const out=[]; const P=location.pathname;
+const reset=()=>window.__t("S = nuevo(); UI.desdeRev = false; render()");
+const codigo=()=>{ for(let i=0;i<6;i++) type(`[data-cd="${i}"]`, String((i*3+1)%10)); };
+reset(); type('[data-f="q"]','zucami'); click('crm|zucami'); out.push(await snap('MA1','Tu organización'));
+click('seguir'); codigo(); out.push(await snap('MA2','Confirmar email'));
+click('seguir'); out.push(await snap('MA3','Tipo de empresa'));
+click('seguir'); out.push(await snap('MA4','Especies'));
+click('seguir'); out.push(await snap('MA5','Rama de negocio'));
+click('seguir'); out.push(await snap('MA6','Mercados'));
+click('seguir'); click('obj|Bienestar animal'); click('obj|Rendimiento'); out.push(await snap('MA7','Cabecera'));
+click('seguir'); type('[data-f="sobre"]','Diseñamos y fabricamos jaulas y equipos para gallinas ponedoras y reproductoras desde Valladolid.'); out.push(await snap('MA8','Sobre la empresa'));
+click('seguir'); out.push(await snap('MA9','Equipo comercial'));
+click('seguir'); out.push(await snap('MA10','Contacto'));
+click('seguir'); out.push(await snap('MA11','Revisar y publicar'));
+click('publicar'); out.push(await snap('MA12','Publicada'));
+reset(); type('[data-f="q"]','Granjas Pirineo'); click('crear'); out.push(await snap('MA13','Crear organización nueva'));
+reset(); type('[data-f="q"]','aviagen'); click('crm|aviagen'); click('seguir'); codigo(); out.push(await snap('MA14','Sucursal: entra directa'));
+window.__t("S.paso = 'red'; render()"); out.push(await snap('MA15','Sucursal: tu Sede'));
+reset();
+return out.join(' ');

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agroolink · Alta de empresa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Alta de empresa: un solo asistente que reúne 006–010. El formulario se adapta a cómo vende la empresa
+   (distribuidores, comerciales, sucursales, sucursal de un grupo, distribuidor multimarca o servicios). Azul de empresa. Móvil primero. */
+:root{
+  --bg:#F4F6F9; --surface:#FFFFFF; --surface2:#F7F9FC; --fg:#17231D; --muted:#56615B; --line:#E1E6EC; --line2:#D2DAE3;
+  --accent:#1D4E89; --accent-ink:#FFFFFF; --soft:#E9F0F9; --soft2:#C8D8EE; --ok:#0E5A3A; --ok-bg:#EEF6EE; --warn:#7A4B00; --warn-bg:#FFF4E0; --lila:#4B3BA6; --lila-soft:#F1EEFB;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1319; --surface:#151D25; --surface2:#1A242E; --fg:#E5EBF0; --muted:#9BA7B2; --line:#25313C; --line2:#30404D;
+  --accent:#86AEE0; --accent-ink:#0B1622; --soft:#1B2B3E; --soft2:#2A4466; --ok:#7FD1A6; --ok-bg:#15291F; --warn:#F2C46B; --warn-bg:#2E2410; --lila:#B3A7F2; --lila-soft:#2A2445; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1319; --surface:#151D25; --surface2:#1A242E; --fg:#E5EBF0; --muted:#9BA7B2; --line:#25313C; --line2:#30404D;
+  --accent:#86AEE0; --accent-ink:#0B1622; --soft:#1B2B3E; --soft2:#2A4466; --ok:#7FD1A6; --ok-bg:#15291F; --warn:#F2C46B; --warn-bg:#2E2410; --lila:#B3A7F2; --lila-soft:#2A2445; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.4}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line);min-height:56px;padding-block:8px;padding-inline:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px));display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;flex:none}.logo svg{height:28px;width:auto;display:block}
+.rol{font-size:12px;font-weight:600;color:var(--accent);background:var(--soft);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.crumb{color:var(--muted);font-size:14px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb strong{color:var(--fg);font-weight:500}
+.wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:24px;max-width:1500px;margin:0 auto;padding-block:20px 40px;padding-inline:max(clamp(16px,4vw,60px),env(safe-area-inset-left,0px))}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);padding-block:14px 32px}}
+@media (max-width:600px){.crumb{display:none}.logo svg{height:22px}.top .btn{margin-left:auto}}
+.main{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 28px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:600px){.main{padding:18px 16px;border-radius:16px}}
+.eb{font-size:12px;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}
+h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+@media (max-width:600px){h1{font-size:21px}}
+.sub{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:68ch}
+.steps{display:grid;gap:5px;grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+.steps span{height:5px;border-radius:3px;background:var(--line2)}
+.steps span.on{background:var(--accent)}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.flabel{font-size:15px;font-weight:500;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hint{font-size:12.5px;color:var(--muted);font-weight:400}
+.inp,.ta{height:42px;border:1px solid var(--line2);border-radius:10px;padding:0 12px;background:var(--surface);width:100%;min-width:0}
+.ta{height:auto;padding:10px 12px;resize:vertical;line-height:1.4}
+.inp.big{height:48px;border:1.5px solid var(--accent);font-size:16px;font-weight:500}
+.code{display:flex;gap:8px}.code input{width:46px;height:54px;text-align:center;font-size:22px;font-weight:600;border:1.5px solid var(--line2);border-radius:12px;background:var(--surface)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{min-height:34px;padding:4px 13px;border-radius:999px;border:1px solid var(--line2);background:var(--surface);display:inline-flex;align-items:center;gap:6px;font-size:13.5px}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.chip.sm{min-height:30px;font-size:12.5px;padding:3px 11px}
+.chip.soft.on{background:var(--soft);color:var(--accent);border-color:var(--soft2)}
+.chip.ex.on{background:#FDECEA;color:#A3271B;border-color:transparent;text-decoration:line-through}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line2);border-radius:14px;background:var(--surface);text-align:left;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.on{border:1.5px solid var(--accent);background:var(--soft)}
+.opt .rd{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line2);flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center}
+.opt.on .rd{border-color:var(--accent)}.opt.on .rd::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.opt strong{display:block;font-size:15px}
+.opt span.d{font-size:13px;color:var(--muted)}
+.opts{display:flex;flex-direction:column;gap:8px}
+.mcard{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line2);border-radius:14px;background:var(--surface);text-align:left;width:100%}
+.mcard.on{border:1.5px solid var(--accent);background:var(--soft)}
+.logoE{width:44px;height:44px;border-radius:12px;color:#FFFFFF;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex:none}
+.tg{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.tg.b{background:var(--soft);color:var(--accent)}.tg.ok{background:var(--ok-bg);color:var(--ok)}.tg.w{background:var(--warn-bg);color:var(--warn)}.tg.g{background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.note{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;background:var(--surface2);border:1px solid var(--line);font-size:13.5px;color:var(--muted);line-height:1.4}
+.note strong{color:var(--fg)}
+.note.w{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
+.note.w strong{color:inherit}
+.dash{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px dashed var(--accent);border-radius:14px;color:var(--accent);font-weight:600;background:var(--surface);width:100%;text-align:left}
+.list{display:flex;flex-direction:column;gap:8px}
+.lrow{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)}
+.lrow .t{flex:1;min-width:0}
+.lrow .t strong{display:block;font-size:14.5px}
+.av{width:34px;height:34px;border-radius:50%;color:#FFFFFF;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.sw{display:flex;align-items:center;gap:10px;font-size:14px}
+.sw input{accent-color:var(--accent);width:18px;height:18px;margin:0;flex:none}
+.nav{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:16px;flex-wrap:wrap}
+.nav .sp{flex:1}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1px solid var(--line2);background:var(--surface);font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp{height:42px;padding:0 20px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btnp:disabled{opacity:.45;cursor:not-allowed}
+@media (max-width:600px){.nav .btnp{flex:1;justify-content:center}}
+.link{border:0;background:none;color:var(--accent);padding:0;font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.prev{display:flex;flex-direction:column;gap:8px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:12px;background:var(--soft);color:var(--accent);border-radius:999px;padding:3px 10px}
+.pcta{height:36px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.sumrow{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:12px;align-items:start;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+@media (max-width:600px){.sumrow{grid-template-columns:minmax(0,1fr) auto}.sumrow .v{grid-column:1/-1;grid-row:2}}
+.sumrow .k{color:var(--muted)}
+.ok-big{width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:30;max-width:calc(100% - 32px)}
+</style>
+</head>
+<body>
+<header class="top">
+  <span class="logo">/*LOGO*/</span><span class="rol">Empresas</span>
+  <span class="crumb" id="crumb"></span>
+  <button class="btn" type="button" data-act="salir">Guardar y salir</button>
+</header>
+<div class="wrap">
+  <main class="main" id="main"></main>
+  <aside class="side" id="side"></aside>
+</div>
+<script id="modelo" type="application/json">/*MODELO*/</script>
+<script>
+(function(){
+const M = JSON.parse(document.getElementById('modelo').textContent);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const KEY = 'agroolink-alta-empresa-v1';
+// CRM de ejemplo (en la plataforma real: el CRM de Agroolink; solo el superadmin edita estos datos)
+const CRM = [
+  { id: 'dsm', nombre: 'DSM-Firmenich', dom: 'dsm-firmenich.com', sede: 'DSM-Firmenich AG · Suiza', soc: ['DSM Nutritional Products Ibérica, S.A.', 'DSM-Firmenich France SAS'], filiales: 12, ini: 'DF', color: '#00A0A8', estatuto: 'independiente', actividad: 'fabricante', venta: 'distribuidores', esp: { Avicultura: [], Porcino: [], Bovino: [], Acuicultura: [] }, ramas: ['Aditivos Correctores'], merc: ['Todo el mundo'] },
+  { id: 'zucami', nombre: 'Zucami Poultry Equipment', dom: 'zucami.com', sede: 'Zucami Poultry Equipment, S.L. · Valladolid', soc: ['Zucami Poultry Equipment, S.L.'], filiales: 2, ini: 'ZU', color: '#1E8A3C', estatuto: 'independiente', actividad: 'fabricante', venta: 'comerciales', esp: { Avicultura: ['Gallinas ponedoras', 'Reproductoras'] }, ramas: ['Instalación Equipo › Equipamientos'], merc: ['España', 'Portugal', 'Francia'] },
+  { id: 'bd', nombre: 'Big Dutchman', dom: 'bigdutchman.com', sede: 'Big Dutchman International GmbH · Vechta', soc: ['Big Dutchman International GmbH', 'Big Dutchman Ibérica, S.A.'], filiales: 6, ini: 'BD', color: '#B5121B', estatuto: 'sede', actividad: 'fabricante', venta: 'sucursales', esp: { Avicultura: [], Porcino: [] }, ramas: ['Instalación Equipo › Equipamientos'], merc: ['Todo el mundo'] },
+  { id: 'aviagen', nombre: 'Aviagen Ibérica', dom: 'aviagen.com', sede: 'Aviagen Ibérica, S.L. · España', soc: ['Aviagen Ibérica, S.L.'], filiales: 0, ini: 'AI', color: '#C8102E', estatuto: 'sucursal', grupo: 'Aviagen', actividad: 'fabricante', venta: 'central', esp: { Avicultura: ['Reproductoras', 'Pollos de engorde'] }, ramas: ['Genética'], merc: ['España', 'Portugal'] },
+  { id: 'newfarms', nombre: 'NewFarms', dom: 'newfarms.es', sede: 'NewFarms Distribución, S.L. · Lleida', soc: ['NewFarms Distribución, S.L.'], filiales: 0, ini: 'NF', color: '#2E7D4F', estatuto: 'independiente', actividad: 'distribuidor', venta: 'marcas', esp: { Avicultura: [], Porcino: [] }, ramas: ['Distribuidor'], merc: ['España', 'Portugal'] },
+  { id: 'asvet', nombre: 'Asvet Veterinaris', dom: 'asvet.cat', sede: 'Asvet Veterinaris, S.L.P. · Lleida', soc: ['Asvet Veterinaris, S.L.P.'], filiales: 0, ini: 'AV', color: '#4B3BA6', estatuto: 'independiente', actividad: 'servicios', venta: 'expertos', esp: { Porcino: [], Avicultura: [], Bovino: [] }, ramas: ['Consultoría'], merc: ['España'] }];
+const ESTATUTOS = [['independiente', 'Empresa independiente', 'Una sola sociedad'], ['sede', 'Sede de un grupo', 'Tiene sucursales o filiales en otros países'], ['sucursal', 'Sucursal o filial', 'Depende de una Sede; la marca y el catálogo vienen de ella']];
+const ACTIVIDADES = [['fabricante', 'Fabricante', 'Productos con tu marca'], ['distribuidor', 'Distribuidor', 'Vendes productos de otras marcas'], ['servicios', 'Servicios', 'Asesoría, veterinaria, laboratorio…']];
+const VENTA = {
+  fabricante: [['distribuidores', 'Con distribuidores', 'Cada distribuidor vende en su zona; el comprador ve «¿Dónde comprar?»'], ['comerciales', 'Con mi equipo comercial', 'La solicitud llega al comercial de la zona del comprador'], ['sucursales', 'Con mis sucursales o filiales', 'Cada sucursal atiende sus países'], ['central', 'Directamente desde la central', 'Un único equipo atiende todo']],
+  distribuidor: [['marcas', 'Vendo varias marcas', 'Tus productos vienen de las marcas que distribuyes'], ['central', 'Desde la central', 'Un único equipo atiende todo']],
+  servicios: [['expertos', 'Con mi equipo de expertos', 'Cada experto con su perfil; «Consultar a un experto»'], ['central', 'Desde la central', 'Un único contacto']] };
+const RED = { distribuidores: 'Distribuidores', comerciales: 'Equipo comercial', sucursales: 'Sucursales', marcas: 'Marcas que vendes', expertos: 'Equipo de expertos', sucursal: 'Tu Sede' };
+const OBJ = M.objetivos;
+function nuevo() { return { paso: 'empresa', q: '', crm: null, crear: false, nueva: { nombre: '', razon: '', cif: '', pais: 'España', web: '' }, email: 'marta@dsm-firmenich.com', codigo: '', ok: false,
+  estatuto: 'independiente', actividad: 'fabricante', venta: 'distribuidores', esp: {}, espModo: {}, ramas: [], principal: null, merc: [], marca: '', objetivos: [], sobre: '', web: '', red: [], quieroDist: true, destino: '', botones: ['Solicitar información'], publicado: false }; }
+let S = nuevo();
+const UI = { desdeRev: false, rq: '', mq: '', oq: '', nuevaRed: '' };
+const chip = (t, on, act, cls) => '<button type="button" class="chip ' + (cls || '') + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '" data-act="' + esc(act) + '">' + (on && !(cls || '').includes('ex') ? '✓ ' : '') + esc(t) + '</button>';
+const toggle = (a, x) => { const i = a.indexOf(x); i > -1 ? a.splice(i, 1) : a.push(x); };
+function toast(t) { const d = document.createElement('div'); d.className = 'toast'; d.textContent = t; document.body.appendChild(d); setTimeout(() => d.remove(), 3400); }
+const nombreEmp = () => S.crm ? S.crm.nombre : (S.nueva.nombre || S.q || 'Tu empresa');
+const esSucursal = () => S.estatuto === 'sucursal';
+const modoRed = () => esSucursal() ? 'sucursal' : (S.venta === 'central' ? null : S.venta);
+function pasos() {
+  const p = [['empresa', 'Tu organización'], ['email', 'Confirmar email'], ['tipo', 'Tipo de empresa'], ['especies', 'Especies'], ['rama', 'Rama de negocio'], ['mercados', esSucursal() ? 'Países' : 'Mercados'], ['cabecera', 'Cabecera'], ['sobre', 'Sobre la empresa']];
+  if (modoRed()) p.push(['red', RED[modoRed()]]);
+  p.push(['contacto', 'Contacto'], ['revision', 'Revisar y publicar']);
+  return p;
+}
+// ---------- pasos ----------
+const V = {};
+V.empresa = () => {
+  const q = norm(S.q), dom = (S.email.split('@')[1] || '');
+  const hits = CRM.filter(c => (q.length > 1 && norm(c.nombre + ' ' + c.dom + ' ' + c.soc.join(' ')).indexOf(q) > -1) || (!q && c.dom === dom));
+  let h = '<div class="field"><span class="flabel">Nombre de tu organización <span class="hint">· o razón social, marca, CIF/VAT</span></span><input class="inp big" data-f="q" value="' + esc(S.q) + '" placeholder="Por ejemplo: DSM-Firmenich" autocomplete="organization"></div>';
+  if (S.crear) {
+    h += '<div class="note"><span><strong>«' + esc(S.nueva.nombre || S.q) + '» no está en Agroolink.</strong> Con el nombre basta para empezar; lo demás puedes completarlo ahora o más tarde. Entras directamente como su primera administradora; el equipo de Agroolink la revisa y la añade al CRM.</span></div>' +
+      '<div class="grid2"><label class="field"><span class="flabel">Nombre de la organización</span><input class="inp" data-n="nombre" value="' + esc(S.nueva.nombre || S.q) + '"></label><label class="field"><span class="flabel">Razón social</span><input class="inp" data-n="razon" value="' + esc(S.nueva.razon) + '"></label>' +
+      '<label class="field"><span class="flabel">CIF / VAT</span><input class="inp" data-n="cif" value="' + esc(S.nueva.cif) + '" placeholder="Para no duplicar empresas"></label><label class="field"><span class="flabel">Web</span><input class="inp" data-n="web" value="' + esc(S.nueva.web) + '"></label></div>' +
+      '<button type="button" class="link" data-act="volverbuscar" style="align-self:flex-start">‹ Volver a buscar</button>';
+    return h;
+  }
+  if (S.q.length > 1 || hits.length) h += '<p class="hint" style="margin:0">' + (hits.length ? 'Con «' + esc(S.q || dom) + '» y tu email @' + esc(dom) + ' hemos encontrado <strong>' + hits.length + '</strong> en el CRM. Elige la tuya; empezarás con sus datos.' : 'No hay coincidencias en el CRM.') + '</p>';
+  h += '<div class="list">' + hits.map(c => '<button type="button" class="mcard' + (S.crm && S.crm.id === c.id ? ' on' : '') + '" data-act="crm|' + c.id + '"><span class="logoE" style="background:' + c.color + '">' + c.ini + '</span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><strong style="font-size:15.5px">' + esc(c.nombre) + '</strong>' + (c.dom === dom ? '<span class="tg b">Coincide el dominio</span>' : '') + (c.estatuto === 'sucursal' ? '<span class="tg g">Sucursal de ' + esc(c.grupo) + '</span>' : '') + '</span><span class="hint">' + esc(c.sede) + (c.filiales ? ' · ' + c.filiales + ' filiales' : '') + '</span><span class="tags">' + Object.keys(c.esp).slice(0, 3).map(e => '<span class="tag">' + esc(e) + '</span>').join('') + '</span></span></button>').join('') + '</div>';
+  if (S.q.length > 1) h += '<button type="button" class="dash" data-act="crear">+ Ninguna es la mía: crear «' + esc(S.q) + '»<span class="hint" style="margin-left:auto;font-weight:400">Empiezas con una ficha en blanco</span></button>';
+  h += '<div class="note"><span>¿Hay dos empresas que son la misma o faltan datos? Avísanos y el equipo de Agroolink lo corrige en el CRM.</span></div>';
+  return h;
+};
+V.email = () => '<div class="note"><span>Te hemos enviado un código de 6 cifras a <strong>' + esc(S.email) + '</strong>. Confirma que el email es de ' + esc(nombreEmp()) + '.</span></div>' +
+  '<div class="code" role="group" aria-label="Código">' + [0, 1, 2, 3, 4, 5].map(i => '<input inputmode="numeric" maxlength="1" data-cd="' + i + '" value="' + esc(S.codigo[i] || '') + '" aria-label="Cifra ' + (i + 1) + '">').join('') + '</div>' +
+  '<span class="hint">¿No te llega? <button type="button" class="link" data-act="reenviar">Reenviar</button> · ¿Tu email no es de la empresa? Sube un poder de representación y lo verifica el superadmin.</span>' +
+  (S.ok ? '<div class="note"><span><strong>Verificado.</strong> ' + (S.crear ? 'Eres la primera administradora de ' + esc(nombreEmp()) + '. Avisamos al superadmin.' : esSucursal() || (S.crm && S.crm.estatuto === 'sucursal') ? 'Entras directamente en la sucursal. Avisamos a la Sede y al superadmin.' : 'Te unes a ' + esc(nombreEmp()) + '. Avisamos a sus administradores (copia al superadmin), que pueden quitarte el acceso.') + '</span></div>' : '');
+V.tipo = () => {
+  const est = S.crm ? '<div class="note"><span>Estatuto en el grupo del CRM: <strong>' + esc((ESTATUTOS.find(e => e[0] === S.estatuto) || [])[1]) + '</strong>. ¿No es correcto? <button type="button" class="link" data-act="aviso">Pedir cambio</button></span></div>' :
+    '<div class="field"><span class="flabel">Estatuto</span><div class="opts">' + ESTATUTOS.map(e => '<button type="button" class="opt' + (S.estatuto === e[0] ? ' on' : '') + '" data-act="estatuto|' + e[0] + '"><span class="rd"></span><span><strong>' + e[1] + '</strong><span class="d">' + e[2] + '</span></span></button>').join('') + '</div></div>';
+  if (esSucursal()) return est + '<div class="note"><span>Como sucursal, <strong>la marca, el catálogo y las especies vienen de la Sede</strong>. Tú completas tus países, tu equipo y tu contacto.</span></div>';
+  return est + '<div class="field"><span class="flabel">Actividad</span><div class="opts">' + ACTIVIDADES.map(a => '<button type="button" class="opt' + (S.actividad === a[0] ? ' on' : '') + '" data-act="actividad|' + a[0] + '"><span class="rd"></span><span><strong>' + a[1] + '</strong><span class="d">' + a[2] + '</span></span></button>').join('') + '</div></div>' +
+    '<div class="field"><span class="flabel">¿Cómo llega al comprador?</span><div class="opts">' + VENTA[S.actividad].filter(v => v[0] !== 'sucursales' || S.estatuto === 'sede').map(v => '<button type="button" class="opt' + (S.venta === v[0] ? ' on' : '') + '" data-act="venta|' + v[0] + '"><span class="rd"></span><span><strong>' + v[1] + '</strong><span class="d">' + v[2] + '</span></span></button>').join('') + '</div></div>';
+};
+V.especies = () => {
+  if (esSucursal()) return '<div class="note"><span>Heredado de la Sede: <strong>' + esc(Object.keys(S.esp).map(sp => S.esp[sp].length ? sp + ' · ' + S.esp[sp].join(', ') : sp).join(' · ') || 'todas') + '</strong>. Si tu país no trabaja alguna, pídelo a la Sede.</span></div>';
+  let h = '<div class="chips">' + M.especies.map(e => chip(e.label, !!S.esp[e.label], 'esp|' + e.label)).join('') + '</div>';
+  Object.keys(S.esp).forEach(sp => { const e = M.especies.find(x => x.label === sp); const modo = S.espModo[sp] || 'todas';
+    h += '<div class="card" style="display:flex;flex-direction:column;gap:8px"><strong>' + esc(sp) + '</strong><div class="chips">' + [['todas', 'Todas'], ['excluir', 'Excluir'], ['solo', 'Solo algunas']].map(m => chip(m[1], modo === m[0], 'espmodo|' + sp + '|' + m[0], 'sm soft')).join('') + '</div>' +
+      (modo !== 'todas' ? '<div class="chips">' + e.producciones.map(p => modo === 'excluir' ? chip(p.label, S.esp[sp].indexOf(p.label) > -1, 'prod|' + sp + '|' + p.label, 'sm ex') : chip(p.label, S.esp[sp].indexOf(p.label) > -1, 'prod|' + sp + '|' + p.label, 'sm')).join('') + '</div>' : '<span class="hint">Todas sus producciones.</span>') + '</div>'; });
+  return h + '<span class="hint">Es lo que hace que te encuentren quienes trabajan con esas especies.</span>';
+};
+V.rama = () => {
+  if (esSucursal()) return '<div class="note"><span>Heredado de la Sede: <strong>' + esc(S.ramas.join(', ') || '—') + '</strong>.</span></div>';
+  const q = norm(UI.rq), todas = []; M.ramas.ramas_negocio.forEach(r => { todas.push(r.label); (r.subramas || []).forEach(s => todas.push(r.label + ' › ' + s.label)); });
+  return '<div class="chips">' + S.ramas.map(r => '<button type="button" class="chip on" data-act="rama|' + esc(r) + '">' + esc(r) + (S.principal === r ? ' · principal' : '') + ' ×</button>').join('') + '</div>' +
+    (S.ramas.length > 1 ? '<div class="field"><span class="flabel">Rama principal</span><div class="chips">' + S.ramas.map(r => chip(r.split(' › ').pop(), S.principal === r, 'principal|' + r, 'sm soft')).join('') + '</div></div>' : '') +
+    '<input class="inp" data-q="rq" value="' + esc(UI.rq) + '" placeholder="Buscar en la lista del CRM: «aditivos», «laboratorio»…">' +
+    '<div class="chips">' + todas.filter(r => S.ramas.indexOf(r) < 0 && (!q || norm(r).indexOf(q) > -1)).slice(0, q ? 14 : 10).map(r => chip('+ ' + r, false, 'rama|' + r, 'sm')).join('') + '</div><span class="hint">Las mismas ramas que usa el CRM. Si falta la tuya, «Otro» y la revisa el superadmin.</span>';
+};
+V.mercados = () => {
+  const q = norm(UI.mq), opts = ['Todo el mundo'].concat(Object.keys(M.regiones)).concat(M.paises);
+  return '<div class="chips">' + S.merc.map(m => '<button type="button" class="chip on" data-act="merc|' + esc(m) + '">' + esc(m) + ' ×</button>').join('') + '</div>' +
+    '<input class="inp" data-q="mq" value="' + esc(UI.mq) + '" placeholder="Añadir país o región">' +
+    '<div class="chips">' + (q ? opts.filter(o => norm(o).indexOf(q) > -1 && S.merc.indexOf(o) < 0).slice(0, 12) : ['Todo el mundo', 'Europa', 'España', 'Portugal', 'Francia', 'Latinoamérica'].filter(o => S.merc.indexOf(o) < 0)).map(o => chip('+ ' + o, false, 'merc|' + o, 'sm')).join('') + '</div>' +
+    (esSucursal() ? '<span class="hint">Los países que atiende tu sucursal. La Sede ve el reparto.</span>' : '<span class="hint">Dónde vendes. Por producto puedes afinarlo más en el alta de cada uno.</span>');
+};
+V.cabecera = () => '<div class="field"><span class="flabel">Marca <span class="hint">· lo que ve el comprador</span></span><input class="inp" data-f="marca" value="' + esc(S.marca || nombreEmp()) + '"></div>' +
+  '<div class="field"><span class="flabel">Sociedades del CRM <span class="hint">· solo las edita el superadmin</span></span><div class="list">' + ((S.crm && S.crm.soc) || [S.nueva.razon || nombreEmp()]).map(s => '<div class="lrow"><span class="t"><strong>' + esc(s) + '</strong><span class="hint">Datos fiscales del CRM</span></span><span class="tg g">Solo lectura</span></div>').join('') + '</div><button type="button" class="link" data-act="aviso" style="align-self:flex-start">Pedir un cambio al superadmin</button></div>' +
+  '<div class="field"><span class="flabel">Objetivos y tendencias <span class="hint">· hasta 5 · ' + S.objetivos.length + ' de 5</span></span><div class="chips">' + OBJ.map(o => chip(o, S.objetivos.indexOf(o) > -1, 'obj|' + o, 'sm')).join('') + '</div></div>';
+V.sobre = () => '<div class="field"><span class="flabel">Sobre la empresa <span class="hint">· ' + S.sobre.length + ' / 600</span></span><textarea class="ta" rows="5" maxlength="600" data-f="sobre" placeholder="Qué hacéis, para quién y qué os diferencia">' + esc(S.sobre) + '</textarea></div>' +
+  '<div class="grid2"><label class="field"><span class="flabel">Web</span><input class="inp" data-f="web" value="' + esc(S.web || (S.crm ? 'https://' + S.crm.dom : '')) + '"></label><div class="field"><span class="flabel">Logo</span><button type="button" class="btn" data-act="logo">' + (S.logo ? '✓ logo.png' : 'Subir logo') + '</button></div></div>' +
+  '<div class="note"><span>La IA traduce este texto a inglés, portugués y francés; puedes revisarlo después.</span></div>';
+function redFilas() {
+  const m = modoRed();
+  const D = { distribuidores: [['NutriGan Distribuciones', 'España › Zona Centro', 'Activo'], ['AgroVet Ibérica', 'Aragón, Navarra, La Rioja', 'Activo'], ['PortuNutri Lda', 'Portugal', 'Invitado']],
+    comerciales: [['Laura García', 'Cataluña, Aragón, Navarra', 'Activo'], ['Pedro Lima', 'Portugal · perfil sin cuenta', 'Sin cuenta']],
+    sucursales: [['Big Dutchman Ibérica', 'España, Portugal · Lucía Pérez', 'Activo'], ['Big Dutchman LATAM', 'México, Colombia, Perú · Carlos Méndez', 'Activo']],
+    marcas: [['Zucami', '3 productos · 2 validados', 'Validada'], ['DSM-Firmenich', '3 productos', 'Por validar']],
+    expertos: [['Laura Gil', 'Veterinaria · porcino', 'Activo'], ['Jordi Puig', 'Nutrición · avicultura', 'Invitado']] };
+  return (D[m] || []).concat(S.red.map(n => [n, 'Invitación enviada', 'Invitado']));
+}
+V.red = () => {
+  const m = modoRed();
+  if (m === 'sucursal') return '<div class="lrow"><span class="logoE" style="background:#8A1020">AV</span><span class="t"><strong>Aviagen · Sede</strong><span class="hint">Marca, catálogo base y especies</span></span><span class="tg ok">Tu Sede</span></div>' +
+    '<div class="note"><span><strong>Decide la Sede:</strong> marca, catálogo base y especies. <strong>Decides tú:</strong> activar productos en tus países, tu versión local, tu equipo y a quién llegan las solicitudes. Lo que hables con la Sede queda en Mensajes.</span></div>';
+  const nota = { distribuidores: 'Asigna distribuidores por línea y zona en «Acuerdos de distribución». El comprador ve el distribuidor de su zona en «¿Dónde comprar?».', comerciales: 'Si un comercial no tiene cuenta, crea su perfil: le llegan las solicitudes por email y se da de alta para verlas. El comprador nunca ve su teléfono ni su email.', sucursales: 'Cada sucursal entra directamente; avisamos a la Sede y al superadmin.', marcas: 'Cada marca valida tus productos antes de publicarlos.', expertos: 'Cada experto tiene su perfil y sus servicios; el comprador usa «Consultar a un experto».' }[m];
+  const icono = { Activo: 'ok', Validada: 'ok', Invitado: 'b', 'Sin cuenta': 'w', 'Por validar': 'w' };
+  return '<div class="list">' + redFilas().map(r => '<div class="lrow"><span class="av" style="background:var(--accent)">' + esc(r[0].split(' ').map(w => w[0]).join('').slice(0, 2)) + '</span><span class="t"><strong>' + esc(r[0]) + '</strong><span class="hint">' + esc(r[1]) + '</span></span><span class="tg ' + (icono[r[2]] || 'g') + '">' + esc(r[2]) + '</span></div>').join('') + '</div>' +
+    '<div style="display:flex;gap:8px;flex-wrap:wrap"><input class="inp" style="flex:1;min-width:200px" data-q="nuevaRed" value="' + esc(UI.nuevaRed) + '" placeholder="' + ({ distribuidores: 'Nombre o email del distribuidor', comerciales: 'Nombre o email del comercial', sucursales: 'Nombre de la sucursal', marcas: 'Marca que vendes', expertos: 'Nombre o email del experto' }[m]) + '"><button type="button" class="btn" data-act="invitar">' + (m === 'marcas' ? '+ Añadir marca' : '+ Invitar') + '</button>' + (m === 'comerciales' ? '<button type="button" class="btn" data-act="sincuenta">+ Perfil sin cuenta</button>' : '') + '</div>' +
+    (m === 'distribuidores' ? '<label class="sw"><input type="checkbox" data-sw="quieroDist"' + (S.quieroDist ? ' checked' : '') + '> Mostrar «Quiero ser distribuidor» en la ficha</label>' : '') +
+    '<div class="note"><span>' + esc(nota) + '</span></div>';
+};
+V.contacto = () => {
+  const ops = { distribuidores: 'Al distribuidor de la zona del comprador', comerciales: 'Al comercial de la zona del comprador', sucursales: 'A la sucursal del país del comprador', marcas: 'A la delegación más cercana', expertos: 'Al experto que elija el comprador', sucursal: 'A tu equipo en la sucursal' }[modoRed()] || 'A la central';
+  if (!S.destino) S.destino = ops;
+  return '<div class="field"><span class="flabel">Las solicitudes llegan</span><div class="opts">' + [ops, 'A la central'].filter((v, i, a) => a.indexOf(v) === i).map(o => '<button type="button" class="opt' + (S.destino === o ? ' on' : '') + '" data-act="destino|' + o + '"><span class="rd"></span><span><strong>' + esc(o) + '</strong></span></button>').join('') + '</div></div>' +
+    '<div class="field"><span class="flabel">Botones en tu ficha</span><div class="chips">' + ['Solicitar información', 'Pedir presupuesto', 'Pedir muestra', 'Solicitar visita'].map(b => chip(b, S.botones.indexOf(b) > -1, 'boton|' + b, 'sm')).join('') + '</div></div>' +
+    '<div class="note"><span><strong>El comprador no ve teléfonos ni emails.</strong> Cada solicitud abre una conversación en Mensajes y queda registrada.</span></div>';
+};
+const filaR = (k, v, p) => '<div class="sumrow"><span class="k">' + k + '</span><span class="v">' + v + '</span><button type="button" class="link" data-act="desderev|' + p + '">Editar</button></div>';
+V.revision = () => {
+  if (S.publicado) return '<div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:18px 0"><span class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><strong style="font-size:20px">Ficha de ' + esc(S.marca || nombreEmp()) + ' publicada</strong><span class="hint" style="font-size:14px">Ya te encuentran quienes trabajan con tus especies en tus mercados.</span></div>' +
+    '<div class="list"><div class="lrow"><span class="t"><strong>' + (S.actividad === 'servicios' ? 'Añade tus servicios' : 'Añade tus productos') + '</strong><span class="hint">Con el asistente, como en Proyectos</span></span><button type="button" class="btnp">Empezar</button></div>' + (modoRed() && modoRed() !== 'sucursal' ? '<div class="lrow"><span class="t"><strong>' + esc(RED[modoRed()]) + '</strong><span class="hint">Invita al resto cuando quieras</span></span><button type="button" class="btn">Abrir</button></div>' : '') + '<div class="lrow"><span class="t"><strong>Mensajes</strong><span class="hint">Las solicitudes llegan aquí</span></span><button type="button" class="btn">Abrir</button></div></div>';
+  const esp = Object.keys(S.esp).map(sp => S.esp[sp].length ? sp + ((S.espModo[sp] || '') === 'excluir' ? ' sin ' : ' · ') + S.esp[sp].join(', ') : sp).join(' · ');
+  return '<div class="note"><span>Revisa y publica. Podrás cambiar cualquier apartado desde tu panel de empresa.</span></div><div>' +
+    filaR('Organización', '<strong>' + esc(nombreEmp()) + '</strong>' + (S.crear ? ' <span class="tg w">Nueva · la revisa Agroolink</span>' : ' <span class="tg ok">Del CRM</span>'), 'empresa') +
+    filaR('Tipo', esc([(ESTATUTOS.find(e => e[0] === S.estatuto) || [])[1], esSucursal() ? '' : (ACTIVIDADES.find(a => a[0] === S.actividad) || [])[1], esSucursal() ? '' : ((VENTA[S.actividad].find(v => v[0] === S.venta) || [])[1] || '')].filter(Boolean).join(' · ')), 'tipo') +
+    filaR('Especies', esc(esp || '—'), 'especies') + filaR('Rama de negocio', esc(S.ramas.join(', ') || '—'), 'rama') + filaR(esSucursal() ? 'Países' : 'Mercados', esc(S.merc.join(', ') || '—'), 'mercados') +
+    filaR('Cabecera', esc((S.marca || nombreEmp()) + (S.objetivos.length ? ' · ' + S.objetivos.join(', ') : '')), 'cabecera') + filaR('Sobre la empresa', esc(S.sobre ? S.sobre.slice(0, 90) + (S.sobre.length > 90 ? '…' : '') : '—'), 'sobre') +
+    (modoRed() ? filaR(RED[modoRed()], esc(modoRed() === 'sucursal' ? 'Sede: Aviagen' : redFilas().length + ' en la red'), 'red') : '') + filaR('Contacto', esc(S.destino + ' · ' + S.botones.join(', ')), 'contacto') + '</div>';
+};
+// ---------- vista previa ----------
+function lado() {
+  const p = pasos().find(x => x[0] === S.paso) || pasos()[0];
+  const c = S.crm || { ini: (nombreEmp().replace(/[^A-Za-z]/g, '').slice(0, 2) || 'TE').toUpperCase(), color: '#1D4E89' };
+  document.getElementById('side').innerHTML = '<div class="card"><span class="eb">Así se verá tu empresa</span><div class="prev" style="margin-top:10px"><div style="display:flex;gap:10px;align-items:center"><span class="logoE" style="background:' + c.color + '">' + esc(c.ini) + '</span><span style="min-width:0"><strong style="font-size:16px">' + esc(S.marca || nombreEmp()) + '</strong><br><span class="hint">' + esc(esSucursal() ? 'Sucursal de ' + (S.crm && S.crm.grupo || 'la Sede') : (ACTIVIDADES.find(a => a[0] === S.actividad) || [])[1]) + (S.ok ? ' · verificada ✓' : '') + '</span></span></div>' +
+    (S.sobre ? '<span style="font-size:13px">' + esc(S.sobre.slice(0, 140)) + (S.sobre.length > 140 ? '…' : '') + '</span>' : '') +
+    '<div class="tags">' + Object.keys(S.esp).slice(0, 4).map(e => '<span class="tag">' + esc(e) + '</span>').join('') + S.objetivos.slice(0, 2).map(o => '<span class="tag" style="background:var(--surface2);color:var(--fg)">' + esc(o) + '</span>').join('') + '</div>' +
+    (S.merc.length ? '<span class="hint">Mercados: ' + esc(S.merc.slice(0, 3).join(', ')) + (S.merc.length > 3 ? '…' : '') + '</span>' : '') +
+    (S.botones.length ? '<span class="pcta">' + esc(S.botones[0]) + '</span>' : '') + (S.venta === 'distribuidores' && S.quieroDist ? '<span class="hint" style="text-align:center">Quiero ser distribuidor</span>' : '') + '</div></div>' +
+    '<div class="card"><strong style="font-size:15px">' + esc(p[1]) + '</strong><p class="hint" style="margin:6px 0 0;font-size:13px">' + esc(AYUDA[p[0]] || '') + '</p></div>';
+}
+const AYUDA = { empresa: 'Escribe el nombre y elige tu empresa entre las del CRM. Si no está, créala: basta con el nombre.', email: 'Un código a tu email de empresa. Así nadie se hace pasar por tu empresa.', tipo: 'Decide qué pasos verás: distribuidores, comerciales, sucursales, marcas o expertos.', especies: 'Todas, todas menos algunas o solo algunas producciones.', rama: 'La lista del CRM; la primera es la principal.', mercados: 'Inclusiones por país o región.', cabecera: 'Marca, sociedades (solo lectura) y hasta 5 objetivos.', sobre: 'Qué hacéis y para quién. Se traduce sola.', red: 'Quién vende o atiende en tu nombre.', contacto: 'A quién llega cada solicitud. Los contactos nunca se comparten.', revision: 'Revisa y publica.' };
+// ---------- render ----------
+function render() {
+  const P = pasos(), i = Math.max(0, P.findIndex(p => p[0] === S.paso)), p = P[i], fin = S.paso === 'revision';
+  document.getElementById('crumb').innerHTML = 'Alta de empresa › <strong>' + esc(nombreEmp()) + '</strong>';
+  const puede = S.paso === 'empresa' ? (S.crm || (S.crear && (S.nueva.nombre || S.q).trim())) : S.paso === 'email' ? S.ok : true;
+  document.getElementById('main').innerHTML =
+    '<div class="steps" style="--n:' + P.length + '">' + P.map((x, j) => '<span class="' + (j <= i ? 'on' : '') + '"></span>').join('') + '</div>' +
+    (UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión.</span></div>' : '') +
+    (S.publicado ? '' : '<div><span class="eb">Paso ' + (i + 1) + ' de ' + P.length + ' · ' + esc(p[1]) + '</span><h1>' + esc(TIT[p[0]] || p[1]) + '</h1></div>') + V[S.paso]() +
+    (S.publicado ? '' : '<div class="nav">' + (i > 0 && !UI.desdeRev ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
+      (fin ? '<button type="button" class="btnp" data-act="publicar">Publicar ficha</button>' : UI.desdeRev ? '<button type="button" class="btnp" data-act="ir|revision">Guardar y volver a la revisión</button>' :
+        '<button type="button" class="btnp" data-act="seguir"' + (puede ? '' : ' disabled') + '>' + (S.paso === 'empresa' && S.crear ? 'Crear y continuar' : S.paso === 'empresa' && S.crm ? 'Continuar con ' + esc(S.crm.nombre) : 'Continuar') + '</button>') + '</div>');
+  lado();
+}
+const TIT = { empresa: '¿Cuál es tu organización?', email: 'Confirma tu email de empresa', tipo: '¿Qué tipo de empresa es?', especies: '¿Con qué especies trabajáis?', rama: 'Rama de negocio', mercados: '¿Dónde vendéis?', cabecera: 'Cabecera de tu ficha', sobre: 'Sobre la empresa', red: '', contacto: '¿A quién llegan las solicitudes?', revision: 'Revisar y publicar' };
+function ir(p) { S.paso = p; if (p === 'revision') UI.desdeRev = false; render(); scrollTo({ top: 0 }); }
+function eligeCRM(c) { S.crm = c; S.crear = false; S.estatuto = c.estatuto; S.actividad = c.actividad; S.venta = c.venta; S.esp = JSON.parse(JSON.stringify(c.esp)); S.espModo = {}; Object.keys(c.esp).forEach(k => S.espModo[k] = c.esp[k].length ? 'solo' : 'todas');
+  S.ramas = c.ramas.slice(); S.principal = c.ramas[0]; S.merc = c.merc.slice(); S.marca = c.nombre; S.email = 'marta@' + c.dom; S.destino = ''; }
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-act]'); if (!b) return;
+  const [act, x, y] = b.getAttribute('data-act').split('|'), P = pasos(), i = P.findIndex(p => p[0] === S.paso);
+  switch (act) {
+    case 'ir': ir(x); return;
+    case 'seguir': if (S.paso === 'empresa' && S.crear) { S.nueva.nombre = S.nueva.nombre || S.q; S.marca = S.nueva.nombre; } ir(P[i + 1][0]); return;
+    case 'atras': ir(P[i - 1][0]); return;
+    case 'desderev': UI.desdeRev = true; ir(x); return;
+    case 'crm': eligeCRM(CRM.find(c => c.id === x)); break;
+    case 'crear': S.crear = true; S.crm = null; S.nueva.nombre = S.q; S.email = 'marta@' + (norm(S.q).replace(/[^a-z0-9]/g, '') || 'empresa') + '.com'; S.estatuto = 'independiente'; S.esp = {}; S.ramas = []; S.merc = []; break;
+    case 'volverbuscar': S.crear = false; break;
+    case 'reenviar': toast('Código reenviado.'); return;
+    case 'aviso': toast('Enviado al superadmin. Te avisamos cuando lo cambie.'); return;
+    case 'estatuto': S.estatuto = x; if (x !== 'sede' && S.venta === 'sucursales') S.venta = VENTA[S.actividad][0][0]; break;
+    case 'actividad': S.actividad = x; S.venta = VENTA[x][0][0]; break;
+    case 'venta': S.venta = x; S.destino = ''; break;
+    case 'esp': if (S.esp[x]) { delete S.esp[x]; delete S.espModo[x]; } else { S.esp[x] = []; S.espModo[x] = 'todas'; } break;
+    case 'espmodo': S.espModo[x] = y; S.esp[x] = []; break;
+    case 'prod': toggle(S.esp[x], y); break;
+    case 'rama': if (S.ramas.indexOf(x) > -1) { S.ramas = S.ramas.filter(r => r !== x); if (S.principal === x) S.principal = S.ramas[0] || null; } else { S.ramas.push(x); if (!S.principal) S.principal = x; } UI.rq = ''; break;
+    case 'principal': S.principal = x; break;
+    case 'merc': toggle(S.merc, x); UI.mq = ''; break;
+    case 'obj': if (S.objetivos.indexOf(x) > -1) toggle(S.objetivos, x); else if (S.objetivos.length < 5) S.objetivos.push(x); else { toast('Máximo 5: quita uno antes.'); return; } break;
+    case 'logo': S.logo = !S.logo; break;
+    case 'invitar': if (UI.nuevaRed.trim()) { S.red.push(UI.nuevaRed.trim()); toast(modoRed() === 'marcas' ? 'Marca añadida: valida tus productos.' : 'Invitación enviada.'); UI.nuevaRed = ''; } break;
+    case 'sincuenta': if (UI.nuevaRed.trim()) { S.red.push(UI.nuevaRed.trim() + ' (sin cuenta)'); toast('Perfil creado: le llegan las solicitudes por email.'); UI.nuevaRed = ''; } break;
+    case 'destino': S.destino = x; break;
+    case 'boton': toggle(S.botones, x); break;
+    case 'publicar': S.publicado = true; toast('Ficha publicada.'); break;
+    case 'salir': toast('Guardado. Puedes seguir desde tu panel de empresa.'); return;
+  }
+  render();
+});
+document.addEventListener('input', ev => {
+  const el = ev.target, d = el.dataset;
+  const refocus = sel => { const pos = el.selectionStart; render(); const n = document.querySelector(sel); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (e) {} } };
+  if (d.f === 'q') { S.q = el.value; if (S.crm && norm(S.crm.nombre).indexOf(norm(S.q)) < 0) S.crm = null; refocus('[data-f="q"]'); return; }
+  if (d.f) { S[d.f] = el.value; if (d.f === 'sobre') { const h = el.closest('.field').querySelector('.hint'); if (h) h.textContent = '· ' + el.value.length + ' / 600'; } lado(); return; }
+  if (d.n) { S.nueva[d.n] = el.value; lado(); return; }
+  if (d.q) { UI[d.q] = el.value; refocus('[data-q="' + d.q + '"]'); return; }
+  if (d.cd) { const a = S.codigo.split(''); while (a.length < 6) a.push(''); a[+d.cd] = el.value.slice(-1); S.codigo = a.join(''); const nx = document.querySelector('[data-cd="' + (+d.cd + 1) + '"]'); if (S.codigo.replace(/\s/g, '').length === 6 && !S.ok) { S.ok = true; render(); return; } if (nx && el.value) nx.focus(); }
+});
+document.addEventListener('change', ev => { const d = ev.target.dataset; if (d.sw) { S[d.sw] = ev.target.checked; lado(); } });
+if (/[?&]captura/.test(location.search)) { window.__t = code => eval(code); }
+render();
+})();
+</script>
+</body>
+</html>

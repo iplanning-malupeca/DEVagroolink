@@ -40,6 +40,7 @@ FILAS = [
  ('Alta de producto (prototipo crear-producto)', 'cap', [('MP1', 'Especies'), ('MP2', 'Categoría'), ('MP3', 'Mercados'), ('MP4', 'Identidad (idioma detectado)'), ('MP5', 'Datos técnicos'), ('MP6', 'Aplicación por especie'), ('MP7', 'Fotos, vídeos y documentos'), ('MP8', 'Certificaciones'), ('MP9', 'Revisión')]),
  ('Mis productos, edición y traducciones', 'cap', [('ME1', 'Mis productos'), ('ME2', 'Menú ⋯'), ('ME3', 'Editar por bloques'), ('ME4', 'Guardar y avisar'), ('ME5', 'Traducciones'), ('ME6', 'Ficha en inglés')]),
  ('Alta de servicios del experto (prototipo crear-servicio)', 'cap', [('MS1', 'Tipo de servicio'), ('MS2', 'Especies'), ('MS3', 'Dirigido a'), ('MS4', 'Dónde lo prestas'), ('MS5', 'Detalles'), ('MS6', 'Revisión'), ('MS7', 'Mis servicios')]),
+ ('Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal', 'cap', [('MA1', 'Tu organización (CRM)'), ('MA2', 'Confirmar email'), ('MA3', 'Tipo de empresa'), ('MA4', 'Especies'), ('MA5', 'Rama de negocio'), ('MA6', 'Mercados'), ('MA7', 'Cabecera'), ('MA8', 'Sobre la empresa'), ('MA9', 'Equipo comercial'), ('MA10', 'Contacto'), ('MA11', 'Revisar y publicar'), ('MA12', 'Publicada'), ('MA13', 'Crear organización nueva'), ('MA14', 'Sucursal: entra directa'), ('MA15', 'Sucursal: tu Sede')]),
  ('Proyectos (prototipo crear-proyecto)', 'cap', [('MJ1', 'Bienvenida'), ('MJ2', 'Una pregunta por pantalla'), ('MJ3', 'Resumen'), ('MJ4', 'Editar desde el resumen')])]
 for k in [k for k, b in B.items() if b.get('page') == 'movil2']: del B[k]
 c['order'] = [k for k in c['order'] if k in B]
@@ -59,6 +60,6 @@ for r, (tit, modo, items) in enumerate(FILAS):
         c['order'].append(key + '.dc.html'); hmax = max(hmax, h)
     y += hmax + 420
 c['notes']['m2dev'] = {'fill': 'orange', 'maxH': 320, 'page': 'movil2', 'size': 24, 'w': 1280, 'x': 4400, 'y': -300, 'text':
-  'PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nPendiente de pasar a móvil: alta de empresa (006–010), catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo.'}
+  'PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo.'}
 json.dump(c, open(CANVAS, 'w'), ensure_ascii=False, indent=1)
 print('ok', y, len([1 for b in B.values() if b.get('page') == 'movil2']))

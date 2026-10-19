@@ -1,0 +1,13 @@
+"""Construye el prototipo navegable del alta de empresa (006–010 en un solo asistente) (un solo archivo con el modelo y el logo)."""
+import json, os, shutil
+W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+R = '/Volumes/DEV/GIT/DEVagroolink/'
+m = json.load(open(W + '/data/producto.json'))
+sub = {k: m[k] for k in ('especies', 'objetivos', 'paises', 'regiones')}
+sub['ramas'] = json.load(open(R + 'docs/modelo-producto/ramas_y_cargos.json'))
+logo = open(R + 'design/assets/agroolink-logo.svg').read().strip().replace('<svg ', '<svg role="img" aria-label="Agroolink" ', 1)
+src = open(W + '/tools/alta-empresa.src.html').read().replace('/*LOGO*/', logo)
+out = src.replace('/*MODELO*/', json.dumps(sub, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
+open(W + '/out/alta-empresa.html', 'w').write(out)
+open(R + 'design/prototipos/alta-empresa.html', 'w').write(out); shutil.copy(W + '/tools/alta-empresa.src.html', R + 'design/prototipos/alta-empresa.src.html')
+print('ok', len(out))
