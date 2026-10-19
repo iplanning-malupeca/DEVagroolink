@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet usuario · Alertas</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box;min-width:0}
+.h2{margin:0;font-size:16px;font-weight:600}
+.hint{font-size:12px;color:#56615B}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13px}
+.av{width:36px;height:36px;border-radius:50%;background:#EEF6EE;color:#0E5A3A;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#EEF6EE;color:#0E5A3A}.wn{background:#FFF4E0;color:#7A4B00}.gr{background:#F1F3F6;color:#4A5560}.az{background:#EEF6EE;color:#0E5A3A}.er{background:#FDECEA;color:#A3271B}
+.chip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 13px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font-size:12.5px;white-space:nowrap;color:#17231D}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1.5px solid #0E5A3A;color:#0E5A3A;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.nota{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#F2F7F3;border:1px solid #E1ECE4;font-size:12.5px;color:#33424C}
+.pro{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#FFF8EC;border:1px solid #F3DFB8;font-size:12.5px;color:#33424C}
+.th{display:grid;gap:12px;padding:0 0 8px;font-size:11px;font-weight:600;letter-spacing:.04em;color:#56615B}
+.tr{display:grid;gap:12px;align-items:center;padding:11px 0;border-top:1px solid #EEF1EE;font-size:13px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 1000px; background: #F6F8F6; position: relative; overflow: hidden;">
+  <div style="display: flex; padding-top: 68px; height: 1000px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Siguiendo y alertas" sub="Alertas" alto="932" hint-size="256px,932px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 16px;"><div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1; min-width: 0;"><div style="font-size: 13px; color: #56615B;">Mi espacio › Siguiendo y alertas › Alertas</div><h1 style="margin: 2px 0 0; font-size: 28px; font-weight: 600;">Alertas</h1><p style="margin: 2px 0 0; font-size: 13.5px; color: #4A5650;">Te avisamos cuando aparece algo nuevo que encaja con lo que buscas.</p></div><span class="st ok" style="font-size: 12px;">4 de 5 · Gratis</span></div><div style="display: flex; gap: 16px; align-items: flex-start;"><section class="card" style="flex: 1; min-width: 0; padding-top: 14px;"><div class="th" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px;"><span>QUÉ BUSCAS</span><span>TE AVISAMOS DE</span><span>CADA CUÁNTO</span><span>ÚLTIMO AVISO</span><span>ACTIVA</span></div><div class="tr" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px;"><span><strong style="font-weight: 600;">Enzimas · Avicultura › Broilers</strong></span><span style="font-size: 12.5px;">Productos nuevos</span><span class="hint" style="font-size: 12.5px;">Al momento</span><span class="hint" style="font-size: 12.5px;">Hoy · 3 nuevos</span><span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></div><div class="tr" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px;"><span><strong style="font-weight: 600;">Bebederos · Avicultura</strong></span><span style="font-size: 12.5px;">Productos nuevos y proveedores en tu zona</span><span class="hint" style="font-size: 12.5px;">Semanal</span><span class="hint" style="font-size: 12.5px;">Lunes · 1 nuevo</span><span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></div><div class="tr" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px;"><span><strong style="font-weight: 600;">Coccidiosis · Broilers</strong></span><span style="font-size: 12.5px;">Productos y contenidos nuevos</span><span class="hint" style="font-size: 12.5px;">Diario</span><span class="hint" style="font-size: 12.5px;">Ayer · 2 nuevos</span><span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></div><div class="tr" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px;"><span><strong style="font-weight: 600;">Expertos en nutrición · Aragón</strong></span><span style="font-size: 12.5px;">Expertos nuevos</span><span class="hint" style="font-size: 12.5px;">Semanal</span><span class="hint" style="font-size: 12.5px;">Sin novedades</span><span style="width: 36px; height: 20px; border-radius: 999px; background: #C9D2CC; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></div><div class="tr" style="grid-template-columns: minmax(0,1.2fr) minmax(0,1.4fr) 84px 104px 40px; color: #8A948F;"><span>Te queda 1 alerta</span><span></span><span></span><span></span><span></span></div></section><aside class="card" style="width: 290px; flex: none; gap: 10px;"><h2 class="h2">Nueva alerta</h2><span class="hint">Parte de tu búsqueda: especie, categoría o enfermedad.</span><span style="display: flex; gap: 6px; flex-wrap: wrap;"><span class="chip on">Porcino › Cebo</span><span class="chip on">Acidificantes</span></span><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600;">Te avisamos de</span><span style="height: 38px; border: 1px solid #D5DED8; border-radius: 10px; padding: 0 12px; font-size: 13px; display: flex; align-items: center;">Productos nuevos ▾</span></span><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600;">Cada cuánto</span><span style="height: 38px; border: 1px solid #D5DED8; border-radius: 10px; padding: 0 12px; font-size: 13px; display: flex; align-items: center;">Semanal ▾</span></span><span style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">En Avisos <span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></span><span style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">También por email <span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block; flex: none;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF;"></span></span></span><a href="#" class="btnp">Crear alerta</a><span class="hint">4 de 5 alertas usadas en Gratis.</span></aside></div><div class="pro"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M6 11h12v10H6zM9 11V7a3 3 0 0 1 6 0v4"/></svg><span style="flex: 1;"><strong>Alertas de precio, stock y cambios de ficha</strong> de un producto concreto, y alertas sin límite: con Comprador Pro · 9,90 €/mes, próximamente.</span><a href="#" class="btn" style="height: 34px;">Avisarme cuando salga</a></div></main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1611,6 +1611,30 @@
    "x": 3680,
    "y": 2594,
    "title": "E9 · Plan y facturación de experta"
+  },
+  "MB_UsrSiguiendo.dc.html": {
+   "w": 390,
+   "h": 1080,
+   "page": "mb7",
+   "x": 7280,
+   "y": 0,
+   "title": "U11 · Siguiendo"
+  },
+  "MB_UsrAlertas.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb7",
+   "x": 7750,
+   "y": 0,
+   "title": "U12 · Alertas"
+  },
+  "MB_UsrAvisos.dc.html": {
+   "w": 390,
+   "h": 1110,
+   "page": "mb7",
+   "x": 8220,
+   "y": 0,
+   "title": "U13 · Avisos"
   }
  },
  "createdOnFiles": {
@@ -2087,7 +2111,10 @@
   "MB_ExpConsultasOrg.dc.html",
   "MB_ExpCandidaturas.dc.html",
   "MB_ExpEstadisticas.dc.html",
-  "MB_ExpPlan.dc.html"
+  "MB_ExpPlan.dc.html",
+  "MB_UsrSiguiendo.dc.html",
+  "MB_UsrAlertas.dc.html",
+  "MB_UsrAvisos.dc.html"
  ],
  "pages": [
   {

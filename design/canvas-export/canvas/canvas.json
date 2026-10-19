@@ -2058,6 +2058,30 @@
    "x": 10880,
    "y": 4930,
    "title": "E9 · Plan y facturación de experta: Gratis y Pro · 19,90 €"
+  },
+  "UsrSiguiendo.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 9520,
+   "y": 0,
+   "title": "U11 · Siguiendo: empresas y expertos que sigues y sus novedades"
+  },
+  "UsrAlertas.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 10880,
+   "y": 0,
+   "title": "U12 · Alertas: 5 en Gratis; precio, stock y ficha con Comprador Pro (próximamente)"
+  },
+  "UsrAvisos.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 12240,
+   "y": 0,
+   "title": "U13 · Avisos: la campana, todo lo que ha pasado y qué te avisamos por email"
   }
  },
  "createdOnFiles": {
@@ -2273,7 +2297,7 @@
   },
   "iu0": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 13520,
    "page": "intusuario",
    "text": "MI ESPACIO · Samuel (usuario)",
    "w": 240,
@@ -2894,7 +2918,10 @@
   "ExpConsultasOrg.dc.html",
   "ExpCandidaturas.dc.html",
   "ExpEstadisticas.dc.html",
-  "ExpPlan.dc.html"
+  "ExpPlan.dc.html",
+  "UsrSiguiendo.dc.html",
+  "UsrAlertas.dc.html",
+  "UsrAvisos.dc.html"
  ],
  "pages": [
   {
