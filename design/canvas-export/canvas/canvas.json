@@ -51,44 +51,44 @@
    "y": 2620
   },
   "BuscaAutocompletar.dc.html": {
-   "w": 1280,
    "h": 1120,
    "page": "busqueda",
+   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa",
+   "w": 1280,
    "x": 1360,
-   "y": 0,
-   "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa"
+   "y": 0
   },
   "BuscaCategoria.dc.html": {
-   "w": 1280,
    "h": 1630,
    "page": "busqueda",
+   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie",
+   "w": 1280,
    "x": 4080,
-   "y": 0,
-   "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie"
+   "y": 0
   },
   "BuscaEnfermedad.dc.html": {
-   "w": 1280,
    "h": 2060,
    "page": "busqueda",
+   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez",
+   "w": 1280,
    "x": 5440,
-   "y": 0,
-   "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez"
+   "y": 0
   },
   "BuscaEspecie.dc.html": {
-   "w": 1280,
    "h": 1630,
    "page": "busqueda",
+   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)",
+   "w": 1280,
    "x": 2720,
-   "y": 0,
-   "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)"
+   "y": 0
   },
   "BuscaFiltros.dc.html": {
-   "w": 1280,
    "h": 2200,
    "page": "busqueda",
+   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»",
+   "w": 1280,
    "x": 9520,
-   "y": 0,
-   "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»"
+   "y": 0
   },
   "BuscaHome.dc.html": {
    "h": 2010,
@@ -107,52 +107,68 @@
    "y": 0
   },
   "BuscaMovCategoria.dc.html": {
-   "w": 390,
    "h": 850,
    "page": "busmob",
+   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»",
+   "w": 390,
    "x": 940,
-   "y": 0,
-   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»"
+   "y": 0
   },
   "BuscaMovEspecie.dc.html": {
-   "w": 390,
    "h": 860,
    "page": "busmob",
+   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)",
+   "w": 390,
    "x": 470,
-   "y": 0,
-   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)"
+   "y": 0
+  },
+  "BuscaMovFicha.dc.html": {
+   "h": 1150,
+   "page": "busmob",
+   "title": "M6 · Móvil · Ficha de producto (S4): «Pedir precio» fijo abajo, el distribuidor de tu zona; sin precios ni contactos · t",
+   "w": 390,
+   "x": 2350,
+   "y": 0
   },
   "BuscaMovFiltros.dc.html": {
-   "w": 390,
    "h": 2380,
    "page": "busmob",
+   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»",
+   "w": 390,
    "x": 1410,
-   "y": 0,
-   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»"
+   "y": 0
   },
   "BuscaMovHome.dc.html": {
-   "w": 390,
    "h": 3820,
    "page": "homemob",
+   "title": "Móvil · Home sin sesión: logo y «Entrar»; «¿Qué necesita hoy?» con la pastilla",
+   "w": 390,
    "x": 0,
-   "y": 0,
-   "title": "Móvil · Home sin sesión: logo y «Entrar»; «¿Qué necesita hoy?» con la pastilla"
+   "y": 0
   },
   "BuscaMovHomeInicio.dc.html": {
-   "w": 390,
    "h": 850,
    "page": "homemob",
+   "title": "Móvil · Home · al tocar la pastilla: búsquedas recientes y los pasos Especie · Categoría · Enfermedad",
+   "w": 390,
    "x": 470,
-   "y": 0,
-   "title": "Móvil · Home · al tocar la pastilla: búsquedas recientes y los pasos Especie · Categoría · Enfermedad"
+   "y": 0
   },
   "BuscaMovResultados.dc.html": {
-   "w": 390,
    "h": 1370,
    "page": "busmob",
+   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan",
+   "w": 390,
    "x": 0,
-   "y": 0,
-   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan"
+   "y": 0
+  },
+  "BuscaMovSinResultados.dc.html": {
+   "h": 850,
+   "page": "busmob",
+   "title": "M5 · Móvil · Sin resultados (B9): qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto",
+   "w": 390,
+   "x": 1880,
+   "y": 0
   },
   "BuscaResultados.dc.html": {
    "h": 1120,
@@ -163,28 +179,28 @@
    "y": 0
   },
   "BuscaSinResultados.dc.html": {
-   "w": 1280,
    "h": 860,
    "page": "busqueda",
+   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto",
+   "w": 1280,
    "x": 10880,
-   "y": 0,
-   "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto"
+   "y": 0
   },
   "BuscaTecnicos.dc.html": {
-   "w": 1280,
    "h": 860,
    "page": "busqueda",
+   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)",
+   "w": 1280,
    "x": 8160,
-   "y": 0,
-   "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)"
+   "y": 0
   },
   "BuscaVarios.dc.html": {
-   "w": 1280,
    "h": 860,
    "page": "busqueda",
+   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta",
+   "w": 1280,
    "x": 6800,
-   "y": 0,
-   "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta"
+   "y": 0
   },
   "Checkout.dc.html": {
    "h": 900,
@@ -380,43 +396,43 @@
   },
   "CompNueva1.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C0a · Nueva comparación · escribir unas letras",
    "w": 1280,
    "x": 1360,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "CompNueva2.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C0b · Nueva comparación · añadir del mismo tipo",
    "w": 1280,
    "x": 2720,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "CompOtroTipo.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C2 · Añadir un producto de otro tipo",
    "w": 1280,
    "x": 5440,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "CompSolicitar.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
    "x": 6800,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "CompSumario.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C0 · Mis comparaciones · sumario (copia de U4)",
    "w": 1280,
    "x": 0,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "CompTamanos.dc.html": {
    "h": 1000,
@@ -428,11 +444,11 @@
   },
   "CompVista.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "C1 · Comparativa del mismo tipo (enzimas)",
    "w": 1280,
    "x": 4080,
-   "y": 1300,
-   "page": "tableros"
+   "y": 1300
   },
   "ConEmpresa.dc.html": {
    "h": 1060,
@@ -932,547 +948,547 @@
   },
   "Fig01.dc.html": {
    "h": 66,
+   "page": "figma",
    "title": "F01 · Header · usuario logueado",
    "w": 922,
    "x": 0,
-   "y": 0,
-   "page": "figma"
+   "y": 0
   },
   "Fig02.dc.html": {
    "h": 66,
+   "page": "figma",
    "title": "F02 · Header · con selector de región",
    "w": 1218,
    "x": 1042,
-   "y": 0,
-   "page": "figma"
+   "y": 0
   },
   "Fig03.dc.html": {
    "h": 3389,
+   "page": "figma",
    "title": "F03 · Home logueado «Hola Samuel»",
    "w": 1292,
    "x": 2380,
-   "y": 0,
-   "page": "figma"
+   "y": 0
   },
   "Fig04.dc.html": {
    "h": 999,
+   "page": "figma",
    "title": "F04 · Mega-menú de categorías",
    "w": 1292,
    "x": 3792,
-   "y": 0,
-   "page": "figma"
+   "y": 0
   },
   "Fig05.dc.html": {
    "h": 3634,
+   "page": "figma",
    "title": "F05 · Home logueado · variante",
    "w": 1292,
    "x": 5204,
-   "y": 0,
-   "page": "figma"
+   "y": 0
   },
   "Fig06.dc.html": {
    "h": 2381,
+   "page": "figma",
    "title": "F06 · Categoría · Aves › Broilers › Nutrición",
    "w": 1352,
    "x": 0,
-   "y": 4134,
-   "page": "figma"
+   "y": 4134
   },
   "Fig07.dc.html": {
    "h": 2381,
+   "page": "figma",
    "title": "F07 · Categoría · variante",
    "w": 1284,
    "x": 1472,
-   "y": 4134,
-   "page": "figma"
+   "y": 4134
   },
   "Fig08.dc.html": {
    "h": 2035,
+   "page": "figma",
    "title": "F08 · Resultados «micotoxinas porcino»",
    "w": 1284,
    "x": 2876,
-   "y": 4134,
-   "page": "figma"
+   "y": 4134
   },
   "Fig09.dc.html": {
    "h": 2072,
+   "page": "figma",
    "title": "F09 · Resultados · variante",
    "w": 1284,
    "x": 4280,
-   "y": 4134,
-   "page": "figma"
+   "y": 4134
   },
   "Fig10.dc.html": {
    "h": 1830,
+   "page": "figma",
    "title": "F10 · Página de especie · Aves",
    "w": 1284,
    "x": 5684,
-   "y": 4134,
-   "page": "figma"
+   "y": 4134
   },
   "Fig11.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F11 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 1400,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig12.dc.html": {
    "h": 810,
+   "page": "figma",
    "title": "F12 · Contactar con la empresa",
    "w": 1184,
    "x": 2806,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig13.dc.html": {
    "h": 1610,
+   "page": "figma",
    "title": "F13 · Directorio de expertos",
    "w": 1280,
    "x": 0,
-   "y": 10502,
-   "page": "figma"
+   "y": 10502
   },
   "Fig14.dc.html": {
    "h": 2799,
+   "page": "figma",
    "title": "F14 · Perfil · Dr. Carlos Martínez",
    "w": 1280,
    "x": 1400,
-   "y": 10502,
-   "page": "figma"
+   "y": 10502
   },
   "Fig15.dc.html": {
    "h": 1502,
+   "page": "figma",
    "title": "F15 · Perfil experto · variante",
    "w": 1280,
    "x": 2800,
-   "y": 10502,
-   "page": "figma"
+   "y": 10502
   },
   "Fig16.dc.html": {
    "h": 1609,
+   "page": "figma",
    "title": "F16 · Perfil experto · variante",
    "w": 1280,
    "x": 4200,
-   "y": 10502,
-   "page": "figma"
+   "y": 10502
   },
   "Fig17.dc.html": {
    "h": 1281,
+   "page": "figma",
    "title": "F17 · Modal · menú de categorías",
    "w": 1288,
    "x": 8238,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig18.dc.html": {
    "h": 1281,
+   "page": "figma",
    "title": "F18 · Modal · menú de categorías (variante)",
    "w": 1288,
    "x": 9646,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig19.dc.html": {
    "h": 1421,
+   "page": "figma",
    "title": "F19 · Ficha de producto OptiFeed",
    "w": 1280,
    "x": 0,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig20.dc.html": {
    "h": 1027,
+   "page": "figma",
    "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 0,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig21.dc.html": {
    "h": 913,
+   "page": "figma",
    "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1223,
    "x": 1406,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig22.dc.html": {
    "h": 798,
+   "page": "figma",
    "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1141,
    "x": 2749,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig23.dc.html": {
    "h": 928,
+   "page": "figma",
    "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1200,
    "x": 4010,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig24.dc.html": {
    "h": 1026,
+   "page": "figma",
    "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 5330,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig25.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F25 · Login",
    "w": 1228,
    "x": 0,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig26.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F26 · Login · código",
    "w": 1280,
    "x": 1348,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig27.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F27 · Login · paso",
    "w": 1280,
    "x": 2748,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig28.dc.html": {
    "h": 1392,
+   "page": "figma",
    "title": "F28 · Producto Zucami Aviary Pro",
    "w": 1280,
    "x": 15358,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig29.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F29 · Guardar en tablero",
    "w": 1280,
    "x": 16758,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig30.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1280,
    "x": 6736,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig31.dc.html": {
    "h": 1025,
+   "page": "figma",
    "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 8136,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig32.dc.html": {
    "h": 1025,
+   "page": "figma",
    "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 9538,
-   "y": 8975,
-   "page": "figma"
+   "y": 8975
   },
   "Fig33.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F33 · Login · paso",
    "w": 1280,
    "x": 4148,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig34.dc.html": {
    "h": 1004,
+   "page": "figma",
    "title": "F34 · Cuenta creada",
    "w": 1289,
    "x": 5548,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig35.dc.html": {
    "h": 833,
+   "page": "figma",
    "title": "F35 · Login · paso",
    "w": 1161,
    "x": 6957,
-   "y": 13801,
-   "page": "figma"
+   "y": 13801
   },
   "Fig36.dc.html": {
    "h": 1460,
+   "page": "figma",
    "title": "F36 · Producto en catálogo de AgroNova",
    "w": 1280,
    "x": 18158,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig37.dc.html": {
    "h": 1306,
+   "page": "figma",
    "title": "F37 · Listado de empresas / expertos / eventos",
    "w": 1280,
    "x": 0,
-   "y": 15582,
-   "page": "figma"
+   "y": 15582
   },
   "Fig38.dc.html": {
    "h": 1352,
+   "page": "figma",
    "title": "F38 · Listado · variante",
    "w": 1280,
    "x": 1400,
-   "y": 15582,
-   "page": "figma"
+   "y": 15582
   },
   "Fig39.dc.html": {
    "h": 1174,
+   "page": "figma",
    "title": "F39 · Evento · AviForum",
    "w": 1280,
    "x": 2800,
-   "y": 15582,
-   "page": "figma"
+   "y": 15582
   },
   "Fig40.dc.html": {
    "h": 3464,
+   "page": "figma",
    "title": "F40 · Ficha empresa AgroNova",
    "w": 1280,
    "x": 0,
-   "y": 17434,
-   "page": "figma"
+   "y": 17434
   },
   "Fig41.dc.html": {
    "h": 804,
+   "page": "figma",
    "title": "F41 · AgroNova · sección",
    "w": 1280,
    "x": 1400,
-   "y": 17434,
-   "page": "figma"
+   "y": 17434
   },
   "Fig42.dc.html": {
    "h": 1082,
+   "page": "figma",
    "title": "F42 · AgroNova · sección",
    "w": 1280,
    "x": 2800,
-   "y": 17434,
-   "page": "figma"
+   "y": 17434
   },
   "Fig43.dc.html": {
    "h": 1218,
+   "page": "figma",
    "title": "F43 · AgroNova · sección",
    "w": 1280,
    "x": 4200,
-   "y": 17434,
-   "page": "figma"
+   "y": 17434
   },
   "Fig44.dc.html": {
    "h": 1134,
+   "page": "figma",
    "title": "F44 · AgroNova · sección",
    "w": 1280,
    "x": 5600,
-   "y": 17434,
-   "page": "figma"
+   "y": 17434
   },
   "Fig45.dc.html": {
    "h": 1460,
+   "page": "figma",
    "title": "F45 · Producto en catálogo de AgroNova · variante",
    "w": 1280,
    "x": 19558,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig46.dc.html": {
    "h": 4365,
+   "page": "figma",
    "title": "F46 · Ficha empresa DSM",
    "w": 1280,
    "x": 0,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig47.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F47 · Modal · guardar en tablero",
    "w": 1286,
    "x": 4110,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig48.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F48 · Modal · guardado en tablero",
    "w": 1286,
    "x": 5516,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig49.dc.html": {
    "h": 1014,
+   "page": "figma",
    "title": "F49 · DSM · sección",
    "w": 1280,
    "x": 1400,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig50.dc.html": {
    "h": 1243,
+   "page": "figma",
    "title": "F50 · DSM · sección",
    "w": 1280,
    "x": 2800,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig51.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F51 · Modal · descargar vademécum",
    "w": 1286,
    "x": 6922,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig52.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F52 · Modal · visitar la web",
    "w": 1286,
    "x": 8328,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig53.dc.html": {
    "h": 1676,
+   "page": "figma",
    "title": "F53 · DSM · sección",
    "w": 1280,
    "x": 4200,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig54.dc.html": {
    "h": 2075,
+   "page": "figma",
    "title": "F54 · DSM · sección",
    "w": 1280,
    "x": 5600,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig55.dc.html": {
    "h": 1924,
+   "page": "figma",
    "title": "F55 · DSM · sección",
    "w": 1280,
    "x": 7000,
-   "y": 21398,
-   "page": "figma"
+   "y": 21398
   },
   "Fig56.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F56 · Modal · únete como distribuidor",
    "w": 1286,
    "x": 9734,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig57.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F57 · Modal · solicitar información",
    "w": 1286,
    "x": 11140,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig58.dc.html": {
    "h": 1744,
+   "page": "figma",
    "title": "F58 · Ficha empresa Zucami",
    "w": 1280,
    "x": 0,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig59.dc.html": {
    "h": 1555,
+   "page": "figma",
    "title": "F59 · Zucami · sección",
    "w": 1280,
    "x": 1400,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig60.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F60 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 12546,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig61.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F61 · Encontrar mi comercial",
    "w": 1280,
    "x": 9800,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig62.dc.html": {
    "h": 1030,
+   "page": "figma",
    "title": "F62 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 13952,
-   "y": 7015,
-   "page": "figma"
+   "y": 7015
   },
   "Fig63.dc.html": {
    "h": 1024,
+   "page": "figma",
    "title": "F63 · Contactar con Laura García",
    "w": 1280,
    "x": 11200,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig64.dc.html": {
    "h": 1461,
+   "page": "figma",
    "title": "F64 · Zucami · catálogo",
    "w": 1280,
    "x": 2800,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig65.dc.html": {
    "h": 1744,
+   "page": "figma",
    "title": "F65 · Zucami · catálogo",
    "w": 1280,
    "x": 4200,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig66.dc.html": {
    "h": 1461,
+   "page": "figma",
    "title": "F66 · Zucami · catálogo",
    "w": 1280,
    "x": 5600,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig67.dc.html": {
    "h": 1848,
+   "page": "figma",
    "title": "F67 · Zucami · catálogo",
    "w": 1280,
    "x": 7000,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "Fig68.dc.html": {
    "h": 1997,
+   "page": "figma",
    "title": "F68 · Zucami LATAM",
    "w": 1280,
    "x": 8400,
-   "y": 26263,
-   "page": "figma"
+   "y": 26263
   },
   "IntHeader.dc.html": {
    "h": 68,
@@ -1612,11 +1628,11 @@
   },
   "MobBuscar.dc.html": {
    "h": 844,
+   "page": "movil",
    "title": "M4 · Búsqueda",
    "w": 390,
    "x": 1590,
-   "y": 0,
-   "page": "movil"
+   "y": 0
   },
   "MobCambioEmpresa.dc.html": {
    "h": 844,
@@ -1628,35 +1644,35 @@
   },
   "MobCategoria.dc.html": {
    "h": 1030,
+   "page": "movil",
    "title": "M9 · Categoría → tipo de producto",
    "w": 390,
    "x": 2120,
-   "y": 2510,
-   "page": "movil"
+   "y": 2510
   },
   "MobEspecie.dc.html": {
    "h": 900,
+   "page": "movil",
    "title": "M6 · Especie → producción (opcional)",
    "w": 390,
    "x": 530,
-   "y": 2510,
-   "page": "movil"
+   "y": 2510
   },
   "MobExplorarCategorias.dc.html": {
    "h": 940,
+   "page": "movil",
    "title": "M8 · Explorar · por categoría",
    "w": 390,
    "x": 1590,
-   "y": 2510,
-   "page": "movil"
+   "y": 2510
   },
   "MobExplorarEspecies.dc.html": {
    "h": 844,
+   "page": "movil",
    "title": "M5 · Explorar · por especie",
    "w": 390,
    "x": 0,
-   "y": 2510,
-   "page": "movil"
+   "y": 2510
   },
   "MobHeaderConEmpresa.dc.html": {
    "h": 844,
@@ -1734,35 +1750,35 @@
   },
   "MobHome.dc.html": {
    "h": 2010,
+   "page": "movil",
    "title": "M1 · Home con sesión",
    "w": 390,
    "x": 0,
-   "y": 0,
-   "page": "movil"
+   "y": 0
   },
   "MobHomeVisitante.dc.html": {
    "h": 1500,
+   "page": "movil",
    "title": "M2 · Home sin sesión",
    "w": 390,
    "x": 530,
-   "y": 0,
-   "page": "movil"
+   "y": 0
   },
   "MobIntereses.dc.html": {
    "h": 1700,
+   "page": "movil",
    "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
    "w": 390,
    "x": 2120,
-   "y": 0,
-   "page": "movil"
+   "y": 0
   },
   "MobResultados.dc.html": {
    "h": 920,
+   "page": "movil",
    "title": "M7 · Resultados · categoría en chips",
    "w": 390,
    "x": 1060,
-   "y": 2510,
-   "page": "movil"
+   "y": 2510
   },
   "MobSelectorEspacios.dc.html": {
    "h": 844,
@@ -1774,11 +1790,11 @@
   },
   "MobTabBar.dc.html": {
    "h": 84,
+   "page": "movil",
    "title": "MobTabBar · componente: Explorar · Proyectos · Tableros · Tú (como 000_Header)",
    "w": 390,
    "x": 0,
-   "y": 4040,
-   "page": "movil"
+   "y": 4040
   },
   "MsgComInterno.dc.html": {
    "h": 940,
@@ -2967,35 +2983,35 @@
   },
   "TabCompartir.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "T4 · Compartir tablero (permisos y plan)",
    "w": 1280,
    "x": 4080,
-   "y": 0,
-   "page": "tableros"
+   "y": 0
   },
   "TabGuardar.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "T3 · Guardar en tablero desde una ficha",
    "w": 1280,
    "x": 2720,
-   "y": 0,
-   "page": "tableros"
+   "y": 0
   },
   "TabMis.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "T1 · Mis tableros (con Historial automático)",
    "w": 1280,
    "x": 0,
-   "y": 0,
-   "page": "tableros"
+   "y": 0
   },
   "TabVista.dc.html": {
    "h": 900,
+   "page": "tableros",
    "title": "T2 · Vista de un tablero con seguimiento por estado",
    "w": 1280,
    "x": 1360,
-   "y": 0,
-   "page": "tableros"
+   "y": 0
   },
   "UsrAyuda.dc.html": {
    "h": 900,
@@ -3124,22 +3140,6 @@
    "w": 1280,
    "x": 4080,
    "y": 0
-  },
-  "BuscaMovSinResultados.dc.html": {
-   "w": 390,
-   "h": 850,
-   "page": "busmob",
-   "x": 1880,
-   "y": 0,
-   "title": "M5 · Móvil · Sin resultados (B9): qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto"
-  },
-  "BuscaMovFicha.dc.html": {
-   "w": 390,
-   "h": 1150,
-   "page": "busmob",
-   "x": 2350,
-   "y": 0,
-   "title": "M6 · Móvil · Ficha de producto (S4): «Pedir precio» fijo abajo, el distribuidor de tu zona; sin precios ni contactos · tools/ficha_movil.py"
   },
   "MB_MP1.dc.html": {
    "w": 390,
@@ -3460,6 +3460,38 @@
    "x": 6580,
    "y": 0,
    "title": "Sucursal: tu Sede"
+  },
+  "MB_EmpTiraFabCom.dc.html": {
+   "w": 2970,
+   "h": 1044,
+   "page": "mb3",
+   "x": 0,
+   "y": 2290,
+   "title": "Crear perfil sin cuenta · email · alta del comercial · zona · bandeja · Mensajes"
+  },
+  "MB_EmpTiraFabSuc.dc.html": {
+   "w": 3400,
+   "h": 1404,
+   "page": "mb3",
+   "x": 0,
+   "y": 4034,
+   "title": "Tipo · red · aviso · países · permisos · contacto · página · Mensajes"
+  },
+  "MB_EmpTiraSucursal.dc.html": {
+   "w": 820,
+   "h": 1184,
+   "page": "mb3",
+   "x": 0,
+   "y": 6138,
+   "title": "Tipo de empresa heredado de la Sede · Mensajes con la Sede"
+  },
+  "MB_EmpTiraDistribuidor.dc.html": {
+   "w": 3830,
+   "h": 1244,
+   "page": "mb3",
+   "x": 0,
+   "y": 8022,
+   "title": "Tipo · marcas · añadir · subir · validación · contacto · delegaciones · Mensajes"
   },
   "MB_MJ1.dc.html": {
    "w": 390,
@@ -3908,6 +3940,14 @@
    "x": 2350,
    "y": 0,
    "title": "D0d · Altas de miembros (superadmin)"
+  },
+  "MB_EmpTiraFabDist.dc.html": {
+   "w": 2540,
+   "h": 1504,
+   "page": "mb8",
+   "x": 2820,
+   "y": 0,
+   "title": "Lo que faltaba: tipo, especies «Excluir», red, contacto, cabecera del superadmin y Mensajes"
   }
  },
  "createdOnFiles": {
@@ -4016,6 +4056,34 @@
    "maxW": 4000,
    "page": "planesbloq",
    "text": "Planes · qué se bloquea por login, límite o plan de pago",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "busDev": {
+   "fill": "orange",
+   "maxH": 300,
+   "page": "busqueda",
+   "size": 24,
+   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nPrimera búsqueda: siempre la pantalla «Nueva búsqueda» (I1; en móvil, la hoja por pasos M2). Modificar una búsqueda desde resultados: la barra con sus desplegables (B2–B5).\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
+   "w": 1280,
+   "x": 80,
+   "y": -529
+  },
+  "busT1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "busqueda",
+   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»",
+   "w": 240,
+   "x": 0,
+   "y": -640
+  },
+  "busT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "busmob",
+   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla",
    "w": 240,
    "x": 0,
    "y": -300
@@ -4131,92 +4199,92 @@
   "figT0": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Header y home",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "page": "figma"
+   "y": -300
   },
   "figT1": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Listados, búsqueda y especie",
    "w": 240,
    "x": 0,
-   "y": 3834,
-   "page": "figma"
+   "y": 3834
   },
   "figT2": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Producto y modales",
    "w": 240,
    "x": 0,
-   "y": 6715,
-   "page": "figma"
+   "y": 6715
   },
   "figT3": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Pantallas con el nombre antiguo (Farm4You)",
    "w": 240,
    "x": 0,
-   "y": 8675,
-   "page": "figma"
+   "y": 8675
   },
   "figT4": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Expertos",
    "w": 240,
    "x": 0,
-   "y": 10202,
-   "page": "figma"
+   "y": 10202
   },
   "figT5": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Login y menús",
    "w": 240,
    "x": 0,
-   "y": 13501,
-   "page": "figma"
+   "y": 13501
   },
   "figT6": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Listados y eventos",
    "w": 240,
    "x": 0,
-   "y": 15282,
-   "page": "figma"
+   "y": 15282
   },
   "figT7": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Empresa · AgroNova",
    "w": 240,
    "x": 0,
-   "y": 17134,
-   "page": "figma"
+   "y": 17134
   },
   "figT8": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Empresa · DSM",
    "w": 240,
    "x": 0,
-   "y": 21098,
-   "page": "figma"
+   "y": 21098
   },
   "figT9": {
    "kind": "title1",
    "maxW": 6000,
+   "page": "figma",
    "text": "Empresa · Zucami",
    "w": 240,
    "x": 0,
-   "y": 25963,
-   "page": "figma"
+   "y": 25963
   },
   "hdrmobt": {
    "kind": "title1",
@@ -4231,19 +4299,19 @@
    "kind": "title1",
    "maxW": 4000,
    "page": "home",
+   "text": "Home · la barra combinada es la primera búsqueda (prototipo: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21)",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Home · la barra combinada es la primera búsqueda (prototipo: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21)"
+   "y": -300
   },
   "homemobT": {
    "kind": "title1",
    "maxW": 2000,
    "page": "homemob",
+   "text": "Home móvil · la pastilla abre la búsqueda por pasos",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Home móvil · la pastilla abre la búsqueda por pasos"
+   "y": -300
   },
   "ie0": {
    "kind": "title1",
@@ -4303,29 +4371,29 @@
   "movT0": {
    "kind": "title1",
    "maxW": 2600,
+   "page": "movil",
    "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "page": "movil"
+   "y": -300
   },
   "movT1": {
    "kind": "title1",
    "maxW": 2600,
+   "page": "movil",
    "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
    "w": 240,
    "x": 0,
-   "y": 2210,
-   "page": "movil"
+   "y": 2210
   },
   "movT2": {
    "kind": "title1",
    "maxW": 2600,
+   "page": "movil",
    "text": "Componente · barra inferior (prop activo 1–5)",
    "w": 240,
    "x": 0,
-   "y": 3740,
-   "page": "movil"
+   "y": 3740
   },
   "msg_comerciales": {
    "kind": "title1",
@@ -4604,20 +4672,20 @@
   "tabT1": {
    "kind": "title1",
    "maxW": 5360,
+   "page": "tableros",
    "text": "Tableros · Samuel Esteban (Granja Los Olmos)",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "page": "tableros"
+   "y": -300
   },
   "tabT2": {
    "kind": "title1",
    "maxW": 4000,
+   "page": "tableros",
    "text": "Comparador · sumario de comparaciones y comparativa (solo productos del mismo tipo)",
    "w": 240,
    "x": 0,
-   "y": 1020,
-   "page": "tableros"
+   "y": 1020
   },
   "titulo": {
    "kind": "title1",
@@ -4627,34 +4695,6 @@
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "busT1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "busqueda",
-   "text": "Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»",
-   "w": 240,
-   "x": 0,
-   "y": -640
-  },
-  "busDev": {
-   "fill": "orange",
-   "maxH": 300,
-   "page": "busqueda",
-   "size": 24,
-   "text": "PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\nPrototipo: design/prototipos/buscar.html (repo DEVagroolink)\nVersión publicada: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21\nModelo: docs/modelo-producto/producto.json\n\nPrimera búsqueda: siempre la pantalla «Nueva búsqueda» (I1; en móvil, la hoja por pasos M2). Modificar una búsqueda desde resultados: la barra con sus desplegables (B2–B5).\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.",
-   "w": 1280,
-   "x": 80,
-   "y": -529
-  },
-  "busT2": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "busmob",
-   "w": 240,
-   "x": 0,
-   "y": -300,
-   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla"
   },
   "mbt0": {
    "kind": "title1",
@@ -4686,13 +4726,49 @@
   "mbt3": {
    "kind": "title1",
    "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 1990,
+   "text": "005a · Fabricante con comerciales (Zucami): lo propio de este caso · tools/empresa_config_movil.py"
+  },
+  "mbt4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 3734,
+   "text": "005b · Fabricante con sucursales (Big Dutchman): tipo, red, aviso, países, permisos, contacto, página de la sucursal y hilo con la Sede"
+  },
+  "mbt5": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 5838,
+   "text": "005c · Sucursal de un grupo (Aviagen Ibérica): además de MA14–MA15"
+  },
+  "mbt6": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 7722,
+   "text": "005d · Distribuidor multimarca (NewFarms): tipo, marcas, productos, validación, delegaciones y Mensajes"
+  },
+  "mbt7": {
+   "kind": "title1",
+   "maxW": 8000,
    "page": "mb4",
    "w": 240,
    "x": 0,
    "y": -300,
    "text": "001_MB_Proyectos · Proyectos del usuario: asistente (prototipo crear-proyecto) y gestión (mis proyectos, propuestas, editar, archivar) · tools/proyectos_movil.py"
   },
-  "mbt4": {
+  "mbt8": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb4",
@@ -4701,7 +4777,7 @@
    "y": 2260,
    "text": "001b_MB_Proyectos_Empresas · Proyectos para empresas y expertos: oportunidades, propuesta, Mensajes y bloqueo de contactos · tools/proyectos_movil.py y propuesta_movil.py"
   },
-  "mbt5": {
+  "mbt9": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb5",
@@ -4710,7 +4786,7 @@
    "y": -300,
    "text": "Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py"
   },
-  "mbt6": {
+  "mbt10": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb6",
@@ -4719,7 +4795,7 @@
    "y": -300,
    "text": "003_MB_Alta_usuario · Alta de usuario en móvil (versión de 003_LP_Alta_usuario): los diálogos pasan a pantalla completa · tools/alta_usuario_movil.py"
   },
-  "mbt7": {
+  "mbt11": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb6",
@@ -4728,7 +4804,7 @@
    "y": 1660,
    "text": "003a_MB_Alta_Experto · Alta de experto en móvil (versión de 003a_LP_Alta_Experto) · tools/alta_experto_movil.py"
   },
-  "mbt8": {
+  "mbt12": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb7",
@@ -4737,7 +4813,7 @@
    "y": -300,
    "text": "004_MB_Intranet · Usuario · Intranet de usuario en móvil (una tira por apartado) · el menú «Tú» es M4 (000_MB_Header) y Mis proyectos es 001_MB_Proyectos · tools/usuario_movil.py"
   },
-  "mbt9": {
+  "mbt13": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb7",
@@ -4746,7 +4822,7 @@
    "y": 2294,
    "text": "004a_MB_Intranet · Experto · Intranet de experta en móvil (lila) · Oportunidades es MB_ProyE2 (001b_MB) y Mis servicios es MB_MS7–MS10 (MB_05) · tools/experto_movil.py"
   },
-  "mbt10": {
+  "mbt14": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb7",
@@ -4755,7 +4831,7 @@
    "y": 4438,
    "text": "004b_MB_Intranet · Empresa · Intranet de empresa en móvil · Editar ficha de empresa (prototipo alta-empresa) · tools/captura_empresa_editar.js"
   },
-  "mbt11": {
+  "mbt15": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb8",
@@ -5208,6 +5284,10 @@
   "MB_MA13.dc.html",
   "MB_MA14.dc.html",
   "MB_MA15.dc.html",
+  "MB_EmpTiraFabCom.dc.html",
+  "MB_EmpTiraFabSuc.dc.html",
+  "MB_EmpTiraSucursal.dc.html",
+  "MB_EmpTiraDistribuidor.dc.html",
   "MB_MJ1.dc.html",
   "MB_MJ2.dc.html",
   "MB_MJ3.dc.html",
@@ -5263,7 +5343,8 @@
   "MB_FD_Expertos.dc.html",
   "MB_FD_Contenidos.dc.html",
   "MB_FD_AvisoEmpresa.dc.html",
-  "MB_FD_AvisoAdmin.dc.html"
+  "MB_FD_AvisoAdmin.dc.html",
+  "MB_EmpTiraFabDist.dc.html"
  ],
  "pages": [
   {
@@ -5324,19 +5405,19 @@
   },
   {
    "id": "comerciales",
-   "name": "007_Alta empresa · Fabricante con comerciales (Zucami)"
+   "name": "005a_LP_Alta empresa_Fab-Com"
   },
   {
    "id": "sucursales",
-   "name": "008_Alta empresa · Fabricante con sucursales (Big Dutchman)"
+   "name": "005b_LP_Alta empresa_Fab-Sucursales"
   },
   {
    "id": "sucursal",
-   "name": "009_Alta empresa · Sucursal de un grupo (Aviagen Ibérica)"
+   "name": "005c_LP_Alta empresa_Sucursal"
   },
   {
    "id": "distmulti",
-   "name": "010_Alta empresa · Distribuidor multimarca (NewFarms)"
+   "name": "005d_LP_Alta empresa_Distribuidor"
   },
   {
    "id": "productos",
@@ -5388,7 +5469,7 @@
   },
   {
    "id": "mb3",
-   "name": "MB_06 Alta de empresa"
+   "name": "005_MB_Alta empresa"
   },
   {
    "id": "mb4",
