@@ -40,7 +40,10 @@ ESC = [('S1', 'BuscaResultados', 'B1 · Resultados: botón «Filtros» con conta
 MOV = [('T1', 'BuscaMovResultados', 'M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan'),
        ('T2', 'BuscaMovEspecie', 'M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)'),
        ('T3', 'BuscaMovCategoria', 'M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»'),
-       ('T4', 'BuscaMovFiltros', 'M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»')]
+       ('T4', 'BuscaMovFiltros', 'M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»'),
+       ('T5', 'BuscaMovSinResultados', 'M5 · Móvil · Sin resultados (B9): qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto')]
+# pantallas móviles propias (no salen del prototipo)
+MOVPROPIAS = [('BuscaMovFicha', 'M6 · Móvil · Ficha de producto (S4): «Pedir precio» fijo abajo, el distribuidor de tu zona; sin precios ni contactos · tools/ficha_movil.py')]
 c = json.load(open(PR + 'canvas.json')); B = c['boards']
 viejos = [k for k, b in B.items() if b.get('page') == 'busqueda' and (k.startswith('Bus') or k.startswith('HeaderHd')) and k != 'BusIntranetBuscar.dc.html' and not k.startswith('Busca')]
 for k in viejos: del B[k]
@@ -58,6 +61,10 @@ y2 = 0; x = 0; h2 = 0
 for cap, key, t in MOV:
     html, w, h = dc(cap, 'Búsqueda · ' + t.split(' · ', 1)[1]); open(PR + key + '.dc.html', 'w').write(html)
     B[key + '.dc.html'] = {'w': w, 'h': h, 'page': 'busmob', 'x': x, 'y': y2, 'title': t}; x += w + 80; h2 = max(h2, h)
+    if key + '.dc.html' not in c['order']: c['order'].append(key + '.dc.html')
+for key, t in MOVPROPIAS:
+    h = int(re.search(r'"height":(\d+)', open(PR + key + '.dc.html').read()).group(1))
+    B[key + '.dc.html'] = {'w': 390, 'h': h, 'page': 'busmob', 'x': x, 'y': y2, 'title': t}; x += 470
     if key + '.dc.html' not in c['order']: c['order'].append(key + '.dc.html')
 y3 = hmax + 420
 # la home va en sus propias páginas (escritorio «000b_Home» y móvil «MB_000b_Home»), separada de la búsqueda

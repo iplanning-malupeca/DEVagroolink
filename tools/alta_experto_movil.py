@@ -81,7 +81,7 @@ def semana():
          '<div class="card" style="gap:2px"><div style="display:flex;align-items:center"><strong style="flex:1;font-size:15px">Consultas recibidas</strong><span class="hint">sin límite</span></div>' +
          item('GA', 'Ganadero · Huesca · Avicultura', 'Sobre «Auditoría nutricional de lotes de broilers» · «Tengo dos naves y el índice de conversión ha empeorado…» · hace 5 h', 'Responder', True) + '</div>'
          '<div class="card" style="gap:2px"><div style="display:flex;align-items:center"><strong style="flex:1;font-size:15px">Proyectos que encajan contigo</strong></div>' +
-         item(svg('M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6', 16), 'Plan de bioseguridad para granja de ponedoras', 'Lleida · cierra en 6 días · 2 propuestas', 'Presentar propuesta', False) + '</div>'
+         item(svg('M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6', 16), 'Plan de bioseguridad para granja de ponedoras', 'Lleida · cierra en 6 días · 2 propuestas', 'Ver proyecto', False) + '</div>'
          '<div class="card"><div style="display:flex;align-items:center"><strong style="flex:1;font-size:15px">Completa tu perfil</strong><span class="hint">3 de 5</span></div><div style="height:5px;border-radius:3px;background:#E3E8E4;overflow:hidden"><div style="width:60%;height:100%;background:' + LI + '"></div></div>'
          '<span style="font-size:13.5px">○ Añade una foto</span><span style="font-size:13.5px">○ Añade un caso de éxito</span></div>')
     return SB + hdr('Experta', LI) + '<div style="padding:14px 16px 110px;display:flex;flex-direction:column;gap:12px">' + h + '</div>' + tabbar('Tú', LI, avatar='LG')

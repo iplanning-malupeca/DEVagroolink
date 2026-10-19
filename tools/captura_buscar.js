@@ -25,6 +25,7 @@ if(!M){
   reset(); __F.esp={Porcino:['Lechones']}; __UI.capa='hoja'; __UI.paso='esp'; out.push(await snap('T2','Móvil buscar especie',true));
   reset(); __F.esp={Porcino:['Lechones']}; __UI.capa='hoja'; __UI.paso='cat'; __UI.foco={f1:'C06',f2:'C06-02'}; out.push(await snap('T3','Móvil buscar categoría',true));
   reset(); __F.esp={Porcino:[]}; __F.cat=['C06-02-01']; __F.tec={toxinas:['DON']}; __UI.capa='filtros'; __UI.foco={f1:'C06',f2:'C06-02'}; out.push(await snap('T4','Móvil filtros',true));
+  reset(); __F.esp={Bovino:['Vacuno de leche']}; __F.cat=['C08']; __F.enf=['Colibacilosis']; out.push(await snap('T5','Móvil sin resultados'));
 }
 reset(); __render();
 return out.join(' ');

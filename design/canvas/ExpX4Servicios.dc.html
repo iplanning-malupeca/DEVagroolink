@@ -14,11 +14,18 @@
 body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
 a{color:#4B3BA6;text-decoration:none;font-weight:500}a:hover{color:#35297D;text-decoration:underline}
 .lbl{font-size:13px;font-weight:500;display:flex;flex-direction:column;gap:6px;min-width:0}
-.inp{height:40px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 12px;font:400 13.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
 .chip{display:inline-flex;align-items:center;height:32px;padding:0 12px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font:500 12.5px 'Poppins',sans-serif;color:#17231D;cursor:pointer}
 .chip[aria-pressed="true"]{background:#4B3BA6;border-color:#4B3BA6;color:#FFFFFF}
 .bar{height:5px;border-radius:3px;background:#DCE3DE}
 .tag{font-size:11.5px;font-weight:500;background:#F1EEFB;color:#4B3BA6;border-radius:999px;padding:3px 10px}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.pill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:11.5px;white-space:nowrap;background:#F2F5F3;color:#17231D}
+.pill.on{background:#4B3BA6;color:#FFFFFF;font-weight:500}
+.rl{width:92px;flex:none;font-size:11.5px;color:#4A5650;font-weight:400}
+.cc{display:flex;align-items:center;gap:7px}
+.cc input{accent-color:#4B3BA6;margin:0}
+.zn{display:inline-flex;align-items:center;gap:5px;height:28px;padding:0 10px;border-radius:999px;background:#F1EEFB;color:#4B3BA6;border:1px solid #DCD5F5;font-size:12px;font-weight:500;white-space:nowrap}
 </style>
 </helmet>
 <div style="width: 1120px; height: 760px; background: #F6F8F6; display: flex; flex-direction: column;">
@@ -27,50 +34,57 @@ a{color:#4B3BA6;text-decoration:none;font-weight:500}a:hover{color:#35297D;text-
     <a href="#" style="font-size: 13.5px; color: #4A5650; font-weight: 400;">Terminar más tarde</a>
   </div>
 
-  <div style="flex: 1; display: flex; gap: 40px; justify-content: center; padding: 26px 40px 0;">
-    <form style="width: 540px; display: flex; flex-direction: column; gap: 14px;">
-      <div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="flex: 1; display: flex; gap: 32px; justify-content: center; padding: 18px 36px 0;">
+    <form style="width: 600px; display: flex; flex-direction: column; gap: 9px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
         <span style="font-size: 12.5px; color: #56615B; font-weight: 500;">Paso 2 de 3 · Servicios <span style="font-weight: 400;">(opcional)</span></span>
         <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px;"><span class="bar" style="background: #4B3BA6;"></span><span class="bar" style="background: #4B3BA6;"></span><span class="bar"></span></div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 2px;">
-        <h1 style="margin: 0; font-size: 22px; font-weight: 600;">¿Qué ofreces a las explotaciones?</h1>
-        <p style="margin: 0; font-size: 13px; color: #4A5650;">Un servicio concreto se encuentra y se contrata más fácil que un perfil genérico.</p>
+        <h1 style="margin: 0; font-size: 21px; font-weight: 600;">¿Qué ofreces a las explotaciones?</h1>
+        <p style="margin: 0; font-size: 12.5px; color: #4A5650;">Con especies, público y zonas, cada comprador ve los servicios que de verdad puede contratar.</p>
       </div>
-      <label class="lbl">Nombre del servicio<input class="inp" type="text" value="Auditoría nutricional de lotes de broilers"></label>
-      <div class="lbl">Modalidad
-        <div style="display: flex; gap: 8px;"><button type="button" class="chip" aria-pressed="true">Presencial en granja</button><button type="button" class="chip" aria-pressed="true">Online</button></div>
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 10px;"><label class="lbl">Nombre<input class="inp" type="text" value="Auditoría nutricional de lotes de broilers"></label><label class="lbl">Tipo de servicio<select class="inp"><option>Consultoría nutricional</option></select></label></div>
+      <label class="lbl"><span>Descripción <span class="hint">· máx. 300</span></span><input class="inp" type="text" value="Visita a granja, revisión de pienso y consumos, e informe con recomendaciones por fase."></label>
+      <div class="lbl">Especies
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="pill on">✓ Avicultura <span style="opacity: .75; font-weight: 400; margin-left: 4px;">· 2</span></span><span class="pill">Porcino</span><span class="pill">Bovino</span><span class="pill">Ovino</span><span class="pill">Caprino</span><span class="pill">Acuicultura</span><span class="pill">Cunicultura</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
-        <label class="lbl">Duración orientativa<select class="inp"><option>1 jornada</option><option>Medio día</option><option>Seguimiento mensual</option></select></label>
-        <label class="lbl">Precio<select class="inp"><option>A consultar</option><option>Desde… (indicar importe)</option></select></label>
+      <div class="lbl"><span>Dirigido a <span class="hint">· las mismas ramas y cargos del CRM</span></span>
+        <div style="display: flex; gap: 8px; align-items: center;"><span class="rl">Rama</span><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="pill on">✓ Granja<span style="opacity: .75; font-weight: 400; margin-left: 4px;">· Industrial</span></span><span class="pill on">✓ Integradora Cooperativa</span><a href="#" style="font-size: 12px;">+ Rama</a></span></div>
+        <div style="display: flex; gap: 8px; align-items: center;"><span class="rl">Cargo</span><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="pill on">✓ Granjero</span><span class="pill on">✓ Director Técnico</span><a href="#" style="font-size: 12px;">+ Cargo</a></span></div>
       </div>
-      <label class="lbl">Qué incluye
-        <textarea rows="3" style="border: 1px solid #D5DED8; border-radius: 10px; padding: 9px 12px; font: 400 13.5px 'Poppins', sans-serif; color: #17231D; resize: none; line-height: 1.32;">Visita a granja, revisión de pienso y consumos, e informe con recomendaciones por fase.</textarea>
-      </label>
-      <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px dashed #C9C0EE; border-radius: 10px; color: #4B3BA6; font-size: 13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Añadir otro servicio <span style="margin-left: auto; font-size: 12px; color: #56615B; font-weight: 400;">1 de 2 en el plan Gratis</span></a>
+      <div class="lbl">Dónde lo prestas
+        <div style="display: flex; gap: 8px; align-items: center;"><label class="cc rl"><input type="checkbox" defaultChecked="{{ yes }}">Presencial</label><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="zn">España<span style="color: #4A5650; font-weight: 400;">· Cataluña, Aragón</span> ×</span><a href="#" style="font-size: 12px;">+ Zona</a></span></div>
+        <div style="display: flex; gap: 8px; align-items: center;"><label class="cc rl"><input type="checkbox" defaultChecked="{{ yes }}">A distancia</label><span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;"><span class="zn">España y Portugal ×</span><a href="#" style="font-size: 12px;">+ Zona</a></span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"><label class="lbl">Plazo de respuesta<select class="inp"><option>48 horas</option></select></label><label class="lbl">Precio<select class="inp"><option>A consultar</option><option>Desde… (indicar importe)</option></select></label></div>
+      <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px dashed #C9C0EE; border-radius: 10px; color: #4B3BA6; font-size: 13px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Añadir otro servicio <span style="margin-left: auto; font-size: 12px; color: #56615B; font-weight: 400;">1 de 1 en el plan Gratis · más con Experto Pro</span></a>
       <div style="display: flex; align-items: center; justify-content: space-between;">
         <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: #4A5650;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Anterior</a>
         <span style="display: flex; align-items: center; gap: 16px;"><a href="#" style="font-size: 14px; color: #4A5650;">Saltar</a><button type="submit" style="height: 44px; padding: 0 22px; border-radius: 10px; background: #4B3BA6; color: #FFFFFF; border: 0; font: 500 14px 'Poppins', sans-serif; cursor: pointer;">Continuar</button></span>
       </div>
     </form>
 
-    <div style="width: 340px; display: flex; flex-direction: column; gap: 10px; padding-top: 70px;">
+    <div style="width: 320px; display: flex; flex-direction: column; gap: 10px; padding-top: 62px;">
       <span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #56615B;">Así se verá tu servicio</span>
-      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 10px;">
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 9px;">
         <span style="font-weight: 600; font-size: 15px; line-height: 1.28;">Auditoría nutricional de lotes de broilers</span>
         <span style="display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #4A5650;"><span style="width: 24px; height: 24px; border-radius: 50%; background: #4B3BA6; color: #FFFFFF; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center;">LG</span>Laura Gil · Veterinaria</span>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="tag">Presencial</span><span class="tag">Online</span><span class="tag">1 jornada</span></div>
-        <span style="font-size: 12.5px; color: #2F3D36; line-height: 1.35;">Visita a granja, revisión de pienso y consumos, e informe con recomendaciones por fase.</span>
-        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 6px; border-top: 1px solid #EEF1EE;"><span style="font-size: 13px; font-weight: 600;">A consultar</span><span style="height: 34px; padding: 0 14px; border-radius: 9px; background: #4B3BA6; color: #FFFFFF; font-size: 13px; display: flex; align-items: center;">Solicitar</span></div>
+        <span style="font-size: 12px; color: #2F3D36; line-height: 1.35;">Visita a granja, revisión de pienso y consumos, e informe con recomendaciones por fase.</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 5px;"><span class="tag">Pollos de engorde</span><span class="tag">Ponedoras</span></div>
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #4B3BA6; font-weight: 500;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> Disponible en tu zona · presencial y a distancia</span>
+        <span style="font-size: 11px; color: #4A5650;"><strong style="color: #17231D;">Para:</strong> granjas industriales e integradoras · granjeros y directores técnicos</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 6px; border-top: 1px solid #EEF1EE;"><span style="font-size: 12px; color: #4A5650;">Respuesta en 48 h · <strong style="color: #17231D;">A consultar</strong></span><span style="height: 32px; padding: 0 14px; border-radius: 9px; background: #4B3BA6; color: #FFFFFF; font-size: 12.5px; display: flex; align-items: center;">Solicitar</span></div>
       </div>
+      <div style="border: 1px dashed #DCE3DE; border-radius: 12px; padding: 9px 10px; font-size: 11px; color: #4A5650; line-height: 1.32;"><strong style="color: #17231D;">Comprador en Sevilla:</strong> no ve la visita presencial; ve «Disponible a distancia».</div>
+      <div style="border: 1px dashed #DCE3DE; border-radius: 12px; padding: 9px 10px; font-size: 11px; color: #4A5650; line-height: 1.32;"><strong style="color: #17231D;">Comprador de porcino:</strong> el servicio no aparece en su búsqueda.</div>
     </div>
   </div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1120,"height":760}}'>
 class Component extends DCLogic {
-  renderVals() { return {}; }
+  renderVals() { return { yes: true }; }
 }
 </script>
 </body>
