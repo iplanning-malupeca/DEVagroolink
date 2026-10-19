@@ -1564,11 +1564,11 @@
   },
   "MobCambioEmpresa.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M10 · Al cambiar a empresa: color azul y aviso «Ahora estás en…»",
    "w": 390,
-   "x": 5070,
-   "y": 2144
+   "x": 1880,
+   "y": 1100
   },
   "MobCategoria.dc.html": {
    "h": 1030,
@@ -1604,77 +1604,77 @@
   },
   "MobHeaderConEmpresa.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M7 · Personal con empresa · «Tú» abierto",
    "w": 390,
-   "x": 3660,
-   "y": 2144
+   "x": 470,
+   "y": 1100
   },
   "MobHeaderEmpresa.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M8 · Modo empresa · barra de empresa (azul)",
    "w": 390,
-   "x": 4130,
-   "y": 2144
+   "x": 940,
+   "y": 1100
   },
   "MobHeaderEmpresaMenu.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M9 · Modo empresa · menú «Empresa» abierto",
    "w": 390,
-   "x": 4600,
-   "y": 2144
+   "x": 1410,
+   "y": 1100
   },
   "MobHeaderExperto.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M6 · Con perfil de experto · «Tú» abierto (lila)",
    "w": 390,
-   "x": 3190,
-   "y": 2144
+   "x": 0,
+   "y": 1100
   },
   "MobHeaderExplorar.dc.html": {
-   "h": 844,
-   "page": "header",
-   "title": "M3 · Especies y Categorías desde Explorar",
+   "h": 860,
+   "page": "hdrmob",
+   "title": "M3 · Explorar: al tocar la pastilla se abre la búsqueda (la misma de 005)",
    "w": 390,
-   "x": 3660,
-   "y": 1180
+   "x": 1410,
+   "y": 0
   },
   "MobHeaderSesion.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo (Explorar es el inicio)",
    "w": 390,
-   "x": 3190,
-   "y": 1180
+   "x": 940,
+   "y": 0
   },
   "MobHeaderSinSesion.dc.html": {
    "h": 844,
    "is_interactive": true,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar",
    "w": 390,
-   "x": 2720,
-   "y": 1180
+   "x": 0,
+   "y": 0
   },
   "MobHeaderSinSesionMenu.dc.html": {
    "h": 844,
    "is_interactive": true,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
    "w": 390,
-   "x": 2720,
-   "y": 2144
+   "x": 470,
+   "y": 0
   },
   "MobHeaderTu.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta",
    "w": 390,
-   "x": 4130,
-   "y": 1180
+   "x": 1880,
+   "y": 0
   },
   "MobHome.dc.html": {
    "h": 2010,
@@ -1710,11 +1710,11 @@
   },
   "MobSelectorEspacios.dc.html": {
    "h": 844,
-   "page": "header",
+   "page": "hdrmob",
    "title": "M11 · Selector de espacios con varias empresas",
    "w": 390,
-   "x": 5540,
-   "y": 2144
+   "x": 2350,
+   "y": 1100
   },
   "MobTabBar.dc.html": {
    "h": 84,
@@ -3021,51 +3021,19 @@
    "x": 4080,
    "y": 0
   },
-  "MB_MobHeaderSinSesion.dc.html": {
-   "w": 390,
-   "h": 844,
-   "page": "mb1",
-   "x": 0,
-   "y": 0,
-   "title": "Sin sesión"
-  },
-  "MB_MobHeaderSesion.dc.html": {
-   "w": 390,
-   "h": 844,
-   "page": "mb1",
-   "x": 470,
-   "y": 0,
-   "title": "Con sesión"
-  },
-  "MB_MobHeaderTu.dc.html": {
-   "w": 390,
-   "h": 844,
-   "page": "mb1",
-   "x": 940,
-   "y": 0,
-   "title": "«Tú»"
-  },
   "MB_MobHome.dc.html": {
    "w": 390,
    "h": 2010,
    "page": "mb1",
-   "x": 1410,
+   "x": 0,
    "y": 0,
    "title": "Home"
-  },
-  "MB_Nav_BuscarAbierta.dc.html": {
-   "w": 390,
-   "h": 860,
-   "page": "mb1",
-   "x": 1880,
-   "y": 0,
-   "title": "Al tocar la pastilla: se abre la búsqueda (Qué · Especie · Categoría · Enfermedad)"
   },
   "MB_Nav_Filtros.dc.html": {
    "w": 390,
    "h": 2380,
    "page": "mb1",
-   "x": 2350,
+   "x": 470,
    "y": 0,
    "title": "Al tocar el botón de filtros: «Filtros» a pantalla completa"
   },
@@ -4170,6 +4138,15 @@
    "x": 0,
    "y": -300
   },
+  "hdrmobt": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "hdrmob",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Header móvil · cabecera, menú inferior (Explorar · Proyectos · Tableros · Tú) y búsqueda abierta"
+  },
   "mbt0": {
    "kind": "title1",
    "maxW": 8000,
@@ -4177,7 +4154,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Navegación · cabecera y menú inferior nuevos (Explorar · Proyectos · Tableros · Tú)"
+   "text": "Navegación · Home y filtros (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header)"
   },
   "mbt1": {
    "kind": "title1",
@@ -4248,7 +4225,7 @@
    "page": "mb1",
    "size": 24,
    "w": 1280,
-   "x": 2900,
+   "x": 1100,
    "y": -300,
    "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   }
@@ -4631,11 +4608,7 @@
   "PlanLimite.dc.html",
   "PlanPago.dc.html",
   "PlanFiltro.dc.html",
-  "MB_MobHeaderSinSesion.dc.html",
-  "MB_MobHeaderSesion.dc.html",
-  "MB_MobHeaderTu.dc.html",
   "MB_MobHome.dc.html",
-  "MB_Nav_BuscarAbierta.dc.html",
   "MB_Nav_Filtros.dc.html",
   "MB_BuscaMovResultados.dc.html",
   "MB_BuscaMovEspecie.dc.html",
@@ -4783,6 +4756,10 @@
   {
    "id": "altaserv",
    "name": "012_Alta servicios · 5 escenarios"
+  },
+  {
+   "id": "hdrmob",
+   "name": "MB_000_Header"
   },
   {
    "id": "mb1",
