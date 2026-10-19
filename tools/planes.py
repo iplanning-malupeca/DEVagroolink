@@ -182,24 +182,23 @@ def main():
     open(W + '/data/planes.json', 'w').write(txt)
     if os.path.isdir(R + 'docs/modelo-producto'): open(R + 'docs/modelo-producto/planes.json', 'w').write(txt)
     c = json.load(open(CANVAS)); B = c['boards']
-    if not any(p['id'] == 'planesbloq' for p in c['pages']):
-        i = next(k for k, p in enumerate(c['pages']) if p['id'] == 'planes') + 1
-        c['pages'].insert(i, {'id': 'planesbloq', 'name': 'Planes · qué se bloquea'})
+    # desde el 19/10/2026 los bloqueos van en la misma página que los planes, debajo (OFF px)
+    OFF = 4600
     files = {}
     hm = ALT.get('PlanBloqueos', 2200)
-    files['PlanBloqueos'] = (wrap('Planes · qué se bloquea', 1280, hm, matriz()), 1280, hm, 'planesbloq', 0, 0, 'BL1 · Matriz: qué se bloquea por cuenta y nivel')
+    files['PlanBloqueos'] = (wrap('Planes · qué se bloquea', 1280, hm, matriz()), 1280, hm, 'planes', 0, OFF, 'BL1 · Matriz: qué se bloquea por cuenta y nivel')
     for i, (k, (t, mov, a)) in enumerate(TARJ.items()):
         w, h = (390, 844) if mov else (1280, 800)
         body = (fondo_mov() if mov else fondo_esc()) + caja(mov, *a)
         if mov: files[k] = (wrap(t, w, h, body), w, h, None, None, None, t)
-        else: files[k] = (wrap(t, w, h, body), w, h, 'planesbloq', 1400, i * 900, 'BL%d · %s' % (i + 2, t))
+        else: files[k] = (wrap(t, w, h, body), w, h, 'planes', 1400, OFF + i * 900, 'BL%d · %s' % (i + 2, t))
     for k, (htm, w, h, pg, x, y, t) in files.items():
         open(DEST + k + '.dc.html', 'w').write(htm); open(W + '/project/' + k + '.dc.html', 'w').write(htm)
         if pg:
             B[k + '.dc.html'] = {'w': w, 'h': h, 'page': pg, 'x': x, 'y': y, 'title': t}
             if k + '.dc.html' not in c['order']: c['order'].append(k + '.dc.html')
-    c['notes']['blt'] = {'kind': 'title1', 'maxW': 4000, 'page': 'planesbloq', 'w': 240, 'x': 0, 'y': -300, 'text': 'Planes · qué se bloquea por login, límite o plan de pago'}
-    c['notes']['bldev'] = {'fill': 'orange', 'maxH': 360, 'page': 'planesbloq', 'size': 24, 'w': 1280, 'x': 2800, 'y': 0, 'text':
+    c['notes']['blt'] = {'kind': 'title1', 'maxW': 4000, 'page': 'planes', 'w': 240, 'x': 0, 'y': OFF - 300, 'text': 'Planes · qué se bloquea por login, límite o plan de pago'}
+    c['notes']['bldev'] = {'fill': 'orange', 'maxH': 360, 'page': 'planes', 'size': 24, 'w': 1280, 'x': 2800, 'y': OFF, 'text':
         'PARA DESARROLLO · Bloqueos\n\nFuente única: docs/modelo-producto/planes.json (cuentas → acciones → valor por nivel + tipo de bloqueo; ventanas con cuándo salen y textos).\n\nTipos: login · límite · plan de pago · a medida · nunca.\n\nDecisiones 19/10/2026: contactos fuera de Agroolink prohibidos y filtrados (teléfono, email, web, WhatsApp, redes, QR); Empresa Gratis ve consultas de 3 compradores; Experto con consultas ilimitadas; comprador Gratis publica 1 proyecto; sucursales con alta gratis y plan de grupo a medida; traducción en todos los planes. Las versiones móviles están en MB_08 Planes.'}
     json.dump(c, open(CANVAS, 'w'), ensure_ascii=False, indent=1)
     print('ok', list(files))

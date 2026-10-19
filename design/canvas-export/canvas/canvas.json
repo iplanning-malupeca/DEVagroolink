@@ -1372,43 +1372,43 @@
   },
   "PlanBloqueos.dc.html": {
    "h": 2580,
-   "page": "planesbloq",
+   "page": "planes",
    "title": "BL1 · Matriz: qué se bloquea por cuenta y nivel",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 4600
   },
   "PlanFiltro.dc.html": {
    "h": 800,
-   "page": "planesbloq",
+   "page": "planes",
    "title": "BL5 · Ventana «Contacto bloqueado» · al enviar un mensaje con teléfono y email",
    "w": 1280,
    "x": 1400,
-   "y": 2700
+   "y": 7300
   },
   "PlanLimite.dc.html": {
    "h": 800,
-   "page": "planesbloq",
+   "page": "planes",
    "title": "BL3 · Ventana «Límite» · empresa Gratis, producto 16",
    "w": 1280,
    "x": 1400,
-   "y": 900
+   "y": 5500
   },
   "PlanLogin.dc.html": {
    "h": 800,
-   "page": "planesbloq",
+   "page": "planes",
    "title": "BL2 · Ventana «Login» · sin cuenta, al pulsar Guardar",
    "w": 1280,
    "x": 1400,
-   "y": 0
+   "y": 4600
   },
   "PlanPago.dc.html": {
    "h": 800,
-   "page": "planesbloq",
+   "page": "planes",
    "title": "BL4 · Ventana «Plan de pago» · experto Gratis, al pulsar Publicar contenido",
    "w": 1280,
    "x": 1400,
-   "y": 1800
+   "y": 6400
   },
   "PrdAviCatalogo.dc.html": {
    "h": 940,
@@ -2594,21 +2594,21 @@
   "bldev": {
    "fill": "orange",
    "maxH": 360,
-   "page": "planesbloq",
+   "page": "planes",
    "size": 24,
    "text": "PARA DESARROLLO · Bloqueos\n\nFuente única: docs/modelo-producto/planes.json (cuentas → acciones → valor por nivel + tipo de bloqueo; ventanas con cuándo salen y textos).\n\nTipos: login · límite · plan de pago · a medida · nunca.\n\nDecisiones 19/10/2026: contactos fuera de Agroolink prohibidos y filtrados (teléfono, email, web, WhatsApp, redes, QR); Empresa Gratis ve consultas de 3 compradores; Experto con consultas ilimitadas; comprador Gratis publica 1 proyecto; sucursales con alta gratis y plan de grupo a medida; traducción en todos los planes. Las versiones móviles están en MB_08 Planes.",
    "w": 1280,
    "x": 2800,
-   "y": 0
+   "y": 4600
   },
   "blt": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "planesbloq",
+   "page": "planes",
    "text": "Planes · qué se bloquea por login, límite o plan de pago",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 4300
   },
   "busDev": {
    "fill": "orange",
@@ -3484,11 +3484,7 @@
   },
   {
    "id": "planes",
-   "name": "Planes"
-  },
-  {
-   "id": "planesbloq",
-   "name": "Planes · qué se bloquea"
+   "name": "Planes · precios y qué se bloquea"
   },
   {
    "id": "altacomun",
