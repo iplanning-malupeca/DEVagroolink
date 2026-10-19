@@ -191,6 +191,12 @@ h1{margin:0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2
 .hero .seg{padding:12px 22px}
 .hero .go{width:52px;height:52px}
 .heropill{display:none}
+.hnav{display:flex;align-items:center;gap:4px}
+.hnav .nb{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;border:0;background:none;font-weight:500;font-size:14px;color:var(--fg);white-space:nowrap}.hnav .nb:hover{background:var(--surface2)}
+.hmsg{width:44px;height:44px;border-radius:12px;border:0;background:none;display:inline-flex;align-items:center;justify-content:center;color:var(--fg);position:relative;flex:none}.hmsg .bdg{position:absolute;top:5px;right:3px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#D93A3A;color:#FFFFFF;font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center;border:2px solid #FFFFFF}
+.login{display:flex;align-items:center;gap:8px;height:40px;padding:4px 14px 4px 4px;border-radius:999px;border:1px solid #CFE0D5;background:var(--soft);font-weight:500;font-size:14px;white-space:nowrap}.login .i{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#FFFFFF;display:flex;align-items:center;justify-content:center}
+.entrar{display:none;height:38px;padding:0 14px;border-radius:10px;border:0;background:var(--accent);color:#FFFFFF;font-weight:500;font-size:13.5px}
+@media (max-width:899px){.hnav .nb,.login,.hmsg{display:none}.entrar{display:inline-flex;align-items:center}}
 .hsec{margin-top:34px}
 .hsec .ht{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}.hsec .ht h2{margin:0;font-size:22px;font-weight:700;flex:1}
 .esps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
@@ -286,7 +292,7 @@ const EMP = [...new Set(P.map(p => p.e))];
 const PAISES_TOP = ['España', 'Portugal', 'Francia', 'Italia', 'Alemania', 'México'];
 // ---------- estado de la búsqueda ----------
 const F = { q: '', esp: {}, cat: [], enf: [], pais: [], marca: [], verif: false, tec: {} };   // esp: { Porcino: ['Lechones'] }
-const UI = { abierto: null, tab: 'productos', orden: 'rel', capa: null, foco: {}, paso: null, borr: null, vista: 'home' };
+const UI = { abierto: null, tab: 'productos', orden: 'rel', capa: null, foco: {}, paso: null, borr: null, vista: 'home', sesion: false };
 // Primera búsqueda: siempre «Nueva búsqueda» (escritorio) o la hoja por pasos (móvil). Modificar una búsqueda: la barra con sus desplegables.
 const RECIENTES = [['micotoxinas porcino', 'ayer', { q: 'micotoxinas', esp: { Porcino: [] } }], ['Broilers · vacunas', 'hace 3 días', { q: 'vacunas', esp: { Avicultura: ['Pollos de engorde'] } }], ['bebederos lechones', 'la semana pasada', { q: 'bebederos', esp: { Porcino: ['Lechones'] } }]];
 const primeraBusqueda = () => { UI.abierto = null; if (innerWidth < 900) { UI.capa = 'hoja'; UI.paso = 'q'; } else UI.capa = 'nueva'; };
@@ -324,7 +330,7 @@ const ICO = {
   enf: '<path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M5 19l2.8-2.8M16.2 7.8 19 5"/>',
   pais: '<path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12zM12 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>',
   marca: '<path d="M3 12V4h8l10 10-8 8L3 12zM7.5 7.5h.01"/>',
-  fil: '<path d="M4 6h16M7 12h10M10 18h4"/>', lupa: '<path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/>', tec: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6"/>'
+  fil: '<path d="M4 6h16M7 12h10M10 18h4"/>', pr: '<path d="M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6"/>', yo: '<path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0"/>', lupa: '<path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/>', tec: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6"/>'
 };
 const ic = (k, s) => '<svg width="' + (s || 17) + '" height="' + (s || 17) + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">' + ICO[k] + '</svg>';
 // ---------- textos de cada filtro ----------
@@ -419,10 +425,11 @@ function cabecera() {
   const sug = UI.abierto === 'q' && F.q.trim().length > 1 ? autocompletar() : '';
   document.getElementById('top').innerHTML =
     '<button type="button" class="logo" data-act="inicio" aria-label="Agroolink, inicio">' + LOGO + '</button>' +
-    (UI.vista === 'home' ? '<span style="flex:1"></span>' : barra(sug)) +
+    (UI.vista === 'home' ? '<span style="flex:1"></span><nav class="hnav" aria-label="Principal"><button type="button" class="nb">' + ic('pr', 18) + 'Proyectos</button><button type="button" class="nb">' + ic('cat', 18) + 'Tableros</button>' +
+      (UI.sesion ? '<button type="button" class="hmsg" aria-label="Mensajes, 3 sin leer"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6\"/></svg><span class="bdg">3</span></button>' : '<button type="button" class="login" data-act="sesion"><span class="i">' + ic('yo', 16) + '</span>Iniciar sesión</button><button type="button" class="entrar" data-act="sesion">Entrar</button>') + '</nav>' : barra(sug)) +
     (UI.vista === 'home' ? '' : '<button type="button" class="pill" data-act="hoja">' + ic('lupa', 18) + '<span><strong>' + esc(F.q || '¿Qué buscas?') + '</strong><small>' + esc([txtEsp() || 'Cualquier especie', txtCat() || 'cualquier categoría'].join(' · ')) + '</small></span></button>') +
-    '<button type="button" class="ibm" aria-label="Mensajes, 3 sin leer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6"/></svg><span class="bdg">3</span></button>' +
-    '<span class="av" aria-label="Samuel Esteban">SE</span>';
+    (UI.vista === 'home' && !UI.sesion ? '' : '<button type="button" class="ibm" aria-label="Mensajes, 3 sin leer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6"/></svg><span class="bdg">3</span></button>') +
+    (UI.vista === 'home' && !UI.sesion ? '' : '<span class="av" aria-label="Samuel Esteban">SE</span>');
 }
 function autocompletar() {
   const q = norm(F.q);
@@ -535,7 +542,7 @@ function capaHoja() {
     '<div class="sh"><button type="button" class="ico" aria-label="Cerrar" data-act="cerrarcapa">×</button><strong>Buscar</strong><span style="width:36px"></span></div><div class="sbody">' +
     pasos.map(([k, l, v]) => { const open = UI.paso === k;
       return '<div class="paso' + (open ? ' open' : '') + '"><button type="button" data-act="paso|' + k + '">' + (k === 'q' ? ic('lupa') : ic(k)) + '<strong>' + l + '</strong><span>' + esc(v) + '</span></button>' +
-        (open ? '<div class="pb">' + (k === 'q' ? '<div class="qs">' + ic('lupa', 16) + '<input data-q="q" placeholder="Producto, empresa, marca…" value="' + esc(F.q) + '"></div>' : SEL[k](true)) + '</div>' : '') + '</div>'; }).join('') +
+        (open ? '<div class="pb">' + (k === 'q' ? '<div class="qs">' + ic('lupa', 16) + '<input data-q="q" placeholder="Producto, empresa, marca…" value="' + esc(F.q) + '"></div>' + (!F.q.trim() && !nActivos() ? '<div class="nvh" style="margin-top:14px">Búsquedas recientes</div>' + RECIENTES.map((r, i) => '<button type="button" class="nvrec" data-act="reciente|' + i + '"><span style="color:var(--muted);display:flex">' + ic('lupa', 15) + '</span>' + esc(r[0]) + '<span class="hint" style="margin-left:auto">' + esc(r[1]) + '</span></button>').join('') : '') : SEL[k](true)) + '</div>' : '') + '</div>'; }).join('') +
     '</div><div class="sf"><button type="button" class="link" data-act="limpiartodo">Limpiar todo</button><span class="sp"></span><button type="button" class="bp" data-act="buscar">' + ic('lupa', 17) + ' Buscar · ' + res().length + '</button></div></div></div>';
 }
 // ---------- render ----------
@@ -559,6 +566,7 @@ document.addEventListener('click', ev => {
   switch (act) {
     case 'abrir-seg': if (x === 'cat') { UI.abierto = UI.abierto === 'cat' ? null : 'cat'; UI.foco = {}; abrirEnCat(); break; }
       if (x === 'q') { UI.abierto = 'q'; render(); enfocar('#qin', F.q.length); return; } UI.abierto = UI.abierto === x ? null : x; UI.foco = {}; break;
+    case 'sesion': UI.sesion = true; break;
     case 'buscar': UI.abierto = null; UI.capa = null; UI.vista = 'resultados'; break;
     case 'homeesp': F.esp = {}; F.esp[x] = []; UI.vista = 'resultados'; UI.abierto = null; break;
     case 'homecat': F.cat = [x]; UI.vista = 'resultados'; UI.abierto = null; break;

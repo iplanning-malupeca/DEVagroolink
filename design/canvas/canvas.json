@@ -3515,7 +3515,7 @@
    "page": "home",
    "x": 0,
    "y": 0,
-   "title": "H1 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda"
+   "title": "H1 · Home sin sesión: cabecera sin buscador (Proyectos · Tableros · Iniciar sesión); la barra combinada de la portada es la primera búsqueda"
   },
   "BuscaHomeInicio.dc.html": {
    "w": 1280,
@@ -3523,7 +3523,7 @@
    "page": "home",
    "x": 1360,
    "y": 0,
-   "title": "H2 · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)"
+   "title": "H2 · Home con sesión: cabecera sin buscador (Proyectos · Tableros · Mensajes · avatar); al tocar «Qué buscas», recientes y «O empieza por»"
   },
   "BuscaMovHome.dc.html": {
    "w": 390,
@@ -3531,7 +3531,15 @@
    "page": "homemob",
    "x": 0,
    "y": 0,
-   "title": "Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2 de MB_005)"
+   "title": "Móvil · Home sin sesión: logo y «Entrar»; «¿Qué necesita hoy?» con la pastilla"
+  },
+  "BuscaMovHomeInicio.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "homemob",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Home · al tocar la pastilla: búsquedas recientes y los pasos Especie · Categoría · Enfermedad"
   }
  },
  "createdOnFiles": {
@@ -4784,7 +4792,8 @@
   "MB_PlanFiltro.dc.html",
   "BuscaHome.dc.html",
   "BuscaHomeInicio.dc.html",
-  "BuscaMovHome.dc.html"
+  "BuscaMovHome.dc.html",
+  "BuscaMovHomeInicio.dc.html"
  ],
  "pages": [
   {

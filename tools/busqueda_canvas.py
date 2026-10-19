@@ -24,9 +24,10 @@ def dc(cap, title):
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">\n'
             '<style>\n' + css + '\n</style>\n</helmet>\n<div style="width: ' + str(w) + 'px; height: ' + str(h) + 'px; position: relative; overflow: hidden; background: #F6F8F6;">' + body + '</div>\n</x-dc>\n'
             '<script type="text/x-dc" data-dc-script data-props=\'{"$preview":{"width":' + str(w) + ',"height":' + str(h) + '}}\'>\nclass Component extends DCLogic {\n  renderVals() { return {}; }\n}\n</script>\n</body>\n</html>\n'), w, h
-HOME = [('S0', 'BuscaHome', 'H1 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda', 'home'),
-        ('S0b', 'BuscaHomeInicio', 'H2 · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)', 'home'),
-        ('T0', 'BuscaMovHome', 'Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2 de MB_005)', 'homemob')]
+HOME = [('S0', 'BuscaHome', 'H1 · Home sin sesión: cabecera sin buscador (Proyectos · Tableros · Iniciar sesión); la barra combinada de la portada es la primera búsqueda', 'home'),
+        ('S0b', 'BuscaHomeInicio', 'H2 · Home con sesión: cabecera sin buscador (Proyectos · Tableros · Mensajes · avatar); al tocar «Qué buscas», recientes y «O empieza por»', 'home'),
+        ('T0', 'BuscaMovHome', 'Móvil · Home sin sesión: logo y «Entrar»; «¿Qué necesita hoy?» con la pastilla', 'homemob'),
+        ('T0b', 'BuscaMovHomeInicio', 'Móvil · Home · al tocar la pastilla: búsquedas recientes y los pasos Especie · Categoría · Enfermedad', 'homemob')]
 ESC = [('S1', 'BuscaResultados', 'B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan'),
        ('S2', 'BuscaAutocompletar', 'B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa'),
        ('S3', 'BuscaEspecie', 'B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)'),
