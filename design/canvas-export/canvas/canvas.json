@@ -2989,396 +2989,396 @@
    "y": 5180,
    "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)"
   },
-  "MvMobHeaderSinSesion.dc.html": {
+  "MB_MobHeaderSinSesion.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "movil2",
+   "page": "mb1",
    "x": 0,
    "y": 0,
    "title": "Sin sesión"
   },
-  "MvMobHeaderSesion.dc.html": {
+  "MB_MobHeaderSesion.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "movil2",
+   "page": "mb1",
    "x": 470,
    "y": 0,
    "title": "Con sesión"
   },
-  "MvMobHeaderTu.dc.html": {
+  "MB_MobHeaderTu.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "movil2",
+   "page": "mb1",
    "x": 940,
    "y": 0,
    "title": "«Tú»"
   },
-  "MvMobHome.dc.html": {
+  "MB_MobHome.dc.html": {
    "w": 390,
    "h": 2010,
-   "page": "movil2",
+   "page": "mb1",
    "x": 1410,
    "y": 0,
    "title": "Home"
   },
-  "MvBuscaMovResultados.dc.html": {
+  "MB_BuscaMovResultados.dc.html": {
    "w": 390,
    "h": 1370,
-   "page": "movil2",
+   "page": "mb2",
    "x": 0,
-   "y": 2430,
+   "y": 0,
    "title": "Resultados"
   },
-  "MvBuscaMovEspecie.dc.html": {
+  "MB_BuscaMovEspecie.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "movil2",
+   "page": "mb2",
    "x": 470,
-   "y": 2430,
+   "y": 0,
    "title": "Buscar por pasos"
   },
-  "MvBuscaMovCategoria.dc.html": {
+  "MB_BuscaMovCategoria.dc.html": {
    "w": 390,
    "h": 850,
-   "page": "movil2",
+   "page": "mb2",
    "x": 940,
-   "y": 2430,
+   "y": 0,
    "title": "Categoría"
   },
-  "MvBuscaMovFiltros.dc.html": {
+  "MB_BuscaMovFiltros.dc.html": {
    "w": 390,
    "h": 2380,
-   "page": "movil2",
+   "page": "mb2",
    "x": 1410,
-   "y": 2430,
+   "y": 0,
    "title": "Filtros"
   },
-  "MvMP1.dc.html": {
+  "MB_MP1.dc.html": {
    "w": 390,
    "h": 1510,
-   "page": "movil2",
+   "page": "mb3",
    "x": 0,
-   "y": 5230,
+   "y": 0,
    "title": "Especies"
   },
-  "MvMP2.dc.html": {
+  "MB_MP2.dc.html": {
    "w": 390,
    "h": 2810,
-   "page": "movil2",
+   "page": "mb3",
    "x": 470,
-   "y": 5230,
+   "y": 0,
    "title": "Categoría"
   },
-  "MvMP3.dc.html": {
+  "MB_MP3.dc.html": {
    "w": 390,
    "h": 1890,
-   "page": "movil2",
+   "page": "mb3",
    "x": 940,
-   "y": 5230,
+   "y": 0,
    "title": "Mercados"
   },
-  "MvMP4.dc.html": {
+  "MB_MP4.dc.html": {
    "w": 390,
    "h": 1730,
-   "page": "movil2",
+   "page": "mb3",
    "x": 1410,
-   "y": 5230,
+   "y": 0,
    "title": "Identidad (idioma detectado)"
   },
-  "MvMP5.dc.html": {
+  "MB_MP5.dc.html": {
    "w": 390,
    "h": 2090,
-   "page": "movil2",
+   "page": "mb3",
    "x": 1880,
-   "y": 5230,
+   "y": 0,
    "title": "Datos técnicos"
   },
-  "MvMP6.dc.html": {
+  "MB_MP6.dc.html": {
    "w": 390,
    "h": 1200,
-   "page": "movil2",
+   "page": "mb3",
    "x": 2350,
-   "y": 5230,
+   "y": 0,
    "title": "Aplicación por especie"
   },
-  "MvMP7.dc.html": {
+  "MB_MP7.dc.html": {
    "w": 390,
    "h": 1400,
-   "page": "movil2",
+   "page": "mb3",
    "x": 2820,
-   "y": 5230,
+   "y": 0,
    "title": "Fotos, vídeos y documentos"
   },
-  "MvMP8.dc.html": {
+  "MB_MP8.dc.html": {
    "w": 390,
    "h": 2180,
-   "page": "movil2",
+   "page": "mb3",
    "x": 3290,
-   "y": 5230,
+   "y": 0,
    "title": "Certificaciones"
   },
-  "MvMP9.dc.html": {
+  "MB_MP9.dc.html": {
    "w": 390,
    "h": 1750,
-   "page": "movil2",
+   "page": "mb3",
    "x": 3760,
-   "y": 5230,
+   "y": 0,
    "title": "Revisión"
   },
-  "MvME1.dc.html": {
+  "MB_ME1.dc.html": {
    "w": 390,
    "h": 1180,
-   "page": "movil2",
+   "page": "mb4",
    "x": 0,
-   "y": 8460,
+   "y": 0,
    "title": "Mis productos"
   },
-  "MvME2.dc.html": {
+  "MB_ME2.dc.html": {
    "w": 390,
    "h": 1180,
-   "page": "movil2",
+   "page": "mb4",
    "x": 470,
-   "y": 8460,
+   "y": 0,
    "title": "Menú ⋯"
   },
-  "MvME3.dc.html": {
+  "MB_ME3.dc.html": {
    "w": 390,
    "h": 3750,
-   "page": "movil2",
+   "page": "mb4",
    "x": 940,
-   "y": 8460,
+   "y": 0,
    "title": "Editar por bloques"
   },
-  "MvME4.dc.html": {
+  "MB_ME4.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "movil2",
+   "page": "mb4",
    "x": 1410,
-   "y": 8460,
+   "y": 0,
    "title": "Guardar y avisar"
   },
-  "MvME5.dc.html": {
+  "MB_ME5.dc.html": {
    "w": 390,
    "h": 3320,
-   "page": "movil2",
+   "page": "mb4",
    "x": 1880,
-   "y": 8460,
+   "y": 0,
    "title": "Traducciones"
   },
-  "MvME6.dc.html": {
+  "MB_ME6.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "movil2",
+   "page": "mb4",
    "x": 2350,
-   "y": 8460,
+   "y": 0,
    "title": "Ficha en inglés"
   },
-  "MvMS1.dc.html": {
+  "MB_MS1.dc.html": {
    "w": 390,
    "h": 2620,
-   "page": "movil2",
+   "page": "mb5",
    "x": 0,
-   "y": 12630,
+   "y": 0,
    "title": "Tipo de servicio"
   },
-  "MvMS2.dc.html": {
+  "MB_MS2.dc.html": {
    "w": 390,
    "h": 1230,
-   "page": "movil2",
+   "page": "mb5",
    "x": 470,
-   "y": 12630,
+   "y": 0,
    "title": "Especies"
   },
-  "MvMS3.dc.html": {
+  "MB_MS3.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "movil2",
+   "page": "mb5",
    "x": 940,
-   "y": 12630,
+   "y": 0,
    "title": "Dirigido a"
   },
-  "MvMS4.dc.html": {
+  "MB_MS4.dc.html": {
    "w": 390,
    "h": 1390,
-   "page": "movil2",
+   "page": "mb5",
    "x": 1410,
-   "y": 12630,
+   "y": 0,
    "title": "Dónde lo prestas"
   },
-  "MvMS5.dc.html": {
+  "MB_MS5.dc.html": {
    "w": 390,
    "h": 2050,
-   "page": "movil2",
+   "page": "mb5",
    "x": 1880,
-   "y": 12630,
+   "y": 0,
    "title": "Detalles"
   },
-  "MvMS6.dc.html": {
+  "MB_MS6.dc.html": {
    "w": 390,
    "h": 1710,
-   "page": "movil2",
+   "page": "mb5",
    "x": 2350,
-   "y": 12630,
+   "y": 0,
    "title": "Revisión"
   },
-  "MvMS7.dc.html": {
+  "MB_MS7.dc.html": {
    "w": 390,
    "h": 850,
-   "page": "movil2",
+   "page": "mb5",
    "x": 2820,
-   "y": 12630,
+   "y": 0,
    "title": "Mis servicios"
   },
-  "MvMA1.dc.html": {
+  "MB_MA1.dc.html": {
    "w": 390,
    "h": 1170,
-   "page": "movil2",
+   "page": "mb6",
    "x": 0,
-   "y": 15670,
+   "y": 0,
    "title": "Tu organización (CRM)"
   },
-  "MvMA2.dc.html": {
+  "MB_MA2.dc.html": {
    "w": 390,
    "h": 990,
-   "page": "movil2",
+   "page": "mb6",
    "x": 470,
-   "y": 15670,
+   "y": 0,
    "title": "Confirmar email"
   },
-  "MvMA3.dc.html": {
+  "MB_MA3.dc.html": {
    "w": 390,
    "h": 1300,
-   "page": "movil2",
+   "page": "mb6",
    "x": 940,
-   "y": 15670,
+   "y": 0,
    "title": "Tipo de empresa"
   },
-  "MvMA4.dc.html": {
+  "MB_MA4.dc.html": {
    "w": 390,
    "h": 1070,
-   "page": "movil2",
+   "page": "mb6",
    "x": 1410,
-   "y": 15670,
+   "y": 0,
    "title": "Especies"
   },
-  "MvMA5.dc.html": {
+  "MB_MA5.dc.html": {
    "w": 390,
    "h": 1060,
-   "page": "movil2",
+   "page": "mb6",
    "x": 1880,
-   "y": 15670,
+   "y": 0,
    "title": "Rama de negocio"
   },
-  "MvMA6.dc.html": {
+  "MB_MA6.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "movil2",
+   "page": "mb6",
    "x": 2350,
-   "y": 15670,
+   "y": 0,
    "title": "Mercados"
   },
-  "MvMA7.dc.html": {
+  "MB_MA7.dc.html": {
    "w": 390,
    "h": 1190,
-   "page": "movil2",
+   "page": "mb6",
    "x": 2820,
-   "y": 15670,
+   "y": 0,
    "title": "Cabecera"
   },
-  "MvMA8.dc.html": {
+  "MB_MA8.dc.html": {
    "w": 390,
    "h": 1090,
-   "page": "movil2",
+   "page": "mb6",
    "x": 3290,
-   "y": 15670,
+   "y": 0,
    "title": "Sobre la empresa"
   },
-  "MvMA9.dc.html": {
+  "MB_MA9.dc.html": {
    "w": 390,
    "h": 1070,
-   "page": "movil2",
+   "page": "mb6",
    "x": 3760,
-   "y": 15670,
+   "y": 0,
    "title": "Equipo comercial"
   },
-  "MvMA10.dc.html": {
+  "MB_MA10.dc.html": {
    "w": 390,
    "h": 1100,
-   "page": "movil2",
+   "page": "mb6",
    "x": 4230,
-   "y": 15670,
+   "y": 0,
    "title": "Contacto"
   },
-  "MvMA11.dc.html": {
+  "MB_MA11.dc.html": {
    "w": 390,
    "h": 1590,
-   "page": "movil2",
+   "page": "mb6",
    "x": 4700,
-   "y": 15670,
+   "y": 0,
    "title": "Revisar y publicar"
   },
-  "MvMA12.dc.html": {
+  "MB_MA12.dc.html": {
    "w": 390,
    "h": 1010,
-   "page": "movil2",
+   "page": "mb6",
    "x": 5170,
-   "y": 15670,
+   "y": 0,
    "title": "Publicada"
   },
-  "MvMA13.dc.html": {
+  "MB_MA13.dc.html": {
    "w": 390,
    "h": 1250,
-   "page": "movil2",
+   "page": "mb6",
    "x": 5640,
-   "y": 15670,
+   "y": 0,
    "title": "Crear organización nueva"
   },
-  "MvMA14.dc.html": {
+  "MB_MA14.dc.html": {
    "w": 390,
    "h": 970,
-   "page": "movil2",
+   "page": "mb6",
    "x": 6110,
-   "y": 15670,
+   "y": 0,
    "title": "Sucursal: entra directa"
   },
-  "MvMA15.dc.html": {
+  "MB_MA15.dc.html": {
    "w": 390,
    "h": 850,
-   "page": "movil2",
+   "page": "mb6",
    "x": 6580,
-   "y": 15670,
+   "y": 0,
    "title": "Sucursal: tu Sede"
   },
-  "MvMJ1.dc.html": {
+  "MB_MJ1.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "movil2",
+   "page": "mb7",
    "x": 0,
-   "y": 17680,
+   "y": 0,
    "title": "Bienvenida"
   },
-  "MvMJ2.dc.html": {
+  "MB_MJ2.dc.html": {
    "w": 390,
    "h": 1470,
-   "page": "movil2",
+   "page": "mb7",
    "x": 470,
-   "y": 17680,
+   "y": 0,
    "title": "Una pregunta por pantalla"
   },
-  "MvMJ3.dc.html": {
+  "MB_MJ3.dc.html": {
    "w": 390,
    "h": 1860,
-   "page": "movil2",
+   "page": "mb7",
    "x": 940,
-   "y": 17680,
+   "y": 0,
    "title": "Resumen"
   },
-  "MvMJ4.dc.html": {
+  "MB_MJ4.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "movil2",
+   "page": "mb7",
    "x": 1410,
-   "y": 17680,
+   "y": 0,
    "title": "Editar desde el resumen"
   }
  },
@@ -4071,76 +4071,76 @@
    "y": 4840,
    "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu"
   },
-  "m2t0": {
+  "mbt0": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb1",
    "w": 240,
    "x": 0,
    "y": -300,
    "text": "Navegación · cabecera y menú inferior nuevos (Explorar · Proyectos · Tableros · Tú)"
   },
-  "m2t1": {
+  "mbt1": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb2",
    "w": 240,
    "x": 0,
-   "y": 2130,
+   "y": -300,
    "text": "Búsqueda y filtros (de 005)"
   },
-  "m2t2": {
+  "mbt2": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb3",
    "w": 240,
    "x": 0,
-   "y": 4930,
+   "y": -300,
    "text": "Alta de producto (prototipo crear-producto)"
   },
-  "m2t3": {
+  "mbt3": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb4",
    "w": 240,
    "x": 0,
-   "y": 8160,
+   "y": -300,
    "text": "Mis productos, edición y traducciones"
   },
-  "m2t4": {
+  "mbt4": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb5",
    "w": 240,
    "x": 0,
-   "y": 12330,
+   "y": -300,
    "text": "Alta de servicios del experto (prototipo crear-servicio)"
   },
-  "m2t5": {
+  "mbt5": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb6",
    "w": 240,
    "x": 0,
-   "y": 15370,
+   "y": -300,
    "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
   },
-  "m2t6": {
+  "mbt6": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "movil2",
+   "page": "mb7",
    "w": 240,
    "x": 0,
-   "y": 17380,
+   "y": -300,
    "text": "Proyectos (prototipo crear-proyecto)"
   },
-  "m2dev": {
+  "mbdev": {
    "fill": "orange",
    "maxH": 320,
-   "page": "movil2",
+   "page": "mb1",
    "size": 24,
    "w": 1280,
-   "x": 4400,
+   "x": 2000,
    "y": -300,
    "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   }
@@ -4519,55 +4519,55 @@
   "ServExpCondiciones.dc.html",
   "ServExpRevision.dc.html",
   "ServExpLista.dc.html",
-  "MvMobHeaderSinSesion.dc.html",
-  "MvMobHeaderSesion.dc.html",
-  "MvMobHeaderTu.dc.html",
-  "MvMobHome.dc.html",
-  "MvBuscaMovResultados.dc.html",
-  "MvBuscaMovEspecie.dc.html",
-  "MvBuscaMovCategoria.dc.html",
-  "MvBuscaMovFiltros.dc.html",
-  "MvMP1.dc.html",
-  "MvMP2.dc.html",
-  "MvMP3.dc.html",
-  "MvMP4.dc.html",
-  "MvMP5.dc.html",
-  "MvMP6.dc.html",
-  "MvMP7.dc.html",
-  "MvMP8.dc.html",
-  "MvMP9.dc.html",
-  "MvME1.dc.html",
-  "MvME2.dc.html",
-  "MvME3.dc.html",
-  "MvME4.dc.html",
-  "MvME5.dc.html",
-  "MvME6.dc.html",
-  "MvMS1.dc.html",
-  "MvMS2.dc.html",
-  "MvMS3.dc.html",
-  "MvMS4.dc.html",
-  "MvMS5.dc.html",
-  "MvMS6.dc.html",
-  "MvMS7.dc.html",
-  "MvMA1.dc.html",
-  "MvMA2.dc.html",
-  "MvMA3.dc.html",
-  "MvMA4.dc.html",
-  "MvMA5.dc.html",
-  "MvMA6.dc.html",
-  "MvMA7.dc.html",
-  "MvMA8.dc.html",
-  "MvMA9.dc.html",
-  "MvMA10.dc.html",
-  "MvMA11.dc.html",
-  "MvMA12.dc.html",
-  "MvMA13.dc.html",
-  "MvMA14.dc.html",
-  "MvMA15.dc.html",
-  "MvMJ1.dc.html",
-  "MvMJ2.dc.html",
-  "MvMJ3.dc.html",
-  "MvMJ4.dc.html"
+  "MB_MobHeaderSinSesion.dc.html",
+  "MB_MobHeaderSesion.dc.html",
+  "MB_MobHeaderTu.dc.html",
+  "MB_MobHome.dc.html",
+  "MB_BuscaMovResultados.dc.html",
+  "MB_BuscaMovEspecie.dc.html",
+  "MB_BuscaMovCategoria.dc.html",
+  "MB_BuscaMovFiltros.dc.html",
+  "MB_MP1.dc.html",
+  "MB_MP2.dc.html",
+  "MB_MP3.dc.html",
+  "MB_MP4.dc.html",
+  "MB_MP5.dc.html",
+  "MB_MP6.dc.html",
+  "MB_MP7.dc.html",
+  "MB_MP8.dc.html",
+  "MB_MP9.dc.html",
+  "MB_ME1.dc.html",
+  "MB_ME2.dc.html",
+  "MB_ME3.dc.html",
+  "MB_ME4.dc.html",
+  "MB_ME5.dc.html",
+  "MB_ME6.dc.html",
+  "MB_MS1.dc.html",
+  "MB_MS2.dc.html",
+  "MB_MS3.dc.html",
+  "MB_MS4.dc.html",
+  "MB_MS5.dc.html",
+  "MB_MS6.dc.html",
+  "MB_MS7.dc.html",
+  "MB_MA1.dc.html",
+  "MB_MA2.dc.html",
+  "MB_MA3.dc.html",
+  "MB_MA4.dc.html",
+  "MB_MA5.dc.html",
+  "MB_MA6.dc.html",
+  "MB_MA7.dc.html",
+  "MB_MA8.dc.html",
+  "MB_MA9.dc.html",
+  "MB_MA10.dc.html",
+  "MB_MA11.dc.html",
+  "MB_MA12.dc.html",
+  "MB_MA13.dc.html",
+  "MB_MA14.dc.html",
+  "MB_MA15.dc.html",
+  "MB_MJ1.dc.html",
+  "MB_MJ2.dc.html",
+  "MB_MJ3.dc.html",
+  "MB_MJ4.dc.html"
  ],
  "pages": [
   {
@@ -4663,8 +4663,32 @@
    "name": "012_Alta servicios · 5 escenarios"
   },
   {
-   "id": "movil2",
-   "name": "013_Móvil · todo lo trabajado"
+   "id": "mb1",
+   "name": "MB_01 Navegación"
+  },
+  {
+   "id": "mb2",
+   "name": "MB_02 Búsqueda"
+  },
+  {
+   "id": "mb3",
+   "name": "MB_03 Alta de producto"
+  },
+  {
+   "id": "mb4",
+   "name": "MB_04 Mis productos"
+  },
+  {
+   "id": "mb5",
+   "name": "MB_05 Alta de servicios"
+  },
+  {
+   "id": "mb6",
+   "name": "MB_06 Alta de empresa"
+  },
+  {
+   "id": "mb7",
+   "name": "MB_07 Proyectos"
   },
   {
    "id": "servicios",
