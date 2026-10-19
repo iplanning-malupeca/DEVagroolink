@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alta de empresa · Matices por tipo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.35;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#1D4E89;text-decoration:none;font-weight:500}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; box-sizing: border-box; background: #F6F8F6; padding: 36px 40px; display: flex; flex-direction: column; gap: 18px;">
+  <div style="display: flex; flex-direction: column; gap: 4px;">
+    <span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">ALTA DE EMPRESA · UN SOLO ASISTENTE</span>
+    <h1 style="margin: 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Matices por tipo de empresa</h1>
+    <p style="margin: 0; font-size: 13.5px; color: #4A5650;">Los pasos son los de esta página (ejemplo DSM-Firmenich). Lo que elige la empresa en «Tipo» cambia solo esto; el resto de cada caso está en su página.</p>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E6EBE7; border-radius: 16px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 12px 18px; background: #F1F5FB; font-size: 11px; font-weight: 600; letter-spacing: .04em; color: #4A5560;">
+      <span>TIPO · EJEMPLO</span><span>EN «TIPO» ELIGE</span><span>PASO «RED»</span><span>BOTÓN PRINCIPAL</span><span>LAS SOLICITUDES LLEGAN</span><span>SU PÁGINA</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 14px 18px; border-top: 1px solid #EEF1EE; font-size: 13px; align-items: start;">
+      <span><strong style="font-weight: 600;">Fabricante con distribuidores</strong><br><span style="font-size: 12px; color: #56615B;">DSM-Firmenich</span></span>
+      <span>Fabricante · «Con distribuidores»</span>
+      <span>Distribuidores · acuerdos por línea y zona</span>
+      <span style="color: #1D4E89; font-weight: 500;">Encontrar distribuidor</span>
+      <span>Al distribuidor de la zona del comprador</span>
+      <span style="font-size: 12.5px;">005_LP · Fab-Dist<br><span style="color: #56615B;">distribuidores, expertos, contenidos</span></span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 14px 18px; border-top: 1px solid #EEF1EE; font-size: 13px; align-items: start;">
+      <span><strong style="font-weight: 600;">Fabricante con comerciales</strong><br><span style="font-size: 12px; color: #56615B;">Zucami</span></span>
+      <span>Fabricante · «Con mi equipo comercial»</span>
+      <span>Equipo comercial · zona de cada comercial</span>
+      <span style="color: #1D4E89; font-weight: 500;">Contactar comercial</span>
+      <span>Al comercial de la zona; si nadie la cubre, a la oficina comercial</span>
+      <span style="font-size: 12.5px;">005a_LP · Fab-Com<br><span style="color: #56615B;">equipo, zonas, sin cuenta, bandeja</span></span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 14px 18px; border-top: 1px solid #EEF1EE; font-size: 13px; align-items: start;">
+      <span><strong style="font-weight: 600;">Sede con sucursales</strong><br><span style="font-size: 12px; color: #56615B;">Big Dutchman</span></span>
+      <span>Estatuto «Sede de un grupo» · «Con mis sucursales o filiales»</span>
+      <span>Sucursales · países de cada una y permisos</span>
+      <span style="color: #1D4E89; font-weight: 500;">Contactar · elige país</span>
+      <span>A la sucursal del país; si no hay, a la Sede</span>
+      <span style="font-size: 12.5px;">005b_LP · Fab-Sucursales<br><span style="color: #56615B;">red, países, permisos, página</span></span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 14px 18px; border-top: 1px solid #EEF1EE; font-size: 13px; align-items: start;">
+      <span><strong style="font-weight: 600;">Sucursal de un grupo</strong><br><span style="font-size: 12px; color: #56615B;">Aviagen Ibérica</span></span>
+      <span>Viene del CRM: «Sucursal de…» · hereda marca, catálogo y especies</span>
+      <span>Tu Sede · no invita a nadie</span>
+      <span style="color: #1D4E89; font-weight: 500;">Contactar con la sucursal</span>
+      <span>A su equipo en la sucursal</span>
+      <span style="font-size: 12.5px;">005c_LP · Sucursal<br><span style="color: #56615B;">aviso a la Sede, tipo heredado</span></span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.25fr 1.1fr 0.95fr 1fr 1.15fr 1.05fr; gap: 14px; padding: 14px 18px; border-top: 1px solid #EEF1EE; font-size: 13px; align-items: start;">
+      <span><strong style="font-weight: 600;">Distribuidor multimarca</strong><br><span style="font-size: 12px; color: #56615B;">NewFarms</span></span>
+      <span>Distribuidor · «Con marcas propias y de otros»</span>
+      <span>Marcas que vendes · cada marca valida</span>
+      <span style="color: #1D4E89; font-weight: 500;">Contactar · delegación</span>
+      <span>A la delegación del país del comprador</span>
+      <span style="font-size: 12.5px;">005d_LP · Distribuidor<br><span style="color: #56615B;">marcas, elegir, subir, validación</span></span>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; font-size: 12.5px; color: #33424C;">
+    <div style="background: #FFFFFF; border: 1px solid #E6EBE7; border-radius: 14px; padding: 12px 14px;"><strong style="font-weight: 600;">Igual para todos</strong><br>CRM, crear organización, verificar email y avisos · especies, rama y mercados · cabecera y objetivos · sobre la empresa · revisar y publicar.</div>
+    <div style="background: #FFFFFF; border: 1px solid #E6EBE7; border-radius: 14px; padding: 12px 14px;"><strong style="font-weight: 600;">Datos del CRM</strong><br>Marca y sociedades vienen del CRM y solo los cambia el superadmin (vista superadmin de la cabecera).</div>
+    <div style="background: #FFF8EC; border: 1px solid #F3DFB8; border-radius: 14px; padding: 12px 14px;"><strong style="font-weight: 600;">Contactos</strong><br>En ningún tipo ve el comprador teléfonos, emails ni webs: cada solicitud abre un hilo en Mensajes.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
