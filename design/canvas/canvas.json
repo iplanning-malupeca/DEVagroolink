@@ -1412,179 +1412,163 @@
   },
   "PrdAviCatalogo.dc.html": {
    "h": 940,
-   "page": "prodsuc",
+   "page": "productos",
    "title": "PS1 · Catálogo de la sucursal: los de la Sede (por activar) y los locales",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 15600
   },
   "PrdAviLocal.dc.html": {
    "h": 940,
-   "page": "prodsuc",
+   "page": "productos",
    "title": "PS3 · Si activas uno de la Sede: tu versión local (Ross 308)",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 15600
   },
   "PrdAviNuevo.dc.html": {
    "h": 940,
-   "page": "prodsuc",
+   "page": "productos",
    "title": "PS2 · «Añadir»: activar los de la Sede, crear uno local o pedirlo a la Sede",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 15600
   },
   "PrdComCatalogo.dc.html": {
    "h": 940,
-   "page": "prodcom",
+   "page": "productos",
    "title": "PC1 · Catálogo: tus productos y quién atiende cada uno",
    "w": 1280,
    "x": 0,
-   "y": 0
-  },
-  "PrdComCatalogoCopia.dc.html": {
-   "h": 940,
-   "page": "prodcom",
-   "title": "PC1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»",
-   "w": 1280,
-   "x": 1360,
-   "y": 1340
-  },
-  "PrdComCatalogoMenu.dc.html": {
-   "h": 940,
-   "page": "prodcom",
-   "title": "PC1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar",
-   "w": 1280,
-   "x": 0,
-   "y": 1340
+   "y": 12920
   },
   "PrdComMercados.dc.html": {
    "h": 940,
-   "page": "prodcom",
+   "page": "productos",
    "title": "PC3 · Último paso de la ficha: mercados y qué comercial atiende cada zona",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 12920
   },
   "PrdComNuevo.dc.html": {
    "h": 940,
-   "page": "prodcom",
+   "page": "productos",
    "title": "PC2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 12920
   },
   "PrdDisCatalogo.dc.html": {
    "h": 940,
-   "page": "proddis",
+   "page": "productos",
    "title": "PD1 · Catálogo: productos de las marcas, subidos por ti y propios",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 16940
   },
   "PrdDisLocal.dc.html": {
    "h": 940,
-   "page": "proddis",
+   "page": "productos",
    "title": "PD3 · Si es de una marca: tu versión local (la ficha de la marca no se edita)",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 16940
   },
   "PrdDisNuevo.dc.html": {
    "h": 940,
-   "page": "proddis",
+   "page": "productos",
    "title": "PD2 · «Añadir producto»: de una marca en Agroolink, de una que no está o propio",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 16940
   },
   "PrdFabAcuerdos.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA5 · De dónde salen esos distribuidores: acuerdos de distribución por línea y zona",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 10240
   },
   "PrdFabCatalogo.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA1 · Catálogo: tus productos y cuántos distribuidores tiene cada uno",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 10240
   },
   "PrdFabCatalogoCopia.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA1c · Tras «Duplicar»: borrador «(copia)» arriba del catálogo y «Editar la copia»",
    "w": 1280,
    "x": 1360,
-   "y": 1340
+   "y": 11580
   },
   "PrdFabCatalogoMenu.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA1b · Menú ⋯ de un producto: Editar, Duplicar, Ocultar y Archivar",
    "w": 1280,
    "x": 0,
-   "y": 1340
+   "y": 11580
   },
   "PrdFabMercados.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA4 · Último paso de la ficha: mercados y qué distribuidor lo vende en cada país",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 10240
   },
   "PrdFabNuevo.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA2 · «Nuevo producto»: crear la ficha, importar (solo superadmin) o duplicar",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 10240
   },
   "PrdSucActivacion.dc.html": {
    "h": 940,
-   "page": "prodsede",
+   "page": "productos",
    "title": "PB4 · Después: qué ha activado cada sucursal",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 14260
   },
   "PrdSucCatalogo.dc.html": {
    "h": 940,
-   "page": "prodsede",
+   "page": "productos",
    "title": "PB1 · Catálogo de la Sede: en cuántas sucursales está activado cada producto",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 14260
   },
   "PrdSucLocal.dc.html": {
    "h": 940,
-   "page": "prodsede",
+   "page": "productos",
    "title": "PB5 · Lado de la sucursal (Big Dutchman México): activa el producto y añade su versión local",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 14260
   },
   "PrdSucMercados.dc.html": {
    "h": 940,
-   "page": "prodsede",
+   "page": "productos",
    "title": "PB3 · Último paso de la ficha: mercados y qué sucursal lo vende en cada país",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 14260
   },
   "PrdSucNuevo.dc.html": {
    "h": 940,
-   "page": "prodsede",
+   "page": "productos",
    "title": "PB2 · «Nuevo producto»: la Sede crea la ficha base",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 14260
   },
   "Precios.dc.html": {
    "h": 2340,
@@ -1869,11 +1853,11 @@
   },
   "ProdImportar.dc.html": {
    "h": 940,
-   "page": "prodfab",
+   "page": "productos",
    "title": "PA3 · Importaciones (solo superadmin): carga masiva del catálogo por Excel; actualiza por referencia interna",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 10240
   },
   "ProdTradDesact.dc.html": {
    "h": 2060,
@@ -2910,66 +2894,57 @@
   },
   "prodcomT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "prodcom",
-   "text": "Productos de un fabricante con equipo comercial — Zucami. 1 Catálogo → 2 Nuevo producto (la ficha en «011_Alta de producto») → 3 Mercados y quién lo atiende",
+   "maxW": 4000,
+   "page": "productos",
+   "text": "Productos de un fabricante con equipo comercial — Zucami. 1 Catálogo → 2 Nuevo producto (la ficha en «011_Alta de producto») → 3 Mercados y quién lo atiende · Editar y duplicar, como en 011a (DSM).",
    "w": 240,
    "x": 0,
-   "y": -300
-  },
-  "prodcomT2": {
-   "kind": "title1",
-   "maxW": 6800,
-   "page": "prodcom",
-   "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a comerciales o solicitudes, eliges si avisar",
-   "w": 240,
-   "x": 0,
-   "y": 1040
+   "y": 12620
   },
   "proddisT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "proddis",
+   "maxW": 4000,
+   "page": "productos",
    "text": "Productos de un distribuidor — NewFarms. 1 Catálogo → 2 Añadir producto (elegir y subir: ver «010_Alta · Distribuidor multimarca») → 3 Versión local",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 16640
   },
   "prodfabT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "prodfab",
+   "maxW": 6720,
+   "page": "productos",
    "text": "Productos de un fabricante con distribuidores — DSM-Firmenich. 1 Catálogo → 2 Nuevo producto → 3 Importaciones (solo superadmin: carga masiva por Excel) o crear la ficha en «011_Alta de producto» → 4 Mercados → 5 Acuerdos de distribución",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 9940
   },
   "prodfabT2": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "prodfab",
+   "maxW": 2640,
+   "page": "productos",
    "text": "Editar y duplicar desde el catálogo · «Editar» abre la edición por bloques de «011_Alta de producto» (K3–K6): si el cambio afecta a distribuidores o solicitudes, eliges si avisar",
    "w": 240,
    "x": 0,
-   "y": 1040
+   "y": 11280
   },
   "prodsedeT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "prodsede",
+   "maxW": 6720,
+   "page": "productos",
    "text": "Productos de una Sede con sucursales — Big Dutchman. 1 Catálogo de la Sede → 2 Nuevo producto (ficha base) → 3 Mercados → 4 Activación por sucursal → 5 La sucursal lo activa y lo adapta",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 13960
   },
   "prodsucT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "prodsuc",
+   "maxW": 4000,
+   "page": "productos",
    "text": "Productos de una sucursal — Aviagen Ibérica. 1 Catálogo → 2 Añadir (activar de la Sede, local o pedirlo) → 3 Versión local",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 15300
   },
   "proyDev1": {
    "fill": "orange",
@@ -3153,6 +3128,15 @@
    "x": 0,
    "y": 9080,
    "text": "Distribuidor multimarca (NewFarms) — solo lo propio: marcas (X2) · añadir productos que ya existen (X3) · subir uno nuevo (X4) · validación de la marca (X5) · delegaciones (X6). · y sus hilos de Mensajes."
+  },
+  "catT": {
+   "kind": "title1",
+   "maxW": 6720,
+   "page": "productos",
+   "w": 240,
+   "x": 0,
+   "y": 9600,
+   "text": "Catálogo según el tipo de empresa — debajo, una fila por tipo: fabricante con distribuidores (DSM), con comerciales (Zucami), Sede con sucursales (Big Dutchman), sucursal (Aviagen Ibérica) y distribuidor multimarca (NewFarms)"
   }
  },
  "order": [
@@ -3403,8 +3387,6 @@
   "ProdEdDesdeRevision.dc.html",
   "PrdFabCatalogoMenu.dc.html",
   "PrdFabCatalogoCopia.dc.html",
-  "PrdComCatalogoMenu.dc.html",
-  "PrdComCatalogoCopia.dc.html",
   "MsgFabDistribuidor.dc.html",
   "MsgComSolicitud.dc.html",
   "MsgComInterno.dc.html",
@@ -3530,27 +3512,7 @@
   },
   {
    "id": "productos",
-   "name": "011_Alta de producto"
-  },
-  {
-   "id": "prodfab",
-   "name": "011a_Productos · Fabricante con distribuidores (DSM-Firmenich)"
-  },
-  {
-   "id": "prodcom",
-   "name": "011b_Productos · Fabricante con comerciales (Zucami)"
-  },
-  {
-   "id": "prodsede",
-   "name": "011c_Productos · Sede con sucursales (Big Dutchman)"
-  },
-  {
-   "id": "prodsuc",
-   "name": "011d_Productos · Sucursal de un grupo (Aviagen Ibérica)"
-  },
-  {
-   "id": "proddis",
-   "name": "011e_Productos · Distribuidor multimarca (NewFarms)"
+   "name": "011_LP_Productos"
   },
   {
    "id": "altaserv",
