@@ -109,12 +109,12 @@ class Component extends DCLogic {
       it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })
     ]};
     const experta = { titulo: 'COMO EXPERTA', chip: 'Público', chipFondo: '#F1EEFB', chipTinta: '#4B3BA6', items: [
-      it('Panel de experta', I.dash, { lila: true }), conSubs(it('Oportunidades', I.target, { lila: true, badge: '3', badgeFondo: '#4B3BA6' }), [['Para ti', '3'], ['Todas', ''], ['Mis candidaturas', '1'], ['Adjudicadas', '']]), it('Consultas recibidas', I.inbox, { lila: true, badge: '1', badgeFondo: '#4B3BA6' }),
-      it('Mis servicios', I.layers, { lila: true, meta: '1 de 2' }), it('Perfil de experta', I.grad, { lila: true })
+      it('Panel de experta', I.dash, { lila: true }), conSubs(it('Oportunidades', I.target, { lila: true, badge: '3', badgeFondo: '#4B3BA6' }), [['Para ti', '3'], ['Todas', ''], ['Mis candidaturas', ''], ['Adjudicadas', '']]), it('Consultas recibidas', I.inbox, { lila: true, badge: '1', badgeFondo: '#4B3BA6' }),
+      it('Mis servicios', I.layers, { lila: true, meta: '1 de 1' }), it('Perfil de experta', I.grad, { lila: true })
     ]};
     const empresa = { titulo: (this.props.empresa ?? 'AgroExport SRL').toUpperCase(), chip: 'Empresa', chipFondo: '#E9F0F9', chipTinta: '#1D4E89', items: [
       it('Panel', I.dash), conSubs(it('Oportunidades', I.target, { badge: '6', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), [['Recomendadas', '6'], ['Todas', ''], ['Mis propuestas', '2'], ['Adjudicadas', '']]), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mensajes', I.msg),
-      it('Productos', I.pkg, { meta: '1 de 15' }), it('Perfil de empresa', I.bldg), it('Estadísticas', I.chart), it('Equipo', I.users, { meta: '1 de 2' })
+      it('Productos', I.pkg, { meta: '1 de 15' }), it('Perfil de empresa', I.bldg), it('Estadísticas', I.chart), it('Equipo', I.users, { meta: '3' }), it('Plan y facturación', I.card, { meta: 'Gratis' })
     ]};
     const cuenta = { titulo: 'MI CUENTA', chip: 'Global', chipFondo: '#EEF0F3', chipTinta: '#4A5560', items: [
       it('Mi perfil', I.user), it('Facturación', I.card), it('Idioma y zona', I.globe), it('Ayuda y contacto', I.help)
@@ -122,11 +122,11 @@ class Component extends DCLogic {
     let secciones, plan;
     if (modo === 'empresa') {
       secciones = [empresa, cuenta];
-      plan = { planEtiqueta: 'Plan de empresa', plan: 'Gratis', planTexto: 'Más productos, miembros y oportunidades con Empresa Pro.', planBoton: 'Ver planes de empresa', planFondo: '#F1F5FB', planBorde: '#DCE6F3', planAcento: '#1D4E89' };
+      plan = { planEtiqueta: 'Plan de empresa', plan: 'Gratis', planTexto: 'Todas las solicitudes, más productos y estadísticas avanzadas con Empresa Pro.', planBoton: 'Ver planes de empresa', planFondo: '#F1F5FB', planBorde: '#DCE6F3', planAcento: '#1D4E89' };
     } else if (morado) {
       espacio.items = espacio.items.filter(x => ['Historial', 'Mis comparaciones', 'Mis proyectos'].indexOf(x.label) < 0);
       secciones = [espacio, experta, cuenta];
-      plan = { planEtiqueta: 'Plan actual', plan: 'Experta Gratis', planTexto: 'Servicios y consultas ilimitados con Experto Pro.', planBoton: 'Cambiar de plan', planFondo: '#F6F4FC', planBorde: '#E3DDF6', planAcento: '#4B3BA6' };
+      plan = { planEtiqueta: 'Plan actual', plan: 'Experta Gratis', planTexto: 'Candidaturas y servicios sin límite con Experto Pro.', planBoton: 'Cambiar de plan', planFondo: '#F6F4FC', planBorde: '#E3DDF6', planAcento: '#4B3BA6' };
     } else {
       secciones = [espacio, cuenta];
       plan = { planEtiqueta: 'Plan actual', plan: 'Gratis', planTexto: 'Accede a más funcionalidades con un plan Pro.', planBoton: 'Cambiar de plan', planFondo: '#F2F7F3', planBorde: '#E1ECE4', planAcento: '#0E5A3A' };

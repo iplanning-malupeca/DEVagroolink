@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Menú lateral</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3}
+.ni{display:flex;align-items:center;gap:14px;height:40px;padding:0 12px;border-radius:10px;font-size:14.5px;color:#17231D;text-decoration:none;border-left:3px solid transparent}
+.ni:hover{background:#F2F6F3}
+</style>
+</helmet>
+<nav aria-label="Menú de usuario" style="width: 256px; height: {{ alto }}; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #E3E8E4; padding: 22px 18px 18px; display: flex; flex-direction: column; font-family: 'Poppins', sans-serif; color: #17231D;">
+  <sc-for list="{{ secciones }}" as="s" hint-placeholder-count="2">
+    <div style="display: flex; flex-direction: column; gap: 2px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid #EEF1EE;">
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: #17231D; padding: 0 12px 8px;">{{ s.titulo }}<sc-if value="{{ s.chip }}" hint-placeholder-val="{{ false }}"><span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0; color: {{ s.chipTinta }}; background: {{ s.chipFondo }}; border-radius: 999px; padding: 1px 8px;">{{ s.chip }}</span></sc-if></div>
+      <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="5">
+        <a href="#" class="ni" aria-current="{{ it.current }}" style="height: {{ it.h }}; background: {{ it.fondo }}; border-left-color: {{ it.borde }}; font-weight: {{ it.peso }}; color: {{ it.tinta }};">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="{{ it.d }}"/></svg>
+          <span style="flex: 1;">{{ it.label }}</span>
+          <sc-if value="{{ it.badge }}" hint-placeholder-val="{{ false }}"><span style="min-width: 22px; height: 22px; box-sizing: border-box; padding: 0 6px; border-radius: 999px; background: {{ it.badgeFondo }}; color: {{ it.badgeTinta }}; font-size: 11.5px; font-weight: 600; display: flex; align-items: center; justify-content: center;">{{ it.badge }}</span></sc-if>
+          <sc-if value="{{ it.meta }}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #56615B;">{{ it.meta }}</span></sc-if>
+          <sc-if value="{{ it.tieneSubs }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="{{ it.flecha }}"/></svg></sc-if>
+        </a>
+        <sc-if value="{{ it.abierto }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 1px; margin: 2px 0 4px; padding-left: 26px;">
+            <sc-for list="{{ it.subs }}" as="sb" hint-placeholder-count="3">
+              <a href="#" aria-current="{{ sb.current }}" style="display: flex; align-items: center; height: 30px; padding: 0 10px 0 21px; border-left: 2px solid {{ sb.borde }}; font-size: 13px; text-decoration: none; color: {{ sb.tinta }}; font-weight: {{ sb.peso }};"><span style="flex: 1;">{{ sb.label }}</span><sc-if value="{{ sb.n }}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; color: #56615B;">{{ sb.n }}</span></sc-if></a>
+            </sc-for>
+          </div>
+        </sc-if>
+      </sc-for>
+    </div>
+  </sc-for>
+
+  <div style="flex: 1;"></div>
+  <div style="background: {{ planFondo }}; border: 1px solid {{ planBorde }}; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5z" fill="#F2B530" stroke="#D99A12" stroke-width="1" stroke-linejoin="round"/></svg>
+      <span style="display: flex; flex-direction: column;"><span style="font-size: 12.5px; color: #4A5650;">{{ planEtiqueta }}</span><span style="font-size: 18px; font-weight: 600;">{{ plan }}</span></span>
+    </div>
+    <span style="font-size: 12.5px; color: #4A5650; line-height: 1.32;">{{ planTexto }}</span>
+    <a href="#" style="height: 40px; margin-top: 4px; border-radius: 10px; border: 1.5px solid {{ planAcento }}; color: {{ planAcento }}; font-size: 13.5px; font-weight: 500; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">{{ planBoton }} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <sc-if value="{{ lema }}" hint-placeholder-val="{{ true }}"><div style="display: flex; align-items: center; gap: 10px; padding: 14px 4px 0; font-size: 12.5px; color: #56615B; line-height: 1.3;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E8B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 21v-9M12 12C12 7 8 5 4 5c0 5 3 7 8 7zM12 10c0-4 3-6 8-6 0 4-3 6-8 6z"/></svg>
+    Hagamos crecer juntos el sector ganadero.
+  </div></sc-if>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"modo":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"activo":{"editor":"text","default":"Mi espacio"},"alto":{"editor":"int","default":832},"sub":{"editor":"text","default":""},"empresa":{"editor":"text","default":"AgroExport SRL"},"$preview":{"width":256,"height":832}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const modo = this.props.modo ?? 'personal';
+    const activo = this.props.activo ?? 'Mi espacio';
+    const I = {
+      home: 'M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z',
+      file: 'M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6',
+      grid: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
+      comp: 'M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM12 4v16',
+      hist: 'M3 12a9 9 0 1 0 2.64-6.36L3 8M3 3v5h5M12 7v5l3 2',
+      msg: 'M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM3.5 6.5l8.5 6 8.5-6',
+      user: 'M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0',
+      gear: 'M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1',
+      globe: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18',
+      card: 'M3 6h18v12H3zM3 10h18M7 15h4',
+      target: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zM12 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2z',
+      help: 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01',
+      dash: 'M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z',
+      inbox: 'M4 13h4l2 3h4l2-3h4M5 5h14l2 8v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z',
+      layers: 'm12 3 9 5-9 5-9-5zM3 13l9 5 9-5',
+      pkg: 'M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8',
+      bldg: 'M5 3h14v18H5zM9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2',
+      chart: 'M4 19V9M10 19V5M16 19v-7M22 19H2',
+      users: 'M9 4.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM2 20a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a7 7 0 0 1 4 6',
+      grad: 'M22 9 12 4 2 9l10 5zM6 11v5c3 2 9 2 12 0v-5'
+    };
+    const morado = modo === 'experta';
+    const it = (label, d, extra) => {
+      const on = label === activo;
+      const lila = extra && extra.lila;
+      const azul = modo === 'empresa';
+      return Object.assign({
+        label: label, d: d, badge: '', meta: '',
+        badgeFondo: '#E5484D', badgeTinta: '#FFFFFF',
+        current: on ? 'page' : 'false',
+        fondo: on ? (lila ? '#F1EEFB' : (azul ? '#E9F0F9' : '#EEF6EE')) : 'transparent',
+        borde: on ? (lila ? '#4B3BA6' : (azul ? '#1D4E89' : '#0E5A3A')) : 'transparent',
+        peso: on ? '600' : '400',
+        tinta: on ? (lila ? '#4B3BA6' : (azul ? '#1D4E89' : '#0E5A3A')) : '#17231D',
+        h: morado ? '37px' : '40px'
+      }, extra || {});
+    };
+    const sub = this.props.sub ?? '';
+    const conSubs = (x, subs) => {
+      const acc = x.lila ? '#4B3BA6' : (modo === 'empresa' ? '#1D4E89' : '#0E5A3A');
+      const abierto = x.current === 'page';
+      return Object.assign(x, { tieneSubs: true, abierto: abierto, flecha: abierto ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6',
+        subs: subs.map(([l, n]) => { const on = l === sub; return { label: l, n: n, current: on ? 'page' : 'false', borde: on ? acc : '#E3E8E4', tinta: on ? acc : '#4A5650', peso: on ? '600' : '400' }; }) });
+    };
+    const espacio = { titulo: 'MI ESPACIO', chip: '', items: [
+      it('Mi espacio', I.home), it('Mis proyectos', I.file, { badge: 'Nuevo', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mis tableros', I.grid),
+      it('Mis comparaciones', I.comp), it('Historial', I.hist), it('Mensajes', I.msg, { badge: '3' })
+    ]};
+    const experta = { titulo: 'COMO EXPERTA', chip: 'Público', chipFondo: '#F1EEFB', chipTinta: '#4B3BA6', items: [
+      it('Panel de experta', I.dash, { lila: true }), conSubs(it('Oportunidades', I.target, { lila: true, badge: '3', badgeFondo: '#4B3BA6' }), [['Para ti', '3'], ['Todas', ''], ['Mis candidaturas', ''], ['Adjudicadas', '']]), it('Consultas recibidas', I.inbox, { lila: true, badge: '1', badgeFondo: '#4B3BA6' }),
+      it('Mis servicios', I.layers, { lila: true, meta: '1 de 1' }), it('Perfil de experta', I.grad, { lila: true })
+    ]};
+    const empresa = { titulo: (this.props.empresa ?? 'AgroExport SRL').toUpperCase(), chip: 'Empresa', chipFondo: '#E9F0F9', chipTinta: '#1D4E89', items: [
+      it('Panel', I.dash), conSubs(it('Oportunidades', I.target, { badge: '6', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), [['Recomendadas', '6'], ['Todas', ''], ['Mis propuestas', '2'], ['Adjudicadas', '']]), it('Solicitudes', I.inbox, { badge: '4', badgeFondo: '#B5D334', badgeTinta: '#17231D' }), it('Mensajes', I.msg),
+      it('Productos', I.pkg, { meta: '1 de 15' }), it('Perfil de empresa', I.bldg), it('Estadísticas', I.chart), it('Equipo', I.users, { meta: '3' }), it('Plan y facturación', I.card, { meta: 'Gratis' })
+    ]};
+    const cuenta = { titulo: 'MI CUENTA', chip: 'Global', chipFondo: '#EEF0F3', chipTinta: '#4A5560', items: [
+      it('Mi perfil', I.user), it('Facturación', I.card), it('Idioma y zona', I.globe), it('Ayuda y contacto', I.help)
+    ]};
+    let secciones, plan;
+    if (modo === 'empresa') {
+      secciones = [empresa, cuenta];
+      plan = { planEtiqueta: 'Plan de empresa', plan: 'Gratis', planTexto: 'Todas las solicitudes, más productos y estadísticas avanzadas con Empresa Pro.', planBoton: 'Ver planes de empresa', planFondo: '#F1F5FB', planBorde: '#DCE6F3', planAcento: '#1D4E89' };
+    } else if (morado) {
+      espacio.items = espacio.items.filter(x => ['Historial', 'Mis comparaciones', 'Mis proyectos'].indexOf(x.label) < 0);
+      secciones = [espacio, experta, cuenta];
+      plan = { planEtiqueta: 'Plan actual', plan: 'Experta Gratis', planTexto: 'Candidaturas y servicios sin límite con Experto Pro.', planBoton: 'Cambiar de plan', planFondo: '#F6F4FC', planBorde: '#E3DDF6', planAcento: '#4B3BA6' };
+    } else {
+      secciones = [espacio, cuenta];
+      plan = { planEtiqueta: 'Plan actual', plan: 'Gratis', planTexto: 'Accede a más funcionalidades con un plan Pro.', planBoton: 'Cambiar de plan', planFondo: '#F2F7F3', planBorde: '#E1ECE4', planAcento: '#0E5A3A' };
+    }
+    return Object.assign({ secciones: secciones, alto: (this.props.alto ?? 832) + 'px', lema: secciones.every(x => x.items.every(y => !y.abierto)) && (!morado || (this.props.alto ?? 832) >= 900) }, plan);
+  }
+}
+</script>
+</body>
+</html>

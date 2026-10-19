@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet empresa · Plan y facturación</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#1D4E89;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box;min-width:0}
+.h2{margin:0;font-size:16px;font-weight:600}
+.hint{font-size:12px;color:#56615B}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #EEF1EE;font-size:13px}
+.av{width:36px;height:36px;border-radius:50%;background:#E9F0F9;color:#1D4E89;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#EEF6EE;color:#0E5A3A}.wn{background:#FFF4E0;color:#7A4B00}.gr{background:#F1F3F6;color:#4A5560}.az{background:#E9F0F9;color:#1D4E89}.er{background:#FDECEA;color:#A3271B}
+.chip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 13px;border:1px solid #D5DED8;border-radius:999px;background:#FFFFFF;font-size:12.5px;white-space:nowrap;color:#17231D}
+.chip.on{background:#1D4E89;border-color:#1D4E89;color:#FFFFFF}
+.btn{height:38px;padding:0 16px;border-radius:10px;border:1.5px solid #1D4E89;color:#1D4E89;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;background:#1D4E89;color:#FFFFFF;font-size:13px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.nota{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#F4F7FB;border:1px solid #E2E8F0;font-size:12.5px;color:#33424C}
+.pro{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#FFF8EC;border:1px solid #F3DFB8;font-size:12.5px;color:#33424C}
+.th{display:grid;gap:12px;padding:0 0 8px;font-size:11px;font-weight:600;letter-spacing:.04em;color:#56615B}
+.tr{display:grid;gap:12px;align-items:center;padding:11px 0;border-top:1px solid #EEF1EE;font-size:13px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 980px; background: #F6F8F6; position: relative; overflow: hidden;">
+  <div style="display: flex; padding-top: 68px; height: 980px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="empresa" activo="Plan y facturación" alto="912" hint-size="256px,912px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 22px 28px; display: flex; flex-direction: column; gap: 16px;"><div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1; min-width: 0;"><div style="font-size: 13px; color: #56615B;">AgroExport SRL › Plan y facturación</div><h1 style="margin: 2px 0 0; font-size: 28px; font-weight: 600;">Plan y facturación</h1><p style="margin: 2px 0 0; font-size: 13.5px; color: #4A5650;">Qué incluye tu plan y qué ganas al cambiar. Lo que pagas a Agroolink se factura a la sociedad del CRM.</p></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="flex: 1; min-width: 0;"><section class="card" style="gap: 0;"><div style="display: grid; gap: 12px; grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr)); padding-bottom: 12px;"><span></span><span style="display: flex; flex-direction: column; gap: 4px; padding: 14px; border-radius: 14px; border: 2px solid #1D4E89; background: #F3F7FC;"><span style="display: flex; justify-content: space-between; align-items: center;"><strong style="font-size: 16px;">Empresa Gratis</strong><span class="st az">Tu plan</span></span><span style="font-size: 20px; font-weight: 600;">0 €</span><span class="hint">Sin tarjeta</span></span><span style="display: flex; flex-direction: column; gap: 4px; padding: 14px; border-radius: 14px; border: 1px solid #E3E8E4; background: #FFFFFF;"><span style="display: flex; justify-content: space-between; align-items: center;"><strong style="font-size: 16px;">Empresa Pro</strong></span><span style="font-size: 20px; font-weight: 600;">79 €/mes</span><span class="hint">Sin permanencia</span><a href="#" class="btnp" style="margin-top: 6px; height: 36px;">Pasar a Pro</a></span><span style="display: flex; flex-direction: column; gap: 4px; padding: 14px; border-radius: 14px; border: 1px solid #E3E8E4; background: #FFFFFF;"><span style="display: flex; justify-content: space-between; align-items: center;"><strong style="font-size: 16px;">Empresa Premium</strong></span><span style="font-size: 20px; font-weight: 600;">199 €/mes</span><span class="hint">Sin permanencia</span><a href="#" class="btn" style="margin-top: 6px; height: 36px;">Pasar a Premium</a></span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Solicitudes de compradores</span><span style="font-weight: 600;">De 3 compradores</span><span>Ilimitadas</span><span>Ilimitadas</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Productos publicados</span><span style="font-weight: 600;">15</span><span>100</span><span>Ilimitados</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Miembros del equipo</span><span style="font-weight: 600;">Ilimitados</span><span>Ilimitados</span><span>Ilimitados</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Solicitudes organizadas (estados, notas)</span><span style="font-weight: 600;">—</span><span>Sí</span><span>Sí</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Oportunidades (proyectos)</span><span style="font-weight: 600;">Solo el número</span><span>2 al mes</span><span>Ilimitadas + encaje</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Estadísticas</span><span style="font-weight: 600;">Básicas</span><span>Avanzadas</span><span>Avanzadas + comparativa</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Contenido vinculado</span><span style="font-weight: 600;">—</span><span>5 al mes</span><span>Ilimitado</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Destacar productos</span><span style="font-weight: 600;">—</span><span>Extra de pago</span><span>4 al mes</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Adjuntos en propuestas y mensajes</span><span style="font-weight: 600;">—</span><span>—</span><span>Sí · revisados</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Exportar informes de solicitudes</span><span style="font-weight: 600;">—</span><span>—</span><span>Sí</span></div><div class="tr" style="grid-template-columns: minmax(0,1.6fr) repeat(3, minmax(0,1fr));"><span>Gestor de cuenta</span><span style="font-weight: 600;">—</span><span>—</span><span>Sí</span></div></section></div><aside style="width: 300px; flex: none; display: flex; flex-direction: column; gap: 14px;"><section class="card" style="gap: 6px;"><h2 class="h2">Facturación de la empresa</h2><span style="font-size: 13px; color: #33424C;">Aún no hay facturas: estás en Empresa Gratis.</span><div class="row"><span class="hint" style="flex: 1;">Se factura a</span><strong style="font-weight: 500; text-align: right;">AgroExport SRL<br><span class="hint">sociedad del CRM</span></strong></div><span class="hint">Los datos fiscales vienen del CRM y solo los cambia el superadmin. <a href="#">Pedir un cambio</a></span></section><section class="card" style="gap: 6px;"><h2 class="h2">Sucursales y filiales</h2><span style="font-size: 13px; color: #33424C;">El alta de sucursales es gratis. Para un grupo con varias, un plan de grupo a medida.</span><a href="#" style="font-size: 12.5px;">Pedir plan de grupo →</a></section><div class="nota"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 8v5M12 16h.01"/></svg><span>Sin permanencia: si cancelas, sigues con el plan hasta el final del periodo pagado.</span></div></aside></div></main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" persona="Carla M." iniciales="CM" color="#1D4E89" variante="empresa" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":980}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

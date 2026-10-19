@@ -1954,6 +1954,38 @@
    "page": "altacomun",
    "x": 0,
    "y": 2680
+  },
+  "EmpSolicitudes.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "intusuario",
+   "x": 0,
+   "y": 8700,
+   "title": "EM5 · Solicitudes de la empresa: todas, quién las atiende, reasignar y lo guardado hasta Pro"
+  },
+  "EmpEquipo.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "intusuario",
+   "x": 1360,
+   "y": 8700,
+   "title": "EM6 · Equipo: miembros sin límite, roles e invitar"
+  },
+  "EmpEstadisticas.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "intusuario",
+   "x": 2720,
+   "y": 8700,
+   "title": "EM7 · Estadísticas: búsquedas, visitas, solicitudes y productos (avanzadas con Pro)"
+  },
+  "EmpPlan.dc.html": {
+   "w": 1280,
+   "h": 980,
+   "page": "intusuario",
+   "x": 4080,
+   "y": 8700,
+   "title": "EM8 · Plan y facturación de la empresa: Gratis, Pro y Premium"
   }
  },
  "createdOnFiles": {
@@ -2503,6 +2535,15 @@
    "x": 0,
    "y": 9600,
    "text": "Catálogo según el tipo de empresa — debajo, una fila por tipo: fabricante con distribuidores (DSM), con comerciales (Zucami), Sede con sucursales (Big Dutchman), sucursal (Aviagen Ibérica) y distribuidor multimarca (NewFarms)"
+  },
+  "iemGestion": {
+   "kind": "title1",
+   "maxW": 5360,
+   "page": "intusuario",
+   "w": 240,
+   "x": 0,
+   "y": 8400,
+   "text": "COMO EMPRESA · el día a día: solicitudes de la empresa · equipo · estadísticas · plan y facturación"
   }
  },
  "order": [
@@ -2749,7 +2790,11 @@
   "EmpEditarFicha.dc.html",
   "EmpEditarBloque.dc.html",
   "EmpEditarAvisar.dc.html",
-  "AltaMatices.dc.html"
+  "AltaMatices.dc.html",
+  "EmpSolicitudes.dc.html",
+  "EmpEquipo.dc.html",
+  "EmpEstadisticas.dc.html",
+  "EmpPlan.dc.html"
  ],
  "pages": [
   {

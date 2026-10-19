@@ -1547,6 +1547,38 @@
    "x": 940,
    "y": 12310,
    "title": "PD3 · Versión local (Hy-D®)"
+  },
+  "MB_EmpSolicitudes.dc.html": {
+   "w": 390,
+   "h": 1040,
+   "page": "mb7",
+   "x": 1880,
+   "y": 4738,
+   "title": "EM5 · Solicitudes de la empresa"
+  },
+  "MB_EmpEquipo.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb7",
+   "x": 2350,
+   "y": 4738,
+   "title": "EM6 · Equipo"
+  },
+  "MB_EmpEstadisticas.dc.html": {
+   "w": 390,
+   "h": 1100,
+   "page": "mb7",
+   "x": 2820,
+   "y": 4738,
+   "title": "EM7 · Estadísticas"
+  },
+  "MB_EmpPlan.dc.html": {
+   "w": 390,
+   "h": 1140,
+   "page": "mb7",
+   "x": 3290,
+   "y": 4738,
+   "title": "EM8 · Plan y facturación"
   }
  },
  "createdOnFiles": {
@@ -2015,7 +2047,11 @@
   "MB_CatSuc_Local.dc.html",
   "MB_CatDis_Catalogo.dc.html",
   "MB_CatDis_Nuevo.dc.html",
-  "MB_CatDis_Local.dc.html"
+  "MB_CatDis_Local.dc.html",
+  "MB_EmpSolicitudes.dc.html",
+  "MB_EmpEquipo.dc.html",
+  "MB_EmpEstadisticas.dc.html",
+  "MB_EmpPlan.dc.html"
  ],
  "pages": [
   {
