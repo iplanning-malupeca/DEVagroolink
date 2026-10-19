@@ -43,7 +43,8 @@ FILAS = [
  ('003_MB_Alta_usuario', 'Alta de usuario en móvil (versión de 003_LP_Alta_usuario): los diálogos pasan a pantalla completa · tools/alta_usuario_movil.py', 'own', [('MB_Alta1_Email', '1 · Accede con tu email'), ('MB_Alta2_Codigo', '2a · Ya registrado: código por email'), ('MB_Alta2b_SinCuenta', '2b · Todavía no tienes cuenta (→ registro de Agrinews)'), ('MB_Alta3_Intereses', '4 · Tus intereses (solo la 1.ª vez)'), ('MB_Alta4_Empezar', '5 · ¿Cómo quieres empezar?'), ('MB_Alta4b_Empresa', '5b · «Represento una empresa» elegida'), ('MB_Alta5_Creada', '6 · Cuenta lista'), ('MB_Alta5b_Empresa', '6b · Cuenta lista → seguir con la empresa'), ('MB_Alta6_MiEspacio', '7 · Mi espacio (primer inicio)'), ('MB_Alta7_Consulta', '8 · Primera consulta')]),
  ('003a_MB_Alta_Experto', 'Alta de experto en móvil (versión de 003a_LP_Alta_Experto) · tools/alta_experto_movil.py', 'own', [('MB_Exp1_Empezar', 'X1 · ¿Cómo quieres empezar? → Soy experto'), ('MB_Exp2_Creada', 'X2 · Cuenta creada → perfil de experto'), ('MB_Exp3_Especialidad', 'X3 · Paso 1 · Especialidad y zona'), ('MB_Exp4_Servicios', 'X4 · Paso 2 · Servicios: abre el asistente de MB_05'), ('MB_Exp5_Publicar', 'X5 · Paso 3 · Revisar y publicar'), ('MB_Exp6_Publicado', 'X6 · Perfil publicado'), ('MB_Exp7_Semana', 'X7 · Mi espacio como experta, primera semana'), ('MB_ExpP1_Aviso', 'P1 · De comprador a experta: aviso en Mi espacio'), ('MB_ExpP2_Intro', 'P2 · «Ofrecer mis servicios»: qué cambia (luego X3–X5)')]),
  ('004b_MB_Intranet · Empresa', 'Intranet de empresa en móvil · Editar ficha de empresa (prototipo alta-empresa) · tools/captura_empresa_editar.js', 'cap', [('MB_EmpPanel', 'Panel de empresa (EM1)', 'MB_EmpPanel', 'own'), ('EEM1', 'Editar ficha de empresa por bloques'), ('EEM2', 'Cambiar un bloque'), ('EEM3', 'Antes de guardar: aviso')]),
- ('005_MB_Alta empresa_Fab-Dist', 'Fab-Dist en móvil: lo propio de este caso que no está en MB_06 (el resto del alta está allí) · tools/fabdist_movil.py', 'own', [('MB_FD_Distribuidores', 'D4 · Distribuidores (paso 4 de 8)'), ('MB_FD_FichaDistribuidores', 'Ficha · pestaña Distribuidores, como la ve el comprador'), ('MB_FD_Expertos', 'D5 · Expertos recomendados (paso 5)'), ('MB_FD_Contenidos', 'D6 · Contenidos y Agrinews (paso 6)'), ('MB_FD_AvisoEmpresa', 'D0c · Aviso a los administradores de la empresa'), ('MB_FD_AvisoAdmin', 'D0d · Altas de miembros (superadmin)')])]
+ ('005_MB_Alta empresa_Fab-Dist', 'Fab-Dist en móvil: lo propio de este caso que no está en MB_06 (el resto del alta está allí) · tools/fabdist_movil.py', 'own', [('MB_FD_Distribuidores', 'D4 · Distribuidores (paso 4 de 8)'), ('MB_FD_FichaDistribuidores', 'Ficha · pestaña Distribuidores, como la ve el comprador'), ('MB_FD_Expertos', 'D5 · Expertos recomendados (paso 5)'), ('MB_FD_Contenidos', 'D6 · Contenidos y Agrinews (paso 6)'), ('MB_FD_AvisoEmpresa', 'D0c · Aviso a los administradores de la empresa'), ('MB_FD_AvisoAdmin', 'D0d · Altas de miembros (superadmin)')]),
+ ('004_MB_Intranet · Usuario', 'Intranet de usuario en móvil (una tira por apartado) · el menú «Tú» es M4 (000_MB_Header) y Mis proyectos es 001_MB_Proyectos · tools/usuario_movil.py', 'own', [('MB_UsrTiraEspacio', 'Mi espacio · Mensajes · conversación'), ('MB_UsrTiraTableros', 'Mis tableros · comparaciones · historial'), ('MB_UsrTiraCuenta', 'Mi perfil · Idioma y zona · Ayuda'), ('MB_UsrTiraFacturacion', 'Facturación: resumen · planes · pedidos · detalle · facturas · pagos · direcciones')])]
 MBP = lambda pg: pg == 'movil2' or str(pg).startswith('mb')
 for k in [k for k, b in B.items() if MBP(b.get('page'))]: del B[k]
 c['order'] = [k for k in c['order'] if k in B]
@@ -55,18 +56,20 @@ c['pages'] = [p for p in c['pages'] if not MBP(p['id'])]
 for r, (pag, tit, modo, items) in enumerate(FILAS):
     pid = 'mb%d' % (r + 1); c['pages'].insert(pos + r, {'id': pid, 'name': nombres.get(pid, pag)})
     c['notes']['mbt%d' % r] = {'kind': 'title1', 'maxW': 8000, 'page': pid, 'w': 240, 'x': 0, 'y': -300, 'text': tit}
+    xx = 0
     for i, it in enumerate(items):
         src, t = it[0], it[1]
         key = it[2] if len(it) > 2 else (src if modo == 'own' else 'MB_' + src)
         if modo == 'own' or (len(it) > 3 and it[3] == 'own'):
-            w = 390; m = re.search(r'"height":(\d+)', open(DEST + key + '.dc.html').read()); h = int(m.group(1)) if m else 844
-            B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': i * 470, 'y': 0, 'title': t}; c['order'].append(key + '.dc.html'); continue
+            src_ = open(DEST + key + '.dc.html').read(); m = re.search(r'"height":(\d+)', src_); h = int(m.group(1)) if m else 844
+            mw = re.search(r'"width":(\d+)', src_); w = int(mw.group(1)) if mw else 390
+            B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': xx, 'y': 0, 'title': t}; c['order'].append(key + '.dc.html'); xx += w + 80; continue
         if modo == 'imp':
             ob = B[src + '.dc.html']; w, h = ob['w'], ob['h']; html = importa(src, w, h, 'Móvil · ' + t)
         else:
             html, h = board(src, 'Móvil · ' + t); w = 390
         open(DEST + key + '.dc.html', 'w').write(html); open(W + '/project/' + key + '.dc.html', 'w').write(html)
-        B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': i * 470, 'y': 0, 'title': t}
+        B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': xx, 'y': 0, 'title': t}; xx += w + 80
         c['order'].append(key + '.dc.html')
 c['notes']['mbdev'] = {'fill': 'orange', 'maxH': 320, 'page': 'mb1', 'size': 24, 'w': 1280, 'x': 1100, 'y': -300, 'text':
   'PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo.'}
