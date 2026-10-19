@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Intranet usuario · Facturación</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;box-sizing:border-box}
+.h2{margin:0;font-size:15.5px;font-weight:600}
+.hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.hd a{font-size:12.5px}
+.k{font-size:11.5px;color:#56615B}
+.v{font-size:13.5px;font-weight:500}
+.kv{display:flex;flex-direction:column;gap:1px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.glob{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 9px;border-radius:999px;background:#EEF0F3;color:#4A5560;font-size:11px;font-weight:600;white-space:nowrap}
+.own{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 9px;border-radius:999px;background:#EEF6EE;color:#0E5A3A;font-size:11px;font-weight:600;white-space:nowrap}
+.row{display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid #EEF1EE;font-size:13px}
+.row:first-of-type{border-top:0}
+.tg{width:36px;height:20px;border-radius:999px;background:#0E5A3A;position:relative;flex:none}
+.tg::after{content:'';position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:#FFFFFF}
+.tg.off{background:#CFD8D2}.tg.off::after{right:auto;left:2px}
+.st{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.ok{background:#EEF6EE;color:#0E5A3A}.pe{background:#FFF4E0;color:#7A4B00}
+.src{font-size:10.5px;font-weight:600;color:#56615B;border:1px solid #DCE3DE;border-radius:6px;padding:1px 6px;white-space:nowrap}
+.tabs{display:flex;gap:22px;border-bottom:1px solid #E3E8E4;font-size:13px;color:#56615B;white-space:nowrap}
+.tabs span{padding-bottom:10px}.tabs .on{color:#0E5A3A;font-weight:600;border-bottom:2px solid #0E5A3A;margin-bottom:-1px}
+.card{box-shadow:0 1px 3px rgba(16,40,28,.05)}.h2{font-size:16.5px !important}.tabs{gap:28px !important;font-size:14px !important}.tabs .on{border-bottom-width:2.5px !important}.btns{height:42px;border-radius:10px;background:#EEF6EE;color:#17231D;font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px}.ico{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}.kebab{color:#56615B;font-size:18px;line-height:1;text-align:center;width:24px}.tb th{color:#4A5650 !important}
+</style>
+</helmet>
+<div style="width: 1280px; height: 980px; background: #F6F8F6; position: relative; overflow: hidden;">
+  <div style="display: flex; padding-top: 68px; height: 980px; box-sizing: border-box;">
+    <dc-import name="IntSidebar" modo="personal" activo="Facturación" hint-size="256px,832px"></dc-import>
+    <main style="flex: 1; min-width: 0; padding: 20px 28px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: flex-end; gap: 16px;"><div style="flex: 1;"><div style="font-size: 13px; color: #56615B;">Mi cuenta</div><h1 style="margin: 0; font-size: 28px; font-weight: 600;">Facturación</h1><p style="margin: 2px 0 0; font-size: 13.5px; color: #4A5650;">Gestiona aquí tus planes, suscripciones, pedidos, facturas, métodos de pago y direcciones.</p></div></div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 14px; background: #F4F7FB; border: 1px solid #E2E8F0; font-size: 13px; color: #33424C;"><span style="width: 34px; height: 34px; border-radius: 10px; background: #FFFFFF; color: #4A5560; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span style="flex: 1; line-height: 1.32;"><strong style="font-weight: 600;">Se gestiona en tu cuenta global</strong> y se ve reflejado aquí: planes, suscripciones, pedidos, facturas, pagos y direcciones de Agroolink y Agrinews en un solo sitio.</span><a href="#" style="white-space: nowrap; font-size: 13px; font-weight: 600;">Ir a mi cuenta global ↗</a></div>
+      <div class="tabs"><span class="on">Resumen</span><span>Planes y suscripciones</span><span>Pedidos</span><span>Facturas</span><span>Métodos de pago</span><span>Direcciones</span></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; align-items: start;">
+        <section class="card">
+          <div class="hd"><h2 class="h2">Tu plan en Agroolink</h2></div>
+          <span style="font-size: 20px; font-weight: 600;">Comprador Gratis</span>
+          <span class="k" style="line-height: 1.32;">1 proyecto activo · comparador hasta 4 productos · 5 tableros</span>
+          <a href="#" style="height: 38px; border-radius: 10px; border: 1.5px solid #0E5A3A; display: flex; align-items: center; justify-content: center; font-size: 13.5px;">Ver planes</a>
+        </section>
+        <section class="card">
+          <div class="hd"><h2 class="h2">Suscripciones</h2><a href="#">Gestionar</a></div>
+          <div class="row"><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Revista digital Pro</strong><br><span class="k">9,90 €/mes · renueva el 1 nov</span></span><span class="src">Agrinews</span></div>
+          <div class="row"><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Alertas de mercado</strong><br><span class="k">Gratis · semanal</span></span><span class="src">Agrinews</span></div>
+        </section>
+        <section class="card">
+          <div class="hd"><h2 class="h2">Método de pago</h2><a href="#">Cambiar</a></div>
+          <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 46px; height: 32px; border-radius: 6px; background: #1F3A5F; color: #FFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center;">VISA</span><span style="display: flex; flex-direction: column;"><span class="v">•••• 4242</span><span class="k">Caduca 08/28 · predeterminada</span></span></div>
+          <span class="k">Se usa en Agroolink y Agrinews.</span>
+        </section>
+      </div>
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start;">
+        <section class="card">
+          <div class="hd"><h2 class="h2">Últimos pedidos y facturas</h2><a href="#">Ver todo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="row" style="color: #56615B; font-size: 11.5px;"><span style="width: 90px;">Fecha</span><span style="flex: 1;">Concepto</span><span style="width: 80px;">Origen</span><span style="width: 70px; text-align: right;">Importe</span><span style="width: 74px;">Estado</span><span style="width: 60px;"></span></div>
+          <div class="row"><span style="width: 90px;">12 oct 2026</span><span style="flex: 1;">Entrada AviForum 2026 · 2 personas</span><span style="width: 80px;"><span class="src">Agroolink</span></span><span style="width: 70px; text-align: right;">90,00 €</span><span style="width: 74px;"><span class="st ok">Pagado</span></span><a href="#" style="width: 60px; font-size: 12.5px;">Factura</a></div>
+          <div class="row"><span style="width: 90px;">1 oct 2026</span><span style="flex: 1;">Revista digital Pro · octubre</span><span style="width: 80px;"><span class="src">Agrinews</span></span><span style="width: 70px; text-align: right;">9,90 €</span><span style="width: 74px;"><span class="st ok">Pagado</span></span><a href="#" style="width: 60px; font-size: 12.5px;">Factura</a></div>
+          <div class="row"><span style="width: 90px;">18 sep 2026</span><span style="flex: 1;">Informe técnico «Ventilación en broilers»</span><span style="width: 80px;"><span class="src">Agrinews</span></span><span style="width: 70px; text-align: right;">19,00 €</span><span style="width: 74px;"><span class="st ok">Pagado</span></span><a href="#" style="width: 60px; font-size: 12.5px;">Factura</a></div>
+          <div class="row"><span style="width: 90px;">2 sep 2026</span><span style="flex: 1;">Webinar «Bienestar en ponedoras»</span><span style="width: 80px;"><span class="src">Agroolink</span></span><span style="width: 70px; text-align: right;">0,00 €</span><span style="width: 74px;"><span class="st pe">Inscrito</span></span><span style="width: 60px;"></span></div>
+        </section>
+        <section class="card">
+          <div class="hd"><h2 class="h2">Direcciones</h2><a href="#">Editar</a></div>
+          <div class="kv"><span class="k">Facturación</span><span class="v" style="line-height: 1.32;">Granja Los Olmos SL · B25••••87<br><span style="font-weight: 400; font-size: 12.5px;">Partida Els Plans s/n, 25001 Lleida</span></span></div>
+          <div class="kv"><span class="k">Envío</span><span class="v" style="font-weight: 400; font-size: 12.5px;">La misma que facturación</span></div>
+        </section>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #56615B;">Lo que compras en una empresa a través de Agroolink (presupuestos, pedidos) se ve en <a href="#">Mis proyectos</a> y en <a href="#">Mensajes</a>; aquí solo lo que pagas a Agroolink o Agrinews.</p>
+    </main>
+  </div>
+  <div style="position: absolute; top: 0; left: 0; width: 1280px;">
+    <dc-import name="IntHeader" buscador="icono" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" hint-size="1280px,68px"></dc-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":980}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
