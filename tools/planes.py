@@ -19,19 +19,21 @@ REGLAS = [
     'Traducción automática (ES · EN · PT · FR) en todos los planes.',
     'Verificado no se compra.']
 # bloqueo: login = pide cuenta gratuita · limite = funciona hasta un número · plan = solo en un plan de pago · nunca = no existe en ningún plan · libre
+# Sin cuenta solo se puede mirar: se define por lo que SÍ permite; cualquier acción nueva pide la cuenta gratis por defecto
+VISITANTE = {'permite': [('buscar', 'Buscar y filtrar productos, empresas y expertos'), ('ver_fichas', 'Ver las fichas completas'), ('traduccion', 'Verlas en su idioma (traducción automática)')],
+             'resto': 'Todo lo demás pide la cuenta gratis: guardar, comparar, solicitar, Mensajes, proyectos, tableros, documentos, alertas y seguir.',
+             'regla': 'Por defecto, toda acción nueva pide la cuenta gratis; solo las de esta lista se permiten sin cuenta.',
+             'franja_planes': 'Sin cuenta puedes buscar y ver todas las fichas. Para guardar, comparar, preguntar y crear proyectos, crea tu cuenta gratis: 30 segundos, sin contraseña ni tarjeta.'}
 CUENTAS = {
- 'todos': {'label': 'Todas las cuentas', 'color': '#17231D', 'soft': '#EEF1EF', 'cols': ['Sin cuenta', 'Con cuenta gratis'], 'acciones': [
-   ('buscar', 'Buscar y filtrar productos, empresas y expertos', ['Sí', 'Sí'], 'libre'),
-   ('ver_fichas', 'Ver fichas completas', ['Sí', 'Sí'], 'libre'),
-   ('traduccion', 'Ver fichas en su idioma (traducción automática)', ['Sí', 'Sí'], 'libre'),
-   ('solicitud', 'Enviar una solicitud o consulta', ['Login', 'Ilimitadas · la 1.ª pide email verificado'], 'login'),
-   ('mensajes', 'Mensajes', ['Login', 'Sí'], 'login'),
-   ('guardar', 'Guardar en un tablero', ['Login', 'Sí'], 'login'),
-   ('comparar', 'Comparar productos', ['Login', 'Sí'], 'login'),
-   ('documentos', 'Descargar documentos técnicos', ['Login', 'Sí'], 'login'),
-   ('seguir', 'Seguir empresas y crear alertas', ['Login', 'Sí'], 'login'),
-   ('contacto', 'Ver teléfono, email, web, WhatsApp o redes de otro usuario', ['Nunca', 'Nunca'], 'nunca'),
-   ('escribir_contacto', 'Escribir contactos en mensajes, fichas o documentos', ['Nunca', 'Se ocultan siempre'], 'nunca')]},
+ 'todos': {'label': 'Todas las cuentas · con la cuenta gratis', 'color': '#17231D', 'soft': '#EEF1EF', 'cols': ['Cuenta gratis'], 'acciones': [
+   ('solicitud', 'Enviar solicitudes y consultas', ['Ilimitadas · la 1.ª pide email verificado'], 'login'),
+   ('mensajes', 'Mensajes', ['Sí'], 'login'),
+   ('guardar', 'Guardar en tableros', ['Sí'], 'login'),
+   ('comparar', 'Comparar productos', ['Sí'], 'login'),
+   ('documentos', 'Descargar documentos técnicos', ['Sí'], 'login'),
+   ('seguir', 'Seguir empresas y crear alertas', ['Sí'], 'login'),
+   ('contacto', 'Ver teléfono, email, web, WhatsApp o redes de otro usuario', ['Nunca'], 'nunca'),
+   ('escribir_contacto', 'Escribir contactos en mensajes, fichas o documentos', ['Se ocultan siempre'], 'nunca')]},
  'comprador': {'label': 'Comprador', 'color': '#0E5A3A', 'soft': '#EEF6EE', 'cols': ['Gratis', 'Pro · 9,90 € (próximamente)'], 'acciones': [
    ('proyectos', 'Publicar proyectos / RFQ', ['1', 'Ilimitados'], 'limite'),
    ('tableros', 'Tableros', ['5', 'Ilimitados'], 'limite'),
@@ -64,7 +66,7 @@ CUENTAS = {
    ('exportar', 'Exportar informes de solicitudes (sin contactos)', ['—', '—', 'Sí'], 'plan'),
    ('gestor', 'Gestor de cuenta', ['—', '—', 'Sí'], 'plan')]}}
 VENTANAS = {
- 'login': {'cuando': 'Sin cuenta, al pulsar guardar, comparar, enviar una solicitud, crear un proyecto, descargar, seguir o Mensajes.',
+ 'login': {'cuando': 'Sin cuenta, al pulsar cualquier cosa que no sea buscar, ver una ficha o cambiar de idioma.',
            'titulo': 'Entra para {accion}', 'texto': 'Es gratis y sin contraseña: te enviamos un código a tu email.', 'botones': ['Continuar', 'Ahora no'],
            'despues': 'Al entrar, la acción se completa sola (se guarda, se envía…).'},
  'limite': {'cuando': 'Al intentar superar un número del plan (16.º producto, 2.º proyecto del comprador, 3.er servicio del experto…).',
@@ -78,7 +80,7 @@ VENTANAS = {
  'medida': {'cuando': 'Sede que quiere varias sucursales con plan completo.', 'titulo': 'Plan de grupo', 'texto': 'Cada sucursal se da de alta gratis; para tenerlas con plan completo, precio a medida.', 'botones': ['Hablar con nosotros'], 'despues': 'Lo atiende el equipo comercial de Agroolink.'}}
 
 def fuente():
-    return {'version': 1, 'fecha': '2026-10-19', 'reglas': REGLAS,
+    return {'version': 1, 'fecha': '2026-10-19', 'reglas': REGLAS, 'visitante': {'permite': [{'id': i, 'accion': t} for i, t in VISITANTE['permite']], 'resto': VISITANTE['resto'], 'regla': VISITANTE['regla'], 'franja_planes': VISITANTE['franja_planes']},
             'bloqueos': {'libre': 'Sin bloqueo', 'login': 'Pide login gratuito', 'limite': 'Funciona hasta un número del plan', 'plan': 'Solo en un plan de pago', 'medida': 'Precio a medida', 'nunca': 'No existe en ningún plan'},
             'cuentas': {k: {'label': c['label'], 'niveles': c['cols'], 'acciones': [{'id': a[0], 'accion': a[1], 'valores': dict(zip(c['cols'], a[2])), 'bloqueo': a[3]} for a in c['acciones']]} for k, c in CUENTAS.items()},
             'ventanas': VENTANAS}
@@ -111,8 +113,13 @@ def matriz():
     h = ('<div style="padding:40px 48px;display:flex;flex-direction:column;gap:22px">'
          '<div style="display:flex;align-items:center;gap:14px">' + LOGO.format(h=28) + '<span style="font-size:13px;color:#56615B">Para desarrollo · fuente: planes.json</span></div>'
          '<div><div style="font-size:12px;font-weight:600;letter-spacing:.09em;color:#56615B;text-transform:uppercase">Planes</div><h1 style="margin:4px 0 0;font-size:28px;font-weight:700">Qué se bloquea y cómo</h1>'
-         '<p style="margin:6px 0 0;color:#56615B;max-width:80ch">Cada acción tiene un tipo de bloqueo. Sin cuenta se ve todo; la cuenta gratis se pide al pulsar. Preguntar nunca se bloquea, y ningún contacto (teléfono, email, web, WhatsApp, redes…) se ve ni se puede escribir.</p></div>'
+         '<p style="margin:6px 0 0;color:#56615B;max-width:80ch">Sin cuenta solo se mira; todo lo demás pide la cuenta gratis, que se pide al pulsar. Preguntar nunca se bloquea, y ningún contacto (teléfono, email, web, WhatsApp, redes…) se ve ni se puede escribir.</p></div>'
          '<div style="display:flex;gap:8px;flex-wrap:wrap">' + ''.join('<span class="tag b-' + k + '">' + ICO[k] + ' ' + t + '</span>' for k, t in LEY) + '</div>'
+         '<section style="display:grid;grid-template-columns:1fr 1.3fr;gap:0;background:#FFFFFF;border:1px solid #E1E6EC;border-radius:16px;overflow:hidden">'
+         '<div style="padding:18px 22px;display:flex;flex-direction:column;gap:8px"><span class="tag b-libre" style="align-self:flex-start">Sin cuenta · solo mirar</span>' +
+         ''.join('<span style="display:flex;gap:8px;font-size:14.5px"><span style="color:#0E5A3A;font-weight:700">✓</span>' + e(t) + '</span>' for _, t in VISITANTE['permite']) + '</div>'
+         '<div style="padding:18px 22px;display:flex;flex-direction:column;gap:8px;background:#FFF8EC"><span class="tag b-login" style="align-self:flex-start">🔑 Todo lo demás · cuenta gratis</span><span style="font-size:14.5px">' + e(VISITANTE['resto'].split(': ', 1)[1][:1].upper() + VISITANTE['resto'].split(': ', 1)[1][1:]) + '</span>'
+         '<span style="font-size:13px;color:#56615B">' + e(VISITANTE['regla']) + ' Abajo, «Gratis» es siempre con la cuenta gratis creada.</span></div></section>'
          '<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start">')
     for k, c in CUENTAS.items():
         n = len(c['cols']); cols = '2.2fr ' + ' '.join(['1.25fr'] * n) + ' 40px'

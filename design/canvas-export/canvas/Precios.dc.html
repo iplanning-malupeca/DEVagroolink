@@ -20,7 +20,7 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
 .faq{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
 </style>
 </helmet>
-<div style="width: 1280px; min-height: 2240px; background: #F6F8F6; font-family: 'Poppins', sans-serif;">
+<div style="width: 1280px; min-height: 2340px; background: #F6F8F6; font-family: 'Poppins', sans-serif;">
   <dc-import name="IntHeader" persona="{{ hdPersona }}" iniciales="{{ hdIni }}" color="{{ acc }}" variante="{{ hdVar }}" abierto="{{ no }}" hint-size="1280px,68px"></dc-import>
 
   <div style="max-width: 1120px; margin: 0 auto; padding: 44px 0 56px; display: flex; flex-direction: column; gap: 28px;">
@@ -41,6 +41,12 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
         <span style="font-size: 12.5px; font-weight: 600; color: #17231D; background: #B5D334; border-radius: 999px; padding: 4px 10px;">2 meses gratis</span>
         <span style="font-size: 12.5px; color: #56615B;">Precios sin IVA</span>
       </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 18px; padding: 16px 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DCE3DE;">
+      <span style="width: 44px; height: 44px; border-radius: 12px; background: {{ accSoft }}; color: {{ acc }}; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14zM20 20l-4-4"/></svg></span>
+      <span style="flex: 1; font-size: 14.5px; line-height: 1.35;"><strong style="font-weight: 600;">Sin cuenta puedes buscar y ver todas las fichas.</strong> Para guardar, comparar, preguntar y crear proyectos, crea tu cuenta gratis: 30 segundos, sin contraseña ni tarjeta.</span>
+      <span style="height: 42px; padding: 0 18px; border-radius: 10px; background: {{ acc }}; color: #FFFFFF; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; white-space: nowrap;">Crear cuenta gratis</span>
     </div>
 
     <sc-if value="{{ esEmpresa }}" hint-placeholder-val="{{ true }}">
@@ -126,7 +132,7 @@ a{color:inherit;text-decoration:none;font-weight:500}a:hover{color:#0B3D2A;text-
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"pestana":{"editor":"enum","options":["empresa","experto","comprador"],"default":"empresa"},"anual":{"editor":"boolean","default":true},"$preview":{"width":1280,"height":2240}}'>
+<script type="text/x-dc" data-dc-script data-props='{"pestana":{"editor":"enum","options":["empresa","experto","comprador"],"default":"empresa"},"anual":{"editor":"boolean","default":true},"$preview":{"width":1280,"height":2340}}'>
 class Component extends DCLogic {
   renderVals() {
     const st = this.state || {};

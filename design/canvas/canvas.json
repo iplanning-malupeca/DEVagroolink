@@ -160,7 +160,7 @@
    "title": "PL4 · Contratar Empresa Pro (desde la intranet, precio fundador)",
    "w": 1280,
    "x": 0,
-   "y": 2600
+   "y": 2700
   },
   "ComAltaComercial.dc.html": {
    "h": 940,
@@ -1973,7 +1973,7 @@
    "y": 0
   },
   "Precios.dc.html": {
-   "h": 2240,
+   "h": 2340,
    "is_interactive": true,
    "page": "planes",
    "title": "PL1 · Página de planes · Para empresas (interactiva: pestañas y mensual/anual)",
@@ -1982,7 +1982,7 @@
    "y": 0
   },
   "PreciosComprador.dc.html": {
-   "h": 2240,
+   "h": 2340,
    "page": "planes",
    "title": "PL3 · Página de planes · Para compradores",
    "w": 1280,
@@ -1990,7 +1990,7 @@
    "y": 0
   },
   "PreciosExperto.dc.html": {
-   "h": 2240,
+   "h": 2340,
    "page": "planes",
    "title": "PL2 · Página de planes · Para expertos",
    "w": 1280,
@@ -2991,7 +2991,7 @@
   },
   "PlanBloqueos.dc.html": {
    "w": 1280,
-   "h": 2440,
+   "h": 2380,
    "page": "planesbloq",
    "x": 0,
    "y": 0,
@@ -3913,7 +3913,7 @@
    "text": "Contratar un plan",
    "w": 240,
    "x": 0,
-   "y": 2300
+   "y": 2400
   },
   "prodDev1": {
    "fill": "orange",

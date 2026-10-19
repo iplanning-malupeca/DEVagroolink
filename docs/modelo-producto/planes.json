@@ -11,6 +11,25 @@
   "Traducción automática (ES · EN · PT · FR) en todos los planes.",
   "Verificado no se compra."
  ],
+ "visitante": {
+  "permite": [
+   {
+    "id": "buscar",
+    "accion": "Buscar y filtrar productos, empresas y expertos"
+   },
+   {
+    "id": "ver_fichas",
+    "accion": "Ver las fichas completas"
+   },
+   {
+    "id": "traduccion",
+    "accion": "Verlas en su idioma (traducción automática)"
+   }
+  ],
+  "resto": "Todo lo demás pide la cuenta gratis: guardar, comparar, solicitar, Mensajes, proyectos, tableros, documentos, alertas y seguir.",
+  "regla": "Por defecto, toda acción nueva pide la cuenta gratis; solo las de esta lista se permiten sin cuenta.",
+  "franja_planes": "Sin cuenta puedes buscar y ver todas las fichas. Para guardar, comparar, preguntar y crear proyectos, crea tu cuenta gratis: 30 segundos, sin contraseña ni tarjeta."
+ },
  "bloqueos": {
   "libre": "Sin bloqueo",
   "login": "Pide login gratuito",
@@ -21,45 +40,16 @@
  },
  "cuentas": {
   "todos": {
-   "label": "Todas las cuentas",
+   "label": "Todas las cuentas · con la cuenta gratis",
    "niveles": [
-    "Sin cuenta",
-    "Con cuenta gratis"
+    "Cuenta gratis"
    ],
    "acciones": [
     {
-     "id": "buscar",
-     "accion": "Buscar y filtrar productos, empresas y expertos",
-     "valores": {
-      "Sin cuenta": "Sí",
-      "Con cuenta gratis": "Sí"
-     },
-     "bloqueo": "libre"
-    },
-    {
-     "id": "ver_fichas",
-     "accion": "Ver fichas completas",
-     "valores": {
-      "Sin cuenta": "Sí",
-      "Con cuenta gratis": "Sí"
-     },
-     "bloqueo": "libre"
-    },
-    {
-     "id": "traduccion",
-     "accion": "Ver fichas en su idioma (traducción automática)",
-     "valores": {
-      "Sin cuenta": "Sí",
-      "Con cuenta gratis": "Sí"
-     },
-     "bloqueo": "libre"
-    },
-    {
      "id": "solicitud",
-     "accion": "Enviar una solicitud o consulta",
+     "accion": "Enviar solicitudes y consultas",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Ilimitadas · la 1.ª pide email verificado"
+      "Cuenta gratis": "Ilimitadas · la 1.ª pide email verificado"
      },
      "bloqueo": "login"
     },
@@ -67,17 +57,15 @@
      "id": "mensajes",
      "accion": "Mensajes",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Sí"
+      "Cuenta gratis": "Sí"
      },
      "bloqueo": "login"
     },
     {
      "id": "guardar",
-     "accion": "Guardar en un tablero",
+     "accion": "Guardar en tableros",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Sí"
+      "Cuenta gratis": "Sí"
      },
      "bloqueo": "login"
     },
@@ -85,8 +73,7 @@
      "id": "comparar",
      "accion": "Comparar productos",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Sí"
+      "Cuenta gratis": "Sí"
      },
      "bloqueo": "login"
     },
@@ -94,8 +81,7 @@
      "id": "documentos",
      "accion": "Descargar documentos técnicos",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Sí"
+      "Cuenta gratis": "Sí"
      },
      "bloqueo": "login"
     },
@@ -103,8 +89,7 @@
      "id": "seguir",
      "accion": "Seguir empresas y crear alertas",
      "valores": {
-      "Sin cuenta": "Login",
-      "Con cuenta gratis": "Sí"
+      "Cuenta gratis": "Sí"
      },
      "bloqueo": "login"
     },
@@ -112,8 +97,7 @@
      "id": "contacto",
      "accion": "Ver teléfono, email, web, WhatsApp o redes de otro usuario",
      "valores": {
-      "Sin cuenta": "Nunca",
-      "Con cuenta gratis": "Nunca"
+      "Cuenta gratis": "Nunca"
      },
      "bloqueo": "nunca"
     },
@@ -121,8 +105,7 @@
      "id": "escribir_contacto",
      "accion": "Escribir contactos en mensajes, fichas o documentos",
      "valores": {
-      "Sin cuenta": "Nunca",
-      "Con cuenta gratis": "Se ocultan siempre"
+      "Cuenta gratis": "Se ocultan siempre"
      },
      "bloqueo": "nunca"
     }
@@ -423,7 +406,7 @@
  },
  "ventanas": {
   "login": {
-   "cuando": "Sin cuenta, al pulsar guardar, comparar, enviar una solicitud, crear un proyecto, descargar, seguir o Mensajes.",
+   "cuando": "Sin cuenta, al pulsar cualquier cosa que no sea buscar, ver una ficha o cambiar de idioma.",
    "titulo": "Entra para {accion}",
    "texto": "Es gratis y sin contraseña: te enviamos un código a tu email.",
    "botones": [
