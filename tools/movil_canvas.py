@@ -32,7 +32,7 @@ def importa(name, w, h, title):
             '<script type="text/x-dc" data-dc-script data-props=\'{"$preview":{"width":' + str(w) + ',"height":' + str(h) + '}}\'>\nclass Component extends DCLogic {\n  renderVals() { return {}; }\n}\n</script>\n</body>\n</html>\n')
 c = json.load(open(CANVAS)); B = c['boards']
 FILAS = [
- ('MB_01 Navegación', 'Navegación · cabecera y menú inferior nuevos (Explorar · Proyectos · Tableros · Tú)', 'imp', [('MobHeaderSinSesion', 'Sin sesión'), ('MobHeaderSesion', 'Con sesión'), ('MobHeaderTu', '«Tú»'), ('MobHome', 'Home')]),
+ ('MB_01 Navegación', 'Navegación · cabecera y menú inferior nuevos (Explorar · Proyectos · Tableros · Tú)', 'imp', [('MobHeaderSinSesion', 'Sin sesión'), ('MobHeaderSesion', 'Con sesión'), ('MobHeaderTu', '«Tú»'), ('MobHome', 'Home'), ('BuscaMovEspecie', 'Al tocar la pastilla: se abre la búsqueda (Qué · Especie · Categoría · Enfermedad)', 'MB_Nav_BuscarAbierta'), ('BuscaMovFiltros', 'Al tocar el botón de filtros: «Filtros» a pantalla completa', 'MB_Nav_Filtros')]),
  ('MB_02 Búsqueda', 'Búsqueda y filtros (de 005)', 'imp', [('BuscaMovResultados', 'Resultados'), ('BuscaMovEspecie', 'Buscar por pasos'), ('BuscaMovCategoria', 'Categoría'), ('BuscaMovFiltros', 'Filtros')]),
  ('MB_03 Alta de producto', 'Alta de producto (prototipo crear-producto)', 'cap', [('MP1', 'Especies'), ('MP2', 'Categoría'), ('MP3', 'Mercados'), ('MP4', 'Identidad (idioma detectado)'), ('MP5', 'Datos técnicos'), ('MP6', 'Aplicación por especie'), ('MP7', 'Fotos, vídeos y documentos'), ('MP8', 'Certificaciones'), ('MP9', 'Revisión')]),
  ('MB_04 Mis productos', 'Mis productos, edición y traducciones', 'cap', [('ME1', 'Mis productos'), ('ME2', 'Menú ⋯'), ('ME3', 'Editar por bloques'), ('ME4', 'Guardar y avisar'), ('ME5', 'Traducciones'), ('ME6', 'Ficha en inglés')]),
@@ -50,8 +50,9 @@ c['pages'] = [p for p in c['pages'] if not MBP(p['id'])]
 for r, (pag, tit, modo, items) in enumerate(FILAS):
     pid = 'mb%d' % (r + 1); c['pages'].insert(pos + r, {'id': pid, 'name': pag})
     c['notes']['mbt%d' % r] = {'kind': 'title1', 'maxW': 8000, 'page': pid, 'w': 240, 'x': 0, 'y': -300, 'text': tit}
-    for i, (src, t) in enumerate(items):
-        key = src if modo == 'own' else 'MB_' + src
+    for i, it in enumerate(items):
+        src, t = it[0], it[1]
+        key = it[2] if len(it) > 2 else (src if modo == 'own' else 'MB_' + src)
         if modo == 'own':
             w, h = 390, 844
             B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': i * 470, 'y': 0, 'title': t}; c['order'].append(key + '.dc.html'); continue
@@ -62,7 +63,7 @@ for r, (pag, tit, modo, items) in enumerate(FILAS):
         open(DEST + key + '.dc.html', 'w').write(html); open(W + '/project/' + key + '.dc.html', 'w').write(html)
         B[key + '.dc.html'] = {'w': w, 'h': h, 'page': pid, 'x': i * 470, 'y': 0, 'title': t}
         c['order'].append(key + '.dc.html')
-c['notes']['mbdev'] = {'fill': 'orange', 'maxH': 320, 'page': 'mb1', 'size': 24, 'w': 1280, 'x': 2000, 'y': -300, 'text':
+c['notes']['mbdev'] = {'fill': 'orange', 'maxH': 320, 'page': 'mb1', 'size': 24, 'w': 1280, 'x': 2900, 'y': -300, 'text':
   'PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo.'}
 json.dump(c, open(CANVAS, 'w'), ensure_ascii=False, indent=1)
 print('ok', len([1 for b in B.values() if MBP(b.get('page'))]), [p['name'] for p in c['pages'] if MBP(p['id'])])
