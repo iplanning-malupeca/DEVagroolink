@@ -75,50 +75,38 @@ def barra_grande():
 
 # ---------- Cabecera: 56 + 44 ----------
 def cabecera(activo=None):
-    menu = ''.join('<a href="#" style="display: inline-flex; align-items: center; gap: 4px; height: 44px; padding: 0 14px; font-size: 15px; font-weight: 600; color: ' + ('#0E5A3A' if i == activo else '#17231D') + ';' + (' box-shadow: inset 0 -3px 0 #0E5A3A;' if i == activo else '') + '">' + t + (svg(I['abajo'], 16, 2) if i < 2 else '') + '</a>'
-                   for i, t in enumerate(['Categorías', 'Especies', 'Empresas', 'Expertos', 'Proyectos', 'Tableros y comparador', 'Contenidos']))
-    barra = ('<div class="wrap" style="height: 56px; display: flex; align-items: center; gap: 12px;">'
-             '<a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex;"><img src="' + IMG['logo'] + '" alt="Agroolink" style="height: 30px; width: auto; display: block;"></a>'
-             + barra_compacta() +
-             '<button type="button" class="ib" style="width: auto; padding: 0 8px; gap: 6px; font: 600 14px \'Poppins\', sans-serif; white-space: nowrap;" aria-label="Idioma y región: español, España">' + svg(I['globo']) + 'ES · España</button>'
-             '<button type="button" class="ib" aria-label="Avisos, 3 sin leer">' + svg(I['campana'], 21) + '<span style="position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>'
-             '<button type="button" class="ib" aria-label="Mensajes, 2 sin leer">' + svg(I['msg'], 21) + '<span style="position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">2</span></button>'
-             '<button type="button" class="ib" aria-label="Mis tableros">' + svg(I['grid'], 21) + '</button>'
-             '<button type="button" aria-label="Tu cuenta: Samuel" style="display: flex; align-items: center; gap: 8px; border: 0; background: none; font: 600 14px \'Poppins\', sans-serif; color: #17231D; cursor: pointer;"><span style="width: 34px; height: 34px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center;">SE</span>Samuel' + svg(I['abajo'], 16, 2) + '</button></div>')
-    menu_bar = ('<div style="border-top: 1px solid #EEF1EE;"><nav aria-label="Menú principal" class="wrap" style="height: 44px; display: flex; align-items: center; margin-left: auto; margin-right: auto;"><div style="display: flex; margin-left: -14px;">' + menu + '</div>'
-                '<span style="flex: 1;"></span><a href="#" style="font-size: 14px; display: inline-flex; align-items: center; gap: 6px;">' + svg(I['proy'], 17) + 'Publica tu proyecto</a>'
-                '<span style="width: 1px; height: 20px; background: #E3E8E4; margin: 0 14px;"></span><a href="#" style="font-size: 14px; color: #17231D;">Para empresas</a></nav></div>')
-    return '<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8E4;">' + barra + menu_bar + '</header>'
+    # La cabecera de Agroolink (IntHeader, la de 000_LP_Header y la intranet), a 1440 con contenedor de 1320
+    return '<dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" buscador="barra" ancho="1440" contenedor="1320" hint-size="1440px,68px"></dc-import>'
 
 # ---------- Mega-menús ----------
 def fondo_mega(panel, izq, activo):
-    return (cabecera(activo) +
-            '<div style="position: absolute; top: 102px; left: 0; right: 0; bottom: 0; background: rgba(7, 43, 30, .35);"></div>'
-            '<div style="position: absolute; top: 102px; left: ' + str(izq) + 'px;">' + panel + '</div>')
+    return (cabecera() +
+            '<div style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; background: rgba(7, 43, 30, .35);"></div>'
+            '<div style="position: absolute; top: 72px; left: ' + str(izq) + 'px;">' + panel + '</div>')
 
 def mega_categorias():
     cats = [('Nutrición', 'nutri'), ('Salud animal', 'salud'), ('Genética', 'gen'), ('Equipamientos', 'equipo'), ('Instalaciones', 'inst'), ('Tecnología', 'tec'), ('Servicios', 'serv'), ('Sostenibilidad', 'sost')]
     lista = ''.join('<a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 10px; font-size: 15px; font-weight: ' + ('600; background: #EEF6EE; color: #0E5A3A;' if i == 0 else '500; color: #17231D;') + '">' + svg(I[ic], 19) + '<span style="flex: 1;">' + t + '</span>' + (svg(I['der'], 16, 2) if i == 0 else '') + '</a>' for i, (t, ic) in enumerate(cats))
     subs = ''.join('<a href="#" style="font-size: 15px; font-weight: 400; color: #17231D; padding: 6px 0;">' + t + '</a>' for t in ['Piensos', 'Micotoxinas', 'Aditivos', 'Vitaminas y minerales', 'Ingredientes', 'Probióticos', 'Enzimas', 'Premezclas'])
-    panel = ('<div class="card" style="width: 900px; display: flex; border-radius: 0 0 16px 16px; border-top: 0; box-shadow: 0 18px 40px rgba(7, 43, 30, .18); overflow: hidden;">'
+    panel = ('<div class="card" style="width: 900px; display: flex; border-radius: 16px; box-shadow: 0 18px 40px rgba(7, 43, 30, .18); overflow: hidden;">'
              '<div style="width: 280px; padding: 14px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid #EEF1EE;">' + lista + '</div>'
              '<div style="flex: 1; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px; background: #FBFCFB;"><div><strong style="font-size: 18px;">Nutrición</strong><p class="sub" style="font-size: 14px;">Soluciones para mejorar la salud, el rendimiento y la eficiencia en la producción animal.</p></div>'
              '<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px;">' + subs + '</div>'
              '<div class="card" style="display: flex; gap: 14px; align-items: center; padding: 12px;"><img src="' + IMG['promo'] + '" alt="" style="width: 72px; height: 72px; border-radius: 10px; object-fit: cover;"><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 13.5px; color: #33424C;">Una nutrición más eficiente para un sector más competitivo.</span><a href="#" class="ver" style="font-size: 14px;">Ver productos de Nutrición ' + svg(I['flecha'], 16, 2) + '</a></span></div>'
              '<a href="#" class="ver" style="padding-top: 6px; border-top: 1px solid #EEF1EE;">Ver todas las subcategorías ' + svg(I['flecha'], 18, 2) + '</a></div></div>')
-    return fondo_mega(panel, 60, 0)
+    return fondo_mega(panel, 500, 0)
 
 def mega_especies():
     esp = ['Aves', 'Porcino', 'Vacuno', 'Ovino', 'Caprino', 'Cunicultura', 'Acuicultura']
     lista = ''.join('<a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 10px; font-size: 15px; font-weight: ' + ('600; background: #EEF6EE; color: #0E5A3A;' if i == 0 else '500; color: #17231D;') + '"><span style="flex: 1;">' + t + '</span>' + (svg(I['der'], 16, 2) if i == 0 else '') + '</a>' for i, t in enumerate(esp))
     chips = ''.join('<span class="chip' + (' on' if i == 0 else '') + '">' + t + '</span>' for i, t in enumerate(['Todas', 'Broilers', 'Ponedoras', 'Reproductoras', 'Pavos', 'Aves cinegéticas', 'Otras aves']))
-    panel = ('<div class="card" style="width: 760px; display: flex; border-radius: 0 0 16px 16px; border-top: 0; box-shadow: 0 18px 40px rgba(7, 43, 30, .18); overflow: hidden;">'
+    panel = ('<div class="card" style="width: 760px; display: flex; border-radius: 16px; box-shadow: 0 18px 40px rgba(7, 43, 30, .18); overflow: hidden;">'
              '<div style="width: 240px; padding: 14px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid #EEF1EE;">' + lista + '</div>'
              '<div style="flex: 1; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px; background: #FBFCFB;"><div><strong style="font-size: 18px;">Aves</strong><p class="sub" style="font-size: 14px;">Productos, proveedores y soluciones para una avicultura más eficiente.</p></div>'
              '<img src="' + IMG['gallo'] + '" alt="Gallo y gallinas en una granja" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px;">'
              '<strong style="font-size: 14px;">Tipo de producción</strong><div style="display: flex; flex-wrap: wrap; gap: 8px;">' + chips + '</div>'
              '<a href="#" class="ver" style="padding-top: 8px; border-top: 1px solid #EEF1EE;">Ver todos los productos de Aves ' + svg(I['flecha'], 18, 2) + '</a></div></div>')
-    return fondo_mega(panel, 190, 1)
+    return fondo_mega(panel, 520, 1)
 
 # ---------- Hero ----------
 def hero():
@@ -245,9 +233,9 @@ def pie():
             '<div class="wrap" style="border-top: 1px solid #1E4A38; padding: 18px 0 24px; display: flex; justify-content: space-between; font-size: 13px; color: #8FAE9D;"><span>© 2026 Agroolink. Todos los derechos reservados.</span><span>Hecho para profesionales de la producción animal</span></div></footer>')
 
 PIEZAS = [  # nombre, título, cuerpo, alto, fondo
-    ('FrCabecera', 'P01 · Cabecera · 56 + 44 (con sesión)', cabecera, 102, '#FFFFFF'),
-    ('FrMegaCategorias', 'P02 · Mega-menú de categorías (abierto)', mega_categorias, 560, '#F6F8F6'),
-    ('FrMegaEspecies', 'P03 · Mega-menú de especies (abierto)', mega_especies, 560, '#F6F8F6'),
+    ('FrCabecera', 'P01 · Cabecera de Agroolink (IntHeader) a 1440', cabecera, 68, '#FFFFFF'),
+    ('FrMegaCategorias', 'P02 · Categoría abierta desde el buscador', mega_categorias, 560, '#F6F8F6'),
+    ('FrMegaEspecies', 'P03 · Especie abierta desde el buscador', mega_especies, 560, '#F6F8F6'),
     ('FrHero', 'P04 · Hero «Hola Samuel» con buscador', hero, 402, '#F6F8F6'),
     ('FrEspecies', 'P05 · Explora por especie', especies, 268, '#F6F8F6'),
     ('FrEspeciesAbierta', 'P05b · Explora por especie · Aves abierta', lambda: especies(True), 430, '#F6F8F6'),

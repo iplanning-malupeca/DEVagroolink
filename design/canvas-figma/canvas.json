@@ -566,7 +566,7 @@
   },
   "FrHome.dc.html": {
    "w": 1440,
-   "h": 3440,
+   "h": 3406,
    "page": "front",
    "x": 0,
    "y": 0,
@@ -574,34 +574,34 @@
   },
   "FrCabecera.dc.html": {
    "w": 1440,
-   "h": 102,
+   "h": 68,
    "page": "front",
    "x": 1600,
-   "y": 0,
-   "title": "P01 · Cabecera · 56 + 44 (con sesión)"
+   "y": 208,
+   "title": "P01 · Cabecera de Agroolink (IntHeader) a 1440"
   },
   "FrMegaCategorias.dc.html": {
    "w": 1440,
    "h": 560,
    "page": "front",
    "x": 1600,
-   "y": 242,
-   "title": "P02 · Mega-menú de categorías (abierto)"
+   "y": 416,
+   "title": "P02 · Categoría abierta desde el buscador"
   },
   "FrMegaEspecies.dc.html": {
    "w": 1440,
    "h": 560,
    "page": "front",
    "x": 1600,
-   "y": 942,
-   "title": "P03 · Mega-menú de especies (abierto)"
+   "y": 1116,
+   "title": "P03 · Especie abierta desde el buscador"
   },
   "FrHero.dc.html": {
    "w": 1440,
    "h": 402,
    "page": "front",
    "x": 1600,
-   "y": 1642,
+   "y": 1816,
    "title": "P04 · Hero «Hola Samuel» con buscador"
   },
   "FrEspecies.dc.html": {
@@ -609,7 +609,7 @@
    "h": 268,
    "page": "front",
    "x": 1600,
-   "y": 2184,
+   "y": 2358,
    "title": "P05 · Explora por especie"
   },
   "FrEspeciesAbierta.dc.html": {
@@ -617,7 +617,7 @@
    "h": 430,
    "page": "front",
    "x": 1600,
-   "y": 2592,
+   "y": 2766,
    "title": "P05b · Explora por especie · Aves abierta"
   },
   "FrCategorias.dc.html": {
@@ -625,7 +625,7 @@
    "h": 249,
    "page": "front",
    "x": 1600,
-   "y": 3162,
+   "y": 3336,
    "title": "P06 · Explora por categoría"
   },
   "FrCategoriaPanel.dc.html": {
@@ -675,6 +675,14 @@
    "x": 3120,
    "y": 2808,
    "title": "P12 · Pie"
+  },
+  "IntHeader.dc.html": {
+   "w": 1280,
+   "h": 68,
+   "page": "front",
+   "x": 1600,
+   "y": 0,
+   "title": "Componente · IntHeader (la cabecera de Agroolink, igual que en 000_LP_Header)"
   }
  },
  "order": [
@@ -759,7 +767,8 @@
   "FrProductos.dc.html",
   "FrComparador.dc.html",
   "FrConfianza.dc.html",
-  "FrPie.dc.html"
+  "FrPie.dc.html",
+  "IntHeader.dc.html"
  ],
  "notes": {
   "figT0": {
@@ -886,7 +895,7 @@
    "fill": "green",
    "page": "front",
    "size": "m",
-   "text": "Rehecho desde la referencia de Figma (F01–F05), por piezas.\n\nAncho tipo vevor.es: tablero 1440 px, contenido 1320 px (márgenes de 60), cabecera 56 + 44, texto 15, títulos 22/700, botones 38, tarjetas de producto de 210–216 px (6 por fila).\n\nPoppins, verde #0E5A3A y logo oficial. Sin contactos: ni web, ni email, ni teléfono en ninguna pieza.\n\nLa home junta las piezas con dc-import: si cambias una pieza, cambia en la home."
+   "text": "Rehecho desde la referencia de Figma (F01–F05), por piezas.\n\nAncho tipo vevor.es: tablero 1440 px, contenido 1320 px (márgenes de 60), cabecera de Agroolink (IntHeader, 68 px, con el buscador combinado), texto 15, títulos 22/700, botones 38, tarjetas de producto de 210–216 px (6 por fila).\n\nPoppins, verde #0E5A3A y logo oficial. Sin contactos: ni web, ni email, ni teléfono en ninguna pieza.\n\nLa home junta las piezas con dc-import: si cambias una pieza, cambia en la home."
   }
  },
  "designSystems": [],

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Componente · Header intranet</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3}
+.hb{width:40px;height:40px;border:0;background:none;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#17231D;cursor:pointer;position:relative}
+.hb:hover{background:#F2F6F3}
+.nb{display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;font:500 14px 'Poppins',sans-serif;color:#17231D;background:none;border:0;white-space:nowrap;cursor:pointer}
+.nb:hover{background:#F2F6F3}
+.sp{display:flex;align-items:center;gap:12px;padding:12px 4px;border-top:1px solid #EEF1EE;color:#17231D;text-decoration:none}
+.sp:first-child{border-top:0}
+</style>
+</helmet>
+<div style="width: {{ ancho }}; height: 68px; position: relative; font-family: 'Poppins', sans-serif; color: #17231D;">
+  <header style="height: 68px; box-sizing: border-box; padding: 0 {{ pad }}; display: flex; align-items: center; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #E3E8E4; border-top: {{ topBorder }};">
+    <a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex; align-items: center; margin-right: 8px;"><img src="/_blob/d59fcac1179ae49cf668ad7038b0e202" alt="Agroolink" style="height: 34px; width: auto; display: block;"></a>
+    <sc-if value="{{ conBarra }}" hint-placeholder-val="{{ false }}">
+    <div style="flex: 1; min-width: 0; display: flex; justify-content: center; margin: 0 12px;">
+      <div role="search" aria-label="Búsqueda combinada: qué buscas, especie, categoría y enfermedad" style="width: {{ barW }}; max-width: 100%; height: 48px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; border: 1px solid #DCE3DE; background: #FFFFFF; box-shadow: 0 2px 8px rgba(16, 40, 28, 0.08); cursor: pointer;">
+        <sc-for list="{{ segs }}" as="s" hint-placeholder-count="4">
+          <span style="flex: {{ s.flex }}; min-width: 0; height: 26px; box-sizing: border-box; padding: 0 {{ segPad }}; display: flex; align-items: center; gap: 7px; border-left: {{ s.sep }}; font-size: {{ segFont }}; font-weight: {{ s.peso }}; color: {{ s.tinta }}; white-space: nowrap; overflow: hidden;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="{{ acento }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="{{ s.icono }}"/></svg>
+            <span style="overflow: hidden; text-overflow: ellipsis;">{{ s.texto }}</span>
+          </span>
+        </sc-for>
+        <button type="button" aria-label="Buscar" style="width: 36px; height: 36px; margin-right: 6px; border-radius: 50%; background: {{ acento }}; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      </div>
+    </div>
+    </sc-if>
+    <sc-if value="{{ conIcono }}" hint-placeholder-val="{{ true }}">
+      <span style="flex: 1;"></span>
+      <a href="BusIntranetBuscar.dc.html" role="button" aria-label="Nueva búsqueda" style="display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px 0 14px; border-radius: 999px; border: 1.5px solid {{ acento }}; color: {{ acento }}; background: #FFFFFF; font: 600 14px 'Poppins', sans-serif; text-decoration: none; margin-right: 6px; white-space: nowrap;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a>
+    </sc-if>
+    <div style="display: flex; align-items: center; gap: 6px; flex: none;">
+      <button type="button" class="hb" aria-label="Mensajes, 3 sin leer" title="Mensajes"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><span style="position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; box-sizing: border-box; padding: 0 5px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>
+      <button type="button" class="hb" aria-label="Avisos, 3 sin leer" title="Avisos"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4"/></svg><span style="position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; box-sizing: border-box; padding: 0 5px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>
+      <button type="button" class="hb" aria-label="Historial" title="Historial"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8M3 3v5h5M12 7v5l3 2"/></svg></button>
+      <button type="button" aria-expanded="{{ abierto }}" aria-label="Tus espacios y cuenta" style="display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 4px 6px 4px 4px; border-radius: 999px; font: 500 15px 'Poppins', sans-serif; color: #17231D; cursor: pointer; margin-left: 8px;">
+        <span style="width: 42px; height: 42px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center;">{{ iniciales }}</span>{{ personaVisible }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ chevron }}"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <sc-if value="{{ abierto }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-label="Tus espacios" style="position: absolute; top: 76px; right: 24px; width: 420px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 18px; box-shadow: 0 18px 44px rgba(16, 40, 28, 0.14); padding: 18px; display: flex; flex-direction: column; gap: 14px; z-index: 5;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="width: 64px; height: 64px; border-radius: 50%; background: {{ color }}; color: #FFFFFF; font-size: 20px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ iniciales }}</span>
+        <span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 17px; font-weight: 600;">{{ nombreCompleto }}</span><span style="font-size: 13px; color: #56615B;">{{ email }}</span><span style="font-size: 13px; color: {{ acento }}; font-weight: 500;">{{ activoTexto }}</span></span>
+      </div>
+      <div style="border: 1px solid #E3E8E4; border-radius: 14px; padding: 6px 14px;">
+        <div style="font-size: 14px; font-weight: 600; padding: 8px 4px 4px;">Tus espacios</div>
+        <sc-for list="{{ espacios }}" as="e" hint-placeholder-count="3">
+          <a href="#" class="sp">
+            <span style="width: 40px; height: 40px; border-radius: {{ e.radio }}; background: {{ e.fondo }}; color: {{ e.tinta }}; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none;">{{ e.ini }}</span>
+            <span style="display: flex; flex-direction: column; flex: 1; min-width: 0;">
+              <span style="display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600;">{{ e.titulo }}<sc-if value="{{ e.chip }}" hint-placeholder-val="{{ true }}"><span style="font-size: 11px; font-weight: 500; color: #0E5A3A; background: #EEF6EE; border-radius: 999px; padding: 2px 8px;">{{ e.chip }}</span></sc-if></span>
+              <span style="font-size: 12.5px; color: #56615B;">{{ e.sub }}</span>
+            </span>
+            <span style="font-size: 20px; color: #0E5A3A; width: 22px; text-align: center; flex: none;">{{ e.accion }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"barra"},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = this.props.variante ?? 'personal';
+    const abierto = this.props.abierto ?? false;
+    const color = this.props.color ?? '#0E5A3A';
+    const ini = this.props.iniciales ?? 'SE';
+    const yo = { ini: ini, radio: '50%', fondo: color, tinta: '#FFFFFF' };
+    const datos = {
+      personal: {
+        nombreCompleto: 'Samuel Esteban', email: 'samuel@granjalosolmos.es', activoTexto: 'Espacio personal',
+        espacios: [
+          Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Buscar, comparar y gestionar proyectos', accion: '✓' }),
+          { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' },
+          { ini: '+', radio: '10px', fondo: '#E9F0F9', tinta: '#1D4E89', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+        ]
+      },
+      experta: {
+        nombreCompleto: 'Laura Gil', email: 'laura.gil@correo.com', activoTexto: 'Espacio personal · Experta',
+        espacios: [
+          Object.assign({}, yo, { titulo: 'Personal', chip: 'Activo', sub: 'Incluye tu perfil de experta (público)', accion: '✓' }),
+          { ini: '+', radio: '10px', fondo: '#E9F0F9', tinta: '#1D4E89', titulo: 'Crear o vincular empresa', chip: 'Gratis', sub: 'Publica productos y conecta con clientes', accion: '+' }
+        ]
+      },
+      empresa: {
+        nombreCompleto: 'Carla Martín', email: 'carla@agroexport.com', activoTexto: 'AgroExport SRL',
+        espacios: [
+          { ini: 'AE', radio: '10px', fondo: '#1D4E89', tinta: '#FFFFFF', titulo: 'AgroExport SRL', chip: 'Activo', sub: 'Empresa · Administradora', accion: '✓' },
+          Object.assign({}, yo, { titulo: 'Personal', chip: '', sub: 'Buscar, comparar y gestionar proyectos', accion: '' }),
+          { ini: '+', radio: '10px', fondo: '#F1EEFB', tinta: '#4B3BA6', titulo: 'Crear perfil de experto', chip: 'Gratis', sub: 'Ofrece tus servicios profesionales', accion: '+' }
+        ]
+      }
+    };
+    const d = datos[v] || datos.personal;
+    // Barra de búsqueda combinada (tipo Airbnb): se adapta al ancho de pantalla.
+    const w = this.props.ancho ?? 1280;
+    const corto = w < 1400;
+    const vals = [
+      ['M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5', this.props.consulta, corto ? 'Buscar…' : 'Producto, empresa, marca…', '1.4'],
+      ['M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM16 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 13c-3 0-5 3-5 5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2c0-2-2-5-5-5z', this.props.especie, corto ? 'Especie' : 'Cualquier especie', '1'],
+      ['M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z', this.props.categoria, corto ? 'Categoría' : 'Cualquier categoría', '1'],
+      ['M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M5 19l2.8-2.8M16.2 7.8 19 5', this.props.enfermedad, corto ? 'Enfermedad' : 'Cualquier enfermedad', '1']
+    ];
+    const segs = vals.map((x, i) => ({ icono: x[0], texto: x[1] || x[2], tinta: x[1] ? '#17231D' : '#56615B', peso: x[1] ? '600' : '400', flex: x[3], sep: i ? '1px solid #DCE3DE' : '0' }));
+    return Object.assign({}, d, {
+      segs: segs,
+      conBarra: (this.props.buscador ?? 'barra') === 'barra',
+      conIcono: (this.props.buscador ?? 'barra') !== 'barra',
+      barW: (w >= 1700 ? 760 : (w >= 1400 ? 680 : 600)) + 'px',
+      segPad: corto ? '12px' : '16px',
+      segFont: corto ? '13px' : '13.5px',
+      personaVisible: (corto && (this.props.buscador ?? 'barra') === 'barra') ? '' : (this.props.persona ?? 'Samuel E.'),
+      persona: this.props.persona ?? 'Samuel E.',
+      ancho: (this.props.ancho ?? 1280) + 'px',
+      consulta: this.props.consulta ?? '',
+      pad: (this.props.contenedor ? Math.max(28, ((this.props.ancho ?? 1280) - this.props.contenedor) / 2) : 28) + 'px',
+      iniciales: ini,
+      color: color,
+      abierto: abierto,
+      chevron: (abierto || this.props.marcado) ? 'm6 15 6-6 6 6' : 'm6 9 6 6 6-6',
+      acento: v === 'empresa' ? '#1D4E89' : (v === 'experta' ? '#4B3BA6' : '#0E5A3A'),
+      topBorder: v === 'empresa' ? '3px solid #1D4E89' : (v === 'experta' ? '3px solid #4B3BA6' : '0')
+    });
+  }
+}
+</script>
+</body>
+</html>
