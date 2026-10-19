@@ -26,3 +26,15 @@ b1dad6710cdb892f23e006007702de27 sub_micotoxinas.jpg
 d6bc9ef65b877b8d81c61fdc70552f94 sub_otros.jpg
 01416d51cd87a4a9fe62a9c6f21195ca sub_piensos.jpg
 0d8b3a1a6b5f376eac5c4642893a021d sub_vitaminas.jpg
+a951699dfb7fa8a66c31f3d1d0523007 ../fig-img2/editorial_pollito.jpg
+fb920aebb9be968b58f3b06cdcb2b4d9 ../fig-img2/evento_aviforum.jpg
+59562230118d920172aadb5b886c765e ../fig-img2/nec_genetica.jpg
+2a5d2be5c87328769ec78fe418be748b ../fig-img2/nec_instalaciones.jpg
+822620462b751acaefbf9378810167e2 ../fig-img2/nec_produccion.jpg
+52909c9b99eb3b9c20ec334affbfce45 ../fig-img2/nec_rendimiento.jpg
+0a69be701bb8144adf077409697ad0ff ../fig-img2/nec_salud.jpg
+eb7775c01fcaca5ba1925ac7770309b7 ../fig-img2/nec_sostenible.jpg
+3e288fc50ad71f68b1c8d1005d1b1f47 ../fig-img2/of_bolsa.jpg
+40f55526846b6139ae82bc48782e2ee4 ../fig-img2/of_granja.jpg
+397fbce6ae2c3dd17a45f4817abaf6eb ../fig-img2/of_pellets.jpg
+39d26bc61b12f1f922fbd3a64bc02197 ../fig-img2/of_pienso.jpg

@@ -1,24 +1,6 @@
 {
  "v": 3,
- "createdOnFiles": {
-  "v": 1,
-  "at": "2026-10-19T18:12:43Z"
- },
- "title": "Agroolink · Figma (referencia)",
- "launch": {
-  "view": "canvas",
-  "page": "figma"
- },
- "pages": [
-  {
-   "id": "figma",
-   "name": "Front · Figma (referencia escritorio)"
-  },
-  {
-   "id": "front",
-   "name": "Front · Piezas (desde Figma)"
-  }
- ],
+ "attachments": {},
  "boards": {
   "Fig01.dc.html": {
    "h": 66,
@@ -564,213 +546,250 @@
    "x": 8400,
    "y": 26263
   },
-  "FrHome.dc.html": {
-   "w": 1440,
-   "h": 3406,
-   "page": "front",
-   "x": 0,
-   "y": 0,
-   "title": "Home con sesión · las piezas juntas"
-  },
   "FrCabecera.dc.html": {
-   "w": 1440,
    "h": 68,
    "page": "front",
-   "x": 1600,
-   "y": 208,
-   "title": "P01 · Cabecera de Agroolink (IntHeader) a 1440"
-  },
-  "FrMegaCategorias.dc.html": {
+   "title": "P01 · Cabecera de Agroolink (IntHeader) a 1440",
    "w": 1440,
-   "h": 560,
-   "page": "front",
    "x": 1600,
-   "y": 416,
-   "title": "P02 · Categoría abierta desde el buscador"
-  },
-  "FrMegaEspecies.dc.html": {
-   "w": 1440,
-   "h": 560,
-   "page": "front",
-   "x": 1600,
-   "y": 1116,
-   "title": "P03 · Especie abierta desde el buscador"
-  },
-  "FrHero.dc.html": {
-   "w": 1440,
-   "h": 402,
-   "page": "front",
-   "x": 1600,
-   "y": 1816,
-   "title": "P04 · Hero «Hola Samuel» con buscador"
-  },
-  "FrEspecies.dc.html": {
-   "w": 1440,
-   "h": 268,
-   "page": "front",
-   "x": 1600,
-   "y": 2358,
-   "title": "P05 · Explora por especie"
-  },
-  "FrEspeciesAbierta.dc.html": {
-   "w": 1440,
-   "h": 430,
-   "page": "front",
-   "x": 1600,
-   "y": 2766,
-   "title": "P05b · Explora por especie · Aves abierta"
-  },
-  "FrCategorias.dc.html": {
-   "w": 1440,
-   "h": 249,
-   "page": "front",
-   "x": 1600,
-   "y": 3336,
-   "title": "P06 · Explora por categoría"
+   "y": 208
   },
   "FrCategoriaPanel.dc.html": {
-   "w": 1440,
    "h": 618,
    "page": "front",
-   "x": 3120,
-   "y": 0,
-   "title": "P07 · Explorar una categoría (Nutrición)"
-  },
-  "FrProyectos.dc.html": {
+   "title": "P07 · Explorar una categoría (Nutrición)",
    "w": 1440,
-   "h": 510,
-   "page": "front",
    "x": 3120,
-   "y": 758,
-   "title": "P08 · Proyectos: de la idea a la realidad"
+   "y": 0
   },
-  "FrProductos.dc.html": {
-   "w": 1440,
-   "h": 422,
+  "FrCategorias.dc.html": {
+   "h": 249,
    "page": "front",
-   "x": 3120,
-   "y": 1408,
-   "title": "P09 · Productos destacados (tarjetas de 216)"
+   "title": "P06 · Explora por categoría",
+   "w": 1440,
+   "x": 1600,
+   "y": 3336
   },
   "FrComparador.dc.html": {
-   "w": 1440,
    "h": 349,
    "page": "front",
+   "title": "P10 · Comparador y proyectos",
+   "w": 1440,
    "x": 3120,
-   "y": 1970,
-   "title": "P10 · Comparador y proyectos"
+   "y": 1970
   },
   "FrConfianza.dc.html": {
-   "w": 1440,
    "h": 209,
    "page": "front",
+   "title": "P11 · Confianza",
+   "w": 1440,
    "x": 3120,
-   "y": 2459,
-   "title": "P11 · Confianza"
+   "y": 2459
+  },
+  "FrEspecies.dc.html": {
+   "h": 268,
+   "page": "front",
+   "title": "P05 · Explora por especie",
+   "w": 1440,
+   "x": 1600,
+   "y": 2358
+  },
+  "FrEspeciesAbierta.dc.html": {
+   "h": 430,
+   "page": "front",
+   "title": "P05b · Explora por especie · Aves abierta",
+   "w": 1440,
+   "x": 1600,
+   "y": 2766
+  },
+  "FrHero.dc.html": {
+   "h": 402,
+   "page": "front",
+   "title": "P04 · Hero «Hola Samuel» con buscador",
+   "w": 1440,
+   "x": 1600,
+   "y": 1816
+  },
+  "FrHome.dc.html": {
+   "h": 3406,
+   "page": "front",
+   "title": "Home con sesión · las piezas juntas",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "FrMegaCategorias.dc.html": {
+   "h": 560,
+   "page": "front",
+   "title": "P02 · Categoría abierta desde el buscador",
+   "w": 1440,
+   "x": 1600,
+   "y": 416
+  },
+  "FrMegaEspecies.dc.html": {
+   "h": 560,
+   "page": "front",
+   "title": "P03 · Especie abierta desde el buscador",
+   "w": 1440,
+   "x": 1600,
+   "y": 1116
   },
   "FrPie.dc.html": {
-   "w": 1440,
    "h": 311,
    "page": "front",
+   "title": "P12 · Pie",
+   "w": 1440,
    "x": 3120,
-   "y": 2808,
-   "title": "P12 · Pie"
+   "y": 2808
+  },
+  "FrProductos.dc.html": {
+   "h": 422,
+   "page": "front",
+   "title": "P09 · Productos destacados (tarjetas de 216)",
+   "w": 1440,
+   "x": 3120,
+   "y": 1408
+  },
+  "FrProyectos.dc.html": {
+   "h": 510,
+   "page": "front",
+   "title": "P08 · Proyectos: de la idea a la realidad",
+   "w": 1440,
+   "x": 3120,
+   "y": 758
   },
   "IntHeader.dc.html": {
-   "w": 1280,
    "h": 68,
    "page": "front",
+   "title": "Componente · IntHeader (la cabecera de Agroolink, igual que en 000_LP_Header)",
+   "w": 1280,
    "x": 1600,
+   "y": 0
+  },
+  "FrPagCategoria.dc.html": {
+   "w": 1440,
+   "h": 1823,
+   "page": "front",
+   "x": 4800,
    "y": 0,
-   "title": "Componente · IntHeader (la cabecera de Agroolink, igual que en 000_LP_Header)"
+   "title": "Página · Categoría (Piensos para broilers)"
+  },
+  "FrCatCabecera.dc.html": {
+   "w": 1440,
+   "h": 260,
+   "page": "front",
+   "x": 4800,
+   "y": 2223,
+   "title": "C01 · Categoría · migas y cabecera (Aves › Broilers › Nutrición › Piensos)"
+  },
+  "FrCatFiltros.dc.html": {
+   "w": 1440,
+   "h": 178,
+   "page": "front",
+   "x": 4800,
+   "y": 2623,
+   "title": "C02 · Filtros como en los resultados: «Filtros» con contador, un botón por filtro, activos y cómo se combinan"
+  },
+  "FrCatListado.dc.html": {
+   "w": 1440,
+   "h": 784,
+   "page": "front",
+   "x": 4800,
+   "y": 2941,
+   "title": "C03 · Listado: tarjetas de 210 (Comparar · Ver ficha) y paginación"
+  },
+  "FrCatAyuda.dc.html": {
+   "w": 1440,
+   "h": 222,
+   "page": "front",
+   "x": 4800,
+   "y": 3865,
+   "title": "C04 · ¿No encuentras lo que buscas? · Publicar un proyecto"
+  },
+  "FrPagEspecie.dc.html": {
+   "w": 1440,
+   "h": 2147,
+   "page": "front",
+   "x": 6400,
+   "y": 0,
+   "title": "Página · Especie (Aves)"
+  },
+  "FrEspHero.dc.html": {
+   "w": 1440,
+   "h": 426,
+   "page": "front",
+   "x": 6400,
+   "y": 2547,
+   "title": "E01 · Especie · Aves: producción y categorías"
+  },
+  "FrEspNecesitas.dc.html": {
+   "w": 1440,
+   "h": 452,
+   "page": "front",
+   "x": 6400,
+   "y": 3113,
+   "title": "E02 · Especie · ¿Qué necesitas?"
+  },
+  "FrEspContenido.dc.html": {
+   "w": 1440,
+   "h": 468,
+   "page": "front",
+   "x": 6400,
+   "y": 3705,
+   "title": "E03 · Especie · Contenidos y evento"
+  },
+  "FrPagProducto.dc.html": {
+   "w": 1440,
+   "h": 1947,
+   "page": "front",
+   "x": 8000,
+   "y": 0,
+   "title": "Página · Producto (OptiFeed®)"
+  },
+  "FrProdCabecera.dc.html": {
+   "w": 1440,
+   "h": 572,
+   "page": "front",
+   "x": 8000,
+   "y": 2347,
+   "title": "R01 · Producto · galería, datos y acciones (sin contactos)"
+  },
+  "FrProdDetalle.dc.html": {
+   "w": 1440,
+   "h": 428,
+   "page": "front",
+   "x": 8000,
+   "y": 3059,
+   "title": "R02 · Producto · pestañas e información"
+  },
+  "FrProdRelacionados.dc.html": {
+   "w": 1440,
+   "h": 568,
+   "page": "front",
+   "x": 8000,
+   "y": 3627,
+   "title": "R03 · Producto · relacionados"
   }
  },
- "order": [
-  "Fig01.dc.html",
-  "Fig02.dc.html",
-  "Fig03.dc.html",
-  "Fig04.dc.html",
-  "Fig05.dc.html",
-  "Fig06.dc.html",
-  "Fig07.dc.html",
-  "Fig08.dc.html",
-  "Fig09.dc.html",
-  "Fig10.dc.html",
-  "Fig19.dc.html",
-  "Fig11.dc.html",
-  "Fig12.dc.html",
-  "Fig47.dc.html",
-  "Fig48.dc.html",
-  "Fig51.dc.html",
-  "Fig52.dc.html",
-  "Fig56.dc.html",
-  "Fig57.dc.html",
-  "Fig60.dc.html",
-  "Fig62.dc.html",
-  "Fig28.dc.html",
-  "Fig29.dc.html",
-  "Fig36.dc.html",
-  "Fig45.dc.html",
-  "Fig20.dc.html",
-  "Fig21.dc.html",
-  "Fig22.dc.html",
-  "Fig23.dc.html",
-  "Fig24.dc.html",
-  "Fig30.dc.html",
-  "Fig31.dc.html",
-  "Fig32.dc.html",
-  "Fig13.dc.html",
-  "Fig14.dc.html",
-  "Fig15.dc.html",
-  "Fig16.dc.html",
-  "Fig25.dc.html",
-  "Fig26.dc.html",
-  "Fig27.dc.html",
-  "Fig33.dc.html",
-  "Fig34.dc.html",
-  "Fig35.dc.html",
-  "Fig17.dc.html",
-  "Fig18.dc.html",
-  "Fig37.dc.html",
-  "Fig38.dc.html",
-  "Fig39.dc.html",
-  "Fig40.dc.html",
-  "Fig41.dc.html",
-  "Fig42.dc.html",
-  "Fig43.dc.html",
-  "Fig44.dc.html",
-  "Fig46.dc.html",
-  "Fig49.dc.html",
-  "Fig50.dc.html",
-  "Fig53.dc.html",
-  "Fig54.dc.html",
-  "Fig55.dc.html",
-  "Fig58.dc.html",
-  "Fig59.dc.html",
-  "Fig64.dc.html",
-  "Fig65.dc.html",
-  "Fig66.dc.html",
-  "Fig67.dc.html",
-  "Fig68.dc.html",
-  "Fig61.dc.html",
-  "Fig63.dc.html",
-  "FrHome.dc.html",
-  "FrCabecera.dc.html",
-  "FrMegaCategorias.dc.html",
-  "FrMegaEspecies.dc.html",
-  "FrHero.dc.html",
-  "FrEspecies.dc.html",
-  "FrEspeciesAbierta.dc.html",
-  "FrCategorias.dc.html",
-  "FrCategoriaPanel.dc.html",
-  "FrProyectos.dc.html",
-  "FrProductos.dc.html",
-  "FrComparador.dc.html",
-  "FrConfianza.dc.html",
-  "FrPie.dc.html",
-  "IntHeader.dc.html"
- ],
+ "createdOnFiles": {
+  "at": "2026-10-19T18:12:43Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "page": "figma",
+  "view": "canvas"
+ },
  "notes": {
+  "escritorio": {
+   "fill": "blue",
+   "page": "figma",
+   "size": 24,
+   "text": "Referencia del front en Figma (68 capturas). El diseño actual de Agroolink está en:\nEscritorio: https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t\nMóvil: https://claude.ai/artifact/9vAKKxSsnWctkbk2YirbP6",
+   "w": 520,
+   "x": -700,
+   "y": -300
+  },
   "figT0": {
    "kind": "title1",
    "maxW": 6000,
@@ -861,14 +880,14 @@
    "x": 0,
    "y": 25963
   },
-  "escritorio": {
-   "x": -700,
-   "y": -300,
+  "frInfo": {
+   "fill": "green",
+   "page": "front",
+   "size": 24,
+   "text": "Rehecho desde la referencia de Figma (F01–F05), por piezas.\n\nAncho tipo vevor.es: tablero 1440 px, contenido 1320 px (márgenes de 60), cabecera de Agroolink (IntHeader, 68 px, con el buscador combinado), texto 15, títulos 22/700, botones 38, tarjetas de producto de 210–216 px (6 por fila).\n\nPoppins, verde #0E5A3A y logo oficial. Sin contactos: ni web, ni email, ni teléfono en ninguna pieza.\n\nLa home junta las piezas con dc-import: si cambias una pieza, cambia en la home.",
    "w": 520,
-   "fill": "blue",
-   "page": "figma",
-   "size": "m",
-   "text": "Referencia del front en Figma (68 capturas). El diseño actual de Agroolink está en:\nEscritorio: https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t\nMóvil: https://claude.ai/artifact/9vAKKxSsnWctkbk2YirbP6"
+   "x": -700,
+   "y": 0
   },
   "frT0": {
    "kind": "title1",
@@ -888,16 +907,168 @@
    "x": 1600,
    "y": -300
   },
-  "frInfo": {
-   "x": -700,
-   "y": 0,
-   "w": 520,
-   "fill": "green",
+  "frTFrPagCategoria": {
+   "kind": "title1",
+   "maxW": 1440,
    "page": "front",
-   "size": "m",
-   "text": "Rehecho desde la referencia de Figma (F01–F05), por piezas.\n\nAncho tipo vevor.es: tablero 1440 px, contenido 1320 px (márgenes de 60), cabecera de Agroolink (IntHeader, 68 px, con el buscador combinado), texto 15, títulos 22/700, botones 38, tarjetas de producto de 210–216 px (6 por fila).\n\nPoppins, verde #0E5A3A y logo oficial. Sin contactos: ni web, ni email, ni teléfono en ninguna pieza.\n\nLa home junta las piezas con dc-import: si cambias una pieza, cambia en la home."
+   "text": "Categoría (Piensos para broilers)",
+   "w": 240,
+   "x": 4800,
+   "y": -300
+  },
+  "frPFrPagCategoria": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Sus piezas",
+   "w": 240,
+   "x": 4800,
+   "y": 1923
+  },
+  "frTFrPagEspecie": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Especie (Aves)",
+   "w": 240,
+   "x": 6400,
+   "y": -300
+  },
+  "frPFrPagEspecie": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Sus piezas",
+   "w": 240,
+   "x": 6400,
+   "y": 2247
+  },
+  "frTFrPagProducto": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Producto (OptiFeed®)",
+   "w": 240,
+   "x": 8000,
+   "y": -300
+  },
+  "frPFrPagProducto": {
+   "kind": "title1",
+   "maxW": 1440,
+   "page": "front",
+   "text": "Sus piezas",
+   "w": 240,
+   "x": 8000,
+   "y": 2047
   }
  },
- "designSystems": [],
- "attachments": {}
+ "order": [
+  "Fig01.dc.html",
+  "Fig02.dc.html",
+  "Fig03.dc.html",
+  "Fig04.dc.html",
+  "Fig05.dc.html",
+  "Fig06.dc.html",
+  "Fig07.dc.html",
+  "Fig08.dc.html",
+  "Fig09.dc.html",
+  "Fig10.dc.html",
+  "Fig19.dc.html",
+  "Fig11.dc.html",
+  "Fig12.dc.html",
+  "Fig47.dc.html",
+  "Fig48.dc.html",
+  "Fig51.dc.html",
+  "Fig52.dc.html",
+  "Fig56.dc.html",
+  "Fig57.dc.html",
+  "Fig60.dc.html",
+  "Fig62.dc.html",
+  "Fig28.dc.html",
+  "Fig29.dc.html",
+  "Fig36.dc.html",
+  "Fig45.dc.html",
+  "Fig20.dc.html",
+  "Fig21.dc.html",
+  "Fig22.dc.html",
+  "Fig23.dc.html",
+  "Fig24.dc.html",
+  "Fig30.dc.html",
+  "Fig31.dc.html",
+  "Fig32.dc.html",
+  "Fig13.dc.html",
+  "Fig14.dc.html",
+  "Fig15.dc.html",
+  "Fig16.dc.html",
+  "Fig25.dc.html",
+  "Fig26.dc.html",
+  "Fig27.dc.html",
+  "Fig33.dc.html",
+  "Fig34.dc.html",
+  "Fig35.dc.html",
+  "Fig17.dc.html",
+  "Fig18.dc.html",
+  "Fig37.dc.html",
+  "Fig38.dc.html",
+  "Fig39.dc.html",
+  "Fig40.dc.html",
+  "Fig41.dc.html",
+  "Fig42.dc.html",
+  "Fig43.dc.html",
+  "Fig44.dc.html",
+  "Fig46.dc.html",
+  "Fig49.dc.html",
+  "Fig50.dc.html",
+  "Fig53.dc.html",
+  "Fig54.dc.html",
+  "Fig55.dc.html",
+  "Fig58.dc.html",
+  "Fig59.dc.html",
+  "Fig64.dc.html",
+  "Fig65.dc.html",
+  "Fig66.dc.html",
+  "Fig67.dc.html",
+  "Fig68.dc.html",
+  "Fig61.dc.html",
+  "Fig63.dc.html",
+  "FrHome.dc.html",
+  "FrCabecera.dc.html",
+  "FrMegaCategorias.dc.html",
+  "FrMegaEspecies.dc.html",
+  "FrHero.dc.html",
+  "FrEspecies.dc.html",
+  "FrEspeciesAbierta.dc.html",
+  "FrCategorias.dc.html",
+  "FrCategoriaPanel.dc.html",
+  "FrProyectos.dc.html",
+  "FrProductos.dc.html",
+  "FrComparador.dc.html",
+  "FrConfianza.dc.html",
+  "FrPie.dc.html",
+  "IntHeader.dc.html",
+  "FrPagCategoria.dc.html",
+  "FrCatCabecera.dc.html",
+  "FrCatFiltros.dc.html",
+  "FrCatListado.dc.html",
+  "FrCatAyuda.dc.html",
+  "FrPagEspecie.dc.html",
+  "FrEspHero.dc.html",
+  "FrEspNecesitas.dc.html",
+  "FrEspContenido.dc.html",
+  "FrPagProducto.dc.html",
+  "FrProdCabecera.dc.html",
+  "FrProdDetalle.dc.html",
+  "FrProdRelacionados.dc.html"
+ ],
+ "pages": [
+  {
+   "id": "figma",
+   "name": "Front · Figma (referencia escritorio)"
+  },
+  {
+   "id": "front",
+   "name": "Front · Piezas (desde Figma)"
+  }
+ ],
+ "title": "Agroolink · Figma (referencia)"
 }

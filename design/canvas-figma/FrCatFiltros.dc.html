@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Front · C02 · Filtros como en los resultados: «Filtros» con contador, un botón por filtro, activos y cómo se combinan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.35;font-family:'Poppins',sans-serif;color:#17231D;font-size:15px}
+a{color:#0E5A3A;text-decoration:none;font-weight:600}a:hover{color:#0A3D28}
+.wrap{width:1320px;margin:0 auto}
+.h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.sub{margin:2px 0 0;font-size:15px;color:#4A5650}
+.hint{font-size:12px;color:#56615B}
+.kick{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:14px;box-sizing:border-box}
+.btn{height:38px;padding:0 18px;border-radius:10px;background:#0E5A3A;color:#FFFFFF;font:600 15px 'Poppins',sans-serif;border:0;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;cursor:pointer;text-decoration:none}
+.btn2{height:36px;padding:0 16px;border-radius:10px;background:#FFFFFF;color:#0E5A3A;border:1.5px solid #0E5A3A;font:600 15px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;cursor:pointer;text-decoration:none;box-sizing:border-box}
+.chip{height:32px;padding:0 14px;border-radius:999px;border:1px solid #D5DED8;background:#FFFFFF;font:500 13.5px 'Poppins',sans-serif;color:#17231D;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.ib{width:38px;height:38px;border-radius:10px;border:0;background:none;color:#17231D;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
+.ver{display:inline-flex;align-items:center;gap:6px;font-size:15px}
+.sec{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
+</style>
+</helmet>
+<div style="width: 1440px; height: 178px; background: #F6F8F6; position: relative; overflow: hidden; font-family: 'Poppins', sans-serif; color: #17231D;"><section class="wrap" style="padding-top: 22px; display: flex; flex-direction: column; gap: 10px;"><div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;"><button type="button" class="btn" style="height: 40px; border-radius: 999px; padding: 0 16px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filtros<span style="min-width: 22px; height: 22px; border-radius: 999px; background: #B5D334; color: #072B1E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span></button><button type="button" class="chip" style="height: 40px; padding: 0 14px; background: #EEF6EE; border: 1.5px solid #0E5A3A; color: #0E5A3A; font-weight: 600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM16 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 13c-3 0-5 3-5 5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2c0-2-2-5-5-5z"/></svg>Especie: Aves › Broilers<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" class="chip" style="height: 40px; padding: 0 14px; background: #EEF6EE; border: 1.5px solid #0E5A3A; color: #0E5A3A; font-weight: 600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Categoría: Nutrición › Piensos<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m6 9 6 6 6-6"/></svg></button><button type="button" class="chip" style="height: 40px; padding: 0 14px; font-size: 14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M5 19l2.8-2.8M16.2 7.8 19 5"/></svg>Enfermedad</button><button type="button" class="chip" style="height: 40px; padding: 0 14px; font-size: 14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>País</button><button type="button" class="chip" style="height: 40px; padding: 0 14px; font-size: 14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M3 12V4h8l9 9-8 8zM7.5 7.5h.01"/></svg>Marca</button><label style="display: flex; align-items: center; gap: 8px; font-size: 14px; margin-left: 6px;"><span style="width: 18px; height: 18px; border: 1.5px solid #B9C6BE; border-radius: 4px; background: #FFFFFF;"></span>Solo verificadas</label></div><div style="display: flex; gap: 12px; align-items: baseline;"><strong style="font-size: 14px;">Filtros activos (2)</strong><a href="#" style="font-size: 13px;">Limpiar todo</a></div><p style="margin: 0; font-size: 13px; color: #4A5650;">Los filtros se combinan: ves lo que cumple <strong>todos</strong>. Dentro de un mismo filtro basta con <strong>una</strong> opción. Lo que no depende de especie (equipos, bioseguridad…) sale con cualquier especie.</p><div style="display: flex; align-items: center; border-bottom: 1px solid #E3E8E4; margin-top: 4px;"><a href="#" style="padding: 10px 0; margin-right: 26px; font-size: 15px; box-shadow: inset 0 -3px 0 #0E5A3A;">Productos 124</a><a href="#" style="padding: 10px 0; font-size: 15px; font-weight: 500; color: #4A5650;">Empresas 42</a><span style="flex: 1;"></span><span style="font-size: 13px; color: #56615B; margin-right: 8px;">Ordenar por</span><button type="button" class="chip" style="height: 36px; border-radius: 10px; font-weight: 600;">Más relevantes<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="m6 9 6 6 6-6"/></svg></button></div></section></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":178}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
