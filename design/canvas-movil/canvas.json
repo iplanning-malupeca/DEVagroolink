@@ -1579,6 +1579,38 @@
    "x": 3290,
    "y": 4738,
    "title": "EM8 · Plan y facturación"
+  },
+  "MB_ExpConsultasOrg.dc.html": {
+   "w": 390,
+   "h": 930,
+   "page": "mb7",
+   "x": 2270,
+   "y": 2594,
+   "title": "E6 · Consultas organizadas (Pro)"
+  },
+  "MB_ExpCandidaturas.dc.html": {
+   "w": 390,
+   "h": 1000,
+   "page": "mb7",
+   "x": 2740,
+   "y": 2594,
+   "title": "E7 · Mis candidaturas (Pro)"
+  },
+  "MB_ExpEstadisticas.dc.html": {
+   "w": 390,
+   "h": 930,
+   "page": "mb7",
+   "x": 3210,
+   "y": 2594,
+   "title": "E8 · Estadísticas de experta"
+  },
+  "MB_ExpPlan.dc.html": {
+   "w": 390,
+   "h": 1030,
+   "page": "mb7",
+   "x": 3680,
+   "y": 2594,
+   "title": "E9 · Plan y facturación de experta"
   }
  },
  "createdOnFiles": {
@@ -2051,7 +2083,11 @@
   "MB_EmpSolicitudes.dc.html",
   "MB_EmpEquipo.dc.html",
   "MB_EmpEstadisticas.dc.html",
-  "MB_EmpPlan.dc.html"
+  "MB_EmpPlan.dc.html",
+  "MB_ExpConsultasOrg.dc.html",
+  "MB_ExpCandidaturas.dc.html",
+  "MB_ExpEstadisticas.dc.html",
+  "MB_ExpPlan.dc.html"
  ],
  "pages": [
   {

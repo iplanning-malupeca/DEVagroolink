@@ -2026,6 +2026,38 @@
    "x": 5440,
    "y": 0,
    "title": "SA5 · Altas y CRM: altas, poderes, organizaciones nuevas, cambios del CRM y ramas"
+  },
+  "ExpConsultasOrg.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 6800,
+   "y": 4930,
+   "title": "E6 · Consultas organizadas: estados, etiquetas y notas privadas (Experto Pro)"
+  },
+  "ExpCandidaturas.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 8160,
+   "y": 4930,
+   "title": "E7 · Mis candidaturas: propuestas a proyectos y su estado (Experto Pro)"
+  },
+  "ExpEstadisticas.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 9520,
+   "y": 4930,
+   "title": "E8 · Estadísticas de experta: básicas en Gratis, avanzadas con Pro"
+  },
+  "ExpPlan.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "intusuario",
+   "x": 10880,
+   "y": 4930,
+   "title": "E9 · Plan y facturación de experta: Gratis y Pro · 19,90 €"
   }
  },
  "createdOnFiles": {
@@ -2213,7 +2245,7 @@
   },
   "ie0": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 12160,
    "page": "intusuario",
    "text": "COMO EXPERTA · Laura Gil · Mi espacio, tableros, mensajes y Mi cuenta son los de usuario",
    "w": 240,
@@ -2858,7 +2890,11 @@
   "SAModeracion.dc.html",
   "SAPausa.dc.html",
   "SAArchivos.dc.html",
-  "SAAltas.dc.html"
+  "SAAltas.dc.html",
+  "ExpConsultasOrg.dc.html",
+  "ExpCandidaturas.dc.html",
+  "ExpEstadisticas.dc.html",
+  "ExpPlan.dc.html"
  ],
  "pages": [
   {
