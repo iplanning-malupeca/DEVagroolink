@@ -39,6 +39,10 @@ Diseño: canvas, páginas «Planes», «Planes · qué se bloquea» y «MB_08 Pl
 - Qué hace: sustituye el dato por «•••» para todos, envía o publica el resto del contenido, avisa al
   autor con la ventana «Hemos ocultado un dato de contacto» y registra el intento. Si se repite, la
   cuenta pasa a revisión del superadmin.
+- Archivos (PDF, imágenes, documentos): se revisan al subirlos: texto, texto de las imágenes (OCR),
+  códigos QR, enlaces y metadatos. Si contienen un contacto NO se adjuntan ni se publican (un PDF no
+  se puede «tachar» con garantías): se indica la página y el dato para que el autor lo corrija y lo
+  vuelva a subir. Los metadatos del archivo (autor, empresa, email) se eliminan siempre.
 - Los datos de contacto propios sí se ven en la propia cuenta (perfil, facturación, verificación).
   La web de una empresa se guarda solo para verificarla; no se muestra en la ficha.
 - Las exportaciones (informes de solicitudes en Premium) nunca incluyen teléfonos ni emails.
@@ -161,6 +165,8 @@ Cómo se pide la cuenta gratis:
   - Estadísticas  [estadisticas · bloqueo: plan]
       Gratis: Básicas | Pro · 79 €: Avanzadas | Premium · 199 €: Avanzadas + benchmark
   - Exportar informes de solicitudes (sin contactos)  [exportar · bloqueo: plan]
+      Gratis: — | Pro · 79 €: — | Premium · 199 €: Sí
+  - Adjuntar archivos a propuestas y mensajes (revisados: sin contactos)  [adjuntos · bloqueo: plan]
       Gratis: — | Pro · 79 €: — | Premium · 199 €: Sí
   - Gestor de cuenta  [gestor · bloqueo: plan]
       Gratis: — | Pro · 79 €: — | Premium · 199 €: Sí

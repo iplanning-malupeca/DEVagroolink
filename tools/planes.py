@@ -13,6 +13,7 @@ REGLAS = [
     'Preguntar nunca se bloquea para el comprador. Los expertos reciben y responden sin límite; la empresa Gratis ve las consultas de 3 compradores y las siguientes se guardan hasta que pasa a Pro (nunca se pierden).',
     'Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR; todo se habla en Mensajes y queda registrado.',
     'Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio, proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y se avisa al autor. Si se repite, el superadmin revisa la cuenta.',
+    'Archivos (PDF, imágenes, documentos): se revisan al subirlos (texto, texto de imágenes por OCR, códigos QR, enlaces y metadatos). Si contienen un contacto no se adjuntan ni se publican: se indica la página y el dato para corregirlo; los metadatos (autor, empresa, email) se eliminan siempre.',
     'Sin cuenta solo se mira (buscar, ver fichas y cambiar de idioma); todo lo demás pide la cuenta gratis, que se pide al pulsar la acción, nunca al entrar ni al navegar.',
     'Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.',
     'Al bajar de plan nada se borra: lo que sobra pasa a solo lectura o se despublica (el usuario elige qué mantiene).',
@@ -63,6 +64,7 @@ CUENTAS = {
    ('destacar', 'Destacar productos', ['—', 'Extra de pago', '4 al mes'], 'plan'),
    ('oportunidades', 'Oportunidades (proyectos / RFQ del mercado)', ['Solo el número', '2 al mes', 'Ilimitadas + matching'], 'plan'),
    ('estadisticas', 'Estadísticas', ['Básicas', 'Avanzadas', 'Avanzadas + benchmark'], 'plan'),
+   ('adjuntos', 'Adjuntar archivos a propuestas y mensajes (revisados: sin contactos)', ['—', '—', 'Sí'], 'plan'),
    ('exportar', 'Exportar informes de solicitudes (sin contactos)', ['—', '—', 'Sí'], 'plan'),
    ('gestor', 'Gestor de cuenta', ['—', '—', 'Sí'], 'plan')]}}
 VENTANAS = {
