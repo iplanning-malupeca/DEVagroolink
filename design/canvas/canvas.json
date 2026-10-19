@@ -2005,11 +2005,11 @@
   },
   "ProyExperto.dc.html": {
    "h": 1000,
-   "page": "proyempresas",
+   "page": "proyectos",
    "title": "J7 · Proyectos para la experta (Laura Gil)",
    "w": 1280,
    "x": 2720,
-   "y": 200
+   "y": 4448
   },
   "ProyMis.dc.html": {
    "h": 900,
@@ -2037,35 +2037,35 @@
   },
   "ProyOportunidades.dc.html": {
    "h": 1000,
-   "page": "proyempresas",
+   "page": "proyectos",
    "title": "J5 · Oportunidades para la empresa (AgroNova)",
    "w": 1280,
    "x": 0,
-   "y": 200
+   "y": 4448
   },
   "ProyPropuesta.dc.html": {
    "h": 1000,
-   "page": "proyempresas",
+   "page": "proyectos",
    "title": "J6 · Enviar una propuesta",
    "w": 1280,
    "x": 1360,
-   "y": 200
+   "y": 4448
   },
   "ProyPropuestaContacto.dc.html": {
    "h": 1000,
-   "page": "proyempresas",
+   "page": "proyectos",
    "title": "J6c · Si intentan poner datos de contacto: no se envía, se marcan y queda registrado",
    "w": 1280,
    "x": 2720,
-   "y": 1300
+   "y": 5548
   },
   "ProyPropuestaMensajes.dc.html": {
    "h": 940,
-   "page": "proyempresas",
+   "page": "proyectos",
    "title": "J6b · La propuesta en Mensajes: dudas del ganadero y nueva versión en el mismo hilo",
    "w": 1280,
    "x": 1360,
-   "y": 1300
+   "y": 5548
   },
   "ProyPropuestaVista.dc.html": {
    "h": 1140,
@@ -2968,11 +2968,11 @@
   "proyT2": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "proyempresas",
+   "page": "proyectos",
    "text": "Empresas y expertos reciben oportunidades cuando el proyecto se comparte",
    "w": 240,
    "x": 0,
-   "y": 0
+   "y": 4248
   },
   "selT1": {
    "kind": "title1",
@@ -3464,11 +3464,7 @@
   },
   {
    "id": "proyectos",
-   "name": "001_LP_Proyectos"
-  },
-  {
-   "id": "proyempresas",
-   "name": "001b_LP_Proyectos_Empresas"
+   "name": "001_LP_Proyectos · Usuario y Empresas"
   },
   {
    "id": "busqueda",
