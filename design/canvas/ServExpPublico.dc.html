@@ -97,10 +97,19 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-heig
 .menu{position:absolute;right:14px;top:54px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(20,16,40,.16);padding:6px;display:flex;flex-direction:column;min-width:290px}
 .menu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:8px;display:flex;flex-direction:column;gap:1px;font-weight:500}
 .menu button:hover{background:var(--soft)}
+.blq{border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:var(--surface)}
+.blq.mod{border:1.5px solid #E0A33B}
+.blq .bh{display:flex;align-items:center;gap:8px}.blq .bh .k{flex:1;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.edov{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
+.edsh{background:var(--surface);border-radius:20px;width:min(520px,100%);padding:20px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.edopt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line2);border-radius:12px;background:var(--surface);text-align:left;width:100%}
+.edopt.on{border:1.5px solid var(--accent);background:var(--soft)}
+@media (max-width:600px){.edov{align-items:flex-end;padding:0}.edsh{border-radius:20px 20px 0 0}}
 .menu button small{font-size:12px;color:var(--muted);font-weight:400}
 .ico{width:34px;height:34px;border:0;background:none;border-radius:8px;font-size:18px}
 .ico:hover{background:var(--soft)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:30}
+@media (max-width:600px){.crumb{display:none}.logo svg{height:22px}.top{flex-wrap:nowrap;gap:10px}}
 
 </style>
 </helmet>

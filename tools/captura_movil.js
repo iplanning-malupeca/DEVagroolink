@@ -35,6 +35,9 @@ if(P.indexOf('crear-producto')>-1){
   click('seguir'); type('[data-f="nombre"]','Auditoría nutricional de broilers'); type('[data-f="desc"]','Visita a granja, revisión de pienso y consumos, e informe por fase.'); out.push(await snap('MS5','Detalles'));
   click('seguir'); click('seguir'); out.push(await snap('MS6','Revisión'));
   click('publicar'); window.__t("UI.menu = LISTA[0].id; render()"); out.push(await snap('MS7','Mis servicios'));
+  window.__t("const c = JSON.parse(JSON.stringify(LISTA[0])); c.id='s2'; c.nombre='Diagnóstico de coccidiosis'; c.estado='Pausado'; LISTA.push(c); UI.menu = null; render()"); click('editar|'+window.__t('LISTA[0].id')); click('edbloque|especies'); click('esp|Porcino'); click('edvolver'); out.push(await snap('MS8','Editar servicio'));
+  click('edguardar'); out.push(await snap('MS9','¿Avisar?'));
+  click('edconfirmar'); window.__t("LISTA[1].archivado = true; UI.vista = 'archivados'; render()"); out.push(await snap('MS10','Archivados'));
   window.__t("localStorage.removeItem('agroolink-servicios-experto-v1'); S = nuevo(); LISTA = []; UI.vista='asistente'; UI.menu=null; render()");
 } else {
   localStorage.clear(); location.hash=''; 

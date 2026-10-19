@@ -908,7 +908,6 @@
   },
   "Fig01.dc.html": {
    "h": 66,
-   "page": "figma",
    "title": "F01 · Header · usuario logueado",
    "w": 922,
    "x": 0,
@@ -916,7 +915,6 @@
   },
   "Fig02.dc.html": {
    "h": 66,
-   "page": "figma",
    "title": "F02 · Header · con selector de región",
    "w": 1218,
    "x": 1042,
@@ -924,7 +922,6 @@
   },
   "Fig03.dc.html": {
    "h": 3389,
-   "page": "figma",
    "title": "F03 · Home logueado «Hola Samuel»",
    "w": 1292,
    "x": 2380,
@@ -932,7 +929,6 @@
   },
   "Fig04.dc.html": {
    "h": 999,
-   "page": "figma",
    "title": "F04 · Mega-menú de categorías",
    "w": 1292,
    "x": 3792,
@@ -940,7 +936,6 @@
   },
   "Fig05.dc.html": {
    "h": 3634,
-   "page": "figma",
    "title": "F05 · Home logueado · variante",
    "w": 1292,
    "x": 5204,
@@ -948,7 +943,6 @@
   },
   "Fig06.dc.html": {
    "h": 2381,
-   "page": "figma",
    "title": "F06 · Categoría · Aves › Broilers › Nutrición",
    "w": 1352,
    "x": 0,
@@ -956,7 +950,6 @@
   },
   "Fig07.dc.html": {
    "h": 2381,
-   "page": "figma",
    "title": "F07 · Categoría · variante",
    "w": 1284,
    "x": 1472,
@@ -964,7 +957,6 @@
   },
   "Fig08.dc.html": {
    "h": 2035,
-   "page": "figma",
    "title": "F08 · Resultados «micotoxinas porcino»",
    "w": 1284,
    "x": 2876,
@@ -972,7 +964,6 @@
   },
   "Fig09.dc.html": {
    "h": 2072,
-   "page": "figma",
    "title": "F09 · Resultados · variante",
    "w": 1284,
    "x": 4280,
@@ -980,7 +971,6 @@
   },
   "Fig10.dc.html": {
    "h": 1830,
-   "page": "figma",
    "title": "F10 · Página de especie · Aves",
    "w": 1284,
    "x": 5684,
@@ -988,7 +978,6 @@
   },
   "Fig11.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F11 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 1400,
@@ -996,7 +985,6 @@
   },
   "Fig12.dc.html": {
    "h": 810,
-   "page": "figma",
    "title": "F12 · Contactar con la empresa",
    "w": 1184,
    "x": 2806,
@@ -1004,7 +992,6 @@
   },
   "Fig13.dc.html": {
    "h": 1610,
-   "page": "figma",
    "title": "F13 · Directorio de expertos",
    "w": 1280,
    "x": 0,
@@ -1012,7 +999,6 @@
   },
   "Fig14.dc.html": {
    "h": 2799,
-   "page": "figma",
    "title": "F14 · Perfil · Dr. Carlos Martínez",
    "w": 1280,
    "x": 1400,
@@ -1020,7 +1006,6 @@
   },
   "Fig15.dc.html": {
    "h": 1502,
-   "page": "figma",
    "title": "F15 · Perfil experto · variante",
    "w": 1280,
    "x": 2800,
@@ -1028,7 +1013,6 @@
   },
   "Fig16.dc.html": {
    "h": 1609,
-   "page": "figma",
    "title": "F16 · Perfil experto · variante",
    "w": 1280,
    "x": 4200,
@@ -1036,7 +1020,6 @@
   },
   "Fig17.dc.html": {
    "h": 1281,
-   "page": "figma",
    "title": "F17 · Modal · menú de categorías",
    "w": 1288,
    "x": 8238,
@@ -1044,7 +1027,6 @@
   },
   "Fig18.dc.html": {
    "h": 1281,
-   "page": "figma",
    "title": "F18 · Modal · menú de categorías (variante)",
    "w": 1288,
    "x": 9646,
@@ -1052,7 +1034,6 @@
   },
   "Fig19.dc.html": {
    "h": 1421,
-   "page": "figma",
    "title": "F19 · Ficha de producto OptiFeed",
    "w": 1280,
    "x": 0,
@@ -1060,7 +1041,6 @@
   },
   "Fig20.dc.html": {
    "h": 1027,
-   "page": "figma",
    "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 0,
@@ -1068,7 +1048,6 @@
   },
   "Fig21.dc.html": {
    "h": 913,
-   "page": "figma",
    "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1223,
    "x": 1406,
@@ -1076,7 +1055,6 @@
   },
   "Fig22.dc.html": {
    "h": 798,
-   "page": "figma",
    "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1141,
    "x": 2749,
@@ -1084,7 +1062,6 @@
   },
   "Fig23.dc.html": {
    "h": 928,
-   "page": "figma",
    "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1200,
    "x": 4010,
@@ -1092,7 +1069,6 @@
   },
   "Fig24.dc.html": {
    "h": 1026,
-   "page": "figma",
    "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 5330,
@@ -1100,7 +1076,6 @@
   },
   "Fig25.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F25 · Login",
    "w": 1228,
    "x": 0,
@@ -1108,7 +1083,6 @@
   },
   "Fig26.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F26 · Login · código",
    "w": 1280,
    "x": 1348,
@@ -1116,7 +1090,6 @@
   },
   "Fig27.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F27 · Login · paso",
    "w": 1280,
    "x": 2748,
@@ -1124,7 +1097,6 @@
   },
   "Fig28.dc.html": {
    "h": 1392,
-   "page": "figma",
    "title": "F28 · Producto Zucami Aviary Pro",
    "w": 1280,
    "x": 15358,
@@ -1132,7 +1104,6 @@
   },
   "Fig29.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F29 · Guardar en tablero",
    "w": 1280,
    "x": 16758,
@@ -1140,7 +1111,6 @@
   },
   "Fig30.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1280,
    "x": 6736,
@@ -1148,7 +1118,6 @@
   },
   "Fig31.dc.html": {
    "h": 1025,
-   "page": "figma",
    "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 8136,
@@ -1156,7 +1125,6 @@
   },
   "Fig32.dc.html": {
    "h": 1025,
-   "page": "figma",
    "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 9538,
@@ -1164,7 +1132,6 @@
   },
   "Fig33.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F33 · Login · paso",
    "w": 1280,
    "x": 4148,
@@ -1172,7 +1139,6 @@
   },
   "Fig34.dc.html": {
    "h": 1004,
-   "page": "figma",
    "title": "F34 · Cuenta creada",
    "w": 1289,
    "x": 5548,
@@ -1180,7 +1146,6 @@
   },
   "Fig35.dc.html": {
    "h": 833,
-   "page": "figma",
    "title": "F35 · Login · paso",
    "w": 1161,
    "x": 6957,
@@ -1188,7 +1153,6 @@
   },
   "Fig36.dc.html": {
    "h": 1460,
-   "page": "figma",
    "title": "F36 · Producto en catálogo de AgroNova",
    "w": 1280,
    "x": 18158,
@@ -1196,7 +1160,6 @@
   },
   "Fig37.dc.html": {
    "h": 1306,
-   "page": "figma",
    "title": "F37 · Listado de empresas / expertos / eventos",
    "w": 1280,
    "x": 0,
@@ -1204,7 +1167,6 @@
   },
   "Fig38.dc.html": {
    "h": 1352,
-   "page": "figma",
    "title": "F38 · Listado · variante",
    "w": 1280,
    "x": 1400,
@@ -1212,7 +1174,6 @@
   },
   "Fig39.dc.html": {
    "h": 1174,
-   "page": "figma",
    "title": "F39 · Evento · AviForum",
    "w": 1280,
    "x": 2800,
@@ -1220,7 +1181,6 @@
   },
   "Fig40.dc.html": {
    "h": 3464,
-   "page": "figma",
    "title": "F40 · Ficha empresa AgroNova",
    "w": 1280,
    "x": 0,
@@ -1228,7 +1188,6 @@
   },
   "Fig41.dc.html": {
    "h": 804,
-   "page": "figma",
    "title": "F41 · AgroNova · sección",
    "w": 1280,
    "x": 1400,
@@ -1236,7 +1195,6 @@
   },
   "Fig42.dc.html": {
    "h": 1082,
-   "page": "figma",
    "title": "F42 · AgroNova · sección",
    "w": 1280,
    "x": 2800,
@@ -1244,7 +1202,6 @@
   },
   "Fig43.dc.html": {
    "h": 1218,
-   "page": "figma",
    "title": "F43 · AgroNova · sección",
    "w": 1280,
    "x": 4200,
@@ -1252,7 +1209,6 @@
   },
   "Fig44.dc.html": {
    "h": 1134,
-   "page": "figma",
    "title": "F44 · AgroNova · sección",
    "w": 1280,
    "x": 5600,
@@ -1260,7 +1216,6 @@
   },
   "Fig45.dc.html": {
    "h": 1460,
-   "page": "figma",
    "title": "F45 · Producto en catálogo de AgroNova · variante",
    "w": 1280,
    "x": 19558,
@@ -1268,7 +1223,6 @@
   },
   "Fig46.dc.html": {
    "h": 4365,
-   "page": "figma",
    "title": "F46 · Ficha empresa DSM",
    "w": 1280,
    "x": 0,
@@ -1276,7 +1230,6 @@
   },
   "Fig47.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F47 · Modal · guardar en tablero",
    "w": 1286,
    "x": 4110,
@@ -1284,7 +1237,6 @@
   },
   "Fig48.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F48 · Modal · guardado en tablero",
    "w": 1286,
    "x": 5516,
@@ -1292,7 +1244,6 @@
   },
   "Fig49.dc.html": {
    "h": 1014,
-   "page": "figma",
    "title": "F49 · DSM · sección",
    "w": 1280,
    "x": 1400,
@@ -1300,7 +1251,6 @@
   },
   "Fig50.dc.html": {
    "h": 1243,
-   "page": "figma",
    "title": "F50 · DSM · sección",
    "w": 1280,
    "x": 2800,
@@ -1308,7 +1258,6 @@
   },
   "Fig51.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F51 · Modal · descargar vademécum",
    "w": 1286,
    "x": 6922,
@@ -1316,7 +1265,6 @@
   },
   "Fig52.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F52 · Modal · visitar la web",
    "w": 1286,
    "x": 8328,
@@ -1324,7 +1272,6 @@
   },
   "Fig53.dc.html": {
    "h": 1676,
-   "page": "figma",
    "title": "F53 · DSM · sección",
    "w": 1280,
    "x": 4200,
@@ -1332,7 +1279,6 @@
   },
   "Fig54.dc.html": {
    "h": 2075,
-   "page": "figma",
    "title": "F54 · DSM · sección",
    "w": 1280,
    "x": 5600,
@@ -1340,7 +1286,6 @@
   },
   "Fig55.dc.html": {
    "h": 1924,
-   "page": "figma",
    "title": "F55 · DSM · sección",
    "w": 1280,
    "x": 7000,
@@ -1348,7 +1293,6 @@
   },
   "Fig56.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F56 · Modal · únete como distribuidor",
    "w": 1286,
    "x": 9734,
@@ -1356,7 +1300,6 @@
   },
   "Fig57.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F57 · Modal · solicitar información",
    "w": 1286,
    "x": 11140,
@@ -1364,7 +1307,6 @@
   },
   "Fig58.dc.html": {
    "h": 1744,
-   "page": "figma",
    "title": "F58 · Ficha empresa Zucami",
    "w": 1280,
    "x": 0,
@@ -1372,7 +1314,6 @@
   },
   "Fig59.dc.html": {
    "h": 1555,
-   "page": "figma",
    "title": "F59 · Zucami · sección",
    "w": 1280,
    "x": 1400,
@@ -1380,7 +1321,6 @@
   },
   "Fig60.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F60 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 12546,
@@ -1388,7 +1328,6 @@
   },
   "Fig61.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F61 · Encontrar mi comercial",
    "w": 1280,
    "x": 9800,
@@ -1396,7 +1335,6 @@
   },
   "Fig62.dc.html": {
    "h": 1030,
-   "page": "figma",
    "title": "F62 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 13952,
@@ -1404,7 +1342,6 @@
   },
   "Fig63.dc.html": {
    "h": 1024,
-   "page": "figma",
    "title": "F63 · Contactar con Laura García",
    "w": 1280,
    "x": 11200,
@@ -1412,7 +1349,6 @@
   },
   "Fig64.dc.html": {
    "h": 1461,
-   "page": "figma",
    "title": "F64 · Zucami · catálogo",
    "w": 1280,
    "x": 2800,
@@ -1420,7 +1356,6 @@
   },
   "Fig65.dc.html": {
    "h": 1744,
-   "page": "figma",
    "title": "F65 · Zucami · catálogo",
    "w": 1280,
    "x": 4200,
@@ -1428,7 +1363,6 @@
   },
   "Fig66.dc.html": {
    "h": 1461,
-   "page": "figma",
    "title": "F66 · Zucami · catálogo",
    "w": 1280,
    "x": 5600,
@@ -1436,7 +1370,6 @@
   },
   "Fig67.dc.html": {
    "h": 1848,
-   "page": "figma",
    "title": "F67 · Zucami · catálogo",
    "w": 1280,
    "x": 7000,
@@ -1444,7 +1377,6 @@
   },
   "Fig68.dc.html": {
    "h": 1997,
-   "page": "figma",
    "title": "F68 · Zucami LATAM",
    "w": 1280,
    "x": 8400,
@@ -2590,68 +2522,68 @@
    "y": 0
   },
   "ServExpCondiciones.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX6 · Plazo de respuesta y precio; las solicitudes llegan por Mensajes",
-   "w": 1280,
    "x": 6800,
-   "y": 5180
+   "y": 5180,
+   "title": "SX6 · Plazo de respuesta y precio; las solicitudes llegan por Mensajes"
   },
   "ServExpDetalles.dc.html": {
+   "w": 1280,
    "h": 1170,
    "page": "experto",
-   "title": "SX5 · Detalles: nombre, descripción, datos del tipo de servicio y «Se publica en» (traducción)",
-   "w": 1280,
    "x": 5440,
-   "y": 5180
+   "y": 5180,
+   "title": "SX5 · Detalles: nombre, descripción, datos del tipo de servicio y «Se publica en» (traducción)"
   },
   "ServExpDonde.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX4 · Dónde lo prestas: presencial por zonas y a distancia con idiomas",
-   "w": 1280,
    "x": 4080,
-   "y": 5180
+   "y": 5180,
+   "title": "SX4 · Dónde lo prestas: presencial por zonas y a distancia con idiomas"
   },
   "ServExpEspecies.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX2 · Especies y, si quieres, su producción (sin marcar = todas)",
-   "w": 1280,
    "x": 1360,
-   "y": 5180
+   "y": 5180,
+   "title": "SX2 · Especies y, si quieres, su producción (sin marcar = todas)"
   },
   "ServExpLista.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)",
-   "w": 1280,
    "x": 9520,
-   "y": 5180
+   "y": 5180,
+   "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)"
   },
   "ServExpPublico.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX3 · Dirigido a: ramas de negocio y cargos del CRM",
-   "w": 1280,
    "x": 2720,
-   "y": 5180
+   "y": 5180,
+   "title": "SX3 · Dirigido a: ramas de negocio y cargos del CRM"
   },
   "ServExpRevision.dc.html": {
+   "w": 1280,
    "h": 900,
    "page": "experto",
-   "title": "SX7 · Revisión con «Editar» por apartado y «Publicar servicio»",
-   "w": 1280,
    "x": 8160,
-   "y": 5180
+   "y": 5180,
+   "title": "SX7 · Revisión con «Editar» por apartado y «Publicar servicio»"
   },
   "ServExpTipo.dc.html": {
+   "w": 1280,
    "h": 1850,
    "page": "experto",
-   "title": "SX1 · Tipo de servicio: los de la familia Servicios, con «Otro servicio…»",
-   "w": 1280,
    "x": 0,
-   "y": 5180
+   "y": 5180,
+   "title": "SX1 · Tipo de servicio: los de la familia Servicios, con «Otro servicio…»"
   },
   "ServLista.dc.html": {
    "h": 940,
@@ -3069,6 +3001,38 @@
    "x": 4080,
    "y": 0
   },
+  "ServExpEditar.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 10880,
+   "y": 5180,
+   "title": "SX9 · Editar servicio: por bloques, con «Cambiar» y los bloques modificados marcados"
+  },
+  "ServExpEditarBloque.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 12240,
+   "y": 5180,
+   "title": "SX10 · Cambiar un bloque: el mismo paso del asistente y «Hecho · volver a Editar servicio»"
+  },
+  "ServExpAvisar.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 13600,
+   "y": 5180,
+   "title": "SX11 · Guardar un servicio publicado: ¿avisar a quienes ya te han escrito?"
+  },
+  "ServExpArchivados.dc.html": {
+   "w": 1280,
+   "h": 900,
+   "page": "experto",
+   "x": 14960,
+   "y": 5180,
+   "title": "SX12 · Servicios archivados con «Recuperar»"
+  },
   "MB_MobHome.dc.html": {
    "w": 390,
    "h": 2010,
@@ -3252,6 +3216,30 @@
    "x": 2820,
    "y": 0,
    "title": "Mis servicios"
+  },
+  "MB_MS8.dc.html": {
+   "w": 390,
+   "h": 1120,
+   "page": "mb4",
+   "x": 3290,
+   "y": 0,
+   "title": "Editar servicio por bloques"
+  },
+  "MB_MS9.dc.html": {
+   "w": 390,
+   "h": 1120,
+   "page": "mb4",
+   "x": 3760,
+   "y": 0,
+   "title": "¿Avisar a quienes te escribieron?"
+  },
+  "MB_MS10.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb4",
+   "x": 4230,
+   "y": 0,
+   "title": "Servicios archivados"
   },
   "MB_MA1.dc.html": {
    "w": 390,
@@ -3871,7 +3859,6 @@
   "figT0": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Header y home",
    "w": 240,
    "x": 0,
@@ -3880,7 +3867,6 @@
   "figT1": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Listados, búsqueda y especie",
    "w": 240,
    "x": 0,
@@ -3889,7 +3875,6 @@
   "figT2": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Producto y modales",
    "w": 240,
    "x": 0,
@@ -3898,7 +3883,6 @@
   "figT3": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Pantallas con el nombre antiguo (Farm4You)",
    "w": 240,
    "x": 0,
@@ -3907,7 +3891,6 @@
   "figT4": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Expertos",
    "w": 240,
    "x": 0,
@@ -3916,7 +3899,6 @@
   "figT5": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Login y menús",
    "w": 240,
    "x": 0,
@@ -3925,7 +3907,6 @@
   "figT6": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Listados y eventos",
    "w": 240,
    "x": 0,
@@ -3934,7 +3915,6 @@
   "figT7": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Empresa · AgroNova",
    "w": 240,
    "x": 0,
@@ -3943,7 +3923,6 @@
   "figT8": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Empresa · DSM",
    "w": 240,
    "x": 0,
@@ -3952,7 +3931,6 @@
   "figT9": {
    "kind": "title1",
    "maxW": 6000,
-   "page": "figma",
    "text": "Empresa · Zucami",
    "w": 240,
    "x": 0,
@@ -4271,19 +4249,19 @@
    "maxH": 260,
    "page": "experto",
    "size": 24,
-   "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu",
    "w": 1280,
    "x": 0,
-   "y": 4840
+   "y": 4840,
+   "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu"
   },
   "servExpT": {
    "kind": "title1",
    "maxW": 8000,
    "page": "experto",
-   "text": "Alta de servicios del experto · asistente por pasos, en lila, con los mismos campos que el editor de servicios de empresa · prototipo: design/prototipos/crear-servicio.html",
    "w": 240,
    "x": 0,
-   "y": 4540
+   "y": 4540,
+   "text": "Alta de servicios del experto · asistente por pasos, en lila, con los mismos campos que el editor de servicios de empresa · prototipo: design/prototipos/crear-servicio.html"
   },
   "servT1": {
    "kind": "title1",
@@ -4438,6 +4416,16 @@
    "x": 1100,
    "y": -300,
    "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
+  },
+  "servUnifica": {
+   "fill": "green",
+   "maxH": 260,
+   "page": "experto",
+   "size": 22,
+   "w": 1120,
+   "x": 3280,
+   "y": -420,
+   "text": "SERVICIOS · un solo flujo\n\nX4 «Servicios» del alta de experto abre este mismo asistente (SX1–SX7, más abajo).\nLa gestión es la de SX8–SX12: Mis servicios, Editar por bloques, Avisar al guardar y Archivados. E4 «Mis servicios» de la intranet de experto es SX8."
   }
  },
  "order": [
@@ -4824,6 +4812,10 @@
   "BuscaTecnicos.dc.html",
   "BuscaFiltros.dc.html",
   "BuscaSinResultados.dc.html",
+  "ServExpEditar.dc.html",
+  "ServExpEditarBloque.dc.html",
+  "ServExpAvisar.dc.html",
+  "ServExpArchivados.dc.html",
   "MB_MobHome.dc.html",
   "MB_MP1.dc.html",
   "MB_MP2.dc.html",
@@ -4847,6 +4839,9 @@
   "MB_MS5.dc.html",
   "MB_MS6.dc.html",
   "MB_MS7.dc.html",
+  "MB_MS8.dc.html",
+  "MB_MS9.dc.html",
+  "MB_MS10.dc.html",
   "MB_MA1.dc.html",
   "MB_MA2.dc.html",
   "MB_MA3.dc.html",
@@ -4925,11 +4920,11 @@
   },
   {
    "id": "experto",
-   "name": "Alta experto"
+   "name": "003a_LP_Alta_Experto"
   },
   {
    "id": "intusuario",
-   "name": "002_Intranet · Usuario (consolidada)"
+   "name": "004_LP_Intranet · Usuario"
   },
   {
    "id": "intexperto",

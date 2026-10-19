@@ -96,6 +96,14 @@ h1{margin:4px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em;line-heig
 .menu{position:absolute;right:14px;top:54px;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(20,16,40,.16);padding:6px;display:flex;flex-direction:column;min-width:290px}
 .menu button{border:0;background:none;text-align:left;padding:8px 10px;border-radius:8px;display:flex;flex-direction:column;gap:1px;font-weight:500}
 .menu button:hover{background:var(--soft)}
+.blq{border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:var(--surface)}
+.blq.mod{border:1.5px solid #E0A33B}
+.blq .bh{display:flex;align-items:center;gap:8px}.blq .bh .k{flex:1;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.edov{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:16px}
+.edsh{background:var(--surface);border-radius:20px;width:min(520px,100%);padding:20px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.edopt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line2);border-radius:12px;background:var(--surface);text-align:left;width:100%}
+.edopt.on{border:1.5px solid var(--accent);background:var(--soft)}
+@media (max-width:600px){.edov{align-items:flex-end;padding:0}.edsh{border-radius:20px 20px 0 0}}
 .menu button small{font-size:12px;color:var(--muted);font-weight:400}
 .ico{width:34px;height:34px;border:0;background:none;border-radius:8px;font-size:18px}
 .ico:hover{background:var(--soft)}
@@ -141,7 +149,11 @@ const PASOS = [
 function nuevo() { return { id: null, paso: 'tipo', tipo: null, tipoOtro: '', esp: {}, ramas: [], cargos: [], pres: true, presZ: [], dist: false, distZ: [], idiomas: ['Español'], nombre: '', desc: '', tec: {}, plazo: '48 horas', precio: 'A consultar', desde: '', publica: ['Español', 'Inglés', 'Portugués', 'Francés'], estado: 'Borrador' }; }
 let S = nuevo(), LISTA = [];
 try { LISTA = JSON.parse(localStorage.getItem(KEY) || '[]') || []; } catch (e) { LISTA = []; }
-const UI = { vista: 'asistente', desdeRev: false, menu: null, zq: '' };
+const UI = { vista: 'asistente', desdeRev: false, menu: null, zq: '', edit: false, avisar: false, avisarSi: true };
+let ORIG = null;   // copia del servicio al empezar a editarlo, para marcar qué bloques cambian
+const CAMPOS = { tipo: ['tipo', 'tipoOtro'], especies: ['esp'], publico: ['ramas', 'cargos'], donde: ['pres', 'presZ', 'dist', 'distZ', 'idiomas'], detalles: ['nombre', 'desc', 'tec', 'publica'], condiciones: ['plazo', 'precio'] };
+const cambiado = k => ORIG && CAMPOS[k].some(f => JSON.stringify(ORIG[f]) !== JSON.stringify(S[f]));
+const nCambios = () => Object.keys(CAMPOS).filter(cambiado).length;
 const guardaLista = () => { try { localStorage.setItem(KEY, JSON.stringify(LISTA)); } catch (e) {} };
 const chip = (t, on, act, cls) => '<button type="button" class="chip ' + (cls || '') + (on ? ' on' : '') + '" aria-pressed="' + (on ? 'true' : 'false') + '" data-act="' + esc(act) + '">' + (on ? '✓ ' : '') + esc(t) + '</button>';
 const toggle = (a, x) => { const i = a.indexOf(x); i > -1 ? a.splice(i, 1) : a.push(x); };
@@ -199,7 +211,28 @@ V.revision = () => { const falta = !S.nombre.trim() || !S.tipo || (!S.pres && !S
     '<div>' + filaR('Tipo', esc(S.tipo === 'otro' ? 'Otro: ' + (S.tipoOtro || '…') : nombreTipo(S.tipo) || '—'), 'tipo') + filaR('Especies', esc(espTxt()), 'especies') + filaR('Dirigido a', esc(pubTxt()), 'publico') + filaR('Dónde', esc(dondeTxt()), 'donde') +
     filaR('Servicio', '<strong>' + esc(S.nombre || '—') + '</strong>' + (S.desc ? '<br><span class="hint">' + esc(S.desc) + '</span>' : '') + (Object.keys(S.tec).filter(k => S.tec[k] && S.tec[k].length).length ? '<br><span class="hint">' + Object.keys(S.tec).filter(k => S.tec[k] && S.tec[k].length).length + ' datos de ' + esc(nombreTipo(S.tipo).toLowerCase()) + '</span>' : ''), 'detalles') +
     filaR('Plazo y precio', esc('Respuesta en ' + S.plazo + ' · ' + precioTxt()), 'condiciones') + '</div>' +
-    '<div class="note"><span>En el plan Gratis tienes <strong>2 servicios publicados</strong>; con Experto Pro, ilimitados.</span></div>'; };
+    '<div class="note"><span>En el plan Gratis tienes <strong>1 servicio publicado</strong>; con Experto Pro, ilimitados.</span></div>'; };
+// ---------- editar un servicio (por bloques, como en productos y proyectos) ----------
+function resumen(k) {
+  return { tipo: esc(S.tipo === 'otro' ? 'Otro: ' + (S.tipoOtro || '…') : nombreTipo(S.tipo) || '—'), especies: esc(espTxt()), publico: esc(pubTxt()), donde: esc(dondeTxt()),
+    detalles: '<strong>' + esc(S.nombre || '—') + '</strong>' + (S.desc ? '<br><span class="hint">' + esc(S.desc) + '</span>' : ''), condiciones: esc('Respuesta en ' + S.plazo + ' · ' + precioTxt()) }[k];
+}
+function vistaEditar() {
+  const n = nCambios(), conv = S.estado === 'Publicado' ? 3 : 0;
+  return '<div style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:0"><span class="eb">Mis servicios · Editar</span><h1>' + esc(S.nombre || 'Sin nombre') + ' <span class="st ' + (S.estado === 'Publicado' ? 'ok' : S.estado === 'Pausado' ? 'w' : 'g') + '" style="vertical-align:middle">' + esc(S.estado || 'Borrador') + '</span></h1><p class="sub">Cambia solo lo que necesites: cada bloque abre su paso del asistente.</p></div></div>' +
+    PASOS.filter(p => p[0] !== 'revision').map(p => '<div class="blq' + (cambiado(p[0]) ? ' mod' : '') + '"><div class="bh"><span class="k">' + esc(p[1]) + '</span>' + (cambiado(p[0]) ? '<span class="st w">Modificado</span>' : '') + '<button type="button" class="link" data-act="edbloque|' + p[0] + '">Cambiar</button></div><span style="font-size:14.5px">' + resumen(p[0]) + '</span></div>').join('') +
+    '<div class="nav"><span class="hint">' + (n ? n + ' cambio' + (n > 1 ? 's' : '') + ' sin guardar' : 'Sin cambios') + (conv ? ' · ' + conv + ' conversaciones abiertas' : '') + '</span><span class="sp"></span><button type="button" class="btn" data-act="eddescartar">' + (n ? 'Descartar' : 'Volver') + '</button><button type="button" class="btnp" data-act="edguardar"' + (n ? '' : ' disabled') + '>Guardar cambios</button></div>' +
+    (UI.avisar ? '<div class="edov"><div class="edsh" role="dialog" aria-label="Avisar"><strong style="font-size:17px">¿Avisar a quienes ya te han escrito?</strong><span class="hint" style="font-size:13.5px">Has cambiado ' + Object.keys(CAMPOS).filter(cambiado).map(k => PASOS.find(p => p[0] === k)[1].toLowerCase()).join(', ') + '. Tienes ' + conv + ' conversaciones abiertas sobre este servicio.</span>' +
+      '<button type="button" class="edopt' + (UI.avisarSi ? ' on' : '') + '" data-act="avisarsi|1"><span><strong>Sí, avisar en sus conversaciones</strong><br><span class="hint">Les llega un mensaje con lo que ha cambiado.</span></span></button>' +
+      '<button type="button" class="edopt' + (!UI.avisarSi ? ' on' : '') + '" data-act="avisarsi|0"><span><strong>No, guardar sin avisar</strong><br><span class="hint">Lo verán al abrir el servicio.</span></span></button>' +
+      '<div class="nav" style="border:0;padding:0"><span class="sp"></span><button type="button" class="btn" data-act="avisarno">Volver</button><button type="button" class="btnp" data-act="edconfirmar">Guardar' + (UI.avisarSi ? ' y avisar' : '') + '</button></div></div></div>' : '');
+}
+function vistaArchivados() {
+  const a = LISTA.filter(x => x.archivado);
+  return '<div><button type="button" class="link" data-act="alista">‹ Mis servicios</button><h1 style="margin-top:6px">Servicios archivados</h1><p class="sub">No salen en las búsquedas ni reciben solicitudes. Al recuperarlos vuelven con todo lo que tenían.</p></div>' +
+    (a.length ? '<div class="list">' + a.map(x => '<div class="srow" style="opacity:.85"><span><span class="t">' + esc(x.nombre || 'Sin nombre') + '</span> <span class="st g">' + esc(x.estado) + '</span><br><span class="hint">' + esc(nombreTipo(x.tipo) || 'Otro') + '</span></span><button type="button" class="btnp" data-act="recuperar|' + x.id + '">Recuperar</button></div>').join('') + '</div>' : '<div class="note"><span>No tienes servicios archivados.</span></div>') +
+    '<div class="note"><span><strong>Archivar no borra nada.</strong> Se conservan las conversaciones y las solicitudes.</span></div>';
+}
 // ---------- vista previa y casos ----------
 function casos() {
   const sev = S.pres && S.presZ.some(z => z === 'España' || z === 'España › Andalucía' || z === 'Todo el mundo' || z === 'Europa') ? 'Lo ve con la visita presencial.' : S.dist && (!S.distZ.length || S.distZ.some(z => ['España', 'Europa', 'Todo el mundo'].indexOf(z) > -1)) ? 'No ve la visita presencial; ve «Disponible a distancia».' : 'No lo ve: Sevilla está fuera de tus zonas.';
@@ -225,19 +258,21 @@ function vistaLista() {
       '<span style="display:flex;gap:8px"><button type="button" class="btn" data-act="editar|' + x.id + '">Editar</button><button type="button" class="ico" aria-label="Más acciones" data-act="menu|' + x.id + '">⋯</button></span>' +
       (UI.menu === x.id ? '<div class="menu"><button type="button" data-act="duplicar|' + x.id + '">Duplicar<small>Un borrador igual, por ejemplo para otra especie</small></button><button type="button" data-act="pausar|' + x.id + '">' + (x.estado === 'Pausado' ? 'Reanudar<small>Vuelve a salir en las búsquedas</small>' : 'Pausar<small>No entran solicitudes nuevas; las conversaciones siguen</small>') + '</button><button type="button" data-act="archivar|' + x.id + '">Archivar<small>Lo quita de tu lista; se puede recuperar</small></button></div>' : '') + '</div>').join('') + '</div>'
       : '<div class="note"><span><strong>Aún no tienes servicios.</strong> Crea el primero: en 2 minutos estás en las búsquedas de quienes lo necesitan.</span></div>') +
-    (LISTA.some(x => x.archivado) ? '<span class="hint">' + LISTA.filter(x => x.archivado).length + ' archivado(s) · <button type="button" class="link" data-act="recuperar">Recuperar</button></span>' : '');
+    (LISTA.some(x => x.archivado) ? '<button type="button" class="link" data-act="verarch" style="align-self:flex-start">Ver archivados (' + LISTA.filter(x => x.archivado).length + ')</button>' : '');
 }
 // ---------- render ----------
 function render() {
   document.getElementById('crumb').innerHTML = 'Mi espacio › Mis servicios' + (UI.vista === 'asistente' ? ' › <strong>' + esc(S.nombre || 'Nuevo servicio') + '</strong>' : '');
+  if (UI.vista === 'editar') { document.getElementById('main').innerHTML = vistaEditar(); document.getElementById('side').innerHTML = '<div class="card"><strong style="font-size:15px">Editar sin perder nada</strong><p class="hint" style="margin:6px 0 0;font-size:13px">Los cambios no se publican hasta que pulsas «Guardar cambios». Las conversaciones abiertas siguen en Mensajes.</p></div>'; return; }
+  if (UI.vista === 'archivados') { document.getElementById('main').innerHTML = vistaArchivados(); document.getElementById('side').innerHTML = ''; return; }
   if (UI.vista === 'lista') { document.getElementById('main').innerHTML = vistaLista(); document.getElementById('side').innerHTML = '<div class="card"><strong style="font-size:15px">Tus servicios</strong><p class="hint" style="margin:6px 0 0;font-size:13px">Publicado: lo ven los compradores. Pausado: no entran solicitudes nuevas. Borrador: lo terminas cuando quieras.</p></div>'; return; }
   const i = PASOS.findIndex(p => p[0] === S.paso), p = PASOS[i], fin = S.paso === 'revision';
   document.getElementById('main').innerHTML =
     '<div class="steps" style="--n:' + PASOS.length + '">' + PASOS.map((x, j) => '<span class="' + (j <= i ? 'on' : '') + '"></span>').join('') + '</div>' +
-    (UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión. Al guardar vuelves a ella.</span></div>' : '') +
+    (UI.edit ? '<div class="note"><span>Estás cambiando <strong>' + esc(p[1]) + '</strong> de «' + esc(S.nombre) + '». Al terminar vuelves a «Editar servicio».</span></div>' : UI.desdeRev && !fin ? '<div class="note"><span>Estás editando <strong>' + esc(p[1]) + '</strong> desde la revisión. Al guardar vuelves a ella.</span></div>' : '') +
     '<div><span class="eb">Paso ' + (i + 1) + ' de ' + PASOS.length + ' · ' + esc(p[1]) + '</span><h1>' + esc(p[2]) + '</h1><p class="sub">' + esc(p[3]) + '</p></div>' + V[S.paso]() +
-    '<div class="nav">' + (i > 0 && !UI.desdeRev ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
-    (fin ? '<button type="button" class="btn" data-act="borrador">Guardar como borrador</button><button type="button" class="btnp" data-act="publicar"' + (!S.nombre.trim() || !S.tipo || (!S.pres && !S.dist) ? ' disabled' : '') + '>Publicar servicio</button>'
+    '<div class="nav">' + (i > 0 && !UI.desdeRev && !UI.edit ? '<button type="button" class="btn" data-act="atras">Atrás</button>' : '') + '<span class="sp"></span>' +
+    (UI.edit ? '<button type="button" class="btnp" data-act="edvolver">Hecho · volver a Editar servicio</button>' : fin ? '<button type="button" class="btn" data-act="borrador">Guardar como borrador</button><button type="button" class="btnp" data-act="publicar"' + (!S.nombre.trim() || !S.tipo || (!S.pres && !S.dist) ? ' disabled' : '') + '>Publicar servicio</button>'
       : UI.desdeRev ? '<button type="button" class="btnp" data-act="ir|revision">Guardar y volver a la revisión</button>'
       : '<button type="button" class="btnp" data-act="seguir"' + (S.paso === 'tipo' && !S.tipo ? ' disabled' : '') + '>Continuar</button>') + '</div>';
   lado();
@@ -273,12 +308,21 @@ document.addEventListener('click', ev => {
     case 'publicar': alLista('Publicado'); UI.vista = 'lista'; toast('Publicado. Ya sale en las búsquedas que encajan.'); break;
     case 'salir': if (S.nombre || S.tipo) alLista(S.estado === 'Publicado' ? 'Publicado' : 'Borrador'); UI.vista = 'lista'; break;
     case 'nuevo': S = nuevo(); UI.vista = 'asistente'; UI.desdeRev = false; break;
-    case 'editar': { S = JSON.parse(JSON.stringify(LISTA.find(z => z.id === x))); S.paso = 'revision'; UI.vista = 'asistente'; UI.menu = null; break; }
+    case 'editar': { S = JSON.parse(JSON.stringify(LISTA.find(z => z.id === x))); ORIG = JSON.parse(JSON.stringify(S)); UI.vista = 'editar'; UI.edit = false; UI.avisar = false; UI.menu = null; break; }
+    case 'edbloque': UI.edit = true; UI.vista = 'asistente'; ir(x); return;
+    case 'edvolver': UI.edit = false; UI.vista = 'editar'; break;
+    case 'eddescartar': S = nuevo(); ORIG = null; UI.vista = 'lista'; break;
+    case 'edguardar': if (S.estado === 'Publicado') { UI.avisar = true; UI.avisarSi = true; break; } alLista(S.estado || 'Borrador'); ORIG = null; UI.vista = 'lista'; toast('Cambios guardados.'); break;
+    case 'avisarsi': UI.avisarSi = x === '1'; break;
+    case 'avisarno': UI.avisar = false; break;
+    case 'edconfirmar': alLista(S.estado); UI.avisar = false; ORIG = null; UI.vista = 'lista'; toast(UI.avisarSi ? 'Guardado. Hemos avisado en sus conversaciones.' : 'Cambios guardados.'); break;
+    case 'verarch': UI.vista = 'archivados'; UI.menu = null; break;
+    case 'alista': UI.vista = 'lista'; break;
     case 'menu': UI.menu = UI.menu === x ? null : x; break;
     case 'duplicar': { const c = JSON.parse(JSON.stringify(LISTA.find(z => z.id === x))); c.id = 's' + Date.now(); c.nombre += ' (copia)'; c.estado = 'Borrador'; LISTA.unshift(c); guardaLista(); UI.menu = null; toast('Borrador creado: «' + c.nombre + '».'); break; }
     case 'pausar': { const c = LISTA.find(z => z.id === x); c.estado = c.estado === 'Pausado' ? 'Publicado' : 'Pausado'; guardaLista(); UI.menu = null; toast(c.estado === 'Pausado' ? 'Pausado: no entran solicitudes nuevas.' : 'Reanudado.'); break; }
     case 'archivar': { const c = LISTA.find(z => z.id === x); c.archivado = true; guardaLista(); UI.menu = null; toast('Archivado.'); break; }
-    case 'recuperar': LISTA.forEach(z => z.archivado = false); guardaLista(); break;
+    case 'recuperar': { const c = LISTA.find(z => z.id === x); if (c) c.archivado = false; guardaLista(); toast('Recuperado: vuelve a tu lista.'); if (!LISTA.some(z => z.archivado)) UI.vista = 'lista'; break; }
   }
   render();
 });

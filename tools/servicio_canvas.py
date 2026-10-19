@@ -14,7 +14,11 @@ F = [('V1', 'ServExpTipo', 'SX1 · Tipo de servicio: los de la familia Servicios
      ('V5', 'ServExpDetalles', 'SX5 · Detalles: nombre, descripción, datos del tipo de servicio y «Se publica en» (traducción)'),
      ('V6', 'ServExpCondiciones', 'SX6 · Plazo de respuesta y precio; las solicitudes llegan por Mensajes'),
      ('V7', 'ServExpRevision', 'SX7 · Revisión con «Editar» por apartado y «Publicar servicio»'),
-     ('V8', 'ServExpLista', 'SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)')]
+     ('V8', 'ServExpLista', 'SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)'),
+     ('V9', 'ServExpEditar', 'SX9 · Editar servicio: por bloques, con «Cambiar» y los bloques modificados marcados'),
+     ('V10', 'ServExpEditarBloque', 'SX10 · Cambiar un bloque: el mismo paso del asistente y «Hecho · volver a Editar servicio»'),
+     ('V11', 'ServExpAvisar', 'SX11 · Guardar un servicio publicado: ¿avisar a quienes ya te han escrito?'),
+     ('V12', 'ServExpArchivados', 'SX12 · Servicios archivados con «Recuperar»')]
 c = json.load(open(CANVAS)); B = c['boards']
 y0 = max(b['y'] + b['h'] for k, b in B.items() if b.get('page') == 'experto' and not k.startswith('ServExp')) + 700
 for i, (cap, key, t) in enumerate(F):

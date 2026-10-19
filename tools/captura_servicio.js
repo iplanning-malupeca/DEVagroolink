@@ -18,5 +18,9 @@ click('seguir'); type('[data-f="nombre"]','Auditoría nutricional de lotes de br
 click('seguir'); click('plazo|48 horas'); out.push(await snap('V6','Plazo y precio'));
 click('seguir'); out.push(await snap('V7','Revisión'));
 click('publicar'); window.__t("const c = JSON.parse(JSON.stringify(LISTA[0])); c.id='s2'; c.nombre='Diagnóstico de coccidiosis en granja'; c.estado='Pausado'; LISTA.push(c); UI.menu = LISTA[0].id; render()"); out.push(await snap('V8','Mis servicios'));
+window.__t("UI.menu = null; render()"); click('editar|'+window.__t('LISTA[0].id')); click('edbloque|especies'); click('esp|Porcino'); out.push(await snap('V10','Cambiar un bloque'));
+click('edvolver'); out.push(await snap('V9','Editar servicio'));
+click('edguardar'); out.push(await snap('V11','¿Avisar a quienes te escribieron?'));
+click('edconfirmar'); window.__t("LISTA[1].archivado = true; UI.vista = 'archivados'; render()"); out.push(await snap('V12','Archivados'));
 window.__t("localStorage.removeItem('agroolink-servicios-experto-v1'); S = nuevo(); LISTA = []; UI.vista='asistente'; UI.menu=null; render()");
 return out.join(' ');
