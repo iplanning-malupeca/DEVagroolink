@@ -380,7 +380,6 @@
   },
   "CompNueva1.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C0a · Nueva comparación · escribir unas letras",
    "w": 1280,
    "x": 1360,
@@ -388,7 +387,6 @@
   },
   "CompNueva2.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C0b · Nueva comparación · añadir del mismo tipo",
    "w": 1280,
    "x": 2720,
@@ -396,7 +394,6 @@
   },
   "CompOtroTipo.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C2 · Añadir un producto de otro tipo",
    "w": 1280,
    "x": 5440,
@@ -404,7 +401,6 @@
   },
   "CompSolicitar.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
    "x": 6800,
@@ -412,7 +408,6 @@
   },
   "CompSumario.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C0 · Mis comparaciones · sumario (copia de U4)",
    "w": 1280,
    "x": 0,
@@ -428,7 +423,6 @@
   },
   "CompVista.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "C1 · Comparativa del mismo tipo (enzimas)",
    "w": 1280,
    "x": 4080,
@@ -617,6 +611,30 @@
    "w": 1280,
    "x": 0,
    "y": 5360
+  },
+  "EmpEditarAvisar.dc.html": {
+   "h": 1130,
+   "page": "intempresa",
+   "title": "EM4 · Antes de guardar: si cambian tipo, especies, mercados o red, se avisa del efecto en las búsquedas y a la red en Me",
+   "w": 1280,
+   "x": 4080,
+   "y": 0
+  },
+  "EmpEditarBloque.dc.html": {
+   "h": 900,
+   "page": "intempresa",
+   "title": "EM3 · Cambiar un bloque: el mismo paso del alta y «Hecho · volver a Editar ficha»",
+   "w": 1280,
+   "x": 2720,
+   "y": 0
+  },
+  "EmpEditarFicha.dc.html": {
+   "h": 1130,
+   "page": "intempresa",
+   "title": "EM2 · Editar ficha de empresa: por bloques, con «Cambiar» y los bloques modificados marcados; sociedades del CRM solo la",
+   "w": 1280,
+   "x": 1360,
+   "y": 0
   },
   "Empresa.dc.html": {
    "h": 1060,
@@ -1520,7 +1538,6 @@
   },
   "MobBuscar.dc.html": {
    "h": 844,
-   "page": "movil",
    "title": "M4 · Búsqueda",
    "w": 390,
    "x": 1590,
@@ -1536,7 +1553,6 @@
   },
   "MobCategoria.dc.html": {
    "h": 1030,
-   "page": "movil",
    "title": "M9 · Categoría → tipo de producto",
    "w": 390,
    "x": 2120,
@@ -1544,7 +1560,6 @@
   },
   "MobEspecie.dc.html": {
    "h": 900,
-   "page": "movil",
    "title": "M6 · Especie → producción (opcional)",
    "w": 390,
    "x": 530,
@@ -1552,7 +1567,6 @@
   },
   "MobExplorarCategorias.dc.html": {
    "h": 940,
-   "page": "movil",
    "title": "M8 · Explorar · por categoría",
    "w": 390,
    "x": 1590,
@@ -1560,7 +1574,6 @@
   },
   "MobExplorarEspecies.dc.html": {
    "h": 844,
-   "page": "movil",
    "title": "M5 · Explorar · por especie",
    "w": 390,
    "x": 0,
@@ -1642,7 +1655,6 @@
   },
   "MobHome.dc.html": {
    "h": 2010,
-   "page": "movil",
    "title": "M1 · Home con sesión",
    "w": 390,
    "x": 0,
@@ -1650,7 +1662,6 @@
   },
   "MobHomeVisitante.dc.html": {
    "h": 1500,
-   "page": "movil",
    "title": "M2 · Home sin sesión",
    "w": 390,
    "x": 530,
@@ -1658,7 +1669,6 @@
   },
   "MobIntereses.dc.html": {
    "h": 1700,
-   "page": "movil",
    "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
    "w": 390,
    "x": 2120,
@@ -1666,7 +1676,6 @@
   },
   "MobResultados.dc.html": {
    "h": 920,
-   "page": "movil",
    "title": "M7 · Resultados · categoría en chips",
    "w": 390,
    "x": 1060,
@@ -1682,7 +1691,6 @@
   },
   "MobTabBar.dc.html": {
    "h": 84,
-   "page": "movil",
    "title": "MobTabBar · componente: Explorar · Proyectos · Tableros · Tú (como 000_Header)",
    "w": 390,
    "x": 0,
@@ -2875,7 +2883,6 @@
   },
   "TabCompartir.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "T4 · Compartir tablero (permisos y plan)",
    "w": 1280,
    "x": 4080,
@@ -2883,7 +2890,6 @@
   },
   "TabGuardar.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "T3 · Guardar en tablero desde una ficha",
    "w": 1280,
    "x": 2720,
@@ -2891,7 +2897,6 @@
   },
   "TabMis.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "T1 · Mis tableros (con Historial automático)",
    "w": 1280,
    "x": 0,
@@ -2899,7 +2904,6 @@
   },
   "TabVista.dc.html": {
    "h": 900,
-   "page": "tableros",
    "title": "T2 · Vista de un tablero con seguimiento por estado",
    "w": 1280,
    "x": 1360,
@@ -3032,30 +3036,6 @@
    "w": 1280,
    "x": 4080,
    "y": 0
-  },
-  "EmpEditarFicha.dc.html": {
-   "w": 1280,
-   "h": 1130,
-   "page": "intempresa",
-   "x": 1360,
-   "y": 0,
-   "title": "EM2 · Editar ficha de empresa: por bloques, con «Cambiar» y los bloques modificados marcados; sociedades del CRM solo las cambia el superadmin"
-  },
-  "EmpEditarBloque.dc.html": {
-   "w": 1280,
-   "h": 900,
-   "page": "intempresa",
-   "x": 2720,
-   "y": 0,
-   "title": "EM3 · Cambiar un bloque: el mismo paso del alta y «Hecho · volver a Editar ficha»"
-  },
-  "EmpEditarAvisar.dc.html": {
-   "w": 1280,
-   "h": 1130,
-   "page": "intempresa",
-   "x": 4080,
-   "y": 0,
-   "title": "EM4 · Antes de guardar: si cambian tipo, especies, mercados o red, se avisa del efecto en las búsquedas y a la red en Mensajes"
   },
   "MB_MobHome.dc.html": {
    "w": 390,
@@ -3736,6 +3716,54 @@
    "x": 1410,
    "y": 0,
    "title": "Antes de guardar: aviso"
+  },
+  "MB_FD_Distribuidores.dc.html": {
+   "w": 390,
+   "h": 1040,
+   "page": "mb12",
+   "x": 0,
+   "y": 0,
+   "title": "D4 · Distribuidores (paso 4 de 8)"
+  },
+  "MB_FD_FichaDistribuidores.dc.html": {
+   "w": 390,
+   "h": 940,
+   "page": "mb12",
+   "x": 470,
+   "y": 0,
+   "title": "Ficha · pestaña Distribuidores, como la ve el comprador"
+  },
+  "MB_FD_Expertos.dc.html": {
+   "w": 390,
+   "h": 960,
+   "page": "mb12",
+   "x": 940,
+   "y": 0,
+   "title": "D5 · Expertos recomendados (paso 5)"
+  },
+  "MB_FD_Contenidos.dc.html": {
+   "w": 390,
+   "h": 1130,
+   "page": "mb12",
+   "x": 1410,
+   "y": 0,
+   "title": "D6 · Contenidos y Agrinews (paso 6)"
+  },
+  "MB_FD_AvisoEmpresa.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb12",
+   "x": 1880,
+   "y": 0,
+   "title": "D0c · Aviso a los administradores de la empresa"
+  },
+  "MB_FD_AvisoAdmin.dc.html": {
+   "w": 390,
+   "h": 930,
+   "page": "mb12",
+   "x": 2350,
+   "y": 0,
+   "title": "D0d · Altas de miembros (superadmin)"
   }
  },
  "createdOnFiles": {
@@ -4109,6 +4137,16 @@
    "x": 0,
    "y": -300
   },
+  "iemEdit": {
+   "fill": "orange",
+   "maxH": 260,
+   "page": "intempresa",
+   "size": 22,
+   "text": "PARA DESARROLLO · Editar ficha de empresa\n\nSe abre desde el panel («Editar ficha»). Cada bloque reutiliza su paso del alta (006–010 y prototipo alta-empresa). Los cambios no se publican hasta «Guardar cambios». Sociedades y datos fiscales: solo el superadmin (CRM).\nPrototipo: https://claude.ai/artifact/GD5V5oHeH2yCRwiVcMAs2N · móvil en 004b_MB_Intranet · Empresa.",
+   "w": 1280,
+   "x": 1360,
+   "y": -420
+  },
   "iu0": {
    "kind": "title1",
    "maxW": 8000,
@@ -4139,7 +4177,6 @@
   "movT0": {
    "kind": "title1",
    "maxW": 2600,
-   "page": "movil",
    "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
    "w": 240,
    "x": 0,
@@ -4148,7 +4185,6 @@
   "movT1": {
    "kind": "title1",
    "maxW": 2600,
-   "page": "movil",
    "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
    "w": 240,
    "x": 0,
@@ -4157,7 +4193,6 @@
   "movT2": {
    "kind": "title1",
    "maxW": 2600,
-   "page": "movil",
    "text": "Componente · barra inferior (prop activo 1–5)",
    "w": 240,
    "x": 0,
@@ -4440,7 +4475,6 @@
   "tabT1": {
    "kind": "title1",
    "maxW": 5360,
-   "page": "tableros",
    "text": "Tableros · Samuel Esteban (Granja Los Olmos)",
    "w": 240,
    "x": 0,
@@ -4449,7 +4483,6 @@
   "tabT2": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "tableros",
    "text": "Comparador · sumario de comparaciones y comparativa (solo productos del mismo tipo)",
    "w": 240,
    "x": 0,
@@ -4463,16 +4496,6 @@
    "w": 240,
    "x": 0,
    "y": -300
-  },
-  "iemEdit": {
-   "fill": "orange",
-   "maxH": 260,
-   "page": "intempresa",
-   "size": 22,
-   "w": 1280,
-   "x": 1360,
-   "y": -420,
-   "text": "PARA DESARROLLO · Editar ficha de empresa\n\nSe abre desde el panel («Editar ficha»). Cada bloque reutiliza su paso del alta (006–010 y prototipo alta-empresa). Los cambios no se publican hasta «Guardar cambios». Sociedades y datos fiscales: solo el superadmin (CRM).\nPrototipo: https://claude.ai/artifact/GD5V5oHeH2yCRwiVcMAs2N · móvil en 004b_MB_Intranet · Empresa."
   },
   "mbt0": {
    "kind": "title1",
@@ -4572,6 +4595,15 @@
    "x": 0,
    "y": -300,
    "text": "Intranet de empresa en móvil · Editar ficha de empresa (prototipo alta-empresa) · tools/captura_empresa_editar.js"
+  },
+  "mbt11": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb12",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Fab-Dist en móvil: lo propio de este caso que no está en MB_06 (el resto del alta está allí) · tools/fabdist_movil.py"
   },
   "mbdev": {
    "fill": "orange",
@@ -5059,7 +5091,13 @@
   "MB_EmpPanel.dc.html",
   "MB_EEM1.dc.html",
   "MB_EEM2.dc.html",
-  "MB_EEM3.dc.html"
+  "MB_EEM3.dc.html",
+  "MB_FD_Distribuidores.dc.html",
+  "MB_FD_FichaDistribuidores.dc.html",
+  "MB_FD_Expertos.dc.html",
+  "MB_FD_Contenidos.dc.html",
+  "MB_FD_AvisoEmpresa.dc.html",
+  "MB_FD_AvisoAdmin.dc.html"
  ],
  "pages": [
   {
@@ -5116,7 +5154,7 @@
   },
   {
    "id": "fabdist",
-   "name": "006_Alta empresa · Fabricante con distribuidores (DSM-Firmenich)"
+   "name": "005_LP_Alta empresa_Fab-Dist"
   },
   {
    "id": "comerciales",
@@ -5217,6 +5255,10 @@
   {
    "id": "mb11",
    "name": "004b_MB_Intranet · Empresa"
+  },
+  {
+   "id": "mb12",
+   "name": "005_MB_Alta empresa_Fab-Dist"
   },
   {
    "id": "servicios",
