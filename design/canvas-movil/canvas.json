@@ -1383,169 +1383,169 @@
   "MB_CatFab_Catalogo.dc.html": {
    "w": 390,
    "h": 980,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 0,
-   "y": 0,
+   "y": 4450,
    "title": "PA1 · Catálogo"
   },
   "MB_CatFab_Copia.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 470,
-   "y": 0,
+   "y": 4450,
    "title": "PA1c · Tras «Duplicar»: la copia"
   },
   "MB_CatFab_Nuevo.dc.html": {
    "w": 390,
    "h": 900,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 940,
-   "y": 0,
+   "y": 4450,
    "title": "PA2 · Nuevo producto"
   },
   "MB_CatFab_Importar.dc.html": {
    "w": 390,
    "h": 1040,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 1410,
-   "y": 0,
+   "y": 4450,
    "title": "PA3 · Importaciones (superadmin)"
   },
   "MB_CatFab_Mercados.dc.html": {
    "w": 390,
    "h": 1350,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 1880,
-   "y": 0,
+   "y": 4450,
    "title": "PA4 · Mercados y dónde comprar"
   },
   "MB_CatFab_Acuerdos.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 2350,
-   "y": 0,
+   "y": 4450,
    "title": "PA5 · Acuerdos de distribución"
   },
   "MB_CatFab_Acuerdo.dc.html": {
    "w": 390,
    "h": 1110,
-   "page": "cat11a",
+   "page": "mb1",
    "x": 2820,
-   "y": 0,
+   "y": 4450,
    "title": "PA5b · Un acuerdo: zona y productos"
   },
   "MB_CatCom_Catalogo.dc.html": {
    "w": 390,
    "h": 980,
-   "page": "cat11b",
+   "page": "mb1",
    "x": 0,
-   "y": 0,
+   "y": 6500,
    "title": "PC1 · Catálogo y quién lo atiende"
   },
   "MB_CatCom_Nuevo.dc.html": {
    "w": 390,
    "h": 890,
-   "page": "cat11b",
+   "page": "mb1",
    "x": 470,
-   "y": 0,
+   "y": 6500,
    "title": "PC2 · Nuevo producto"
   },
   "MB_CatCom_Mercados.dc.html": {
    "w": 390,
    "h": 1330,
-   "page": "cat11b",
+   "page": "mb1",
    "x": 940,
-   "y": 0,
+   "y": 6500,
    "title": "PC3 · Mercados y quién lo atiende"
   },
   "MB_CatSede_Catalogo.dc.html": {
    "w": 390,
    "h": 930,
-   "page": "cat11c",
+   "page": "mb1",
    "x": 0,
-   "y": 0,
+   "y": 8530,
    "title": "PB1 · Catálogo de la Sede"
   },
   "MB_CatSede_Nuevo.dc.html": {
    "w": 390,
    "h": 920,
-   "page": "cat11c",
+   "page": "mb1",
    "x": 470,
-   "y": 0,
+   "y": 8530,
    "title": "PB2 · Nuevo: la ficha base"
   },
   "MB_CatSede_Mercados.dc.html": {
    "w": 390,
    "h": 1280,
-   "page": "cat11c",
+   "page": "mb1",
    "x": 940,
-   "y": 0,
+   "y": 8530,
    "title": "PB3 · Mercados y quién lo vende"
   },
   "MB_CatSede_Activacion.dc.html": {
    "w": 390,
    "h": 1130,
-   "page": "cat11c",
+   "page": "mb1",
    "x": 1410,
-   "y": 0,
+   "y": 8530,
    "title": "PB4 · Activación por sucursal"
   },
   "MB_CatSede_Local.dc.html": {
    "w": 390,
    "h": 1120,
-   "page": "cat11c",
+   "page": "mb1",
    "x": 1880,
-   "y": 0,
+   "y": 8530,
    "title": "PB5 · Versión local de México"
   },
   "MB_CatSuc_Catalogo.dc.html": {
    "w": 390,
    "h": 910,
-   "page": "cat11d",
+   "page": "mb1",
    "x": 0,
-   "y": 0,
+   "y": 10510,
    "title": "PS1 · Catálogo de la sucursal"
   },
   "MB_CatSuc_Nuevo.dc.html": {
    "w": 390,
    "h": 930,
-   "page": "cat11d",
+   "page": "mb1",
    "x": 470,
-   "y": 0,
+   "y": 10510,
    "title": "PS2 · Añadir: activar, local o pedir"
   },
   "MB_CatSuc_Local.dc.html": {
    "w": 390,
    "h": 1100,
-   "page": "cat11d",
+   "page": "mb1",
    "x": 940,
-   "y": 0,
+   "y": 10510,
    "title": "PS3 · Versión local (Ross 308)"
   },
   "MB_CatDis_Catalogo.dc.html": {
    "w": 390,
    "h": 900,
-   "page": "cat11e",
+   "page": "mb1",
    "x": 0,
-   "y": 0,
+   "y": 12310,
    "title": "PD1 · Catálogo"
   },
   "MB_CatDis_Nuevo.dc.html": {
    "w": 390,
    "h": 990,
-   "page": "cat11e",
+   "page": "mb1",
    "x": 470,
-   "y": 0,
+   "y": 12310,
    "title": "PD2 · Añadir producto"
   },
   "MB_CatDis_Local.dc.html": {
    "w": 390,
    "h": 1220,
-   "page": "cat11e",
+   "page": "mb1",
    "x": 940,
-   "y": 0,
+   "y": 12310,
    "title": "PD3 · Versión local (Hy-D®)"
   }
  },
@@ -1778,47 +1778,47 @@
   },
   "t_cat11a": {
    "kind": "title1",
-   "maxW": 3600,
-   "page": "cat11a",
+   "maxW": 3210,
+   "page": "mb1",
    "w": 240,
    "x": 0,
-   "y": -300,
+   "y": 4150,
    "text": "Catálogo del fabricante con distribuidores en móvil · el menú ⋯ es ME2 (011_MB) · tools/catalogos_movil.py"
   },
   "t_cat11b": {
    "kind": "title1",
-   "maxW": 3600,
-   "page": "cat11b",
+   "maxW": 2000,
+   "page": "mb1",
    "w": 240,
    "x": 0,
-   "y": -300,
+   "y": 6200,
    "text": "Catálogo del fabricante con comerciales · menú ⋯ y copia como en 011a"
   },
   "t_cat11c": {
    "kind": "title1",
-   "maxW": 3600,
-   "page": "cat11c",
+   "maxW": 2270,
+   "page": "mb1",
    "w": 240,
    "x": 0,
-   "y": -300,
+   "y": 8230,
    "text": "Catálogo de la Sede y versión local de una sucursal"
   },
   "t_cat11d": {
    "kind": "title1",
-   "maxW": 3600,
-   "page": "cat11d",
+   "maxW": 2000,
+   "page": "mb1",
    "w": 240,
    "x": 0,
-   "y": -300,
+   "y": 10210,
    "text": "Catálogo de la sucursal: lo de la Sede y lo local"
   },
   "t_cat11e": {
    "kind": "title1",
-   "maxW": 3600,
-   "page": "cat11e",
+   "maxW": 2000,
+   "page": "mb1",
    "w": 240,
    "x": 0,
-   "y": -300,
+   "y": 12010,
    "text": "Catálogo del distribuidor: marcas, subidos y propios"
   }
  },
@@ -2032,27 +2032,7 @@
   },
   {
    "id": "mb1",
-   "name": "011_MB_Alta de producto"
-  },
-  {
-   "id": "cat11a",
-   "name": "011a_MB_Productos · Fabricante con distribuidores (DSM-Firmenich)"
-  },
-  {
-   "id": "cat11b",
-   "name": "011b_MB_Productos · Fabricante con comerciales (Zucami)"
-  },
-  {
-   "id": "cat11c",
-   "name": "011c_MB_Productos · Sede con sucursales (Big Dutchman)"
-  },
-  {
-   "id": "cat11d",
-   "name": "011d_MB_Productos · Sucursal de un grupo (Aviagen Ibérica)"
-  },
-  {
-   "id": "cat11e",
-   "name": "011e_MB_Productos · Distribuidor multimarca (NewFarms)"
+   "name": "011_MB_Productos"
   },
   {
    "id": "mb2",
