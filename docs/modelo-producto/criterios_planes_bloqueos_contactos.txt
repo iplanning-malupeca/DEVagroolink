@@ -1,0 +1,245 @@
+AGROOLINK · CRITERIOS DE PLANES, BLOQUEOS Y CONTACTOS
+Para el equipo de programación · versión 1 · 2026-10-19
+Fuente de datos: docs/modelo-producto/planes.json (este texto se genera a partir de ella; si hay diferencias, manda el JSON).
+Diseño: canvas, páginas «Planes», «Planes · qué se bloquea» y «MB_08 Planes».
+====================================================================================================
+
+1. REGLAS GENERALES (obligatorias en toda la plataforma)
+----------------------------------------------------------------------------------------------------
+1. Preguntar nunca se bloquea para el comprador. Los expertos reciben y responden sin límite; la
+  empresa Gratis ve las consultas de 3 compradores y las siguientes se guardan hasta que pasa a Pro
+  (nunca se pierden).
+2. Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran
+  teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR;
+  todo se habla en Mensajes y queda registrado.
+3. Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio,
+  proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y
+  se avisa al autor. Si se repite, el superadmin revisa la cuenta.
+4. Sin cuenta se puede ver todo; el login gratuito se pide al pulsar una acción, nunca al entrar.
+5. Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.
+6. Al bajar de plan nada se borra: lo que sobra pasa a solo lectura o se despublica (el usuario
+  elige qué mantiene).
+7. Traducción automática (ES · EN · PT · FR) en todos los planes.
+8. Verificado no se compra.
+
+2. CONTACTOS: REGLA ESTRICTA
+----------------------------------------------------------------------------------------------------
+- Ningún usuario ve nunca teléfonos, emails, webs, WhatsApp, Telegram, perfiles de redes sociales,
+  direcciones exactas ni códigos QR de otro usuario o empresa. No depende del plan: no existe
+  ninguna opción de pago que lo desbloquee.
+- Toda la comunicación entre comprador, empresa, comercial, distribuidor, sucursal y experto pasa
+  por Mensajes y queda registrada (hilo por solicitud y por relación).
+- Filtro obligatorio en servidor (no solo en el navegador) antes de guardar o enviar: mensajes,
+  fichas de producto, descripciones de empresa y de experto, servicios, proyectos, comentarios,
+  nombres de archivo y texto detectado en imágenes y PDF.
+- Qué detecta como mínimo: números de teléfono (con y sin prefijo, con espacios, puntos o guiones, y
+  escritos en letras), emails (también ofuscados: «arroba», «(at)», espacios), URLs y dominios
+  (www., http, «punto com»), @usuario, enlaces wa.me / t.me / redes, y códigos QR.
+- Qué hace: sustituye el dato por «•••» para todos, envía o publica el resto del contenido, avisa al
+  autor con la ventana «Hemos ocultado un dato de contacto» y registra el intento. Si se repite, la
+  cuenta pasa a revisión del superadmin.
+- Los datos de contacto propios sí se ven en la propia cuenta (perfil, facturación, verificación).
+  La web de una empresa se guarda solo para verificarla; no se muestra en la ficha.
+- Las exportaciones (informes de solicitudes en Premium) nunca incluyen teléfonos ni emails.
+- Excepción: el enlace de soporte para contactar con el equipo de Agroolink (CRM) no es contacto
+  entre usuarios.
+
+3. SIN CUENTA (VISITANTE)
+----------------------------------------------------------------------------------------------------
+Sin cuenta solo se puede mirar. Lo único permitido:
+  - Buscar y filtrar productos, empresas y expertos  [buscar]
+  - Ver las fichas completas  [ver_fichas]
+  - Verlas en su idioma (traducción automática)  [traduccion]
+Todo lo demás pide la cuenta gratis: guardar, comparar, solicitar, Mensajes, proyectos, tableros,
+  documentos, alertas y seguir.
+Por defecto, toda acción nueva pide la cuenta gratis; solo las de esta lista se permiten sin cuenta.
+Cómo se pide la cuenta gratis:
+- Los botones se ven normales, sin candados. El login salta al pulsarlos, nunca al entrar ni al
+  navegar.
+- Una sola ventana de login (email + código, sin contraseña), con título según la acción: «Entra
+  para guardar este producto», «Entra para descargar la ficha técnica»…
+- Al entrar, la acción pendiente se completa sola (se guarda, se envía, se descarga) y se confirma
+  con un aviso. Hay que guardar la intención antes del login.
+- Secciones privadas (Proyectos, Tableros, Mensajes, Tú): pantalla vacía que explica la sección con
+  un botón «Entrar gratis», no una ventana.
+- Formularios (solicitud, crear proyecto): se dejan rellenar sin cuenta; el login se pide al enviar
+  sin perder lo escrito.
+- La primera solicitud exige email verificado (antispam).
+- Página de planes: franja «Sin cuenta puedes buscar y ver todas las fichas. Para guardar, comparar,
+  preguntar y crear proyectos, crea tu cuenta gratis: 30 segundos, sin contraseña ni tarjeta.»
+
+4. TIPOS DE BLOQUEO
+----------------------------------------------------------------------------------------------------
+  libre    Sin bloqueo
+  login    Pide login gratuito
+  limite   Funciona hasta un número del plan
+  plan     Solo en un plan de pago
+  medida   Precio a medida
+  nunca    No existe en ningún plan
+
+5. MATRIZ POR TIPO DE CUENTA
+----------------------------------------------------------------------------------------------------
+
+[TODOS] Todas las cuentas · con la cuenta gratis
+  Niveles: Cuenta gratis
+  - Enviar solicitudes y consultas  [solicitud · bloqueo: login]
+      Cuenta gratis: Ilimitadas · la 1.ª pide email verificado
+  - Mensajes  [mensajes · bloqueo: login]
+      Cuenta gratis: Sí
+  - Guardar en tableros  [guardar · bloqueo: login]
+      Cuenta gratis: Sí
+  - Comparar productos  [comparar · bloqueo: login]
+      Cuenta gratis: Sí
+  - Descargar documentos técnicos  [documentos · bloqueo: login]
+      Cuenta gratis: Sí
+  - Seguir empresas y crear alertas  [seguir · bloqueo: login]
+      Cuenta gratis: Sí
+  - Ver teléfono, email, web, WhatsApp o redes de otro usuario  [contacto · bloqueo: nunca]
+      Cuenta gratis: Nunca
+  - Escribir contactos en mensajes, fichas o documentos  [escribir_contacto · bloqueo: nunca]
+      Cuenta gratis: Se ocultan siempre
+
+[COMPRADOR] Comprador
+  Niveles: Gratis | Pro · 9,90 € (próximamente)
+  - Publicar proyectos / RFQ  [proyectos · bloqueo: limite]
+      Gratis: 1 | Pro · 9,90 € (próximamente): Ilimitados
+  - Tableros  [tableros · bloqueo: limite]
+      Gratis: 5 | Pro · 9,90 € (próximamente): Ilimitados
+  - Productos por comparación  [comparar_max · bloqueo: limite]
+      Gratis: Hasta 4 | Pro · 9,90 € (próximamente): Hasta 10 y guardar
+  - Compartir tableros  [compartir · bloqueo: limite]
+      Gratis: 1 colaborador | Pro · 9,90 € (próximamente): Con todo el equipo
+  - Alertas de productos y proveedores  [alertas · bloqueo: limite]
+      Gratis: 5 | Pro · 9,90 € (próximamente): Ilimitadas
+  - Alertas de precio, stock y ficha  [alertas_cambios · bloqueo: plan]
+      Gratis: — | Pro · 9,90 € (próximamente): Sí
+  - Exportar a PDF  [pdf · bloqueo: plan]
+      Gratis: — | Pro · 9,90 € (próximamente): Sí
+
+[EXPERTO] Experto
+  Niveles: Gratis | Pro · 19,90 €
+  - Recibir y responder consultas  [consultas · bloqueo: libre]
+      Gratis: Ilimitadas | Pro · 19,90 €: Ilimitadas
+  - Servicios publicados  [servicios · bloqueo: limite]
+      Gratis: 1 | Pro · 19,90 €: Ilimitados
+  - Candidaturas a proyectos  [candidaturas · bloqueo: plan]
+      Gratis: Solo ver proyectos abiertos | Pro · 19,90 €: Ilimitadas
+  - Portfolio / casos  [portfolio · bloqueo: limite]
+      Gratis: 1 | Pro · 19,90 €: Ilimitado
+  - Consultas organizadas (estados y notas)  [organizar · bloqueo: plan]
+      Gratis: — | Pro · 19,90 €: Sí
+  - Publicar contenido  [contenido · bloqueo: plan]
+      Gratis: — | Pro · 19,90 €: Sí
+  - Recomendado en búsquedas  [recomendado · bloqueo: plan]
+      Gratis: — | Pro · 19,90 €: Sí
+  - Estadísticas  [estadisticas · bloqueo: plan]
+      Gratis: Básicas | Pro · 19,90 €: Avanzadas
+  - Ventajas de Comprador Pro  [comprador_pro · bloqueo: plan]
+      Gratis: — | Pro · 19,90 €: Incluidas
+
+[EMPRESA] Empresa
+  Niveles: Gratis | Pro · 79 € | Premium · 199 €
+  - Recibir y responder consultas y solicitudes  [consultas · bloqueo: limite]
+      Gratis: De 3 compradores · el resto con Pro | Pro · 79 €: Ilimitadas | Premium · 199 €: Ilimitadas
+  - Solicitudes de distribución  [distribucion · bloqueo: libre]
+      Gratis: Sí | Pro · 79 €: Sí | Premium · 199 €: Sí
+  - Productos publicados  [productos · bloqueo: limite]
+      Gratis: 15 | Pro · 79 €: 100 | Premium · 199 €: Ilimitados
+  - Miembros del equipo  [miembros · bloqueo: libre]
+      Gratis: Ilimitados | Pro · 79 €: Ilimitados | Premium · 199 €: Ilimitados
+  - Sucursales y filiales  [sucursales · bloqueo: medida]
+      Gratis: Alta gratis | Pro · 79 €: Alta gratis | Premium · 199 €: Plan de grupo a medida
+  - Leads organizados (estados, asignación, notas)  [leads · bloqueo: plan]
+      Gratis: — | Pro · 79 €: Sí | Premium · 199 €: Sí
+  - Contenido vinculado  [contenido · bloqueo: plan]
+      Gratis: — | Pro · 79 €: 5 al mes | Premium · 199 €: Ilimitado
+  - Destacar productos  [destacar · bloqueo: plan]
+      Gratis: — | Pro · 79 €: Extra de pago | Premium · 199 €: 4 al mes
+  - Oportunidades (proyectos / RFQ del mercado)  [oportunidades · bloqueo: plan]
+      Gratis: Solo el número | Pro · 79 €: 2 al mes | Premium · 199 €: Ilimitadas + matching
+  - Estadísticas  [estadisticas · bloqueo: plan]
+      Gratis: Básicas | Pro · 79 €: Avanzadas | Premium · 199 €: Avanzadas + benchmark
+  - Exportar informes de solicitudes (sin contactos)  [exportar · bloqueo: plan]
+      Gratis: — | Pro · 79 €: — | Premium · 199 €: Sí
+  - Gestor de cuenta  [gestor · bloqueo: plan]
+      Gratis: — | Pro · 79 €: — | Premium · 199 €: Sí
+
+Notas:
+- Empresa Gratis: ve las consultas de 3 compradores distintos; las siguientes se guardan (no se
+  pierden ni se rechazan) y se muestran al pasar a Pro. El comprador nunca nota el límite: su
+  consulta se envía igual.
+- Experto: recibe y responde consultas sin límite en todos los planes. Experto Pro incluye todas las
+  ventajas de Comprador Pro (una persona no paga dos veces).
+- Comprador Pro está «próximamente»: su botón es «Avísame cuando esté», no de compra.
+- Sucursales: cada sucursal se da de alta gratis. Para varias sucursales con plan completo, precio
+  de grupo a medida (botón «Hablar con nosotros», lo atiende el equipo comercial de Agroolink).
+- El plan es de quien paga (la persona o la empresa), no del espacio. El plan de la empresa no da
+  Pro personal a sus miembros, y al revés.
+- Importación masiva de catálogos: solo superadmin, no es una función de plan.
+
+6. VENTANAS (cuándo salen y qué dicen)
+----------------------------------------------------------------------------------------------------
+
+[login]
+  Cuándo: Sin cuenta, al pulsar cualquier cosa que no sea buscar, ver una ficha o cambiar de idioma.
+  Título: Entra para {accion}
+  Texto: Es gratis y sin contraseña: te enviamos un código a tu email.
+  Botones: Continuar · Ahora no
+  Después: Al entrar, la acción se completa sola (se guarda, se envía…).
+
+[limite]
+  Cuándo: Al intentar superar un número del plan (16.º producto, 2.º proyecto del comprador, 3.er
+    servicio del experto…).
+  Título: Has llegado a {n} {cosa}
+  Texto: Con {plan} tienes {mas}. Nada se borra: lo que ya tienes sigue publicado.
+  Botones: Probar {plan} 14 días · Ver planes · Ahora no
+  Después: Siempre con una alternativa gratuita (archivar, despublicar…). Máximo 1 aviso por sesión;
+    7 días de pausa tras «Ahora no».
+
+[plan]
+  Cuándo: Al pulsar una función que el plan no incluye (exportar, publicar contenido, leads
+    organizados…). El botón se ve siempre.
+  Título: {funcion} es de {plan}
+  Texto: Qué hace y un ejemplo con sus datos.
+  Botones: Pasar a {plan} · Ahora no
+  Después: Comprador Pro aún no existe: el botón es «Avísame cuando esté».
+
+[filtro]
+  Cuándo: Al enviar o publicar un texto, archivo o imagen con un teléfono, email, web, @usuario,
+    enlace de WhatsApp/Telegram o QR.
+  Título: Hemos ocultado un dato de contacto
+  Texto: En Agroolink todo se habla en Mensajes: así queda registrado y protegido. El resto del
+    mensaje se envía igual.
+  Botones: Entendido
+  Después: El dato se sustituye por «•••» para todos. El superadmin ve los intentos repetidos.
+
+[medida]
+  Cuándo: Sede que quiere varias sucursales con plan completo.
+  Título: Plan de grupo
+  Texto: Cada sucursal se da de alta gratis; para tenerlas con plan completo, precio a medida.
+  Botones: Hablar con nosotros
+  Después: Lo atiende el equipo comercial de Agroolink.
+
+7. REGLAS DE FRECUENCIA Y BAJADA DE PLAN
+----------------------------------------------------------------------------------------------------
+- Ninguna mención a planes o precios en las primeras 48 h / 3 sesiones, salvo que el usuario los
+  busque.
+- Ventanas de límite y de plan: máximo 1 por sesión; 7 días de pausa tras «Ahora no» en el mismo
+  motivo. Nunca a la vez una oferta Pro y una invitación a crear perfil de experto o empresa.
+- La ventana de login no tiene límite de frecuencia: siempre la provoca el propio usuario.
+- Prueba de 14 días de Pro/Premium: se ofrece por intención (al chocar con un límite), nunca al
+  registrarse.
+- Al bajar de plan nada se borra: tableros y proyectos que sobran pasan a solo lectura,
+  colaboradores a solo lectura, y los productos que sobran se despublican (el usuario elige cuáles
+  mantiene).
+- Precios sin IVA. Pago anual = 2 meses gratis. Oferta Empresa Fundadora (Pro y Premium, pago anual)
+  para las 100 primeras empresas hasta el 30/06/2027, precio bloqueado 24 meses.
+
+8. PRECIOS
+----------------------------------------------------------------------------------------------------
+  Comprador: Gratis · Pro 9,90 €/mes o 99 €/año (próximamente)
+  Experto:   Gratis · Pro 19,90 €/mes o 199 €/año (incluye Comprador Pro)
+  Empresa:   Gratis · Pro 79 €/mes o 790 €/año (fundador 490 €/año) · Premium 199 €/mes o 1.990 €/año (fundador 1.290 €/año)
+  Grupo con varias sucursales: a medida
+
+Idiomas de la plataforma: español, inglés, portugués y francés. Traducción automática del texto libre en todos los planes.
