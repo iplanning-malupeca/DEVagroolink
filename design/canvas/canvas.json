@@ -383,35 +383,40 @@
    "title": "C0a · Nueva comparación · escribir unas letras",
    "w": 1280,
    "x": 1360,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "CompNueva2.dc.html": {
    "h": 900,
    "title": "C0b · Nueva comparación · añadir del mismo tipo",
    "w": 1280,
    "x": 2720,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "CompOtroTipo.dc.html": {
    "h": 900,
    "title": "C2 · Añadir un producto de otro tipo",
    "w": 1280,
    "x": 5440,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "CompSolicitar.dc.html": {
    "h": 900,
    "title": "C3 · Solicitar información a los 3",
    "w": 1280,
    "x": 6800,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "CompSumario.dc.html": {
    "h": 900,
    "title": "C0 · Mis comparaciones · sumario (copia de U4)",
    "w": 1280,
    "x": 0,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "CompTamanos.dc.html": {
    "h": 1000,
@@ -426,7 +431,8 @@
    "title": "C1 · Comparativa del mismo tipo (enzimas)",
    "w": 1280,
    "x": 4080,
-   "y": 1300
+   "y": 1300,
+   "page": "tableros"
   },
   "ConEmpresa.dc.html": {
    "h": 1060,
@@ -929,476 +935,544 @@
    "title": "F01 · Header · usuario logueado",
    "w": 922,
    "x": 0,
-   "y": 0
+   "y": 0,
+   "page": "figma"
   },
   "Fig02.dc.html": {
    "h": 66,
    "title": "F02 · Header · con selector de región",
    "w": 1218,
    "x": 1042,
-   "y": 0
+   "y": 0,
+   "page": "figma"
   },
   "Fig03.dc.html": {
    "h": 3389,
    "title": "F03 · Home logueado «Hola Samuel»",
    "w": 1292,
    "x": 2380,
-   "y": 0
+   "y": 0,
+   "page": "figma"
   },
   "Fig04.dc.html": {
    "h": 999,
    "title": "F04 · Mega-menú de categorías",
    "w": 1292,
    "x": 3792,
-   "y": 0
+   "y": 0,
+   "page": "figma"
   },
   "Fig05.dc.html": {
    "h": 3634,
    "title": "F05 · Home logueado · variante",
    "w": 1292,
    "x": 5204,
-   "y": 0
+   "y": 0,
+   "page": "figma"
   },
   "Fig06.dc.html": {
    "h": 2381,
    "title": "F06 · Categoría · Aves › Broilers › Nutrición",
    "w": 1352,
    "x": 0,
-   "y": 4134
+   "y": 4134,
+   "page": "figma"
   },
   "Fig07.dc.html": {
    "h": 2381,
    "title": "F07 · Categoría · variante",
    "w": 1284,
    "x": 1472,
-   "y": 4134
+   "y": 4134,
+   "page": "figma"
   },
   "Fig08.dc.html": {
    "h": 2035,
    "title": "F08 · Resultados «micotoxinas porcino»",
    "w": 1284,
    "x": 2876,
-   "y": 4134
+   "y": 4134,
+   "page": "figma"
   },
   "Fig09.dc.html": {
    "h": 2072,
    "title": "F09 · Resultados · variante",
    "w": 1284,
    "x": 4280,
-   "y": 4134
+   "y": 4134,
+   "page": "figma"
   },
   "Fig10.dc.html": {
    "h": 1830,
    "title": "F10 · Página de especie · Aves",
    "w": 1284,
    "x": 5684,
-   "y": 4134
+   "y": 4134,
+   "page": "figma"
   },
   "Fig11.dc.html": {
    "h": 1030,
    "title": "F11 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 1400,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig12.dc.html": {
    "h": 810,
    "title": "F12 · Contactar con la empresa",
    "w": 1184,
    "x": 2806,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig13.dc.html": {
    "h": 1610,
    "title": "F13 · Directorio de expertos",
    "w": 1280,
    "x": 0,
-   "y": 10502
+   "y": 10502,
+   "page": "figma"
   },
   "Fig14.dc.html": {
    "h": 2799,
    "title": "F14 · Perfil · Dr. Carlos Martínez",
    "w": 1280,
    "x": 1400,
-   "y": 10502
+   "y": 10502,
+   "page": "figma"
   },
   "Fig15.dc.html": {
    "h": 1502,
    "title": "F15 · Perfil experto · variante",
    "w": 1280,
    "x": 2800,
-   "y": 10502
+   "y": 10502,
+   "page": "figma"
   },
   "Fig16.dc.html": {
    "h": 1609,
    "title": "F16 · Perfil experto · variante",
    "w": 1280,
    "x": 4200,
-   "y": 10502
+   "y": 10502,
+   "page": "figma"
   },
   "Fig17.dc.html": {
    "h": 1281,
    "title": "F17 · Modal · menú de categorías",
    "w": 1288,
    "x": 8238,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig18.dc.html": {
    "h": 1281,
    "title": "F18 · Modal · menú de categorías (variante)",
    "w": 1288,
    "x": 9646,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig19.dc.html": {
    "h": 1421,
    "title": "F19 · Ficha de producto OptiFeed",
    "w": 1280,
    "x": 0,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig20.dc.html": {
    "h": 1027,
    "title": "F20 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 0,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig21.dc.html": {
    "h": 913,
    "title": "F21 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1223,
    "x": 1406,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig22.dc.html": {
    "h": 798,
    "title": "F22 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1141,
    "x": 2749,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig23.dc.html": {
    "h": 928,
    "title": "F23 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1200,
    "x": 4010,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig24.dc.html": {
    "h": 1026,
    "title": "F24 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1286,
    "x": 5330,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig25.dc.html": {
    "h": 1024,
    "title": "F25 · Login",
    "w": 1228,
    "x": 0,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig26.dc.html": {
    "h": 1024,
    "title": "F26 · Login · código",
    "w": 1280,
    "x": 1348,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig27.dc.html": {
    "h": 1024,
    "title": "F27 · Login · paso",
    "w": 1280,
    "x": 2748,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig28.dc.html": {
    "h": 1392,
    "title": "F28 · Producto Zucami Aviary Pro",
    "w": 1280,
    "x": 15358,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig29.dc.html": {
    "h": 1024,
    "title": "F29 · Guardar en tablero",
    "w": 1280,
    "x": 16758,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig30.dc.html": {
    "h": 1024,
    "title": "F30 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1280,
    "x": 6736,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig31.dc.html": {
    "h": 1025,
    "title": "F31 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 8136,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig32.dc.html": {
    "h": 1025,
    "title": "F32 · Pantalla (nombre antiguo: Farm4You)",
    "w": 1282,
    "x": 9538,
-   "y": 8975
+   "y": 8975,
+   "page": "figma"
   },
   "Fig33.dc.html": {
    "h": 1024,
    "title": "F33 · Login · paso",
    "w": 1280,
    "x": 4148,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig34.dc.html": {
    "h": 1004,
    "title": "F34 · Cuenta creada",
    "w": 1289,
    "x": 5548,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig35.dc.html": {
    "h": 833,
    "title": "F35 · Login · paso",
    "w": 1161,
    "x": 6957,
-   "y": 13801
+   "y": 13801,
+   "page": "figma"
   },
   "Fig36.dc.html": {
    "h": 1460,
    "title": "F36 · Producto en catálogo de AgroNova",
    "w": 1280,
    "x": 18158,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig37.dc.html": {
    "h": 1306,
    "title": "F37 · Listado de empresas / expertos / eventos",
    "w": 1280,
    "x": 0,
-   "y": 15582
+   "y": 15582,
+   "page": "figma"
   },
   "Fig38.dc.html": {
    "h": 1352,
    "title": "F38 · Listado · variante",
    "w": 1280,
    "x": 1400,
-   "y": 15582
+   "y": 15582,
+   "page": "figma"
   },
   "Fig39.dc.html": {
    "h": 1174,
    "title": "F39 · Evento · AviForum",
    "w": 1280,
    "x": 2800,
-   "y": 15582
+   "y": 15582,
+   "page": "figma"
   },
   "Fig40.dc.html": {
    "h": 3464,
    "title": "F40 · Ficha empresa AgroNova",
    "w": 1280,
    "x": 0,
-   "y": 17434
+   "y": 17434,
+   "page": "figma"
   },
   "Fig41.dc.html": {
    "h": 804,
    "title": "F41 · AgroNova · sección",
    "w": 1280,
    "x": 1400,
-   "y": 17434
+   "y": 17434,
+   "page": "figma"
   },
   "Fig42.dc.html": {
    "h": 1082,
    "title": "F42 · AgroNova · sección",
    "w": 1280,
    "x": 2800,
-   "y": 17434
+   "y": 17434,
+   "page": "figma"
   },
   "Fig43.dc.html": {
    "h": 1218,
    "title": "F43 · AgroNova · sección",
    "w": 1280,
    "x": 4200,
-   "y": 17434
+   "y": 17434,
+   "page": "figma"
   },
   "Fig44.dc.html": {
    "h": 1134,
    "title": "F44 · AgroNova · sección",
    "w": 1280,
    "x": 5600,
-   "y": 17434
+   "y": 17434,
+   "page": "figma"
   },
   "Fig45.dc.html": {
    "h": 1460,
    "title": "F45 · Producto en catálogo de AgroNova · variante",
    "w": 1280,
    "x": 19558,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig46.dc.html": {
    "h": 4365,
    "title": "F46 · Ficha empresa DSM",
    "w": 1280,
    "x": 0,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig47.dc.html": {
    "h": 1030,
    "title": "F47 · Modal · guardar en tablero",
    "w": 1286,
    "x": 4110,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig48.dc.html": {
    "h": 1030,
    "title": "F48 · Modal · guardado en tablero",
    "w": 1286,
    "x": 5516,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig49.dc.html": {
    "h": 1014,
    "title": "F49 · DSM · sección",
    "w": 1280,
    "x": 1400,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig50.dc.html": {
    "h": 1243,
    "title": "F50 · DSM · sección",
    "w": 1280,
    "x": 2800,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig51.dc.html": {
    "h": 1030,
    "title": "F51 · Modal · descargar vademécum",
    "w": 1286,
    "x": 6922,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig52.dc.html": {
    "h": 1030,
    "title": "F52 · Modal · visitar la web",
    "w": 1286,
    "x": 8328,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig53.dc.html": {
    "h": 1676,
    "title": "F53 · DSM · sección",
    "w": 1280,
    "x": 4200,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig54.dc.html": {
    "h": 2075,
    "title": "F54 · DSM · sección",
    "w": 1280,
    "x": 5600,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig55.dc.html": {
    "h": 1924,
    "title": "F55 · DSM · sección",
    "w": 1280,
    "x": 7000,
-   "y": 21398
+   "y": 21398,
+   "page": "figma"
   },
   "Fig56.dc.html": {
    "h": 1030,
    "title": "F56 · Modal · únete como distribuidor",
    "w": 1286,
    "x": 9734,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig57.dc.html": {
    "h": 1030,
    "title": "F57 · Modal · solicitar información",
    "w": 1286,
    "x": 11140,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig58.dc.html": {
    "h": 1744,
    "title": "F58 · Ficha empresa Zucami",
    "w": 1280,
    "x": 0,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig59.dc.html": {
    "h": 1555,
    "title": "F59 · Zucami · sección",
    "w": 1280,
    "x": 1400,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig60.dc.html": {
    "h": 1030,
    "title": "F60 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 12546,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig61.dc.html": {
    "h": 1024,
    "title": "F61 · Encontrar mi comercial",
    "w": 1280,
    "x": 9800,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig62.dc.html": {
    "h": 1030,
    "title": "F62 · Producto OptiFeed · modal",
    "w": 1286,
    "x": 13952,
-   "y": 7015
+   "y": 7015,
+   "page": "figma"
   },
   "Fig63.dc.html": {
    "h": 1024,
    "title": "F63 · Contactar con Laura García",
    "w": 1280,
    "x": 11200,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig64.dc.html": {
    "h": 1461,
    "title": "F64 · Zucami · catálogo",
    "w": 1280,
    "x": 2800,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig65.dc.html": {
    "h": 1744,
    "title": "F65 · Zucami · catálogo",
    "w": 1280,
    "x": 4200,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig66.dc.html": {
    "h": 1461,
    "title": "F66 · Zucami · catálogo",
    "w": 1280,
    "x": 5600,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig67.dc.html": {
    "h": 1848,
    "title": "F67 · Zucami · catálogo",
    "w": 1280,
    "x": 7000,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "Fig68.dc.html": {
    "h": 1997,
    "title": "F68 · Zucami LATAM",
    "w": 1280,
    "x": 8400,
-   "y": 26263
+   "y": 26263,
+   "page": "figma"
   },
   "IntHeader.dc.html": {
    "h": 68,
@@ -1541,7 +1615,8 @@
    "title": "M4 · Búsqueda",
    "w": 390,
    "x": 1590,
-   "y": 0
+   "y": 0,
+   "page": "movil"
   },
   "MobCambioEmpresa.dc.html": {
    "h": 844,
@@ -1556,28 +1631,32 @@
    "title": "M9 · Categoría → tipo de producto",
    "w": 390,
    "x": 2120,
-   "y": 2510
+   "y": 2510,
+   "page": "movil"
   },
   "MobEspecie.dc.html": {
    "h": 900,
    "title": "M6 · Especie → producción (opcional)",
    "w": 390,
    "x": 530,
-   "y": 2510
+   "y": 2510,
+   "page": "movil"
   },
   "MobExplorarCategorias.dc.html": {
    "h": 940,
    "title": "M8 · Explorar · por categoría",
    "w": 390,
    "x": 1590,
-   "y": 2510
+   "y": 2510,
+   "page": "movil"
   },
   "MobExplorarEspecies.dc.html": {
    "h": 844,
    "title": "M5 · Explorar · por especie",
    "w": 390,
    "x": 0,
-   "y": 2510
+   "y": 2510,
+   "page": "movil"
   },
   "MobHeaderConEmpresa.dc.html": {
    "h": 844,
@@ -1658,28 +1737,32 @@
    "title": "M1 · Home con sesión",
    "w": 390,
    "x": 0,
-   "y": 0
+   "y": 0,
+   "page": "movil"
   },
   "MobHomeVisitante.dc.html": {
    "h": 1500,
    "title": "M2 · Home sin sesión",
    "w": 390,
    "x": 530,
-   "y": 0
+   "y": 0,
+   "page": "movil"
   },
   "MobIntereses.dc.html": {
    "h": 1700,
    "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
    "w": 390,
    "x": 2120,
-   "y": 0
+   "y": 0,
+   "page": "movil"
   },
   "MobResultados.dc.html": {
    "h": 920,
    "title": "M7 · Resultados · categoría en chips",
    "w": 390,
    "x": 1060,
-   "y": 2510
+   "y": 2510,
+   "page": "movil"
   },
   "MobSelectorEspacios.dc.html": {
    "h": 844,
@@ -1694,7 +1777,8 @@
    "title": "MobTabBar · componente: Explorar · Proyectos · Tableros · Tú (como 000_Header)",
    "w": 390,
    "x": 0,
-   "y": 4040
+   "y": 4040,
+   "page": "movil"
   },
   "MsgComInterno.dc.html": {
    "h": 940,
@@ -2886,28 +2970,32 @@
    "title": "T4 · Compartir tablero (permisos y plan)",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 0,
+   "page": "tableros"
   },
   "TabGuardar.dc.html": {
    "h": 900,
    "title": "T3 · Guardar en tablero desde una ficha",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 0,
+   "page": "tableros"
   },
   "TabMis.dc.html": {
    "h": 900,
    "title": "T1 · Mis tableros (con Historial automático)",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 0,
+   "page": "tableros"
   },
   "TabVista.dc.html": {
    "h": 900,
    "title": "T2 · Vista de un tablero con seguimiento por estado",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 0,
+   "page": "tableros"
   },
   "UsrAyuda.dc.html": {
    "h": 900,
