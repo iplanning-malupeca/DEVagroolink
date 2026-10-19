@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Móvil · Explorar por categoría</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D;background:#FFFFFF}
+*{box-sizing:border-box}
+a{color:#0E5A3A;text-decoration:none;font-weight:500}
+.ph{width:390px;position:relative;background:#F6F8F6;overflow:hidden;display:flex;flex-direction:column}
+.sb{height:44px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 26px 0 30px;font-size:15px;font-weight:600}
+.sbi{display:flex;gap:6px;align-items:center}
+.top{height:52px;flex:none;display:flex;align-items:center;gap:10px;padding:0 16px}
+.ib{width:40px;height:40px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:#17231D;position:relative;flex:none}
+.dot{position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#D64545;border:2px solid #F6F8F6}
+.bdg{position:absolute;top:4px;right:2px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#D64545;color:#FFF;font-size:10px;font-weight:600;display:flex;align-items:center;justify-content:center;border:2px solid #F6F8F6}
+.av{width:36px;height:36px;border-radius:50%;background:#0E5A3A;color:#FFFFFF;font-size:13px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.logo{display:flex;align-items:center;gap:8px;font-size:19px;font-weight:700;letter-spacing:-.3px;color:#0E5A3A}
+.logo b{width:30px;height:30px;border-radius:9px;background:#0E5A3A;display:inline-flex;align-items:center;justify-content:center}
+.logo i{font-style:normal;color:#17231D}
+.pad{padding:0 16px}
+.srch{height:48px;border-radius:14px;background:#FFFFFF;border:1px solid #DCE4DE;display:flex;align-items:center;gap:10px;padding:0 6px 0 14px;color:#8A948F;font-size:13.5px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.srch span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.go{width:36px;height:36px;border-radius:10px;background:#0E5A3A;color:#FFF;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.sec{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px}
+.sec h2{font-size:16px;font-weight:600;margin:0}
+.sec a{font-size:12.5px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE4DE;font-size:12.5px;font-weight:500;white-space:nowrap;color:#17231D;flex:none}
+.chip.on{background:#0E5A3A;border-color:#0E5A3A;color:#FFFFFF}
+.chip.soft{background:#EEF6EE;border-color:#EEF6EE;color:#0E5A3A}
+.row{display:flex;gap:8px}
+.hs{display:flex;gap:10px;overflow:hidden}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;box-shadow:0 1px 2px rgba(16,40,28,.04)}
+.li{display:flex;align-items:center;gap:12px;padding:0 14px;min-height:54px;border-bottom:1px solid #EEF1EE;font-size:14px;color:#17231D}
+.li:last-child{border-bottom:0}
+.li .t{flex:1;min-width:0}
+.li small{display:block;font-size:11.5px;color:#56615B;font-weight:400;margin-top:1px}
+.li .n{font-size:12px;color:#56615B}
+.ico{width:36px;height:36px;border-radius:11px;background:#EEF6EE;color:#0E5A3A;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.emo{width:44px;height:44px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;font-size:23px;flex:none}
+.cap{font-size:11px;font-weight:600;letter-spacing:.6px;color:#56615B;text-transform:uppercase;margin:0 0 8px 2px}
+.btn{height:50px;border-radius:14px;background:#0E5A3A;color:#FFFFFF;font-size:14.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn2{height:44px;border-radius:12px;background:#FFFFFF;border:1px solid #CFD8D2;color:#17231D;font-size:13.5px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px}
+.seg{display:flex;background:#E9EEEA;border-radius:12px;padding:3px}
+.seg span{flex:1;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:500;color:#56615B}
+.seg span.on{background:#FFFFFF;color:#17231D;font-weight:600;box-shadow:0 1px 3px rgba(16,40,28,.12)}
+.tabw{position:absolute;left:0;right:0;bottom:0}
+.sticky{position:absolute;left:0;right:0;bottom:84px;padding:12px 16px;background:linear-gradient(rgba(246,248,246,0),#F6F8F6 30%)}
+.h1{font-size:24px;font-weight:600;letter-spacing:-.3px;margin:0}
+.sub{font-size:13px;color:#56615B;margin:4px 0 0;line-height:1.32}
+.prod{width:156px;flex:none;overflow:hidden}
+.pimg{height:104px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #EEF1EE}
+.tag{display:inline-flex;height:22px;padding:0 8px;border-radius:6px;background:#F1F4F1;font-size:10.5px;color:#4A5650;align-items:center;white-space:nowrap}
+</style>
+</helmet>
+<div class="ph" style="height: 940px;">
+<div class="sb"><span>9:41</span><span class="sbi"><svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="#17231D"/><rect x="5" y="5" width="3" height="7" rx="1" fill="#17231D"/><rect x="10" y="2.5" width="3" height="9.5" rx="1" fill="#17231D"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#17231D"/></svg><svg width="16" height="12" viewBox="0 0 24 18" fill="none" stroke="#17231D" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M2 6a15 15 0 0 1 20 0M5.5 9.5a10 10 0 0 1 13 0M9 13a5 5 0 0 1 6 0"/></svg><svg width="26" height="12" viewBox="0 0 26 12" aria-hidden="true"><rect x=".5" y=".5" width="22" height="11" rx="3.5" fill="none" stroke="#17231D" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="#17231D"/><rect x="23.5" y="4" width="2" height="4" rx="1" fill="#17231D" opacity=".4"/></svg></span></div>
+<div class="top"><span style="flex:1;font-size:22px;font-weight:600;letter-spacing:-.3px;">Explorar</span><span class="ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5"/></svg></span></div><div class="pad" style="display:flex;flex-direction:column;gap:14px;padding-top:4px;"><div class="seg"><span class="">Por especie</span><span class="on">Por categoría</span></div><div class="card" style="overflow:hidden;"><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/80b5b2567c6661e3928e470b12e289ac" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Nutrición y aditivos<small>1.860 productos · 17 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/53ae09a5455c5a24f13d6a57150a760d" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Salud animal y bioseguridad<small>1.240 productos · 10 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/f30a0e2566f6d721c706227d8a764fa7" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Genética y reproducción<small>410 productos · 7 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/c0b93c2ba1e390a72afbf1e9398ee72f" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Equipamiento e instalaciones<small>2.310 productos · 15 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/eef9e7435f1e81a4e6e0186f23bbb85c" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Tecnología, sensores y software<small>680 productos · 9 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/395980c59e5928bad5cf78c3a75a19d4" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Materias primas<small>520 productos · 7 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0E5A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span class="t" style="font-weight:500;">Sostenibilidad y energía<small>390 productos · 8 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/a52a6154e61ab369ac4f2561d00a202c" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Equipamiento avícola<small>740 productos · 8 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/1e8118f0c4715ad0d7785d37982c9800" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Equipamiento porcino<small>460 productos · 5 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="#" class="li" style="min-height:58px;"><span class="ico"><img src="/_blob/5980d0aa9ef3c5542712eb4b3a2aa6eb" alt="" style="width:26px;height:26px;object-fit:contain;display:block;"></span><span class="t" style="font-weight:500;">Equipamiento para rumiantes<small>380 productos · 7 tipos</small></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A948F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div><div style="height:96px;"></div></div>
+<div class="tabw"><dc-import name="MobTabBar" activo="{{ tab }}" hint-size="390px,84px"></dc-import></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 390, "height": 940}}'>
+class Component extends DCLogic {
+  renderVals() { return { tab: 2 }; }
+}
+</script>
+</body>
+</html>

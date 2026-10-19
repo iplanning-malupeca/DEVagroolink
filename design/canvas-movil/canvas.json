@@ -1,0 +1,1459 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-19T15:48:54Z"
+ },
+ "title": "Agroolink · Móvil",
+ "launch": {
+  "view": "canvas",
+  "page": "hdrmob"
+ },
+ "pages": [
+  {
+   "id": "hdrmob",
+   "name": "000_MB_Header"
+  },
+  {
+   "id": "homemob",
+   "name": "000b_MB_Home"
+  },
+  {
+   "id": "busmob",
+   "name": "002_MB_Búsqueda y filtros"
+  },
+  {
+   "id": "mb1",
+   "name": "011_MB_Alta de producto"
+  },
+  {
+   "id": "mb2",
+   "name": "MB_05 Alta de servicios"
+  },
+  {
+   "id": "mb3",
+   "name": "005_MB_Alta empresa"
+  },
+  {
+   "id": "mb4",
+   "name": "001_MB_Proyectos"
+  },
+  {
+   "id": "mb5",
+   "name": "MB_08 Planes"
+  },
+  {
+   "id": "mb6",
+   "name": "003_MB_Alta_usuario · Experto"
+  },
+  {
+   "id": "mb7",
+   "name": "004_MB_Intranet · Usuario · Experto · Empresa"
+  },
+  {
+   "id": "mb8",
+   "name": "005_MB_Alta empresa_Fab-Dist"
+  },
+  {
+   "id": "movil",
+   "name": "Móvil · Home y menú"
+  }
+ ],
+ "boards": {
+  "BuscaMovCategoria.dc.html": {
+   "h": 850,
+   "page": "busmob",
+   "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»",
+   "w": 390,
+   "x": 940,
+   "y": 0
+  },
+  "BuscaMovEspecie.dc.html": {
+   "h": 860,
+   "page": "busmob",
+   "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)",
+   "w": 390,
+   "x": 470,
+   "y": 0
+  },
+  "BuscaMovFicha.dc.html": {
+   "h": 1150,
+   "page": "busmob",
+   "title": "M6 · Móvil · Ficha de producto (S4): «Pedir precio» fijo abajo, el distribuidor de tu zona; sin precios ni contactos · t",
+   "w": 390,
+   "x": 2350,
+   "y": 0
+  },
+  "BuscaMovFiltros.dc.html": {
+   "h": 2380,
+   "page": "busmob",
+   "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»",
+   "w": 390,
+   "x": 1410,
+   "y": 0
+  },
+  "BuscaMovHome.dc.html": {
+   "h": 3820,
+   "page": "homemob",
+   "title": "Móvil · Home sin sesión: logo y «Entrar»; «¿Qué necesita hoy?» con la pastilla",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "BuscaMovHomeInicio.dc.html": {
+   "h": 850,
+   "page": "homemob",
+   "title": "Móvil · Home · al tocar la pastilla: búsquedas recientes y los pasos Especie · Categoría · Enfermedad",
+   "w": 390,
+   "x": 470,
+   "y": 0
+  },
+  "BuscaMovResultados.dc.html": {
+   "h": 1370,
+   "page": "busmob",
+   "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "BuscaMovSinResultados.dc.html": {
+   "h": 850,
+   "page": "busmob",
+   "title": "M5 · Móvil · Sin resultados (B9): qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto",
+   "w": 390,
+   "x": 1880,
+   "y": 0
+  },
+  "MobBuscar.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M4 · Búsqueda",
+   "w": 390,
+   "x": 1590,
+   "y": 0
+  },
+  "MobCambioEmpresa.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M10 · Al cambiar a empresa: color azul y aviso «Ahora estás en…»",
+   "w": 390,
+   "x": 1880,
+   "y": 1100
+  },
+  "MobCategoria.dc.html": {
+   "h": 1030,
+   "page": "movil",
+   "title": "M9 · Categoría → tipo de producto",
+   "w": 390,
+   "x": 2120,
+   "y": 2510
+  },
+  "MobEspecie.dc.html": {
+   "h": 900,
+   "page": "movil",
+   "title": "M6 · Especie → producción (opcional)",
+   "w": 390,
+   "x": 530,
+   "y": 2510
+  },
+  "MobExplorarCategorias.dc.html": {
+   "h": 940,
+   "page": "movil",
+   "title": "M8 · Explorar · por categoría",
+   "w": 390,
+   "x": 1590,
+   "y": 2510
+  },
+  "MobExplorarEspecies.dc.html": {
+   "h": 844,
+   "page": "movil",
+   "title": "M5 · Explorar · por especie",
+   "w": 390,
+   "x": 0,
+   "y": 2510
+  },
+  "MobHeaderConEmpresa.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M7 · Personal con empresa · «Tú» abierto",
+   "w": 390,
+   "x": 470,
+   "y": 1100
+  },
+  "MobHeaderEmpresa.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M8 · Modo empresa · barra de empresa (azul)",
+   "w": 390,
+   "x": 940,
+   "y": 1100
+  },
+  "MobHeaderEmpresaMenu.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M9 · Modo empresa · menú «Empresa» abierto",
+   "w": 390,
+   "x": 1410,
+   "y": 1100
+  },
+  "MobHeaderExperto.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M6 · Con perfil de experto · «Tú» abierto (lila)",
+   "w": 390,
+   "x": 0,
+   "y": 1100
+  },
+  "MobHeaderExplorar.dc.html": {
+   "h": 860,
+   "page": "hdrmob",
+   "title": "M3 · Explorar: al tocar la pastilla se abre la búsqueda (la misma de 005)",
+   "w": 390,
+   "x": 1410,
+   "y": 0
+  },
+  "MobHeaderSesion.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M2 · Móvil con sesión: arriba mensajes; abajo menú fijo (Explorar es el inicio)",
+   "w": 390,
+   "x": 940,
+   "y": 0
+  },
+  "MobHeaderSinSesion.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "hdrmob",
+   "title": "M1 · Móvil sin sesión: arriba logo, buscar y Entrar",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "MobHeaderSinSesionMenu.dc.html": {
+   "h": 844,
+   "is_interactive": true,
+   "page": "hdrmob",
+   "title": "M1b · Sin sesión · «Entrar» desplegado (mismo contenido que la pantalla 1)",
+   "w": 390,
+   "x": 470,
+   "y": 0
+  },
+  "MobHeaderTu.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M4 · «Tú»: Mi espacio, mensajes y Mi cuenta",
+   "w": 390,
+   "x": 1880,
+   "y": 0
+  },
+  "MobHome.dc.html": {
+   "h": 2010,
+   "page": "movil",
+   "title": "M1 · Home con sesión",
+   "w": 390,
+   "x": 0,
+   "y": 0
+  },
+  "MobHomeVisitante.dc.html": {
+   "h": 1500,
+   "page": "movil",
+   "title": "M2 · Home sin sesión",
+   "w": 390,
+   "x": 530,
+   "y": 0
+  },
+  "MobIntereses.dc.html": {
+   "h": 1700,
+   "page": "movil",
+   "title": "M10 · Tus intereses (alta y Menú › Mis intereses)",
+   "w": 390,
+   "x": 2120,
+   "y": 0
+  },
+  "MobResultados.dc.html": {
+   "h": 920,
+   "page": "movil",
+   "title": "M7 · Resultados · categoría en chips",
+   "w": 390,
+   "x": 1060,
+   "y": 2510
+  },
+  "MobSelectorEspacios.dc.html": {
+   "h": 844,
+   "page": "hdrmob",
+   "title": "M11 · Selector de espacios con varias empresas",
+   "w": 390,
+   "x": 2350,
+   "y": 1100
+  },
+  "MobTabBar.dc.html": {
+   "h": 84,
+   "page": "movil",
+   "title": "MobTabBar · componente: Explorar · Proyectos · Tableros · Tú (como 000_Header)",
+   "w": 390,
+   "x": 0,
+   "y": 4040
+  },
+  "MB_MP1.dc.html": {
+   "w": 390,
+   "h": 1510,
+   "page": "mb1",
+   "x": 0,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MP2.dc.html": {
+   "w": 390,
+   "h": 2810,
+   "page": "mb1",
+   "x": 470,
+   "y": 0,
+   "title": "Categoría"
+  },
+  "MB_MP3.dc.html": {
+   "w": 390,
+   "h": 1890,
+   "page": "mb1",
+   "x": 940,
+   "y": 0,
+   "title": "Mercados"
+  },
+  "MB_MP4.dc.html": {
+   "w": 390,
+   "h": 1730,
+   "page": "mb1",
+   "x": 1410,
+   "y": 0,
+   "title": "Identidad (idioma detectado)"
+  },
+  "MB_MP5.dc.html": {
+   "w": 390,
+   "h": 2090,
+   "page": "mb1",
+   "x": 1880,
+   "y": 0,
+   "title": "Datos técnicos"
+  },
+  "MB_MP6.dc.html": {
+   "w": 390,
+   "h": 1200,
+   "page": "mb1",
+   "x": 2350,
+   "y": 0,
+   "title": "Aplicación por especie"
+  },
+  "MB_MP7.dc.html": {
+   "w": 390,
+   "h": 1400,
+   "page": "mb1",
+   "x": 2820,
+   "y": 0,
+   "title": "Fotos, vídeos y documentos"
+  },
+  "MB_MP8.dc.html": {
+   "w": 390,
+   "h": 2180,
+   "page": "mb1",
+   "x": 3290,
+   "y": 0,
+   "title": "Certificaciones"
+  },
+  "MB_MP9.dc.html": {
+   "w": 390,
+   "h": 1750,
+   "page": "mb1",
+   "x": 3760,
+   "y": 0,
+   "title": "Revisión"
+  },
+  "MB_ME1.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "mb1",
+   "x": 4230,
+   "y": 0,
+   "title": "Mis productos"
+  },
+  "MB_ME2.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "mb1",
+   "x": 4700,
+   "y": 0,
+   "title": "Menú ⋯"
+  },
+  "MB_ME3.dc.html": {
+   "w": 390,
+   "h": 3750,
+   "page": "mb1",
+   "x": 5170,
+   "y": 0,
+   "title": "Editar por bloques"
+  },
+  "MB_ME4.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb1",
+   "x": 5640,
+   "y": 0,
+   "title": "Guardar y avisar"
+  },
+  "MB_ME5.dc.html": {
+   "w": 390,
+   "h": 3320,
+   "page": "mb1",
+   "x": 6110,
+   "y": 0,
+   "title": "Traducciones"
+  },
+  "MB_ME6.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb1",
+   "x": 6580,
+   "y": 0,
+   "title": "Ficha en inglés"
+  },
+  "MB_MS1.dc.html": {
+   "w": 390,
+   "h": 2620,
+   "page": "mb2",
+   "x": 0,
+   "y": 0,
+   "title": "Tipo de servicio"
+  },
+  "MB_MS2.dc.html": {
+   "w": 390,
+   "h": 1230,
+   "page": "mb2",
+   "x": 470,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MS3.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb2",
+   "x": 940,
+   "y": 0,
+   "title": "Dirigido a"
+  },
+  "MB_MS4.dc.html": {
+   "w": 390,
+   "h": 1390,
+   "page": "mb2",
+   "x": 1410,
+   "y": 0,
+   "title": "Dónde lo prestas"
+  },
+  "MB_MS5.dc.html": {
+   "w": 390,
+   "h": 2050,
+   "page": "mb2",
+   "x": 1880,
+   "y": 0,
+   "title": "Detalles"
+  },
+  "MB_MS6.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb2",
+   "x": 2350,
+   "y": 0,
+   "title": "Revisión"
+  },
+  "MB_MS7.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb2",
+   "x": 2820,
+   "y": 0,
+   "title": "Mis servicios"
+  },
+  "MB_MS8.dc.html": {
+   "w": 390,
+   "h": 1120,
+   "page": "mb2",
+   "x": 3290,
+   "y": 0,
+   "title": "Editar servicio por bloques"
+  },
+  "MB_MS9.dc.html": {
+   "w": 390,
+   "h": 1120,
+   "page": "mb2",
+   "x": 3760,
+   "y": 0,
+   "title": "¿Avisar a quienes te escribieron?"
+  },
+  "MB_MS10.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb2",
+   "x": 4230,
+   "y": 0,
+   "title": "Servicios archivados"
+  },
+  "MB_MA1.dc.html": {
+   "w": 390,
+   "h": 1170,
+   "page": "mb3",
+   "x": 0,
+   "y": 0,
+   "title": "Tu organización (CRM)"
+  },
+  "MB_MA2.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb3",
+   "x": 470,
+   "y": 0,
+   "title": "Confirmar email"
+  },
+  "MB_MA3.dc.html": {
+   "w": 390,
+   "h": 1300,
+   "page": "mb3",
+   "x": 940,
+   "y": 0,
+   "title": "Tipo de empresa"
+  },
+  "MB_MA4.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "mb3",
+   "x": 1410,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MA5.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb3",
+   "x": 1880,
+   "y": 0,
+   "title": "Rama de negocio"
+  },
+  "MB_MA6.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb3",
+   "x": 2350,
+   "y": 0,
+   "title": "Mercados"
+  },
+  "MB_MA7.dc.html": {
+   "w": 390,
+   "h": 1190,
+   "page": "mb3",
+   "x": 2820,
+   "y": 0,
+   "title": "Cabecera"
+  },
+  "MB_MA8.dc.html": {
+   "w": 390,
+   "h": 1090,
+   "page": "mb3",
+   "x": 3290,
+   "y": 0,
+   "title": "Sobre la empresa"
+  },
+  "MB_MA9.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "mb3",
+   "x": 3760,
+   "y": 0,
+   "title": "Equipo comercial"
+  },
+  "MB_MA10.dc.html": {
+   "w": 390,
+   "h": 1100,
+   "page": "mb3",
+   "x": 4230,
+   "y": 0,
+   "title": "Contacto"
+  },
+  "MB_MA11.dc.html": {
+   "w": 390,
+   "h": 1590,
+   "page": "mb3",
+   "x": 4700,
+   "y": 0,
+   "title": "Revisar y publicar"
+  },
+  "MB_MA12.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb3",
+   "x": 5170,
+   "y": 0,
+   "title": "Publicada"
+  },
+  "MB_MA13.dc.html": {
+   "w": 390,
+   "h": 1250,
+   "page": "mb3",
+   "x": 5640,
+   "y": 0,
+   "title": "Crear organización nueva"
+  },
+  "MB_MA14.dc.html": {
+   "w": 390,
+   "h": 970,
+   "page": "mb3",
+   "x": 6110,
+   "y": 0,
+   "title": "Sucursal: entra directa"
+  },
+  "MB_MA15.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb3",
+   "x": 6580,
+   "y": 0,
+   "title": "Sucursal: tu Sede"
+  },
+  "MB_EmpTiraFabCom.dc.html": {
+   "w": 2970,
+   "h": 1044,
+   "page": "mb3",
+   "x": 0,
+   "y": 2290,
+   "title": "Crear perfil sin cuenta · email · alta del comercial · zona · bandeja · Mensajes"
+  },
+  "MB_EmpTiraFabSuc.dc.html": {
+   "w": 3400,
+   "h": 1404,
+   "page": "mb3",
+   "x": 0,
+   "y": 4034,
+   "title": "Tipo · red · aviso · países · permisos · contacto · página · Mensajes"
+  },
+  "MB_EmpTiraSucursal.dc.html": {
+   "w": 820,
+   "h": 1184,
+   "page": "mb3",
+   "x": 0,
+   "y": 6138,
+   "title": "Tipo de empresa heredado de la Sede · Mensajes con la Sede"
+  },
+  "MB_EmpTiraDistribuidor.dc.html": {
+   "w": 3830,
+   "h": 1244,
+   "page": "mb3",
+   "x": 0,
+   "y": 8022,
+   "title": "Tipo · marcas · añadir · subir · validación · contacto · delegaciones · Mensajes"
+  },
+  "MB_MJ1.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb4",
+   "x": 0,
+   "y": 0,
+   "title": "Bienvenida"
+  },
+  "MB_MJ2.dc.html": {
+   "w": 390,
+   "h": 1470,
+   "page": "mb4",
+   "x": 470,
+   "y": 0,
+   "title": "Una pregunta por pantalla"
+  },
+  "MB_MJ3.dc.html": {
+   "w": 390,
+   "h": 1860,
+   "page": "mb4",
+   "x": 940,
+   "y": 0,
+   "title": "Resumen"
+  },
+  "MB_MJ4.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb4",
+   "x": 1410,
+   "y": 0,
+   "title": "Editar desde el resumen"
+  },
+  "MB_ProyU1_Mis.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 1880,
+   "y": 0,
+   "title": "Mis proyectos"
+  },
+  "MB_ProyU2_Acciones.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 2350,
+   "y": 0,
+   "title": "Menú ⋯: editar, duplicar, pausar, archivar"
+  },
+  "MB_ProyU3_Detalle.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb4",
+   "x": 2820,
+   "y": 0,
+   "title": "Proyecto y propuestas recibidas"
+  },
+  "MB_ProyU4_Propuesta.dc.html": {
+   "w": 390,
+   "h": 960,
+   "page": "mb4",
+   "x": 3290,
+   "y": 0,
+   "title": "Propuesta y conversación · adjudicar"
+  },
+  "MB_ProyU5_Editar.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb4",
+   "x": 3760,
+   "y": 0,
+   "title": "Editar proyecto por bloques"
+  },
+  "MB_ProyU6_Avisar.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb4",
+   "x": 4230,
+   "y": 0,
+   "title": "¿Avisar a las empresas del cambio?"
+  },
+  "MB_ProyU7_Archivar.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 4700,
+   "y": 0,
+   "title": "Archivado con «Deshacer»"
+  },
+  "MB_ProyU8_Archivados.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 5170,
+   "y": 0,
+   "title": "Proyectos archivados"
+  },
+  "MB_ProyE1_Oportunidades.dc.html": {
+   "w": 390,
+   "h": 890,
+   "page": "mb4",
+   "x": 0,
+   "y": 2560,
+   "title": "Empresa · Oportunidades"
+  },
+  "MB_ProyE2_Experto.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 470,
+   "y": 2560,
+   "title": "Experta · Proyectos para ti"
+  },
+  "MB_PropuestaMovil.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb4",
+   "x": 940,
+   "y": 2560,
+   "title": "Empresa · enviar una propuesta (J6)"
+  },
+  "MB_PropuestaMensajes.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb4",
+   "x": 1410,
+   "y": 2560,
+   "title": "La propuesta en Mensajes: dudas y nueva versión (J6b)"
+  },
+  "MB_PropuestaBloqueada.dc.html": {
+   "w": 390,
+   "h": 1040,
+   "page": "mb4",
+   "x": 1880,
+   "y": 2560,
+   "title": "Si intentan poner contactos: no se envía (J6c)"
+  },
+  "MB_PlanLogin.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb5",
+   "x": 0,
+   "y": 0,
+   "title": "Login al pulsar Guardar"
+  },
+  "MB_PlanLimite.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb5",
+   "x": 470,
+   "y": 0,
+   "title": "Límite: 2.º proyecto del comprador"
+  },
+  "MB_PlanPago.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb5",
+   "x": 940,
+   "y": 0,
+   "title": "Plan de pago: exportar informes"
+  },
+  "MB_PlanFiltro.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb5",
+   "x": 1410,
+   "y": 0,
+   "title": "Mensaje bloqueado por datos de contacto"
+  },
+  "MB_Alta1_Email.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 0,
+   "y": 0,
+   "title": "1 · Accede con tu email"
+  },
+  "MB_Alta2_Codigo.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 470,
+   "y": 0,
+   "title": "2a · Ya registrado: código por email"
+  },
+  "MB_Alta2b_SinCuenta.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 940,
+   "y": 0,
+   "title": "2b · Todavía no tienes cuenta (→ registro de Agrinews)"
+  },
+  "MB_Alta3_Intereses.dc.html": {
+   "w": 390,
+   "h": 1260,
+   "page": "mb6",
+   "x": 1410,
+   "y": 0,
+   "title": "4 · Tus intereses (solo la 1.ª vez)"
+  },
+  "MB_Alta4_Empezar.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 1880,
+   "y": 0,
+   "title": "5 · ¿Cómo quieres empezar?"
+  },
+  "MB_Alta4b_Empresa.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 2350,
+   "y": 0,
+   "title": "5b · «Represento una empresa» elegida"
+  },
+  "MB_Alta5_Creada.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 2820,
+   "y": 0,
+   "title": "6 · Cuenta lista"
+  },
+  "MB_Alta5b_Empresa.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 3290,
+   "y": 0,
+   "title": "6b · Cuenta lista → seguir con la empresa"
+  },
+  "MB_Alta6_MiEspacio.dc.html": {
+   "w": 390,
+   "h": 970,
+   "page": "mb6",
+   "x": 3760,
+   "y": 0,
+   "title": "7 · Mi espacio (primer inicio)"
+  },
+  "MB_Alta7_Consulta.dc.html": {
+   "w": 390,
+   "h": 880,
+   "page": "mb6",
+   "x": 4230,
+   "y": 0,
+   "title": "8 · Primera consulta"
+  },
+  "MB_Exp1_Empezar.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 0,
+   "y": 1960,
+   "title": "X1 · ¿Cómo quieres empezar? → Soy experto"
+  },
+  "MB_Exp2_Creada.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 470,
+   "y": 1960,
+   "title": "X2 · Cuenta creada → perfil de experto"
+  },
+  "MB_Exp3_Especialidad.dc.html": {
+   "w": 390,
+   "h": 950,
+   "page": "mb6",
+   "x": 940,
+   "y": 1960,
+   "title": "X3 · Paso 1 · Especialidad y zona"
+  },
+  "MB_Exp4_Servicios.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 1410,
+   "y": 1960,
+   "title": "X4 · Paso 2 · Servicios: abre el asistente de MB_05"
+  },
+  "MB_Exp5_Publicar.dc.html": {
+   "w": 390,
+   "h": 960,
+   "page": "mb6",
+   "x": 1880,
+   "y": 1960,
+   "title": "X5 · Paso 3 · Revisar y publicar"
+  },
+  "MB_Exp6_Publicado.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 2350,
+   "y": 1960,
+   "title": "X6 · Perfil publicado"
+  },
+  "MB_Exp7_Semana.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 2820,
+   "y": 1960,
+   "title": "X7 · Mi espacio como experta, primera semana"
+  },
+  "MB_ExpP1_Aviso.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 3290,
+   "y": 1960,
+   "title": "P1 · De comprador a experta: aviso en Mi espacio"
+  },
+  "MB_ExpP2_Intro.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb6",
+   "x": 3760,
+   "y": 1960,
+   "title": "P2 · «Ofrecer mis servicios»: qué cambia (luego X3–X5)"
+  },
+  "MB_UsrTiraEspacio.dc.html": {
+   "w": 1250,
+   "h": 1184,
+   "page": "mb7",
+   "x": 0,
+   "y": 0,
+   "title": "Mi espacio · Mensajes · conversación"
+  },
+  "MB_UsrTiraTableros.dc.html": {
+   "w": 1250,
+   "h": 1034,
+   "page": "mb7",
+   "x": 1330,
+   "y": 0,
+   "title": "Mis tableros · comparaciones · historial"
+  },
+  "MB_UsrTiraCuenta.dc.html": {
+   "w": 1250,
+   "h": 1894,
+   "page": "mb7",
+   "x": 2660,
+   "y": 0,
+   "title": "Mi perfil · Idioma y zona · Ayuda"
+  },
+  "MB_UsrTiraFacturacion.dc.html": {
+   "w": 2970,
+   "h": 1384,
+   "page": "mb7",
+   "x": 3990,
+   "y": 0,
+   "title": "Facturación: resumen · planes · pedidos · detalle · facturas · pagos · direcciones"
+  },
+  "MB_ExpTiraPanel.dc.html": {
+   "w": 1250,
+   "h": 1444,
+   "page": "mb7",
+   "x": 0,
+   "y": 2594,
+   "title": "Panel · Consultas recibidas · una consulta"
+  },
+  "MB_ExpTiraPerfil.dc.html": {
+   "w": 820,
+   "h": 1034,
+   "page": "mb7",
+   "x": 1330,
+   "y": 2594,
+   "title": "Perfil de experta · vista pública"
+  },
+  "MB_EmpPanel.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb7",
+   "x": 0,
+   "y": 4738,
+   "title": "Panel de empresa (EM1)"
+  },
+  "MB_EEM1.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb7",
+   "x": 470,
+   "y": 4738,
+   "title": "Editar ficha de empresa por bloques"
+  },
+  "MB_EEM2.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb7",
+   "x": 940,
+   "y": 4738,
+   "title": "Cambiar un bloque"
+  },
+  "MB_EEM3.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb7",
+   "x": 1410,
+   "y": 4738,
+   "title": "Antes de guardar: aviso"
+  },
+  "MB_FD_Distribuidores.dc.html": {
+   "w": 390,
+   "h": 1040,
+   "page": "mb8",
+   "x": 0,
+   "y": 0,
+   "title": "D4 · Distribuidores (paso 4 de 8)"
+  },
+  "MB_FD_FichaDistribuidores.dc.html": {
+   "w": 390,
+   "h": 940,
+   "page": "mb8",
+   "x": 470,
+   "y": 0,
+   "title": "Ficha · pestaña Distribuidores, como la ve el comprador"
+  },
+  "MB_FD_Expertos.dc.html": {
+   "w": 390,
+   "h": 960,
+   "page": "mb8",
+   "x": 940,
+   "y": 0,
+   "title": "D5 · Expertos recomendados (paso 5)"
+  },
+  "MB_FD_Contenidos.dc.html": {
+   "w": 390,
+   "h": 1130,
+   "page": "mb8",
+   "x": 1410,
+   "y": 0,
+   "title": "D6 · Contenidos y Agrinews (paso 6)"
+  },
+  "MB_FD_AvisoEmpresa.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb8",
+   "x": 1880,
+   "y": 0,
+   "title": "D0c · Aviso a los administradores de la empresa"
+  },
+  "MB_FD_AvisoAdmin.dc.html": {
+   "w": 390,
+   "h": 930,
+   "page": "mb8",
+   "x": 2350,
+   "y": 0,
+   "title": "D0d · Altas de miembros (superadmin)"
+  },
+  "MB_EmpTiraFabDist.dc.html": {
+   "w": 2540,
+   "h": 1504,
+   "page": "mb8",
+   "x": 2820,
+   "y": 0,
+   "title": "Lo que faltaba: tipo, especies «Excluir», red, contacto, cabecera del superadmin y Mensajes"
+  }
+ },
+ "order": [
+  "MobHome.dc.html",
+  "MobHomeVisitante.dc.html",
+  "MobBuscar.dc.html",
+  "MobIntereses.dc.html",
+  "MobExplorarEspecies.dc.html",
+  "MobEspecie.dc.html",
+  "MobResultados.dc.html",
+  "MobExplorarCategorias.dc.html",
+  "MobCategoria.dc.html",
+  "MobTabBar.dc.html",
+  "MobHeaderSinSesion.dc.html",
+  "MobHeaderSesion.dc.html",
+  "MobHeaderExplorar.dc.html",
+  "MobHeaderTu.dc.html",
+  "MobHeaderSinSesionMenu.dc.html",
+  "MobHeaderExperto.dc.html",
+  "MobHeaderConEmpresa.dc.html",
+  "MobHeaderEmpresa.dc.html",
+  "MobHeaderEmpresaMenu.dc.html",
+  "MobCambioEmpresa.dc.html",
+  "MobSelectorEspacios.dc.html",
+  "BuscaMovResultados.dc.html",
+  "BuscaMovEspecie.dc.html",
+  "BuscaMovCategoria.dc.html",
+  "BuscaMovFiltros.dc.html",
+  "BuscaMovHome.dc.html",
+  "BuscaMovHomeInicio.dc.html",
+  "BuscaMovSinResultados.dc.html",
+  "BuscaMovFicha.dc.html",
+  "MB_MP1.dc.html",
+  "MB_MP2.dc.html",
+  "MB_MP3.dc.html",
+  "MB_MP4.dc.html",
+  "MB_MP5.dc.html",
+  "MB_MP6.dc.html",
+  "MB_MP7.dc.html",
+  "MB_MP8.dc.html",
+  "MB_MP9.dc.html",
+  "MB_ME1.dc.html",
+  "MB_ME2.dc.html",
+  "MB_ME3.dc.html",
+  "MB_ME4.dc.html",
+  "MB_ME5.dc.html",
+  "MB_ME6.dc.html",
+  "MB_MS1.dc.html",
+  "MB_MS2.dc.html",
+  "MB_MS3.dc.html",
+  "MB_MS4.dc.html",
+  "MB_MS5.dc.html",
+  "MB_MS6.dc.html",
+  "MB_MS7.dc.html",
+  "MB_MS8.dc.html",
+  "MB_MS9.dc.html",
+  "MB_MS10.dc.html",
+  "MB_MA1.dc.html",
+  "MB_MA2.dc.html",
+  "MB_MA3.dc.html",
+  "MB_MA4.dc.html",
+  "MB_MA5.dc.html",
+  "MB_MA6.dc.html",
+  "MB_MA7.dc.html",
+  "MB_MA8.dc.html",
+  "MB_MA9.dc.html",
+  "MB_MA10.dc.html",
+  "MB_MA11.dc.html",
+  "MB_MA12.dc.html",
+  "MB_MA13.dc.html",
+  "MB_MA14.dc.html",
+  "MB_MA15.dc.html",
+  "MB_EmpTiraFabCom.dc.html",
+  "MB_EmpTiraFabSuc.dc.html",
+  "MB_EmpTiraSucursal.dc.html",
+  "MB_EmpTiraDistribuidor.dc.html",
+  "MB_MJ1.dc.html",
+  "MB_MJ2.dc.html",
+  "MB_MJ3.dc.html",
+  "MB_MJ4.dc.html",
+  "MB_ProyU1_Mis.dc.html",
+  "MB_ProyU2_Acciones.dc.html",
+  "MB_ProyU3_Detalle.dc.html",
+  "MB_ProyU4_Propuesta.dc.html",
+  "MB_ProyU5_Editar.dc.html",
+  "MB_ProyU6_Avisar.dc.html",
+  "MB_ProyU7_Archivar.dc.html",
+  "MB_ProyU8_Archivados.dc.html",
+  "MB_ProyE1_Oportunidades.dc.html",
+  "MB_ProyE2_Experto.dc.html",
+  "MB_PropuestaMovil.dc.html",
+  "MB_PropuestaMensajes.dc.html",
+  "MB_PropuestaBloqueada.dc.html",
+  "MB_PlanLogin.dc.html",
+  "MB_PlanLimite.dc.html",
+  "MB_PlanPago.dc.html",
+  "MB_PlanFiltro.dc.html",
+  "MB_Alta1_Email.dc.html",
+  "MB_Alta2_Codigo.dc.html",
+  "MB_Alta2b_SinCuenta.dc.html",
+  "MB_Alta3_Intereses.dc.html",
+  "MB_Alta4_Empezar.dc.html",
+  "MB_Alta4b_Empresa.dc.html",
+  "MB_Alta5_Creada.dc.html",
+  "MB_Alta5b_Empresa.dc.html",
+  "MB_Alta6_MiEspacio.dc.html",
+  "MB_Alta7_Consulta.dc.html",
+  "MB_Exp1_Empezar.dc.html",
+  "MB_Exp2_Creada.dc.html",
+  "MB_Exp3_Especialidad.dc.html",
+  "MB_Exp4_Servicios.dc.html",
+  "MB_Exp5_Publicar.dc.html",
+  "MB_Exp6_Publicado.dc.html",
+  "MB_Exp7_Semana.dc.html",
+  "MB_ExpP1_Aviso.dc.html",
+  "MB_ExpP2_Intro.dc.html",
+  "MB_UsrTiraEspacio.dc.html",
+  "MB_UsrTiraTableros.dc.html",
+  "MB_UsrTiraCuenta.dc.html",
+  "MB_UsrTiraFacturacion.dc.html",
+  "MB_ExpTiraPanel.dc.html",
+  "MB_ExpTiraPerfil.dc.html",
+  "MB_EmpPanel.dc.html",
+  "MB_EEM1.dc.html",
+  "MB_EEM2.dc.html",
+  "MB_EEM3.dc.html",
+  "MB_FD_Distribuidores.dc.html",
+  "MB_FD_FichaDistribuidores.dc.html",
+  "MB_FD_Expertos.dc.html",
+  "MB_FD_Contenidos.dc.html",
+  "MB_FD_AvisoEmpresa.dc.html",
+  "MB_FD_AvisoAdmin.dc.html",
+  "MB_EmpTiraFabDist.dc.html"
+ ],
+ "notes": {
+  "busT2": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "busmob",
+   "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "hdrmobt": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "hdrmob",
+   "text": "Header móvil · cabecera, menú inferior (Explorar · Proyectos · Tableros · Tú) y búsqueda abierta",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "homemobT": {
+   "kind": "title1",
+   "maxW": 2000,
+   "page": "homemob",
+   "text": "Home móvil · la pastilla abre la búsqueda por pasos",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "movT0": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Home y menú · una sola barra inferior: Inicio · Explorar · Proyectos · Tableros · Menú",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "movT1": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Explorar · especie → producción (opcional) → resultados, o categoría → tipo",
+   "w": 240,
+   "x": 0,
+   "y": 2210
+  },
+  "movT2": {
+   "kind": "title1",
+   "maxW": 2600,
+   "page": "movil",
+   "text": "Componente · barra inferior (prop activo 1–5)",
+   "w": 240,
+   "x": 0,
+   "y": 3740
+  },
+  "mbt0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb1",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de producto (prototipo crear-producto) y, a continuación, Mis productos, edición y traducciones"
+  },
+  "mbt1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb2",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de servicios del experto (prototipo crear-servicio)"
+  },
+  "mbt2": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
+  },
+  "mbt3": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 1990,
+   "text": "005a · Fabricante con comerciales (Zucami): lo propio de este caso · tools/empresa_config_movil.py"
+  },
+  "mbt4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 3734,
+   "text": "005b · Fabricante con sucursales (Big Dutchman): tipo, red, aviso, países, permisos, contacto, página de la sucursal y hilo con la Sede"
+  },
+  "mbt5": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 5838,
+   "text": "005c · Sucursal de un grupo (Aviagen Ibérica): además de MA14–MA15"
+  },
+  "mbt6": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": 7722,
+   "text": "005d · Distribuidor multimarca (NewFarms): tipo, marcas, productos, validación, delegaciones y Mensajes"
+  },
+  "mbt7": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb4",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "001_MB_Proyectos · Proyectos del usuario: asistente (prototipo crear-proyecto) y gestión (mis proyectos, propuestas, editar, archivar) · tools/proyectos_movil.py"
+  },
+  "mbt8": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb4",
+   "w": 240,
+   "x": 0,
+   "y": 2260,
+   "text": "001b_MB_Proyectos_Empresas · Proyectos para empresas y expertos: oportunidades, propuesta, Mensajes y bloqueo de contactos · tools/proyectos_movil.py y propuesta_movil.py"
+  },
+  "mbt9": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb5",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py"
+  },
+  "mbt10": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb6",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "003_MB_Alta_usuario · Alta de usuario en móvil (versión de 003_LP_Alta_usuario): los diálogos pasan a pantalla completa · tools/alta_usuario_movil.py"
+  },
+  "mbt11": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb6",
+   "w": 240,
+   "x": 0,
+   "y": 1660,
+   "text": "003a_MB_Alta_Experto · Alta de experto en móvil (versión de 003a_LP_Alta_Experto) · tools/alta_experto_movil.py"
+  },
+  "mbt12": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb7",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "004_MB_Intranet · Usuario · Intranet de usuario en móvil (una tira por apartado) · el menú «Tú» es M4 (000_MB_Header) y Mis proyectos es 001_MB_Proyectos · tools/usuario_movil.py"
+  },
+  "mbt13": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb7",
+   "w": 240,
+   "x": 0,
+   "y": 2294,
+   "text": "004a_MB_Intranet · Experto · Intranet de experta en móvil (lila) · Oportunidades es MB_ProyE2 (001b_MB) y Mis servicios es MB_MS7–MS10 (MB_05) · tools/experto_movil.py"
+  },
+  "mbt14": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb7",
+   "w": 240,
+   "x": 0,
+   "y": 4438,
+   "text": "004b_MB_Intranet · Empresa · Intranet de empresa en móvil · Editar ficha de empresa (prototipo alta-empresa) · tools/captura_empresa_editar.js"
+  },
+  "mbt15": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb8",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Fab-Dist en móvil: lo propio de este caso que no está en MB_06 (el resto del alta está allí) · tools/fabdist_movil.py"
+  },
+  "mbdev": {
+   "fill": "orange",
+   "maxH": 320,
+   "page": "mb1",
+   "size": 24,
+   "w": 1280,
+   "x": 1100,
+   "y": -300,
+   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
+  },
+  "escritorio": {
+   "x": -700,
+   "y": -300,
+   "w": 520,
+   "fill": "blue",
+   "page": "hdrmob",
+   "size": "m",
+   "text": "Versión de escritorio de Agroolink: https://claude.ai/artifact/6Q2317uagG93v21oXLyi7t\n\nAquí solo está el móvil (390 px). Los nombres de página siguen a los de escritorio con MB."
+  }
+ },
+ "designSystems": [],
+ "attachments": {}
+}
