@@ -5,7 +5,7 @@ W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = W + '/project/'
 
 CSS = """
-body{margin:0;font-family:'Poppins',sans-serif;color:#17231D}
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
 a{color:#0E5A3A;text-decoration:none;font-weight:500}
 .card{background:#FFFFFF;border:1px solid #E3E8E4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:10px;min-width:0;box-sizing:border-box;box-shadow:0 1px 3px rgba(16,40,28,.05)}
 .h2{margin:0;font-size:16px;font-weight:600}
@@ -128,24 +128,24 @@ body = """      <section class="card" style="flex-direction: row; align-items: c
       <div style="display: grid; grid-template-columns: 1fr 1fr 300px; gap: 16px; align-items: start;">
         <section class="card">
           <div class="hd"><h2 class="h2">Tus proyectos</h2><a href="#">Ver todos""" + AR + """</a></div>
-          <div class="row"><span class="ico">""" + ic('brief') + """</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Sistema de alimentación · Nave 2</strong><br><span class="k">4 propuestas · cierra en 12 días</span></span><span class="st nw">2 nuevas</span></div>
-          <div class="row"><span class="ico">""" + ic('shield') + """</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Asesoría en bioseguridad</strong><br><span class="k">1 propuesta · cierra en 20 días</span></span><span class="st ok">Activo</span></div>
+          <div class="row"><span class="ico">""" + ic('brief') + """</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Sistema de alimentación · Nave 2</strong><br><span class="k">4 propuestas · cierra en 12 días</span></span><span class="st nw">2 nuevas</span></div>
+          <div class="row"><span class="ico">""" + ic('shield') + """</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Asesoría en bioseguridad</strong><br><span class="k">1 propuesta · adjudicado a Dra. Ana Ruiz</span></span><span class="st gr">Adjudicado</span></div>
           <a href="#" class="btns">""" + ic('plus', 16) + """Nuevo proyecto</a>
         </section>
         <section class="card">
           <div class="hd"><h2 class="h2">Mensajes</h2><a href="#">Ir a Mensajes""" + AR + """</a></div>
-          <div class="row"><span class="av" style="background: #1F3A5F;">AE</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">AgroExport SRL</strong><br><span class="k">«Te enviamos precio y plazo…»</span></span><span class="k">2 h</span></div>
-          <div class="row"><span class="av" style="background: #C8102E;">Z</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Zucami</strong><br><span class="k">Propuesta para tu proyecto</span></span><span class="k">ayer</span></div>
-          <div class="row"><span class="av" style="background: #4B3BA6; border-radius: 50%;">AR</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Dra. Ana Ruiz</strong><br><span class="k">Experta · te ha respondido</span></span><span class="k">3 d</span></div>
+          <div class="row"><span class="av" style="background: #1F3A5F;">AE</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">AgroExport SRL</strong><br><span class="k">«Te enviamos precio y plazo…»</span></span><span class="k">2 h</span></div>
+          <div class="row"><span class="av" style="background: #C8102E;">Z</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Zucami</strong><br><span class="k">Propuesta para tu proyecto</span></span><span class="k">ayer</span></div>
+          <div class="row"><span class="av" style="background: #4B3BA6; border-radius: 50%;">AR</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Dra. Ana Ruiz</strong><br><span class="k">Experta · te ha respondido</span></span><span class="k">3 d</span></div>
         </section>
         <div style="display: flex; flex-direction: column; gap: 16px;">
           <section class="card">
             <div class="hd"><h2 class="h2">Tus intereses</h2><a href="#">Editar</a></div>
-            <span style="font-size: 12.5px; line-height: 1.5;"><strong style="font-weight: 600;">Avicultura · Porcino</strong><br><span class="k">Nutrición y aditivos · Equipamiento avícola · Bienestar animal · Conversión alimenticia · +3</span></span>
+            <span style="font-size: 12.5px; line-height: 1.35;"><strong style="font-weight: 600;">Avicultura · Porcino</strong><br><span class="k">Nutrición y aditivos · Equipamiento avícola · Bienestar animal · Conversión alimenticia · +3</span></span>
           </section>
           <section class="card">
             <div class="hd"><h2 class="h2">Tu plan</h2><span class="st ok">Gratis</span></div>
-            <span class="k" style="display: flex; justify-content: space-between;">Proyectos activos <span>2 de 2</span></span><div class="bar"><span style="width: 100%;"></span></div>
+            <span class="k" style="display: flex; justify-content: space-between;">Proyectos activos <span>1 de 1</span></span><div class="bar"><span style="width: 100%;"></span></div>
             <a href="#" style="font-size: 12.5px;">Ver planes""" + AR + """</a>
           </section>
         </div>
@@ -171,7 +171,7 @@ body = ("""      <div style="display: flex; align-items: center; gap: 12px;"><di
             '<span><strong style="font-weight: 600;">1</strong> propuesta</span><span>4 expertos lo han visto</span><span>Cierra en 20 días</span>', '', '<a href="#" class="btn">Ver propuesta</a>')
      + pcard('🌬', 'Ventilación y cooling · Nave 1', 'Borrador', 'gr', 'Equipamiento › Ventilación', '<span>Falta el paso «Detalles»</span>', '', '<a href="#" class="btn">Continuar</a>') + """
       <section class="card" style="flex-direction: row; align-items: center; gap: 14px; background: #F4F7FB; border-color: #E2E8F0;"><span class="ico">""" + ic('grid') + """</span><span style="flex: 1; font-size: 13px;"><strong style="font-weight: 600;">Cada proyecto tiene su tablero.</strong> Las propuestas que te interesen se guardan allí con su estado.</span><a href="#" style="font-size: 13px;">Abrir tablero""" + AR + """</a></section>
-      <section class="card" style="flex-direction: row; align-items: center; gap: 14px;"><span class="ico">""" + ic('help') + """</span><span style="flex: 1; font-size: 13px; color: #33424C;">Tu nombre no se muestra a las empresas hasta que respondes a una propuesta.</span><span class="k">Plan Gratis · 2 de 2 proyectos activos</span></section>""")
+      <section class="card" style="flex-direction: row; align-items: center; gap: 14px;"><span class="ico">""" + ic('help') + """</span><span style="flex: 1; font-size: 13px; color: #33424C;">Tu nombre no se muestra a las empresas hasta que respondes a una propuesta.</span><span class="k">Plan Gratis · 1 de 1 proyecto activo</span></section>""")
 U.append(page('UsrProyectos.dc.html', 'Intranet usuario · Mis proyectos', 'u', 'Mis proyectos', 'Mi espacio › Mis proyectos', 'Mis proyectos', 'Publica lo que necesitas y recibe propuestas de empresas y expertos.', body, '<a href="#" class="btnp">' + ic('plus', 16) + 'Nuevo proyecto</a>'))
 
 # U3 Mis tableros (reutiliza T1)
@@ -190,12 +190,12 @@ body = ("""      <div style="display: grid; grid-template-columns: 1fr 1fr; gap:
         + ccard('Ventiladores de túnel', 'Sistemas de ventilación', 3, [('#DDE7E0', 'Turbo 50"', 'Fabricante C'), ('#EAF0EB', 'Cone Fan 54"', 'Fabricante D'), ('#F1EEFB', 'EcoFlow', 'Fabricante E')], '12 oct', '<a href="#" class="btn">Ver en tablero</a>')
         + """<a href="#" class="card" style="border: 1.5px dashed #B9CBBF; background: #FBFCFB; align-items: center; justify-content: center; text-align: center; gap: 10px; color: #0E5A3A;"><span style="width: 52px; height: 52px; border-radius: 50%; background: #EEF6EE; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><strong style="font-size: 16px; font-weight: 600;">Añadir nueva comparación</strong></a>
       </div>
-      <p style="margin: 0; font-size: 12px; color: #56615B;">Plan Gratis: hasta 3 productos por comparación. Sin precios: para precio, «Solicitar información».</p>""")
+      <p style="margin: 0; font-size: 12px; color: #56615B;">Plan Gratis: hasta 4 productos por comparación. Sin precios: para precio, «Solicitar información».</p>""")
 U.append(page('UsrComparaciones.dc.html', 'Intranet usuario · Mis comparaciones', 'u', 'Mis comparaciones', 'Mi espacio › Mis comparaciones', 'Mis comparaciones', 'Tus comparativas guardadas, sueltas o dentro de un tablero.', body))
 
 # U5 Historial
 def hrow(icn, tipo, nom, meta, hora, saved=False):
-    return ('<div class="row"><span class="ico" style="width: 36px; height: 36px;">%s</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">%s</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">%s</span><br><span class="k">%s</span></span><span class="k" style="width: 60px;">%s</span>%s</div>') % (
+    return ('<div class="row"><span class="ico" style="width: 36px; height: 36px;">%s</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">%s</strong> <span class="tag" style="height: 20px; font-size: 10.5px; margin-left: 6px;">%s</span><br><span class="k">%s</span></span><span class="k" style="width: 60px;">%s</span>%s</div>') % (
         ic(icn, 17), nom, tipo, meta, hora, '<span class="st ok">En «Nave 2»</span>' if saved else '<a href="#" class="btns" style="height: 32px; font-size: 12px;">' + ic('bookmark', 14) + 'Guardar en tablero</a>')
 body = ("""      <div style="display: flex; align-items: center; gap: 8px;"><span class="chip on">Todo</span><span class="chip">Productos</span><span class="chip">Empresas</span><span class="chip">Expertos</span><span class="chip">Contenidos</span>
         <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #56615B;">Guardar historial <span style="width: 36px; height: 20px; border-radius: 999px; background: #0E5A3A; position: relative; display: inline-block;"><span style="position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; border-radius: 50%; background: #FFF;"></span></span><a href="#" style="color: #A3271B;">Borrar todo</a></div></div>
@@ -216,7 +216,7 @@ def conv(av, col, nom, ctx, last, t, on=False, unread=0, rnd='10px'):
             '<span class="k" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">%s</span><span style="font-size: 12.5px; color: #33424C; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">%s</span></span>%s</div>') % (
         'background: #EEF6EE;' if on else '', col, rnd, av, nom, t, ctx, last, ('<span class="st nw" style="align-self: center;">%d</span>' % unread) if unread else '')
 def bub(txt, me, t):
-    return ('<div style="display: flex; justify-content: %s;"><div style="max-width: 70%%; padding: 10px 14px; border-radius: 14px; %s font-size: 13px; line-height: 1.5;">%s<div class="k" style="margin-top: 4px; %s">%s</div></div></div>') % (
+    return ('<div style="display: flex; justify-content: %s;"><div style="max-width: 70%%; padding: 10px 14px; border-radius: 14px; %s font-size: 13px; line-height: 1.35;">%s<div class="k" style="margin-top: 4px; %s">%s</div></div></div>') % (
         'flex-end' if me else 'flex-start', 'background: #0E5A3A; color: #FFFFFF; border-bottom-right-radius: 4px;' if me else 'background: #FFFFFF; border: 1px solid #E3E8E4; border-bottom-left-radius: 4px;', txt, 'color: #D6E8DC;' if me else '', t)
 body = ("""      <div style="display: grid; grid-template-columns: 320px 1fr; gap: 0; flex: 1; min-height: 0; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; overflow: hidden;">
         <div style="border-right: 1px solid #E3E8E4; padding: 12px; display: flex; flex-direction: column; gap: 4px;">
@@ -225,7 +225,7 @@ body = ("""      <div style="display: grid; grid-template-columns: 320px 1fr; ga
         + conv('AE', '#1F3A5F', 'AgroExport SRL', 'Corrector vitamínico CV-20 · solicitud', 'Te enviamos precio y plazo de entrega…', '2 h', True, 1)
         + conv('Z', '#C8102E', 'Zucami', 'Proyecto · Sistema de alimentación Nave 2', 'Adjuntamos la propuesta en PDF', 'Ayer', False, 1)
         + conv('AR', '#4B3BA6', 'Dra. Ana Ruiz', 'Consulta · bienestar en broilers', 'Podemos hacer una visita la semana…', '3 d', rnd='50%')
-        + conv('NC', '#2E8B57', 'Nutrivet Catalunya', 'Ronozyme® HiPhos · distribuidor de tu zona', 'Gracias, te llamamos mañana.', '12 oct') + """
+        + conv('NC', '#2E8B57', 'Nutrivet Catalunya', 'Ronozyme® HiPhos · distribuidor de tu zona', 'Gracias, te respondemos mañana por aquí.', '12 oct') + """
         </div>
         <div style="display: flex; flex-direction: column; min-width: 0;">
           <div style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E3E8E4;"><span class="av" style="background: #1F3A5F;">AE</span><span style="flex: 1; display: flex; flex-direction: column;"><strong style="font-size: 15px; font-weight: 600;">AgroExport SRL</strong><span class="k">Carla Martín · Directora comercial · responde en 2 h de media</span></span><a href="#" class="btn" style="height: 34px;">Ver empresa</a></div>
@@ -265,7 +265,7 @@ U.append(page('UsrIdioma.dc.html', 'Intranet usuario · Idioma y zona', 'u', 'Id
 
 # U10 Ayuda y contacto
 def topic(icn, t, d):
-    return '<a href="#" class="card" style="flex-direction: row; gap: 12px; color: #17231D; font-weight: 400;"><span class="ico">%s</span><span style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 14px; font-weight: 600;">%s</strong><span class="k" style="line-height: 1.45;">%s</span></span></a>' % (ic(icn), t, d)
+    return '<a href="#" class="card" style="flex-direction: row; gap: 12px; color: #17231D; font-weight: 400;"><span class="ico">%s</span><span style="display: flex; flex-direction: column; gap: 2px;"><strong style="font-size: 14px; font-weight: 600;">%s</strong><span class="k" style="line-height: 1.32;">%s</span></span></a>' % (ic(icn), t, d)
 body = ("""      <div class="inp" style="height: 52px; border-radius: 14px; color: #8A948F; justify-content: flex-start; gap: 10px; font-size: 14px;">""" + ic('search', 19) + """¿En qué podemos ayudarte? Ej.: «cómo comparo productos»</div>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;">"""
         + topic('user', 'Primeros pasos', 'Cuenta, intereses y cómo moverte') + topic('brief', 'Proyectos y propuestas', 'Publicar, recibir y elegir propuestas')
@@ -276,9 +276,9 @@ body = ("""      <div class="inp" style="height: 52px; border-radius: 14px; colo
         <section class="card"><h2 class="h2">Preguntas frecuentes</h2>""" + ''.join('<div class="row" style="justify-content: space-between;"><span>%s</span><span style="color: #56615B;">▾</span></div>' % q for q in [
             '¿Las empresas ven mis datos cuando creo un proyecto?', '¿Por qué no veo precios en las fichas?', '¿Cómo cambio el país o la provincia?', '¿Mi cuenta es la misma que en Agrinews?', '¿Qué pasa si quito un interés?']) + """</section>
         <section class="card"><h2 class="h2">¿Hablamos?</h2>
-          <div class="row">""" + ic('chat', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Chat</strong><br><span class="k">Lunes a viernes, 9:00–18:00</span></span><a href="#" class="btnp" style="height: 32px;">Abrir chat</a></div>
-          <div class="row">""" + ic('mail', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Formulario</strong><br><span class="k">Respondemos en 24 h laborables</span></span><a href="#" class="btn" style="height: 32px;">Escribir</a></div>
-          <div class="row">""" + ic('video', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Demo guiada</strong><br><span class="k">Para empresas: 20 minutos por videollamada</span></span><a href="#" class="btn" style="height: 32px;">Reservar</a></div>
+          <div class="row">""" + ic('chat', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Chat</strong><br><span class="k">Lunes a viernes, 9:00–18:00</span></span><a href="#" class="btnp" style="height: 32px;">Abrir chat</a></div>
+          <div class="row">""" + ic('mail', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Formulario</strong><br><span class="k">Respondemos en 24 h laborables</span></span><a href="#" class="btn" style="height: 32px;">Escribir</a></div>
+          <div class="row">""" + ic('video', 18, '#0E5A3A') + """<span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Demo guiada</strong><br><span class="k">Para empresas: 20 minutos por videollamada</span></span><a href="#" class="btn" style="height: 32px;">Reservar</a></div>
         </section>
       </div>""")
 U.append(page('UsrAyuda.dc.html', 'Intranet usuario · Ayuda y contacto', 'u', 'Ayuda y contacto', 'Mi cuenta › Ayuda y contacto', 'Ayuda y contacto', 'Guías rápidas, preguntas frecuentes y cómo hablar con nosotros.', body))
@@ -292,13 +292,13 @@ body = ("""      <div style="display: grid; grid-template-columns: repeat(4, min
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start;">
         <section class="card">
           <div class="hd"><h2 class="h2">Consultas recibidas</h2><a href="#" style="color: #4B3BA6;">Ver todas""" + AR + """</a></div>
-          <div class="row" style="align-items: flex-start;"><span class="av" style="background: #E3E8E4; color: #4A5650; border-radius: 50%;">GA</span><span style="flex: 1; line-height: 1.4;"><strong style="font-weight: 600;">Ganadero · Huesca</strong> <span class="st nw">Nueva</span><br><span class="k">Sobre «Auditoría nutricional de lotes de broilers»</span><br><span style="font-size: 12.5px;">«Tengo dos naves y el índice de conversión ha empeorado…»</span></span><a href="#" class="btnl" style="height: 32px;">Responder</a></div>
-          <div class="row" style="align-items: flex-start;"><span class="av" style="background: #1F3A5F; border-radius: 50%;">IH</span><span style="flex: 1; line-height: 1.4;"><strong style="font-weight: 600;">Integradora · Huesca</strong><br><span class="k">Formación en bienestar · respondida ayer</span></span><span class="st ok">Respondida</span></div>
+          <div class="row" style="align-items: flex-start;"><span class="av" style="background: #E3E8E4; color: #4A5650; border-radius: 50%;">GA</span><span style="flex: 1; line-height: 1.3;"><strong style="font-weight: 600;">Ganadero · Huesca</strong> <span class="st nw">Nueva</span><br><span class="k">Sobre «Auditoría nutricional de lotes de broilers»</span><br><span style="font-size: 12.5px;">«Tengo dos naves y el índice de conversión ha empeorado…»</span></span><a href="#" class="btnl" style="height: 32px;">Responder</a></div>
+          <div class="row" style="align-items: flex-start;"><span class="av" style="background: #1F3A5F; border-radius: 50%;">IH</span><span style="flex: 1; line-height: 1.3;"><strong style="font-weight: 600;">Integradora · Huesca</strong><br><span class="k">Formación en bienestar · respondida ayer</span></span><span class="st ok">Respondida</span></div>
         </section>
         <section class="card">
           <div class="hd"><h2 class="h2">Oportunidades para ti</h2><a href="#" style="color: #4B3BA6;">Ver todas""" + AR + """</a></div>
-          <div class="row"><span class="st li">94 %</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Plan de bioseguridad para 3 naves</strong><br><span class="k">Broilers · Lleida · cierra en 6 días</span></span><a href="#" class="btnl" style="height: 32px;">Candidatura</a></div>
-          <div class="row"><span class="st li">87 %</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">Revisar 4 propuestas de alimentación</strong><br><span class="k">Broilers · Lleida · 300–500 €</span></span><a href="#" class="btn" style="height: 32px; color: #4B3BA6; border-color: #4B3BA6;">Ver</a></div>
+          <div class="row"><span class="st li">94 %</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Plan de bioseguridad para 3 naves</strong><br><span class="k">Broilers · Lleida · cierra en 6 días</span></span><a href="#" class="btnl" style="height: 32px;">Candidatura</a></div>
+          <div class="row"><span class="st li">87 %</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">Revisar 4 propuestas de alimentación</strong><br><span class="k">Broilers · Lleida · 300–500 €</span></span><a href="#" class="btn" style="height: 32px; color: #4B3BA6; border-color: #4B3BA6;">Ver</a></div>
         </section>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; align-items: start;">
@@ -306,9 +306,9 @@ body = ("""      <div style="display: grid; grid-template-columns: repeat(4, min
           <div class="row"><span style="flex: 1;">Auditoría nutricional de lotes</span><span class="st ok">Publicado</span></div>
           <div class="row"><span style="flex: 1;">Revisión de propuestas</span><span class="st ok">Activo</span></div></section>
         <section class="card"><div class="hd"><h2 class="h2">Completa tu perfil</h2><span class="k">3 de 5</span></div><div class="bar"><span style="width: 60%; background: #4B3BA6;"></span></div>
-          <span style="font-size: 12.5px; line-height: 1.6;">○ Añade una foto<br>○ Añade un caso de éxito</span></section>
+          <span style="font-size: 12.5px; line-height: 1.4;">○ Añade una foto<br>○ Añade un caso de éxito</span></section>
         <section class="card" style="background: #FAF8FE; border-color: #E9E4F8;"><div class="hd"><h2 class="h2">Experta Gratis</h2><span class="st li">Plan</span></div>
-          <span style="font-size: 12.5px; color: #4A5650; line-height: 1.45;">3 consultas y 3 candidaturas al mes. Con Experto Pro (19,90 €/mes), sin límite.</span><a href="#" style="font-size: 12.5px; color: #4B3BA6;">Ver Experto Pro""" + AR + """</a></section>
+          <span style="font-size: 12.5px; color: #4A5650; line-height: 1.32;">3 consultas y 3 candidaturas al mes. Con Experto Pro (19,90 €/mes), sin límite.</span><a href="#" style="font-size: 12.5px; color: #4B3BA6;">Ver Experto Pro""" + AR + """</a></section>
       </div>""")
 E.append(page('ExpPanel.dc.html', 'Intranet experta · Panel', 'e', 'Panel de experta', 'Como experta › Panel', 'Hola, Laura', 'Cómo va tu perfil, qué te han preguntado y qué proyectos encajan contigo.',
               body, '<a href="#" class="btn" style="color: #4B3BA6; border-color: #4B3BA6;">' + ic('eye', 16) + 'Ver mi perfil público</a>'))
@@ -336,7 +336,7 @@ body = ("""      <div style="display: grid; grid-template-columns: 320px 1fr; fl
         + conv('GA', '#9AA39E', 'Ganadero · Huesca', 'Auditoría nutricional de lotes de broilers', 'Tengo dos naves y el índice de conversión…', '5 h', True, 1, '50%').replace('#EEF6EE', '#F4F1FC')
         + conv('IH', '#1F3A5F', 'Integradora · Huesca', 'Formación en bienestar animal', 'Perfecto, ¿nos pasas fechas?', 'Ayer', rnd='50%')
         + conv('GP', '#2E8B57', 'Granja El Pinar', 'Revisión de propuestas', 'Gracias, muy útil la comparativa.', '8 oct', rnd='50%') + """
-          <div style="margin-top: auto; padding: 10px; border-radius: 12px; background: #FAF8FE; font-size: 12px; color: #4A5650; line-height: 1.45;">Plan Gratis: 3 consultas al mes (1 usada). Con Experto Pro, sin límite.</div>
+          <div style="margin-top: auto; padding: 10px; border-radius: 12px; background: #FAF8FE; font-size: 12px; color: #4A5650; line-height: 1.32;">Plan Gratis: 3 consultas al mes (1 usada). Con Experto Pro, sin límite.</div>
         </div>
         <div style="display: flex; flex-direction: column; min-width: 0;">
           <div style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E3E8E4;"><span class="av" style="background: #9AA39E; border-radius: 50%;">GA</span><span style="flex: 1; display: flex; flex-direction: column;"><strong style="font-size: 15px; font-weight: 600;">Ganadero · Huesca</strong><span class="k">Avicultura › Broilers · 2 naves · 40.000 aves</span></span><span class="st li">Nueva</span></div>
@@ -367,7 +367,7 @@ E.append(page('ExpServicios.dc.html', 'Intranet experta · Mis servicios', 'e', 
 
 # E5 Perfil de experta
 def sec(t, v, ok=True):
-    return '<div class="row"><span style="width: 22px; height: 22px; border-radius: 50%%; display: flex; align-items: center; justify-content: center; flex: none; %s">%s</span><span style="flex: 1; line-height: 1.35;"><strong style="font-weight: 600;">%s</strong><br><span class="k">%s</span></span><a href="#" style="font-size: 12.5px; color: #4B3BA6;">%s</a></div>' % (
+    return '<div class="row"><span style="width: 22px; height: 22px; border-radius: 50%%; display: flex; align-items: center; justify-content: center; flex: none; %s">%s</span><span style="flex: 1; line-height: 1.28;"><strong style="font-weight: 600;">%s</strong><br><span class="k">%s</span></span><a href="#" style="font-size: 12.5px; color: #4B3BA6;">%s</a></div>' % (
         'background: #4B3BA6; color: #FFF;' if ok else 'border: 1.5px solid #CFC8EE;', ic('check', 12, '#FFFFFF', 3) if ok else '', t, v, 'Editar' if ok else 'Añadir')
 body = ("""      <div style="display: grid; grid-template-columns: 1fr 360px; gap: 16px; align-items: start;">
         <section class="card">

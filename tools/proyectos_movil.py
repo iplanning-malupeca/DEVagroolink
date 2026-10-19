@@ -62,7 +62,7 @@ def thumb(k, gris=False):
     return '<span style="width:64px;height:56px;border-radius:12px;flex:none;background:#E6EBE7 url(\'%s\') center / cover no-repeat;%s"></span>' % (IMG[k], 'filter:grayscale(1);opacity:.7;' if gris else '')
 # ---------- usuario ----------
 PROY = [('nave2', 'Sistema de alimentación · Nave 2', 'ok', 'Evaluando propuestas', 'Broilers · Lleida', '<strong>4</strong> propuestas · cierra en 12 días', '<span class="st nw">2 nuevas</span>', 'Ver propuestas', True),
-        ('bio', 'Asesoría en bioseguridad', 'wn', 'Contactando proveedores', 'Consultoría veterinaria · Lleida', '<strong>1</strong> propuesta · cierra en 20 días', '', 'Ver propuesta', False),
+        ('bio', 'Asesoría en bioseguridad', 'dr', 'Adjudicado', 'Consultoría veterinaria · Lleida', '<strong>1</strong> propuesta · adjudicado a Dra. Ana Ruiz', '', 'Ver propuesta', False),
         ('vent', 'Ventilación y cooling · Nave 1', 'dr', 'Borrador', 'Ventilación · falta «Detalles»', 'Sin publicar', '', 'Continuar', False)]
 def tarjeta(p, sin_arch=False):
     k, t, cl, est, sub, num, extra, cta, prim = p
@@ -155,9 +155,9 @@ def oportunidades():
             tabbar('Solicitudes', AZ, EMP_TABS, 'AN'))
 def experto():
     return (SB + hdr('Experta', LI) + '<div style="padding:14px 16px 110px;display:flex;flex-direction:column;gap:10px"><span><span class="hint" style="font-weight:600;letter-spacing:.08em">COMO EXPERTA</span><h1 style="margin:2px 0 0;font-size:22px;font-weight:700">Proyectos para ti</h1><span class="hint">Donde piden tu especialidad, tus especies y tu zona.</span></span>'
-            '<div style="display:flex;gap:6px;overflow:hidden"><span class="chip" style="background:' + LI + ';border-color:' + LI + ';color:#FFFFFF">Para ti · 3</span><span class="chip">Mis candidaturas · 1</span><span class="chip">Adjudicados</span></div>' +
-            oportunidad('94%', 'Plan de bioseguridad para 3 naves', 'Granja de broilers en Lleida · Consultoría veterinaria', ['Veterinaria · avicultura', 'Lleida a 40 km de ti', 'Bioseguridad en tu perfil'], 'A consultar', '2 meses', '1 de 5 candidaturas', LI, 'Enviar candidatura') +
-            oportunidad('87%', 'Revisar 4 propuestas de alimentación', 'Granja de broilers en Lleida · Consultoría', ['Avicultura › Broilers', 'Revisión de propuestas activada'], '300 – 500 €', '2 semanas', '0 candidaturas', LI, 'Enviar candidatura') +
+            '<div style="display:flex;gap:6px;overflow:hidden"><span class="chip" style="background:' + LI + ';border-color:' + LI + ';color:#FFFFFF">Para ti · 3</span><span class="chip">Mis candidaturas</span><span class="chip">Adjudicados</span></div>' +
+            oportunidad('94%', 'Plan de bioseguridad para 3 naves', 'Granja de broilers en Lleida · Consultoría veterinaria', ['Veterinaria · avicultura', 'Lleida a 40 km de ti', 'Bioseguridad en tu perfil'], 'A consultar', '2 meses', '1 de 5 candidaturas', LI, 'Candidatura · Pro') +
+            oportunidad('87%', 'Revisar 4 propuestas de alimentación', 'Granja de broilers en Lleida · Consultoría', ['Avicultura › Broilers', 'Revisión de propuestas activada'], '300 – 500 €', '2 semanas', '0 candidaturas', LI, 'Candidatura · Pro') +
             '<div class="card" style="background:#F1EEFB;border-color:#E3DDF6;font-size:12.5px"><span><strong>Ayuda a comparar:</strong> los ganaderos pueden pedirte que revises las propuestas que reciben.</span><span style="color:' + LI + ';font-weight:500">Activar en «Mis servicios» →</span></div></div>' +
             tabbar('Proyectos', LI, avatar='LG'))
 B = {'MB_ProyU1_Mis': ('Móvil · Mis proyectos', 1000, mis()),

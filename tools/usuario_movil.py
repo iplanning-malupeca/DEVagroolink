@@ -269,9 +269,9 @@ TIRAS = [('MB_UsrTiraEspacio', 'Mi espacio y Mensajes', ['MB_UsrEspacio', 'MB_Us
          ('MB_UsrTiraCuenta', 'Mi cuenta: perfil, idioma y ayuda', ['MB_UsrPerfil', 'MB_UsrIdioma', 'MB_UsrAyuda']),
          ('MB_UsrTiraFacturacion', 'Facturación', ['MB_UsrFacturacion', 'MB_UsrFactPlanes', 'MB_UsrFactPedidos', 'MB_UsrFactPedido', 'MB_UsrFactFacturas', 'MB_UsrFactPagos', 'MB_UsrFactDirecciones'])]
 
-def tira(t, keys):
+def tira(t, keys, pant=None):
     """Varias pantallas de 390 px en un solo tablero (el lienzo admite 511 archivos)."""
-    P = {k: (tt, h, f) for k, tt, h, f in PANT}
+    P = {k: (tt, h, f) for k, tt, h, f in (pant or PANT)}
     H = max(P[k][1] for k in keys) + 44; Wt = len(keys) * 390 + (len(keys) - 1) * 40
     body = '<div style="display:flex;gap:40px;align-items:flex-start;background:#FFFFFF">' + ''.join(
         '<div style="width:390px;display:flex;flex-direction:column;gap:14px"><span style="font:600 15px Poppins,sans-serif;color:#17231D;height:30px;display:flex;align-items:center">' + P[k][0].replace('Móvil · ', '') + '</span>'
