@@ -15,7 +15,8 @@ Diseño: canvas, páginas «Planes», «Planes · qué se bloquea» y «MB_08 Pl
 3. Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio,
   proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y
   se avisa al autor. Si se repite, el superadmin revisa la cuenta.
-4. Sin cuenta se puede ver todo; el login gratuito se pide al pulsar una acción, nunca al entrar.
+4. Sin cuenta solo se mira (buscar, ver fichas y cambiar de idioma); todo lo demás pide la cuenta
+  gratis, que se pide al pulsar la acción, nunca al entrar ni al navegar.
 5. Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.
 6. Al bajar de plan nada se borra: lo que sobra pasa a solo lectura o se despublica (el usuario
   elige qué mantiene).

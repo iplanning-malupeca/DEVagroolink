@@ -13,7 +13,7 @@ REGLAS = [
     'Preguntar nunca se bloquea para el comprador. Los expertos reciben y responden sin límite; la empresa Gratis ve las consultas de 3 compradores y las siguientes se guardan hasta que pasa a Pro (nunca se pierden).',
     'Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR; todo se habla en Mensajes y queda registrado.',
     'Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio, proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y se avisa al autor. Si se repite, el superadmin revisa la cuenta.',
-    'Sin cuenta se puede ver todo; el login gratuito se pide al pulsar una acción, nunca al entrar.',
+    'Sin cuenta solo se mira (buscar, ver fichas y cambiar de idioma); todo lo demás pide la cuenta gratis, que se pide al pulsar la acción, nunca al entrar ni al navegar.',
     'Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.',
     'Al bajar de plan nada se borra: lo que sobra pasa a solo lectura o se despublica (el usuario elige qué mantiene).',
     'Traducción automática (ES · EN · PT · FR) en todos los planes.',
