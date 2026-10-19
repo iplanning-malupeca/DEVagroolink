@@ -54,7 +54,7 @@
    "w": 1280,
    "h": 1120,
    "page": "busqueda",
-   "x": 4080,
+   "x": 1360,
    "y": 0,
    "title": "B2 · Al escribir en «Qué buscas»: buscar el texto, o ir directo a una categoría, especie, producto o empresa"
   },
@@ -62,7 +62,7 @@
    "w": 1280,
    "h": 1630,
    "page": "busqueda",
-   "x": 6800,
+   "x": 4080,
    "y": 0,
    "title": "B4 · Barra · Categoría: familia › grupo › tipo con nombres cortos y recuentos; en gris lo que no aplica a la especie"
   },
@@ -70,7 +70,7 @@
    "w": 1280,
    "h": 2060,
    "page": "busqueda",
-   "x": 8160,
+   "x": 5440,
    "y": 0,
    "title": "B5 · Barra · Enfermedad: solo las de las especies elegidas, por tipo clínico; las compartidas salen una vez"
   },
@@ -78,7 +78,7 @@
    "w": 1280,
    "h": 1630,
    "page": "busqueda",
-   "x": 5440,
+   "x": 2720,
    "y": 0,
    "title": "B3 · Barra · Especie: especies con recuento y, si quieres, su producción (sin marcar = todas)"
   },
@@ -86,7 +86,7 @@
    "w": 1280,
    "h": 2200,
    "page": "busqueda",
-   "x": 12240,
+   "x": 9520,
    "y": 0,
    "title": "B8 · «Filtros»: todo en una ventana (especie, categoría, enfermedad, técnicos, país y marca) y «Ver N resultados»"
   },
@@ -94,7 +94,7 @@
    "w": 390,
    "h": 850,
    "page": "busmob",
-   "x": 1410,
+   "x": 940,
    "y": 0,
    "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»"
   },
@@ -102,7 +102,7 @@
    "w": 390,
    "h": 860,
    "page": "busmob",
-   "x": 940,
+   "x": 470,
    "y": 0,
    "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)"
   },
@@ -110,7 +110,7 @@
    "w": 390,
    "h": 2380,
    "page": "busmob",
-   "x": 1880,
+   "x": 1410,
    "y": 0,
    "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»"
   },
@@ -118,7 +118,7 @@
    "w": 390,
    "h": 1370,
    "page": "busmob",
-   "x": 470,
+   "x": 0,
    "y": 0,
    "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan"
   },
@@ -126,7 +126,7 @@
    "w": 1280,
    "h": 1120,
    "page": "busqueda",
-   "x": 2720,
+   "x": 0,
    "y": 0,
    "title": "B1 · Resultados: botón «Filtros» con contador, un botón por filtro (mismo icono siempre), filtros activos y cómo se combinan"
   },
@@ -134,7 +134,7 @@
    "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "x": 13600,
+   "x": 10880,
    "y": 0,
    "title": "B9 · Sin resultados: qué filtro quitar, con cuántos resultados quedarían, y crear un proyecto"
   },
@@ -142,7 +142,7 @@
    "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "x": 10880,
+   "x": 8160,
    "y": 0,
    "title": "B7 · Con un tipo de producto elegido aparece «Filtros técnicos» (los de su plantilla)"
   },
@@ -150,7 +150,7 @@
    "w": 1280,
    "h": 860,
    "page": "busqueda",
-   "x": 9520,
+   "x": 6800,
    "y": 0,
    "title": "B6 · Varios filtros a la vez: «Coincide con» en cada tarjeta"
   },
@@ -3512,26 +3512,26 @@
   "BuscaHome.dc.html": {
    "w": 1280,
    "h": 2010,
-   "page": "busqueda",
+   "page": "home",
    "x": 0,
    "y": 0,
-   "title": "B0 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda"
+   "title": "H1 · Home (agroolink.com) con el buscador nuevo: la barra combinada en la portada es la primera búsqueda"
   },
   "BuscaHomeInicio.dc.html": {
    "w": 1280,
    "h": 2010,
-   "page": "busqueda",
+   "page": "home",
    "x": 1360,
    "y": 0,
-   "title": "B0b · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)"
+   "title": "H2 · Home · al tocar «Qué buscas»: búsquedas recientes y «O empieza por» (Especie, Categoría, Enfermedad)"
   },
   "BuscaMovHome.dc.html": {
    "w": 390,
    "h": 3820,
-   "page": "busmob",
+   "page": "homemob",
    "x": 0,
    "y": 0,
-   "title": "M0 · Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2)"
+   "title": "Móvil · Home: «¿Qué necesita hoy?» con la pastilla; al tocarla se abre la búsqueda por pasos (M2 de MB_005)"
   }
  },
  "createdOnFiles": {
@@ -4296,6 +4296,24 @@
    "y": -300,
    "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   },
+  "homeT": {
+   "kind": "title1",
+   "maxW": 4000,
+   "page": "home",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Home · la barra combinada es la primera búsqueda (prototipo: https://claude.ai/artifact/ByVnvsbhPpUNeW7nazUU21)"
+  },
+  "homemobT": {
+   "kind": "title1",
+   "maxW": 2000,
+   "page": "homemob",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Home móvil · la pastilla abre la búsqueda por pasos"
+  },
   "busT1": {
    "kind": "title1",
    "maxW": 12000,
@@ -4774,6 +4792,10 @@
    "name": "000_LP_Header"
   },
   {
+   "id": "home",
+   "name": "000b_LP_Home"
+  },
+  {
    "id": "proyectos",
    "name": "001_LP_Proyectos"
   },
@@ -4868,6 +4890,10 @@
   {
    "id": "hdrmob",
    "name": "MB_000_Header"
+  },
+  {
+   "id": "homemob",
+   "name": "MB_000b_Home"
   },
   {
    "id": "busmob",
