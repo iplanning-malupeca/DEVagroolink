@@ -148,59 +148,59 @@
   },
   "ComAltaComercial.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K2d · El comercial se da de alta para ver la solicitud",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 5360
   },
   "ComBandeja.dc.html": {
    "h": 900,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K6 · Bandeja de la comercial (Laura García)",
    "w": 1280,
    "x": 8160,
-   "y": 0
+   "y": 5360
   },
   "ComContacto.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K4 · Contacto: «Contactar comercial» en 3 pasos",
    "w": 1280,
    "x": 6800,
-   "y": 0
+   "y": 5360
   },
   "ComEmailSolicitud.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K2c · Email al comercial sin cuenta: hay una solicitud",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 5360
   },
   "ComEquipo.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K2 · Equipo comercial (cuentas en Agroolink)",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 5360
   },
   "ComEquipoCrear.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K2b · Crear perfil de comercial sin cuenta (modal)",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 5360
   },
   "ComZonas.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "K3 · Detalle del comercial: datos y zona que cubre (se abre desde el equipo)",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 5360
   },
   "CompNueva1.dc.html": {
    "h": 900,
@@ -268,43 +268,43 @@
   },
   "DisAutorizacion.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "X5 · Validación de la marca (lo que recibe Zucami)",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 9380
   },
   "DisContacto.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "X6 · Contacto: delegaciones por país",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 9380
   },
   "DisElegir.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "X3 · Añadir productos que ya existen en Agroolink",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 9380
   },
   "DisMarcas.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "X2 · Marcas (se generan desde los productos)",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 9380
   },
   "DisSubir.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "X4 · Subir un producto nuevo (con control de duplicados)",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 9380
   },
   "EmpConsultor.dc.html": {
    "h": 940,
@@ -508,11 +508,11 @@
   },
   "FabContenidos.dc.html": {
    "h": 940,
-   "page": "fabdist",
+   "page": "altacomun",
    "title": "D6 · Contenidos (Agrinews y propuesta editorial)",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 4020
   },
   "FabCrear.dc.html": {
    "h": 940,
@@ -524,19 +524,19 @@
   },
   "FabDistribuidores.dc.html": {
    "h": 940,
-   "page": "fabdist",
+   "page": "altacomun",
    "title": "D4 · Distribuidores y «Quiero ser distribuidor»",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 4020
   },
   "FabExpertos.dc.html": {
    "h": 940,
-   "page": "fabdist",
+   "page": "altacomun",
    "title": "D5 · Expertos recomendados",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 4020
   },
   "FabPublicar.dc.html": {
    "h": 940,
@@ -1308,59 +1308,59 @@
   },
   "MsgComInterno.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "KM2 · Hilo interno Dirección comercial ↔ comercial: reasignaciones, avisos de 48 h y cambios de zona por escrito",
    "w": 1280,
-   "x": 1360,
-   "y": 1340
+   "x": 10880,
+   "y": 5360
   },
   "MsgComSolicitud.dc.html": {
    "h": 940,
-   "page": "comerciales",
+   "page": "altacomun",
    "title": "KM1 · Mensajes: la solicitud de un comprador es un hilo; la atiende el comercial de la zona y la Dirección comercial lo",
    "w": 1280,
-   "x": 0,
-   "y": 1340
+   "x": 9520,
+   "y": 5360
   },
   "MsgDisFabricante.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "XM1 · Hilo distribuidor ↔ fabricante: la validación de la marca y sus motivos quedan por escrito",
    "w": 1280,
-   "x": 0,
-   "y": 1340
+   "x": 6800,
+   "y": 9380
   },
   "MsgDisSolicitud.dc.html": {
    "h": 940,
-   "page": "distmulti",
+   "page": "altacomun",
    "title": "XM2 · Solicitud atendida por una delegación: el comprador escribe a NewFarms y queda todo en el hilo",
    "w": 1280,
-   "x": 1360,
-   "y": 1340
+   "x": 8160,
+   "y": 9380
   },
   "MsgFabDistribuidor.dc.html": {
    "h": 940,
-   "page": "fabdist",
+   "page": "altacomun",
    "title": "DM1 · Mensajes (bandeja común): hilo fabricante ↔ distribuidor ligado al acuerdo, con los avisos de cambios por escrito",
    "w": 1280,
-   "x": 0,
-   "y": 1340
+   "x": 4080,
+   "y": 4020
   },
   "MsgSedeSucursal.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "SM1 · Hilo Sede ↔ sucursal: activaciones, versiones locales y cambios de la ficha base quedan por escrito",
    "w": 1280,
-   "x": 0,
-   "y": 1340
+   "x": 6800,
+   "y": 6700
   },
   "MsgSucursalSede.dc.html": {
    "h": 940,
-   "page": "sucursal",
+   "page": "altacomun",
    "title": "U2 · Mensajes de la sucursal: su hilo con la Sede guarda el alta, los avisos y lo que pide la Sede",
    "w": 1280,
-   "x": 0,
-   "y": 1340
+   "x": 2720,
+   "y": 8040
   },
   "Personal.dc.html": {
    "h": 1060,
@@ -2293,59 +2293,59 @@
   },
   "SucAltaSede.dc.html": {
    "h": 940,
-   "page": "sucursal",
+   "page": "altacomun",
    "title": "U0c · Aviso a la Sede y al superadmin: la sucursal entra directamente",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 8040
   },
   "SucAvisoEmpresa.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "S2b · Aviso a la Sede y a la sucursal (copia al superadmin)",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 6700
   },
   "SucEsSucursal.dc.html": {
    "h": 940,
-   "page": "sucursal",
+   "page": "altacomun",
    "title": "U1 · Tipo de empresa cuando eres sucursal: hereda de la Sede, completa lo de su país",
    "w": 1280,
    "x": 1360,
-   "y": 0
+   "y": 8040
   },
   "SucPagina.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "S5 · Página de la sucursal (lado de Big Dutchman LATAM)",
    "w": 1280,
    "x": 5440,
-   "y": 0
+   "y": 6700
   },
   "SucPaises.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "S3 · Países de cada sucursal",
    "w": 1280,
    "x": 2720,
-   "y": 0
+   "y": 6700
   },
   "SucPermisos.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "S4 · Qué decide la Sede y qué cada sucursal",
    "w": 1280,
    "x": 4080,
-   "y": 0
+   "y": 6700
   },
   "SucRed.dc.html": {
    "h": 940,
-   "page": "sucursales",
+   "page": "altacomun",
    "title": "S2 · Red de sucursales y administradores",
    "w": 1280,
    "x": 0,
-   "y": 0
+   "y": 6700
   },
   "TabCompartir.dc.html": {
    "h": 900,
@@ -2844,51 +2844,6 @@
    "x": 0,
    "y": 2700
   },
-  "msg_comerciales": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "comerciales",
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "msg_distmulti": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "distmulti",
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "msg_fabdist": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "fabdist",
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "msg_sucursal": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursal",
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
-  "msg_sucursales": {
-   "kind": "title1",
-   "maxW": 4000,
-   "page": "sucursales",
-   "text": "Mensajes con constancia · cada solicitud y cada relación de trabajo tiene su hilo; los avisos quedan escritos en él y nada se borra (solo se archiva). Misma bandeja en todas las empresas.",
-   "w": 240,
-   "x": 0,
-   "y": 1040
-  },
   "plTitulo": {
    "kind": "title1",
    "maxW": 4000,
@@ -3134,7 +3089,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Pasos comunes a todas las altas de empresa (ejemplo: DSM-Firmenich) — 1 · Empresa y tipo: nombre y empresa del CRM · crear si no está · verificar el email · avisos a administradores y superadmin · tipo de empresa · especies (Todas, Excluir, Solo algunas) · rama · mercados"
+   "text": "Alta de empresa · pasos comunes (ejemplo: DSM-Firmenich) — 1 · Empresa y tipo: nombre y empresa del CRM · crear si no está · verificar el email · avisos a administradores y superadmin · tipo de empresa · especies (Todas, Excluir, Solo algunas) · rama · mercados"
   },
   "comunT2": {
    "kind": "title1",
@@ -3152,52 +3107,52 @@
    "w": 240,
    "x": 0,
    "y": 2380,
-   "text": "Qué cambia según el tipo · componente constructor de ficha"
+   "text": "Qué cambia según el tipo (debajo, una fila por tipo) · componente constructor de ficha"
   },
   "fabP": {
    "kind": "title1",
-   "maxW": 4080,
-   "page": "fabdist",
+   "maxW": 5360,
+   "page": "altacomun",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Fab-Dist · fabricante con distribuidores (DSM-Firmenich) — solo lo propio: D4 distribuidores y «Quiero ser distribuidor» · D5 expertos recomendados · D6 contenidos. Los pasos comunes están en «005_LP_Alta empresa · Pasos comunes»."
+   "y": 3720,
+   "text": "Fab-Dist · fabricante con distribuidores (DSM-Firmenich) — solo lo propio: D4 distribuidores y «Quiero ser distribuidor» · D5 expertos recomendados · D6 contenidos. · y sus hilos de Mensajes."
   },
   "comT1": {
    "kind": "title1",
-   "maxW": 9520,
-   "page": "comerciales",
+   "maxW": 12160,
+   "page": "altacomun",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Fab-Com · fabricante con equipo comercial (Zucami) — solo lo propio: equipo comercial (K2) · zona de cada comercial (K3) · perfil sin cuenta, email y alta del comercial (K2b–K2d) · contacto en 3 pasos (K4) · bandeja de la comercial (K6). Los pasos comunes están en «005_LP_Alta empresa · Pasos comunes»."
+   "y": 5060,
+   "text": "Fab-Com · fabricante con equipo comercial (Zucami) — solo lo propio: equipo comercial (K2) · zona de cada comercial (K3) · perfil sin cuenta, email y alta del comercial (K2b–K2d) · contacto en 3 pasos (K4) · bandeja de la comercial (K6). · y sus hilos de Mensajes."
   },
   "sucT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "sucursales",
+   "maxW": 8080,
+   "page": "altacomun",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Fab-Sucursales · Sede con sucursales (Big Dutchman) — solo lo propio: red de sucursales (S2) · aviso a la Sede y a la sucursal (S2b) · países (S3) · qué decide la Sede (S4) · página de la sucursal (S5). Los pasos comunes están en «005_LP_Alta empresa · Pasos comunes»."
+   "y": 6400,
+   "text": "Fab-Sucursales · Sede con sucursales (Big Dutchman) — solo lo propio: red de sucursales (S2) · aviso a la Sede y a la sucursal (S2b) · países (S3) · qué decide la Sede (S4) · página de la sucursal (S5). · y sus hilos de Mensajes."
   },
   "sucT3": {
    "kind": "title1",
-   "maxW": 2720,
-   "page": "sucursal",
+   "maxW": 4000,
+   "page": "altacomun",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Sucursal de un grupo (Aviagen Ibérica) — solo lo propio: entra directamente y avisa a la Sede (U0c) · tipo de empresa heredado de la Sede (U1). Los pasos comunes están en «005_LP_Alta empresa · Pasos comunes»."
+   "y": 7740,
+   "text": "Sucursal de un grupo (Aviagen Ibérica) — solo lo propio: entra directamente y avisa a la Sede (U0c) · tipo de empresa heredado de la Sede (U1). · y sus hilos de Mensajes."
   },
   "disT1": {
    "kind": "title1",
-   "maxW": 6800,
-   "page": "distmulti",
+   "maxW": 9440,
+   "page": "altacomun",
    "w": 240,
    "x": 0,
-   "y": -300,
-   "text": "Distribuidor multimarca (NewFarms) — solo lo propio: marcas (X2) · añadir productos que ya existen (X3) · subir uno nuevo (X4) · validación de la marca (X5) · delegaciones (X6). Los pasos comunes están en «005_LP_Alta empresa · Pasos comunes»."
+   "y": 9080,
+   "text": "Distribuidor multimarca (NewFarms) — solo lo propio: marcas (X2) · añadir productos que ya existen (X3) · subir uno nuevo (X4) · validación de la marca (X5) · delegaciones (X6). · y sus hilos de Mensajes."
   }
  },
  "order": [
@@ -3571,27 +3526,7 @@
   },
   {
    "id": "altacomun",
-   "name": "005_LP_Alta empresa · Pasos comunes"
-  },
-  {
-   "id": "fabdist",
-   "name": "005_LP_Alta empresa_Fab-Dist"
-  },
-  {
-   "id": "comerciales",
-   "name": "005a_LP_Alta empresa_Fab-Com"
-  },
-  {
-   "id": "sucursales",
-   "name": "005b_LP_Alta empresa_Fab-Sucursales"
-  },
-  {
-   "id": "sucursal",
-   "name": "005c_LP_Alta empresa_Sucursal"
-  },
-  {
-   "id": "distmulti",
-   "name": "005d_LP_Alta empresa_Distribuidor"
+   "name": "005_LP_Alta empresa"
   },
   {
    "id": "productos",
