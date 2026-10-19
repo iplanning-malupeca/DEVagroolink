@@ -32,8 +32,7 @@ def importa(name, w, h, title):
             '<script type="text/x-dc" data-dc-script data-props=\'{"$preview":{"width":' + str(w) + ',"height":' + str(h) + '}}\'>\nclass Component extends DCLogic {\n  renderVals() { return {}; }\n}\n</script>\n</body>\n</html>\n')
 c = json.load(open(CANVAS)); B = c['boards']
 FILAS = [
- ('MB_01 Navegación', 'Navegación · Home y filtros (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header)', 'imp', [('MobHome', 'Home'), ('BuscaMovFiltros', 'Al tocar el botón de filtros: «Filtros» a pantalla completa', 'MB_Nav_Filtros')]),
- ('MB_02 Búsqueda', 'Búsqueda y filtros (de 005)', 'imp', [('BuscaMovResultados', 'Resultados'), ('BuscaMovEspecie', 'Buscar por pasos'), ('BuscaMovCategoria', 'Categoría'), ('BuscaMovFiltros', 'Filtros')]),
+ ('MB_01 Navegación', 'Navegación · Home (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header; la búsqueda y los filtros, en MB_005_Búsqueda)', 'imp', [('MobHome', 'Home')]),
  ('MB_03 Alta de producto', 'Alta de producto (prototipo crear-producto)', 'cap', [('MP1', 'Especies'), ('MP2', 'Categoría'), ('MP3', 'Mercados'), ('MP4', 'Identidad (idioma detectado)'), ('MP5', 'Datos técnicos'), ('MP6', 'Aplicación por especie'), ('MP7', 'Fotos, vídeos y documentos'), ('MP8', 'Certificaciones'), ('MP9', 'Revisión')]),
  ('MB_04 Mis productos', 'Mis productos, edición y traducciones', 'cap', [('ME1', 'Mis productos'), ('ME2', 'Menú ⋯'), ('ME3', 'Editar por bloques'), ('ME4', 'Guardar y avisar'), ('ME5', 'Traducciones'), ('ME6', 'Ficha en inglés')]),
  ('MB_05 Alta de servicios', 'Alta de servicios del experto (prototipo crear-servicio)', 'cap', [('MS1', 'Tipo de servicio'), ('MS2', 'Especies'), ('MS3', 'Dirigido a'), ('MS4', 'Dónde lo prestas'), ('MS5', 'Detalles'), ('MS6', 'Revisión'), ('MS7', 'Mis servicios')]),

@@ -47,18 +47,21 @@ for cap, key, t in ESC:
     html, w, h = dc(cap, 'Búsqueda · ' + t.split(' · ', 1)[1]); open(PR + key + '.dc.html', 'w').write(html)
     B[key + '.dc.html'] = {'w': w, 'h': h, 'page': 'busqueda', 'x': x, 'y': 0, 'title': t}; x += w + 80; hmax = max(hmax, h)
     if key + '.dc.html' not in c['order']: c['order'].append(key + '.dc.html')
-y2 = hmax + 420; x = 0; h2 = 0
+if not any(p['id'] == 'busmob' for p in c['pages']):
+    c['pages'].insert(next(i for i, p in enumerate(c['pages']) if p['id'] in ('mb1', 'hdrmob')) + (1 if any(p['id'] == 'hdrmob' for p in c['pages']) else 0), {'id': 'busmob', 'name': 'MB_005_Búsqueda'})
+for k in [k for k, n in c['notes'].items() if n.get('page') == 'busmob']: del c['notes'][k]
+y2 = 0; x = 0; h2 = 0
 for cap, key, t in MOV:
     html, w, h = dc(cap, 'Búsqueda · ' + t.split(' · ', 1)[1]); open(PR + key + '.dc.html', 'w').write(html)
-    B[key + '.dc.html'] = {'w': w, 'h': h, 'page': 'busqueda', 'x': x, 'y': y2, 'title': t}; x += w + 80; h2 = max(h2, h)
+    B[key + '.dc.html'] = {'w': w, 'h': h, 'page': 'busmob', 'x': x, 'y': y2, 'title': t}; x += w + 80; h2 = max(h2, h)
     if key + '.dc.html' not in c['order']: c['order'].append(key + '.dc.html')
-y3 = y2 + h2 + 420
+y3 = hmax + 420
 B['BusIntranetBuscar.dc.html'].update(x=0, y=y3)
 c['notes']['busT7'].update(x=0, y=y3 - 300)
 c['notes']['busT1'] = {'kind': 'title1', 'maxW': 12000, 'page': 'busqueda', 'w': 240, 'x': 0, 'y': -640, 'text': 'Búsqueda y filtros · escritorio (1280 px). Barra combinada Qué · Especie · Categoría · Enfermedad y un único botón «Filtros»'}
 c['notes']['busDev'] = {'fill': 'orange', 'maxH': 300, 'page': 'busqueda', 'size': 24, 'w': 1280, 'x': 0, 'y': -340, 'text':
   'PARA DESARROLLO · Búsqueda\n\nSolo están las pantallas que se programan; se quitaron las variantes (ventana o panel izquierdo, Airbnb, Figma) y los duplicados. Para programar, sigue el HTML del prototipo navegable: usa el mismo modelo que el alta de producto (categorías con nombres cortos, especies y producciones, enfermedades por especie, pertinencia y plantillas para los filtros técnicos).\n\n'
   'Prototipo: design/prototipos/buscar.html (repo DEVagroolink)' + ('\nVersión publicada: ' + URL if URL else '') + '\nModelo: docs/modelo-producto/producto.json\n\nReglas: entre filtros, Y; dentro de un filtro, O. Lo que no depende de especie sale con cualquier especie. Mismo icono por filtro en botón y chip.'}
-c['notes']['busT2'] = {'kind': 'title1', 'maxW': 4000, 'page': 'busqueda', 'w': 240, 'x': 0, 'y': y2 - 300, 'text': 'Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla'}
+c['notes']['busT2'] = {'kind': 'title1', 'maxW': 4000, 'page': 'busmob', 'w': 240, 'x': 0, 'y': -300, 'text': 'Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla'}
 json.dump(c, open(PR + 'canvas.json', 'w'), ensure_ascii=False, indent=1)
 print(len(viejos), 'quitados:', ' '.join(sorted(viejos)))

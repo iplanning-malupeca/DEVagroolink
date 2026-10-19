@@ -48,7 +48,7 @@
    "title": "I1 · Mi cuenta: al pulsar «Buscar» se abre la búsqueda combinada vacía",
    "w": 1280,
    "x": 0,
-   "y": 5420
+   "y": 2620
   },
   "BuscaAutocompletar.dc.html": {
    "h": 1120,
@@ -92,35 +92,35 @@
   },
   "BuscaMovCategoria.dc.html": {
    "h": 850,
-   "page": "busqueda",
+   "page": "busmob",
    "title": "M3 · Móvil · Categoría: un nivel cada vez, con «‹ atrás»",
    "w": 390,
    "x": 940,
-   "y": 2620
+   "y": 0
   },
   "BuscaMovEspecie.dc.html": {
    "h": 860,
-   "page": "busqueda",
+   "page": "busmob",
    "title": "M2 · Móvil · Al tocar la pastilla: pasos apilados (Qué · Especie · Categoría · Enfermedad)",
    "w": 390,
    "x": 470,
-   "y": 2620
+   "y": 0
   },
   "BuscaMovFiltros.dc.html": {
    "h": 2380,
-   "page": "busqueda",
+   "page": "busmob",
    "title": "M4 · Móvil · «Filtros» a pantalla completa, con técnicos y «Ver N resultados»",
    "w": 390,
    "x": 1410,
-   "y": 2620
+   "y": 0
   },
   "BuscaMovResultados.dc.html": {
    "h": 1370,
-   "page": "busqueda",
+   "page": "busmob",
    "title": "M1 · Móvil · Resultados: pastilla de búsqueda arriba; «Filtros» y los botones de filtro se deslizan",
    "w": 390,
    "x": 0,
-   "y": 2620
+   "y": 0
   },
   "BuscaResultados.dc.html": {
    "h": 1120,
@@ -1464,7 +1464,7 @@
    "title": "S4 · Exploración · ficha de producto SIN barra lateral",
    "w": 1280,
    "x": 0,
-   "y": 6740
+   "y": 3940
   },
   "IntSidebar.dc.html": {
    "h": 832,
@@ -3045,50 +3045,10 @@
    "y": 0,
    "title": "Home"
   },
-  "MB_Nav_Filtros.dc.html": {
-   "w": 390,
-   "h": 2380,
-   "page": "mb1",
-   "x": 470,
-   "y": 0,
-   "title": "Al tocar el botón de filtros: «Filtros» a pantalla completa"
-  },
-  "MB_BuscaMovResultados.dc.html": {
-   "w": 390,
-   "h": 1370,
-   "page": "mb2",
-   "x": 0,
-   "y": 0,
-   "title": "Resultados"
-  },
-  "MB_BuscaMovEspecie.dc.html": {
-   "w": 390,
-   "h": 860,
-   "page": "mb2",
-   "x": 470,
-   "y": 0,
-   "title": "Buscar por pasos"
-  },
-  "MB_BuscaMovCategoria.dc.html": {
-   "w": 390,
-   "h": 850,
-   "page": "mb2",
-   "x": 940,
-   "y": 0,
-   "title": "Categoría"
-  },
-  "MB_BuscaMovFiltros.dc.html": {
-   "w": 390,
-   "h": 2380,
-   "page": "mb2",
-   "x": 1410,
-   "y": 0,
-   "title": "Filtros"
-  },
   "MB_MP1.dc.html": {
    "w": 390,
    "h": 1510,
-   "page": "mb3",
+   "page": "mb2",
    "x": 0,
    "y": 0,
    "title": "Especies"
@@ -3096,7 +3056,7 @@
   "MB_MP2.dc.html": {
    "w": 390,
    "h": 2810,
-   "page": "mb3",
+   "page": "mb2",
    "x": 470,
    "y": 0,
    "title": "Categoría"
@@ -3104,7 +3064,7 @@
   "MB_MP3.dc.html": {
    "w": 390,
    "h": 1890,
-   "page": "mb3",
+   "page": "mb2",
    "x": 940,
    "y": 0,
    "title": "Mercados"
@@ -3112,7 +3072,7 @@
   "MB_MP4.dc.html": {
    "w": 390,
    "h": 1730,
-   "page": "mb3",
+   "page": "mb2",
    "x": 1410,
    "y": 0,
    "title": "Identidad (idioma detectado)"
@@ -3120,7 +3080,7 @@
   "MB_MP5.dc.html": {
    "w": 390,
    "h": 2090,
-   "page": "mb3",
+   "page": "mb2",
    "x": 1880,
    "y": 0,
    "title": "Datos técnicos"
@@ -3128,7 +3088,7 @@
   "MB_MP6.dc.html": {
    "w": 390,
    "h": 1200,
-   "page": "mb3",
+   "page": "mb2",
    "x": 2350,
    "y": 0,
    "title": "Aplicación por especie"
@@ -3136,7 +3096,7 @@
   "MB_MP7.dc.html": {
    "w": 390,
    "h": 1400,
-   "page": "mb3",
+   "page": "mb2",
    "x": 2820,
    "y": 0,
    "title": "Fotos, vídeos y documentos"
@@ -3144,7 +3104,7 @@
   "MB_MP8.dc.html": {
    "w": 390,
    "h": 2180,
-   "page": "mb3",
+   "page": "mb2",
    "x": 3290,
    "y": 0,
    "title": "Certificaciones"
@@ -3152,7 +3112,7 @@
   "MB_MP9.dc.html": {
    "w": 390,
    "h": 1750,
-   "page": "mb3",
+   "page": "mb2",
    "x": 3760,
    "y": 0,
    "title": "Revisión"
@@ -3160,7 +3120,7 @@
   "MB_ME1.dc.html": {
    "w": 390,
    "h": 1180,
-   "page": "mb4",
+   "page": "mb3",
    "x": 0,
    "y": 0,
    "title": "Mis productos"
@@ -3168,7 +3128,7 @@
   "MB_ME2.dc.html": {
    "w": 390,
    "h": 1180,
-   "page": "mb4",
+   "page": "mb3",
    "x": 470,
    "y": 0,
    "title": "Menú ⋯"
@@ -3176,7 +3136,7 @@
   "MB_ME3.dc.html": {
    "w": 390,
    "h": 3750,
-   "page": "mb4",
+   "page": "mb3",
    "x": 940,
    "y": 0,
    "title": "Editar por bloques"
@@ -3184,7 +3144,7 @@
   "MB_ME4.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "mb4",
+   "page": "mb3",
    "x": 1410,
    "y": 0,
    "title": "Guardar y avisar"
@@ -3192,7 +3152,7 @@
   "MB_ME5.dc.html": {
    "w": 390,
    "h": 3320,
-   "page": "mb4",
+   "page": "mb3",
    "x": 1880,
    "y": 0,
    "title": "Traducciones"
@@ -3200,7 +3160,7 @@
   "MB_ME6.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "mb4",
+   "page": "mb3",
    "x": 2350,
    "y": 0,
    "title": "Ficha en inglés"
@@ -3208,7 +3168,7 @@
   "MB_MS1.dc.html": {
    "w": 390,
    "h": 2620,
-   "page": "mb5",
+   "page": "mb4",
    "x": 0,
    "y": 0,
    "title": "Tipo de servicio"
@@ -3216,7 +3176,7 @@
   "MB_MS2.dc.html": {
    "w": 390,
    "h": 1230,
-   "page": "mb5",
+   "page": "mb4",
    "x": 470,
    "y": 0,
    "title": "Especies"
@@ -3224,7 +3184,7 @@
   "MB_MS3.dc.html": {
    "w": 390,
    "h": 1650,
-   "page": "mb5",
+   "page": "mb4",
    "x": 940,
    "y": 0,
    "title": "Dirigido a"
@@ -3232,7 +3192,7 @@
   "MB_MS4.dc.html": {
    "w": 390,
    "h": 1390,
-   "page": "mb5",
+   "page": "mb4",
    "x": 1410,
    "y": 0,
    "title": "Dónde lo prestas"
@@ -3240,7 +3200,7 @@
   "MB_MS5.dc.html": {
    "w": 390,
    "h": 2050,
-   "page": "mb5",
+   "page": "mb4",
    "x": 1880,
    "y": 0,
    "title": "Detalles"
@@ -3248,7 +3208,7 @@
   "MB_MS6.dc.html": {
    "w": 390,
    "h": 1710,
-   "page": "mb5",
+   "page": "mb4",
    "x": 2350,
    "y": 0,
    "title": "Revisión"
@@ -3256,7 +3216,7 @@
   "MB_MS7.dc.html": {
    "w": 390,
    "h": 850,
-   "page": "mb5",
+   "page": "mb4",
    "x": 2820,
    "y": 0,
    "title": "Mis servicios"
@@ -3264,7 +3224,7 @@
   "MB_MA1.dc.html": {
    "w": 390,
    "h": 1170,
-   "page": "mb6",
+   "page": "mb5",
    "x": 0,
    "y": 0,
    "title": "Tu organización (CRM)"
@@ -3272,7 +3232,7 @@
   "MB_MA2.dc.html": {
    "w": 390,
    "h": 990,
-   "page": "mb6",
+   "page": "mb5",
    "x": 470,
    "y": 0,
    "title": "Confirmar email"
@@ -3280,7 +3240,7 @@
   "MB_MA3.dc.html": {
    "w": 390,
    "h": 1300,
-   "page": "mb6",
+   "page": "mb5",
    "x": 940,
    "y": 0,
    "title": "Tipo de empresa"
@@ -3288,7 +3248,7 @@
   "MB_MA4.dc.html": {
    "w": 390,
    "h": 1070,
-   "page": "mb6",
+   "page": "mb5",
    "x": 1410,
    "y": 0,
    "title": "Especies"
@@ -3296,7 +3256,7 @@
   "MB_MA5.dc.html": {
    "w": 390,
    "h": 1060,
-   "page": "mb6",
+   "page": "mb5",
    "x": 1880,
    "y": 0,
    "title": "Rama de negocio"
@@ -3304,7 +3264,7 @@
   "MB_MA6.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "mb6",
+   "page": "mb5",
    "x": 2350,
    "y": 0,
    "title": "Mercados"
@@ -3312,7 +3272,7 @@
   "MB_MA7.dc.html": {
    "w": 390,
    "h": 1190,
-   "page": "mb6",
+   "page": "mb5",
    "x": 2820,
    "y": 0,
    "title": "Cabecera"
@@ -3320,7 +3280,7 @@
   "MB_MA8.dc.html": {
    "w": 390,
    "h": 1090,
-   "page": "mb6",
+   "page": "mb5",
    "x": 3290,
    "y": 0,
    "title": "Sobre la empresa"
@@ -3328,7 +3288,7 @@
   "MB_MA9.dc.html": {
    "w": 390,
    "h": 1070,
-   "page": "mb6",
+   "page": "mb5",
    "x": 3760,
    "y": 0,
    "title": "Equipo comercial"
@@ -3336,7 +3296,7 @@
   "MB_MA10.dc.html": {
    "w": 390,
    "h": 1100,
-   "page": "mb6",
+   "page": "mb5",
    "x": 4230,
    "y": 0,
    "title": "Contacto"
@@ -3344,7 +3304,7 @@
   "MB_MA11.dc.html": {
    "w": 390,
    "h": 1590,
-   "page": "mb6",
+   "page": "mb5",
    "x": 4700,
    "y": 0,
    "title": "Revisar y publicar"
@@ -3352,7 +3312,7 @@
   "MB_MA12.dc.html": {
    "w": 390,
    "h": 1010,
-   "page": "mb6",
+   "page": "mb5",
    "x": 5170,
    "y": 0,
    "title": "Publicada"
@@ -3360,7 +3320,7 @@
   "MB_MA13.dc.html": {
    "w": 390,
    "h": 1250,
-   "page": "mb6",
+   "page": "mb5",
    "x": 5640,
    "y": 0,
    "title": "Crear organización nueva"
@@ -3368,7 +3328,7 @@
   "MB_MA14.dc.html": {
    "w": 390,
    "h": 970,
-   "page": "mb6",
+   "page": "mb5",
    "x": 6110,
    "y": 0,
    "title": "Sucursal: entra directa"
@@ -3376,7 +3336,7 @@
   "MB_MA15.dc.html": {
    "w": 390,
    "h": 850,
-   "page": "mb6",
+   "page": "mb5",
    "x": 6580,
    "y": 0,
    "title": "Sucursal: tu Sede"
@@ -3384,7 +3344,7 @@
   "MB_MJ1.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "mb7",
+   "page": "mb6",
    "x": 0,
    "y": 0,
    "title": "Bienvenida"
@@ -3392,7 +3352,7 @@
   "MB_MJ2.dc.html": {
    "w": 390,
    "h": 1470,
-   "page": "mb7",
+   "page": "mb6",
    "x": 470,
    "y": 0,
    "title": "Una pregunta por pantalla"
@@ -3400,7 +3360,7 @@
   "MB_MJ3.dc.html": {
    "w": 390,
    "h": 1860,
-   "page": "mb7",
+   "page": "mb6",
    "x": 940,
    "y": 0,
    "title": "Resumen"
@@ -3408,7 +3368,7 @@
   "MB_MJ4.dc.html": {
    "w": 390,
    "h": 860,
-   "page": "mb7",
+   "page": "mb6",
    "x": 1410,
    "y": 0,
    "title": "Editar desde el resumen"
@@ -3416,7 +3376,7 @@
   "MB_ProyU1_Mis.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb7",
+   "page": "mb6",
    "x": 1880,
    "y": 0,
    "title": "Mis proyectos"
@@ -3424,7 +3384,7 @@
   "MB_ProyU2_Acciones.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb7",
+   "page": "mb6",
    "x": 2350,
    "y": 0,
    "title": "Menú ⋯: editar, duplicar, pausar, archivar"
@@ -3432,7 +3392,7 @@
   "MB_ProyU3_Detalle.dc.html": {
    "w": 390,
    "h": 1010,
-   "page": "mb7",
+   "page": "mb6",
    "x": 2820,
    "y": 0,
    "title": "Proyecto y propuestas recibidas"
@@ -3440,7 +3400,7 @@
   "MB_ProyU4_Propuesta.dc.html": {
    "w": 390,
    "h": 960,
-   "page": "mb7",
+   "page": "mb6",
    "x": 3290,
    "y": 0,
    "title": "Propuesta y conversación · adjudicar"
@@ -3448,7 +3408,7 @@
   "MB_ProyU5_Editar.dc.html": {
    "w": 390,
    "h": 920,
-   "page": "mb7",
+   "page": "mb6",
    "x": 3760,
    "y": 0,
    "title": "Editar proyecto por bloques"
@@ -3456,7 +3416,7 @@
   "MB_ProyU6_Avisar.dc.html": {
    "w": 390,
    "h": 920,
-   "page": "mb7",
+   "page": "mb6",
    "x": 4230,
    "y": 0,
    "title": "¿Avisar a las empresas del cambio?"
@@ -3464,7 +3424,7 @@
   "MB_ProyU7_Archivar.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb7",
+   "page": "mb6",
    "x": 4700,
    "y": 0,
    "title": "Archivado con «Deshacer»"
@@ -3472,7 +3432,7 @@
   "MB_ProyU8_Archivados.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb7",
+   "page": "mb6",
    "x": 5170,
    "y": 0,
    "title": "Proyectos archivados"
@@ -3480,7 +3440,7 @@
   "MB_ProyE1_Oportunidades.dc.html": {
    "w": 390,
    "h": 890,
-   "page": "mb8",
+   "page": "mb7",
    "x": 0,
    "y": 0,
    "title": "Empresa · Oportunidades"
@@ -3488,7 +3448,7 @@
   "MB_ProyE2_Experto.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb7",
    "x": 470,
    "y": 0,
    "title": "Experta · Proyectos para ti"
@@ -3496,7 +3456,7 @@
   "MB_PropuestaMovil.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb8",
+   "page": "mb7",
    "x": 940,
    "y": 0,
    "title": "Empresa · enviar una propuesta (J6)"
@@ -3504,7 +3464,7 @@
   "MB_PropuestaMensajes.dc.html": {
    "w": 390,
    "h": 920,
-   "page": "mb8",
+   "page": "mb7",
    "x": 1410,
    "y": 0,
    "title": "La propuesta en Mensajes: dudas y nueva versión (J6b)"
@@ -3512,7 +3472,7 @@
   "MB_PropuestaBloqueada.dc.html": {
    "w": 390,
    "h": 1040,
-   "page": "mb8",
+   "page": "mb7",
    "x": 1880,
    "y": 0,
    "title": "Si intentan poner contactos: no se envía (J6c)"
@@ -3520,7 +3480,7 @@
   "MB_PlanLogin.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb9",
+   "page": "mb8",
    "x": 0,
    "y": 0,
    "title": "Login al pulsar Guardar"
@@ -3528,7 +3488,7 @@
   "MB_PlanLimite.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb9",
+   "page": "mb8",
    "x": 470,
    "y": 0,
    "title": "Límite: 2.º proyecto del comprador"
@@ -3536,7 +3496,7 @@
   "MB_PlanPago.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb9",
+   "page": "mb8",
    "x": 940,
    "y": 0,
    "title": "Plan de pago: exportar informes"
@@ -3544,7 +3504,7 @@
   "MB_PlanFiltro.dc.html": {
    "w": 390,
    "h": 844,
-   "page": "mb9",
+   "page": "mb8",
    "x": 1410,
    "y": 0,
    "title": "Mensaje bloqueado por datos de contacto"
@@ -3677,7 +3637,7 @@
    "text": "Ficha de producto en exploración: sin barra lateral",
    "w": 240,
    "x": 0,
-   "y": 6440
+   "y": 3640
   },
   "busT1": {
    "kind": "title1",
@@ -3691,11 +3651,11 @@
   "busT2": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "busqueda",
+   "page": "busmob",
    "text": "Búsqueda y filtros · móvil (390 px). Mismos componentes; la barra se resume en una pastilla",
    "w": 240,
    "x": 0,
-   "y": 2320
+   "y": -300
   },
   "busT7": {
    "kind": "title1",
@@ -3704,7 +3664,7 @@
    "text": "Buscar desde Mi cuenta (perfil, facturación…): botón «Buscar» → búsqueda nueva. En el resto de páginas, barra completa",
    "w": 240,
    "x": 0,
-   "y": 5120
+   "y": 2320
   },
   "comT1": {
    "kind": "title1",
@@ -4274,7 +4234,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Navegación · Home y filtros (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header)"
+   "text": "Navegación · Home (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header; la búsqueda y los filtros, en MB_005_Búsqueda)"
   },
   "mbt1": {
    "kind": "title1",
@@ -4283,7 +4243,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Búsqueda y filtros (de 005)"
+   "text": "Alta de producto (prototipo crear-producto)"
   },
   "mbt2": {
    "kind": "title1",
@@ -4292,7 +4252,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Alta de producto (prototipo crear-producto)"
+   "text": "Mis productos, edición y traducciones"
   },
   "mbt3": {
    "kind": "title1",
@@ -4301,7 +4261,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Mis productos, edición y traducciones"
+   "text": "Alta de servicios del experto (prototipo crear-servicio)"
   },
   "mbt4": {
    "kind": "title1",
@@ -4310,7 +4270,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Alta de servicios del experto (prototipo crear-servicio)"
+   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
   },
   "mbt5": {
    "kind": "title1",
@@ -4319,7 +4279,7 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
+   "text": "Proyectos del usuario: asistente (prototipo crear-proyecto) y gestión (mis proyectos, propuestas, editar, archivar) · tools/proyectos_movil.py"
   },
   "mbt6": {
    "kind": "title1",
@@ -4328,21 +4288,12 @@
    "w": 240,
    "x": 0,
    "y": -300,
-   "text": "Proyectos del usuario: asistente (prototipo crear-proyecto) y gestión (mis proyectos, propuestas, editar, archivar) · tools/proyectos_movil.py"
+   "text": "Proyectos para empresas y expertos: oportunidades, propuesta, Mensajes y bloqueo de contactos · tools/proyectos_movil.py y propuesta_movil.py"
   },
   "mbt7": {
    "kind": "title1",
    "maxW": 8000,
    "page": "mb8",
-   "w": 240,
-   "x": 0,
-   "y": -300,
-   "text": "Proyectos para empresas y expertos: oportunidades, propuesta, Mensajes y bloqueo de contactos · tools/proyectos_movil.py y propuesta_movil.py"
-  },
-  "mbt8": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb9",
    "w": 240,
    "x": 0,
    "y": -300,
@@ -4740,11 +4691,6 @@
   "BuscaMovCategoria.dc.html",
   "BuscaMovFiltros.dc.html",
   "MB_MobHome.dc.html",
-  "MB_Nav_Filtros.dc.html",
-  "MB_BuscaMovResultados.dc.html",
-  "MB_BuscaMovEspecie.dc.html",
-  "MB_BuscaMovCategoria.dc.html",
-  "MB_BuscaMovFiltros.dc.html",
   "MB_MP1.dc.html",
   "MB_MP2.dc.html",
   "MB_MP3.dc.html",
@@ -4906,39 +4852,39 @@
    "name": "MB_000_Header"
   },
   {
+   "id": "busmob",
+   "name": "MB_005_Búsqueda"
+  },
+  {
    "id": "mb1",
    "name": "MB_01 Navegación"
   },
   {
    "id": "mb2",
-   "name": "MB_02 Búsqueda"
-  },
-  {
-   "id": "mb3",
    "name": "MB_03 Alta de producto"
   },
   {
-   "id": "mb4",
+   "id": "mb3",
    "name": "MB_04 Mis productos"
   },
   {
-   "id": "mb5",
+   "id": "mb4",
    "name": "MB_05 Alta de servicios"
   },
   {
-   "id": "mb6",
+   "id": "mb5",
    "name": "MB_06 Alta de empresa"
   },
   {
-   "id": "mb7",
+   "id": "mb6",
    "name": "MB_07 Proyectos · Usuario"
   },
   {
-   "id": "mb8",
+   "id": "mb7",
    "name": "MB_07b Proyectos · Empresas y expertos"
   },
   {
-   "id": "mb9",
+   "id": "mb8",
    "name": "MB_08 Planes"
   },
   {
