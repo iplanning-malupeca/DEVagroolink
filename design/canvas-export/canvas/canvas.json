@@ -1546,414 +1546,6 @@
    "x": 2080,
    "y": 0
   },
-  "MB_BuscaMovCategoria.dc.html": {
-   "h": 850,
-   "page": "mb2",
-   "title": "Categoría",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_BuscaMovEspecie.dc.html": {
-   "h": 860,
-   "page": "mb2",
-   "title": "Buscar por pasos",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_BuscaMovFiltros.dc.html": {
-   "h": 2380,
-   "page": "mb2",
-   "title": "Filtros",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_BuscaMovResultados.dc.html": {
-   "h": 1370,
-   "page": "mb2",
-   "title": "Resultados",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_MA1.dc.html": {
-   "h": 1170,
-   "page": "mb6",
-   "title": "Tu organización (CRM)",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_MA10.dc.html": {
-   "h": 1100,
-   "page": "mb6",
-   "title": "Contacto",
-   "w": 390,
-   "x": 4230,
-   "y": 0
-  },
-  "MB_MA11.dc.html": {
-   "h": 1590,
-   "page": "mb6",
-   "title": "Revisar y publicar",
-   "w": 390,
-   "x": 4700,
-   "y": 0
-  },
-  "MB_MA12.dc.html": {
-   "h": 1010,
-   "page": "mb6",
-   "title": "Publicada",
-   "w": 390,
-   "x": 5170,
-   "y": 0
-  },
-  "MB_MA13.dc.html": {
-   "h": 1250,
-   "page": "mb6",
-   "title": "Crear organización nueva",
-   "w": 390,
-   "x": 5640,
-   "y": 0
-  },
-  "MB_MA14.dc.html": {
-   "h": 970,
-   "page": "mb6",
-   "title": "Sucursal: entra directa",
-   "w": 390,
-   "x": 6110,
-   "y": 0
-  },
-  "MB_MA15.dc.html": {
-   "h": 850,
-   "page": "mb6",
-   "title": "Sucursal: tu Sede",
-   "w": 390,
-   "x": 6580,
-   "y": 0
-  },
-  "MB_MA2.dc.html": {
-   "h": 990,
-   "page": "mb6",
-   "title": "Confirmar email",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_MA3.dc.html": {
-   "h": 1300,
-   "page": "mb6",
-   "title": "Tipo de empresa",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_MA4.dc.html": {
-   "h": 1070,
-   "page": "mb6",
-   "title": "Especies",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_MA5.dc.html": {
-   "h": 1060,
-   "page": "mb6",
-   "title": "Rama de negocio",
-   "w": 390,
-   "x": 1880,
-   "y": 0
-  },
-  "MB_MA6.dc.html": {
-   "h": 860,
-   "page": "mb6",
-   "title": "Mercados",
-   "w": 390,
-   "x": 2350,
-   "y": 0
-  },
-  "MB_MA7.dc.html": {
-   "h": 1190,
-   "page": "mb6",
-   "title": "Cabecera",
-   "w": 390,
-   "x": 2820,
-   "y": 0
-  },
-  "MB_MA8.dc.html": {
-   "h": 1090,
-   "page": "mb6",
-   "title": "Sobre la empresa",
-   "w": 390,
-   "x": 3290,
-   "y": 0
-  },
-  "MB_MA9.dc.html": {
-   "h": 1070,
-   "page": "mb6",
-   "title": "Equipo comercial",
-   "w": 390,
-   "x": 3760,
-   "y": 0
-  },
-  "MB_ME1.dc.html": {
-   "h": 1180,
-   "page": "mb4",
-   "title": "Mis productos",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_ME2.dc.html": {
-   "h": 1180,
-   "page": "mb4",
-   "title": "Menú ⋯",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_ME3.dc.html": {
-   "h": 3750,
-   "page": "mb4",
-   "title": "Editar por bloques",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_ME4.dc.html": {
-   "h": 1650,
-   "page": "mb4",
-   "title": "Guardar y avisar",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_ME5.dc.html": {
-   "h": 3320,
-   "page": "mb4",
-   "title": "Traducciones",
-   "w": 390,
-   "x": 1880,
-   "y": 0
-  },
-  "MB_ME6.dc.html": {
-   "h": 1650,
-   "page": "mb4",
-   "title": "Ficha en inglés",
-   "w": 390,
-   "x": 2350,
-   "y": 0
-  },
-  "MB_MJ1.dc.html": {
-   "h": 860,
-   "page": "mb7",
-   "title": "Bienvenida",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_MJ2.dc.html": {
-   "h": 1470,
-   "page": "mb7",
-   "title": "Una pregunta por pantalla",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_MJ3.dc.html": {
-   "h": 1860,
-   "page": "mb7",
-   "title": "Resumen",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_MJ4.dc.html": {
-   "h": 860,
-   "page": "mb7",
-   "title": "Editar desde el resumen",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_MP1.dc.html": {
-   "h": 1510,
-   "page": "mb3",
-   "title": "Especies",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_MP2.dc.html": {
-   "h": 2810,
-   "page": "mb3",
-   "title": "Categoría",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_MP3.dc.html": {
-   "h": 1890,
-   "page": "mb3",
-   "title": "Mercados",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_MP4.dc.html": {
-   "h": 1730,
-   "page": "mb3",
-   "title": "Identidad (idioma detectado)",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_MP5.dc.html": {
-   "h": 2090,
-   "page": "mb3",
-   "title": "Datos técnicos",
-   "w": 390,
-   "x": 1880,
-   "y": 0
-  },
-  "MB_MP6.dc.html": {
-   "h": 1200,
-   "page": "mb3",
-   "title": "Aplicación por especie",
-   "w": 390,
-   "x": 2350,
-   "y": 0
-  },
-  "MB_MP7.dc.html": {
-   "h": 1400,
-   "page": "mb3",
-   "title": "Fotos, vídeos y documentos",
-   "w": 390,
-   "x": 2820,
-   "y": 0
-  },
-  "MB_MP8.dc.html": {
-   "h": 2180,
-   "page": "mb3",
-   "title": "Certificaciones",
-   "w": 390,
-   "x": 3290,
-   "y": 0
-  },
-  "MB_MP9.dc.html": {
-   "h": 1750,
-   "page": "mb3",
-   "title": "Revisión",
-   "w": 390,
-   "x": 3760,
-   "y": 0
-  },
-  "MB_MS1.dc.html": {
-   "h": 2620,
-   "page": "mb5",
-   "title": "Tipo de servicio",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_MS2.dc.html": {
-   "h": 1230,
-   "page": "mb5",
-   "title": "Especies",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_MS3.dc.html": {
-   "h": 1650,
-   "page": "mb5",
-   "title": "Dirigido a",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
-  "MB_MS4.dc.html": {
-   "h": 1390,
-   "page": "mb5",
-   "title": "Dónde lo prestas",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_MS5.dc.html": {
-   "h": 2050,
-   "page": "mb5",
-   "title": "Detalles",
-   "w": 390,
-   "x": 1880,
-   "y": 0
-  },
-  "MB_MS6.dc.html": {
-   "h": 1710,
-   "page": "mb5",
-   "title": "Revisión",
-   "w": 390,
-   "x": 2350,
-   "y": 0
-  },
-  "MB_MS7.dc.html": {
-   "h": 850,
-   "page": "mb5",
-   "title": "Mis servicios",
-   "w": 390,
-   "x": 2820,
-   "y": 0
-  },
-  "MB_MobHome.dc.html": {
-   "h": 2010,
-   "page": "mb1",
-   "title": "Home",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_Nav_Filtros.dc.html": {
-   "h": 2380,
-   "page": "mb1",
-   "title": "Al tocar el botón de filtros: «Filtros» a pantalla completa",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_PlanFiltro.dc.html": {
-   "h": 844,
-   "page": "mb8",
-   "title": "Contacto ocultado",
-   "w": 390,
-   "x": 1410,
-   "y": 0
-  },
-  "MB_PlanLimite.dc.html": {
-   "h": 844,
-   "page": "mb8",
-   "title": "Límite: 2.º proyecto del comprador",
-   "w": 390,
-   "x": 470,
-   "y": 0
-  },
-  "MB_PlanLogin.dc.html": {
-   "h": 844,
-   "page": "mb8",
-   "title": "Login al pulsar Guardar",
-   "w": 390,
-   "x": 0,
-   "y": 0
-  },
-  "MB_PlanPago.dc.html": {
-   "h": 844,
-   "page": "mb8",
-   "title": "Plan de pago: exportar informes",
-   "w": 390,
-   "x": 940,
-   "y": 0
-  },
   "Main.dc.html": {
    "h": 960,
    "page": "header",
@@ -2198,7 +1790,7 @@
   },
   "PlanBloqueos.dc.html": {
    "w": 1280,
-   "h": 2540,
+   "h": 2580,
    "page": "planesbloq",
    "x": 0,
    "y": 0,
@@ -2210,7 +1802,7 @@
    "page": "planesbloq",
    "x": 1400,
    "y": 2700,
-   "title": "BL5 · Ventana «Contacto ocultado» · al enviar un mensaje con teléfono y email"
+   "title": "BL5 · Ventana «Contacto bloqueado» · al enviar un mensaje con teléfono y email"
   },
   "PlanLimite.dc.html": {
    "w": 1280,
@@ -3436,6 +3028,422 @@
    "x": 1360,
    "y": 1300,
    "title": "J6b · La propuesta en Mensajes: dudas del ganadero y nueva versión en el mismo hilo"
+  },
+  "ProyPropuestaContacto.dc.html": {
+   "w": 1280,
+   "h": 1000,
+   "page": "proyempresas",
+   "x": 2720,
+   "y": 1300,
+   "title": "J6c · Si intentan poner datos de contacto: no se envía, se marcan y queda registrado"
+  },
+  "MB_MobHome.dc.html": {
+   "w": 390,
+   "h": 2010,
+   "page": "mb1",
+   "x": 0,
+   "y": 0,
+   "title": "Home"
+  },
+  "MB_Nav_Filtros.dc.html": {
+   "w": 390,
+   "h": 2380,
+   "page": "mb1",
+   "x": 470,
+   "y": 0,
+   "title": "Al tocar el botón de filtros: «Filtros» a pantalla completa"
+  },
+  "MB_BuscaMovResultados.dc.html": {
+   "w": 390,
+   "h": 1370,
+   "page": "mb2",
+   "x": 0,
+   "y": 0,
+   "title": "Resultados"
+  },
+  "MB_BuscaMovEspecie.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb2",
+   "x": 470,
+   "y": 0,
+   "title": "Buscar por pasos"
+  },
+  "MB_BuscaMovCategoria.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb2",
+   "x": 940,
+   "y": 0,
+   "title": "Categoría"
+  },
+  "MB_BuscaMovFiltros.dc.html": {
+   "w": 390,
+   "h": 2380,
+   "page": "mb2",
+   "x": 1410,
+   "y": 0,
+   "title": "Filtros"
+  },
+  "MB_MP1.dc.html": {
+   "w": 390,
+   "h": 1510,
+   "page": "mb3",
+   "x": 0,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MP2.dc.html": {
+   "w": 390,
+   "h": 2810,
+   "page": "mb3",
+   "x": 470,
+   "y": 0,
+   "title": "Categoría"
+  },
+  "MB_MP3.dc.html": {
+   "w": 390,
+   "h": 1890,
+   "page": "mb3",
+   "x": 940,
+   "y": 0,
+   "title": "Mercados"
+  },
+  "MB_MP4.dc.html": {
+   "w": 390,
+   "h": 1730,
+   "page": "mb3",
+   "x": 1410,
+   "y": 0,
+   "title": "Identidad (idioma detectado)"
+  },
+  "MB_MP5.dc.html": {
+   "w": 390,
+   "h": 2090,
+   "page": "mb3",
+   "x": 1880,
+   "y": 0,
+   "title": "Datos técnicos"
+  },
+  "MB_MP6.dc.html": {
+   "w": 390,
+   "h": 1200,
+   "page": "mb3",
+   "x": 2350,
+   "y": 0,
+   "title": "Aplicación por especie"
+  },
+  "MB_MP7.dc.html": {
+   "w": 390,
+   "h": 1400,
+   "page": "mb3",
+   "x": 2820,
+   "y": 0,
+   "title": "Fotos, vídeos y documentos"
+  },
+  "MB_MP8.dc.html": {
+   "w": 390,
+   "h": 2180,
+   "page": "mb3",
+   "x": 3290,
+   "y": 0,
+   "title": "Certificaciones"
+  },
+  "MB_MP9.dc.html": {
+   "w": 390,
+   "h": 1750,
+   "page": "mb3",
+   "x": 3760,
+   "y": 0,
+   "title": "Revisión"
+  },
+  "MB_ME1.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "mb4",
+   "x": 0,
+   "y": 0,
+   "title": "Mis productos"
+  },
+  "MB_ME2.dc.html": {
+   "w": 390,
+   "h": 1180,
+   "page": "mb4",
+   "x": 470,
+   "y": 0,
+   "title": "Menú ⋯"
+  },
+  "MB_ME3.dc.html": {
+   "w": 390,
+   "h": 3750,
+   "page": "mb4",
+   "x": 940,
+   "y": 0,
+   "title": "Editar por bloques"
+  },
+  "MB_ME4.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb4",
+   "x": 1410,
+   "y": 0,
+   "title": "Guardar y avisar"
+  },
+  "MB_ME5.dc.html": {
+   "w": 390,
+   "h": 3320,
+   "page": "mb4",
+   "x": 1880,
+   "y": 0,
+   "title": "Traducciones"
+  },
+  "MB_ME6.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb4",
+   "x": 2350,
+   "y": 0,
+   "title": "Ficha en inglés"
+  },
+  "MB_MS1.dc.html": {
+   "w": 390,
+   "h": 2620,
+   "page": "mb5",
+   "x": 0,
+   "y": 0,
+   "title": "Tipo de servicio"
+  },
+  "MB_MS2.dc.html": {
+   "w": 390,
+   "h": 1230,
+   "page": "mb5",
+   "x": 470,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MS3.dc.html": {
+   "w": 390,
+   "h": 1650,
+   "page": "mb5",
+   "x": 940,
+   "y": 0,
+   "title": "Dirigido a"
+  },
+  "MB_MS4.dc.html": {
+   "w": 390,
+   "h": 1390,
+   "page": "mb5",
+   "x": 1410,
+   "y": 0,
+   "title": "Dónde lo prestas"
+  },
+  "MB_MS5.dc.html": {
+   "w": 390,
+   "h": 2050,
+   "page": "mb5",
+   "x": 1880,
+   "y": 0,
+   "title": "Detalles"
+  },
+  "MB_MS6.dc.html": {
+   "w": 390,
+   "h": 1710,
+   "page": "mb5",
+   "x": 2350,
+   "y": 0,
+   "title": "Revisión"
+  },
+  "MB_MS7.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb5",
+   "x": 2820,
+   "y": 0,
+   "title": "Mis servicios"
+  },
+  "MB_MA1.dc.html": {
+   "w": 390,
+   "h": 1170,
+   "page": "mb6",
+   "x": 0,
+   "y": 0,
+   "title": "Tu organización (CRM)"
+  },
+  "MB_MA2.dc.html": {
+   "w": 390,
+   "h": 990,
+   "page": "mb6",
+   "x": 470,
+   "y": 0,
+   "title": "Confirmar email"
+  },
+  "MB_MA3.dc.html": {
+   "w": 390,
+   "h": 1300,
+   "page": "mb6",
+   "x": 940,
+   "y": 0,
+   "title": "Tipo de empresa"
+  },
+  "MB_MA4.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "mb6",
+   "x": 1410,
+   "y": 0,
+   "title": "Especies"
+  },
+  "MB_MA5.dc.html": {
+   "w": 390,
+   "h": 1060,
+   "page": "mb6",
+   "x": 1880,
+   "y": 0,
+   "title": "Rama de negocio"
+  },
+  "MB_MA6.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb6",
+   "x": 2350,
+   "y": 0,
+   "title": "Mercados"
+  },
+  "MB_MA7.dc.html": {
+   "w": 390,
+   "h": 1190,
+   "page": "mb6",
+   "x": 2820,
+   "y": 0,
+   "title": "Cabecera"
+  },
+  "MB_MA8.dc.html": {
+   "w": 390,
+   "h": 1090,
+   "page": "mb6",
+   "x": 3290,
+   "y": 0,
+   "title": "Sobre la empresa"
+  },
+  "MB_MA9.dc.html": {
+   "w": 390,
+   "h": 1070,
+   "page": "mb6",
+   "x": 3760,
+   "y": 0,
+   "title": "Equipo comercial"
+  },
+  "MB_MA10.dc.html": {
+   "w": 390,
+   "h": 1100,
+   "page": "mb6",
+   "x": 4230,
+   "y": 0,
+   "title": "Contacto"
+  },
+  "MB_MA11.dc.html": {
+   "w": 390,
+   "h": 1590,
+   "page": "mb6",
+   "x": 4700,
+   "y": 0,
+   "title": "Revisar y publicar"
+  },
+  "MB_MA12.dc.html": {
+   "w": 390,
+   "h": 1010,
+   "page": "mb6",
+   "x": 5170,
+   "y": 0,
+   "title": "Publicada"
+  },
+  "MB_MA13.dc.html": {
+   "w": 390,
+   "h": 1250,
+   "page": "mb6",
+   "x": 5640,
+   "y": 0,
+   "title": "Crear organización nueva"
+  },
+  "MB_MA14.dc.html": {
+   "w": 390,
+   "h": 970,
+   "page": "mb6",
+   "x": 6110,
+   "y": 0,
+   "title": "Sucursal: entra directa"
+  },
+  "MB_MA15.dc.html": {
+   "w": 390,
+   "h": 850,
+   "page": "mb6",
+   "x": 6580,
+   "y": 0,
+   "title": "Sucursal: tu Sede"
+  },
+  "MB_MJ1.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb7",
+   "x": 0,
+   "y": 0,
+   "title": "Bienvenida"
+  },
+  "MB_MJ2.dc.html": {
+   "w": 390,
+   "h": 1470,
+   "page": "mb7",
+   "x": 470,
+   "y": 0,
+   "title": "Una pregunta por pantalla"
+  },
+  "MB_MJ3.dc.html": {
+   "w": 390,
+   "h": 1860,
+   "page": "mb7",
+   "x": 940,
+   "y": 0,
+   "title": "Resumen"
+  },
+  "MB_MJ4.dc.html": {
+   "w": 390,
+   "h": 860,
+   "page": "mb7",
+   "x": 1410,
+   "y": 0,
+   "title": "Editar desde el resumen"
+  },
+  "MB_PlanLogin.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 0,
+   "y": 0,
+   "title": "Login al pulsar Guardar"
+  },
+  "MB_PlanLimite.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 470,
+   "y": 0,
+   "title": "Límite: 2.º proyecto del comprador"
+  },
+  "MB_PlanPago.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 940,
+   "y": 0,
+   "title": "Plan de pago: exportar informes"
+  },
+  "MB_PlanFiltro.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mb8",
+   "x": 1410,
+   "y": 0,
+   "title": "Mensaje bloqueado por datos de contacto"
   }
  },
  "createdOnFiles": {
@@ -3837,88 +3845,6 @@
    "x": 0,
    "y": 2700
   },
-  "mbdev": {
-   "fill": "orange",
-   "maxH": 320,
-   "page": "mb1",
-   "size": 24,
-   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo.",
-   "w": 1280,
-   "x": 2171,
-   "y": -64
-  },
-  "mbt0": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb1",
-   "text": "Navegación · Home y filtros (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt1": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb2",
-   "text": "Búsqueda y filtros (de 005)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt2": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb3",
-   "text": "Alta de producto (prototipo crear-producto)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt3": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb4",
-   "text": "Mis productos, edición y traducciones",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt4": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb5",
-   "text": "Alta de servicios del experto (prototipo crear-servicio)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt5": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb6",
-   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt6": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb7",
-   "text": "Proyectos (prototipo crear-proyecto)",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
-  "mbt7": {
-   "kind": "title1",
-   "maxW": 8000,
-   "page": "mb8",
-   "text": "Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py",
-   "w": 240,
-   "x": 0,
-   "y": -300
-  },
   "movT0": {
    "kind": "title1",
    "maxW": 2600,
@@ -4236,6 +4162,88 @@
    "w": 240,
    "x": 0,
    "y": -300
+  },
+  "mbt0": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb1",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Navegación · Home y filtros (la cabecera, el menú inferior y la búsqueda abierta están en MB_000_Header)"
+  },
+  "mbt1": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb2",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Búsqueda y filtros (de 005)"
+  },
+  "mbt2": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb3",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de producto (prototipo crear-producto)"
+  },
+  "mbt3": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb4",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Mis productos, edición y traducciones"
+  },
+  "mbt4": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb5",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de servicios del experto (prototipo crear-servicio)"
+  },
+  "mbt5": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb6",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal"
+  },
+  "mbt6": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb7",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Proyectos (prototipo crear-proyecto)"
+  },
+  "mbt7": {
+   "kind": "title1",
+   "maxW": 8000,
+   "page": "mb8",
+   "w": 240,
+   "x": 0,
+   "y": -300,
+   "text": "Planes · ventanas de bloqueo en móvil (login, límite, plan de pago) · generadas por tools/planes.py"
+  },
+  "mbdev": {
+   "fill": "orange",
+   "maxH": 320,
+   "page": "mb1",
+   "size": 24,
+   "w": 1280,
+   "x": 1100,
+   "y": -300,
+   "text": "PARA DESARROLLO · Versión móvil\n\nLos prototipos son responsive: por debajo de 900 px pasan a una columna (y la búsqueda a pastilla + menú inferior). Estas pantallas son esos mismos prototipos capturados a 390 px; lo de navegación y búsqueda se importa de 000_Header y 005 para no duplicarlo.\n\nEl alta de empresa (006–010) ya es un prototipo único (alta-empresa) que se adapta a cómo vende la empresa.\n\nPendiente de pasar a móvil: catálogos por tipo de empresa (011a–011e), mensajes e intranets; hoy son pantallas fijas de escritorio y conviene convertirlas antes en prototipo."
   }
  },
  "order": [
@@ -4616,6 +4624,8 @@
   "PlanLimite.dc.html",
   "PlanPago.dc.html",
   "PlanFiltro.dc.html",
+  "ProyPropuestaMensajes.dc.html",
+  "ProyPropuestaContacto.dc.html",
   "MB_MobHome.dc.html",
   "MB_Nav_Filtros.dc.html",
   "MB_BuscaMovResultados.dc.html",
@@ -4666,8 +4676,7 @@
   "MB_PlanLogin.dc.html",
   "MB_PlanLimite.dc.html",
   "MB_PlanPago.dc.html",
-  "MB_PlanFiltro.dc.html",
-  "ProyPropuestaMensajes.dc.html"
+  "MB_PlanFiltro.dc.html"
  ],
  "pages": [
   {

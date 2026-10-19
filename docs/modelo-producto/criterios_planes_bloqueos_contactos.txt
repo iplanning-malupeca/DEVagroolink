@@ -12,9 +12,15 @@ Diseño: canvas, páginas «Planes», «Planes · qué se bloquea» y «MB_08 Pl
 2. Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran
   teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR;
   todo se habla en Mensajes y queda registrado.
-3. Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio,
-  proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y
-  se avisa al autor. Si se repite, el superadmin revisa la cuenta.
+3. Filtro restrictivo: si un mensaje, propuesta, solicitud, ficha, descripción, servicio, proyecto,
+  nombre de archivo o imagen contiene un contacto (también disimulado: «arroba», «punto com»,
+  números en letras), NO se envía ni se publica: se marcan los datos y el autor tiene que quitarlos.
+  Cada intento queda registrado; al tercero en 30 días se pausan sus envíos y el superadmin revisa
+  la cuenta.
+3b. Archivos (PDF, imágenes, documentos): se revisan al subirlos (texto, texto de imágenes por OCR,
+  códigos QR, enlaces y metadatos). Si contienen un contacto no se adjuntan ni se publican: se
+  indica la página y el dato para corregirlo; los metadatos (autor, empresa, email) se eliminan
+  siempre.
 4. Sin cuenta solo se mira (buscar, ver fichas y cambiar de idioma); todo lo demás pide la cuenta
   gratis, que se pide al pulsar la acción, nunca al entrar ni al navegar.
 5. Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.
@@ -36,9 +42,10 @@ Diseño: canvas, páginas «Planes», «Planes · qué se bloquea» y «MB_08 Pl
 - Qué detecta como mínimo: números de teléfono (con y sin prefijo, con espacios, puntos o guiones, y
   escritos en letras), emails (también ofuscados: «arroba», «(at)», espacios), URLs y dominios
   (www., http, «punto com»), @usuario, enlaces wa.me / t.me / redes, y códigos QR.
-- Qué hace: sustituye el dato por «•••» para todos, envía o publica el resto del contenido, avisa al
-  autor con la ventana «Hemos ocultado un dato de contacto» y registra el intento. Si se repite, la
-  cuenta pasa a revisión del superadmin.
+- Qué hace (política restrictiva): NO envía ni publica el contenido. Marca en rojo los datos
+  encontrados, muestra «No se puede enviar: hay datos de contacto» y ofrece «Quitar los datos
+  marcados». Cada intento queda registrado; al tercero en 30 días se pausan los envíos de la cuenta
+  y el superadmin la revisa.
 - Archivos (PDF, imágenes, documentos): se revisan al subirlos: texto, texto de las imágenes (OCR),
   códigos QR, enlaces y metadatos. Si contienen un contacto NO se adjuntan ni se publican (un PDF no
   se puede «tachar» con garantías): se indica la página y el dato para que el autor lo corrija y lo
@@ -102,7 +109,7 @@ Cómo se pide la cuenta gratis:
   - Ver teléfono, email, web, WhatsApp o redes de otro usuario  [contacto · bloqueo: nunca]
       Cuenta gratis: Nunca
   - Escribir contactos en mensajes, fichas o documentos  [escribir_contacto · bloqueo: nunca]
-      Cuenta gratis: Se ocultan siempre
+      Cuenta gratis: Se bloquea el envío
 
 [COMPRADOR] Comprador
   Niveles: Gratis | Pro · 9,90 € (próximamente)
@@ -213,12 +220,12 @@ Notas:
 
 [filtro]
   Cuándo: Al enviar o publicar un texto, archivo o imagen con un teléfono, email, web, @usuario,
-    enlace de WhatsApp/Telegram o QR.
-  Título: Hemos ocultado un dato de contacto
-  Texto: En Agroolink todo se habla en Mensajes: así queda registrado y protegido. El resto del
-    mensaje se envía igual.
-  Botones: Entendido
-  Después: El dato se sustituye por «•••» para todos. El superadmin ve los intentos repetidos.
+    enlace de WhatsApp/Telegram o QR, aunque esté disimulado.
+  Título: No se puede enviar: hay datos de contacto
+  Texto: En Agroolink todo se habla en Mensajes. Quita los datos marcados para poder enviar.
+  Botones: Quitar los datos marcados
+  Después: No se envía nada hasta quitarlos. Intento registrado; al tercero en 30 días se pausan los
+    envíos y el superadmin revisa la cuenta.
 
 [medida]
   Cuándo: Sede que quiere varias sucursales con plan completo.

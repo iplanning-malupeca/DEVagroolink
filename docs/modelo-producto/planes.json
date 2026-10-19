@@ -4,7 +4,7 @@
  "reglas": [
   "Preguntar nunca se bloquea para el comprador. Los expertos reciben y responden sin límite; la empresa Gratis ve las consultas de 3 compradores y las siguientes se guardan hasta que pasa a Pro (nunca se pierden).",
   "Contactos fuera de Agroolink: prohibidos para todos y en todos los planes. Nunca se muestran teléfonos, emails, webs, WhatsApp, Telegram, redes sociales, direcciones exactas ni códigos QR; todo se habla en Mensajes y queda registrado.",
-  "Filtro estricto: si alguien escribe un contacto en un mensaje, ficha, descripción, servicio, proyecto, nombre de archivo o imagen (texto detectado), se oculta antes de enviarse o publicarse y se avisa al autor. Si se repite, el superadmin revisa la cuenta.",
+  "Filtro restrictivo: si un mensaje, propuesta, solicitud, ficha, descripción, servicio, proyecto, nombre de archivo o imagen contiene un contacto (también disimulado: «arroba», «punto com», números en letras), NO se envía ni se publica: se marcan los datos y el autor tiene que quitarlos. Cada intento queda registrado; al tercero en 30 días se pausan sus envíos y el superadmin revisa la cuenta.",
   "Archivos (PDF, imágenes, documentos): se revisan al subirlos (texto, texto de imágenes por OCR, códigos QR, enlaces y metadatos). Si contienen un contacto no se adjuntan ni se publican: se indica la página y el dato para corregirlo; los metadatos (autor, empresa, email) se eliminan siempre.",
   "Sin cuenta solo se mira (buscar, ver fichas y cambiar de idioma); todo lo demás pide la cuenta gratis, que se pide al pulsar la acción, nunca al entrar ni al navegar.",
   "Las funciones de pago se ven; el aviso salta al pulsarlas, no al verlas.",
@@ -106,7 +106,7 @@
      "id": "escribir_contacto",
      "accion": "Escribir contactos en mensajes, fichas o documentos",
      "valores": {
-      "Cuenta gratis": "Se ocultan siempre"
+      "Cuenta gratis": "Se bloquea el envío"
      },
      "bloqueo": "nunca"
     }
@@ -448,13 +448,13 @@
    "despues": "Comprador Pro aún no existe: el botón es «Avísame cuando esté»."
   },
   "filtro": {
-   "cuando": "Al enviar o publicar un texto, archivo o imagen con un teléfono, email, web, @usuario, enlace de WhatsApp/Telegram o QR.",
-   "titulo": "Hemos ocultado un dato de contacto",
-   "texto": "En Agroolink todo se habla en Mensajes: así queda registrado y protegido. El resto del mensaje se envía igual.",
+   "cuando": "Al enviar o publicar un texto, archivo o imagen con un teléfono, email, web, @usuario, enlace de WhatsApp/Telegram o QR, aunque esté disimulado.",
+   "titulo": "No se puede enviar: hay datos de contacto",
+   "texto": "En Agroolink todo se habla en Mensajes. Quita los datos marcados para poder enviar.",
    "botones": [
-    "Entendido"
+    "Quitar los datos marcados"
    ],
-   "despues": "El dato se sustituye por «•••» para todos. El superadmin ve los intentos repetidos."
+   "despues": "No se envía nada hasta quitarlos. Intento registrado; al tercero en 30 días se pausan los envíos y el superadmin revisa la cuenta."
   },
   "medida": {
    "cuando": "Sede que quiere varias sucursales con plan completo.",
