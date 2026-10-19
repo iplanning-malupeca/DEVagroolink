@@ -3705,11 +3705,19 @@
    "y": 0,
    "title": "P2 · «Ofrecer mis servicios»: qué cambia (luego X3–X5)"
   },
+  "MB_EmpPanel.dc.html": {
+   "w": 390,
+   "h": 920,
+   "page": "mb11",
+   "x": 0,
+   "y": 0,
+   "title": "Panel de empresa (EM1)"
+  },
   "MB_EEM1.dc.html": {
    "w": 390,
    "h": 1710,
    "page": "mb11",
-   "x": 0,
+   "x": 470,
    "y": 0,
    "title": "Editar ficha de empresa por bloques"
   },
@@ -3717,7 +3725,7 @@
    "w": 390,
    "h": 1060,
    "page": "mb11",
-   "x": 470,
+   "x": 940,
    "y": 0,
    "title": "Cambiar un bloque"
   },
@@ -3725,7 +3733,7 @@
    "w": 390,
    "h": 1710,
    "page": "mb11",
-   "x": 940,
+   "x": 1410,
    "y": 0,
    "title": "Antes de guardar: aviso"
   }
@@ -5048,6 +5056,7 @@
   "MB_Exp7_Semana.dc.html",
   "MB_ExpP1_Aviso.dc.html",
   "MB_ExpP2_Intro.dc.html",
+  "MB_EmpPanel.dc.html",
   "MB_EEM1.dc.html",
   "MB_EEM2.dc.html",
   "MB_EEM3.dc.html"
