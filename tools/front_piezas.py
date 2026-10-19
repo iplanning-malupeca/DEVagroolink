@@ -57,17 +57,30 @@ def sec(t, sub='', ver=''):
     return ('<div class="sec"><div><h2 class="h2">' + t + '</h2>' + ('<p class="sub">' + sub + '</p>' if sub else '') + '</div>' +
             ('<a href="#" class="ver">' + ver + ' ' + svg(I['flecha'], 18, 2) + '</a>' if ver else '') + '</div>')
 
+
+# Buscador combinado (el mismo de IntHeader y del prototipo de búsqueda): Qué buscas · Especie · Categoría · Enfermedad
+SEG = [('lupa', 'Qué buscas', 'Producto, empresa, marca…'), ('pata', 'Especie', 'Cualquier especie'), ('grid', 'Categoría', 'Cualquier categoría'), ('virus', 'Enfermedad', 'Cualquier enfermedad')]
+I.update({'pata': 'M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM16 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 13c-3 0-5 3-5 5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2c0-2-2-5-5-5z',
+          'virus': 'M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M5 19l2.8-2.8M16.2 7.8 19 5'})
+def barra_compacta():
+    segs = ''.join('<button type="button" style="flex: ' + ('1.4' if i == 0 else '1') + '; min-width: 0; height: 26px; padding: 0 14px; display: flex; align-items: center; gap: 7px; border: 0; background: none; border-left: ' + ('0' if i == 0 else '1px solid #DCE3DE') + '; font: 400 14px \'Poppins\', sans-serif; color: #56615B; white-space: nowrap; overflow: hidden; cursor: pointer;"><span style="color: #0E5A3A; display: flex;">' + svg(I[ic], 15, 2) + '</span><span style="overflow: hidden; text-overflow: ellipsis;">' + ('Buscar…' if i == 0 else l) + '</span></button>' for i, (ic, l, v) in enumerate(SEG))
+    return ('<div role="search" aria-label="Búsqueda combinada: qué buscas, especie, categoría y enfermedad" style="flex: 1; min-width: 0; height: 44px; box-sizing: border-box; display: flex; align-items: center; border-radius: 999px; border: 1px solid #DCE3DE; background: #FFFFFF; box-shadow: 0 2px 8px rgba(16, 40, 28, .08);">' + segs +
+            '<button type="button" aria-label="Buscar" style="width: 34px; height: 34px; margin-right: 4px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; border: 0; display: flex; align-items: center; justify-content: center; flex: none;">' + svg(I['lupa'], 16, 2.2) + '</button></div>')
+def barra_grande():
+    segs = ''.join('<button type="button" style="flex: ' + ('1.3' if i == 0 else '1') + '; min-width: 0; padding: 12px 22px; border: 0; background: none; text-align: left; display: flex; flex-direction: column; gap: 1px; position: relative; cursor: pointer; font-family: \'Poppins\', sans-serif;' + ('' if i == 0 else ' box-shadow: inset 1px 0 0 #E3E8E4;') + '">'
+                   '<span style="font-size: 12px; font-weight: 600; color: #17231D; display: flex; align-items: center; gap: 6px;"><span style="color: #0E5A3A; display: flex;">' + svg(I[ic], 14, 2.2) + '</span>' + l + '</span>'
+                   '<span style="font-size: 14px; color: #56615B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + v + '</span></button>' for i, (ic, l, v) in enumerate(SEG))
+    return ('<div role="search" aria-label="Búsqueda combinada" style="margin-top: 18px; width: 880px; display: flex; align-items: center; border-radius: 999px; background: #FFFFFF; box-shadow: 0 10px 30px rgba(0, 0, 0, .18); color: #17231D;">' + segs +
+            '<button type="button" aria-label="Buscar" style="width: 52px; height: 52px; margin: 6px 8px 6px 4px; border-radius: 50%; border: 0; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;">' + svg(I['lupa'], 20, 2.2) + '</button></div>')
+
 # ---------- Cabecera: 56 + 44 ----------
 def cabecera(activo=None):
     menu = ''.join('<a href="#" style="display: inline-flex; align-items: center; gap: 4px; height: 44px; padding: 0 14px; font-size: 15px; font-weight: 600; color: ' + ('#0E5A3A' if i == activo else '#17231D') + ';' + (' box-shadow: inset 0 -3px 0 #0E5A3A;' if i == activo else '') + '">' + t + (svg(I['abajo'], 16, 2) if i < 2 else '') + '</a>'
                    for i, t in enumerate(['Categorías', 'Especies', 'Empresas', 'Expertos', 'Proyectos', 'Tableros y comparador', 'Contenidos']))
-    barra = ('<div class="wrap" style="height: 56px; display: flex; align-items: center; gap: 18px;">'
+    barra = ('<div class="wrap" style="height: 56px; display: flex; align-items: center; gap: 12px;">'
              '<a href="#" aria-label="Agroolink, inicio" style="flex: none; display: flex;"><img src="' + IMG['logo'] + '" alt="Agroolink" style="height: 30px; width: auto; display: block;"></a>'
-             '<label style="flex: 1; height: 40px; display: flex; align-items: center; gap: 10px; border: 1.5px solid #0E5A3A; border-radius: 999px; padding: 0 4px 0 16px; background: #FFFFFF;">'
-             '<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Buscar</span><input type="search" placeholder="Busca productos, empresas, expertos o soluciones…" style="flex: 1; border: 0; outline: 0; font: 400 15px \'Poppins\', sans-serif; color: #17231D; background: none;">'
-             '<button type="button" aria-label="Buscar" style="height: 32px; padding: 0 16px; border-radius: 999px; border: 0; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; gap: 6px; font: 600 14px \'Poppins\', sans-serif;">' + svg(I['lupa'], 16, 2.2) + 'Buscar</button></label>'
-             '<button type="button" class="ib" style="width: auto; padding: 0 8px; gap: 6px; font: 600 14px \'Poppins\', sans-serif;" aria-label="Idioma: español">' + svg(I['globo']) + 'ES</button>'
-             '<button type="button" class="ib" style="width: auto; padding: 0 8px; gap: 8px; text-align: left;" aria-label="Región: España">' + svg(I['pin']) + '<span style="display: flex; flex-direction: column; line-height: 1.1;"><span style="font-size: 11px; color: #56615B;">Región</span><span style="font: 600 14px \'Poppins\', sans-serif;">España</span></span></button>'
+             + barra_compacta() +
+             '<button type="button" class="ib" style="width: auto; padding: 0 8px; gap: 6px; font: 600 14px \'Poppins\', sans-serif; white-space: nowrap;" aria-label="Idioma y región: español, España">' + svg(I['globo']) + 'ES · España</button>'
              '<button type="button" class="ib" aria-label="Avisos, 3 sin leer">' + svg(I['campana'], 21) + '<span style="position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>'
              '<button type="button" class="ib" aria-label="Mensajes, 2 sin leer">' + svg(I['msg'], 21) + '<span style="position: absolute; top: 2px; right: 2px; min-width: 17px; height: 17px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">2</span></button>'
              '<button type="button" class="ib" aria-label="Mis tableros">' + svg(I['grid'], 21) + '</button>'
@@ -115,11 +128,7 @@ def hero():
             '<div style="position: relative; padding: 52px 64px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF;">'
             '<h1 style="margin: 0; font-size: 42px; line-height: 1.08; font-weight: 700; letter-spacing: -.02em;">Hola Samuel,<br><span style="color: #A8E6BC;">¿qué necesitas hoy?</span></h1>'
             '<p style="margin: 0; font-size: 17px; max-width: 620px; color: #DCEDE2;">Compara productos, proveedores y propuestas técnicas para granjas, plantas e instalaciones en un solo lugar.</p>'
-            '<div role="search" style="margin-top: 14px; width: 860px; height: 64px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; gap: 10px; padding: 0 8px 0 22px; box-shadow: 0 10px 30px rgba(0, 0, 0, .18); color: #17231D;">'
-            + svg(I['lupa'], 20, 2) + '<input type="search" aria-label="Qué buscas" placeholder="Busca por producto, marca, principio activo o equipo…" style="flex: 1; border: 0; outline: 0; font: 400 15px \'Poppins\', sans-serif; background: none;">'
-            '<span style="width: 1px; height: 30px; background: #E3E8E4;"></span><button type="button" class="chip" style="border: 0; background: #F1F4F2;">Especie: todas' + svg(I['abajo'], 15, 2) + '</button>'
-            '<button type="button" class="chip" style="border: 0; background: #F1F4F2;">Categoría: todas' + svg(I['abajo'], 15, 2) + '</button>'
-            '<button type="button" aria-label="Buscar" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center;">' + svg(I['flecha'], 20, 2.2) + '</button></div>'
+            + barra_grande() +
             '<span style="font-size: 13px; color: #CFE5D7;">Más buscado: <u>micotoxinas porcino</u> · <u>ventilación naves</u> · <u>bebederos broilers</u></span></div></section></div>')
 
 # ---------- Especies ----------
