@@ -20,11 +20,11 @@
   },
   "AltaExperto.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "Desde Alta (L4) · Soy experto → Perfil de experto",
    "w": 1120,
    "x": 0,
-   "y": 2400
+   "y": 7040
   },
   "AltaMiEspacioIntereses.dc.html": {
    "h": 900,
@@ -388,59 +388,59 @@
   },
   "ExpX1Empezar.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X1 · (tras L1–L3) ¿Cómo quieres empezar? → Experto",
    "w": 960,
    "x": 0,
-   "y": 0
+   "y": 4640
   },
   "ExpX2Creada.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X2 · Cuenta creada → crear perfil de experto",
    "w": 960,
    "x": 1040,
-   "y": 0
+   "y": 4640
   },
   "ExpX3Especialidad.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X3 · Paso 1 · Especialidad",
    "w": 1120,
    "x": 2080,
-   "y": 0
+   "y": 4640
   },
   "ExpX4Servicios.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X4 · Paso 2 · Servicios (opcional)",
    "w": 1120,
    "x": 3280,
-   "y": 0
+   "y": 4640
   },
   "ExpX5Publicar.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X5 · Paso 3 · Revisar y publicar",
    "w": 1120,
    "x": 0,
-   "y": 1180
+   "y": 5820
   },
   "ExpX6Publicado.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "X6 · Perfil publicado",
    "w": 960,
    "x": 1200,
-   "y": 1180
+   "y": 5820
   },
   "ExpX7Semana.dc.html": {
    "h": 820,
-   "page": "experto",
+   "page": "alta",
    "title": "X7 · Mi espacio como experto, primera semana",
    "w": 1280,
    "x": 2240,
-   "y": 1180
+   "y": 5820
   },
   "Experto.dc.html": {
    "h": 1060,
@@ -1180,27 +1180,27 @@
   },
   "IntP1Aviso.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "P1 · Laura (aún compradora) · aviso contextual en Mi espacio",
    "w": 1280,
    "x": 0,
-   "y": 3580
+   "y": 8220
   },
   "IntP2Intro.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "P2 · «Ofrecer mis servicios»: qué cambia y qué gana",
    "w": 1280,
    "x": 1360,
-   "y": 3580
+   "y": 8220
   },
   "IntP3Asistente.dc.html": {
    "h": 760,
-   "page": "experto",
+   "page": "alta",
    "title": "P3 · Asistente de 3 pasos (el mismo X3–X5) → resultado: E1 Panel de experta",
    "w": 1120,
    "x": 2720,
-   "y": 3580
+   "y": 8220
   },
   "IntS3Empresa.dc.html": {
    "h": 900,
@@ -2125,99 +2125,99 @@
   },
   "ServExpArchivados.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX12 · Servicios archivados con «Recuperar»",
    "w": 1280,
    "x": 14960,
-   "y": 5180
+   "y": 9820
   },
   "ServExpAvisar.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX11 · Guardar un servicio publicado: ¿avisar a quienes ya te han escrito?",
    "w": 1280,
    "x": 13600,
-   "y": 5180
+   "y": 9820
   },
   "ServExpCondiciones.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX6 · Plazo de respuesta y precio; las solicitudes llegan por Mensajes",
    "w": 1280,
    "x": 6800,
-   "y": 5180
+   "y": 9820
   },
   "ServExpDetalles.dc.html": {
    "h": 1170,
-   "page": "experto",
+   "page": "alta",
    "title": "SX5 · Detalles: nombre, descripción, datos del tipo de servicio y «Se publica en» (traducción)",
    "w": 1280,
    "x": 5440,
-   "y": 5180
+   "y": 9820
   },
   "ServExpDonde.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX4 · Dónde lo prestas: presencial por zonas y a distancia con idiomas",
    "w": 1280,
    "x": 4080,
-   "y": 5180
+   "y": 9820
   },
   "ServExpEditar.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX9 · Editar servicio: por bloques, con «Cambiar» y los bloques modificados marcados",
    "w": 1280,
    "x": 10880,
-   "y": 5180
+   "y": 9820
   },
   "ServExpEditarBloque.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX10 · Cambiar un bloque: el mismo paso del asistente y «Hecho · volver a Editar servicio»",
    "w": 1280,
    "x": 12240,
-   "y": 5180
+   "y": 9820
   },
   "ServExpEspecies.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX2 · Especies y, si quieres, su producción (sin marcar = todas)",
    "w": 1280,
    "x": 1360,
-   "y": 5180
+   "y": 9820
   },
   "ServExpLista.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX8 · Mis servicios: Editar y menú ⋯ (Duplicar, Pausar, Archivar)",
    "w": 1280,
    "x": 9520,
-   "y": 5180
+   "y": 9820
   },
   "ServExpPublico.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX3 · Dirigido a: ramas de negocio y cargos del CRM",
    "w": 1280,
    "x": 2720,
-   "y": 5180
+   "y": 9820
   },
   "ServExpRevision.dc.html": {
    "h": 900,
-   "page": "experto",
+   "page": "alta",
    "title": "SX7 · Revisión con «Editar» por apartado y «Publicar servicio»",
    "w": 1280,
    "x": 8160,
-   "y": 5180
+   "y": 9820
   },
   "ServExpTipo.dc.html": {
    "h": 1850,
-   "page": "experto",
+   "page": "alta",
    "title": "SX1 · Tipo de servicio: los de la familia Servicios, con «Otro servicio…»",
    "w": 1280,
    "x": 0,
-   "y": 5180
+   "y": 9820
   },
   "ServLista.dc.html": {
    "h": 940,
@@ -2641,38 +2641,38 @@
   "expDesdeAlta": {
    "kind": "title1",
    "maxW": 4000,
-   "page": "experto",
+   "page": "alta",
    "text": "Desde el alta general: opción «Soy experto»",
    "w": 240,
    "x": 0,
-   "y": 2100
+   "y": 6740
   },
   "expDesdeIntranet": {
    "kind": "title1",
    "maxW": 3840,
-   "page": "experto",
+   "page": "alta",
    "text": "Desde la intranet: de comprador a experto",
    "w": 240,
    "x": 0,
-   "y": 3280
+   "y": 7920
   },
   "expTitulo": {
    "kind": "title1",
    "maxW": 4400,
-   "page": "experto",
+   "page": "alta",
    "text": "Alta experto · Laura Gil, veterinaria y consultora en nutrición avícola",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 4340
   },
   "expTitulo2": {
    "kind": "title1",
    "maxW": 3520,
-   "page": "experto",
+   "page": "alta",
    "text": "Publicar el perfil y primera semana",
    "w": 240,
    "x": 0,
-   "y": 880
+   "y": 5520
   },
   "figT0": {
    "kind": "title1",
@@ -2986,21 +2986,21 @@
   "servExpDev": {
    "fill": "orange",
    "maxH": 260,
-   "page": "experto",
+   "page": "alta",
    "size": 24,
    "text": "PARA DESARROLLO · Alta de servicios del experto\n\nSigue el HTML del prototipo navegable: tipos de la familia Servicios, especies y producciones, ramas y cargos del CRM, zonas (presencial y a distancia con idiomas) y los datos propios de cada tipo salen del mismo modelo que el alta de producto. Ningún dato es obligatorio salvo el nombre, el tipo y dónde se presta.\n\nPrototipo: design/prototipos/crear-servicio.html\nVersión publicada: https://claude.ai/artifact/XsEBeuRLjpbEpUynd4U3Tu",
    "w": 1280,
    "x": 0,
-   "y": 4840
+   "y": 9480
   },
   "servExpT": {
    "kind": "title1",
    "maxW": 8000,
-   "page": "experto",
+   "page": "alta",
    "text": "Alta de servicios del experto · asistente por pasos, en lila, con los mismos campos que el editor de servicios de empresa · prototipo: design/prototipos/crear-servicio.html",
    "w": 240,
    "x": 0,
-   "y": 4540
+   "y": 9180
   },
   "servT1": {
    "kind": "title1",
@@ -3014,12 +3014,12 @@
   "servUnifica": {
    "fill": "green",
    "maxH": 260,
-   "page": "experto",
+   "page": "alta",
    "size": 22,
    "text": "SERVICIOS · un solo flujo\n\nX4 «Servicios» del alta de experto abre este mismo asistente (SX1–SX7, más abajo).\nLa gestión es la de SX8–SX12: Mis servicios, Editar por bloques, Avisar al guardar y Archivados. E4 «Mis servicios» de la intranet de experto es SX8.",
    "w": 1120,
    "x": 3280,
-   "y": -420
+   "y": 4220
   },
   "tabT1": {
    "kind": "title1",
@@ -3480,11 +3480,7 @@
   },
   {
    "id": "alta",
-   "name": "003_LP_Alta_usuario"
-  },
-  {
-   "id": "experto",
-   "name": "003a_LP_Alta_Experto"
+   "name": "003_LP_Alta usuario · Experto"
   },
   {
    "id": "intusuario",
