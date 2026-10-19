@@ -124,7 +124,7 @@ def avisos():
              pref('Mensajes nuevos', True, True) + pref('Propuestas a tus proyectos', True, True) + pref('Alertas', True, True) + pref('Novedades de quien sigues', True, False) + pref('Tableros compartidos', True, False) +
              '<div class="row"><span style="flex: 1;">Resumen por email</span><span class="chip" style="height: 30px;">Diario ▾</span></div>'
              '<span class="hint" style="padding-top: 10px;">Los emails de la cuenta (verificación, seguridad, facturas) se envían siempre.</span></aside>')
-    cab = cabecera('Avisos', 'Avisos', 'Todo lo que ha pasado en tu cuenta, en un solo sitio. Se abre con la campana de arriba.',
+    cab = cabecera('Avisos', 'Avisos', 'Todo lo que ha pasado en tu cuenta, en un solo sitio.',
                    '<a href="#" style="font-size: 13px;">Marcar todo como leído</a>')
     cuerpo = ('<div style="display: flex; gap: 8px;"><span class="chip on">Todo</span><span class="chip">Sin leer 3</span><span class="chip">Mensajes</span><span class="chip">Proyectos</span><span class="chip">Alertas</span><span class="chip">Siguiendo</span><span class="chip">Tableros</span><span class="chip">Cuenta</span></div>'
               '<div style="display: flex; gap: 16px; align-items: flex-start;">' + lista + prefs + '</div>')
