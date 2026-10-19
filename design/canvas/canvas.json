@@ -1692,14 +1692,6 @@
    "x": 530,
    "y": 0
   },
-  "MobIconoProyectos.dc.html": {
-   "h": 760,
-   "page": "header",
-   "title": "M5 · Icono de Proyectos · 4 opciones",
-   "w": 390,
-   "x": 4600,
-   "y": 1180
-  },
   "MobIntereses.dc.html": {
    "h": 1700,
    "page": "movil",
@@ -4524,7 +4516,6 @@
   "MobHeaderSesion.dc.html",
   "MobHeaderExplorar.dc.html",
   "MobHeaderTu.dc.html",
-  "MobIconoProyectos.dc.html",
   "MobHeaderSinSesionMenu.dc.html",
   "MobHeaderExperto.dc.html",
   "MobHeaderConEmpresa.dc.html",
