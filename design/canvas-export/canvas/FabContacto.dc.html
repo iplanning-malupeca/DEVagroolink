@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fabricante · Contacto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#1D4E89;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:7px}
+.h{font-size:13.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.inp{height:32px;border:1px solid #D5DED8;border-radius:8px;padding:0 10px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.mot{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;font-size:12.5px;padding:4px 0}
+.fr{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;padding:5px 0;border-top:1px solid #EEF1EE}
+.sel{height:26px;border:1px solid #D5DED8;border-radius:7px;font:400 11.5px 'Poppins',sans-serif;padding:0 6px}
+.go{height:42px;padding:0 20px;border-radius:10px;background:#1D4E89;color:#FFFFFF;border:0;font:500 14px 'Poppins',sans-serif}
+.pv{height:30px;border:1px solid #D5DED8;border-radius:8px;font-size:11px;color:#8A948F;display:flex;align-items:center;padding:0 8px}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 24px 28px 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; align-items: flex-start; gap: 16px;"><div style="flex: 1; min-width: 0;"><span style="font-size: 11.5px; font-weight: 600; letter-spacing: .09em; color: #56615B;">PASO 7 DE 8</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Contacto</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">El formulario «Solicitar información» y a quién llega cada motivo. Todo entra en Solicitudes.</p></div></div>
+      <section class="card">
+        <p class="h">Motivos de contacto y destino</p>
+        <div class="mot"><span>Información de producto</span><select class="inp"><option>Distribuidor de su zona (si hay) · si no, Comercial</option></select></div>
+        <div class="mot"><span>Soporte técnico</span><select class="inp"><option>Equipo técnico (3)</option></select></div>
+        <div class="mot"><span>Ser distribuidor</span><select class="inp"><option>Abre «Quiero ser distribuidor»</option></select></div>
+        <div class="mot"><span>Prensa y colaboraciones</span><select class="inp"><option>Comunicación (1)</option></select></div>
+        <div class="mot"><span>Otro</span><select class="inp"><option>Desarrollo de negocio · en Mensajes</option></select></div>
+        <a href="#" style="font-size: 12px;">+ Añadir motivo</a>
+      </section>
+      <section class="card">
+        <p class="h">Campos del formulario</p>
+        <div class="fr" style="border-top: 0;"><span>Nombre · Empresa · País</span><span class="hint">Obligatorios</span></div>
+        <div class="fr"><span>Teléfono y email</span><span class="hint">Nunca se piden: la respuesta llega por Mensajes</span></div>
+        <div class="fr"><span>Motivo de contacto</span><span class="hint">Obligatorio</span></div>
+        <div class="fr"><span>Mensaje</span><select class="sel"><option>Opcional</option></select></div>
+      </section>
+      <section class="card">
+        <label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12.5px;"><span><strong style="font-weight: 600;">Sugerir antes al distribuidor de su zona</strong><br><span class="hint">Si el comprador pregunta por un producto y hay distribuidor en su país, se lo mostramos antes de enviar.</span></span><input type="checkbox" role="switch" defaultChecked="{{ yes }}" style="accent-color: #1D4E89; width: 17px; height: 17px; margin: 0; flex: none;"></label>
+      </section>
+    </form>
+    <aside aria-label="Vista previa: Formulario «Solicitar información»" style="width: 380px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #1D4E89; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Así verán el formulario «Solicitar información».</span></span>
+        <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
+      </div>
+      <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="border-radius: 14px; background: linear-gradient(135deg,#F1F5FB,#E2EAF5); padding: 12px; display: flex; align-items: center; gap: 12px;">
+          <span style="width: 66px; height: 46px; border-radius: 10px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(16,40,28,.1); display: flex; align-items: center; justify-content: center; font-size: 8.5px; font-weight: 700; white-space: nowrap; flex: none;">dsm-firmenich</span>
+          <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><strong style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 5px;">DSM-Firmenich <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E8B57"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></strong><span style="font-size: 11px; color: #4A5650;">Ciencia, innovación y soluciones en nutrición animal</span></span>
+        </div>
+        <div style="display: flex; gap: 9px; border-bottom: 1px solid #E8ECE9; font-size: 10px; color: #56615B; white-space: nowrap; overflow: hidden;"><span style="padding-bottom: 7px;">Resumen</span><span style="padding-bottom: 7px;">Productos</span><span style="padding-bottom: 7px;">Servicios</span><span style="padding-bottom: 7px;">Distribuidores</span><span style="padding-bottom: 7px;">Expertos</span><span style="padding-bottom: 7px;">Contenidos</span></div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 12px 30px rgba(16,40,28,.08);">
+        <strong style="font-size: 15px;">Solicitar información a DSM-Firmenich</strong>
+        <span style="font-size: 11px; color: #4A5650;">Rellena el formulario y el equipo de DSM-Firmenich te responde por Mensajes.</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;"><span class="pv">Nombre *</span><span class="pv">Empresa *</span><span class="pv">🇪🇸 España</span><span class="pv">Motivo de contacto *</span></div>
+        <span class="pv" style="height: 50px; align-items: flex-start; padding-top: 6px;">Mensaje (opcional)</span>
+        <span style="font-size: 10.5px; color: #4A5650;">☑ Acepto la política de privacidad de Agroolink.</span>
+        <div style="display: flex; gap: 6px; justify-content: flex-end;"><span style="height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid #DCE3DE; font-size: 11.5px; display: flex; align-items: center;">Cancelar</span><span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #1D4E89; color: #FFFFFF; font-size: 11.5px; display: flex; align-items: center;">Enviar solicitud</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 7 }; }
+}
+</script>
+</body>
+</html>

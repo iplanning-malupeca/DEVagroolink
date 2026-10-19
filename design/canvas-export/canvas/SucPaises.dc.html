@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Sucursales · Países</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;line-height:1.3;font-family:'Poppins',sans-serif;color:#17231D}
+a{color:#1D4E89;text-decoration:none;font-weight:500}
+.card{background:#FFFFFF;border:1px solid #E6EBE7;border-radius:16px;padding:14px 18px;box-shadow:0 1px 2px rgba(16,40,28,.04);display:flex;flex-direction:column;gap:10px}
+.h{font-size:14.5px;font-weight:600;margin:0}
+.hint{font-weight:400;color:#56615B;font-size:11.5px}
+.lbl{font-size:12.5px;font-weight:500;display:flex;flex-direction:column;gap:5px;min-width:0}
+.inp{height:36px;border:1px solid #D5DED8;border-radius:10px;padding:0 11px;font:400 12.5px 'Poppins',sans-serif;color:#17231D;background:#FFFFFF;width:100%;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#E9F0F9;color:#1D4E89;font-size:12px;font-weight:500;white-space:nowrap}
+.chipg{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;background:#F2F5F3;color:#17231D;font-size:12px;white-space:nowrap}
+.st{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.ok{background:#EEF6EE;color:#0E5A3A}.dr{background:#F2F5F3;color:#4A5650}.wn{background:#FFF4E0;color:#7A4B00}.nw{background:#E7EEFB;color:#2A4A8C}
+.btn{height:36px;padding:0 14px;border-radius:10px;border:1px solid #DCE3DE;background:#FFFFFF;color:#17231D;font:500 12.5px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;box-sizing:border-box}
+.btnp{height:38px;padding:0 16px;border-radius:10px;border:0;background:#1D4E89;color:#FFFFFF;font:600 13px 'Poppins',sans-serif;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.eb{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:#56615B}
+.cc{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.cc input{accent-color:#1D4E89;margin:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #DCE3DE;border-radius:12px;font-size:12px;background:#FFFFFF}
+.opt.on{border:1.5px solid #1D4E89;background:#F3F7FC}
+.opt input{accent-color:#1D4E89;margin:2px 0 0}
+.av{border-radius:50%;color:#FFFFFF;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+</style>
+</helmet>
+<div style="width: 1280px; height: 940px; position: relative; overflow: hidden;">
+  <div style="position: absolute; inset: 0;"><dc-import name="FabShell" activo="{{ n }}" empresa="Big Dutchman" persona="Anna Becker" iniciales="AB" paso4="Sucursales" hint-size="1280px,940px"></dc-import></div>
+  <div style="position: absolute; top: 64px; left: 260px; right: 0; bottom: 72px; padding: 24px 28px 20px 32px; display: flex; gap: 22px;">
+    <form style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+      <div><span class="eb">PASO 4 DE 8 · PAÍSES</span><h1 style="margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.01em;">Qué países atiende cada sucursal</h1><p style="margin: 4px 0 0; font-size: 13.5px; color: #4A5650;">Con esto, «Contactar» envía cada solicitud a la sucursal correcta.</p></div>
+      <section class="card" style="gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;"><p class="h">Países por sucursal</p><span class="hint">· 23 países asignados</span><a href="#" style="margin-left: auto; font-size: 12px;">Importar Excel</a></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; font-weight: 600;">Europa</span><div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1D4E89;"></span>España · SG</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1D4E89;"></span>Portugal · SG</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1D4E89;"></span>Francia · SG</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2F6F8F;"></span>Países Bajos · EU</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2F6F8F;"></span>Alemania · EU</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2F6F8F;"></span>Polonia · EU</span><span class="chip" style="background: #FFF4E0; color: #7A4B00;">Italia · 2 sucursales</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; font-weight: 600;">América</span><div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #5B4B9E;"></span>EE. UU. · US</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #5B4B9E;"></span>Canadá · US</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #8C5A2A;"></span>México · MX</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #8C5A2A;"></span>Guatemala · MX</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E8B57;"></span>Brasil · LA</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E8B57;"></span>Colombia · LA</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E8B57;"></span>Perú · LA</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2E8B57;"></span>Chile · LA</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; font-weight: 600;">Asia</span><div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chipg" style="color: #7A4B00;">China · AS → Sede</span><span class="chipg" style="color: #7A4B00;">Vietnam · AS → Sede</span><span class="chipg" style="color: #7A4B00;">Tailandia · AS → Sede</span><span class="chipg" style="border: 1.5px dashed #CFD8D2; background: #FFFFFF;">India · sin asignar</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; font-weight: 600;">África y Oriente Medio</span><div style="display: flex; flex-wrap: wrap; gap: 6px;"><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A0522D;"></span>Sudáfrica · ME</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A0522D;"></span>Kenia · ME</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #A0522D;"></span>Egipto · ME</span><span class="chipg"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1D4E89;"></span>Marruecos · SG</span></div></div>
+      </section>
+      <section class="card" style="gap: 8px; background: #FFFBEF; border-color: #EFE6C6;">
+        <p class="h" style="font-size: 13.5px;">Italia lo cubren dos sucursales</p>
+        <div style="display: flex; gap: 8px; align-items: center; font-size: 12.5px;"><span>Las solicitudes van a</span><select class="inp" style="width: 200px; height: 32px;"><option>Sede global (principal)</option><option>Big Dutchman Europe</option></select><span class="hint">· la otra recibe copia</span></div>
+      </section>
+      <section class="card" style="flex-direction: row; align-items: center; gap: 12px; padding: 12px 18px;"><span style="color: #1D4E89; display: flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span style="flex: 1; font-size: 12.5px;"><strong style="font-weight: 600;">Países sin sucursal</strong> <span class="hint">· p. ej. India</span></span><select class="inp" style="width: 230px; height: 32px;"><option>Los atiende la Sede global</option></select></section>
+    </form>
+    <aside aria-label="Vista previa" style="width: 380px; flex: none; align-self: stretch; overflow: hidden; background: #FFFFFF; border: 1px solid #E3E8E4; border-radius: 20px; padding: 18px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(16,40,28,.06);">
+      <div style="display: flex; align-items: flex-start; gap: 10px;">
+        <span style="width: 38px; height: 38px; border-radius: 50%; background: #1D4E89; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px;"><strong style="font-size: 15px; font-weight: 600;">Vista previa de la ficha</strong><span style="font-size: 11.5px; color: #56615B;">Así elige el comprador su país.</span></span>
+        <a href="#" style="font-size: 11.5px; white-space: nowrap; margin-top: 3px;">Abrir ficha ↗</a>
+      </div>
+      <div style="border-radius: 14px; background: linear-gradient(135deg,#F1F5FB,#E2EAF5); padding: 12px; display: flex; align-items: center; gap: 12px;">
+        <span style="width: 66px; height: 46px; border-radius: 10px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(16,40,28,.1); display: flex; align-items: center; justify-content: center; font-size: 7.5px; font-weight: 800; color: #B5121B; white-space: nowrap; letter-spacing: .02em; flex: none;">BIG DUTCHMAN</span>
+        <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;"><strong style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 5px;">Big Dutchman <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2E8B57"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></strong><span style="font-size: 11px; color: #4A5650;">Sede global · Vechta, Alemania · 6 sucursales</span></span>
+      </div>
+      <div style="display: flex; gap: 14px; border-bottom: 1px solid #E8ECE9; font-size: 10.5px; color: #56615B; white-space: nowrap;"><span style="padding-bottom: 7px;">Catálogo</span><span style="padding-bottom: 7px;">Sobre la empresa</span><span style="padding-bottom: 7px; color: #1D4E89; font-weight: 600; border-bottom: 2px solid #1D4E89; margin-bottom: -1px;">Sucursales</span><span style="padding-bottom: 7px;">Contenidos</span></div>      <div style="border: 1px solid #E3E8E4; border-radius: 14px; box-shadow: 0 10px 24px rgba(16,40,28,.12); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid #EEF1EE;"><span style="width: 26px; height: 26px; border-radius: 50%; background: #E9F0F9; color: #1D4E89; display: flex; align-items: center; justify-content: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><strong style="font-size: 12.5px; font-weight: 600;">Contactar con Big Dutchman</strong><span style="margin-left: auto; color: #8A948F; font-size: 13px;">×</span></div>
+        <div style="padding: 12px; display: flex; flex-direction: column; gap: 9px;">
+          <span style="font-size: 11px; color: #4A5650;">Elige tu país. Tu solicitud irá a la sucursal que lo atiende.</span>
+          <span style="font-size: 11px; font-weight: 600;">País o región</span><span style="height: 32px; border: 1.5px solid #1D4E89; border-radius: 8px; padding: 0 10px; font-size: 11.5px; display: flex; align-items: center; gap: 6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> México ▾</span>
+          <span style="display: flex; align-items: center; gap: 8px; background: #F1F5FB; border-radius: 10px; padding: 8px;"><span style="width: 28px; height: 28px; border-radius: 8px; background: #FFFFFF; color: #1D4E89; display: flex; align-items: center; justify-content: center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18H5zM9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><span style="font-size: 11px;">Tu solicitud se enviará a <strong>Big Dutchman México</strong><br><span style="color: #56615B;">Querétaro · sucursal propia</span></span></span>
+          <span style="height: 30px; border: 1px solid #DCE3DE; border-radius: 8px; font-size: 11px; color: #8A948F; padding: 0 10px; display: flex; align-items: center;">Nombre y apellidos *</span>
+          <span style="height: 30px; border: 1px solid #DCE3DE; border-radius: 8px; font-size: 11px; color: #8A948F; padding: 0 10px; display: flex; align-items: center;">Tu consulta *</span>
+          <span style="height: 32px; border-radius: 8px; background: #1D4E89; color: #FFFFFF; font-size: 11.5px; display: flex; align-items: center; justify-content: center;">Enviar a mi sucursal →</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":940}}'>
+class Component extends DCLogic {
+  renderVals() { return { yes: true, n: 4 }; }
+}
+</script>
+</body>
+</html>
