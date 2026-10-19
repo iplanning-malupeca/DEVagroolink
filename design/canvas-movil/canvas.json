@@ -152,7 +152,7 @@
    "title": "X · Contacto: a la delegación más cercana",
    "w": 390,
    "x": 2350,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X1.dc.html": {
    "h": 1200,
@@ -160,7 +160,7 @@
    "title": "X1 · Tipo de empresa · distribuidor multimarca",
    "w": 390,
    "x": 0,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X2.dc.html": {
    "h": 950,
@@ -168,7 +168,7 @@
    "title": "X2 · Marcas que vendes",
    "w": 390,
    "x": 470,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X3.dc.html": {
    "h": 950,
@@ -176,7 +176,7 @@
    "title": "X3 · Añadir productos que ya existen",
    "w": 390,
    "x": 940,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X4.dc.html": {
    "h": 1010,
@@ -184,7 +184,7 @@
    "title": "X4 · Subir un producto nuevo",
    "w": 390,
    "x": 1410,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X5.dc.html": {
    "h": 920,
@@ -192,7 +192,7 @@
    "title": "X5 · Validación de la marca",
    "w": 390,
    "x": 1880,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_X6.dc.html": {
    "h": 1190,
@@ -200,7 +200,7 @@
    "title": "X6 · Contacto: delegaciones",
    "w": 390,
    "x": 2820,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_XM1.dc.html": {
    "h": 844,
@@ -208,7 +208,7 @@
    "title": "XM1 · Hilo con el fabricante",
    "w": 390,
    "x": 3290,
-   "y": 8022
+   "y": 10050
   },
   "MB_Distribuidor_XM2.dc.html": {
    "h": 844,
@@ -216,7 +216,7 @@
    "title": "XM2 · Solicitud atendida por una delegación",
    "w": 390,
    "x": 3760,
-   "y": 8022
+   "y": 10050
   },
   "MB_EEM1.dc.html": {
    "h": 1710,
@@ -364,51 +364,51 @@
   },
   "MB_FD_AvisoAdmin.dc.html": {
    "h": 930,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D0d · Altas de miembros (superadmin)",
    "w": 390,
    "x": 2350,
-   "y": 0
+   "y": 2290
   },
   "MB_FD_AvisoEmpresa.dc.html": {
    "h": 860,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D0c · Aviso a los administradores de la empresa",
    "w": 390,
    "x": 1880,
-   "y": 0
+   "y": 2290
   },
   "MB_FD_Contenidos.dc.html": {
    "h": 1130,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D6 · Contenidos y Agrinews (paso 6)",
    "w": 390,
    "x": 1410,
-   "y": 0
+   "y": 2290
   },
   "MB_FD_Distribuidores.dc.html": {
    "h": 1040,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D4 · Distribuidores (paso 4 de 8)",
    "w": 390,
    "x": 0,
-   "y": 0
+   "y": 2290
   },
   "MB_FD_Expertos.dc.html": {
    "h": 960,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D5 · Expertos recomendados (paso 5)",
    "w": 390,
    "x": 940,
-   "y": 0
+   "y": 2290
   },
   "MB_FD_FichaDistribuidores.dc.html": {
    "h": 940,
-   "page": "mb8",
+   "page": "mb3",
    "title": "Ficha · pestaña Distribuidores, como la ve el comprador",
    "w": 390,
    "x": 470,
-   "y": 0
+   "y": 2290
   },
   "MB_FabCom_K2b.dc.html": {
    "h": 844,
@@ -416,7 +416,7 @@
    "title": "K2b · Crear perfil de comercial sin cuenta",
    "w": 390,
    "x": 0,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_K2c.dc.html": {
    "h": 844,
@@ -424,7 +424,7 @@
    "title": "K2c · Email al comercial: tiene una solicitud",
    "w": 390,
    "x": 470,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_K2d.dc.html": {
    "h": 844,
@@ -432,7 +432,7 @@
    "title": "K2d · El comercial se da de alta",
    "w": 390,
    "x": 940,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_K3.dc.html": {
    "h": 990,
@@ -440,7 +440,7 @@
    "title": "K3 · Detalle del comercial y su zona",
    "w": 390,
    "x": 1410,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_K6.dc.html": {
    "h": 1000,
@@ -448,7 +448,7 @@
    "title": "K6 · Bandeja de la comercial",
    "w": 390,
    "x": 1880,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_KM1.dc.html": {
    "h": 844,
@@ -456,7 +456,7 @@
    "title": "KM1 · Mensajes: solicitud de un comprador",
    "w": 390,
    "x": 2350,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabCom_KM2.dc.html": {
    "h": 844,
@@ -464,55 +464,55 @@
    "title": "KM2 · Hilo interno con la Dirección comercial",
    "w": 390,
    "x": 2820,
-   "y": 2290
+   "y": 4450
   },
   "MB_FabDist_D1.dc.html": {
    "h": 1330,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D1 · Tipo de empresa · con distribuidores",
    "w": 390,
    "x": 2820,
-   "y": 0
+   "y": 2290
   },
   "MB_FabDist_D1b-2.dc.html": {
    "h": 1460,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D1b-2 · Especies · modo «Excluir»",
    "w": 390,
    "x": 3290,
-   "y": 0
+   "y": 2290
   },
   "MB_FabDist_D2s.dc.html": {
    "h": 1060,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D2s · Cabecera vista por el superadmin",
    "w": 390,
    "x": 4700,
-   "y": 0
+   "y": 2290
   },
   "MB_FabDist_D4.dc.html": {
    "h": 1100,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D4 · Red: distribuidores",
    "w": 390,
    "x": 3760,
-   "y": 0
+   "y": 2290
   },
   "MB_FabDist_D7.dc.html": {
    "h": 1060,
-   "page": "mb8",
+   "page": "mb3",
    "title": "D7 · Contacto: al distribuidor de la zona",
    "w": 390,
    "x": 4230,
-   "y": 0
+   "y": 2290
   },
   "MB_FabDist_DM1.dc.html": {
    "h": 844,
-   "page": "mb8",
+   "page": "mb3",
    "title": "DM1 · Hilo fabricante ↔ distribuidor",
    "w": 390,
    "x": 5170,
-   "y": 0
+   "y": 2290
   },
   "MB_FabSuc_S.dc.html": {
    "h": 1030,
@@ -520,7 +520,7 @@
    "title": "S · Contacto: a la sucursal del país",
    "w": 390,
    "x": 2350,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S1.dc.html": {
    "h": 1360,
@@ -528,7 +528,7 @@
    "title": "S1 · Tipo de empresa · Sede con sucursales",
    "w": 390,
    "x": 0,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S2.dc.html": {
    "h": 920,
@@ -536,7 +536,7 @@
    "title": "S2 · Red de sucursales",
    "w": 390,
    "x": 470,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S2b.dc.html": {
    "h": 844,
@@ -544,7 +544,7 @@
    "title": "S2b · Aviso a la Sede y a la sucursal",
    "w": 390,
    "x": 940,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S3.dc.html": {
    "h": 1030,
@@ -552,7 +552,7 @@
    "title": "S3 · Países de cada sucursal",
    "w": 390,
    "x": 1410,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S4.dc.html": {
    "h": 880,
@@ -560,7 +560,7 @@
    "title": "S4 · Qué decide la Sede y qué cada sucursal",
    "w": 390,
    "x": 1880,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_S5.dc.html": {
    "h": 1180,
@@ -568,7 +568,7 @@
    "title": "S5 · Página de la sucursal",
    "w": 390,
    "x": 2820,
-   "y": 4034
+   "y": 6150
   },
   "MB_FabSuc_SM1.dc.html": {
    "h": 844,
@@ -576,7 +576,7 @@
    "title": "SM1 · Hilo Sede ↔ sucursal",
    "w": 390,
    "x": 3290,
-   "y": 4034
+   "y": 6150
   },
   "MB_MA1.dc.html": {
    "h": 1170,
@@ -1072,7 +1072,7 @@
    "title": "U1 · Tipo de empresa cuando eres sucursal",
    "w": 390,
    "x": 0,
-   "y": 6138
+   "y": 8210
   },
   "MB_Sucursal_U2.dc.html": {
    "h": 844,
@@ -1080,7 +1080,7 @@
    "title": "U2 · Mensajes con la Sede",
    "w": 390,
    "x": 470,
-   "y": 6138
+   "y": 8210
   },
   "MB_UsrAyuda.dc.html": {
    "h": 1150,
@@ -1670,57 +1670,57 @@
   },
   "mbt15": {
    "kind": "title1",
-   "maxW": 8000,
-   "page": "mb8",
-   "text": "Fab-Dist en móvil: lo propio de este caso que no está en MB_06 (el resto del alta está allí) · tools/fabdist_movil.py",
+   "maxW": 5560,
+   "page": "mb3",
+   "text": "005 · Fabricante con distribuidores (DSM-Firmenich): distribuidores, ficha «¿Dónde comprar?», expertos, contenidos, avisos, tipo, especies «Excluir», red, contacto, cabecera del superadmin y Mensajes",
    "w": 240,
    "x": 0,
-   "y": -300
+   "y": 1990
   },
   "mbt2": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 6970,
    "page": "mb3",
-   "text": "Alta de empresa 006–010 en un solo asistente (prototipo alta-empresa) · fabricante con comerciales; al final, organización nueva y sucursal",
+   "text": "Alta de empresa · pasos comunes en un solo asistente (prototipo alta-empresa) · al final, organización nueva y sucursal",
    "w": 240,
    "x": 0,
    "y": -300
   },
   "mbt3": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 3210,
    "page": "mb3",
    "text": "005a · Fabricante con comerciales (Zucami): lo propio de este caso · tools/empresa_config_movil.py",
    "w": 240,
    "x": 0,
-   "y": 1990
+   "y": 4150
   },
   "mbt4": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 3680,
    "page": "mb3",
    "text": "005b · Fabricante con sucursales (Big Dutchman): tipo, red, aviso, países, permisos, contacto, página de la sucursal y hilo con la Sede",
    "w": 240,
    "x": 0,
-   "y": 3734
+   "y": 5850
   },
   "mbt5": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 2000,
    "page": "mb3",
    "text": "005c · Sucursal de un grupo (Aviagen Ibérica): además de MA14–MA15",
    "w": 240,
    "x": 0,
-   "y": 5838
+   "y": 7910
   },
   "mbt6": {
    "kind": "title1",
-   "maxW": 8000,
+   "maxW": 4150,
    "page": "mb3",
    "text": "005d · Distribuidor multimarca (NewFarms): tipo, marcas, productos, validación, delegaciones y Mensajes",
    "w": 240,
    "x": 0,
-   "y": 7722
+   "y": 9750
   },
   "mbt7": {
    "kind": "title1",
@@ -2077,10 +2077,6 @@
   {
    "id": "mb7",
    "name": "004_MB_Intranet · Usuario · Experto · Empresa"
-  },
-  {
-   "id": "mb8",
-   "name": "005_MB_Alta empresa_Fab-Dist"
   },
   {
    "id": "movil",
