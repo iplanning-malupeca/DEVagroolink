@@ -14,12 +14,12 @@ I.update({'x': 'M6 6l12 12M18 6 6 18', 'info': 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0
           'candado': 'M6 11h12v10H6zM9 11V7a3 3 0 0 1 6 0v4', 'play': 'M8 5v14l11-7z', 'mas': 'M12 5v14M5 12h14', 'tablero': 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z'})
 LOGO = IMG['logo']
 
-def fondo(modal, w=560, alto=900):
+def fondo(modal, w=560, alto=900, sesion=True):
     pagina = ('<div aria-hidden="true" style="position: absolute; top: 68px; left: 0; right: 0; bottom: 0; padding: 32px 60px; display: flex; gap: 24px;">'
               '<div style="width: 520px; height: 420px; border-radius: 18px; background: #E9EEEA;"></div><div style="flex: 1; display: flex; flex-direction: column; gap: 14px;">'
               '<div style="width: 60%; height: 34px; border-radius: 8px; background: #E9EEEA;"></div><div style="width: 80%; height: 16px; border-radius: 6px; background: #EEF2EF;"></div>'
               '<div style="width: 70%; height: 16px; border-radius: 6px; background: #EEF2EF;"></div><div style="width: 40%; height: 44px; border-radius: 10px; background: #E9EEEA; margin-top: 20px;"></div></div></div>')
-    return (cabecera() + pagina + '<div style="position: absolute; inset: 0; background: rgba(7, 43, 30, .45);"></div>'
+    return (cabecera(sesion=sesion) + pagina + '<div style="position: absolute; inset: 0; background: rgba(7, 43, 30, .45);"></div>'
             '<div role="dialog" aria-modal="true" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: ' + str(w) + 'px; background: #FFFFFF; border-radius: 20px; box-shadow: 0 24px 60px rgba(7, 43, 30, .3); padding: 26px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">' + modal + '</div>')
 
 def tit(t, sub='', icono=None):
@@ -118,7 +118,7 @@ def m_video():
                  '<strong style="font-size: 15px;">Capítulos</strong><div>' + caps + '</div>', 680)
 
 def acceso(cuerpo, w=420):
-    return fondo('<div style="display: flex; justify-content: space-between; align-items: center;"><img src="' + LOGO + '" alt="Agroolink" style="height: 26px;"><button type="button" aria-label="Cerrar" style="width: 30px; height: 30px; border-radius: 50%; border: 0; background: #F1F4F2; display: flex; align-items: center; justify-content: center;">' + svg(I['x'], 14, 2) + '</button></div>' + cuerpo, w)
+    return fondo('<div style="display: flex; justify-content: space-between; align-items: center;"><img src="' + LOGO + '" alt="Agroolink" style="height: 26px;"><button type="button" aria-label="Cerrar" style="width: 30px; height: 30px; border-radius: 50%; border: 0; background: #F1F4F2; display: flex; align-items: center; justify-content: center;">' + svg(I['x'], 14, 2) + '</button></div>' + cuerpo, w, sesion=False)
 def icono_grande(ic, fondo_='#EEF6EE', tinta='#0E5A3A'):
     return '<span style="align-self: center; width: 60px; height: 60px; border-radius: 50%; background: ' + fondo_ + '; color: ' + tinta + '; display: flex; align-items: center; justify-content: center;">' + svg(I[ic], 28, 2) + '</span>'
 def m_acceso():

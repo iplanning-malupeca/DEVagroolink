@@ -40,6 +40,7 @@ body{margin:0;line-height:1.3}
       <span style="flex: 1;"></span>
       <a href="BusIntranetBuscar.dc.html" role="button" aria-label="Nueva búsqueda" style="display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px 0 14px; border-radius: 999px; border: 1.5px solid {{ acento }}; color: {{ acento }}; background: #FFFFFF; font: 600 14px 'Poppins', sans-serif; text-decoration: none; margin-right: 6px; white-space: nowrap;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a>
     </sc-if>
+    <sc-if value="{{ conSesion }}" hint-placeholder-val="{{ true }}">
     <div style="display: flex; align-items: center; gap: 6px; flex: none;">
       <button type="button" class="hb" aria-label="Mensajes, 3 sin leer" title="Mensajes"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><span style="position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; box-sizing: border-box; padding: 0 5px; border-radius: 999px; background: #D93A3A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; display: flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF;">3</span></button>
       <button type="button" class="hb" aria-label="Historial" title="Historial"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8M3 3v5h5M12 7v5l3 2"/></svg></button>
@@ -48,6 +49,14 @@ body{margin:0;line-height:1.3}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ chevron }}"/></svg>
       </button>
     </div>
+    </sc-if>
+    <sc-if value="{{ sinSesion }}" hint-placeholder-val="{{ false }}">
+    <div style="display: flex; align-items: center; gap: 4px; flex: none;">
+      <a href="#" class="nb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11M2 21h20M9 21v-6h6v6M9 11h6"/></svg>Proyectos</a>
+      <a href="#" class="nb"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Tableros</a>
+      <button type="button" class="nb" aria-label="Iniciar sesión y menú" style="border: 1px solid #CFE0D5; background: #EEF6EE; padding: 4px 10px 4px 4px; margin-left: 8px;"><span style="width: 30px; height: 30px; border-radius: 50%; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4 21a8 8 0 0 1 16 0"/></svg></span>Iniciar sesión<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    </div>
+    </sc-if>
   </header>
 
   <sc-if value="{{ abierto }}" hint-placeholder-val="{{ false }}">
@@ -73,7 +82,7 @@ body{margin:0;line-height:1.3}
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"barra"},"contenedor":{"editor":"int","default":0},"$preview":{"width":1280,"height":68}}'>
+<script type="text/x-dc" data-dc-script data-props='{"persona":{"editor":"text","default":"Samuel E."},"iniciales":{"editor":"text","default":"SE"},"color":{"editor":"color","default":"#0E5A3A"},"variante":{"editor":"enum","options":["personal","experta","empresa"],"default":"personal"},"abierto":{"editor":"boolean","default":false},"ancho":{"editor":"int","default":1280},"consulta":{"editor":"text","default":""},"especie":{"editor":"text","default":""},"categoria":{"editor":"text","default":""},"enfermedad":{"editor":"text","default":""},"buscador":{"editor":"enum","options":["icono","barra"],"default":"barra"},"contenedor":{"editor":"int","default":0},"sesion":{"editor":"boolean","default":true},"$preview":{"width":1280,"height":68}}'>
 class Component extends DCLogic {
   renderVals() {
     const v = this.props.variante ?? 'personal';
@@ -118,6 +127,8 @@ class Component extends DCLogic {
     ];
     const segs = vals.map((x, i) => ({ icono: x[0], texto: x[1] || x[2], tinta: x[1] ? '#17231D' : '#56615B', peso: x[1] ? '600' : '400', flex: x[3], sep: i ? '1px solid #DCE3DE' : '0' }));
     return Object.assign({}, d, {
+      conSesion: this.props.sesion !== false && this.props.sesion !== 'false',
+      sinSesion: this.props.sesion === false || this.props.sesion === 'false',
       segs: segs,
       conBarra: (this.props.buscador ?? 'barra') === 'barra',
       conIcono: (this.props.buscador ?? 'barra') !== 'barra',

@@ -1089,6 +1089,14 @@
    "x": 9600,
    "y": 11424,
    "title": "V02 · Ficha de un evento"
+  },
+  "FrCabeceraSinSesion.dc.html": {
+   "w": 1440,
+   "h": 68,
+   "page": "front",
+   "x": 0,
+   "y": 3700,
+   "title": "P01b · Cabecera sin sesión (Proyectos · Tableros · Iniciar sesión)"
   }
  },
  "createdOnFiles": {
@@ -1508,7 +1516,8 @@
   "FrDisProducto.dc.html",
   "FrPagEventos.dc.html",
   "FrEveLista.dc.html",
-  "FrEveFicha.dc.html"
+  "FrEveFicha.dc.html",
+  "FrCabeceraSinSesion.dc.html"
  ],
  "pages": [
   {

@@ -74,9 +74,9 @@ def barra_grande():
             '<button type="button" aria-label="Buscar" style="width: 52px; height: 52px; margin: 6px 8px 6px 4px; border-radius: 50%; border: 0; background: #0E5A3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex: none;">' + svg(I['lupa'], 20, 2.2) + '</button></div>')
 
 # ---------- Cabecera: 56 + 44 ----------
-def cabecera(activo=None):
-    # La cabecera de Agroolink (IntHeader, la de 000_LP_Header y la intranet), a 1440 con contenedor de 1320
-    return '<dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" buscador="barra" ancho="1440" contenedor="1320" hint-size="1440px,68px"></dc-import>'
+def cabecera(activo=None, sesion=True):
+    # La cabecera de Agroolink (IntHeader, la de 000_LP_Header y la intranet), a 1440 con contenedor de 1320; sin sesión: Proyectos · Tableros · Iniciar sesión
+    return '<dc-import name="IntHeader" persona="Samuel E." iniciales="SE" color="#0E5A3A" variante="personal" buscador="barra" ancho="1440" contenedor="1320"' + ('' if sesion else ' sesion="false"') + ' hint-size="1440px,68px"></dc-import>'
 
 # ---------- Mega-menús ----------
 def fondo_mega(panel, izq, activo):
@@ -234,6 +234,7 @@ def pie():
 
 PIEZAS = [  # nombre, título, cuerpo, alto, fondo
     ('FrCabecera', 'P01 · Cabecera de Agroolink (IntHeader) a 1440', cabecera, 68, '#FFFFFF'),
+    ('FrCabeceraSinSesion', 'P01b · Cabecera sin sesión (Proyectos · Tableros · Iniciar sesión)', lambda: cabecera(sesion=False), 68, '#FFFFFF'),
     ('FrMegaCategorias', 'P02 · Categoría abierta desde el buscador', mega_categorias, 560, '#F6F8F6'),
     ('FrMegaEspecies', 'P03 · Especie abierta desde el buscador', mega_especies, 560, '#F6F8F6'),
     ('FrHero', 'P04 · Hero «Hola Samuel» con buscador', hero, 402, '#F6F8F6'),
