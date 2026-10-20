@@ -1097,6 +1097,246 @@
    "x": 0,
    "y": 416,
    "title": "P01b · Cabecera sin sesión (Proyectos · Tableros · Iniciar sesión)"
+  },
+  "MvCabecera.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mcomunes",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Cabecera con sesión y buscador"
+  },
+  "MvCabeceraSinSesion.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mcomunes",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Cabecera sin sesión («Entrar»)"
+  },
+  "MvPie.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mcomunes",
+   "x": 940,
+   "y": 0,
+   "title": "Móvil · Pie"
+  },
+  "MvHome.dc.html": {
+   "w": 390,
+   "h": 3020,
+   "page": "mhome",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Home con sesión"
+  },
+  "MvCategoria.dc.html": {
+   "w": 390,
+   "h": 2110,
+   "page": "mcategoria",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Categoría (Piensos para broilers)"
+  },
+  "MvEspecie.dc.html": {
+   "w": 390,
+   "h": 2460,
+   "page": "mespecie",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Especie (Aves)"
+  },
+  "MvProducto.dc.html": {
+   "w": 390,
+   "h": 1870,
+   "page": "mproducto",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Ficha de producto (OptiFeed®)"
+  },
+  "MvDisProducto.dc.html": {
+   "w": 390,
+   "h": 1512,
+   "page": "mproducto",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Producto en el catálogo de AgroNova"
+  },
+  "MvEmpresa.dc.html": {
+   "w": 390,
+   "h": 2122,
+   "page": "mempresa",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Ficha de empresa (DSM-Firmenich)"
+  },
+  "MvDistribuidor.dc.html": {
+   "w": 390,
+   "h": 1515,
+   "page": "mempresa",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Ficha de distribuidor (AgroNova)"
+  },
+  "MvSucursal.dc.html": {
+   "w": 390,
+   "h": 1528,
+   "page": "mempresa",
+   "x": 940,
+   "y": 0,
+   "title": "Móvil · Sucursal (Zucami LATAM)"
+  },
+  "MvExpertos.dc.html": {
+   "w": 390,
+   "h": 1790,
+   "page": "mexpertos",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Directorio de expertos"
+  },
+  "MvExperto.dc.html": {
+   "w": 390,
+   "h": 1094,
+   "page": "mexpertos",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Perfil de experto"
+  },
+  "MvEventos.dc.html": {
+   "w": 390,
+   "h": 1830,
+   "page": "meventos",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Eventos"
+  },
+  "MvEvento.dc.html": {
+   "w": 390,
+   "h": 955,
+   "page": "meventos",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Ficha de un evento"
+  },
+  "MvModInfo.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 0,
+   "y": 0,
+   "title": "Móvil · Pedir información"
+  },
+  "MvModAsesoramiento.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 470,
+   "y": 0,
+   "title": "Móvil · Pedir asesoramiento"
+  },
+  "MvModGuardar.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 940,
+   "y": 0,
+   "title": "Móvil · Guardar en un tablero"
+  },
+  "MvModGuardado.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 1410,
+   "y": 0,
+   "title": "Móvil · Guardado"
+  },
+  "MvModFicha.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 1880,
+   "y": 0,
+   "title": "Móvil · Ficha técnica"
+  },
+  "MvModDisponible.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 2350,
+   "y": 0,
+   "title": "Móvil · Disponible en tu zona"
+  },
+  "MvModNoDisponible.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 2820,
+   "y": 0,
+   "title": "Móvil · No disponible en tu zona"
+  },
+  "MvModZona.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 3290,
+   "y": 0,
+   "title": "Móvil · Cambiar zona"
+  },
+  "MvModDistribuidor.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 3760,
+   "y": 0,
+   "title": "Móvil · Quiero distribuir"
+  },
+  "MvModComercial.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 4230,
+   "y": 0,
+   "title": "Móvil · Encuentra tu comercial"
+  },
+  "MvModVideo.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 4700,
+   "y": 0,
+   "title": "Móvil · Vídeo del producto"
+  },
+  "MvModAcceso.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 5170,
+   "y": 0,
+   "title": "Móvil · Acceso · email"
+  },
+  "MvModCodigo.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 5640,
+   "y": 0,
+   "title": "Móvil · Acceso · código"
+  },
+  "MvModSinCuenta.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 6110,
+   "y": 0,
+   "title": "Móvil · Acceso · sin cuenta"
+  },
+  "MvModCreada.dc.html": {
+   "w": 390,
+   "h": 844,
+   "page": "mventanas",
+   "x": 6580,
+   "y": 0,
+   "title": "Móvil · Acceso · cuenta creada"
   }
  },
  "createdOnFiles": {
@@ -1459,6 +1699,96 @@
    "page": "ventanas",
    "size": "m",
    "text": "Reglas de las ventanas\n\n«Pedir información», «Pedir asesoramiento» y «Escribir» son mensajes de Agroolink: no se piden teléfono ni email (la cuenta ya sabe quién eres) y el filtro bloquea contactos en el texto.\n\nNo se hace «Visitar la web» (F52) ni «Visitar la tienda» del distribuidor. Las sedes y comerciales se muestran sin teléfonos ni emails.\n\nEl acceso sigue el alta (003): email → código → cuenta de Agrinews."
+  },
+  "mcomunes_t": {
+   "kind": "title1",
+   "maxW": 1330,
+   "page": "mcomunes",
+   "text": "Móvil · Componentes comunes",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mhome_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "mhome",
+   "text": "Móvil · Home",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mcategoria_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "mcategoria",
+   "text": "Móvil · Categoría",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mespecie_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "mespecie",
+   "text": "Móvil · Especie",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mproducto_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "mproducto",
+   "text": "Móvil · Ficha de producto",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mempresa_t": {
+   "kind": "title1",
+   "maxW": 1330,
+   "page": "mempresa",
+   "text": "Móvil · Ficha de empresa",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mexpertos_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "mexpertos",
+   "text": "Móvil · Expertos",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "meventos_t": {
+   "kind": "title1",
+   "maxW": 1100,
+   "page": "meventos",
+   "text": "Móvil · Eventos",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mventanas_t": {
+   "kind": "title1",
+   "maxW": 6970,
+   "page": "mventanas",
+   "text": "Móvil · Ventanas y acceso",
+   "w": 240,
+   "x": 0,
+   "y": -300
+  },
+  "mcomunes_info": {
+   "x": -640,
+   "y": 0,
+   "w": 520,
+   "fill": "green",
+   "page": "mcomunes",
+   "size": "m",
+   "text": "Versión móvil (390 px) del front.\n\nArriba: logo, Buscar y Mensajes. Abajo: Explorar · Proyectos · Tableros · Tú (sin sesión: «Entrar»).\n\nEl buscador «¿Qué buscas?» abre la búsqueda combinada (Qué · Especie · Categoría · Enfermedad). Los listados usan «Filtros» con contador y un botón por filtro, en fila deslizable.\n\nLas pestañas del producto pasan a secciones plegables y la acción principal va en la barra inferior. Las ventanas son hojas inferiores. Sin teléfonos, emails ni webs."
   }
  },
  "order": [
@@ -1598,7 +1928,37 @@
   "FrPagEventos.dc.html",
   "FrEveLista.dc.html",
   "FrEveFicha.dc.html",
-  "FrCabeceraSinSesion.dc.html"
+  "FrCabeceraSinSesion.dc.html",
+  "MvCabecera.dc.html",
+  "MvCabeceraSinSesion.dc.html",
+  "MvPie.dc.html",
+  "MvHome.dc.html",
+  "MvCategoria.dc.html",
+  "MvEspecie.dc.html",
+  "MvProducto.dc.html",
+  "MvDisProducto.dc.html",
+  "MvEmpresa.dc.html",
+  "MvDistribuidor.dc.html",
+  "MvSucursal.dc.html",
+  "MvExpertos.dc.html",
+  "MvExperto.dc.html",
+  "MvEventos.dc.html",
+  "MvEvento.dc.html",
+  "MvModInfo.dc.html",
+  "MvModAsesoramiento.dc.html",
+  "MvModGuardar.dc.html",
+  "MvModGuardado.dc.html",
+  "MvModFicha.dc.html",
+  "MvModDisponible.dc.html",
+  "MvModNoDisponible.dc.html",
+  "MvModZona.dc.html",
+  "MvModDistribuidor.dc.html",
+  "MvModComercial.dc.html",
+  "MvModVideo.dc.html",
+  "MvModAcceso.dc.html",
+  "MvModCodigo.dc.html",
+  "MvModSinCuenta.dc.html",
+  "MvModCreada.dc.html"
  ],
  "pages": [
   {
@@ -1640,6 +2000,42 @@
   {
    "id": "ventanas",
    "name": "09 · Ventanas y acceso"
+  },
+  {
+   "id": "mcomunes",
+   "name": "10 · Móvil · Componentes comunes"
+  },
+  {
+   "id": "mhome",
+   "name": "11 · Móvil · Home"
+  },
+  {
+   "id": "mcategoria",
+   "name": "12 · Móvil · Categoría"
+  },
+  {
+   "id": "mespecie",
+   "name": "13 · Móvil · Especie"
+  },
+  {
+   "id": "mproducto",
+   "name": "14 · Móvil · Ficha de producto"
+  },
+  {
+   "id": "mempresa",
+   "name": "15 · Móvil · Ficha de empresa"
+  },
+  {
+   "id": "mexpertos",
+   "name": "16 · Móvil · Expertos"
+  },
+  {
+   "id": "meventos",
+   "name": "17 · Móvil · Eventos"
+  },
+  {
+   "id": "mventanas",
+   "name": "18 · Móvil · Ventanas y acceso"
   }
  ],
  "title": "Agroolink Frontend"
